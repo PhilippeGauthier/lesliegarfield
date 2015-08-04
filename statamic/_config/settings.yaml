@@ -118,8 +118,15 @@ _environments:
     - 'http://localhost*'
     - '*.dev'
     - '*.localip'
+  staging:
+    - 'staging.*.com'
+    - 'staging.*.io'
+    - 'clients.*.com'
+    - 'clients.*.io'
+    - '104.131.23.73'
   live:
     - '*.com'
+    - '*.io'
 
 # Set to 'true' if you want to log system messages
 _log_enabled: false
