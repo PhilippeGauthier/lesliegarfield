@@ -1,0 +1,28 @@
+footer {
+	height: 230px;
+	.container {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	.social {
+		a {
+			margin-right: 10px;
+		}
+	}
+	.fa-inverse {
+		background-color: $dark-gray;
+		border-color: $light-font-color;
+		border: 1px solid $light-font-color;
+		border-radius: 50%;
+	}
+	.footer-divider {
+		border-top: 1px solid darken($light-font-color,20%)	;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-align: center;
+		p {
+			font-weight: 300;
+		}
+	}
+}

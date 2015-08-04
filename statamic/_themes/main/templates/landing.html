@@ -1,0 +1,100 @@
+<div class="hero" style="background-image: url( {{ _site_root }}{{ hero_image }} );">
+	<h1>{{ tag_line }}</h1>
+	<h3>{{ sub_tag_line}}</h3>
+	<a href="{{ url }}properties" class="btn btn-garfield">View Properties</a>
+</div>	
+<section class="leader" id="landing-sub-nav">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 centered">
+				<a href="" class="circle-nav">
+					<div class="no-hover">
+						<div class="circle"></div>
+						<h4>Our Story</h4>
+					</div>
+					<div class="hover">
+						<span class="title">Our Story</span>
+						<p>Our History is as Rich as our Story is Deep</p>
+						<span class="sub-title">READ OUR STORY ></span>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-3 centered">
+				<a href="" class="circle-nav">
+					<div class="no-hover">
+						<div class="circle"></div>
+						<h4>Search Listings</h4>
+					</div>
+					<div class="hover">
+						<span class="title">Our Story</span>
+						<p>Our History is as Rich as our Story is Deep</p>
+						<span class="sub-title">READ OUR STORY ></span>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-3 centered">
+				<a href="" class="circle-nav">
+					<div class="no-hover">
+						<div class="circle"></div>
+						<h4>Looking to Sell?</h4>
+					</div>
+					<div class="hover">
+						<span class="title">Our Story</span>
+						<p>Our History is as Rich as our Story is Deep</p>
+						<span class="sub-title">READ OUR STORY ></span>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-3 centered">
+				<a href="" class="circle-nav">
+					<div class="no-hover">
+						<div class="circle"></div>
+						<h4>Our Neighborhoods</h4>
+					</div>
+					<div class="hover">
+						<span class="title">Our Story</span>
+						<p>Our History is as Rich as our Story is Deep</p>
+						<span class="sub-title">READ OUR STORY ></span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="light-gray-bg" id="featured-properties">
+	<div class="circle-leader">
+		<div class="circle light-gray-bg"></div>
+		<h4>Featured Properties</h4>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="property_tile">
+				
+				{{ entries:listing folder="properties/sale" conditions="featured:yes"}}
+				<div>
+					<a href="{{ url }}" class="property_box slick">
+						<img src="{{ _site_root }}{{ preview_image }}">
+						<div class="property_tile_info">
+							<div class="top-info">
+								<h3>{{ title }}</h3>
+								<div class="spacer"></div>
+								<h4>${{ price|format_number }}</h4>
+								<div class="spacer"></div>
+								<h4>{{ property_type }}</h4>
+							</div>
+							<div class="bottom-info">
+								{{ if openhouse }}
+								<p>
+									Open House
+								</p>
+								{{ endif }}
+							</div>
+						</div>
+					</a >
+				</div>
+				{{ /entries:listing }}
+				
+			</div>
+		</div>
+	</div>
+</section>

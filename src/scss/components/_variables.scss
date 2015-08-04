@@ -1,0 +1,20 @@
+
+// color pallette
+$green: #009880;
+$hover-green: lighten(#009880,1%);
+$light-green: #F2FAF8;
+$hover-light-green: #E9F6F3;
+$dark-gray: #373738;
+$light-gray: #ECEBEC;
+
+
+// fonts
+$base-font-color: #404041;
+$light-font-color: #8E9092;
+
+@mixin circle($size) {
+	border-radius: $size/2;
+	height: $size;
+	width: $size;
+
+}

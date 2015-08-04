@@ -1,0 +1,16 @@
+.hero {
+	height: 500px;
+	width: 100%;
+	background-position: center;
+  background-size: cover;
+  display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	* {
+		color: #fff;
+	}
+	h3 {
+		max-width: 400px;
+	}
+}

@@ -1,0 +1,22 @@
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.nav > li > a:hover, .nav > li > a:focus, .nav > li > a.active {
+	background-color: transparent;
+	color: $green;
+	box-shadow: 0px 3px 0px 0px;
+}
+
+.navbar-nav > li > a {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.navbar-collapse {
+	a {
+		color: $dark-gray;
+	}
+}

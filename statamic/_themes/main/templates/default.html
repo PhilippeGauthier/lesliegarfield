@@ -1,0 +1,16 @@
+<div class="container">
+	<div class="row">
+
+	{{ entries:listing folder="map" limit="3" }}
+	{{title }}
+${{ price|format_number }}
+{{ property_type }}
+{{lat_long}}
+	{{ latitude }}
+	{{ longitude }}
+{{/lat_long}}
+	{{ /entries:listing }}
+
+
+	</div>
+</div>

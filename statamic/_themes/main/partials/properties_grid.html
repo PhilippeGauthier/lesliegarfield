@@ -1,0 +1,23 @@
+{{ entries:listing folder="properties/sale" }}
+<div>
+	<a href="{{ url }}" class="property_box">
+		<img src="{{ _site_root }}{{ preview_image }}">
+		<div class="property_tile_info">
+			<div class="top-info">
+				<h3>{{ title }}</h3>
+				<div class="spacer"></div>
+				<h4>${{ price|format_number }}</h4>
+				<div class="spacer"></div>
+				<h4>{{ property_type }}</h4>
+			</div>
+			<div class="bottom-info">
+				{{ if openhouse }}
+				<p>
+					Open House
+				</p>
+				{{ endif }}
+			</div>
+		</div>
+	</a >
+</div>
+{{ /entries:listing }}
