@@ -1,0 +1,26 @@
+title: Landing Page
+
+fields:
+  _template:
+    display: Template
+    type: templates
+
+  hero_image:
+    type: file
+    destination: assets/img/
+    allowed: ['jpg', 'png']
+
+  tag_line: 
+    type: text
+    display: Main Tagline
+
+  sub_tag_line: 
+    type: text
+    display: Sub Tagline
+
+  content:
+    display: Page Content
+    required: false
+    default:
+    type: redactor
+

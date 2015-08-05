@@ -29,6 +29,7 @@ var path = {
   SCSS: 'src/scss/**/*.scss',
   SCSS_ENTRY: 'src/scss/main.scss',
   SCSS_BUILD: 'statamic/_themes/main/css',
+
   CSS_MINIFIED_OUT: 'main.min.css'
 };
 
@@ -101,7 +102,7 @@ gulp.task('replaceHTML', function(){
 
 gulp.task('minify-css', function() {
   return gulp.src(path.SCSS_BUILD + '/*.css')
-    .pipe(minifyCss({compatibility: 'ie8'}))
+    .pipe(minifyCss())
     .pipe(rename("main.min.css"))
     .pipe(gulp.dest(path.SCSS_BUILD));
 });

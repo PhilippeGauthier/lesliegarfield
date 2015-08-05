@@ -1,11 +1,11 @@
 
-
+var React = require('react');
 
 var Child = React.createClass({
   render: function(){
     return (
       <div>
-        and this be the <b>{this.props.name}</b>.
+        and this is the <b>{this.props.name}</b>.
       </div>
     )
   }

@@ -1,0 +1,75 @@
+fields:
+  categories:
+    display: Categories
+    required: false
+    default:
+    type: tags
+  featured:
+    display: Featured Property?
+    type: checkbox
+  openhouse:
+    display: Open House?
+    type: checkbox
+  content:
+    type: redactor
+    hide: true
+  lat_long:
+    display: Property Coordinates
+    type: grid
+    starting_rows: 1
+    max_rows: 1
+    fields:
+      latitude:
+        display: Latitude (should be similar to 40.7590615)
+        type: text
+        width: 50%
+      longitude:
+        display: Longitude (should be similar to -73.969231)
+        type: text
+        width: 50%
+  location:
+    type: select
+    options:
+      - East Village
+      - Greenwich Village
+      - Harlem
+      - Midtown East
+      - Midtown West
+      - Upper East Side
+      - Upper West Side
+  price:
+  	type: text
+  	display: Property Price
+  	instructions:
+  		above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
+  property_type: 
+  	display: Type of Property
+  	type: radio
+  	options: 
+  		- Single Family
+  		- Multi Family
+  		- Mixed Use
+  		- Instituational
+  preview_image:
+    type: file
+    destination: assets/img/
+    allowed: ['jpg', 'png']
+
+
+  gallery:
+    display: Photo Gallery
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      photo:
+        type: file
+        display: Photo
+        destination: assets/img
+        show_thumbnail: true
+      caption:
+        display: Caption
+        type: text
+        width: 50%
+
+hide: true
