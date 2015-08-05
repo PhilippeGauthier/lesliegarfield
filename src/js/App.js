@@ -14,6 +14,8 @@ var slickPropertyTile = require('./components/propertyTile.slick.js');
 // 	React.render(<Parent />, document.getElementById('app'));
 // }
 
+var FilterBar = require('./components/FilterBar.react');
+
 var loadJSON = function(path, callback) {
   var xobj = new XMLHttpRequest();
   xobj.overrideMimeType("application/json");
