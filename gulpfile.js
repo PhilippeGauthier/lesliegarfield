@@ -14,6 +14,8 @@ var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
 var minifyCss = require('gulp-minify-css');
 var rename = require("gulp-rename");
+var markdown = require('gulp-markdown-to-json');
+var gutil = require('gulp-util');
 var livereload = require('gulp-livereload');
 var reload_page = livereload.changed;
 
@@ -29,8 +31,11 @@ var path = {
   SCSS: 'src/scss/**/*.scss',
   SCSS_ENTRY: 'src/scss/main.scss',
   SCSS_BUILD: 'statamic/_themes/main/css',
-
-  CSS_MINIFIED_OUT: 'main.min.css'
+  CSS_MINIFIED_OUT: 'main.min.css',
+  MKDN_SRC: 'statamic/_content/1-properties',
+  PROP_SALE: '/sale_properties',
+  PROP_RENT: '/rental_properties',
+  JSON: 'statamic/JSON'
 };
 
 gulp.task('copy', function(){
@@ -48,6 +53,13 @@ gulp.task('sass', function () {
     }))
     .pipe(sass())
     .pipe(gulp.dest(path.SCSS_BUILD));
+});
+
+gulp.task('markdown', function(){
+  gulp.src([path.MKDN_SRC + '/**/*.md', '!' + path.MKDN_SRC + '/**/page.md' ])
+    .pipe(gutil.buffer())
+    .pipe(markdown('properties.json'))
+    .pipe(gulp.dest(path.JSON))
 });
 
 gulp.task('watch', function() {

@@ -52,24 +52,9 @@ fields:
   		- Instituational
   preview_image:
     type: file
-    destination: assets/img/
-    allowed: ['jpg', 'png']
+    destination: assets/img/properties/sale
+    allowed: [png, gif, jpg, jpeg]
 
 
-  gallery:
-    display: Photo Gallery
-    type: grid
-    starting_rows: 1
-    min_rows: 1
-    fields:
-      photo:
-        type: file
-        display: Photo
-        destination: assets/img
-        show_thumbnail: true
-      caption:
-        display: Caption
-        type: text
-        width: 50%
 
 hide: true
