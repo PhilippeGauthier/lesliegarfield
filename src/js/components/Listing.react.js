@@ -3,9 +3,10 @@ var React = require('react');
 var Listing = React.createClass({
   render: function() {
     var listing = this.props.listing;
+    var listingURL = listing.site_root + listing.folder_location + listing.value;
     return (
       <div className='col-md-4'>
-        <a className='property_box'>
+        <a href={listingURL} className='property_box'>
           <img src={listing.preview_image} />
           <div className='property_tile_info'>
             <div className='top-info'>

@@ -65,6 +65,7 @@ gulp.task('markdown', function(){
 gulp.task('watch', function() {
   livereload.listen();
   gulp.watch(path.HTML, ['copy']);
+  gulp.watch(path.MKDN_SRC + '/**/*.md', ['markdown']);
   gulp.watch(path.SCSS, ['sass']);
   gulp.watch([path.DEST + '/**/*.*'], reload_page);
 

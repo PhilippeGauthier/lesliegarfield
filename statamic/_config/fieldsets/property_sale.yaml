@@ -1,8 +1,23 @@
+
+
 fields:
+  site_root:
+    type: select
+    options:
+      - http://lesliegarfield.com/
+      - http://localhost/~philippe/lesliegarfield/statamic/
+  folder_location:
+    hide: true
+    default: properties/sale_properties/
+  price:
+    type: text
+    required: true
+    display: Property Price
+    instructions:
+      above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
   categories:
     display: Categories
     required: false
-    default:
     type: tags
   featured:
     display: Featured Property?
@@ -37,11 +52,7 @@ fields:
       - Midtown West
       - Upper East Side
       - Upper West Side
-  price:
-  	type: text
-  	display: Property Price
-  	instructions:
-  		above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
+
   property_type: 
   	display: Type of Property
   	type: radio

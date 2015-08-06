@@ -5,8 +5,9 @@ var _ = require('lodash');
 var Listings = React.createClass({
   render: function() {
     var rows = _.map(this.props.listings, function(listing, i) {
-      return (<Listing listing={listing} key={i} />);
+      return (<Listing listing={listing} key={i} value={i}/>);
     });
+
     return (
       <section>
         <div className='container'>
