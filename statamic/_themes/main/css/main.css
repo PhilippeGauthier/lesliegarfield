@@ -7099,7 +7099,13 @@ section {
   padding-top: 5px; }
 
 .property_nav .views li:last-of-type {
-  margin-left: 10px; }
+  margin-left: 15px; }
+
+.property_nav .views span {
+  color: white; }
+
+.property_nav .views i {
+  margin-right: 5px; }
 
 .property_nav .views a {
   padding-top: 5px;
@@ -7113,6 +7119,9 @@ section {
   color: #009880;
   padding-bottom: 10px;
   border-bottom: 2px solid #009880; }
+
+.property_nav .views a.active span {
+  color: #009880; }
 
 .property_nav .views a.active:hover, .property_nav .views a.active:focus {
   color: #009880;

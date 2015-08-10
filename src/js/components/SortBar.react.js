@@ -58,13 +58,17 @@ var SortBar = React.createClass({
     return (
       <div>
         <div className='property_nav' style={{ backgroundColor: '#FFFFFF', borderBottom: 'solid 1px gray' }}>
-          <div style={{width: '250px', marginLeft: '20px'}}>
-            <Select
-              options={sortOptions}
-              onChange={this.updateSort}
-              value={this.state.sortValue}
-              clearable={false}
-            />
+          <div className='container'>
+          <div className='row'>
+            <div style={{width: '250px', marginLeft: '20px'}}>
+              <Select
+                options={sortOptions}
+                onChange={this.updateSort}
+                value={this.state.sortValue}
+                clearable={false}
+              />
+            </div>
+            </div>
           </div>
         </div>
         <Listings listings={listings} />

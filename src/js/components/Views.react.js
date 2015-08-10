@@ -3,7 +3,7 @@ var React = require('react');
 var Views = React.createClass({
   render: function() {
     return (
-      <div style={{float: 'right'}}>
+      <div>
         <ul className='views'>
           <li>
             <a className='active'><i className='fa fa-th-large' />Grid View</a>

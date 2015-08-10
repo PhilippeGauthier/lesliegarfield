@@ -60,8 +60,14 @@
 		li {
 			padding-top: 5px;
 			&:last-of-type {
-				margin-left: 10px;
+				margin-left: 15px;
 			}
+		}
+		span {
+			color: white;
+		}
+		i {
+			margin-right: 5px;
 		}
 		a {
 			padding-top: 5px;
@@ -74,6 +80,9 @@
 				color: $green;
 				padding-bottom: 10px;
 				border-bottom: 2px solid $green;
+				span {
+					color: $green;
+				}
 				&:hover, &:focus {
 					color: $green;
 					border-bottom: 2px solid $green;

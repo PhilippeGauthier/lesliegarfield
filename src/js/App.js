@@ -6,6 +6,10 @@ var React = require('react');
 var Slick = require('slick-carousel');
 var slickPropertyTile = require('./components/propertyTile.slick.js');
 
+// Currency Conversion
+var currency = require('./components/currency.js');
+var currencyConversion = require('./components/currencyConversion.js');
+
 // React Components
 var elem = $('#app');
 if (elem.length) {

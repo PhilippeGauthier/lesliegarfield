@@ -12,7 +12,7 @@ var Listing = React.createClass({
             <div className='top-info'>
               <h3>{listing.title}</h3>
               <div className='spacer'></div>
-              <h4>${listing.price}</h4>
+              <h4 className="price">{listing.price}</h4>
               <div className='spacer'></div>
               <h4>{listing.sqft} sq. ft</h4>
               <div className='spacer'></div>              

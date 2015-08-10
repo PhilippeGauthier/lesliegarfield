@@ -54,11 +54,11 @@ var FilterBar = React.createClass({
         <div className='property_nav dark_gray'>
           <div className='container'>
             <div className='flex'>
-              <div style={{width: '100%'}}>
+              <div>
                 <RentOrBuy buy={this.state.buy} updateRentOrBuy={this.updateRentOrBuy} />
                 <Neighborhoods filteredNeighborhoods={this.state.filteredNeighborhoods} buy={this.state.buy} updateFilteredNeighborhoods={this.updateFilteredNeighborhoods} />
-                <Views />
               </div>
+              <Views />
             </div>
           </div>
         </div>
