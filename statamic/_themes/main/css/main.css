@@ -2247,29 +2247,7 @@ section {
 
 .property_tile a {
   padding: 10px;
-  margin: 1px; }
-
-.property_tile .slick-slide {
-  box-sizing: border-box;
-  width: 33.33333%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%; }
-
-.property_tile .slick-slide:nth-child(3n + 1) {
-  margin-left: 0;
-  margin-right: -100%;
-  clear: both; }
-
-.property_tile .slick-slide:nth-child(3n + 2) {
-  margin-left: 33.33333%;
-  margin-right: -100%;
-  clear: none; }
-
-.property_tile .slick-slide:nth-child(3n + 3) {
-  margin-left: 66.66667%;
-  margin-right: -100%;
-  clear: none; }
+  margin: 10px; }
 
 .property_box {
   display: -webkit-flex;

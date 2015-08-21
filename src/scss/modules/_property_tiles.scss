@@ -1,12 +1,8 @@
 .property_tile {
-
 	a {
 		padding: 10px;
-		margin: 1px;
+		margin: 10px;
 	}
-	.slick-slide {
-		@include gallery(4 of 12);
-	}	
 }
 
 .property_box {
