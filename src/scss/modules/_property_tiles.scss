@@ -1,16 +1,24 @@
+.property_tile {
+
+	a {
+		padding: 10px;
+		margin: 1px;
+	}
+	.slick-slide {
+		@include gallery(4 of 12);
+	}	
+}
+
 .property_box {
 	display: flex;
 	flex-flow: row nowrap;
 	background-color: #fff;
-	margin: 1px 0 30px;
-	padding: 10px;
 
-		margin: 1px 10px;
-		img {
-			max-height: 300px;
-			max-width: 200px;
-
+	img {
+		max-height: 300px;
+		max-width: 200px;
 	}
+
 	.property_tile_info {
 		display: flex;
 		flex-flow: column nowrap;
