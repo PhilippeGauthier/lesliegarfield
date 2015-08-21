@@ -15,6 +15,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var minifyCss = require('gulp-minify-css');
 var rename = require("gulp-rename");
 var markdown = require('gulp-markdown-to-json');
+var convert = require('gulp-convert');
 var gutil = require('gulp-util');
 var livereload = require('gulp-livereload');
 var reload_page = livereload.changed;
@@ -35,8 +36,17 @@ var path = {
   MKDN_SRC: 'statamic/_content/1-properties',
   PROP_SALE: '/sale_properties',
   PROP_RENT: '/rental_properties',
-  JSON: 'statamic/JSON'
+  JSON: 'statamic/JSON/'
 };
+
+gulp.task('foo', function(){
+  gulp.src([path.JSON + '*.json'])
+    .pipe(convert({
+      from: 'json',
+      to: 'xml'
+     }))
+    .pipe(gulp.dest(path.JSON));
+});
 
 gulp.task('copy', function(){
   gulp.src(path.HTML)
@@ -123,3 +133,4 @@ gulp.task('minify-css', function() {
 gulp.task('production', ['replaceHTML', 'minify-css', 'build']);
 
 gulp.task('default', ['copy','watch']);
+

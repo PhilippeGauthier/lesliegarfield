@@ -1,0 +1,91 @@
+.property-info {
+	padding: 30px;
+	background-color: #fff;
+	@include clearfix;
+	h1 {
+		font-family: $header-font-family-book-italic;
+		font-size: 47px;
+		color: $header-font-color;
+		margin: 0 0 20px 0;
+	}
+	.content {
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-bottom: 30px;
+	}
+	.divider {
+		border-right: 2px solid $light-font-color;
+		height: 100%;
+		margin: 0 10px 0 5px;
+	}
+	.property-header {
+		// padding: 30px;
+		padding-bottom: 30px;
+		span {
+			font-family: $header-font-medium;
+			font-size: 16px;
+			color: $light-font-color;
+		}
+	}
+}
+
+.dotted {
+	border-bottom: 1px dotted $light-font-color;
+	vertical-align: bottom;
+	margin-bottom: 30px;
+	@include span (full no-gutter);
+}
+
+.property-carousel {
+	padding-left: 30px;
+	padding-right: 30px;
+	background-color: $background-light-gray;
+}
+
+.property-agents {
+	@include span(full no-gutter);
+	margin-top: 168px;
+	color: $header-font-color;
+	h3 {
+		font-family: $header-font-family-medium-italic;
+		font-size: 16px;
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+	.agent-block {
+		margin-bottom: 30px;
+		@include span (100%);
+	}
+	.agent-image {
+		@include span (1 of 3 no-gutter);
+		padding-right: 10px;
+	}
+	img {
+		
+		border-radius: 50%;
+	}
+	.agent-details {
+		@include span (last 2 of 3 no-gutter);
+	}
+	li, a {
+		vertical-align: top;
+		font-family: $header-font-medium;
+		font-size: 10px;
+	}
+	svg {
+		margin-right: 5px;
+		height: 25px;
+		width: 25px;
+	}
+}
+
+.summary {
+	@include span(100%);
+	margin-top: 30px;
+	span {
+		font-family: $header-font-medium;
+		font-size: 16px;
+		line-height: 24px;
+		margin-left: 5px;
+	}
+}

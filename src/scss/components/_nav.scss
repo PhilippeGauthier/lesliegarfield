@@ -1,22 +1,62 @@
-.navbar {
+header {
 	margin-bottom: 0;
 	border-radius: 0;
-	padding-top: 2px;
+	padding-top: 4px;
 	padding-bottom: 2px;
+	background-color: #fff;
+	position: relative;
+	@include clearfix;
+	.flex {
+		justify-content: space-between;
+	}
 }
-.nav > li > a:hover, .nav > li > a:focus, .nav > li > a.active {
+
+nav {
+	width: 100%;
+	height: auto;
+	display: block;
+	padding-bottom: 0;
+	overflow: visible;
+	@include clearfix;
+	div {
+		display: inline-block;
+	}
+	svg {
+		width: 200px;
+		padding-top: 4px;
+	}
+	ul {
+		display: block;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		@include clearfix;
+		&.left a {
+			padding: 0;
+			margin-bottom: -2px;
+			&:hover {
+				box-shadow: none;
+			}
+		}
+	}
+	li {
+		position: relative;
+		display: block;
+		float: left;
+
+	}
+	a {
+		color: $dark-gray;
+		display: block;
+		padding: 23px 15px;
+		.left {
+			padding: 0;
+		}
+	}
+}
+
+nav li a:hover, nav li a:focus, nav li a.active {
 	background-color: transparent;
 	color: $green;
 	box-shadow: 0px 3px 0px 0px;
-}
-
-.navbar-nav > li > a {
-	padding-top: 25px;
-	padding-bottom: 25px;
-}
-
-.navbar-collapse {
-	a {
-		color: $dark-gray;
-	}
 }

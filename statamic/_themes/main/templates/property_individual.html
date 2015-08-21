@@ -1,0 +1,191 @@
+<div class="content-wrap background-gray">
+	<section>
+		<div class="container">
+
+				<aside>
+				<div class="property-agents">
+					<div class="dotted"></div>
+					{{ relate:agents}}
+						<div class="agent-block">
+							<a class="agent-image" href="{{ url }}"><img src="{{ transform src="{{ image }}" width="300" }}" class="img-circle" /></a>
+							<div class="agent-details">
+								<a href="{{ url"><h3>{{ title }}</h3></a>
+								<ul>
+									<li>{{ theme:partial src="svg/phone" }} {{ phone }}</li>
+									<li>{{ theme:partial src="svg/mail" }} {{ email|link }}</li>
+								</ul>
+							</div>
+						</div>
+					{{ /relate:agents}}
+
+				</div>
+				<div class="dotted"></div>
+				</aside>
+
+				<main>
+					<div class="property-info">
+						<div class="property-header">
+							<h1>{{ title }}</h1>
+							<div>
+								<span>{{ property_location }}</span>
+								{{ if location_granular|not_empty }}
+								<span class="divider"></span>
+								<span>{{ location_granular }}</span>
+								{{ endif }}
+							</div>
+						</div>
+						<div class="property-carousel">
+							<div class="fotorama" data-nav="false" >
+								{{ photo_carousel }}
+								<img src="{{ path src="{{ image }}"}}">
+								{{ /photo_carousel}}
+							</div>
+						</div>
+						<div class="green-specs">
+							<div class="specs">
+								<h3>{{ theme:partial src="svg/glasses" }}SPECIFICATIONS</h3>
+								<ul>
+									{{ if price|not_empty }}
+									<li>Price</li>
+									{{ endif }}
+									{{ if sqft|not_empty }}
+									<li>Square Feet</li>
+									{{ endif }}
+									{{ if bedrooms|not_empty }}
+									<li>Bedrooms</li>
+									{{ endif }}
+									{{ if bathrooms|not_empty }}
+									<li>Bathrooms</li>
+									{{ endif }}
+									{{ if rental_term|not_empty }}
+									<li>Rental Term</li>
+									{{ endif }}
+									{{ if pet_policy|not_empty }}
+									<li>Pet Policy</li>
+									{{ endif }}
+									{{ if condition|not_empty }}
+									<li>Condition</li>
+									{{ endif }}
+									{{ if maintenance|not_empty }}
+									<li>Maintenance</li>
+									{{ endif }}
+									{{ if additional_specs|not_empty }}
+									{{ additional_specs }}
+									<li>{{ spec_labels }}</li>
+									{{ /additional_specs}}
+									{{ endif }}
+								</ul>
+								<ul>
+									{{ if price|not_empty }}
+									<li>${{ price|format_number }}</li>
+									{{ endif }}
+									{{ if sqft|not_empty }}
+									<li>{{ sqft }}</li>
+									{{ endif }}
+									{{ if bedrooms|not_empty }}
+									<li>{{ bedrooms }}</li>
+									{{ endif }}
+									{{ if bathrooms|not_empty }}
+									<li>{{ bathrooms }}</li>
+									{{ endif }}
+									{{ if rental_term|not_empty }}
+									<li>{{ rental_term }}</li>
+									{{ endif }}
+									{{ if pet_policy|not_empty }}
+									<li>{{ pet_policy }}</li>
+									{{ endif }}
+									{{ if condition|not_empty }}
+									<li>{{ condition }}</li>
+									{{ endif }}
+									{{ if maintenance|not_empty }}
+									<li>{{ maintenance }}</li>
+									{{ endif }}
+									{{ if additional_specs|not_empty }}
+									{{ additional_specs }}
+									<li>
+										{{ result }}
+											{{ if other == null }} 
+											  {{ yes_or_no }}
+											  	{{ if value =="yep" }}
+											  	Yes
+											  	{{ else }}
+											  	No
+											  	{{ endif }}
+											  {{ /yes_or_no }}
+											{{ else }}
+												{{ other }}
+											{{ endif }}
+										{{ /result }}
+									</li>
+									{{ /additional_specs}}
+									{{ endif }}
+								</ul>
+							</div>
+							<div class="location_features">
+								<h3>{{ theme:partial src="svg/maps" }}LOCATION</h3>
+								<ul>
+									<li>{{ location_granular }}</li>
+								</ul>
+								<h3>{{ theme:partial src="svg/stars" }}Key Features</h3>
+								<ul>
+								{{ key_features }}
+									<li>{{ value }}</li>
+								{{ /key_features }}
+								</ul>
+							</div>
+						</div>
+						<div class="summary">
+							{{ summary_intro }}
+							
+							<a id="summary_expander" href=""><i id="summary_icon" class="fa fa-plus-circle"></i><span>Read More</span></a>
+							
+							<div id="summary_expanded" style="display: none">{{ summary_full }}</div>
+						</div>
+					</div>
+			</main>
+		</div>
+	</section>
+		<section class="similar-properties-gray" id="featured-properties">
+		<div class="circle-leader">
+			<div class="circle similar-properties-gray">
+				{{ theme:partial src="svg/home_building" }}
+			</div>
+			<h4>Similar Properties</h4>
+		</div>
+		<div class="container">
+				<div class="property_tile">
+					{{ entries:listing folder="properties/sale_properties" conditions="url:!{url}, property_location:{ property_location }"  }}
+					    {{ if no_results }}
+				        <p style="text-align: center">There are no similar properties. </p>
+				        {{ else }}
+									<div>
+										<a href="{{ url }}" class="property_box slick">
+											<img src="{{ path src="{{ preview_image }}" }}" >
+											<div class="property_tile_info">
+												<div class="top-info">
+													<h3>{{ title }}</h3>
+													{{ slug }}
+													<div class="spacer"></div>
+													<h4>${{ price|format_number }}</h4>
+													<div class="spacer"></div>
+													<h4>{{ property_type }}</h4>
+													<div class="spacer"></div>
+													<h4>{{ property_location }}</h4>
+												</div>
+												<div class="bottom-info">
+													{{ if openhouse }}
+													<p>
+														Open House
+													</p>
+													{{ endif }}
+												</div>
+											</div>
+										</a >
+									</div>				        
+				    	{{ endif }}
+					{{ /entries:listing }}
+					
+				</div>
+		</div>
+	</section>
+</div>

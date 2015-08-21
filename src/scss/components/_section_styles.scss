@@ -18,18 +18,28 @@ section {
 }
 
 .circle-leader {
+	$size: 80px;
 	width: 100%;
 	position: absolute;
-	top: -25px;
+	@include circle-position($size);
 	left: 0;
 	right: 0;
 	text-align: center;
 	.circle {
 		margin: 0 auto;
 		box-sizing: border-box;
-		@include circle(50px);
-		padding: 5px;
-		border: 2px solid $dark-gray;
-		box-shadow: 0 0 0 10px $light-gray;
+		@include circle($size);
+		svg {
+			@include svg-size($size);
+			* {
+				fill: $base-font-color;
+			}
+		}
+		// svg {
+		// 	height: 70px;
+		// 	width: 70px;
+		// }
+		// border: 2px solid $dark-gray;
+		// box-shadow: 0 0 0 10px $light-gray;
 	}
 }

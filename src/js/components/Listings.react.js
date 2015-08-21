@@ -9,11 +9,9 @@ var Listings = React.createClass({
     });
 
     return (
-      <section>
+      <section id="light-gray">
         <div className='container'>
-          <div className='row'>
-            {rows}
-          </div>
+          {rows}
         </div>
       </section>
     );

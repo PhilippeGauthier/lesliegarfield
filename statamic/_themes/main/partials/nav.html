@@ -1,30 +1,26 @@
-<header class="navbar">
+<header>
 <div class="container">
-
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="{{ homepage }}">Leslie A. Garfield</a>
-    </div>
-  
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-      {{ nav from="/" max_depth="1" }}
+  <nav>
+    <ul class="left">
+      <li>
+        <a class="left" href="{{ homepage }}">
+          {{ theme:partial src="svg/logo" }}
+        </a>
+      </li>
+    </ul >
+      <ul class="right">
+        {{ nav from="/" max_depth="1" }}
         <li><a href="{{ url }}"{{ if is_current || is_parent }} class="active"{{ endif }}>{{ title }} </a>
          {{ if is_current || is_parent }}
-           {{ if children }}
-            <ul>
+         {{ if children }}
+         <ul>
           {{ *recursive children* }}
-            </ul>
-          {{ endif }}
+        </ul>
         {{ endif }}
-      {{ /nav }}
+        {{ endif }}
+        {{ /nav }}
       </li>
-      </ul>
-    </div>
-  </div>
-  </header>
+    </ul>
+  </nav>
+</div>
+</header>

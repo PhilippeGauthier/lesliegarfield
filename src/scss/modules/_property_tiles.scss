@@ -6,6 +6,10 @@
 	padding: 10px;
 	&.slick {
 		margin: 1px 10px;
+		img {
+			max-height: 300px;
+			max-width: 200px;
+		}
 	}
 	.property_tile_info {
 		display: flex;

@@ -1,0 +1,88 @@
+
+/**
+*
+* Global
+*
+**/
+// @include border-box-sizing;
+
+
+$small: 768px;
+$medium: 992px;
+$large: 1170px;
+
+
+// @include establish-baseline;
+
+html, body, a, span, p {
+  color: $base-font-color;
+  font-family: $base-font-family;
+}
+
+ul {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+  li {
+    display: inline-block;
+    font-weight: 300;
+    line-height: 24px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $base-font-color;
+  &:hover,&:focus {
+    color: $base-font-color;
+    text-decoration: none;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+  text-align: center;   
+  * {
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    text-align: center;    
+  }
+}
+
+.background-gray {
+  background-color: $background-gray;
+}
+
+.background-light-gray {
+  background-color: $background-light-gray;
+}
+
+.similar-properties-gray {
+  background-color: $similar-properties-gray;
+}
+
+.white {
+  background-color: #fff;
+}
+.dark_gray {
+  background-color: $dark-gray;
+  a,p,span,h1,h2,h3,h4, .fa-inverse {
+    color: $light-font-color;
+    &:hover {
+      color: $light-font-color;
+    }
+  }
+}
+
+.highlight * {
+	font-family: $header-font-family;
+}

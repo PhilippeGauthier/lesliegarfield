@@ -1,0 +1,84 @@
+
+$susy: (
+	columns: 12,
+	container: 1280px,
+	gutter-position: inside,
+  debug: (
+    image: hide,
+  )
+);
+
+* {
+	box-sizing: border-box;
+}
+html {
+	height: 100%;
+}
+
+html,body {
+	// height: 100%;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+body {
+	min-height: 100%;
+	// display: flex;
+	// flex-direction: column;
+	margin: 0;
+	// margin-bottom: -230px;
+
+}
+.page-wrap {
+	flex: 1;
+	display: flex;
+	min-height: 100%;
+	flex-direction: column;
+}
+
+.container {
+	@include container(show overlay);
+}
+
+.right {
+	float: right !important;
+}
+
+.left {
+	float: left !important;
+}
+
+.flex {
+	display: flex;
+	&.column-no-wrap {
+		flex-flow: column nowrap;
+	}
+	&.row-no-wrap {
+		flex-flow: row nowrap;
+	}
+}
+
+.content-wrap {
+	flex: 1;
+}
+
+.full {
+	flex: 1;
+}
+
+.grid-3 {
+	@include gallery (3 of 12);
+}
+
+.grid-4 {
+	@include gallery (4 of 12);
+}
+
+aside {
+	@include span (3 of 12);
+}
+
+main {
+	@include span (last 9 of 12);
+	// padding: 30px;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "lesliegarfield",
+  "version": "0.0.0",
+  "homepage": "https://github.com/PhilippeGauthier/lesliegarfield",
+  "authors": [
+    "Philippe Gauthier <philippe@philippe.io>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "susy": "~2.2.5",
+    "breakpoint-sass": "~2.6.1",
+    "normalize.css": "~3.0.3"
+  }
+}

@@ -1,34 +1,46 @@
+
+
 fields:
+  slug: 
+    hide: false 
+  folder_location:
+    default: properties/rental_properties/
+    hide: true
   site_root:
     type: select
     options:
       - http://lesliegarfield.com/
       - http://localhost/~philippe/lesliegarfield/statamic/
-  folder_location:
-    hide: true
-    default: properties/rental_properties/
-  price:
+  slugg:
+    type: text
+    display: Copy Slug
+  agents:
+    display: Agents
+    type: suggest
+    create: true
+    content:
+      folder: agents
+      label: title
+      value: url
+  rent:
     type: text
     required: true
-    display: Property Price
+    display: Rental Price Per Month
     instructions:
       above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
+  sqft:
+    type: text
+    display: Square Feet
   categories:
     display: Categories
     required: false
-    default:
     type: tags
   featured:
     display: Featured Property?
     type: checkbox
-    default: 0
   openhouse:
     display: Open House?
     type: checkbox
-    default: 0
-  content:
-    type: redactor
-    hide: true
   lat_long:
     display: Property Coordinates
     type: grid
@@ -53,18 +65,97 @@ fields:
       - Midtown West
       - Upper East Side
       - Upper West Side
-  property_type: 
-  	display: Type of Property
-  	type: radio
-  	options: 
-  		- Single Family
-  		- Multi Family
-  		- Mixed Use
-  		- Instituational
+  location_granular:
+    type: text
+    display: More detailed location ie Between Fifth and Madison
+  property_type:
+    display: Property Type
+    type: suggest
+    create: true
+    content:
+      folder: properties
+      label: title
+      value: url
   preview_image:
     type: file
-    destination: assets/img/properties/rent
-
-
-
+    destination: assets/img/properties/sale
+    allowed: [png, gif, jpg, jpeg]
+  content:
+    type: redactor
+    hide: true
+  photo_carousel:
+    type: grid
+    display: Photo Carousel
+    fields:
+      image:
+        type: file
+        destination: assets/img/properties/sale
+        allowed: [png, gif, jpg, jpeg]
+  bedrooms:
+    display: Bedrooms
+    instructions: 'Feel free to leave blank'
+    type: text
+  bathrooms:
+    display: Bathrooms
+    instructions: 'Feel free to leave blank'
+    type: text
+  rental_term:
+    display: Rental Term
+    instructions: 'Feel free to leave blank'
+    type: suggest
+    create: true
+  pet_policy:
+    display: Pet Policy
+    instructions: 'Feel free to leave blank'
+    type: suggest
+    create: true
+  condition:
+    display: Furnished / Unfurnished
+    instructions: 'Feel free to leave blank'
+    type: suggest
+    create: true
+  maintenance:
+    display: Maintenance
+    instructions: 'Feel free to leave blank'
+    type: text
+  additional_specs:
+    display: Additional Specifications
+    type: grid
+    starting_rows: 1
+    fields:
+      spec_labels:
+        display: Label
+        type: text
+      result:
+        display: 'If you answer is a yes or no, use the checkboxes, otherwise fill out the form to the right'
+        type: grid
+        starting_rows: 1
+        max_rows: 1
+        fields:
+          yes_or_no:
+            type: checkboxes
+            display: Yes or No
+            options:
+              yep: 'Yes'
+              nope: 'No'
+          other:
+            display: Other
+            type: text
+  key_features:
+    display: Key Features
+    type: suggest
+    create: true
+    taxonomy:
+      folder: properties/*
+      type: key_features
+  summary_intro:
+    type: redactor
+    display: Enter the first paragraph of property summary
+  summary_full:
+    type: redactor
+    display: Enter the rest of the summary
+    
 hide: true
+
+
+

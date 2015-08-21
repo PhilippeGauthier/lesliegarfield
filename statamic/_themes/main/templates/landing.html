@@ -1,12 +1,12 @@
-<div class="hero" style="background-image: url( {{ path src="{{ hero_image }}" }} );">
-	<h1>{{ tag_line }}</h1>
-	<h3>{{ sub_tag_line}}</h3>
-	<a href="{{ url }}properties" class="btn btn-garfield">View Properties</a>
-</div>	
-<section class="leader" id="landing-sub-nav">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3 centered">
+<div class="content-wrap">
+	<div class="hero" style="background-image: url( {{ path src="{{ hero_image }}" }} );">
+		<h1>{{ tag_line }}</h1>
+		<h3>{{ sub_tag_line}}</h3>
+		<a href="{{ url }}properties" class="btn btn-garfield">View Properties</a>
+	</div>	
+	<section class="leader" id="landing-sub-nav">
+		<div class="container">
+			<div class="grid-3 centered">
 				<a href="" class="circle-nav">
 					<div class="no-hover">
 						<div class="circle"></div>
@@ -19,7 +19,7 @@
 					</div>
 				</a>
 			</div>
-			<div class="col-md-3 centered">
+			<div class="grid-3 centered">
 				<a href="" class="circle-nav">
 					<div class="no-hover">
 						<div class="circle"></div>
@@ -32,7 +32,7 @@
 					</div>
 				</a>
 			</div>
-			<div class="col-md-3 centered">
+			<div class="grid-3 centered">
 				<a href="" class="circle-nav">
 					<div class="no-hover">
 						<div class="circle"></div>
@@ -45,7 +45,7 @@
 					</div>
 				</a>
 			</div>
-			<div class="col-md-3 centered">
+			<div class="grid-3 centered">
 				<a href="" class="circle-nav">
 					<div class="no-hover">
 						<div class="circle"></div>
@@ -59,42 +59,43 @@
 				</a>
 			</div>
 		</div>
-	</div>
-</section>
-<section class="light-gray-bg" id="featured-properties">
-	<div class="circle-leader">
-		<div class="circle light-gray-bg"></div>
-		<h4>Featured Properties</h4>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="property_tile">
-				
-				{{ entries:listing folder="properties/sale_properties" }}
-				<div>
-					<a href="{{ url }}" class="property_box slick">
-						<img src="{{ path src="{{ preview_image }}" }}" >
-						<div class="property_tile_info">
-							<div class="top-info">
-								<h3>{{ title }}</h3>
-								<div class="spacer"></div>
-								<h4>${{ price|format_number }}</h4>
-								<div class="spacer"></div>
-								<h4>{{ property_type }}</h4>
-							</div>
-							<div class="bottom-info">
-								{{ if openhouse }}
-								<p>
-									Open House
-								</p>
-								{{ endif }}
-							</div>
-						</div>
-					</a >
-				</div>
-				{{ /entries:listing }}
-				
+	</section>
+	<section class="light-gray-bg" id="featured-properties">
+		<div class="circle-leader">
+			<div class="circle light-gray-bg">
+				{{ theme:partial src="svg/home_building" }}
 			</div>
+			<h4>Featured Properties</h4>
 		</div>
-	</div>
-</section>
+		<div class="container">
+				<div class="property_tile">
+					
+					{{ entries:listing folder="properties/sale_properties" }}
+					<div>
+						<a href="{{ url }}" class="property_box slick">
+							<img src="{{ path src="{{ preview_image }}" }}" >
+							<div class="property_tile_info">
+								<div class="top-info">
+									<h3>{{ title }}</h3>
+									{{ slug }}
+									<div class="spacer"></div>
+									<h4>${{ price|format_number }}</h4>
+									<div class="spacer"></div>
+									<h4>{{ property_type }}</h4>
+								</div>
+								<div class="bottom-info">
+									{{ if openhouse }}
+									<p>
+										Open House
+									</p>
+									{{ endif }}
+								</div>
+							</div>
+						</a >
+					</div>
+					{{ /entries:listing }}
+					
+				</div>
+		</div>
+	</section>
+</div>

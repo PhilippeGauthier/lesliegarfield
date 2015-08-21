@@ -48,6 +48,8 @@ _timezone: America/New_York
 _taxonomy:
   - categories
   - tags
+  - key_features
+  - property_location
 
 # Turns your slugs into pretty urls (spaces become "-" instead of %20)
 _taxonomy_slugify: false
@@ -56,7 +58,7 @@ _taxonomy_slugify: false
 _taxonomy_case_sensitive: false
 
 # Converts the display of taxonomies to lowercase
-_taxonomy_force_lowercase: true
+_taxonomy_force_lowercase: false
 
 # Choose your content parsing syntax
 # Your available options:
@@ -180,6 +182,7 @@ _admin_nav:
   help:      true
   view_site: true
   logout:    true
+  globals:   true
 
 # When you log in, where would you like to start?
 _admin_start_page: pages

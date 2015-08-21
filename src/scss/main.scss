@@ -3,21 +3,33 @@
 
 // @import url("http://fonts.googleapis.com/css?family=Nunito:400,300,700");
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
-@import '../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap_custom.scss';
+// @import '../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap_custom.scss';
+@import '../../bower_components/normalize.css/normalize';
+@import '../../bower_components/susy/sass/susy';
+@import '../../bower_components/breakpoint-sass/stylesheets/breakpoint';
+
+
+@import './_utils.scss';
+@import './_mixins.scss';
+@import './_layout.scss';
+@import './_global.scss';
+@import './_typography.scss';
 
 
 // third-party
 @import 'third-party/_slick.scss';
 @import 'third-party/_react-select.scss';
+@import 'third-party/_fotorama.scss';
+
+
 // components
-@import 'components/_variables.scss';
-@import 'components/_global.scss';
-@import 'components/_layout.scss';
 @import 'components/_nav.scss';
 @import 'components/_footer.scss';
 @import 'components/_maps.scss';
 @import 'components/_section_styles.scss';
 @import 'components/_property_nav.scss';
+@import 'components/_property_individual.scss';
+@import 'components/_green_specs.scss';
 
 // modules
 @import 'modules/_hero.scss';

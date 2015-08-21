@@ -3,7 +3,7 @@ var React = require('react');
 var Views = React.createClass({
   render: function() {
     return (
-      <div>
+      <div className='view-type'>
         <ul className='views'>
           <li>
             <a className='active'><i className='fa fa-th-large' />Grid View</a>

@@ -1,18 +1,24 @@
-$ = require('jquery');
+$ = require("jquery");
+jQuery = require('jquery');
 var React = require('react');
 
 
+// Custom JS
+var Custom = require('./components/Custom.js');
+
 // Slick Carousel
-var Slick = require('slick-carousel');
+var Slick = require('./components/Slick.js');
 var slickPropertyTile = require('./components/propertyTile.slick.js');
 
 // Currency Conversion
-var currency = require('./components/currency.js');
-var currencyConversion = require('./components/currencyConversion.js');
+var Currency = require('./components/Currency.js');
+
+var Fotorama = require('./components/Fotorama.js');
 
 // React Components
-var elem = $('#app');
+var elem = $('#properties');
 if (elem.length) {
+
 	var FilterBar = require('./components/FilterBar.react');
 
 	var loadJSON = function(path, callback) {
@@ -55,7 +61,7 @@ if (elem.length) {
 	    }
 	  });
 
-	  React.render(<Shell />, document.getElementById('app'));
+	  React.render(<Shell />, document.getElementById('properties'));
 	};
 
 	// start up the app by loading in JSON file of properties

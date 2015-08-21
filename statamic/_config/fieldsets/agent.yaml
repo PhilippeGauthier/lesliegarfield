@@ -1,0 +1,17 @@
+fields:
+	content:
+		hide: true
+	slug:
+		hide: true
+	image:
+		type: file
+		display: Agent Photo
+		destination: assets/img/agents
+		allowed: [png, gif, jpg, jpeg]
+	phone:
+		type: text
+		display: Agent's Phone Number
+		default: '212-371-8200 [ext 28]'
+	email:
+		type: text
+		display: Agent's Email Address

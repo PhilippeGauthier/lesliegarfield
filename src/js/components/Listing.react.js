@@ -1,14 +1,19 @@
 var React = require('react');
 
 var Listing = React.createClass({
+  componentDidMount: function() {
+    $('.price').currency({
+      decimals: 0
+    });
+  },
   render: function() {
     var listing = this.props.listing;
-    var listingURL = listing.site_root + listing.folder_location + listing.value;
+    var listingURL = listing.site_root + listing.folder_location + listing.slugg;
     return (
-      <div className='col-md-4'>
+      <div className='grid-4'>
         <a href={listingURL} className='property_box'>
           <img src={listing.preview_image} />
-          <div className='property_tile_info'>
+          <div className='property_tile_info highlight'>
             <div className='top-info'>
               <h3>{listing.title}</h3>
               <div className='spacer'></div>
