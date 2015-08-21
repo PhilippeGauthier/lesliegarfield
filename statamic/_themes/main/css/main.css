@@ -2222,12 +2222,10 @@ section {
   flex-flow: row nowrap;
   background-color: #fff;
   margin: 1px 0 30px;
-  padding: 10px; }
-
-.property_box.slick {
+  padding: 10px;
   margin: 1px 10px; }
 
-.property_box.slick img {
+.property_box img {
   max-height: 300px;
   max-width: 200px; }
 
