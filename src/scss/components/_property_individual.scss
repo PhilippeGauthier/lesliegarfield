@@ -1,3 +1,19 @@
+
+.property-page {
+	.sticky-wrapper {
+		position: relative;
+		@include span(320px no-gutter);
+		aside {
+			&.stuck {
+
+				.property-agents {
+					margin-top: 30px;
+				}
+			}
+		}
+	}
+}
+
 .property-info {
 	padding: 30px;
 	background-color: #fff;
@@ -30,8 +46,6 @@
 	}
 	.location {
 		@include span (full);
-		margin-bottom: 20px;
-
 	}
 	.content {
 		padding-left: 30px;
@@ -44,7 +58,7 @@
 		margin: 0 10px 0 5px;
 	}
 	.property-header {
-		// padding: 30px;
+		@include clearfix;
 		padding-bottom: 30px;
 		span {
 			font-family: $header-font-medium;
@@ -58,7 +72,8 @@
 	border-bottom: 1px dotted $light-font-color;
 	vertical-align: bottom;
 	margin-bottom: 30px;
-	@include span (full no-gutter);
+	width: 100%;
+	@include clearfix;
 }
 
 .property-carousel {

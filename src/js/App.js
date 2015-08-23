@@ -13,7 +13,14 @@ var slickInitialize = require('./components/slickInitialize.slick.js');
 // Currency Conversion
 var Currency = require('./components/Currency.js');
 
-var Fotorama = require('./components/Fotorama.js');
+// Fotorama
+// var Fotorama = require('./components/Fotorama.js');
+
+// Waypoints
+var Waypoints = require('../../bower_components/waypoints/lib/jquery.waypoints.js');
+var Waypoints_Sticky = require('../../bower_components/waypoints/lib/shortcuts/sticky.js');
+var waypointInitialize = require('./components/waypointInitialize.js');
+
 
 // React Components
 var elem = $('#properties');

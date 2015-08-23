@@ -60,6 +60,7 @@ body {
 
 .content-wrap {
 	flex: 1;
+	padding-top: 100px;
 }
 
 .full {
@@ -74,8 +75,14 @@ body {
 	@include gallery (4 of 12);
 }
 
+.stuck {
+	position: fixed;
+	top: 0;
+}
+
 aside {
-	@include span (3 of 12);
+	width: 320px;
+	padding-right: 30px;
 }
 
 main {
