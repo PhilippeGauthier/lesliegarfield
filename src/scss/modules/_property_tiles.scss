@@ -9,10 +9,16 @@
 	display: flex;
 	flex-flow: row nowrap;
 	background-color: #fff;
-
+	.preview-image {
+		height: 300px;
+		width: 200px;
+		background-color: $light-gray;
+		background-size: cover;
+	}
 	img {
 		max-height: 300px;
 		max-width: 200px;
+
 	}
 
 	.property_tile_info {

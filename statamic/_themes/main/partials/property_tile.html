@@ -1,14 +1,21 @@
+{{ if no_results }}
+<p style="text-align: center">There are no similar properties. </p>
+{{ else }}
+<div>
+	<a href="{{ url }}" class="property_box slick">
 
-<div class="col-md-4">
-	<a href="{{ url }}" class="property_box">
-		<img src="{{ path src="{{ preview_image }}" }}" >
+		<!-- <img src="{{ path src="{{ preview_image }}" }}" > -->
+		<div class='preview-image' style='background-image: url( {{ path src='{{ preview_image }}' }} );'></div>
 		<div class="property_tile_info">
 			<div class="top-info">
 				<h3>{{ title }}</h3>
+				{{ slug }}
 				<div class="spacer"></div>
 				<h4>${{ price|format_number }}</h4>
 				<div class="spacer"></div>
 				<h4>{{ property_type }}</h4>
+				<div class="spacer"></div>
+				<h4>{{ property_location }}</h4>
 			</div>
 			<div class="bottom-info">
 				{{ if openhouse }}
@@ -20,3 +27,8 @@
 		</div>
 	</a >
 </div>
+{{ endif }}
+
+
+
+

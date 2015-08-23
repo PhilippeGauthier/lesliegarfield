@@ -75,28 +75,7 @@
 				<div class="property_tile">
 					
 					{{ entries:listing folder="properties/sale_properties" }}
-					<div>
-						<a href="{{ url }}" class="property_box slick">
-							<img src="{{ path src="{{ preview_image }}" }}" >
-							<div class="property_tile_info">
-								<div class="top-info">
-									<h3>{{ title }}</h3>
-									{{ slug }}
-									<div class="spacer"></div>
-									<h4>${{ price|format_number }}</h4>
-									<div class="spacer"></div>
-									<h4>{{ property_type }}</h4>
-								</div>
-								<div class="bottom-info">
-									{{ if openhouse }}
-									<p>
-										Open House
-									</p>
-									{{ endif }}
-								</div>
-							</div>
-						</a >
-					</div>
+						{{ theme:partial src="property_tile" use_context="true" }}
 					{{ /entries:listing }}
 					
 				</div>

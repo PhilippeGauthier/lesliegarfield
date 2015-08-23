@@ -23,8 +23,8 @@ $( "#summary_expander" ).click(function() {
 		$('span').html('Read More');
 	}
   $( "#summary_expanded" ).slideToggle( "slow", function() {
-    // Animation complete.
 
   });
 });
+
 

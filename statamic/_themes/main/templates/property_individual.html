@@ -3,11 +3,13 @@
 		<div class="container">
 
 				<aside>
-				<div class="property-agents">
+				<div class="agent property-agents">
 					<div class="dotted"></div>
 					{{ relate:agents}}
 						<div class="agent-block">
-							<a class="agent-image" href="{{ url }}"><img src="{{ transform src="{{ image }}" width="300" }}" class="img-circle" /></a>
+							<a class="agent-image" href="{{ url }}">
+								<img src="{{ transform src="{{ image }}" width="300" }}" class="img-circle" />
+							</a>
 							<div class="agent-details">
 								<a href="{{ url }}"><h3>{{ title }}</h3></a>
 								<ul>
@@ -20,15 +22,19 @@
 
 				</div>
 				<div class="dotted"></div>
-				<div class="property-downloads">
-					<a href="">
+				<div class="agent property-downloads">
+					<a href="{{ specs }}" target="_blank">
 						{{ theme:partial src="svg/download" }}
 						<span>Download</span>
 					</a>
-					<a href="">
+					<a href=" {{ floorplans }}">
 						{{ theme:partial src="svg/floorplans" }}
 						<span>Floorplans</span>
 					</a>
+				</div>
+				<div class="dotted"></div>
+				<div class="agent property-schedule">
+					<a href="{{ url }} properties" class="btn btn-garfield">Schedule a viewing</a>
 				</div>
 				<div class="dotted"></div>
 				</aside>
@@ -37,7 +43,36 @@
 					<div class="property-info">
 						<div class="property-header">
 							<h1>{{ title }}</h1>
-							<div>
+							<div class="social">
+								<a href="">
+									<span class="fa-stack fa-lg">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+								<a href="">
+									<span class="fa-stack fa-lg">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+								<a href="">
+									<span class="fa-stack fa-lg">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+								<a href="">
+									<span class="fa-stack fa-lg">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+
+
+
+							</div>
+							<div class="location">
 								<span>{{ property_location }}</span>
 								{{ if location_granular|not_empty }}
 								<span class="divider"></span>
@@ -46,11 +81,13 @@
 							</div>
 						</div>
 						<div class="property-carousel">
-							<div class="fotorama" data-nav="false" >
+							
 								{{ photo_carousel }}
+								<div>
 								<img src="{{ path src="{{ image }}"}}">
+								</div>
 								{{ /photo_carousel}}
-							</div>
+							
 						</div>
 						<div class="green-specs">
 							<div class="specs">
@@ -145,13 +182,14 @@
 								</ul>
 							</div>
 						</div>
+
+						{{ if summary_intro|not_empty }}
 						<div class="summary">
 							{{ summary_intro }}
-							
 							<a id="summary_expander" href=""><i id="summary_icon" class="fa fa-plus-circle"></i><span>Read More</span></a>
-							
 							<div id="summary_expanded" style="display: none">{{ summary_full }}</div>
 						</div>
+						{{ endif }}
 					</div>
 			</main>
 		</div>
@@ -166,34 +204,7 @@
 		<div class="container">
 				<div class="property_tile">
 					{{ entries:listing folder="properties/sale_properties" conditions="url:!{url}, property_location:{ property_location }"  }}
-					    {{ if no_results }}
-				        <p style="text-align: center">There are no similar properties. </p>
-				        {{ else }}
-									<div>
-										<a href="{{ url }}" class="property_box slick">
-											<img src="{{ path src="{{ preview_image }}" }}" >
-											<div class="property_tile_info">
-												<div class="top-info">
-													<h3>{{ title }}</h3>
-													{{ slug }}
-													<div class="spacer"></div>
-													<h4>${{ price|format_number }}</h4>
-													<div class="spacer"></div>
-													<h4>{{ property_type }}</h4>
-													<div class="spacer"></div>
-													<h4>{{ property_location }}</h4>
-												</div>
-												<div class="bottom-info">
-													{{ if openhouse }}
-													<p>
-														Open House
-													</p>
-													{{ endif }}
-												</div>
-											</div>
-										</a >
-									</div>				        
-				    	{{ endif }}
+						{{ theme:partial src="property_tile" }}		        
 					{{ /entries:listing }}
 					
 				</div>

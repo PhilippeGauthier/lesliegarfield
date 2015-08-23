@@ -8,7 +8,7 @@ var Custom = require('./components/Custom.js');
 
 // Slick Carousel
 var Slick = require('./components/Slick.js');
-var slickPropertyTile = require('./components/propertyTile.slick.js');
+var slickInitialize = require('./components/slickInitialize.slick.js');
 
 // Currency Conversion
 var Currency = require('./components/Currency.js');

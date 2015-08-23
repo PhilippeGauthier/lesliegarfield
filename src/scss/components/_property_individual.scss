@@ -7,6 +7,31 @@
 		font-size: 47px;
 		color: $header-font-color;
 		margin: 0 0 20px 0;
+		@include span (7 of 9);
+	}
+	.social {
+		@include span (last 2 of 9);
+		height: 63px;
+		
+		a {
+			@include vertical-align;
+			float: right;
+			margin-left: 10px;
+			vertical-align: middle;
+		}
+		.fa-circle {
+			color: transparent;
+			border: 1px solid $light-font-color;
+			border-radius: 50%;
+		}
+		.fa-inverse {
+			color: $light-font-color;
+		}
+	}
+	.location {
+		@include span (full);
+		margin-bottom: 20px;
+
 	}
 	.content {
 		padding-left: 30px;
@@ -14,7 +39,7 @@
 		padding-bottom: 30px;
 	}
 	.divider {
-		border-right: 2px solid $light-font-color;
+		border-right: 1px solid $light-font-color;
 		height: 100%;
 		margin: 0 10px 0 5px;
 	}
@@ -37,13 +62,20 @@
 }
 
 .property-carousel {
-	padding-left: 30px;
-	padding-right: 30px;
+	@include span (full no-gutter);
+	img {
+		height: 700px;
+		text-align: center;
+		margin: auto;
+	}
 	background-color: $background-light-gray;
 }
 
-.property-agents {
+.agent {
 	@include span(full no-gutter);
+}
+
+.property-agents {
 	margin-top: 168px;
 	color: $header-font-color;
 	h3 {
@@ -61,11 +93,23 @@
 		padding-right: 10px;
 	}
 	img {
-		
 		border-radius: 50%;
+		border: 2px solid $background-gray;
+		&:hover {
+			border: 2px solid $text-green;
+		}
 	}
 	.agent-details {
 		@include span (last 2 of 3 no-gutter);
+	}
+	li:hover {
+		color: $text-green;
+		a {
+			color: $text-green;
+		}
+		svg * {
+			fill: $text-green;
+		}
 	}
 	li, a {
 		vertical-align: top;
@@ -80,10 +124,15 @@
 }
 
 .property-downloads {
-	@include span(full);
 	a {
 		@include gallery(1 of 2 after);
 		margin-bottom: 20px;
+		&:hover {
+			* {
+				color: $text-green;
+				fill: $text-green;
+			}
+		}
 	}
 	svg, span {
 		vertical-align: middle;
@@ -95,6 +144,16 @@
 		height: 40px;
 	}
 	
+}
+
+.property-schedule {
+	a {
+		display: block;
+		color: white;
+		margin: 0;
+		text-align: center;
+		margin-bottom: 30px;
+	}
 }
 
 .summary {

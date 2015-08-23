@@ -58,6 +58,7 @@ fields:
   property_location:
     type: suggest
     create: true
+    max_items: 1
     options:
       - East Village
       - Greenwich Village
