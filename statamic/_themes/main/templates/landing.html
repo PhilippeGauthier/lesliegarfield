@@ -1,15 +1,15 @@
-<div class="content-wrap">
+<div class="content-wrap leading">
 	<div class="hero" style="background-image: url( {{ path src="{{ hero_image }}" }} );">
 		<h1>{{ tag_line }}</h1>
 		<h3>{{ sub_tag_line}}</h3>
-		<a href="{{ url }}properties" class="btn btn-garfield">View Properties</a>
+		<a href="{{ url }} properties" class="btn btn-garfield">View Properties</a>
 	</div>	
 	<section class="leader" id="landing-sub-nav">
 		<div class="container">
 			<div class="grid-3 centered">
 				<a href="" class="circle-nav">
 					<div class="no-hover">
-						<div class="circle"></div>
+						{{ theme:partial src="svg/home_glasses" }}
 						<h4>Our Story</h4>
 
 					</div>
@@ -23,7 +23,7 @@
 			<div class="grid-3 centered">
 				<a href="" class="circle-nav">
 					<div class="no-hover">
-						<div class="circle"></div>
+						{{ theme:partial src="svg/home_building" }}
 						<h4>Search Listings</h4>
 					</div>
 					<div class="hover">
@@ -36,7 +36,7 @@
 			<div class="grid-3 centered">
 				<a href="" class="circle-nav">
 					<div class="no-hover">
-						<div class="circle"></div>
+						{{ theme:partial src="svg/home_for_sale" }}
 						<h4>Looking to Sell?</h4>
 					</div>
 					<div class="hover">
@@ -49,7 +49,7 @@
 			<div class="grid-3 centered">
 				<a href="" class="circle-nav">
 					<div class="no-hover">
-						<div class="circle"></div>
+						{{ theme:partial src="svg/home_neighborhood" }}
 						<h4>Our Neighborhoods</h4>
 					</div>
 					<div class="hover">
@@ -67,9 +67,6 @@
 				{{ theme:partial src="svg/home_building" }}
 			</div>
 			<h4>Featured Properties</h4>
-				{{ relate:agents }}
-			    {{ title }}
-			  {{ /relate:agents }}
 		</div>
 		<div class="container">
 				<div class="property_tile">
@@ -79,6 +76,26 @@
 					{{ /entries:listing }}
 					
 				</div>
+		</div>
+	</section>
+	<section id="featured-properties" class="insights">
+		<div class="circle-leader">
+			<div class="circle insights">
+				{{ theme:partial src="svg/home_book" }}
+			</div>
+			<h4>Latest News &amp; Insights</h4>
+
+		</div>
+		<div class="container">
+		{{ insights }}
+			<div class="grid-4 centered">
+				<a href="{{ link }}" class="insight-tile">
+					<h2>{{ headline }}</h2>
+					<p>{{ info }}</p>
+					<span>{{ link_title }} ></span>
+				</a>
+			</div>
+		{{ /insights }}
 		</div>
 	</section>
 </div>

@@ -1,205 +1,210 @@
 <div class="content-wrap property-page background-gray">
-	<div class="container">
-		<aside>
-			<div class="agent property-agents">
-				<div class="dotted"></div>
-				{{ relate:agents}}
-				<div class="agent-block">
-					<a class="agent-image" href="{{ url }}">
-						<img src="{{ transform src="{{ image }}" width="300" }}" class="img-circle" />
-					</a>
-					<div class="agent-details">
-						<a href="{{ url }}"><h3>{{ title }}</h3></a>
-						<ul>
-							<li>{{ theme:partial src="svg/phone" }} {{ phone }}</li>
-							<li>{{ theme:partial src="svg/mail" }} {{ email|link }}</li>
-						</ul>
-					</div>
+		<div class="container">
+				<aside>
+				<div class="agent property-agents">
+					<div class="dotted"></div>
+					{{ relate:agents}}
+						<div class="agent-block">
+							<a class="agent-image" href="{{ url }}">
+								<img src="{{ transform src="{{ image }}" width="300" }}" class="img-circle" />
+							</a>
+							<div class="agent-details">
+								<a href="{{ url }}"><h3>{{ title }}</h3></a>
+								<ul>
+									<li>{{ theme:partial src="svg/phone" }} {{ phone }}</li>
+									<li>{{ theme:partial src="svg/mail" }} {{ email|link }}</li>
+								</ul>
+							</div>
+						</div>
+					{{ /relate:agents }}
+
 				</div>
-				{{ /relate:agents }}
+				<div class="dotted"></div>
+				<div class="agent property-downloads">
+					<a href="{{ specs }}" target="_blank">
+						{{ theme:partial src="svg/download" }}
+						<span>Download</span>
+					</a>
+					<a href=" {{ floorplans }}">
+						{{ theme:partial src="svg/floorplans" }}
+						<span>Floorplans</span>
+					</a>
+				</div>
+				<div class="dotted"></div>
+				<div class="agent property-schedule">
+					<a href="{{ url }} properties" class="btn btn-garfield">Schedule a viewing</a>
+				</div>
+				<div class="dotted"></div>
+				</aside>
 
-			</div>
-			<div class="dotted"></div>
-			<div class="agent property-downloads">
-				<a href="{{ specs }}" target="_blank">
-					{{ theme:partial src="svg/download" }}
-					<span>Download</span>
-				</a>
-				<a href=" {{ floorplans }}">
-					{{ theme:partial src="svg/floorplans" }}
-					<span>Floorplans</span>
-				</a>
-			</div>
-			<div class="dotted"></div>
-			<div class="agent property-schedule">
-				<a href="{{ url }} properties" class="btn btn-garfield">Schedule a viewing</a>
-			</div>
-			<div class="dotted"></div>
-		</aside>
-
-		<main>
-			<div class="property-info">
-				<div class="property-header">
-					<h1>{{ title }}</h1>
-					<div class="social">
-						<a href="">
-							<span class="fa-stack fa-lg">
-								<i class="fa fa-circle fa-stack-2x"></i>
-								<i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-							</span>
-						</a>
-						<a href="">
-							<span class="fa-stack fa-lg">
-								<i class="fa fa-circle fa-stack-2x"></i>
-								<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-							</span>
-						</a>
-
-						<a href="">
-							<span class="fa-stack fa-lg">
-								<i class="fa fa-circle fa-stack-2x"></i>
-								<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-							</span>
-						</a>
+				<main>
+					<div class="property-info">
+						<div class="property-header">
+							<h1>{{ title }}</h1>
+							<div class="social">
+								<a href="">
+									<span class="fa-stack fa-lg">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+								<a href="">
+									<span class="fa-stack fa-lg">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+								<a href="javascript:selectPinImage()">
+									<span target="_blank" class="fa-stack fa-lg">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+								<a href="javascript:fbShare('{{ url }}', 'Fb Share', '{{ url }}', '{{ url }}', 500, 250)">
+									<span  class="fa-stack fa-lg">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
 
 
 
-					</div>
-					<div class="location">
-						<span>{{ property_location }}</span>
-						{{ if location_granular|not_empty }}
-						<span class="divider"></span>
-						<span>{{ location_granular }}</span>
+							</div>
+							<div class="location">
+								<span>{{ property_location }}</span>
+								{{ if location_granular|not_empty }}
+								<span class="divider"></span>
+								<span>{{ location_granular }}</span>
+								{{ endif }}
+							</div>
+						</div>
+						<div class="property-carousel">
+							
+								{{ photo_carousel }}
+								<div>
+								<img src="{{ path src="{{ image }}"}}">
+								</div>
+								{{ /photo_carousel}}
+							
+						</div>
+						<div class="green-specs">
+							<div class="specs">
+								<h3>{{ theme:partial src="svg/glasses" }}SPECIFICATIONS</h3>
+								<ul>
+									{{ if price|not_empty }}
+									<li>Price</li>
+									{{ endif }}
+									{{ if sqft|not_empty }}
+									<li>Square Feet</li>
+									{{ endif }}
+									{{ if bedrooms|not_empty }}
+									<li>Bedrooms</li>
+									{{ endif }}
+									{{ if bathrooms|not_empty }}
+									<li>Bathrooms</li>
+									{{ endif }}
+									{{ if rental_term|not_empty }}
+									<li>Rental Term</li>
+									{{ endif }}
+									{{ if pet_policy|not_empty }}
+									<li>Pet Policy</li>
+									{{ endif }}
+									{{ if condition|not_empty }}
+									<li>Condition</li>
+									{{ endif }}
+									{{ if maintenance|not_empty }}
+									<li>Maintenance</li>
+									{{ endif }}
+									{{ if additional_specs|not_empty }}
+									{{ additional_specs }}
+									<li>{{ spec_labels }}</li>
+									{{ /additional_specs}}
+									{{ endif }}
+								</ul>
+								<ul>
+									{{ if price|not_empty }}
+									<li>${{ price|format_number }}</li>
+									{{ endif }}
+									{{ if sqft|not_empty }}
+									<li>{{ sqft }}</li>
+									{{ endif }}
+									{{ if bedrooms|not_empty }}
+									<li>{{ bedrooms }}</li>
+									{{ endif }}
+									{{ if bathrooms|not_empty }}
+									<li>{{ bathrooms }}</li>
+									{{ endif }}
+									{{ if rental_term|not_empty }}
+									<li>{{ rental_term }}</li>
+									{{ endif }}
+									{{ if pet_policy|not_empty }}
+									<li>{{ pet_policy }}</li>
+									{{ endif }}
+									{{ if condition|not_empty }}
+									<li>{{ condition }}</li>
+									{{ endif }}
+									{{ if maintenance|not_empty }}
+									<li>{{ maintenance }}</li>
+									{{ endif }}
+									{{ if additional_specs|not_empty }}
+									{{ additional_specs }}
+									<li>
+										{{ result }}
+											{{ if other == null }} 
+											  {{ yes_or_no }}
+											  	{{ if value =="yep" }}
+											  	Yes
+											  	{{ else }}
+											  	No
+											  	{{ endif }}
+											  {{ /yes_or_no }}
+											{{ else }}
+												{{ other }}
+											{{ endif }}
+										{{ /result }}
+									</li>
+									{{ /additional_specs}}
+									{{ endif }}
+								</ul>
+							</div>
+							<div class="location_features">
+								<h3>{{ theme:partial src="svg/maps" }}LOCATION</h3>
+								<ul>
+									<li>{{ location_granular }}</li>
+								</ul>
+								<h3>{{ theme:partial src="svg/stars" }}Key Features</h3>
+								<ul>
+								{{ key_features }}
+									<li>{{ value }}</li>
+								{{ /key_features }}
+								</ul>
+							</div>
+						</div>
+
+						{{ if summary_intro|not_empty }}
+						<div class="summary">
+							{{ summary_intro }}
+							<a id="summary_expander" href=""><i id="summary_icon" class="fa fa-plus-circle"></i><span class="read-more">Read More</span></a>
+							<div id="summary_expanded" style="display: none">{{ summary_full }}</div>
+						</div>
 						{{ endif }}
 					</div>
-				</div>
-				<div class="property-carousel">
-					
-					{{ photo_carousel }}
-					<div>
-						<img src="{{ path src="{{ image }}"}}">
-					</div>
-					{{ /photo_carousel}}
-					
-				</div>
-				<div class="green-specs">
-					<div class="specs">
-						<h3>{{ theme:partial src="svg/glasses" }}SPECIFICATIONS</h3>
-						<ul>
-							{{ if price|not_empty }}
-							<li>Price</li>
-							{{ endif }}
-							{{ if sqft|not_empty }}
-							<li>Square Feet</li>
-							{{ endif }}
-							{{ if bedrooms|not_empty }}
-							<li>Bedrooms</li>
-							{{ endif }}
-							{{ if bathrooms|not_empty }}
-							<li>Bathrooms</li>
-							{{ endif }}
-							{{ if rental_term|not_empty }}
-							<li>Rental Term</li>
-							{{ endif }}
-							{{ if pet_policy|not_empty }}
-							<li>Pet Policy</li>
-							{{ endif }}
-							{{ if condition|not_empty }}
-							<li>Condition</li>
-							{{ endif }}
-							{{ if maintenance|not_empty }}
-							<li>Maintenance</li>
-							{{ endif }}
-							{{ if additional_specs|not_empty }}
-							{{ additional_specs }}
-							<li>{{ spec_labels }}</li>
-							{{ /additional_specs}}
-							{{ endif }}
-						</ul>
-						<ul>
-							{{ if price|not_empty }}
-							<li>${{ price|format_number }}</li>
-							{{ endif }}
-							{{ if sqft|not_empty }}
-							<li>{{ sqft }}</li>
-							{{ endif }}
-							{{ if bedrooms|not_empty }}
-							<li>{{ bedrooms }}</li>
-							{{ endif }}
-							{{ if bathrooms|not_empty }}
-							<li>{{ bathrooms }}</li>
-							{{ endif }}
-							{{ if rental_term|not_empty }}
-							<li>{{ rental_term }}</li>
-							{{ endif }}
-							{{ if pet_policy|not_empty }}
-							<li>{{ pet_policy }}</li>
-							{{ endif }}
-							{{ if condition|not_empty }}
-							<li>{{ condition }}</li>
-							{{ endif }}
-							{{ if maintenance|not_empty }}
-							<li>{{ maintenance }}</li>
-							{{ endif }}
-							{{ if additional_specs|not_empty }}
-							{{ additional_specs }}
-							<li>
-								{{ result }}
-								{{ if other == null }} 
-								{{ yes_or_no }}
-								{{ if value =="yep" }}
-								Yes
-								{{ else }}
-								No
-								{{ endif }}
-								{{ /yes_or_no }}
-								{{ else }}
-								{{ other }}
-								{{ endif }}
-								{{ /result }}
-							</li>
-							{{ /additional_specs}}
-							{{ endif }}
-						</ul>
-					</div>
-					<div class="location_features">
-						<h3>{{ theme:partial src="svg/maps" }}LOCATION</h3>
-						<ul>
-							<li>{{ location_granular }}</li>
-						</ul>
-						<h3>{{ theme:partial src="svg/stars" }}Key Features</h3>
-						<ul>
-							{{ key_features }}
-							<li>{{ value }}</li>
-							{{ /key_features }}
-						</ul>
-					</div>
-				</div>
-
-				{{ if summary_intro|not_empty }}
-				<div class="summary">
-					{{ summary_intro }}
-					<a id="summary_expander" href=""><i id="summary_icon" class="fa fa-plus-circle"></i><span class="read-more">Read More</span></a>
-					<div id="summary_expanded" style="display: none">{{ summary_full }}</div>
-				</div>
-				{{ endif }}
+			</main>
+		</div>
+	</section>
+		<section class="similar-properties-gray" id="featured-properties">
+		<div class="circle-leader">
+			<div class="circle similar-properties-gray">
+				{{ theme:partial src="svg/home_building" }}
 			</div>
-		</main>
-	</div>
-</section>
-<section class="similar-properties-gray" id="featured-properties">
-	<div class="circle-leader">
-		<div class="circle similar-properties-gray">
-			{{ theme:partial src="svg/home_building" }}
+			<h4>Similar Properties</h4>
 		</div>
-		<h4>Similar Properties</h4>
-	</div>
-	<div class="container">
-		<div class="property_tile">
-			{{ entries:listing folder="properties/sale_properties" conditions="url:!{url}, property_location:{ property_location }"  }}
-			{{ theme:partial src="property_tile" }}		        
-			{{ /entries:listing }}
-			
+		<div class="container">
+				<div class="property_tile">
+					{{ entries:listing folder="properties/sale_properties" conditions="url:!{url}, property_location:{ property_location }"  }}
+						{{ theme:partial src="property_tile" }}		        
+					{{ /entries:listing }}
+					
+				</div>
 		</div>
-	</div>
 </div>

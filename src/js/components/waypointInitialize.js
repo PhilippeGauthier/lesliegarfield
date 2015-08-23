@@ -1,20 +1,24 @@
 var Aside = $('aside');
+var Header = $('header');
 
-// if (Body.length) {
-// 	console.log('foo');
+
+// if (Aside.length) {
+// 	var aside = new Waypoint.Sticky({
+// 	  element: Aside,
+	  
+// 	  handler: function() {
+// 	    console.log('Basic waypoint triggered')
+// 	  },
+// 	  offset: -138 
+// 	});	
 // }
 
-// var waypoint = new Waypoint({
-//   element: Body,
-//   handler: function() {
-//     console.log('Basic waypoint triggered')
-//   }
-// });
 
-var sticky = new Waypoint.Sticky({
-  element: Aside,
+var header = new Waypoint.Sticky({
+  element: Header,
+  wrapper: '<div class="sticky-wrapper" />',
   handler: function() {
-    console.log('Basic waypoint triggered')
+		Header.toggleClass('slideInDown animated nav-down');
   },
-  offset: -138 
+  offset: -76
 });

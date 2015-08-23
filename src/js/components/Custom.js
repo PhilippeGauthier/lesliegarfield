@@ -4,11 +4,10 @@ jQuery = require('jquery');
 var properties = $('#properties');
 var backgroundGray = $('.background-gray');
 var pageWrap = $('.page-wrap');
+
 // if (properties.length > 0 || backgroundGray.length > 0) {
 // 		pageWrap.addClass('background-gray');
 // }
-
-
 
 $( "#summary_expander" ).click(function() {
 	event.preventDefault();
@@ -26,5 +25,32 @@ $( "#summary_expander" ).click(function() {
 
   });
 });
+
+$('.facebooks').click(function() {
+	event.preventDefault();
+	FB.ui(
+ {
+  method: 'share',
+  href: 'https://developers.facebook.com/docs/'
+}, function(response){});
+});
+
+// Set Height of Insight Tiles
+$(document).ready(function() {
+  // Get an array of all element heights
+  if ($('.insight-tile').length) {
+	  var elementHeights = $('.insight-tile').map(function() {
+	    return $(this).height();
+	  }).get();
+
+	  // Math.max takes a variable number of arguments
+	  // `apply` is equivalent to passing each height as an argument
+	  var maxHeight = Math.max.apply(null, elementHeights);
+
+	  // Set each height to the max height
+	  $('.insight-tile').height(maxHeight);  	
+  }
+});
+
 
 

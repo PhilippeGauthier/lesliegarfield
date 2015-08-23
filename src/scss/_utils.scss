@@ -3,8 +3,9 @@
 $base-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 $header-font-medium: "Copernicus-Medium";
 $header-font-family: "Copernicus-Semibold";
+$header-font-bold: "Copernicus-Bold";
 $header-font-family-book-italic: "Copernicus-BookItalic";
-$header-font-family-medium-italic: "Copernicus-BookItalic";
+$header-font-family-medium-italic: "Copernicus-MediumItalic";
 
 @font-face {
     font-family: 'Copernicus-Medium';
@@ -57,7 +58,7 @@ $background-gray: #F2F2F2;
 $background-light-gray: #F7F7F7;
 $header-font-color: #25282A;
 $light-font-color: #A7A4A4;
-
+$insights: #F4FBF9;
 
 
 // fonts

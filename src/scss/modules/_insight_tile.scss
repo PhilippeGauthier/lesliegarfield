@@ -1,0 +1,29 @@
+.insight-tile {
+	display: block;
+	padding: 30px;
+	color: $header-font-color;
+	* {
+		color: $header-font-color;
+	}
+	&:hover {
+		background-color: #E9F7F3;
+		color: $header-font-color;
+		* {
+			color: $header-font-color;
+		}
+	}
+	h2 {
+		max-width: 60%;
+		font-family: $header-font-family-medium-italic;
+		font-size: 30px;
+		line-height: 34px;
+	}
+	p {
+		font-family: $header-font-medium;
+		font-size: 15px;
+		line-height: 20px;
+	}
+	span {
+		font-size: 12px;
+	}
+}
