@@ -56,7 +56,8 @@ fields:
         type: text
         width: 50%
   property_location:
-    type: select
+    type: suggest
+    create: true
     options:
       - East Village
       - Greenwich Village
@@ -137,8 +138,10 @@ fields:
             type: text
   key_features:
     display: Key Features
+    instructions: Maximum of Six Items
     type: suggest
     create: true
+    max_items: 6
     taxonomy:
       folder: properties/*
       type: key_features

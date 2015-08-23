@@ -394,6 +394,12 @@ html, body {
 
 body {
   min-height: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin: 0; }
 
 .page-wrap {
