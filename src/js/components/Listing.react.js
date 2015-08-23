@@ -10,7 +10,7 @@ var Listing = React.createClass({
     var listing = this.props.listing;
     var listingURL = listing.site_root + listing.folder_location + listing.slugg;
     return (
-      <div className='grid-4'>
+      <div className='grid-4 property_tile'>
         <a href={listingURL} className='property_box'>
           <img src={listing.preview_image} />
           <div className='property_tile_info highlight'>
