@@ -15,12 +15,12 @@ $( "#summary_expander" ).click(function() {
 	if ($('#summary_icon').hasClass('fa-plus-circle')) {
 		$('#summary_icon').removeClass('fa-plus-circle');
 		$('#summary_icon').addClass('fa-minus-circle');
-		$('span').html('Read Less');
+		$('.read-more').html('Read Less');
 	}
 	else if ($('#summary_icon').hasClass('fa-minus-circle')) {
 		$('#summary_icon').removeClass('fa-minus-circle');
 		$('#summary_icon').addClass('fa-plus-circle');
-		$('span').html('Read More');
+		$('.read-more').html('Read More');
 	}
   $( "#summary_expanded" ).slideToggle( "slow", function() {
 
