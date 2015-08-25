@@ -8,21 +8,24 @@ var Listing = React.createClass({
   },
   render: function() {
     var listing = this.props.listing;
-    var listingURL = listing.site_root + listing.folder_location + listing.slugg;
+    var listingURL = listing.site_root + listing.url;
+    var divStyle = {
+      backgroundImage: 'url(' + listing.preview_image + ')'
+    };
     return (
-      <div className='grid-4 property_tile'>
+      <li className='grid-item property_tile'>
         <a href={listingURL} className='property_box'>
-          <img src={listing.preview_image} />
+        <div className='preview-image' style={divStyle}></div>
+          
           <div className='property_tile_info highlight'>
             <div className='top-info'>
-              <h3>{listing.title}</h3>
+              <h2>{listing.title}</h2>
               <div className='spacer'></div>
-              <h4 className="price">{listing.price}</h4>
+              <h3 className="price">{listing.price}</h3>
               <div className='spacer'></div>
+              <h4>{listing.property_type}</h4>
               <h4>{listing.sqft} sq. ft</h4>
               <div className='spacer'></div>              
-              <h4>{listing.property_type}</h4>
-              <div className='spacer'></div>
               <h4>{listing.location}</h4>
             </div>
             <div className='bottom-info'>
@@ -30,7 +33,7 @@ var Listing = React.createClass({
             </div>
           </div>
         </a>
-      </div>
+      </li>
     );
   }
 });

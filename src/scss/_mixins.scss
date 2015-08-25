@@ -30,3 +30,16 @@
     height: $size - ($size/10)*2;
     width: $size - ($size/10)*2;
 }
+
+@mixin btn-garfield ($padding-top, $padding-side, $font-size) {
+	border-radius: 0;
+	background-color: $green;
+	padding: $padding-top $padding-side;
+	font-size: $font-size;
+	border: 1px solid $green;
+	&:hover, &:focus {
+		color: white;
+		background-color: $hover-green;
+		border: 1px solid white;
+	}
+}

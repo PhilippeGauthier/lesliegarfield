@@ -16,16 +16,6 @@
 			fill: $text-green;
 		}
 	}
-	// .circle {
-	// 	position: absolute;
-	// 	left: 0;
-	// 	right: 0;
-	// 	top: 0;
-	// 	height: 100px;
-	// 	width: 100px;
-	// 	border-radius: 50%;
-	// 	border: 3px solid $green;
-	// }
 	.no-hover {
 		position: absolute;
 		top: 0;
@@ -39,8 +29,8 @@
 			font-family: $header-font-bold;
 			font-size: 18px;
 			opacity: 1;
-			transition: .15s;
-			transition-delay: .1s;
+			// transition: .15s;
+			// transition-delay: .1s;
 		}
 	}
 	.hover {
@@ -53,7 +43,7 @@
 		flex-flow: column nowrap;
 		justify-content: flex-end;
 		opacity: 0;
-		transition: .15s;
+		// transition: .15s;
 		* {
 			color: $text-green;
 		}
@@ -80,21 +70,22 @@
 		.no-hover {
 			h4 {
 				opacity: 0;
-				transition: .15s;
+				// transition: .15s;
 			}
 			svg {
-				transition: .15s;
+				// transition: .15s;
 			}
 			svg * {
 				fill-opacity: .05;
 				stroke: none;
+				// transition: .15s;
 				
 			}			
 		}
 		.hover {
 			opacity: 1;	
-			transition: .35s;
-			transition-delay: .1s;
+			// transition: .15s;
+			// transition-delay: .1s;
 		}
 	}
 }

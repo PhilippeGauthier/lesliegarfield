@@ -83,6 +83,17 @@ body {
 	top: 0;
 }
 
+.property-grid {
+  // padding: gutter(12);
+  // padding-bottom: 0; 
+  @include clearfix;
+}
+
+.grid-item {
+  @include gallery(4 of 12 .5 after); 
+  margin-bottom: gutter(4); 
+}
+
 aside {
 	@include span(3 of 12);
 	// width: 320px;

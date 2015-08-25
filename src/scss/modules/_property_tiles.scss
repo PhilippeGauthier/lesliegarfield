@@ -1,7 +1,12 @@
 .property_tile {
 	a {
 		padding: 10px;
-		margin: 10px;
+		
+	}
+	&.slick-initialized {
+		a {
+			margin: 10px;
+		}
 	}
 }
 
@@ -25,19 +30,35 @@
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: space-between;
-		h3,h4 {
-			margin-top: 0;
+		h2,h3,h4 {
+			margin: 0;
 		}
-
+		h2,h3 {
+			font-family: $header-font-family-medium-italic;
+		}
+		h3,h4 {
+			font-size: 15px;
+			line-height: 22px;
+		}
+		h2 {
+			font-size: 18x;
+			line-height: 24px;
+		}
+		h4 {
+			font-family: $header-font-medium ;
+		}
 		padding-left: 10px;
 	}
 	.spacer {
 		height: 1px;
 		border-top: 1px solid $dark-gray;
-		padding: 5px 0;
+		margin: 10px 0;
 		width: 20px;
 	}
 	&:hover, &:focus {
+		h3,h4 {
+			color: $header-font-color;
+		}
 		box-shadow: 0px 0px 0px 1px $green;
 		transition: .25s;
 	}

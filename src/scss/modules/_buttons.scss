@@ -1,10 +1,17 @@
-.btn-garfield {
-	border-radius: 0;
-	background-color: $green;
-	padding: 8px 30px;
-	margin-top: 24px;
-	&:hover, &:focus {
-		color: white;
-		background-color: $hover-green;
-	}
+// .btn-garfield {
+
+// 	padding: 8px 45px;
+// 	font-size: 18px;
+// 	margin-top: 24px;
+
+// }
+
+.btn-contact {
+	padding: 6px 10px;
+	border: 1px solid $text-green;
+	border-radius: 2px;
+	top: 3px;
+	margin-top: 14px;
+	margin-left: 15px;
 }
+

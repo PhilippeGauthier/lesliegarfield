@@ -13,7 +13,7 @@ var Neighborhoods = React.createClass({
     this.properties = this.props.buy ? this.context.saleProperties : this.context.rentalProperties;
     // create the list of neighborhoods to display by looking at the list of appropriate properties (sale or rentals)
     var neighborhoods = _.map(this.properties, function(property) {
-      return property.location;
+      return property.property_location;
     });
     // get rid of any dupes
     neighborhoods = _.uniq(neighborhoods);

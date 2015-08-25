@@ -1,3 +1,44 @@
+.Select {
+	&.is-open {
+		border: 1px solid $dark-gray;
+	}
+}
+
+.Select-placeholder, .sort-bar, .Select-menu {
+	font-family: $header-font-medium;
+	font-size: 13px;
+}
+
+.Select-menu {
+	box-shadow: none;
+	border: 1px solid $dark-gray;
+	border-top: 1px solid $light-gray;
+}
+.Select-menu-outer {
+	border-radius: 0;
+
+}
+
+.Select-option {
+	&.is-focused {
+		background-color: $text-green;
+		color: white;
+	}
+	&:last-child {
+		border-radius: 0;
+	}
+}
+
+.Select-arrow {
+	font-family: FontAwesome;
+	border: 0;
+	font-size: 20px;
+	right: 25px;
+	top: 10px;
+	&:after {
+		content: '\f107';
+	}
+}
 .property_nav {
 	background-color: $dark-gray;
 	padding-top: 10px;
@@ -23,6 +64,10 @@
 				background-color: #fff;
 				box-shadow: none;
 			}
+		}
+
+		.Select-control {
+			border-radius: 2px;
 		}
 		.dropdown-menu {
 			li {
@@ -107,7 +152,6 @@
 		display:inline-block;
 	}
 	.sort-bar {
-		font-family: $header-font-family;
 		padding-top: 10px;
 		padding-bottom: 10px;
 		vertical-align: middle;
@@ -116,11 +160,11 @@
 		width: 1px;
 		height: 60px;
 		vertical-align: top;
-		border-right: 1px solid $dark-gray;
+		border-right: 1px solid $light-font-color;
 		margin-left: 20px;
 	}
 	.sort-select {
-		width: 290px;
+		width: 250px;
 
 	}
 	.Select-control {

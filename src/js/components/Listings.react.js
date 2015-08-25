@@ -11,7 +11,9 @@ var Listings = React.createClass({
     return (
       <section id="light-gray">
         <div className='container'>
+        <ul className='property-grid'>
           {rows}
+        </ul>
         </div>
       </section>
     );

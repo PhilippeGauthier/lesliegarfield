@@ -11,12 +11,18 @@
 	* {
 		color: #fff;
 	}
-
+	h1 {
+		margin-top: 0;
+	}
 	h3 {
 		font-family: $header-font-medium;
 		font-size: 22px;
 		line-height: 32px;
 		@include span (3 of 12);
 
+	}
+	a {
+		@include btn-garfield(10px, 50px, 18px);
+		margin-top: 36px;
 	}
 }

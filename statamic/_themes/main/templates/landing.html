@@ -2,12 +2,12 @@
 	<div class="hero" style="background-image: url( {{ path src="{{ hero_image }}" }} );">
 		<h1>{{ tag_line }}</h1>
 		<h3>{{ sub_tag_line}}</h3>
-		<a href="{{ url }} properties" class="btn btn-garfield">View Properties</a>
+		<a href="{{ url }}properties" class="btn btn-garfield">View Properties</a>
 	</div>	
 	<section class="leader" id="landing-sub-nav">
 		<div class="container">
 			<div class="grid-3 centered">
-				<a href="" class="circle-nav">
+				<a href="{{ url }}company" class="circle-nav">
 					<div class="no-hover">
 						{{ theme:partial src="svg/home_glasses" }}
 						<h4>Our Story</h4>
@@ -21,7 +21,7 @@
 				</a>
 			</div>
 			<div class="grid-3 centered">
-				<a href="" class="circle-nav">
+				<a href="{{ url }}properties" class="circle-nav">
 					<div class="no-hover">
 						{{ theme:partial src="svg/home_building" }}
 						<h4>Search Listings</h4>
@@ -34,7 +34,7 @@
 				</a>
 			</div>
 			<div class="grid-3 centered">
-				<a href="" class="circle-nav">
+				<a href="#" class="circle-nav">
 					<div class="no-hover">
 						{{ theme:partial src="svg/home_for_sale" }}
 						<h4>Looking to Sell?</h4>
@@ -47,7 +47,7 @@
 				</a>
 			</div>
 			<div class="grid-3 centered">
-				<a href="" class="circle-nav">
+				<a href="{{ url }}neighborhoods" class="circle-nav">
 					<div class="no-hover">
 						{{ theme:partial src="svg/home_neighborhood" }}
 						<h4>Our Neighborhoods</h4>
@@ -66,7 +66,7 @@
 			<div class="circle light-gray-bg">
 				{{ theme:partial src="svg/home_building" }}
 			</div>
-			<h4>Featured Properties</h4>
+			<h4>FEATURED PROPERTIES</h4>
 		</div>
 		<div class="container">
 				<div class="property_tile">
