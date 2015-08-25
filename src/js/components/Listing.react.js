@@ -5,6 +5,10 @@ var Listing = React.createClass({
     $('.price').currency({
       decimals: 0
     });
+    $('.sqft').currency({
+      decimals: 0,
+      hidePrefix: true
+    });
   },
   render: function() {
     var listing = this.props.listing;
@@ -24,7 +28,10 @@ var Listing = React.createClass({
               <h3 className="price">{listing.price}</h3>
               <div className='spacer'></div>
               <h4>{listing.property_type}</h4>
-              <h4>{listing.sqft} sq. ft</h4>
+              <h4>
+                <span className="sqft">{listing.sqft}</span>
+                ft<sup>2</sup>
+              </h4>
               <div className='spacer'></div>              
               <h4>{listing.location}</h4>
             </div>
