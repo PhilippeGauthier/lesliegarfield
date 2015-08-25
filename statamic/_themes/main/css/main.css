@@ -4084,7 +4084,7 @@ section {
   height: 50px;
   background-color: rgba(153, 153, 153, 0.75);
   margin-top: -25px;
-  z-index: 10000; }
+  z-index: 999; }
 
 .property-carousel .slick-prev:hover,
 .property-carousel .slick-prev:focus,
