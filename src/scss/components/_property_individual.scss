@@ -80,7 +80,7 @@
 .property-carousel {
 	@include span (full no-gutter);
 	img {
-		height: 700px;
+		max-height: 700px;
 		text-align: center;
 		margin: auto;
 	}
