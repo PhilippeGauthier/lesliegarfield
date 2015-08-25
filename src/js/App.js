@@ -13,6 +13,8 @@ var slickInitialize = require('./components/slickInitialize.slick.js');
 // Currency Conversion
 var Currency = require('./components/Currency.js');
 
+var Bootstrap = require('./components/Bootstrap.js');
+
 // Fotorama
 // var Fotorama = require('./components/Fotorama.js');
 

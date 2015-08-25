@@ -4224,6 +4224,10 @@ section {
   margin-top: 0;
   vertical-align: top; }
 
+.slick-prev,
+.slick-next {
+  margin-top: -22px; }
+
 .slick-prev:before {
   display: inline-block;
   content: url("../img/carousel_arrow.svg");
