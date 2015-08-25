@@ -17,9 +17,9 @@ var Currency = require('./components/Currency.js');
 // var Fotorama = require('./components/Fotorama.js');
 
 // Waypoints
-var Waypoints = require('../../bower_components/waypoints/lib/jquery.waypoints.js');
-var Waypoints_Sticky = require('../../bower_components/waypoints/lib/shortcuts/sticky.js');
-var waypointInitialize = require('./components/waypointInitialize.js');
+// var Waypoints = require('../../bower_components/waypoints/lib/jquery.waypoints.js');
+// var Waypoints_Sticky = require('../../bower_components/waypoints/lib/shortcuts/sticky.js');
+// var waypointInitialize = require('./components/waypointInitialize.js');
 
 
 // React Components
@@ -55,8 +55,8 @@ if (elem.length) {
 	    },
 	    getChildContext: function() {
 	      return {
-	        saleProperties: properties.sale_properties,
-	        rentalProperties: properties.rental_properties
+	        saleProperties: properties.sale,
+	        rentalProperties: properties.lease
 	      };
 	    },
 	    render: function() {

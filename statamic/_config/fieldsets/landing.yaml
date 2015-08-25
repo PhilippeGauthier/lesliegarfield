@@ -8,7 +8,7 @@ fields:
   hero_image:
     type: file
     destination: assets/img/
-    allowed: ['jpg', 'png']
+    allowed: [png, gif, jpg, jpeg]
 
   tag_line: 
     type: text

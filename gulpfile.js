@@ -33,20 +33,14 @@ var path = {
   SCSS_ENTRY: 'src/scss/main.scss',
   SCSS_BUILD: 'statamic/_themes/main/css',
   CSS_MINIFIED_OUT: 'main.min.css',
+  ASCENT_IN: 'statamic/admin/themes/ascent/scss/',
+  ASCENT_DIST: 'statamic/admin/themes/ascent/dist',
+  ASCENT_OUT: 'statamic/admin/themes/ascent/css',
   MKDN_SRC: 'statamic/_content/1-properties',
-  PROP_SALE: '/sale_properties',
-  PROP_RENT: '/rental_properties',
+  PROP_SALE: '/sale',
+  PROP_RENT: '/lease',
   JSON: 'statamic/JSON/'
 };
-
-gulp.task('foo', function(){
-  gulp.src([path.JSON + '*.json'])
-    .pipe(convert({
-      from: 'json',
-      to: 'xml'
-     }))
-    .pipe(gulp.dest(path.JSON));
-});
 
 gulp.task('copy', function(){
   gulp.src(path.HTML)
@@ -63,6 +57,25 @@ gulp.task('sass', function () {
     }))
     .pipe(sass())
     .pipe(gulp.dest(path.SCSS_BUILD));
+});
+
+gulp.task('sass_ascent', function () {
+  gulp.src(path.ASCENT_IN + 'ascent.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemaps.init())
+    .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
+    .pipe(sass())
+    .pipe(gulp.dest(path.ASCENT_DIST));
+});
+
+gulp.task('ascent-minify-css', function() {
+  return gulp.src(path.ASCENT_DIST + '/*.css')
+    .pipe(minifyCss())
+    .pipe(rename("ascent.min.css"))
+    .pipe(gulp.dest(path.ASCENT_OUT));
 });
 
 gulp.task('markdown', function(){

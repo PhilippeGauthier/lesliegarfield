@@ -71,7 +71,7 @@
 		<div class="container">
 				<div class="property_tile">
 					
-					{{ entries:listing folder="properties/sale_properties" }}
+					{{ entries:listing folder="properties/sale" conditions="featured"}}
 						{{ theme:partial src="property_tile" use_context="true" }}
 					{{ /entries:listing }}
 					

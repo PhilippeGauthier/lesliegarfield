@@ -7,29 +7,26 @@ fields:
   content:
     type: hidden
 
-  my_replicator_field:
-    type: replicator
-    display: Enter your details
-    instructions: |
-      Replicate a new set for each piece of content you need.
-
-    sets:
-
-      realtor_set:
-        display: Enter each realtor's details
-        fields:
-          name:
-            type: text
-            instructions: Realtor's Name
-          photo:
-            type: file
-            allowed: [png, jpg, gif]
-            destination: assets/img/globals
-          phone:
-            type: text
-            instructions: Phone Number
-          email:
-          	type: text
-          	instructions: Email Address
+  address_line1:
+    type: text
+    display: Address Line One
+  address_line2:
+    type: text
+    display: Address Line Two
+  phone:
+    type: text
+    display: Company Phone Number Formatted
+  email:
+    type: text
+    display: Company Email Address
+  facebook:
+    type: text
+    display: Company Facebook Address
+  twitter:
+    type: text
+    display: Company Twitter Address
+  instagram:
+    type: text
+    display: Company Instagram Address
 
   # add your fields here...

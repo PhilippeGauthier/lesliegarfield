@@ -92,78 +92,108 @@
 								<h3>{{ theme:partial src="svg/glasses" }}SPECIFICATIONS</h3>
 								<ul>
 									{{ if price|not_empty }}
-									<li>Price</li>
+									<li>Lease Terms</li>
 									{{ endif }}
+									{{ if plot|not_empty }}
+									<li>Plot</li>
+									{{ endif }}
+
+									{{ if stories|not_empty }}
+									<li>Stories</li>
+									{{ endif }}
+
 									{{ if sqft|not_empty }}
 									<li>Square Feet</li>
 									{{ endif }}
+
+									{{ if units|not_empty }}
+									<li>Units</li>
+									{{ endif }}
+
+									{{ if rooms|not_empty }}
+									<li>Rooms</li>
+									{{ endif }}
+
 									{{ if bedrooms|not_empty }}
 									<li>Bedrooms</li>
 									{{ endif }}
+
 									{{ if bathrooms|not_empty }}
 									<li>Bathrooms</li>
 									{{ endif }}
-									{{ if rental_term|not_empty }}
-									<li>Rental Term</li>
-									{{ endif }}
+
 									{{ if pet_policy|not_empty }}
 									<li>Pet Policy</li>
 									{{ endif }}
-									{{ if condition|not_empty }}
-									<li>Condition</li>
+
+									{{ if furnished|not_empty }}
+									<li>Furnished/Unfurnished</li>
 									{{ endif }}
-									{{ if maintenance|not_empty }}
-									<li>Maintenance</li>
-									{{ endif }}
-									{{ if additional_specs|not_empty }}
-									{{ additional_specs }}
-									<li>{{ spec_labels }}</li>
-									{{ /additional_specs}}
+
+									{{ if fees|not_empty }}
+									{{ fees }}
+
+										{{ if common_charges|not_empty }}
+										<li>Common Charges</li>
+										{{ endif }}
+										{{ if maintenance|not_empty }}
+										<li>Maintenance</li>
+										{{ endif }}
+
+									{{ /fees}}
 									{{ endif }}
 								</ul>
 								<ul>
 									{{ if price|not_empty }}
-									<li>${{ price|format_number }}</li>
+									<li>${{ price|format_number }}/month</li>
 									{{ endif }}
+									{{ if plot|not_empty }}
+									<li>{{ plot }}</li>
+									{{ endif }}
+
+									{{ if stories|not_empty }}
+									<li>{{ stories }}</li>
+									{{ endif }}
+
 									{{ if sqft|not_empty }}
-									<li>{{ sqft }}</li>
+									<li>{{ sqft|format_number }} ft<sup>2</sup></li>
 									{{ endif }}
+
+									{{ if units|not_empty }}
+									<li>{{ units|format_number }}</li>
+									{{ endif }}
+
+									{{ if rooms|not_empty }}
+									<li>{{ rooms }}</li>
+									{{ endif }}
+
 									{{ if bedrooms|not_empty }}
 									<li>{{ bedrooms }}</li>
 									{{ endif }}
+
 									{{ if bathrooms|not_empty }}
 									<li>{{ bathrooms }}</li>
 									{{ endif }}
-									{{ if rental_term|not_empty }}
-									<li>{{ rental_term }}</li>
-									{{ endif }}
+
 									{{ if pet_policy|not_empty }}
-									<li>{{ pet_policy }}</li>
+									<li>${{ pet_policy|format_number }}</li>
 									{{ endif }}
-									{{ if condition|not_empty }}
-									<li>{{ condition }}</li>
+
+									{{ if furnished|not_empty }}
+									<li>{{ furnished }}</li>
 									{{ endif }}
-									{{ if maintenance|not_empty }}
-									<li>{{ maintenance }}</li>
-									{{ endif }}
-									{{ if additional_specs|not_empty }}
-									{{ additional_specs }}
-									<li>
-										{{ result }}
-											{{ if other == null }} 
-											  {{ yes_or_no }}
-											  	{{ if value =="yep" }}
-											  	Yes
-											  	{{ else }}
-											  	No
-											  	{{ endif }}
-											  {{ /yes_or_no }}
-											{{ else }}
-												{{ other }}
-											{{ endif }}
-										{{ /result }}
-									</li>
-									{{ /additional_specs}}
+
+									{{ if fees|not_empty }}
+									{{ fees }}
+
+										{{ if common_charges|not_empty }}
+										<li>{{ common_charges }}</li>
+										{{ endif }}
+										{{ if maintenance|not_empty }}
+										<li>{{ maintenance }}</li>
+										{{ endif }}
+
+									{{ /fees}}
 									{{ endif }}
 								</ul>
 							</div>
@@ -201,10 +231,9 @@
 		</div>
 		<div class="container">
 				<div class="property_tile">
-					{{ entries:listing folder="properties/sale_properties" conditions="url:!{url}, property_location:{ property_location }"  }}
-						{{ theme:partial src="property_tile" }}		        
+					{{ entries:listing folder="properties/sale" conditions="url:!{url}, property_location:{ property_location }"  }}
+						{{ theme:partial src="property_tile" use_context="true" }}		        
 					{{ /entries:listing }}
-					
 				</div>
 		</div>
 </div>

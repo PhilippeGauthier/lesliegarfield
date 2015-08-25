@@ -8,47 +8,14 @@ fields:
     options:
       - http://104.131.23.73/
       - http://localhost/~philippe/lesliegarfield/statamic/
-  agents:
-    display: Agents
-    type: suggest
-    create: true
-    content:
-      folder: agents
-      label: title
-      value: url
+  url:
+    type: page_url
   price:
     type: text
     required: true
-    display: Property Price
+    display: Price
     instructions:
       above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
-  sqft:
-    type: text
-    display: Square Feet
-  categories:
-    display: Categories
-    required: false
-    type: tags
-  featured:
-    display: Featured Property?
-    type: checkbox
-  openhouse:
-    display: Open House?
-    type: checkbox
-  lat_long:
-    display: Property Coordinates
-    type: grid
-    starting_rows: 1
-    max_rows: 1
-    fields:
-      latitude:
-        display: Latitude (should be similar to 40.7590615)
-        type: text
-        width: 50%
-      longitude:
-        display: Longitude (should be similar to -73.969231)
-        type: text
-        width: 50%
   property_location:
     type: suggest
     create: true
@@ -61,9 +28,40 @@ fields:
       - Midtown West
       - Upper East Side
       - Upper West Side
+  lat_long:
+    display: Property Coordinates
+    type: grid
+    starting_rows: 1
+    max_rows: 1
+    fields: 732 661 9410
+      latitude:
+        display: Latitude (should be similar to 40.7590615)
+        type: text
+        width: 50%
+      longitude:
+        display: Longitude (should be similar to -73.969231)
+        type: text
+        width: 50%
   location_granular:
     type: text
     display: More detailed location ie Between Fifth and Madison
+  featured:
+    display: Featured Property?
+    type: checkbox
+  openhouse:
+    display: Open House?
+    type: checkbox
+  streeteasy:
+    display: Street Easy?
+    type: checkbox
+  agents:
+    display: Agents
+    type: suggest
+    create: true
+    content:
+      folder: agents
+      label: title
+      value: url
   property_type:
     display: Property Type
     type: suggest
@@ -72,69 +70,49 @@ fields:
     taxonomy:
       type: property_type
       folder: properties/*
-  preview_image:
-    display: Preview Image
-    type: file
-    destination: assets/img/properties/sale
-    allowed: [png, gif, jpg, jpeg]
-  content:
-    type: redactor
-    hide: true
-  photo_carousel:
-    type: file
-    display: Photo Carousel
-    instructions: Click Upload a File or Drag and Drop on the Upload box. You can upload multiple files at once.
-    allowed: [png, gif, jpg, jpeg]
-    destination: assets/img/properties/sale
-  specs:
-    display: Download
-    type: file
-    destination: assets/downloads
-  floorplans:
-    display: Floorplans
-    type: file
-    destination: assets/downloads
+  plot:
+    type: text
+    display: Plot
+  stories:
+    type: text
+    display: Stories
+  sqft:
+    type: text
+    display: Square Feet
+  units:
+    type: text
+    display: Units / Apts
+  rooms:
+    type: text
+    display: Rooms
   bedrooms:
     display: Bedrooms
-    instructions: 'Feel free to leave blank'
     type: text
   bathrooms:
     display: Bathrooms
-    instructions: 'Feel free to leave blank'
     type: text
-  maintenance:
-    display: Maintenance
-    instructions: 'Feel free to leave blank'
+  taxes:
+    display: Taxes
     type: text
-  additional_specs:
-    display: Additional Specifications
+  expenses:
+    type: checkbox
+    display: Expenses
+  fees:
     type: grid
-    starting_rows: 1
+    display: Fill one or the other out
     fields:
-      spec_labels:
-        display: Label
+      common_charges:
         type: text
-      result:
-        display: 'If you answer is a yes or no, use the checkboxes, otherwise fill out the form to the right'
-        type: grid
-        starting_rows: 1
-        max_rows: 1
-        fields:
-          yes_or_no:
-            type: checkboxes
-            display: Yes or No
-            options:
-              yep: 'Yes'
-              nope: 'No'
-          other:
-            display: Other
-            type: text
+        display: Common charges
+      maintenance:
+        type: text
+        display: Maintenance
   key_features:
     display: Key Features
     instructions: Maximum of Six Items
     type: suggest
     create: true
-    max_items: 6
+    max_items: 7
     taxonomy:
       folder: properties/*
       type: key_features
@@ -144,7 +122,20 @@ fields:
   summary_full:
     type: redactor
     display: Enter the rest of the summary
-
+  preview_image:
+    display: Preview Image
+    type: file
+    destination: assets/img/properties/sale
+    allowed: [png, gif, jpg, jpeg]
+  photo_carousel:
+    type: file
+    display: Photo Carousel
+    instructions: Click Upload a File or Drag and Drop on the Upload box. You can upload multiple files at once.
+    allowed: [png, gif, jpg, jpeg]
+    destination: assets/img/properties/sale
+  content:
+    type: redactor
+    hide: true
 
 hide: true
 

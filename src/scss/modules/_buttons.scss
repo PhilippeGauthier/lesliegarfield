@@ -13,5 +13,9 @@
 	top: 3px;
 	margin-top: 14px;
 	margin-left: 15px;
+	&:hover {
+		background-color: $text-green;
+		color: white;
+	}
 }
 

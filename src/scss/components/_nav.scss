@@ -10,10 +10,8 @@ header {
 	border-bottom: 1px solid #25282A;
 	&.nav-down {
 		background-color: rgba(white,.98);
-		
 	}
 	width: 100%;
-	position: relative;
 	@include clearfix;
 	.flex {
 		justify-content: space-between;
