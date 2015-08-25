@@ -164,11 +164,17 @@
 
 .property-schedule {
 	a {
+		background-color: $green;
+		padding-top: 10px;
+		padding-bottom: 10px;
 		display: block;
 		color: white;
 		margin: 0;
 		text-align: center;
 		margin-bottom: 30px;
+		&:hover {
+			background-color: $hover-green;
+		}
 	}
 }
 

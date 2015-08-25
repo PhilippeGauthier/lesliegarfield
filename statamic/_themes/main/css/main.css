@@ -3986,11 +3986,17 @@ section {
   height: 40px; }
 
 .property-schedule a {
+  background-color: #009880;
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: block;
   color: white;
   margin: 0;
   text-align: center;
   margin-bottom: 30px; }
+
+.property-schedule a:hover {
+  background-color: #009d84; }
 
 .summary {
   box-sizing: border-box;
