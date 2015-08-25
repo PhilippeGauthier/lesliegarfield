@@ -8,7 +8,7 @@ var Listing = React.createClass({
   },
   render: function() {
     var listing = this.props.listing;
-    var listingURL = listing.site_root + listing.url;
+    var listingURL = window.location.origin + listing.url;
     var divStyle = {
       backgroundImage: 'url(' + listing.preview_image + ')'
     };

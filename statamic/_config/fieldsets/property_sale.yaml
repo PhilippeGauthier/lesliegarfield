@@ -6,10 +6,8 @@ fields:
   site_root:
     type: select
     options:
-      - http://lesliegarfield.com/
+      - http://104.131.23.73/
       - http://localhost/~philippe/lesliegarfield/statamic/
-  url:
-    type: page_url
   agents:
     display: Agents
     type: suggest
