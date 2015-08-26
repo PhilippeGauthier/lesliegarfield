@@ -1,7 +1,9 @@
 section {
-	padding-top: 60px;
-	padding-bottom: 115px;
+	padding: 100px 0;
 	position: relative;
+	&.leading {
+		margin-top: 78px;
+	}
 }
 
 .light-gray-bg {

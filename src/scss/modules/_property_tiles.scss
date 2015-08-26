@@ -36,7 +36,7 @@
 		h2,h3,h4 {
 			margin: 0;
 		}
-		h2,h3 {
+		h2,h3, p {
 			font-family: $header-font-family-medium-italic;
 		}
 		h3,h4 {
@@ -64,5 +64,12 @@
 		}
 		box-shadow: 0px 0px 0px 1px $green;
 		transition: .25s;
+	}
+	.bottom-info {
+		p {
+			margin-bottom: 0;
+			color: $red;
+
+		}
 	}
 }

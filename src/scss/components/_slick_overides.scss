@@ -1,25 +1,31 @@
 $slick-opacity-on-hover: 1;
 $slick-opacity-not-active: .25;
 
+.slick-list *:focus {
+  outline: none;
+}
 
 .slick-prev,
 .slick-next {
     margin-top: -22px;
 }
 
-.slick-prev:before
+.slick-prev:before, .slick-next:before
 {
     display: inline-block;
     content: url('../img/carousel_arrow.svg');
     margin-left: -30px;
 }
 
+.slick-prev:before
+{
+    margin-left: -30px;
+}
+
 .slick-next:before
 {
-    display: inline-block;
-    content: url('../img/carousel_arrow.svg');
     transform: rotate(180deg);
-    margin-right: -30px;
+    margin-right: -60px;
 }
 
 .property-carousel {
@@ -57,10 +63,14 @@ $slick-opacity-not-active: .25;
     .slick-prev:before,
     .slick-next:before
     {
-        font-family: FontAwesome;
+        font-family: none;
+        content: url('../img/carousel_arrow_white.svg');
         font-size: 50px;
         opacity: .75;
         color: white;
+        svg * {
+            fill: white;
+        }
     }
 
     .slick-prev
@@ -73,8 +83,13 @@ $slick-opacity-not-active: .25;
     }
     .slick-prev:before
     {
-        content: '\f104';
+        // content: '\f104';
         margin-left: -5px;
+        svg {
+            * {
+                fill: white;
+            }
+        }
     }
 
     .slick-next
@@ -87,8 +102,8 @@ $slick-opacity-not-active: .25;
     }
     .slick-next:before
     {
-        content: '\f105';
-        margin-right: -5px;
+        // content: '\f105';
+        margin-right: -30px;
     }
 
 }

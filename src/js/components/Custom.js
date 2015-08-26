@@ -52,5 +52,15 @@ $(document).ready(function() {
   }
 });
 
+// Sticky Sidebar
+$("aside").stick_in_parent();
+
+// Nav Active Status Toggle
+function currentRemove () {
+	$('.current').toggleClass('muted');
+}
+
+$('nav a').hover( currentRemove, currentRemove );
+
 
 

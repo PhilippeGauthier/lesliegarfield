@@ -1,10 +1,10 @@
-<div class="content-wrap leading">
-	<div class="hero" style="background-image: url( {{ path src="{{ hero_image }}" }} );">
+	<section class="hero leading" style="background-image: url( {{ path src="{{ hero_image }}" }} );">
 		<h1>{{ tag_line }}</h1>
 		<h3>{{ sub_tag_line}}</h3>
 		<a href="{{ url }}properties" class="btn btn-garfield">View Properties</a>
-	</div>	
-	<section class="leader" id="landing-sub-nav">
+	</section>	
+
+	<section id="landing-sub-nav">
 		<div class="container">
 			<div class="grid-3 centered">
 				<a href="{{ url }}company" class="circle-nav">
@@ -34,7 +34,7 @@
 				</a>
 			</div>
 			<div class="grid-3 centered">
-				<a href="#" class="circle-nav">
+				<a data-toggle="modal" data-target="#contact-modal" href="#" class="circle-nav">
 					<div class="no-hover">
 						{{ theme:partial src="svg/home_for_sale" }}
 						<h4>Looking to Sell?</h4>
@@ -61,7 +61,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="light-gray-bg" id="featured-properties">
+	<section class="circle-icon light-gray-bg" id="featured-properties">
 		<div class="circle-leader">
 			<div class="circle light-gray-bg">
 				{{ theme:partial src="svg/home_building" }}
@@ -70,11 +70,9 @@
 		</div>
 		<div class="container">
 				<div class="property_tile">
-					
 					{{ entries:listing folder="properties/sale" conditions="featured"}}
 						{{ theme:partial src="property_tile" use_context="true" }}
 					{{ /entries:listing }}
-					
 				</div>
 		</div>
 	</section>
@@ -99,4 +97,3 @@
 		{{ /insights }}
 		</div>
 	</section>
-</div>

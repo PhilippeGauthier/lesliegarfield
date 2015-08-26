@@ -3,8 +3,7 @@ jQuery = require('jquery');
 var React = require('react');
 
 
-// Custom JS
-var Custom = require('./components/Custom.js');
+
 
 // Slick Carousel
 var Slick = require('./components/Slick.js');
@@ -23,6 +22,11 @@ var Bootstrap = require('./components/Bootstrap.js');
 // var Waypoints_Sticky = require('../../bower_components/waypoints/lib/shortcuts/sticky.js');
 // var waypointInitialize = require('./components/waypointInitialize.js');
 
+// Sticky Kit
+var StickyKit = require('./components/StickyKit.js');
+
+// Custom JS
+var Custom = require('./components/Custom.js');
 
 // React Components
 var elem = $('#properties');

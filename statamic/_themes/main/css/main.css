@@ -1271,10 +1271,9 @@ head:hover ~ body .container:before {
 
 aside {
   box-sizing: border-box;
-  width: 25%;
+  width: 320px;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  padding-right: 15px; }
 
 main {
   box-sizing: border-box;
@@ -1291,6 +1290,9 @@ main {
 html, body, a, span, p {
   color: #404041;
   font-family: Arial, "Lucida Grande", sans-serif; }
+
+.slick-list *:focus {
+  outline: none; }
 
 ul {
   -webkit-margin-before: 0;
@@ -1361,7 +1363,7 @@ h1 {
 p {
   font-family: "Copernicus-Medium";
   font-size: 16px;
-  line-height: 24px; }
+  line-height: 26px; }
 
 /* Slider */
 .slick-slider {
@@ -1449,7 +1451,7 @@ p {
 
 /* Slider */
 .slick-loading .slick-list {
-  background: #fff url("./ajax-loader.gif") center center no-repeat; }
+  background: #fff url("../img/ajax-loader.gif") center center no-repeat; }
 
 /* Icons */
 @font-face {
@@ -4245,13 +4247,44 @@ nav a {
 nav a .left {
   padding: 0; }
 
-nav li a:hover, nav li a:focus, nav li a.active {
+nav a:focus {
+  outline: none; }
+
+nav li a:hover, nav li a:focus, nav li a.current {
   background-color: transparent;
   color: #009880;
   box-shadow: 0px 3px 0px 0px; }
 
+nav li a:hover.muted, nav li a:hover.btn-contact, nav li a:focus.muted, nav li a:focus.btn-contact, nav li a.current.muted, nav li a.current.btn-contact {
+  box-shadow: 0px 0px 0px 0px; }
+
 footer {
   z-index: 1000; }
+
+footer .grid-3 {
+  width: 23.72881%;
+  float: left; }
+
+footer .grid-3:nth-child(4n + 1) {
+  margin-left: 0;
+  margin-right: -100%;
+  clear: both;
+  margin-left: 0; }
+
+footer .grid-3:nth-child(4n + 2) {
+  margin-left: 25.42373%;
+  margin-right: -100%;
+  clear: none; }
+
+footer .grid-3:nth-child(4n + 3) {
+  margin-left: 50.84746%;
+  margin-right: -100%;
+  clear: none; }
+
+footer .grid-3:nth-child(4n + 4) {
+  margin-left: 76.27119%;
+  margin-right: -100%;
+  clear: none; }
 
 footer .container {
   padding-top: 40px;
@@ -4294,9 +4327,11 @@ footer .footer-divider p {
   width: 150px; }
 
 section {
-  padding-top: 60px;
-  padding-bottom: 115px;
+  padding: 100px 0;
   position: relative; }
+
+section.leading {
+  margin-top: 78px; }
 
 .light-gray-bg {
   background-color: #ECEBEC; }
@@ -4500,7 +4535,7 @@ section {
 
 .property-info {
   padding: 30px;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
   background-color: #fff; }
 
 .property-info:before, .property-info:after {
@@ -4512,7 +4547,7 @@ section {
   font-family: "Copernicus-BookItalic";
   font-size: 47px;
   color: #25282A;
-  margin: 0 0 20px 0;
+  margin: 0 0 5px 0;
   box-sizing: border-box;
   width: 77.77778%;
   float: left;
@@ -4562,7 +4597,7 @@ section {
   margin: 0 10px 0 5px; }
 
 .property-info .property-header {
-  padding-bottom: 30px; }
+  padding-bottom: 15px; }
 
 .property-info .property-header:before, .property-info .property-header:after {
   content: "";
@@ -4602,7 +4637,7 @@ section {
   float: left; }
 
 .property-agents {
-  margin-top: 168px;
+  margin-top: 138px;
   color: #25282A; }
 
 .property-agents h3 {
@@ -4762,21 +4797,25 @@ section {
   margin-top: 0;
   vertical-align: top; }
 
+.slick-list *:focus {
+  outline: none; }
+
 .slick-prev,
 .slick-next {
   margin-top: -22px; }
 
-.slick-prev:before {
+.slick-prev:before, .slick-next:before {
   display: inline-block;
   content: url("../img/carousel_arrow.svg");
   margin-left: -30px; }
 
+.slick-prev:before {
+  margin-left: -30px; }
+
 .slick-next:before {
-  display: inline-block;
-  content: url("../img/carousel_arrow.svg");
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
-  margin-right: -30px; }
+  margin-right: -60px; }
 
 .property-carousel {
   /* Arrows */ }
@@ -4812,10 +4851,16 @@ section {
 .property-carousel .slick-prev:before,
 .property-carousel
 .slick-next:before {
-  font-family: FontAwesome;
+  font-family: none;
+  content: url("../img/carousel_arrow_white.svg");
   font-size: 50px;
   opacity: .75;
   color: white; }
+
+.property-carousel .slick-prev:before svg *,
+.property-carousel
+.slick-next:before svg * {
+  fill: white; }
 
 .property-carousel
 .slick-prev {
@@ -4827,8 +4872,11 @@ section {
 
 .property-carousel
 .slick-prev:before {
-  content: '\f104';
   margin-left: -5px; }
+
+.property-carousel
+.slick-prev:before svg * {
+  fill: white; }
 
 .property-carousel
 .slick-next {
@@ -4840,8 +4888,7 @@ section {
 
 .property-carousel
 .slick-next:before {
-  content: '\f105';
-  margin-right: -5px; }
+  margin-right: -30px; }
 
 .hero {
   height: 500px;
@@ -4866,17 +4913,20 @@ section {
   color: #fff; }
 
 .hero h1 {
-  margin-top: 0; }
+  margin-top: 0;
+  margin-bottom: 15px; }
 
 .hero h3 {
   font-family: "Copernicus-Medium";
   font-size: 22px;
   line-height: 32px;
   box-sizing: border-box;
-  width: 25%;
+  width: 33.33333%;
   float: left;
   padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  padding-right: 0.83333%;
+  margin-top: 0;
+  margin-bottom: 15px; }
 
 .hero a {
   border-radius: 0;
@@ -4884,7 +4934,8 @@ section {
   padding: 10px 50px;
   font-size: 18px;
   border: 1px solid #009880;
-  margin-top: 36px; }
+  color: white;
+  margin-top: 15px; }
 
 .hero a:hover, .hero a:focus {
   color: white;
@@ -4902,6 +4953,124 @@ section {
 .btn-contact:hover {
   background-color: #009B77;
   color: white; }
+
+.email-signup input {
+  background-color: #25282A;
+  border: 1px solid white;
+  border-right: none;
+  padding: 10px 0 10px 10px;
+  font-style: italic;
+  font-size: 15px;
+  color: white; }
+
+.email-signup input:focus {
+  outline: none; }
+
+.email-signup input:active {
+  color: white; }
+
+.email-signup button {
+  padding: 10px 15px 9px;
+  background-color: #009B77;
+  color: white;
+  border: 1px solid white;
+  border-left: none;
+  margin-left: -4px; }
+
+.email-signup button:hover {
+  background-color: #009d84; }
+
+.modal-header, .modal-body, .modal-footer {
+  padding-left: 60px;
+  padding-right: 60px; }
+
+.modal-header {
+  border-bottom: none;
+  padding-top: 30px; }
+
+.modal-header .close {
+  margin-top: -45px;
+  margin-right: -75px;
+  color: white;
+  background-color: #25282A;
+  opacity: 1;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px; }
+
+.modal-header .close span {
+  color: white; }
+
+.modal-content {
+  border-radius: 0; }
+
+.modal-content h2, .modal-content h3 {
+  font-family: "Copernicus-MediumItalic"; }
+
+.modal-content h2 {
+  font-size: 24px; }
+
+.modal-content h3 {
+  font-size: 16px;
+  line-height: 22px;
+  padding-bottom: 15px; }
+
+.modal-content form:before, .modal-content form:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.modal-content input {
+  width: 49.38272%;
+  float: left;
+  margin-bottom: 1.66667%;
+  padding: 10px 5px;
+  border: 1px solid #25282A;
+  border-radius: 2px;
+  font-family: "Copernicus-Medium";
+  font-size: 16px;
+  color: #CCCCCC; }
+
+.modal-content input:nth-child(2n + 1) {
+  margin-left: 0;
+  margin-right: -100%;
+  clear: both;
+  margin-left: 0; }
+
+.modal-content input:nth-child(2n + 2) {
+  margin-left: 50.61728%;
+  margin-right: -100%;
+  clear: none; }
+
+.modal-content input:focus, .modal-content input:active {
+  outline-color: #009B77;
+  outline-width: 2px; }
+
+.modal-content .btn-garfield {
+  margin: auto;
+  border-radius: 0;
+  background-color: #009880;
+  padding: 10px 100px;
+  font-size: 20px;
+  border: 1px solid #009880;
+  color: white;
+  font-style: bold; }
+
+.modal-content .btn-garfield:hover, .modal-content .btn-garfield:focus {
+  color: white;
+  background-color: #009d84;
+  border: 1px solid white; }
+
+.modal-content .btn-garfield:hover {
+  border: 1px solid #009B77; }
+
+.modal-content .btn-garfield:focus {
+  outline: none; }
+
+.modal-footer {
+  border-top: none;
+  padding-bottom: 30px;
+  text-align: center; }
 
 .circle-nav {
   position: relative;
@@ -5029,7 +5198,7 @@ section {
 .property_box .property_tile_info h2, .property_box .property_tile_info h3, .property_box .property_tile_info h4 {
   margin: 0; }
 
-.property_box .property_tile_info h2, .property_box .property_tile_info h3 {
+.property_box .property_tile_info h2, .property_box .property_tile_info h3, .property_box .property_tile_info p {
   font-family: "Copernicus-MediumItalic"; }
 
 .property_box .property_tile_info h3, .property_box .property_tile_info h4 {
@@ -5055,6 +5224,10 @@ section {
 
 .property_box:hover h3, .property_box:hover h4, .property_box:focus h3, .property_box:focus h4 {
   color: #25282A; }
+
+.property_box .bottom-info p {
+  margin-bottom: 0;
+  color: #FF0000; }
 
 .insight-tile {
   display: block;

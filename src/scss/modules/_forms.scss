@@ -1,0 +1,28 @@
+.email-signup {
+	input {
+		background-color: $dark-gray;
+		border: 1px solid white;
+		border-right: none;
+		padding: 10px 0 10px 10px;
+		font-style: italic;
+		font-size: 15px;
+		color: white;
+		&:focus {
+			outline: none;
+		}
+		&:active {
+			color: white;
+		}
+	}
+	button {
+		padding: 10px 15px 9px;
+		background-color: $text-green;
+		color: white;
+		border: 1px solid white;
+		border-left: none;
+		margin-left: -4px;
+		&:hover {
+			background-color: $hover-green;
+		}
+	}
+}

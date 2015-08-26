@@ -96,9 +96,10 @@ body {
 }
 
 aside {
-	@include span(3 of 12);
-	// width: 320px;
-	// padding-right: 30px;
+	// @include span(3 of 12);
+	// margin-bottom: 70px;
+	@include span(320px no-gutter);
+	padding-right: 15px;
 }
 
 main {

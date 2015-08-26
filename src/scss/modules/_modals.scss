@@ -1,0 +1,71 @@
+.modal-header, .modal-body, .modal-footer {
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+.modal-header {
+	border-bottom: none;
+	padding-top: 30px;
+	.close {
+		margin-top: -45px;
+    margin-right: -75px;
+    color: white;
+    background-color: $dark-gray;
+    opacity: 1;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    span {
+    	color: white;
+    }
+	}
+}
+
+.modal-content {
+	border-radius: 0;
+	h2,h3 {
+		font-family: $header-font-family-medium-italic;
+	}
+	h2 {
+		font-size: 24px;
+	}
+	h3 {
+		font-size: 16px;
+		line-height: 22px;
+		padding-bottom: 15px;
+	}
+	form {
+		@include clearfix;
+	}
+	input {
+		@include gallery(1 of 2 after .025);
+		margin-bottom: gutter(6);
+		padding: 10px 5px;
+		border: 1px solid $dark-gray;
+		border-radius: 2px;
+		font-family: $header-font-medium;
+		font-size: 16px;
+		color: $modal-text;
+		&:focus, &:active {
+			outline-color: $text-green;
+			outline-width: 2px;
+		}
+	}
+	.btn-garfield {
+		margin: auto;
+		@include btn-garfield(10px, 100px, 20px);
+		font-style: bold;
+		&:hover {
+			border: 1px solid $text-green;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+.modal-footer {
+	border-top: none;
+	padding-bottom: 30px;
+	text-align: center;
+}

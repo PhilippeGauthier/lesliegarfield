@@ -16,14 +16,14 @@
 
 .property-info {
 	padding: 30px;
-	margin-bottom: 100px;
+	margin-bottom: 30px;
 	background-color: #fff;
 	@include clearfix;
 	h1 {
 		font-family: $header-font-family-book-italic;
 		font-size: 47px;
 		color: $header-font-color;
-		margin: 0 0 20px 0;
+		margin: 0 0 5px 0;
 		@include span (7 of 9);
 	}
 	.social {
@@ -60,7 +60,7 @@
 	}
 	.property-header {
 		@include clearfix;
-		padding-bottom: 30px;
+		padding-bottom: 15px;
 		span {
 			font-family: $header-font-medium;
 			font-size: 16px;
@@ -92,7 +92,7 @@
 }
 
 .property-agents {
-	margin-top: 168px;
+	margin-top: 138px;
 	color: $header-font-color;
 	h3 {
 		font-family: $header-font-family-medium-italic;

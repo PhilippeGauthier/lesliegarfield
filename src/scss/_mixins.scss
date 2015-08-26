@@ -37,6 +37,7 @@
 	padding: $padding-top $padding-side;
 	font-size: $font-size;
 	border: 1px solid $green;
+	color: white;
 	&:hover, &:focus {
 		color: white;
 		background-color: $hover-green;
