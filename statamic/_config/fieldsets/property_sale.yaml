@@ -8,6 +8,9 @@ fields:
       - http://localhost/~philippe/lesliegarfield/statamic/
   url:
     type: page_url
+  datestamp:
+    type: date
+    hide: true
   price:
     type: text
     required: true
