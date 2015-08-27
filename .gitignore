@@ -44,3 +44,6 @@ tmp/**/*
 npm-debug.log
 *.sublime-project
 *.sublime-workspace
+
+node_modules/*
+package.json
