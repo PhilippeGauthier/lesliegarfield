@@ -1,6 +1,57 @@
+
+// Font Family
+// $base-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+$base-font-family: Arial, "Lucida Grande", sans-serif; 
+$header-font-medium: "Copernicus-Medium";
+$header-font-family: "Copernicus-Semibold";
+$header-font-bold: "Copernicus-Bold";
+$header-font-family-book-italic: "Copernicus-BookItalic";
+$header-font-family-medium-italic: "Copernicus-MediumItalic";
+
+@font-face {
+    font-family: 'Copernicus-Medium';
+    src: url('../fonts/Copernicus-Medium.eot');
+    src: url('../fonts/Copernicus-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Copernicus-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Copernicus-Semibold';
+    src: url('../fonts/Copernicus-Semibold.eot');
+    src: url('../fonts/Copernicus-Semibold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Copernicus-Semibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Copernicus-BookItalic';
+    src: url('../fonts/Copernicus-BookItalic.eot');
+    src: url('../fonts/Copernicus-BookItalic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Copernicus-BookItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Copernicus-MediumItalic';
+    src: url('../fonts/Copernicus-MediumItalic.eot');
+    src: url('../fonts/Copernicus-MediumItalic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Copernicus-MediumItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 h1 {
 	font-size: 52px;
 	font-family: $header-font-family-book-italic;
+}
+
+h1,h2,h3 {
+	font-weight: 100;
 }
 
 p {

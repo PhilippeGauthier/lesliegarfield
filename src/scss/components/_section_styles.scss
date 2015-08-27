@@ -1,6 +1,13 @@
+.leading {
+	margin-top: 78px;
+}
+
 section {
 	padding: 100px 0;
 	position: relative;
+	&.properties {
+		padding: 60px 0 100px;
+	}
 	&.leading {
 		margin-top: 78px;
 	}

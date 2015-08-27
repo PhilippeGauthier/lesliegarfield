@@ -1,62 +1,59 @@
 	<section class="hero leading" style="background-image: url( {{ path src="{{ hero_image }}" }} );">
 		<h1>{{ tag_line }}</h1>
 		<h3>{{ sub_tag_line}}</h3>
-		<a href="{{ url }}properties" class="btn btn-garfield">View Properties</a>
+		<a href="{{ url }}properties" class="btn btn-garfield">VIEW PROPERTIES</a>
 	</section>	
 
-	<section id="landing-sub-nav">
+	<section class="landing-sub-nav">
 		<div class="container">
+
+
 			<div class="grid-3 centered">
 				<a href="{{ url }}company" class="circle-nav">
-					<div class="no-hover">
-						{{ theme:partial src="svg/home_glasses" }}
+				<figure>
+					{{ theme:partial src="svg/home_glasses" }}
+					<figcaption>
 						<h4>Our Story</h4>
-
-					</div>
-					<div class="hover">
-						<span class="title">Our Story</span>
-						<p>Our History is as Rich as our Story is Deep</p>
-						<span class="sub-title">READ OUR STORY ></span>
-					</div>
+						<p>Our history is as rich as our expertise is deep.</p>
+						<span class="sub-title">SEE OUR STORY ></span>
+					</figcaption>
+				</figure>
 				</a>
 			</div>
 			<div class="grid-3 centered">
 				<a href="{{ url }}properties" class="circle-nav">
-					<div class="no-hover">
+					<figure>
 						{{ theme:partial src="svg/home_building" }}
-						<h4>Search Listings</h4>
-					</div>
-					<div class="hover">
-						<span class="title">Our Story</span>
-						<p>Our History is as Rich as our Story is Deep</p>
-						<span class="sub-title">READ OUR STORY ></span>
-					</div>
+						<figcaption>
+							<h4>Search Listings</h4>
+							<p>Search New York City’s most in-demand townhouses and small buildings.</p>
+							<span class="sub-title">SEE THE PROPERTIES ></span>							
+						</figcaption>
+					</figure>
 				</a>
 			</div>
 			<div class="grid-3 centered">
 				<a data-toggle="modal" data-target="#contact-modal" href="#" class="circle-nav">
-					<div class="no-hover">
+					<figure>
 						{{ theme:partial src="svg/home_for_sale" }}
-						<h4>Looking to Sell?</h4>
-					</div>
-					<div class="hover">
-						<span class="title">Our Story</span>
-						<p>Our History is as Rich as our Story is Deep</p>
-						<span class="sub-title">READ OUR STORY ></span>
-					</div>
+						<figcaption>
+							<h4>Looking to Sell?</h4>
+							<p>Find out why working with Garfield makes all the difference.</p>
+							<span class="sub-title">GET A VALUATION ></span>
+						</figcaption>
+					</figure>
 				</a>
 			</div>
 			<div class="grid-3 centered">
 				<a href="{{ url }}neighborhoods" class="circle-nav">
-					<div class="no-hover">
+					<figure>
 						{{ theme:partial src="svg/home_neighborhood" }}
-						<h4>Our Neighborhoods</h4>
-					</div>
-					<div class="hover">
-						<span class="title">Our Story</span>
-						<p>Our History is as Rich as our Story is Deep</p>
-						<span class="sub-title">READ OUR STORY ></span>
-					</div>
+						<figcaption>
+							<h4>Our Neighborhoods</h4>
+							<p>The numbers behind NYC’s most prominent neighborhoods.</p>
+							<span class="sub-title">BROWSE THE NEIGHBORHOODS ></span>
+						</figcaption>
+					</figure>
 				</a>
 			</div>
 		</div>
@@ -81,7 +78,7 @@
 			<div class="circle insights">
 				{{ theme:partial src="svg/home_book" }}
 			</div>
-			<h4>Latest News &amp; Insights</h4>
+			<h4>LATEST NEWS &amp; INSIGHTS</h4>
 	{{ theme:partial src="modal_contact" }}
 
 		</div>

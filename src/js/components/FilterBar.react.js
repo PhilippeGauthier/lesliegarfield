@@ -51,7 +51,7 @@ var FilterBar = React.createClass({
   render: function() {
     return (
       <div>
-        <div className='property_nav dark_gray'>
+        <div className='property_nav dark_gray leading'>
           <div className='container'>
             
               <div className='filter-view'>

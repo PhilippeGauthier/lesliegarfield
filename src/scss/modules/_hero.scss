@@ -1,5 +1,5 @@
 .hero {
-	height: 500px;
+	height: 600px;
 	width: 100%;
 	background-position: center;
   background-size: cover;
@@ -24,6 +24,6 @@
 		margin-bottom: 15px;
 	}
 	a {
-		@include btn-garfield(10px, 50px, 18px);
+		@include btn-garfield(10px, 50px, 12px);
 		margin-top: 15px	}
 }

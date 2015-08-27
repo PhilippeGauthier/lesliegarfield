@@ -1,8 +1,6 @@
 
 
 fields:
-  slug: 
-    hide: false 
   site_root:
     type: select
     options:

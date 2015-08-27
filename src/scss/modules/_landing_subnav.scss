@@ -1,0 +1,77 @@
+.landing-sub-nav {
+	padding: 120px 0;
+	.grid-3 {
+		position: relative;
+		@include clearfix;
+		* {
+			max-width: 100%;
+		}
+	}
+	zoom:1;
+	overflow: hidden;
+	a, figure, svg, figcaption {
+		display: block;
+	}
+	a {
+		padding-top: 150px;
+	}
+	figure {
+		max-width: 100%;
+		position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+	}
+	p, span {
+		opacity: 0;
+		max-height: 0;
+		overflow: hidden;
+		margin: 0;
+	}
+	svg {
+		transition: all 500ms ease;
+		margin-bottom: 20px;
+		* {
+			fill: $text-green;
+		}
+	}
+	* {
+		color: $dark-gray;
+	}
+	h4 {
+		font-family: $header-font-bold;
+		font-size: 18px;
+		margin: 0;
+	}
+	.title {
+		font-family: $header-font-bold;
+		font-size: 18px;
+	}
+	.sub-title {
+		font-size: 12px;
+		font-family: $base-font-family;
+		font-weight: 700;
+	}
+	p {
+		font-family: $header-font-medium;
+		font-size: 15px;
+		line-height: 20px;
+	}
+	a {
+		&:hover {
+			svg {
+				opacity: 0;
+				margin-top: -100%;
+				margin-bottom: 50%;
+			}
+			h4 {
+				margin-bottom: 15px;
+			}
+			p, span {
+				opacity: 1;
+				max-height: 300px;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
