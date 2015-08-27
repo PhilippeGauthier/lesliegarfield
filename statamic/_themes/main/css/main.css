@@ -5131,6 +5131,11 @@ section.leading {
 .landing-sub-nav a, .landing-sub-nav figure, .landing-sub-nav svg, .landing-sub-nav figcaption {
   display: block; }
 
+.landing-sub-nav a:before, .landing-sub-nav a:after, .landing-sub-nav figure:before, .landing-sub-nav figure:after, .landing-sub-nav svg:before, .landing-sub-nav svg:after, .landing-sub-nav figcaption:before, .landing-sub-nav figcaption:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 .landing-sub-nav a {
   padding-top: 150px; }
 
@@ -5180,7 +5185,7 @@ section.leading {
 .landing-sub-nav a:hover svg {
   opacity: 0;
   margin-top: -100%;
-  margin-bottom: 50%; }
+  margin-bottom: 60%; }
 
 .landing-sub-nav a:hover h4 {
   margin-bottom: 15px; }

@@ -10,6 +10,7 @@
 	zoom:1;
 	overflow: hidden;
 	a, figure, svg, figcaption {
+		@include clearfix;
 		display: block;
 	}
 	a {
@@ -62,7 +63,7 @@
 			svg {
 				opacity: 0;
 				margin-top: -100%;
-				margin-bottom: 50%;
+				margin-bottom: 60%;
 			}
 			h4 {
 				margin-bottom: 15px;
