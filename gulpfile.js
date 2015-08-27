@@ -143,6 +143,10 @@ gulp.task('minify-css', function() {
     .pipe(gulp.dest(path.SCSS_BUILD));
 });
 
+gulp.task('watchProduction', function() {
+  gulp.watch(path.MKDN_SRC + '/**/*.md', ['markdown']);
+});
+
 gulp.task('production', ['replaceHTML', 'minify-css', 'build']);
 
 gulp.task('default', ['copy','watch']);
