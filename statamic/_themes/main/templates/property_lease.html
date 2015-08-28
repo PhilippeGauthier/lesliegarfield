@@ -94,8 +94,13 @@
 						<h3>{{ theme:partial src="svg/glasses" }}SPECIFICATIONS</h3>
 						<ul>
 							{{ if price|not_empty }}
+							<li>Lease Price</li>
+							{{ endif }}
+
+							{{ if terms|not_empty }}
 							<li>Lease Terms</li>
 							{{ endif }}
+
 							{{ if plot|not_empty }}
 							<li>Plot</li>
 							{{ endif }}
