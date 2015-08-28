@@ -36,7 +36,7 @@ var Listing = React.createClass({
                 ft<sup>2</sup>
               </h4>
               <div className='spacer'></div>              
-              <h4>{listing.location}</h4>
+              <h4>{listing.property_location}</h4>
             </div>
             <div className='bottom-info'>
               <p>{listing.openhouse}</p>

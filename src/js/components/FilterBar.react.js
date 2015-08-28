@@ -41,7 +41,7 @@ var FilterBar = React.createClass({
     var viewableProperties = _.filter(properties, function(property) {
       var contains = list.length === 0 ? true : false;
       _.each(list, function(neighborhood) {
-          if (neighborhood.value === property.location)
+          if (neighborhood.value === property.property_location)
             contains = true;
       });
       return contains;
