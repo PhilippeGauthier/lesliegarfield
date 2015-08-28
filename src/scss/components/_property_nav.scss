@@ -1,8 +1,14 @@
 .Select {
+	border: 1px solid transparent;
 	&.is-open {
-		border: 1px solid $dark-gray;
+		.Select-control {
+			border: 1px solid $dark-gray;
+			border-radius: 0;
+		}
 	}
 }
+
+
 
 .Select-placeholder, .sort-bar, .Select-menu {
 	font-family: $header-font-medium;

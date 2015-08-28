@@ -4409,8 +4409,12 @@ section.leading {
 .circle-leader .circle svg * {
   fill: #404041; }
 
-.Select.is-open {
-  border: 1px solid #25282A; }
+.Select {
+  border: 1px solid transparent; }
+
+.Select.is-open .Select-control {
+  border: 1px solid #25282A;
+  border-radius: 0; }
 
 .Select-placeholder, .sort-bar, .Select-menu {
   font-family: "Copernicus-Medium";
