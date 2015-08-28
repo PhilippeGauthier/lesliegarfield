@@ -1,4 +1,4 @@
-<section class="leading property-page background-gray">
+<section class="leading properties property-page background-gray">
 	<div class="container">
 
 		<aside>
@@ -96,6 +96,11 @@
 							{{ if price|not_empty }}
 							<li>Price</li>
 							{{ endif }}
+
+							{{ if build_date|not_empty }}
+							<li>Build Date</li>
+							{{ endif }}
+
 							{{ if plot|not_empty }}
 							<li>Plot</li>
 							{{ endif }}
@@ -124,6 +129,10 @@
 							<li>Bathrooms</li>
 							{{ endif }}
 
+							{{ if powder|not_empty }}
+							<li>Powder Rooms</li>
+							{{ endif }}
+
 							{{ if taxes|not_empty }}
 							<li>Taxes</li>
 							{{ endif }}
@@ -149,6 +158,11 @@
 							{{ if price|not_empty }}
 							<li>${{ price|format_number }}</li>
 							{{ endif }}
+
+							{{ if build_date|not_empty }}
+							<li>{{ build_date }}</li>
+							{{ endif }}
+
 							{{ if plot|not_empty }}
 							<li>{{ plot }}</li>
 							{{ endif }}
@@ -175,6 +189,10 @@
 
 							{{ if bathrooms|not_empty }}
 							<li>{{ bathrooms }}</li>
+							{{ endif }}
+
+							{{ if powder|not_empty }}
+							<li>{{ powder }}</li>
 							{{ endif }}
 
 							{{ if taxes|not_empty }}

@@ -76,6 +76,9 @@ fields:
     taxonomy:
       type: property_type
       folder: properties/*
+  build_date:
+    type: text
+    display: Build Date
   plot:
     type: text
     display: Plot
@@ -93,6 +96,9 @@ fields:
     type: text
   bathrooms:
     display: Bathrooms
+    type: text
+  powder:
+    display: Powder Rooms
     type: text
   pet_policy:
     display: Pet Policy
