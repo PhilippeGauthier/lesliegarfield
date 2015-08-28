@@ -37,10 +37,11 @@
 	padding: $padding-top $padding-side;
 	font-size: $font-size;
 	border: 1px solid $green;
+	border-radius: 0;
 	color: white;
+	text-transform: uppercase;
 	&:hover, &:focus {
 		color: white;
 		background-color: $hover-green;
-		border: 1px solid white;
 	}
 }

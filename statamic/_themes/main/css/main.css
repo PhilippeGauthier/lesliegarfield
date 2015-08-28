@@ -4766,12 +4766,15 @@ section.leading {
   padding-bottom: 10px;
   display: block;
   color: white;
+  border-radius: 0;
   margin: 0;
   text-align: center;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  text-transform: uppercase; }
 
 .property-schedule a:hover {
-  background-color: #009d84; }
+  background-color: #009d84;
+  color: white; }
 
 .summary {
   box-sizing: border-box;
@@ -4971,16 +4974,17 @@ section.leading {
 .hero a {
   border-radius: 0;
   background-color: #009880;
-  padding: 10px 50px;
+  padding: 20px 35px;
   font-size: 12px;
   border: 1px solid #009880;
+  border-radius: 0;
   color: white;
+  text-transform: uppercase;
   margin-top: 15px; }
 
 .hero a:hover, .hero a:focus {
   color: white;
-  background-color: #009d84;
-  border: 1px solid white; }
+  background-color: #009d84; }
 
 .btn-contact {
   padding: 6px 10px;
@@ -5093,13 +5097,14 @@ section.leading {
   padding: 10px 100px;
   font-size: 20px;
   border: 1px solid #009880;
+  border-radius: 0;
   color: white;
+  text-transform: uppercase;
   font-style: bold; }
 
 .modal-content .btn-garfield:hover, .modal-content .btn-garfield:focus {
   color: white;
-  background-color: #009d84;
-  border: 1px solid white; }
+  background-color: #009d84; }
 
 .modal-content .btn-garfield:hover {
   border: 1px solid #009B77; }
@@ -5188,7 +5193,8 @@ section.leading {
   margin-bottom: 60%; }
 
 .landing-sub-nav a:hover h4 {
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  color: #009B77; }
 
 .landing-sub-nav a:hover p, .landing-sub-nav a:hover span {
   opacity: 1;
