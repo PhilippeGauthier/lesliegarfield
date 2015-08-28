@@ -4961,7 +4961,8 @@ section.leading {
 
 .hero h1 {
   margin-top: 0;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  font-size: 68px; }
 
 .hero h3 {
   font-family: "Copernicus-Medium";
