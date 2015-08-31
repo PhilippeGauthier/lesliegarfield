@@ -10,8 +10,7 @@
 			display: block;
 		}
 		.specs {
-			@include span (5 of 12);
-			@include pre(1);
+			@include span (6 of 12);
 			ul {
 				@include span(50%);
 
