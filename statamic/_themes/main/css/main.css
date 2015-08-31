@@ -5479,7 +5479,7 @@ section.leading {
   font-size: 27px; }
 
 .agents img {
-  border: 1px solid transparent; }
+  border: 2px solid transparent; }
 
 .agents a:first-of-type {
   display: block; }
@@ -5527,9 +5527,12 @@ section.leading {
 .agents .grid-3-constrained * {
   vertical-align: middle; }
 
+.agents .grid-3-constrained img {
+  max-width: 200px; }
+
 .agents .grid-3-constrained svg {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   margin: 0; }
 
 .agents .grid-3-constrained p {
