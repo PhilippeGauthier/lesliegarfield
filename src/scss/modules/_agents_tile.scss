@@ -16,10 +16,10 @@ $agents: (
 	}
 	h3 {
 		font-family: $header-font-family-medium-italic;
-		font-size: 27px;
+		font-size: 22px;
 	}
 	img {
-		border: 2px solid transparent;
+		border: 2px solid white;
 	}
 	a:first-of-type {
 		display: block;
@@ -36,7 +36,7 @@ $agents: (
 	}
 	a:last-of-type, p {
 		font-family: $header-font-medium;
-		font-size: 14px;
+		font-size: 12px;
 	}
 	@include layout($agents);
 	.grid {
@@ -53,8 +53,8 @@ $agents: (
 			max-width: 200px;
 		}
 		svg {
-			width: 25px;
-			height: 25px;
+			width: 20px;
+			height: 20px;
 			margin: 0;
 		}
 		p {

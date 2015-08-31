@@ -1344,6 +1344,9 @@ img {
 .similar-properties-gray {
   background-color: #E5E4E4; }
 
+.agents-background {
+  background-color: #F5F5F5; }
+
 .white {
   background-color: #fff; }
 
@@ -4799,6 +4802,9 @@ section.leading {
   line-height: 24px;
   margin-left: 5px; }
 
+.summary #summar_expander {
+  display: block; }
+
 .agent-individual aside {
   padding-right: 60px; }
 
@@ -5476,10 +5482,10 @@ section.leading {
 
 .agents h3 {
   font-family: "Copernicus-MediumItalic";
-  font-size: 27px; }
+  font-size: 22px; }
 
 .agents img {
-  border: 2px solid transparent; }
+  border: 2px solid white; }
 
 .agents a:first-of-type {
   display: block; }
@@ -5495,7 +5501,7 @@ section.leading {
 
 .agents a:last-of-type, .agents p {
   font-family: "Copernicus-Medium";
-  font-size: 14px; }
+  font-size: 12px; }
 
 .agents .grid {
   margin-left: 6.25%;
@@ -5531,8 +5537,8 @@ section.leading {
   max-width: 200px; }
 
 .agents .grid-3-constrained svg {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   margin: 0; }
 
 .agents .grid-3-constrained p {
