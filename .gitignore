@@ -47,4 +47,4 @@ npm-debug.log
 
 node_modules/*
 package.json
-JSON/*.json
+statamic/JSON/*.json
