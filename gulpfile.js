@@ -81,6 +81,7 @@ gulp.task('ascent-minify-css', function() {
 gulp.task('markdown', function(){
   gulp.src([path.MKDN_SRC + '/**/*.md', '!' + path.MKDN_SRC + '/**/page.md' ])
     .pipe(gutil.buffer())
+    .pipe(markdown().on('error', markdown.logError))
     .pipe(markdown('properties.json'))
     .pipe(gulp.dest(path.JSON))
 });
