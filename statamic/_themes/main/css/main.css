@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -4669,6 +4670,11 @@ section.leading {
   float: left;
   background-color: #F7F7F7; }
 
+.property-carousel:before, .property-carousel:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 .property-carousel img {
   max-height: 585px;
   text-align: center;
@@ -4836,6 +4842,9 @@ section.leading {
   padding: 60px;
   background-color: #fff; }
 
+.agent-individual main .agent-info {
+  margin-bottom: 60px; }
+
 .agent-individual main .agent-info:before, .agent-individual main .agent-info:after {
   content: "";
   display: table;
@@ -4855,6 +4864,9 @@ section.leading {
 
 .agent-individual main p:first-of-type {
   margin-top: 0; }
+
+.agent-individual main p:last-of-type {
+  margin-bottom: 0; }
 
 .agent-individual main p {
   font-family: "Copernicus-Medium";
@@ -4934,9 +4946,11 @@ section.leading {
   float: right; }
 
 .green-specs {
-  margin-top: 30px;
   padding: 60px;
-  background-color: #E9F6F3; }
+  background-color: #E9F6F3;
+  box-sizing: border-box;
+  width: 100%;
+  float: left; }
 
 .green-specs:before, .green-specs:after {
   content: "";

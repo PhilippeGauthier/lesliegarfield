@@ -43,9 +43,11 @@
 		background-color: #fff;
 		.agent-info {
 			@include clearfix;
+			margin-bottom: 60px;
 		}
 		.agent-info * {
 			@include span (7 of 9 );
+			
 		}
 		h1 {
 			font-size: 47px;
@@ -54,6 +56,9 @@
 		}
 		p:first-of-type {
 			margin-top: 0;
+		}
+		p:last-of-type {
+			margin-bottom: 0;
 		}
 		p {
 			font-family: $header-font-medium;

@@ -79,6 +79,7 @@
 
 .property-carousel {
 	@include span (full no-gutter);
+	@include clearfix;
 	img {
 		max-height: 585px;
 		text-align: center;
