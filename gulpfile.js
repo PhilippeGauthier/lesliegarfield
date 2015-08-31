@@ -17,6 +17,7 @@ var rename = require("gulp-rename");
 var markdown = require('gulp-markdown-to-json');
 var convert = require('gulp-convert');
 var gutil = require('gulp-util');
+var plumber = require('gulp-plumber');
 var livereload = require('gulp-livereload');
 var reload_page = livereload.changed;
 
@@ -81,7 +82,7 @@ gulp.task('ascent-minify-css', function() {
 gulp.task('markdown', function(){
   gulp.src([path.MKDN_SRC + '/**/*.md', '!' + path.MKDN_SRC + '/**/page.md' ])
     .pipe(gutil.buffer())
-    .pipe(markdown().on('error', markdown.logError))
+    .on('error', function(err){ console.log(err.message); })
     .pipe(markdown('properties.json'))
     .pipe(gulp.dest(path.JSON))
 });
