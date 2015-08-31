@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -1246,7 +1245,7 @@ head:hover ~ body .container:before {
   position: fixed;
   top: 0; }
 
-.property-grid:before, .property-grid:after {
+.grid:before, .grid:after {
   content: "";
   display: table;
   clear: both; }
@@ -1285,6 +1284,9 @@ main {
   padding-left: 0.83333%;
   padding-right: 0.83333%; }
 
+.circle {
+  border-radius: 50%; }
+
 /**
 *
 * Global
@@ -1293,9 +1295,6 @@ main {
 html, body, a, span, p {
   color: #404041;
   font-family: Arial, "Lucida Grande", sans-serif; }
-
-.slick-list *:focus {
-  outline: none; }
 
 ul {
   -webkit-margin-before: 0;
@@ -4213,7 +4212,7 @@ header {
   position: fixed;
   height: 78px;
   background-color: #fff;
-  z-index: 1000;
+  z-index: 10;
   border-bottom: 1px solid #25282A;
   width: 100%; }
 
@@ -4794,15 +4793,155 @@ section.leading {
   line-height: 24px;
   margin-left: 5px; }
 
+.agent-individual aside {
+  padding-right: 60px; }
+
+.agent-individual aside img {
+  margin-top: 183px; }
+
+.agent-individual aside h2 {
+  font-family: "Copernicus-Bold";
+  font-size: 25px; }
+
+.agent-individual aside svg {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px; }
+
+.agent-individual aside svg, .agent-individual aside li {
+  vertical-align: middle; }
+
+.agent-individual aside ul {
+  margin-top: 20px; }
+
+.agent-individual aside li {
+  font-family: "Copernicus-Medium";
+  font-size: 14px;
+  margin-bottom: 10px; }
+
+.agent-individual aside li:hover {
+  color: #009B77; }
+
+.agent-individual aside li:hover svg * {
+  fill: #009B77; }
+
+.agent-individual aside li:hover * {
+  color: #009B77; }
+
+.agent-individual aside .dotted {
+  margin-top: 30px;
+  margin-bottom: 0; }
+
+.agent-individual main {
+  padding: 60px;
+  background-color: #fff; }
+
+.agent-individual main .agent-info:before, .agent-individual main .agent-info:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.agent-individual main .agent-info * {
+  box-sizing: border-box;
+  width: 77.77778%;
+  float: left;
+  padding-left: 1.11111%;
+  padding-right: 1.11111%; }
+
+.agent-individual main h1 {
+  font-size: 47px;
+  margin-top: 0;
+  margin-bottom: 60px; }
+
+.agent-individual main p:first-of-type {
+  margin-top: 0; }
+
+.agent-individual main p {
+  font-family: "Copernicus-Medium";
+  line-height: 28px; }
+
+.agent-individual main .green-specs {
+  margin-bottom: 60px; }
+
+.agent-individual main .green-specs h4 {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #009B77;
+  margin-bottom: 60px; }
+
+.agent-individual main .green-specs .press:before, .agent-individual main .green-specs .press:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.agent-individual main .green-specs .press-item {
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding-left: 5%;
+  padding-right: 5%; }
+
+.agent-individual main .green-specs .press-item:nth-child(2n + 1) {
+  margin-left: 0;
+  margin-right: -100%;
+  clear: both; }
+
+.agent-individual main .green-specs .press-item:nth-child(2n + 2) {
+  margin-left: 50%;
+  margin-right: -100%;
+  clear: none; }
+
+.agent-individual main .green-specs .press-item:before, .agent-individual main .green-specs .press-item:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.agent-individual main .green-specs .press-item p {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  display: block;
+  margin-bottom: 0; }
+
+.agent-individual main .green-specs .press-item p:before, .agent-individual main .green-specs .press-item p:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.agent-individual main .green-specs .press-item:first-of-type {
+  border-right: 1px solid #009B77; }
+
+.agent-individual main .green-specs .press-item p {
+  text-align: center; }
+
+.agent-individual main .agent-properties {
+  padding: 30px;
+  margin-bottom: 60px; }
+
+.agent-individual main .agent-property-carousel {
+  margin-left: 8.33333%;
+  margin-right: 8.33333%; }
+
+.agent-individual main .agent-property-carousel a {
+  margin: 10px;
+  padding: 10px; }
+
+.agent-individual main .recent-transactions div {
+  border-top: 1px solid #25282A; }
+
+.agent-individual main .recent-transactions li {
+  padding: 20px 0; }
+
+.agent-individual main .recent-transactions ul li:last-of-type {
+  float: right; }
+
 .green-specs {
   margin-top: 30px;
   padding: 60px;
-  background-color: #E9F6F3;
-  box-sizing: border-box;
-  width: 100%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  background-color: #E9F6F3; }
+
+.green-specs:before, .green-specs:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 .green-specs * {
   color: #009B77; }
@@ -5309,3 +5448,76 @@ section.leading {
 
 .insight-tile span {
   font-size: 12px; }
+
+.agents h1, .agents h2 {
+  margin-left: 12.5%;
+  margin-right: 12.5%; }
+
+.agents h1 {
+  font-size: 70px; }
+
+.agents h2 {
+  font-size: 22px;
+  font-family: "Copernicus-Medium";
+  padding-bottom: 100px; }
+
+.agents h3 {
+  font-family: "Copernicus-MediumItalic";
+  font-size: 27px; }
+
+.agents img {
+  border: 1px solid transparent; }
+
+.agents a:first-of-type {
+  display: block; }
+
+.agents a:hover, .agents p:hover {
+  color: #009B77; }
+
+.agents a:hover img, .agents p:hover img {
+  border: 2px solid #009B77; }
+
+.agents a:hover svg *, .agents p:hover svg * {
+  fill: #009B77; }
+
+.agents a:last-of-type, .agents p {
+  font-family: "Copernicus-Medium";
+  font-size: 14px; }
+
+.agents .grid {
+  margin-left: 6.25%;
+  margin-right: 6.25%; }
+
+.agents .grid-3-constrained {
+  box-sizing: border-box;
+  width: 33.33333%;
+  float: left;
+  padding-left: 4.16667%;
+  padding-right: 4.16667%;
+  margin-bottom: 10%; }
+
+.agents .grid-3-constrained:nth-child(3n + 1) {
+  margin-left: 0;
+  margin-right: -100%;
+  clear: both; }
+
+.agents .grid-3-constrained:nth-child(3n + 2) {
+  margin-left: 33.33333%;
+  margin-right: -100%;
+  clear: none; }
+
+.agents .grid-3-constrained:nth-child(3n + 3) {
+  margin-left: 66.66667%;
+  margin-right: -100%;
+  clear: none; }
+
+.agents .grid-3-constrained * {
+  vertical-align: middle; }
+
+.agents .grid-3-constrained svg {
+  width: 30px;
+  height: 30px;
+  margin: 0; }
+
+.agents .grid-3-constrained p {
+  margin-bottom: 10px; }

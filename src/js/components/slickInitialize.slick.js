@@ -31,6 +31,13 @@ $('.property_tile').slick({
   ]
 });
 
+$('.agent-property-carousel').slick({
+  infinite: true,
+  speed: 300,
+  slidesToShow: 2,
+  arrows: true
+});
+
 $('.property-carousel').slick({
   infinite: true,
   speed: 300,

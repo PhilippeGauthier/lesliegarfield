@@ -1,7 +1,7 @@
 fields:
-	content:
-		hide: true
 	slug:
+		hide: true
+	content:
 		hide: true
 	image:
 		type: file
@@ -15,3 +15,32 @@ fields:
 	email:
 		type: text
 		display: Agent's Email Address
+	info:
+		type: redactor
+		display: Content
+	press:
+		type: grid
+		display: Press Items
+		fields:
+			image:
+				type: file
+				destination: assets/img/agents
+				allowed: [png, gif, jpg, jpeg]
+				display: Press Image
+				width: 33%
+			text:
+				type: textarea
+				display: Preview Text
+			link:
+				type: text
+				display: Press Link
+	transactions:
+		type: grid
+		display: Recent transactions
+		fields:
+			transaction:
+				type: text
+				display: Property Name
+			price:
+				type: text
+				display: Price

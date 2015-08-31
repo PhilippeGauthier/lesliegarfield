@@ -11,7 +11,7 @@ var Listings = React.createClass({
     return (
       <section className="properties background-gray">
         <div className='container'>
-        <ul className='property-grid'>
+        <ul className='grid'>
           {rows}
         </ul>
         </div>

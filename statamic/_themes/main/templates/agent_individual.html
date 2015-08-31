@@ -1,0 +1,61 @@
+<section class="leading background-gray agent-individual">
+	<div class="container">
+
+		<aside>					
+			<img class="circle" src="{{ transform src="{{ image }}" width="300" }}" class="img-circle" />
+			<h2>Contact {{ title }}</h2>
+			<ul>
+				<li>{{ theme:partial src="svg/phone" }} {{ phone }}</li>
+				<li>{{ theme:partial src="svg/mail" }} {{ email|link }}</li>
+			</ul>
+			<div class="dotted"></div>
+		</aside>
+
+		<main>
+			<div class="agent-info">
+				<h1>{{ title }}</h1>
+				{{ info }}
+			</div>
+			{{ if press|not_empty }}
+			<div class="green-specs">
+				<h4>PRESS</h4>
+				<div class="press">
+				{{ 	press }}
+				 <a target="_blank" href="{{ link }}" class="press-item">
+				 	{{ if image|not_empty }}
+				 	<img src="{{ path src="{{ image }}" }}">
+				 	{{ endif }}
+				 	{{ if text|not_empty }}
+				 	<p>{{ text }}</p>
+				 	{{ endif }}
+				 </a>
+				{{ /press }}
+				</div>
+			</div>
+			{{ endif }}
+			<div class="agent-properties background-gray">
+				<h1>Current Listings</h1>
+				<div class="agent-property-carousel">
+					{{ entries:listing folder="properties/*" }}
+					{{ theme:partial src="property_tile" use_context="true" }}		        
+					{{ /entries:listing }}
+				</div>
+			</div>
+			{{ if transactions|not_empty }}
+			<div class="recent-transactions">
+				<h1>Recent Transaction</h1>
+				<ul>
+				{{ transactions }}
+					<div>
+						<li>{{ transaction }}</li>
+						<li>{{ price }}</li>
+					</div>
+				{{ /transactions }}
+				</ul>
+			</div>
+			{{ endif }}
+		</main>
+
+	</div>
+</section>
+

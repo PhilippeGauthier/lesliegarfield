@@ -52,6 +52,22 @@ $(document).ready(function() {
   }
 });
 
+$(document).ready(function() {
+  // Get an array of all element heights
+  if ($('.press-item').length) {
+	  var elementHeights = $('.press-item').map(function() {
+	    return $(this).height();
+	  }).get();
+
+	  // Math.max takes a variable number of arguments
+	  // `apply` is equivalent to passing each height as an argument
+	  var maxHeight = Math.max.apply(null, elementHeights);
+
+	  // Set each height to the max height
+	  $('.press-item').height(maxHeight);  	
+  }
+});
+
 // Sticky Sidebar
 $("aside").stick_in_parent();
 

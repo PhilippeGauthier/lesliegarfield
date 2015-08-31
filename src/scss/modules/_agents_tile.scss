@@ -1,0 +1,61 @@
+$agents: (
+	columns: 8
+);
+
+.agents {
+	h1,h2 {
+		@include squish(1 of 8);
+	}
+	h1 {
+		font-size: 70px;
+	}
+	h2 {
+		font-size: 22px;
+		font-family: $header-font-medium;
+		padding-bottom: 100px;
+	}
+	h3 {
+		font-family: $header-font-family-medium-italic;
+		font-size: 27px;
+	}
+	img {
+		border: 1px solid transparent;
+	}
+	a:first-of-type {
+		display: block;
+	}
+
+	a:hover, p:hover {
+		img {
+			border: 2px solid $text-green;	
+		}
+		svg * {
+			fill: $text-green;
+		}
+		color: $text-green;
+	}
+	a:last-of-type, p {
+		font-family: $header-font-medium;
+		font-size: 14px;
+	}
+	@include layout($agents);
+	.grid {
+		@include pre(.5);
+		@include post(.5);
+	}
+	.grid-3-constrained {
+		@include gallery(2 of 6 1);
+		margin-bottom: gutter(1);
+		* {
+			vertical-align: middle;
+		}
+		svg {
+			width: 30px;
+			height: 30px;
+			margin: 0;
+		}
+		p {
+			margin-bottom: 10px;
+		}
+	}
+}

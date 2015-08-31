@@ -90,7 +90,7 @@ body {
 	top: 0;
 }
 
-.property-grid {
+.grid {
   // padding: gutter(12);
   // padding-bottom: 0; 
   @include clearfix;
@@ -111,4 +111,8 @@ aside {
 main {
 	@include span (last 9 of 12);
 	// padding: 30px;
+}
+
+.circle {
+	border-radius: 50%;
 }
