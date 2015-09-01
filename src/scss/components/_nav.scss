@@ -7,7 +7,7 @@ header {
 	height: 78px;
 	background-color: #fff;
 	z-index: 100;
-	border-bottom: 1px solid #25282A;
+	border-bottom: 1px solid darken($background-gray,12%);
 	&.nav-down {
 		background-color: rgba(white,.98);
 	}
