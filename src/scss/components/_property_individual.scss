@@ -137,6 +137,7 @@
 		margin-right: 5px;
 		height: 25px;
 		width: 25px;
+
 	}
 }
 
@@ -153,12 +154,16 @@
 	}
 	svg, span {
 		vertical-align: middle;
+		color: $light-font-color
 	}
 	svg {
 		margin-right: 5px;
 		display: inline-block;
 		width: 40px;
 		height: 40px;
+		* {
+			fill: $light-font-color;
+		}
 	}
 	
 }

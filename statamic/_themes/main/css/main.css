@@ -4764,13 +4764,17 @@ section.leading {
   fill: #009B77; }
 
 .property-downloads svg, .property-downloads span {
-  vertical-align: middle; }
+  vertical-align: middle;
+  color: #999999; }
 
 .property-downloads svg {
   margin-right: 5px;
   display: inline-block;
   width: 40px;
   height: 40px; }
+
+.property-downloads svg * {
+  fill: #999999; }
 
 .property-schedule a {
   background-color: #009880;
