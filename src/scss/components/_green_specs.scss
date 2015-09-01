@@ -3,6 +3,9 @@
 		background-color: $lightest-green;
 		@include span(full no-gutter);
 		@include clearfix;
+		h4 {
+			margin-top: 0;
+		}
 		* {
 			color: $text-green;
 		}

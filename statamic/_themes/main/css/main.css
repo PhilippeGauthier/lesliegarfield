@@ -4963,6 +4963,9 @@ section.leading {
   display: table;
   clear: both; }
 
+.green-specs h4 {
+  margin-top: 0; }
+
 .green-specs * {
   color: #009B77; }
 
