@@ -10,6 +10,15 @@ var Listing = React.createClass({
       hidePrefix: true
     });
   },
+  componentDidUpdate: function() {
+    $('.price').currency({
+      decimals: 0
+    });
+    $('.sqft').currency({
+      decimals: 0,
+      hidePrefix: true
+    });
+  },
   render: function() {
     var listing = this.props.listing;
     var listingURL = window.location.origin + listing.url;

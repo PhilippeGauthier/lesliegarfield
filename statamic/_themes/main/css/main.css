@@ -4813,15 +4813,19 @@ section.leading {
   padding-right: 60px; }
 
 .agent-individual aside img {
-  margin-top: 183px; }
+  margin-top: 183px;
+  max-width: 200px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; }
 
 .agent-individual aside h2 {
   font-family: "Copernicus-Bold";
-  font-size: 25px; }
+  font-size: 22px; }
 
 .agent-individual aside svg {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   margin-right: 10px; }
 
 .agent-individual aside svg, .agent-individual aside li {
@@ -5388,16 +5392,18 @@ section.leading {
 
 .property_box .preview-image {
   height: 300px;
-  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
   background-color: #ECEBEC;
-  background-size: cover; }
+  background-size: cover;
+  text-align: center; }
 
 .property_box .sqft {
   margin-right: 5px; }
 
 .property_box img {
   max-height: 300px;
-  max-width: 200px; }
+  max-width: 100%; }
 
 .property_box .property_tile_info {
   display: -webkit-flex;

@@ -10,7 +10,7 @@
     </ul >
       <ul class="right">
         {{ nav from="/" max_depth="1" }}
-        <li><a href="{{ url }}"{{ if is_current || is_parent }} class="current"{{ endif }}>{{ title }} </a>
+        <li><a class="nav-link" href="{{ url }}"{{ if is_current || is_parent }} class="current"{{ endif }}>{{ title }} </a>
          {{ if is_current || is_parent }}
          {{ if children }}
          <ul>

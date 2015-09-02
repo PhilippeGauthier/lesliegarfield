@@ -160,7 +160,7 @@
 						</ul>
 						<ul>
 							{{ if price|not_empty }}
-							<li>${{ price|format_number }}/month</li>
+							<li>{{ price }}/month</li>
 							{{ endif }}
 
 							{{ if build_date|not_empty }}
@@ -176,7 +176,7 @@
 							{{ endif }}
 
 							{{ if sqft|not_empty }}
-							<li>{{ sqft|format_number }} ft<sup>2</sup></li>
+							<li>{{ sqft }} ft<sup>2</sup></li>
 							{{ endif }}
 
 							{{ if units|not_empty }}
