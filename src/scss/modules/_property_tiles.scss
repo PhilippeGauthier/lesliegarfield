@@ -1,7 +1,10 @@
 .property_tile {
 	a {
 		padding: 10px;
-		
+		// display: block;
+		margin: 10px;
+		position: relative;
+		@include clearfix;
 	}
 	&.slick-initialized {
 		a {
@@ -13,11 +16,11 @@
 .property_box {
 	display: flex;
 	flex-flow: row nowrap;
+	position: relative;
 	background-color: #fff;
 	.preview-image {
 		height: 300px;
-		min-width: 200px;
-		max-width: 200px;
+		@include span(4 of 8 no-gutter);
 		// width: 180px;
 		background-color: $light-gray;
 		background-size: contain;
@@ -33,6 +36,7 @@
 		max-width: 100%;
 	}
 	.property_tile_info {
+		@include span(last 4 of 8);
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: space-between;

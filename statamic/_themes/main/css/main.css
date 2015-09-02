@@ -5423,7 +5423,14 @@ section.leading {
   margin-bottom: 10px; }
 
 .property_tile a {
-  padding: 10px; }
+  padding: 10px;
+  margin: 10px;
+  position: relative; }
+
+.property_tile a:before, .property_tile a:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 .property_tile.slick-initialized a {
   margin: 10px; }
@@ -5435,12 +5442,14 @@ section.leading {
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
+  position: relative;
   background-color: #fff; }
 
 .property_box .preview-image {
   height: 300px;
-  min-width: 200px;
-  max-width: 200px;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
   background-color: #ECEBEC;
   background-size: contain;
   text-align: center; }
@@ -5453,6 +5462,11 @@ section.leading {
   max-width: 100%; }
 
 .property_box .property_tile_info {
+  box-sizing: border-box;
+  width: 50%;
+  float: right;
+  padding-left: 1.25%;
+  padding-right: 1.25%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
