@@ -5451,7 +5451,7 @@ section.leading {
   width: 50%;
   float: left;
   background-color: #ECEBEC;
-  background-size: contain;
+  background-size: cover;
   text-align: center; }
 
 .property_box .sqft {
