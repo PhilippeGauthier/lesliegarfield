@@ -5395,7 +5395,7 @@ section.leading {
   min-width: 200px;
   max-width: 200px;
   background-color: #ECEBEC;
-  background-size: cover;
+  background-size: contain;
   text-align: center; }
 
 .property_box .sqft {
