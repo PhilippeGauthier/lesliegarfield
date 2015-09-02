@@ -1364,6 +1364,9 @@ img {
 .dark_gray a:hover, .dark_gray p:hover, .dark_gray span:hover, .dark_gray h1:hover, .dark_gray h2:hover, .dark_gray h3:hover, .dark_gray h4:hover, .dark_gray .fa-inverse:hover {
   color: #999999; }
 
+.preview-image {
+  background-size: cover; }
+
 .highlight * {
   font-family: "Copernicus-Semibold"; }
 
@@ -4300,6 +4303,9 @@ nav li a:hover, nav li a:focus, nav li a.current {
 nav li a:hover.muted, nav li a:hover.btn-contact, nav li a:focus.muted, nav li a:focus.btn-contact, nav li a.current.muted, nav li a.current.btn-contact {
   box-shadow: 0px 0px 0px 0px; }
 
+nav li a.current.muted:hover {
+  box-shadow: 0px 3px 0px 0px; }
+
 footer {
   z-index: 1000; }
 
@@ -5515,6 +5521,15 @@ section.leading {
   margin-bottom: 0;
   color: #FF0000;
   font-size: 17px; }
+
+.neighborhood-tile {
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff; }
+
+.neighborhood-tile .preview-image {
+  height: 300px;
+  width: 100%; }
 
 .insight-tile {
   display: block;

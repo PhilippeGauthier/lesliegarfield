@@ -1,0 +1,12 @@
+
+fields:
+  hero_image:
+    type: file
+    destination: assets/img/
+    allowed: [png, gif, jpg, jpeg]
+  tag_line: 
+    type: text
+    display: Main Tagline
+  sub_tag_line: 
+    type: text
+    display: Sub Tagline

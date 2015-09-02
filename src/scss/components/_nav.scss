@@ -74,3 +74,7 @@ nav li a:hover, nav li a:focus, nav li a.current {
 		box-shadow: 0px 0px 0px 0px;
 	}
 }
+
+nav li a.current.muted:hover {
+	box-shadow: 0px 3px 0px 0px;
+}

@@ -1,0 +1,28 @@
+fields:
+  preview_image:
+    display: Preview Image
+    type: file
+    destination: assets/img/neighborhoods
+    allowed: [png, gif, jpg, jpeg]
+	hero_image:
+    display: Hero Image
+    type: file
+    destination: assets/img/neighborhoods
+    allowed: [png, gif, jpg, jpeg]
+	description:
+		type: redactor
+		display: Intro Description
+  lat_long:
+    display: Property Coordinates
+    type: grid
+    starting_rows: 1
+    max_rows: 1
+    fields:
+      latitude:
+        display: Latitude (should be similar to 40.7590615)
+        type: text
+        width: 50%
+      longitude:
+        display: Longitude (should be similar to -73.969231)
+        type: text
+        width: 50%

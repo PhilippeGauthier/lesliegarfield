@@ -93,6 +93,10 @@ img {
   }
 }
 
+.preview-image {
+  background-size: cover;
+}
+
 .highlight * {
 	font-family: $header-font-family;
 }
