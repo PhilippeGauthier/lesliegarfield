@@ -75,14 +75,25 @@
 			color: $light-font-color;
 		}
 		.location {
-			@include span (full);
+			@include span (5 of 9);
 		}
 		.open-house {
-			@include span (full);
-			
+			@include span (last 4 of 9);
+			text-align: right;
+			height: 25px;
+			position: relative;
+			display: flex;
+			align-items: flex-end;
+			justify-content: flex-end;
+			span {
+				text-align: right;
+			bottom: 0;
 			font-family: $header-font-medium;
-			font-size: 16px;
-			color: $red;
+			font-size: 13px;
+			color: $red;		
+			padding-top: 4px;
+			}
+
 		}
 	}
 }

@@ -4668,20 +4668,37 @@ section.leading {
 
 .property-info .property-subheader .location {
   box-sizing: border-box;
-  width: 100%;
+  width: 55.55556%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  padding-left: 1.11111%;
+  padding-right: 1.11111%; }
 
 .property-info .property-subheader .open-house {
   box-sizing: border-box;
-  width: 100%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  width: 44.44444%;
+  float: right;
+  padding-left: 1.11111%;
+  padding-right: 1.11111%;
+  text-align: right;
+  height: 25px;
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+
+.property-info .property-subheader .open-house span {
+  text-align: right;
+  bottom: 0;
   font-family: "Copernicus-Medium";
-  font-size: 16px;
-  color: #FF0000; }
+  font-size: 13px;
+  color: #FF0000;
+  padding-top: 4px; }
 
 .dotted {
   border-bottom: 1px dotted #999999;
