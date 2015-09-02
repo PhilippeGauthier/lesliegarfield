@@ -219,13 +219,20 @@
 .summary {
 	@include span(100%);
 	margin-top: 30px;
-	span {
-		font-family: $header-font-medium;
-		font-size: 16px;
-		line-height: 24px;
-		margin-left: 5px;
-	}
-	#summar_expander {
-		display: block;
+	#summary_expander {
+		i {
+			color: $dark-gray;
+		}
+		span {
+			font-family: $header-font-medium;
+			font-size: 16px;
+			line-height: 24px;
+			margin-left: 5px;
+		}
+		&:hover {
+			span, i {
+				color: $text-green;
+			}
+		}
 	}
 }

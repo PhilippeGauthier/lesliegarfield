@@ -4849,14 +4849,17 @@ section.leading {
   padding-right: 0.83333%;
   margin-top: 30px; }
 
-.summary span {
+.summary #summary_expander i {
+  color: #25282A; }
+
+.summary #summary_expander span {
   font-family: "Copernicus-Medium";
   font-size: 16px;
   line-height: 24px;
   margin-left: 5px; }
 
-.summary #summar_expander {
-  display: block; }
+.summary #summary_expander:hover span, .summary #summary_expander:hover i {
+  color: #009B77; }
 
 .agent-individual aside {
   padding-right: 60px; }
