@@ -38,6 +38,7 @@ body {
 
 .container {
 	@include container(show overlay);
+	@include clearfix;
 }
 
 .right {

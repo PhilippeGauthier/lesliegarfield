@@ -1154,6 +1154,11 @@ head:hover ~ body .container:before {
   background-clip: content-box;
   background-position: left top; }
 
+.container:before, .container:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 .right {
   float: right !important; }
 
@@ -5336,48 +5341,47 @@ section.leading {
   text-align: center; }
 
 .landing-sub-nav {
-  padding: 120px 0;
-  zoom: 1;
+  padding: 45px 0;
   overflow: hidden; }
 
+.landing-sub-nav:before, .landing-sub-nav:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 .landing-sub-nav .grid-3 {
-  position: relative; }
+  position: relative;
+  padding-top: 25%;
+  width: 25%; }
 
 .landing-sub-nav .grid-3:before, .landing-sub-nav .grid-3:after {
   content: "";
   display: table;
   clear: both; }
 
-.landing-sub-nav .grid-3 * {
-  max-width: 100%; }
-
-.landing-sub-nav a, .landing-sub-nav figure, .landing-sub-nav svg, .landing-sub-nav figcaption {
-  display: block; }
-
-.landing-sub-nav a:before, .landing-sub-nav a:after, .landing-sub-nav figure:before, .landing-sub-nav figure:after, .landing-sub-nav svg:before, .landing-sub-nav svg:after, .landing-sub-nav figcaption:before, .landing-sub-nav figcaption:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.landing-sub-nav a {
-  padding-top: 150px; }
+.landing-sub-nav .grid-3:focus {
+  outline: none; }
 
 .landing-sub-nav figure {
-  max-width: 100%;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  margin: 0; }
+  margin: 0;
+  padding: 20px;
+  display: block;
+  width: 100%; }
 
 .landing-sub-nav p, .landing-sub-nav span {
   opacity: 0;
-  max-height: 0;
   overflow: hidden;
   margin: 0; }
 
 .landing-sub-nav svg {
   transition: all 750ms ease;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
   margin-bottom: 20px; }
 
 .landing-sub-nav svg * {
@@ -5407,8 +5411,7 @@ section.leading {
 
 .landing-sub-nav a:hover svg {
   opacity: 0;
-  margin-top: -100%;
-  margin-bottom: 60%; }
+  margin-top: -50%; }
 
 .landing-sub-nav a:hover h4 {
   margin-bottom: 15px;
