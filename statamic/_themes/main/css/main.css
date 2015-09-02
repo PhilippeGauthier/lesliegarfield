@@ -4590,42 +4590,6 @@ section.leading {
   display: table;
   clear: both; }
 
-.property-info h1 {
-  font-family: "Copernicus-BookItalic";
-  font-size: 47px;
-  color: #25282A;
-  margin: 0 0 5px 0;
-  box-sizing: border-box;
-  width: 77.77778%;
-  float: left;
-  padding-left: 1.11111%;
-  padding-right: 1.11111%; }
-
-.property-info .social {
-  box-sizing: border-box;
-  width: 22.22222%;
-  float: right;
-  padding-left: 1.11111%;
-  padding-right: 1.11111%;
-  height: 63px; }
-
-.property-info .social a {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  float: right;
-  margin-left: 10px;
-  vertical-align: middle; }
-
-.property-info .social .fa-circle {
-  color: transparent;
-  border: 1px solid #999999;
-  border-radius: 50%; }
-
-.property-info .social .fa-inverse {
-  color: #999999; }
-
 .property-info .location {
   box-sizing: border-box;
   width: 100%;
@@ -4643,18 +4607,81 @@ section.leading {
   height: 100%;
   margin: 0 10px 0 5px; }
 
-.property-info .property-header {
-  padding-bottom: 15px; }
-
 .property-info .property-header:before, .property-info .property-header:after {
   content: "";
   display: table;
   clear: both; }
 
+.property-info .property-header h1 {
+  font-family: "Copernicus-BookItalic";
+  font-size: 47px;
+  color: #25282A;
+  margin: 0 0 5px 0;
+  box-sizing: border-box;
+  width: 77.77778%;
+  float: left;
+  padding-left: 1.11111%;
+  padding-right: 1.11111%; }
+
+.property-info .property-header .social {
+  box-sizing: border-box;
+  width: 22.22222%;
+  float: right;
+  padding-left: 1.11111%;
+  padding-right: 1.11111%;
+  height: 63px; }
+
+.property-info .property-header .social a {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  float: right;
+  margin-left: 10px;
+  vertical-align: middle; }
+
+.property-info .property-header .social .fa-circle {
+  color: transparent;
+  border: 1px solid #999999;
+  border-radius: 50%; }
+
+.property-info .property-header .social .fa-inverse {
+  color: #999999; }
+
 .property-info .property-header span {
   font-family: "Copernicus-Medium";
   font-size: 16px;
   color: #999999; }
+
+.property-info .property-subheader {
+  padding-bottom: 15px; }
+
+.property-info .property-subheader:before, .property-info .property-subheader:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.property-info .property-subheader span {
+  font-family: "Copernicus-Medium";
+  font-size: 16px;
+  color: #999999; }
+
+.property-info .property-subheader .location {
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%; }
+
+.property-info .property-subheader .open-house {
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  font-family: "Copernicus-Medium";
+  font-size: 16px;
+  color: #FF0000; }
 
 .dotted {
   border-bottom: 1px dotted #999999;

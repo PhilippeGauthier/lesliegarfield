@@ -45,10 +45,18 @@
 		content: '\f107';
 	}
 }
+
+// .grid {
+// 	margin-top: 100px;
+// }
+
 .property_nav {
 	background-color: $dark-gray;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	// position: fixed;
+	// z-index: 100;
+	// width: 100%;
 	a {
 		color: white;
 		cursor: pointer;
@@ -154,6 +162,10 @@
 
 .sort-nav {
 	background-color: #fff;
+	// position: fixed;
+	// z-index: 100;
+	// margin-top: 138px;
+	// width: 100%;
 	.sort-bar, .sort-bar-divider {
 		display:inline-block;
 	}

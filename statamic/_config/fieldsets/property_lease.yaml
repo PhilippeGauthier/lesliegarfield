@@ -60,6 +60,9 @@ fields:
   streeteasy:
     display: Street Easy?
     type: checkbox
+  openhouse_details:
+    type: text
+    display: Open House Details
   agents:
     display: Agents
     type: suggest

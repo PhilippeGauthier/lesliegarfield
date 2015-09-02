@@ -55,6 +55,10 @@ fields:
   streeteasy:
     display: Street Easy?
     type: checkbox
+  openhouse_details:
+    type: text
+    display: Open House Details
+    instructions: "Enter details only such as "Tuesday, September 3rd between 10:00am - 1:00PM""
   agents:
     display: Agents
     type: suggest

@@ -19,32 +19,7 @@
 	margin-bottom: 30px;
 	background-color: #fff;
 	@include clearfix;
-	h1 {
-		font-family: $header-font-family-book-italic;
-		font-size: 47px;
-		color: $header-font-color;
-		margin: 0 0 5px 0;
-		@include span (7 of 9);
-	}
-	.social {
-		@include span (last 2 of 9);
-		height: 63px;
-		
-		a {
-			@include vertical-align;
-			float: right;
-			margin-left: 10px;
-			vertical-align: middle;
-		}
-		.fa-circle {
-			color: transparent;
-			border: 1px solid $light-font-color;
-			border-radius: 50%;
-		}
-		.fa-inverse {
-			color: $light-font-color;
-		}
-	}
+
 	.location {
 		@include span (full);
 	}
@@ -60,11 +35,54 @@
 	}
 	.property-header {
 		@include clearfix;
+		h1 {
+			font-family: $header-font-family-book-italic;
+			font-size: 47px;
+			color: $header-font-color;
+			margin: 0 0 5px 0;
+			@include span (7 of 9);
+		}
+		.social {
+			@include span (last 2 of 9);
+			height: 63px;
+			a {
+				@include vertical-align;
+				float: right;
+				margin-left: 10px;
+				vertical-align: middle;
+			}
+			.fa-circle {
+				color: transparent;
+				border: 1px solid $light-font-color;
+				border-radius: 50%;
+			}
+			.fa-inverse {
+				color: $light-font-color;
+			}
+		}
+		span {
+			font-family: $header-font-medium;
+			font-size: 16px;
+			color: $light-font-color;
+		}
+	}
+	.property-subheader {
+		@include clearfix;
 		padding-bottom: 15px;
 		span {
 			font-family: $header-font-medium;
 			font-size: 16px;
 			color: $light-font-color;
+		}
+		.location {
+			@include span (full);
+		}
+		.open-house {
+			@include span (full);
+			
+			font-family: $header-font-medium;
+			font-size: 16px;
+			color: $red;
 		}
 	}
 }

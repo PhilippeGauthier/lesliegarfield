@@ -70,7 +70,8 @@
 							</span>
 						</a>
 					</div>
-
+				</div>
+				<div class="property-subheader">
 					<div class="location">
 						<span>{{ property_location }}</span>
 						{{ if location_granular|not_empty }}
@@ -78,7 +79,11 @@
 						<span>{{ location_granular }}</span>
 						{{ endif }}
 					</div>
-
+					<div class="open-house">
+						{{ if openhouse }}
+							Open House: {{ openhouse_details }}
+						{{ endif }}
+					</div>				
 				</div>
 
 				<div class="property-carousel">
