@@ -5378,7 +5378,7 @@ section.leading {
   margin: 0; }
 
 .landing-sub-nav svg {
-  transition: all 750ms ease;
+  transition: all 500ms ease;
   margin-left: auto;
   margin-right: auto;
   margin-top: 60px;

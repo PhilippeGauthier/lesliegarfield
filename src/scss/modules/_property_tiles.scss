@@ -1,7 +1,6 @@
 .property_tile {
 	a {
 		padding: 10px;
-		// display: block;
 		margin: 10px;
 		position: relative;
 		@include clearfix;
@@ -21,12 +20,9 @@
 	.preview-image {
 		height: 300px;
 		@include span(4 of 8 no-gutter);
-		// width: 180px;
 		background-color: $light-gray;
 		background-size: cover;
 		text-align: center;
-		// margin-left: auto;
-		// margin-right: auto;
 	}
 	.sqft {
 		margin-right: 5px;
