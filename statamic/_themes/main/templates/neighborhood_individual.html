@@ -1,0 +1,12 @@
+	<section class="hero small leading" style="background-image: url( {{ path src="{{ hero_image }}" }} );">
+		<h1>{{ title }}</h1>
+	</section>
+<section>
+<div class="container">
+	<div class="property_tile">
+		{{ entries:listing folder="properties/*" conditions="property_location:{title}"}}
+			{{ theme:partial src="property_tile" use_context="true" }}
+		{{ /entries:listing }}
+	</div>
+</div>
+	</section>
