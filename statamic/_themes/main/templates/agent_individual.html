@@ -38,7 +38,7 @@
 				<div class="agent-property-carousel">
 
 					{{ entries:listing folder="properties/*" conditions="agents:{url}" }}
-					{{ title }}        
+					{{ theme:partial src="property_tile" use_context="true" }}       
 					{{ /entries:listing }}
 				</div>
 			</div>
