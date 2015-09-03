@@ -5183,6 +5183,9 @@ section.leading {
   align-items: center;
   text-align: center; }
 
+.hero.small {
+  height: 450px; }
+
 .hero * {
   color: #fff; }
 
@@ -5525,11 +5528,26 @@ section.leading {
 .neighborhood-tile {
   padding: 10px;
   margin: 10px;
-  background-color: #fff; }
+  background-color: #fff;
+  display: block;
+  border: 1px solid transparent;
+  transition: all 100ms ease; }
+
+.neighborhood-tile:hover {
+  border: 1px solid #009B77; }
+
+.neighborhood-tile:hover h2 {
+  color: #009B77; }
 
 .neighborhood-tile .preview-image {
-  height: 300px;
+  height: 260px;
   width: 100%; }
+
+.neighborhood-tile h2 {
+  font-family: "Copernicus-MediumItalic";
+  font-size: 28px;
+  margin-bottom: 60px;
+  margin-top: 10px; }
 
 .insight-tile {
   display: block;

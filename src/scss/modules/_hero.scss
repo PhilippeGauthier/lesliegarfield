@@ -1,5 +1,8 @@
 .hero {
 	height: 600px;
+	&.small {
+		height: 450px;
+	}
 	width: 100%;
 	background-position: center;
   background-size: cover;

@@ -1,12 +1,16 @@
-	<section class="hero leading" style="background-image: url( {{ path src="{{ hero_image }}" }} );">
+	<section class="hero small leading" style="background-image: url( {{ path src="{{ hero_image }}" }} );">
 		<h1>{{ tag_line }}</h1>
 		<h3>{{ sub_tag_line}}</h3>
 	</section>
 <section class="background-gray">
 <div class="container">
+<ul class="grid">
+	
+
 {{ entries:listing folder="neighborhoods/individual_neighborhoods" }}	
 	 {{ theme:partial src="neighborhood_tile" use_context="true" }}
 	{{ /entries:listing }}
+</ul>
 </div>
 	</section>
 

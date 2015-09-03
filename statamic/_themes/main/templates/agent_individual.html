@@ -36,8 +36,9 @@
 			<div class="agent-properties background-gray">
 				<h1>Current Listings</h1>
 				<div class="agent-property-carousel">
-					{{ entries:listing folder="properties/*" }}
-					{{ theme:partial src="property_tile" use_context="true" }}		        
+
+					{{ entries:listing folder="properties/*" conditions="agents:{url}" }}
+					{{ title }}        
 					{{ /entries:listing }}
 				</div>
 			</div>
