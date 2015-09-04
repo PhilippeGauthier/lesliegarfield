@@ -80,21 +80,21 @@ function currentRemove () {
 	$('.current').removeClass('muted');
 }
 
-function activeAdd () {
-	$('.active').addClass('muted');
-}
+// function activeAdd () {
+// 	$('.active').addClass('muted');
+// }
 
-function activeRemove () {
-	$('.active').removeClass('muted');
-}
+// function activeRemove () {
+// 	$('.active').removeClass('muted');
+// }
 
 $('#primary-nav a').hover( currentAdd, currentRemove );
-$('#secondary-nav li').hover( activeAdd, activeRemove );
+// $('#secondary-nav li').hover( activeAdd, activeRemove );
 
-$('#secondary-nav li').click(function() {
-	event.preventDefault()
-	$(this).removeClass('muted');
-})
+// $('#secondary-nav li').click(function() {
+// 	event.preventDefault()
+// 	$(this).removeClass('muted');
+// })
 
 // Smooth Scroll
 

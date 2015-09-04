@@ -4500,16 +4500,16 @@ nav#secondary-nav ul li a:last-of-type {
 
 nav#secondary-nav ul li a:hover {
   box-shadow: none;
-  background-color: #009B77; }
+  background-color: #b3b3b3; }
 
 nav#secondary-nav ul li.active {
   background-color: #009B77; }
 
-nav#secondary-nav ul li.active.muted {
-  background-color: #CCCCCC; }
-
 nav#secondary-nav ul li.active a {
   box-shadow: none; }
+
+nav#secondary-nav ul li.active a:hover {
+  background-color: #00a57f; }
 
 .secondary-nav-link {
   display: block !important;
@@ -4520,11 +4520,11 @@ nav#secondary-nav ul li.active a {
   top: -232px;
   visibility: hidden !important; }
 
-nav li a:hover, nav li a:focus, nav li a.current {
+nav li a:hover, nav li a.current {
   color: #009880;
   box-shadow: 0px 3px 0px 0px; }
 
-nav li a:hover.muted, nav li a:hover.btn-contact, nav li a:focus.muted, nav li a:focus.btn-contact, nav li a.current.muted, nav li a.current.btn-contact {
+nav li a:hover.muted, nav li a:hover.btn-contact, nav li a.current.muted, nav li a.current.btn-contact {
   box-shadow: 0px 0px 0px 0px; }
 
 nav li .current.muted:hover {
@@ -5397,6 +5397,7 @@ h3 {
 
 .hero {
   height: 600px;
+  position: relative;
   width: 100%;
   background-position: center;
   background-size: cover;
@@ -5413,6 +5414,21 @@ h3 {
   -ms-flex-align: center;
   align-items: center;
   text-align: center; }
+
+.hero * {
+  z-index: 10; }
+
+.hero .mask {
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: .3;
+  height: 100%;
+  width: 100%; }
 
 .hero.small {
   height: 450px; }

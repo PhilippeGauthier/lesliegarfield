@@ -10,6 +10,9 @@ fields:
       - http://localhost/~philippe/lesliegarfield/statamic/
   url:
     type: page_url
+  title:
+    type: text
+    display: Property Name
   datestamp:
     type: date
     hide: true
@@ -54,16 +57,16 @@ fields:
   featured:
     display: Featured Property?
     type: checkbox
-  openhouse_details:
-    type: text
-    display: Open House Details
-    instructions: "Enter details only such as "Tuesday, 9/6 10:00am - 1:00PM""
   streeteasy:
     display: Street Easy?
+    type: checkbox
+  openhouse:
+    display: Open House?
     type: checkbox
   openhouse_details:
     type: text
     display: Open House Details
+    instructions: "Enter details only such as "Tuesday, 9/6 10:00am - 1:00PM""
   agents:
     display: Agents
     type: suggest

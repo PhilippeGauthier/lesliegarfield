@@ -8,6 +8,9 @@ fields:
       - http://localhost/~philippe/lesliegarfield/statamic/
   url:
     type: page_url
+  title:
+    type: text
+    display: Property Name
   datestamp:
     type: date
     hide: true
@@ -49,11 +52,11 @@ fields:
   featured:
     display: Featured Property?
     type: checkbox
-  openhouse:
-    display: Open House?
-    type: checkbox
   streeteasy:
     display: Street Easy?
+    type: checkbox
+  openhouse:
+    display: Open House?
     type: checkbox
   openhouse_details:
     type: text

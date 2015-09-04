@@ -2,13 +2,11 @@
 		<h1>{{ tag_line }}</h1>
 		<h3>{{ sub_tag_line}}</h3>
 		<a href="{{ url }}properties" class="btn btn-garfield">VIEW PROPERTIES</a>
+		<div class="mask"></div>
 	</section>	
 
 	<section class="landing-sub-nav">
 		<div class="container">
-
-
-			<!-- <div class="grid-3 centered"> -->
 				<a href="{{ url }}company" class="grid-3 centered circle-nav">
 				<figure>
 					{{ theme:partial src="svg/home_glasses" }}
@@ -19,8 +17,6 @@
 					</figcaption>
 				</figure>
 				</a>
-			<!-- </div> -->
-			<!-- <div class="grid-3 centered"> -->
 				<a href="{{ url }}properties" class="grid-3 centered circle-nav">
 					<figure>
 						{{ theme:partial src="svg/home_building" }}
@@ -31,8 +27,6 @@
 						</figcaption>
 					</figure>
 				</a>
-			<!-- </div> -->
-			<!-- <div class="grid-3 centered"> -->
 				<a data-toggle="modal" data-target="#contact-modal" href="#" class="grid-3 centered circle-nav">
 					<figure>
 						{{ theme:partial src="svg/home_for_sale" }}
@@ -43,8 +37,6 @@
 						</figcaption>
 					</figure>
 				</a>
-			<!-- </div> -->
-			<!-- <div class="grid-3 centered"> -->
 				<a href="{{ url }}neighborhoods" class="grid-3 centered circle-nav">
 					<figure>
 						{{ theme:partial src="svg/home_neighborhood" }}
@@ -55,7 +47,6 @@
 						</figcaption>
 					</figure>
 				</a>
-			<!-- </div> -->
 		</div>
 	</section>
 	<section class="circle-icon light-gray-bg" id="featured-properties">
@@ -73,7 +64,7 @@
 	</section>
 	<section id="featured-properties" class="seafoam-bg">
 		<div class="circle-leader">
-			<div class="circle insights">
+			<div class="circle seafoam-bg">
 				{{ theme:partial src="svg/home_book" }}
 			</div>
 			<h4>LATEST NEWS &amp; INSIGHTS</h4>
