@@ -4611,12 +4611,6 @@ section.properties {
 section.leading {
   margin-top: 78px; }
 
-section h3:first-child {
-  text-align: center;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding-bottom: 30px; }
-
 .light-gray-bg {
   background-color: #ECEBEC; }
 
