@@ -26,3 +26,6 @@ fields:
         display: Longitude (should be similar to -73.969231)
         type: text
         width: 50%
+  description:
+    type: redactor
+    display: Description

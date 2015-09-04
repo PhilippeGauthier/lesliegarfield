@@ -102,14 +102,8 @@
 		.agent-properties {
 			padding: 30px;
 			margin-bottom: 60px;
-		}
-		.agent-property-carousel {
-			@include pre(1);
-			@include post(1);
-			a {
-				margin: 10px;
-				padding: 10px;
-			}
+			@include span(full no-gutter);
+			@include clearfix;
 		}
 		.recent-transactions {
 			div {

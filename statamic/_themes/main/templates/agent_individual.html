@@ -33,14 +33,12 @@
 				</div>
 			</div>
 			{{ endif }}
-			<div class="agent-properties background-gray">
-				<h1>Current Listings</h1>
-				<div class="agent-property-carousel">
 
-					{{ entries:listing folder="properties/*" conditions="agents:{url}" }}
-					{{ theme:partial src="property_tile" use_context="true" }}       
+				
+					{{ entries:listing folder="properties/*" conditions="agents:{url}" limit="1"}}
+						{{ theme:partial src="property_tile_agent" use_context="true" }}  
 					{{ /entries:listing }}
-				</div>
+				
 			</div>
 			{{ if transactions|not_empty }}
 			<div class="recent-transactions">

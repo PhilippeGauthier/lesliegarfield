@@ -1,12 +1,51 @@
 	<section class="hero small leading" style="background-image: url( {{ path src="{{ hero_image }}" }} );">
 		<h1>{{ title }}</h1>
 	</section>
-<section>
-<div class="container">
-	<div class="property_tile">
-		{{ entries:listing folder="properties/*" conditions="property_location:{title}"}}
+	<nav id="secondary-nav">
+	   <ul class="nav" role="tablist">
+      <li><a class="scroll" href="#description" >Description</a></li>
+      <li><a class="scroll" href="#location">Location</a></li>
+      <li><a class="scroll" href="#numbers">By the Numbers</a></li>
+      <li><a class="scroll" href="#other_properties">Properties</a></li>
+    </ul>
+    
+	</nav>
+	<section>
+	<a id="description" class="secondary-nav-link"></a>
+		<div class="container">
+			<h3>description</h3>
+			{{ description }}
+		</div>
+	</section>
+	<section>
+	<a id="location" class="secondary-nav-link"></a>
+		<div class="container">
+			<h3>location</h3>
+		</div>
+	</section>
+
+	<section>
+	<a id="numbers" class="secondary-nav-link"></a>
+		<div class="container">
+			<h3>numbers</h3>
+		</div>
+	</section>
+	<section class="dark-seafoam-bg">
+	<a id="other_properties" class="secondary-nav-link"></a>
+		<div class="container">
+			<h3>CURRENT PROPERTIES IN THIS NEIGHBORHOOD</h3>
+			{{ entries:listing folder="properties/*" conditions="property_location:{title}"}}
 			{{ theme:partial src="property_tile" use_context="true" }}
-		{{ /entries:listing }}
-	</div>
-</div>
+			{{ /entries:listing }}
+		</div>
+	</section>
+	<section id="other_neighborhoods" class="background-gray">
+		<div class="container">
+			<h3>Other Neighborhoods</h3>
+			<ul class="grid">
+			{{ entries:listing folder="neighborhoods/individual_neighborhoods" conditions="url:!{url}" }}	
+				{{ theme:partial src="neighborhood_tile" use_context="true" }}
+				{{ /entries:listing }}
+			</ul>
+		</div>
 	</section>

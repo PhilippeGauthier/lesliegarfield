@@ -18,12 +18,14 @@ var Bootstrap = require('./components/Bootstrap.js');
 // var Fotorama = require('./components/Fotorama.js');
 
 // Waypoints
-// var Waypoints = require('../../bower_components/waypoints/lib/jquery.waypoints.js');
-// var Waypoints_Sticky = require('../../bower_components/waypoints/lib/shortcuts/sticky.js');
-// var waypointInitialize = require('./components/waypointInitialize.js');
+var Waypoints = require('../../bower_components/waypoints/lib/jquery.waypoints.js');
+var Waypoints_Sticky = require('../../bower_components/waypoints/lib/shortcuts/sticky.js');
+var waypointInitialize = require('./components/waypointInitialize.js');
 
 // Sticky Kit
 var StickyKit = require('./components/StickyKit.js');
+
+var JqueryEasing = require('./components/JqueryEasing.js');
 
 // Custom JS
 var Custom = require('./components/Custom.js');

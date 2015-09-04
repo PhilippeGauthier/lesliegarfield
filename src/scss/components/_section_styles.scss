@@ -1,8 +1,5 @@
 .leading {
 	margin-top: 78px;
-	// &.properties_grid {
-	// 	margin-top: 199px;
-	// }
 }
 
 section {
@@ -13,6 +10,12 @@ section {
 	}
 	&.leading {
 		margin-top: 78px;
+	}
+	h3:first-child {
+		text-align: center;
+		font-weight: 700;
+		text-transform: uppercase;
+		padding-bottom: 30px;
 	}
 }
 
@@ -26,7 +29,6 @@ section {
 
 .leader {
 	padding-top: 80px;
-
 }
 
 .circle-leader {
@@ -51,11 +53,11 @@ section {
 				fill: $base-font-color;
 			}
 		}
-		// svg {
-		// 	height: 70px;
-		// 	width: 70px;
-		// }
-		// border: 2px solid $dark-gray;
-		// box-shadow: 0 0 0 10px $light-gray;
 	}
 }
+
+h3 {
+	font-family: $base-font-family;
+	font-size: 17px;
+}
+

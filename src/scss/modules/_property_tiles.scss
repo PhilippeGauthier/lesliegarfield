@@ -1,3 +1,15 @@
+			// .property_tile_1, .property_tile_2 {
+			// 	a {
+			// 		padding: 10px;
+			// 	}
+			// }
+
+			// .property_tile_2 {
+			// 	a {
+			// 		margin: 10px;
+			// 	}
+			// }
+
 .property_tile {
 	a {
 		padding: 10px;
@@ -5,9 +17,20 @@
 		position: relative;
 		@include clearfix;
 	}
-	&.slick-initialized {
-		a {
-			margin: 10px;
+	&.property_tile_1 {
+		@include pre(4);
+		@include span(4 of 12 no-gutter);
+		&.agent_tile {
+			@include pre(2);
+			@include span (8 of 12 no-gutter);
+		}
+	}
+	&.property_tile_2 {
+		@include pre(2);
+		@include span(8 of 12 no-gutter);
+		&.agent_tile {
+			@include pre(1);
+			@include span (10 of 12 no-gutter);
 		}
 	}
 }
