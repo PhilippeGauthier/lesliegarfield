@@ -98,9 +98,12 @@ $('.property_tile_3').slick({
   ]
 });
 
-
-
-
+$('.property-carousel').slick({
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  arrows: true
+});
 
 module.exports = slickInitialize;
 
