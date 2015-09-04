@@ -1,12 +1,14 @@
 // var Aside = $('aside');
-var secondaryNav = $('#secondary-nav');
 
+if ($('#secondary-nav').length) {
+	var secondaryNav = $('#secondary-nav');
+	var header = new Waypoint.Sticky({
+	  element: secondaryNav,
+	  wrapper: '<div class="sticky-wrapper" />',
+	  handler: function() {
+			
+	  },
+	  offset: 78
+	});
+}
 
-var header = new Waypoint.Sticky({
-  element: secondaryNav,
-  wrapper: '<div class="sticky-wrapper" />',
-  handler: function() {
-		
-  },
-  offset: 78
-});
