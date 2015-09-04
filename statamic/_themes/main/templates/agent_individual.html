@@ -35,7 +35,7 @@
 			{{ endif }}
 
 				
-					{{ entries:listing folder="properties/*" conditions="agents:{url}" limit="1"}}
+					{{ entries:listing folder="properties/*" conditions="agents:{url}" }}
 						{{ theme:partial src="property_tile_agent" use_context="true" }}  
 					{{ /entries:listing }}
 				
