@@ -5115,6 +5115,9 @@ h3 {
   font-family: "Copernicus-Bold";
   font-size: 22px; }
 
+.agent-individual aside h3 {
+  text-align: left; }
+
 .agent-individual aside svg {
   height: 25px;
   width: 25px;
