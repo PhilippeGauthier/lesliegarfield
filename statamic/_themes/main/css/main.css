@@ -4520,15 +4520,14 @@ nav#secondary-nav ul li.active a {
   top: -232px;
   visibility: hidden !important; }
 
-nav li a:hover, nav li a:focus, nav li a.active {
-  background-color: transparent;
+nav li a:hover, nav li a:focus, nav li a.current {
   color: #009880;
   box-shadow: 0px 3px 0px 0px; }
 
-nav li a:hover.muted, nav li a:hover.btn-contact, nav li a:focus.muted, nav li a:focus.btn-contact, nav li a.active.muted, nav li a.active.btn-contact {
+nav li a:hover.muted, nav li a:hover.btn-contact, nav li a:focus.muted, nav li a:focus.btn-contact, nav li a.current.muted, nav li a.current.btn-contact {
   box-shadow: 0px 0px 0px 0px; }
 
-nav li a.current.muted:hover {
+nav li .current.muted:hover {
   box-shadow: 0px 3px 0px 0px; }
 
 footer {

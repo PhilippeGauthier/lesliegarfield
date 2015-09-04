@@ -94,33 +94,29 @@ nav {
 			}
 			&.active {
 				background-color: $text-green;
-					&.muted {
-						background-color: #CCCCCC;
-					}
-				a {
-					
-					box-shadow: none;
-
+				&.muted {
+					background-color: #CCCCCC;
 				}
-
+				a {
+					box-shadow: none;
+				}
 			}
 		}
-
 	}
 }
 
 .secondary-nav-link {
-    display: block!important;
-    position: relative!important;
-    margin: 0!important;
-    padding: 0!important;
-    height: 0!important;
-    top: -232px;
-    visibility: hidden!important;
+	display: block!important;
+	position: relative!important;
+	margin: 0!important;
+	padding: 0!important;
+	height: 0!important;
+	top: -232px;
+	visibility: hidden!important;
 }
 
-nav li a:hover, nav li a:focus, nav li a.active {
-	background-color: transparent;
+nav li a:hover, nav li a:focus, nav li a.current {
+	// background-color: transparent;
 	color: $green;
 	box-shadow: 0px 3px 0px 0px;
 	&.muted, &.btn-contact {
@@ -128,6 +124,6 @@ nav li a:hover, nav li a:focus, nav li a.active {
 	}
 }
 
-nav li a.current.muted:hover {
+nav li .current.muted:hover {
 	box-shadow: 0px 3px 0px 0px;
 }
