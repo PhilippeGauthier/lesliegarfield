@@ -11,6 +11,10 @@ var _ = require('lodash');
 //    'value': 'sqft:ascend',
 //    'label': 'Square Feet - Lowest to Highest'
 //  },
+  // {
+  //   'value': 'datestamp:descend',
+  //   'label': 'Date Posted - Most Recent'
+  // }
 
 var sortOptions = [
   {
@@ -20,12 +24,9 @@ var sortOptions = [
   {
     'value': 'price:ascend',
     'label': 'Price - Lowest to Highest'
-  },  
-
-  {
-    'value': 'datestamp:descend',
-    'label': 'Date Posted - Most Recent'
   }
+
+
 ];
 
 var SortBar = React.createClass({
