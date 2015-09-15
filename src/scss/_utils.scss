@@ -17,6 +17,15 @@ $header-font-family-medium-italic: "Copernicus-MediumItalic";
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Copernicus-Bold';
+    src: url('../fonts/Copernicus-Bold.eot');
+    src: url('../fonts/Copernicus-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Copernicus-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 @font-face {
     font-family: 'Copernicus-Semibold';
@@ -64,6 +73,7 @@ $seafoam-bg: #F4FBF9;
 $dark-seafoam-bg: #e4f4f1;
 $red: #FF0000;
 $modal-text: #CCCCCC;
+$light-blue: #E6F1FA;
 
 
 // fonts

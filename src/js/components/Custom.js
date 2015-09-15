@@ -89,12 +89,12 @@ function currentRemove () {
 // }
 
 $('#primary-nav a').hover( currentAdd, currentRemove );
-// $('#secondary-nav li').hover( activeAdd, activeRemove );
 
-// $('#secondary-nav li').click(function() {
-// 	event.preventDefault()
-// 	$(this).removeClass('muted');
-// })
+$(document).ready(function() {
+	if ($('#secondary-nav').length) {
+		$('header').addClass('no-border');
+	}
+});
 
 // Smooth Scroll
 

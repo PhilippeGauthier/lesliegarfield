@@ -33,26 +33,15 @@
 				</div>
 			</div>
 			{{ endif }}
+				
+			{{ entries:listing folder="properties/*" conditions="agents:{url}" }}
+				{{ theme:partial src="property_tile_agent" use_context="true" }}  
+			{{ /entries:listing }}
+			
+			{{ entries:listing folder="properties/*" conditions="agents:{url}, sold:true" sort_by="sold_price" sort_dir="desc" }}
+			{{ theme:partial src="recent_transactions" use_context="true" }}
+			{{ /entries:listing }}
 
-				
-					{{ entries:listing folder="properties/*" conditions="agents:{url}" }}
-						{{ theme:partial src="property_tile_agent" use_context="true" }}  
-					{{ /entries:listing }}
-				
-			</div>
-			{{ if transactions|not_empty }}
-			<div class="recent-transactions">
-				<h1>Recent Transaction</h1>
-				<ul>
-				{{ transactions }}
-					<div>
-						<li>{{ transaction }}</li>
-						<li>{{ price }}</li>
-					</div>
-				{{ /transactions }}
-				</ul>
-			</div>
-			{{ endif }}
 		</main>
 
 	</div>

@@ -11,12 +11,38 @@ section {
 	&.leading {
 		margin-top: 78px;
 	}
+	&.services {
+		h2,h3 {
+			text-align: left;
+			font-size: 34px;
+			line-height: 50px;
+			text-transform: none;
+			margin: 0;
+		}
+		h2 {
+			font-family: $header-font-family;
+
+		}
+		h3 {
+			font-family: $header-font-family-book-italic;
+
+		}
+	}
 	// h3:first-child {
 	// 	text-align: center;
 	// 	font-weight: 700;
 	// 	text-transform: uppercase;
 	// 	padding-bottom: 30px;
 	// }
+}
+
+.content {
+	h3 {
+		text-transform: uppercase;
+		font-size: 17px;
+		font-family: $base-font-family;
+		text-align: center;
+	}
 }
 
 .light-gray-bg {
@@ -56,8 +82,4 @@ section {
 	}
 }
 
-h3 {
-	font-family: $base-font-family;
-	font-size: 17px;
-}
 

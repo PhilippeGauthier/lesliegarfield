@@ -80,10 +80,14 @@
 						{{ endif }}
 					</div>
 					<div class="open-house">
-						{{ if openhouse }}
-						  {{ if openhouse_details }}
-							<span>Open House: {{ openhouse_details }}</span>
-						  {{ endif }}
+						{{ if sold }}
+						<span>SOLD</span>
+						{{ elseif openhouse }}
+						{{ if openhouse_details }}
+						<span>Open House: {{ openhouse_details }}</span>
+						{{ else }}
+						<span>Open House: Enquire for Details</span>
+						{{ endif }}
 						{{ endif }}
 					</div>				
 				</div>
@@ -104,12 +108,12 @@
 							<li>Price</li>
 							{{ endif }}
 
-							{{ if build_date|not_empty }}
-							<li>Build Date</li>
-							{{ endif }}
-
 							{{ if plot|not_empty }}
 							<li>Plot</li>
+							{{ endif }}
+
+							{{ if building_size|not_empty }}
+							<li>Building Size</li>
 							{{ endif }}
 
 							{{ if stories|not_empty }}
@@ -118,6 +122,10 @@
 
 							{{ if sqft|not_empty }}
 							<li>Square Feet</li>
+							{{ endif }}
+
+							{{ if build_date|not_empty }}
+							<li>Build Date</li>
 							{{ endif }}
 
 							{{ if units|not_empty }}
@@ -144,6 +152,10 @@
 							<li>Taxes</li>
 							{{ endif }}
 
+							{{ if income|not_empty }}
+							<li>Income</li>
+							{{ endif }}
+
 							{{ if expenses|not_empty }}
 							<li>Expenses</li>
 							{{ endif }}
@@ -154,6 +166,7 @@
 							{{ if common_charges|not_empty }}
 							<li>Common Charges</li>
 							{{ endif }}
+
 							{{ if maintenance|not_empty }}
 							<li>Maintenance</li>
 							{{ endif }}
@@ -166,12 +179,12 @@
 							<li>${{ price|format_number }}</li>
 							{{ endif }}
 
-							{{ if build_date|not_empty }}
-							<li>{{ build_date }}</li>
-							{{ endif }}
-
 							{{ if plot|not_empty }}
 							<li>{{ plot }}</li>
+							{{ endif }}
+
+							{{ if building_size|not_empty }}
+							<li>{{ building_size }}</li>
 							{{ endif }}
 
 							{{ if stories|not_empty }}
@@ -180,6 +193,10 @@
 
 							{{ if sqft|not_empty }}
 							<li>{{ sqft|format_number }} ft<sup>2</sup></li>
+							{{ endif }}
+
+							{{ if build_date|not_empty }}
+							<li>{{ build_date }}</li>
 							{{ endif }}
 
 							{{ if units|not_empty }}
@@ -204,6 +221,10 @@
 
 							{{ if taxes|not_empty }}
 							<li>${{ taxes|format_number }}</li>
+							{{ endif }}
+
+							{{ if income|not_empty }}
+							<li>{{ income }}</li>
 							{{ endif }}
 
 							{{ if expenses|not_empty }}

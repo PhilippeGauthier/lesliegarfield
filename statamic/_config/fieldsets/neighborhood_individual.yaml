@@ -4,14 +4,15 @@ fields:
     type: file
     destination: assets/img/neighborhoods
     allowed: [png, gif, jpg, jpeg]
-	hero_image:
+  hero_image:
     display: Hero Image
     type: file
     destination: assets/img/neighborhoods
     allowed: [png, gif, jpg, jpeg]
-	description:
-		type: redactor
-		display: Intro Description
+  sub_headline:
+    type: text
+    display: Sub Headline
+    default: 'Expert views, opinions and thinking from the Garfield team.'
   lat_long:
     display: Property Coordinates
     type: grid

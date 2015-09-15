@@ -51,6 +51,9 @@ _taxonomy:
   - key_features
   - property_location
   - property_type
+  - property_location
+  - ownership_type
+  - services
 
 # Turns your slugs into pretty urls (spaces become "-" instead of %20)
 _taxonomy_slugify: false

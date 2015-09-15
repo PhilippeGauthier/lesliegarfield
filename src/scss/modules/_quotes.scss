@@ -1,0 +1,30 @@
+.quote, .person, .description {
+	text-align: center;
+}
+.person, .description {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.quote {
+		display: inline-block;
+		font-family: $header-font-family;
+		font-size: 18px;
+		line-height: 30px;
+		position: relative;
+		margin-bottom: 50px;
+	.quote-symbol {
+		position: absolute;
+		&.left {
+			left: -35px;
+		}
+		&.right {
+			right: -35px;
+		}
+	}
+}
+
+.person {
+	font-weight: 700;
+	text-transform: uppercase;
+}

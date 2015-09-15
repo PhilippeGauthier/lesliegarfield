@@ -103,6 +103,23 @@ body {
   margin-bottom: gutter(4); 
 }
 
+section.services {
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	main {
+		@include span(9 of 12);
+		* {
+			@include span(8 of 12);
+		}
+	}
+	aside {
+		@include span(last 3 of 12);
+	}
+}
+
 aside {
 	// @include span(3 of 12);
 	// margin-bottom: 70px;

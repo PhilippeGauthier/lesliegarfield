@@ -1,0 +1,73 @@
+fields:
+	hero_image:
+		type: file
+		destination: assets/img/
+		display: Hero Image
+		allowed: [jpeg, jpg, png]
+	individual_subheader:
+		type: text
+		display: Individuals & Families Subheader
+	individual_description:
+		type: redactor
+		display: Individuals & Families Description
+	individual_services:
+		type: grid
+		display: Individual Services
+		max_rows: 1
+		fields:
+			services:
+				type: suggest
+				display: Individual Services
+				create: true
+				taxonomy:
+					folder: services
+					type: services
+	individual_quote:
+		type: grid
+		display: Individuals Quote(s)
+		fields:
+			main:
+				type: text
+				display: Main Quote Line
+			person:
+				type: text
+				display: Person's Name
+				width: 15%
+			description:
+				type: text
+				display: Description of Quote
+	trust_subheader:
+		type: text
+		display: Trusts & Estates Subheader
+	trust_description:
+		type: redactor
+		display: Trusts & Estates Description
+	trist_services:
+		type: grid
+		display: Individual Services
+		max_rows: 1
+		fields:
+			services:
+				type: suggest
+				display: Individual Services
+				create: true
+				taxonomy:
+					folder: services
+					type: services
+	trust_quote:
+		type: grid
+		display: Trusts Quote(s)
+		fields:
+			main:
+				type: text
+				display: Main Quote Line
+			person:
+				type: text
+				display: Person's Name
+				width: 15%
+			description:
+				type: text
+				display: Description of Quote
+	content:
+		hide: true
+

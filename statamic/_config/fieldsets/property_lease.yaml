@@ -67,6 +67,14 @@ fields:
     type: text
     display: Open House Details
     instructions: "Enter details only such as "Tuesday, 9/6 10:00am - 1:00PM""
+  sold:
+    display: Sold?
+    type: checkbox
+  sold_details:
+    type: text
+    display: Sale Price
+    instructions:
+      above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
   agents:
     display: Agents
     type: suggest
@@ -83,9 +91,14 @@ fields:
     taxonomy:
       type: property_type
       folder: properties/*
-  build_date:
-    type: text
-    display: Build Date
+  ownership_type:
+    display: Ownership Type
+    type: suggest
+    create: true
+    max_items: 1
+    taxonomy:
+      type: ownership_type
+      folder: properties/*
   plot:
     type: text
     display: Plot

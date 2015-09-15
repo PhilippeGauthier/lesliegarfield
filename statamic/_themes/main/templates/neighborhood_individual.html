@@ -1,5 +1,6 @@
 	<section class="hero small leading" style="background-image: url( {{ path src="{{ hero_image }}" }} );">
 		<h1>{{ title }}</h1>
+		<!-- <h3>{{ sub_headline }}</h3> -->
 		<div class="mask"></div>
 	</section>
 	<nav id="secondary-nav">
@@ -11,27 +12,28 @@
     </ul>
     
 	</nav>
-	<section>
+	<section class="content">
 	<a id="description" class="secondary-nav-link"></a>
 		<div class="container">
 			<h3>description</h3>
 			{{ description }}
 		</div>
 	</section>
-	<section>
+	<section class="content neighborhood background-gray">
 	<a id="location" class="secondary-nav-link"></a>
 		<div class="container">
 			<h3>location</h3>
+			<div id="map"></div>
 		</div>
-	</section>
+	</section class="content">
 
-	<section>
+	<section class="content">
 	<a id="numbers" class="secondary-nav-link"></a>
 		<div class="container">
 			<h3>numbers</h3>
 		</div>
 	</section>
-	<section class="dark-seafoam-bg">
+	<section class="content dark-seafoam-bg">
 	<a id="other_properties" class="secondary-nav-link"></a>
 		<div class="container">
 			<h3>CURRENT PROPERTIES IN THIS NEIGHBORHOOD</h3>
@@ -40,7 +42,7 @@
 			{{ /entries:listing }}
 		</div>
 	</section>
-	<section id="other_neighborhoods" class="background-gray">
+	<section id="other_neighborhoods" class="content background-gray">
 		<div class="container">
 			<h3>Other Neighborhoods</h3>
 			<ul class="grid">

@@ -1,0 +1,12 @@
+.service-list {
+	* {
+		color: $text-green;
+	}
+	ul {
+		list-style-type: disc;
+		li {
+			display: list-item;
+			margin-left: 15px;
+		}
+	}
+}

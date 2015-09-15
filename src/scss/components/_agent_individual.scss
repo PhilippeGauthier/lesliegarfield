@@ -109,14 +109,27 @@
 			@include clearfix;
 		}
 		.recent-transactions {
-			div {
-				border-top: 1px solid $dark-gray;
+			@include span(full no-gutter);
+			@include clearfix;
+			h1 {
+				margin-bottom: 30px;
+			}
+			ul {
+				@include clearfix;
+				border-bottom: 1px solid lighten($dark-gray, 50%);
+			}
+			h3 {
+				font-family: $header-font-bold;
+				font-size: 16px;
 			}
 			li {
+				@include gallery(1 of 2);
 				padding: 20px 0;
+				font-family: $header-font-medium;
+				font-size: 16px;
 			}
-			ul li:last-of-type {
-				float: right;
+			li:nth-child(2n + 2) {
+				text-align: right;
 			}
 		}
 	}
