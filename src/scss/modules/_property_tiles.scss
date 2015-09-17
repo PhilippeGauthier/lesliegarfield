@@ -10,28 +10,29 @@
 			// 	}
 			// }
 
-.property_tile {
+.carousel_tile {
 	a {
 		padding: 10px;
 		margin: 10px;
 		position: relative;
 		@include clearfix;
 	}
-	&.property_tile_1 {
-		@include pre(4);
-		@include span(4 of 12 no-gutter);
-		&.agent_tile {
-			@include pre(2);
-			@include span (8 of 12 no-gutter);
-		}
-	}
-	&.property_tile_2 {
+}
+
+.carousel_tile_1 {
+	@include pre(4);
+	@include span(4 of 12 no-gutter);
+	&.agent_tile {
 		@include pre(2);
-		@include span(8 of 12 no-gutter);
-		&.agent_tile {
-			@include pre(1);
-			@include span (10 of 12 no-gutter);
-		}
+		@include span (8 of 12 no-gutter);
+	}
+}
+.carousel_tile_2 {
+	@include pre(2);
+	@include span(8 of 12 no-gutter);
+	&.main_tile {
+		@include pre(.75);
+		@include span (10.5 of 12 no-gutter);
 	}
 }
 

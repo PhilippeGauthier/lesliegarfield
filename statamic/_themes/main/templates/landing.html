@@ -57,7 +57,7 @@
 			<h4>FEATURED PROPERTIES</h4>
 		</div>
 		<div class="container">
-					{{ entries:listing folder="properties/sale" conditions="featured" }}
+					{{ entries:listing folder="properties/sale|properties/lease" conditions="featured" }}
 						{{ theme:partial src="property_tile" use_context="true" }}
 					{{ /entries:listing }}
 		</div>
@@ -72,6 +72,13 @@
 
 		</div>
 		<div class="container">
+			<div class="grid-4 centered">
+				<a data-toggle="modal" data-target="#contact-modal" href="#" class="insight-tile">
+					<h2>Get a Valuation</h2>
+					<p>Make a more informed decision about your property with a Garfield Valuation. Make a more informed decision about your property with a Garfield Valuation</p>
+					<span>GET IN CONTACT ></span>
+				</a>
+			</div>
 		{{ insights }}
 			<div class="grid-4 centered">
 				<a href="{{ link }}" class="insight-tile">

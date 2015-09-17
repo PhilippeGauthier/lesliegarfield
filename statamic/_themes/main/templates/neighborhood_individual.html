@@ -37,7 +37,7 @@
 	<a id="other_properties" class="secondary-nav-link"></a>
 		<div class="container">
 			<h3>CURRENT PROPERTIES IN THIS NEIGHBORHOOD</h3>
-			{{ entries:listing folder="properties/*" conditions="property_location:{title}"}}
+			{{ entries:listing folder="properties/sale|properties/lease" conditions="property_location:{title}"}}
 			{{ theme:partial src="property_tile" use_context="true" }}
 			{{ /entries:listing }}
 		</div>

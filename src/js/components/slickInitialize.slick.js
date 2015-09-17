@@ -1,6 +1,6 @@
 var slickInitialize = 
 
-$('.property_tile_1').slick({
+$('.carousel_tile_1').slick({
   infinite: true,
   speed: 300,
   slidesToShow: 1,
@@ -33,7 +33,7 @@ $('.property_tile_1').slick({
   ]
 });
 
-$('.property_tile_2').slick({
+$('.carousel_tile_2').slick({
   infinite: true,
   speed: 300,
   slidesToShow: 2,
@@ -66,7 +66,7 @@ $('.property_tile_2').slick({
   ]
 });
 
-$('.property_tile_3').slick({
+$('.carousel_tile_3').slick({
   infinite: true,
   speed: 300,
   slidesToShow: 3,

@@ -5267,37 +5267,9 @@ section.services h3 {
   clear: both; }
 
 .agent-individual main .green-specs .press-item {
-  box-sizing: border-box;
-  width: 50%;
-  float: left;
-  padding-left: 5%;
-  padding-right: 5%; }
-
-.agent-individual main .green-specs .press-item:nth-child(2n + 1) {
-  margin-left: 0;
-  margin-right: -100%;
-  clear: both; }
-
-.agent-individual main .green-specs .press-item:nth-child(2n + 2) {
-  margin-left: 50%;
-  margin-right: -100%;
-  clear: none; }
-
-.agent-individual main .green-specs .press-item:before, .agent-individual main .green-specs .press-item:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.agent-individual main .green-specs .press-item p {
-  padding-top: 5%;
-  padding-bottom: 5%;
   display: block;
-  margin-bottom: 0; }
-
-.agent-individual main .green-specs .press-item p:before, .agent-individual main .green-specs .press-item p:after {
-  content: "";
-  display: table;
-  clear: both; }
+  margin: 0;
+  background-color: #fff; }
 
 .agent-individual main .green-specs .press-item:first-of-type {
   border-right: 1px solid #009B77; }
@@ -5383,6 +5355,21 @@ section.services h3 {
 .green-specs * {
   color: #009B77; }
 
+.green-specs .title {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 20px; }
+
+.green-specs .title h3, .green-specs .title svg {
+  display: inline-block; }
+
+.green-specs .title h3 {
+  margin: 0; }
+
 .green-specs li {
   display: block; }
 
@@ -5416,8 +5403,7 @@ section.services h3 {
   margin-right: 10px; }
 
 .green-specs h3 {
-  margin-top: 0;
-  vertical-align: top; }
+  margin-top: 0; }
 
 .slick-list *:focus {
   outline: none; }
@@ -5798,38 +5784,38 @@ section.services h3 {
   max-height: 300px;
   margin-bottom: 10px; }
 
-.property_tile a {
+.carousel_tile a {
   padding: 10px;
   margin: 10px;
   position: relative; }
 
-.property_tile a:before, .property_tile a:after {
+.carousel_tile a:before, .carousel_tile a:after {
   content: "";
   display: table;
   clear: both; }
 
-.property_tile.property_tile_1 {
+.carousel_tile_1 {
   margin-left: 33.33333%;
   box-sizing: border-box;
   width: 33.33333%;
   float: left; }
 
-.property_tile.property_tile_1.agent_tile {
+.carousel_tile_1.agent_tile {
   margin-left: 16.66667%;
   box-sizing: border-box;
   width: 66.66667%;
   float: left; }
 
-.property_tile.property_tile_2 {
+.carousel_tile_2 {
   margin-left: 16.66667%;
   box-sizing: border-box;
   width: 66.66667%;
   float: left; }
 
-.property_tile.property_tile_2.agent_tile {
-  margin-left: 8.33333%;
+.carousel_tile_2.main_tile {
+  margin-left: 6.25%;
   box-sizing: border-box;
-  width: 83.33333%;
+  width: 87.5%;
   float: left; }
 
 .property_box {

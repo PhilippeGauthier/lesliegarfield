@@ -34,13 +34,3 @@ fields:
 			link:
 				type: text
 				display: Press Link
-	transactions:
-		type: grid
-		display: Recent transactions
-		fields:
-			transaction:
-				type: text
-				display: Property Name
-			price:
-				type: text
-				display: Price

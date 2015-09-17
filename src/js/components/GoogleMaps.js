@@ -189,6 +189,7 @@ var customMapTypeId = 'custom_style';
 
 var map = new google.maps.Map(document.getElementById('map'), {
 	zoom: 16,
+    scrollwheel: false,
     center: {lat: 40.779941, lng: -73.9529656},  // Brooklyn.
     mapTypeControlOptions: {
     	mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]

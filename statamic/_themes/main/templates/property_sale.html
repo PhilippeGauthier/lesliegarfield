@@ -102,7 +102,11 @@
 
 				<div class="green-specs">
 					<div class="specs">
-						<h3>{{ theme:partial src="svg/glasses" }}SPECIFICATIONS</h3>
+					<div class="title">
+						{{ theme:partial src="svg/glasses" }}
+						<h3>SPECIFICATIONS</h3>
+					</div>
+						
 						<ul>
 							{{ if price|not_empty }}
 							<li>Price</li>
@@ -246,11 +250,18 @@
 						</ul>
 					</div>
 					<div class="location_features">
-						<h3>{{ theme:partial src="svg/maps" }}LOCATION</h3>
+						<div class="title">
+							{{ theme:partial src="svg/maps" }}
+							<h3>LOCATION</h3>
+						</div>
 						<ul>
 							<li>{{ location_granular }}</li>
 						</ul>
-						<h3>{{ theme:partial src="svg/stars" }}KEY FEATURES</h3>
+						<div class="title">
+							{{ theme:partial src="svg/stars" }}
+							<h3>KEY FEATURES</h3>
+						</div>
+						
 						<ul>
 							{{ key_features }}
 							<li>{{ value }}</li>
