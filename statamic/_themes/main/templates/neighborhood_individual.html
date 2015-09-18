@@ -60,7 +60,7 @@
 				</div>
 			{{ theme:partial src="svg/price_tag" }}
 			</div>
-				<span class="price-descriptor">{{ bottom }}</span>
+				<span class="price-descriptor">{{ bottom|upper }}</span>
 		
 		{{ endif }}
 		{{ /price_tag }}
@@ -76,7 +76,7 @@
 				</h1>
 
 			</div>
-				<span class="price-descriptor">{{ bottom }}</span>
+				<span class="price-descriptor">{{ bottom|upper }}</span>
 		
 		{{ endif }}
 		{{ /simple_graphic }}
