@@ -5,6 +5,7 @@ $base-font-family: Arial, "Lucida Grande", sans-serif;
 $header-font-medium: "Copernicus-Medium";
 $header-font-family: "Copernicus-Semibold";
 $header-font-bold: "Copernicus-Bold";
+$header-font-extra-bold: "Copernicus-ExtraBold";
 $header-font-family-book-italic: "Copernicus-BookItalic";
 $header-font-family-medium-italic: "Copernicus-MediumItalic";
 
@@ -41,6 +42,15 @@ $header-font-family-medium-italic: "Copernicus-MediumItalic";
     src: url('../fonts/Copernicus-BookItalic.eot');
     src: url('../fonts/Copernicus-BookItalic.eot?#iefix') format('embedded-opentype'),
          url('../fonts/Copernicus-BookItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Copernicus-Extrabold';
+    src: url('../fonts/Copernicus-Extrabold.eot');
+    src: url('../fonts/Copernicus-Extrabold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Copernicus-Extrabold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

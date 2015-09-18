@@ -30,7 +30,61 @@
 	<section class="content">
 	<a id="numbers" class="secondary-nav-link"></a>
 		<div class="container">
-			<h3>numbers</h3>
+			<h3>by the numbers</h3>
+<div class="grid numbers">
+	<div class="grid-6 full">
+		<h1>{{ left }}</h1>
+		<h3>{{ left_description|upper }}</h3>
+		{{ theme:partial src="svg/graph" }}
+	</div>
+	<div class="grid-6">
+
+		<div class="half">
+
+			<div class="descriptor">
+				<span class="price">${{ right_top|format_number }}*</span>
+			</div>
+			{{ theme:partial src="svg/diamond" }}
+
+		</div>
+			<span class="price-descriptor">AVERAGE PRICE PER SQ/ FT</span>
+		<div class="divider"></div>
+		{{ if price_tag }}
+		{{ price_tag }}
+		{{ if top === "" }}
+		{{ else }}
+		
+			<div class="half">
+				<div class="descriptor">
+					<span class="price tilted">${{ top }}*</span>
+				</div>
+			{{ theme:partial src="svg/price_tag" }}
+			</div>
+				<span class="price-descriptor">{{ bottom }}</span>
+		
+		{{ endif }}
+		{{ /price_tag }}
+		{{ endif }}
+
+		{{ if simple_graphic }}
+		{{ simple_graphic }}
+		{{ if top === "" }}
+		{{ else }}
+			<div class="half">
+				<h1 class="large">
+					{{ top }}
+				</h1>
+
+			</div>
+				<span class="price-descriptor">{{ bottom }}</span>
+		
+		{{ endif }}
+		{{ /simple_graphic }}
+		{{ endif }}
+
+	</div>
+</div>
+
 		</div>
 	</section>
 	<section class="content dark-seafoam-bg">

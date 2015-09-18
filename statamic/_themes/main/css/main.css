@@ -1225,6 +1225,13 @@ th {
   font-style: normal; }
 
 @font-face {
+  font-family: 'Copernicus-Extrabold';
+  src: url("../fonts/Copernicus-Extrabold.eot");
+  src: url("../fonts/Copernicus-Extrabold.eot?#iefix") format("embedded-opentype"), url("../fonts/Copernicus-Extrabold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
   font-family: 'Copernicus-MediumItalic';
   src: url("../fonts/Copernicus-MediumItalic.eot");
   src: url("../fonts/Copernicus-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Copernicus-MediumItalic.woff") format("woff");
@@ -1355,8 +1362,25 @@ head:hover ~ body .container:before {
   -ms-flex: 1;
   flex: 1; }
 
-.grid-3 *, .grid-4 * {
+.grid-3 *, .grid-4 *, .grid-6 * {
   outline: none; }
+
+.grid-6 {
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%; }
+
+.grid-6:nth-child(2n + 1) {
+  margin-left: 0;
+  margin-right: -100%;
+  clear: both; }
+
+.grid-6:nth-child(2n + 2) {
+  margin-left: 50%;
+  margin-right: -100%;
+  clear: none; }
 
 .grid-3 {
   box-sizing: border-box;
@@ -4691,7 +4715,8 @@ section.services h3 {
   text-transform: uppercase;
   font-size: 17px;
   font-family: Arial, "Lucida Grande", sans-serif;
-  text-align: center; }
+  text-align: center;
+  font-weight: 700; }
 
 .light-gray-bg {
   background-color: #ECEBEC; }
@@ -5497,6 +5522,90 @@ section.services h3 {
 .property-carousel
 .slick-next:before {
   margin-right: -30px; }
+
+.numbers {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #25282A; }
+
+.numbers h1, .numbers h3 {
+  font-family: "Copernicus-ExtraBold";
+  text-align: center; }
+
+.numbers h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 127px; }
+
+.numbers h3 {
+  margin: 0;
+  font-size: 23px;
+  line-height: 27px;
+  padding: 0 20px; }
+
+.numbers svg {
+  width: 100%; }
+
+.numbers .full {
+  border-right: 1px solid #25282A;
+  padding: 0 60px; }
+
+.numbers .half {
+  margin-left: 18.18182%;
+  margin-right: 18.18182%;
+  position: relative; }
+
+.numbers .half .descriptor {
+  position: absolute;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap; }
+
+.numbers .half .price {
+  font-family: "Copernicus-Medium";
+  font-size: 56px;
+  line-height: 66px; }
+
+.numbers .half .price.tilted {
+  -webkit-transform: rotate(-22deg);
+  transform: rotate(-22deg);
+  color: white;
+  margin-right: 120px;
+  font-size: 40px; }
+
+.numbers .half h1 {
+  font-family: "Copernicus-Medium";
+  font-weight: 100; }
+
+.numbers .price-descriptor {
+  font-family: "Copernicus-Bold";
+  font-size: 13px;
+  display: block;
+  text-align: center; }
+
+.numbers .price-descriptor .first-letter {
+  font-family: "Copernicus-Bold";
+  font-size: 17px; }
+
+.numbers .divider {
+  margin-left: 15.38462%;
+  margin-right: 15.38462%;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 1px;
+  background-color: #25282A; }
 
 .hero {
   height: 600px;

@@ -73,10 +73,14 @@ body {
 	flex: 1;
 }
 
-.grid-3, .grid-4 {
+.grid-3, .grid-4, .grid-6 {
 	* {
 		outline: none;
 	}
+}
+
+.grid-6 {
+	@include gallery (6 of 12);
 }
 
 .grid-3 {

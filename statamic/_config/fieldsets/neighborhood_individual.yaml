@@ -27,6 +27,42 @@ fields:
         display: Longitude (should be similar to -73.969231)
         type: text
         width: 50%
+  left:
+    type: text
+    display: Number for left column (include $ or % symbol)
+  left_description:
+    type: text
+    display: Descriptive text below number (will be transformed to uppercase)
+    default: rise in property prices in last five years
+  right_top:
+    type: text
+    display: Average Price Per Square Foot (Number only, no symbols or commas)
+  price_tag:
+    type: grid
+    display: Price Tag Graphic (Use this OR Generic Number Sold Info, defaults to Price tag if both filled out)
+    max_rows: 1
+    fields:
+      top:
+        type: text
+        display: Price Tag Text (full text minus the * symbol, such as 13.03M)
+        width: 50%
+      bottom:
+        type: text
+        display: Bottom Text
+        default: AVERAGE SALE PRICE
+  simple_graphic:
+    type: grid
+    display: Simple Number and Description Text
+    max_rows: 1
+    fields:
+      top:
+        type: text
+        display: Top Text, likely just a number
+        width: 50%
+      bottom:
+        type: text
+        display: Bottom text, no more than one sentence
+        default: TOWNHOUSES SOLD IN THE LAST YEAR
   description:
     type: redactor
     display: Description

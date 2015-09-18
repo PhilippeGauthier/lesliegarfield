@@ -121,6 +121,39 @@ $(function(){
   });
 });
 
+// First Letter Hack for Neighborhood Pricing Titles
+    $(document).ready(function()
+    {
+        // For each of the eachword class
+        $(".price-descriptor").each(function()
+        {
+            // Get the string (html) and split it by " " (like PHP's explode)
+            var self         = $(this);
+            var theText      = self.html();
+            var theTextArray = theText.split(" ");
+            
+            // Cycle them
+            for( var i=0; i<theTextArray.length; i++ )
+            {
+                // Get this particular word and split it into individual letters
+                var thisWord      = theTextArray[i];
+                var thisWordArray = thisWord.split("");
 
+                // Wrap the first letter
+                if( thisWordArray[0] != "&" )
+                {
+                    thisWordArray[0]  = "<span class='first-letter'>"+thisWordArray[0]+"</span>";
+                }
 
+                // Stitch the letters back up
+                theTextArray[i] = thisWordArray.join("");
+            }
+
+            // Join the original string back up
+            var result = theTextArray.join(" ");
+
+            self.html( result );
+        });
+
+    });
 
