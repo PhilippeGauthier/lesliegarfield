@@ -1,0 +1,74 @@
+.numbers {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	border-bottom: 1px solid $dark-gray;
+	h1,h3 {
+		font-family: $header-font-extra-bold;
+		text-align: center;
+	}
+	h1 {
+		margin: 0;
+		font-weight: 700;
+		font-size: 127px;
+	}
+	h3 {
+		margin: 0;
+		font-size: 23px;
+		line-height: 27px;
+		padding: 0 20px;
+	}
+	svg {
+		width: 100%;
+	}
+	.full {
+		border-right: 1px solid $dark-gray;
+		padding: 0 60px;
+
+	}
+	.half {
+		@include gutters(.55 split);
+		position: relative;
+		.descriptor {
+			position: absolute;
+			display: flex;
+			height: 100%;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+			flex-flow: column nowrap;
+		}
+		.price {
+			font-family: $header-font-medium;
+			font-size: 56px;
+			line-height: 66px;
+			&.tilted {
+				transform: rotate(-22deg);
+				color: white;
+				margin-right: 120px;
+				font-size: 40px;
+			}
+		}
+		h1 {
+			font-family: $header-font-medium;
+			font-weight: 100;
+		}
+	}
+		.price-descriptor {
+			font-family: $header-font-bold;
+			font-size: 13px;
+			display: block;
+			text-align: center;
+			.first-letter {
+				font-family: $header-font-bold;
+				font-size: 17px;
+			}
+		}
+	.divider {
+		@include gutters(.65 split);
+		position: relative;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		height: 1px;
+		background-color: $dark-gray;
+	}
+}
