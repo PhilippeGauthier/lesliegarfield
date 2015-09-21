@@ -61,15 +61,15 @@
 			margin-top: 0;
 			margin-bottom: 60px;
 		}
-		p:first-of-type {
+		p:first-of-type, span:first-of-type {
 			margin-top: 0;
 		}
-		p:last-of-type {
+		p:last-of-type, span:last-of-type {
 			margin-bottom: 0;
 		}
-		p {
+		p, span {
 			font-family: $header-font-medium;
-			line-height: 28px;
+			line-height: 26px;
 		}
 		.green-specs {
 			margin-bottom: 60px;

@@ -5293,15 +5293,15 @@ section.services h3 {
   margin-top: 0;
   margin-bottom: 60px; }
 
-.agent-individual main p:first-of-type {
+.agent-individual main p:first-of-type, .agent-individual main span:first-of-type {
   margin-top: 0; }
 
-.agent-individual main p:last-of-type {
+.agent-individual main p:last-of-type, .agent-individual main span:last-of-type {
   margin-bottom: 0; }
 
-.agent-individual main p {
+.agent-individual main p, .agent-individual main span {
   font-family: "Copernicus-Medium";
-  line-height: 28px; }
+  line-height: 26px; }
 
 .agent-individual main .green-specs {
   margin-bottom: 60px; }
