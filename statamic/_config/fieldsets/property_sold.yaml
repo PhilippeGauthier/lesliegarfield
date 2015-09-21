@@ -37,7 +37,7 @@ fields:
     max_items: 1
     taxonomy:
       type: property_type
-      folder: properties
+      folder: properties/*
 
 
 
