@@ -70,7 +70,7 @@ fields:
   sold:
     display: Sold?
     type: checkbox
-  sold_details:
+  sold_price:
     type: text
     display: Sale Price
     instructions:

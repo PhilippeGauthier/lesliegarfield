@@ -1,0 +1,40 @@
+fields:
+  title:
+    type: text
+    display: Property Name
+  property_location:
+    type: suggest
+    create: true
+    max_items: 1
+    options:
+      - East Village
+      - Greenwich Village
+      - Harlem
+      - Midtown East
+      - Midtown West
+      - Upper East Side
+      - Upper West Side
+  sold:
+    hide: true
+    default: true
+  sold_price:
+      type: text
+      display: Sale Price
+      instructions:
+        above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
+  agents:
+    display: Agents
+    type: suggest
+    create: true
+    content:
+      folder: agents
+      label: title
+      value: url
+  property_type:
+    display: Property Type
+    type: suggest
+    create: true
+    max_items: 1
+    taxonomy:
+      type: property_type
+      folder: properties/*

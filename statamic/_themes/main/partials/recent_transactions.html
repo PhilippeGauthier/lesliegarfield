@@ -9,14 +9,23 @@
 		<h3>Property Name</h3>
 	</li>
 	<li>
+		<h3>Property Type</h3>
+	</li>
+	<li>
+		<h3>Neighborhood</h3>
+	</li>
+	<li>
 		<h3>Price</h3>
 	</li>
+
 	</ul>
 	{{ endif }}
 	
 	<ul>
-	<li>{{ title }}</li>
-	<li>
+	<li class="transaction-details">{{ title }}</li>
+	<li class="transaction-details">{{ property_type }}</li>
+	<li class="transaction-details">{{ property_location }}</li>
+	<li class="transaction-details">
 	{{ if sold_price|not_empty }}
 	${{ sold_price|format_number }}
 	{{ else }}

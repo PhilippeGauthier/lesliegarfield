@@ -111,20 +111,25 @@
 			ul {
 				@include clearfix;
 				border-bottom: 1px solid lighten($dark-gray, 50%);
+				// display: flex;
 			}
 			h3 {
 				font-family: $header-font-bold;
 				font-size: 16px;
 			}
 			li {
-				@include gallery(1 of 2);
+				@include gallery(1 of 4);
 				padding: 20px 0;
 				font-family: $header-font-medium;
 				font-size: 16px;
+				text-align: left;
+				&.transaction-details {
+					font-size: 14px;
+				}
 			}
-			li:nth-child(2n + 2) {
-				text-align: right;
-			}
+			// li:nth-child(4n + 3),li:nth-child(4n + 4)  {
+			// 	text-align: right;
+			// }
 		}
 	}
 }
