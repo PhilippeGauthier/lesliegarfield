@@ -1637,7 +1637,8 @@ p {
 
 .large-body h3 {
   margin-top: 0;
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  display: block; }
 
 .large-body p {
   font-size: 25px;
