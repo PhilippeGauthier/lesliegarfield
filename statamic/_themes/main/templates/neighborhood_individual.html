@@ -34,8 +34,8 @@
 			<h3>by the numbers</h3>
 <div class="grid numbers">
 	<div class="grid-6 full">
-		<h1>{{ left }}</h1>
-		<h3>{{ left_description|upper }}</h3>
+		<h1>{{ left }}%</h1>
+		<h3>RISE IN PROPERTY PRICES IN THE LAST FIVE YEARS</h3>
 		{{ theme:partial src="svg/graph" }}
 	</div>
 	<div class="grid-6">
@@ -50,38 +50,24 @@
 		</div>
 			<span class="price-descriptor">AVERAGE PRICE PER SQ/ FT</span>
 		<div class="divider"></div>
-		{{ if price_tag }}
-		{{ price_tag }}
-		{{ if top === "" }}
-		{{ else }}
-		
-			<div class="half">
-				<div class="descriptor">
-					<span class="price tilted">${{ top }}*</span>
+		{{ right_bottom }}
+			{{ if price_tag }}
+				<div class="half">
+					<div class="descriptor">
+						<span class="price tilted">${{ price_tag }}*</span>
+					</div>
+				{{ theme:partial src="svg/price_tag" }}
 				</div>
-			{{ theme:partial src="svg/price_tag" }}
-			</div>
-				<span class="price-descriptor">{{ bottom|upper }}</span>
-		
-		{{ endif }}
-		{{ /price_tag }}
-		{{ endif }}
-
-		{{ if simple_graphic }}
-		{{ simple_graphic }}
-		{{ if top === "" }}
-		{{ else }}
+				<span class="price-descriptor">AVERAGE SALE PRICE</span>
+			{{ elseif simple_graphic }}
 			<div class="half">
 				<h1 class="large">
-					{{ top }}
+					{{ simple_graphic }}
 				</h1>
-
 			</div>
-				<span class="price-descriptor">{{ bottom|upper }}</span>
-		
-		{{ endif }}
-		{{ /simple_graphic }}
-		{{ endif }}
+				<span class="price-descriptor">TOWNHOUSES SOLD IN THE LAST YEAR</span>
+			{{ endif }}
+		{{ /right_bottom }}
 
 	</div>
 </div>
