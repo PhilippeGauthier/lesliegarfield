@@ -5324,8 +5324,11 @@ section.services h3 {
 .agent-individual main .green-specs .press-item:first-of-type {
   border-right: 1px solid #009B77; }
 
-.agent-individual main .green-specs .press-item p {
+.agent-individual main .green-specs .press-item p, .agent-individual main .green-specs .press-item img {
   text-align: center; }
+
+.agent-individual main .green-specs .press-item p {
+  font-size: 14px; }
 
 .agent-individual main .agent-properties {
   padding: 30px;
@@ -5371,6 +5374,7 @@ section.services h3 {
   padding-left: 2.5%;
   padding-right: 2.5%;
   padding: 20px 0;
+  padding-right: 5px;
   font-family: "Copernicus-Medium";
   font-size: 16px;
   text-align: left; }

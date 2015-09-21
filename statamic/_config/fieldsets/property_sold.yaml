@@ -8,14 +8,9 @@ fields:
     type: suggest
     create: true
     max_items: 1
-    options:
-      - East Village
-      - Greenwich Village
-      - Harlem
-      - Midtown East
-      - Midtown West
-      - Upper East Side
-      - Upper West Side
+    taxonomy:
+      type: property_location
+      folder: properties/*
   sold:
     default: true
     hide: true
@@ -42,7 +37,7 @@ fields:
     max_items: 1
     taxonomy:
       type: property_type
-      folder: properties/*
+      folder: properties
 
 
 
