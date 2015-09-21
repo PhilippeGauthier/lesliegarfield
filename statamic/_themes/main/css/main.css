@@ -1635,12 +1635,12 @@ p {
   font-size: 16px;
   line-height: 26px; }
 
-.large-body h3 {
+.container.large-body h3 {
   margin-top: 0;
   margin-bottom: 60px;
   display: block; }
 
-.large-body p {
+.container.large-body p {
   font-size: 25px;
   line-height: 40px;
   margin-top: 0; }
