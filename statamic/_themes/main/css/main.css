@@ -4696,7 +4696,8 @@ footer .footer-divider p {
 
 .neighborhood #map {
   width: 100%;
-  height: 800px; }
+  height: 800px;
+  margin-top: 60px; }
 
 .leading {
   margin-top: 78px; }
