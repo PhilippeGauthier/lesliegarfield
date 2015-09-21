@@ -14,14 +14,14 @@ fields:
       - Midtown West
       - Upper East Side
       - Upper West Side
-  sold:
-    hide: true
-    default: true
-  sold_price:
-      type: text
-      display: Sale Price
-      instructions:
-        above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
+  leased:
+    display: Leased?
+    type: checkbox
+  lease_price:
+    type: text
+    display: Lease Price
+    instructions:
+      above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
   agents:
     display: Agents
     type: suggest

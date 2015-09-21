@@ -26,8 +26,15 @@ var Listing = React.createClass({
       backgroundImage: 'url(' + listing.preview_image + ')'
     };
     if (listing.openhouse == 1) {
-      listing.openhouse = 'Open House';
+      listing.bottom_info = 'Open House';
     }
+    if (listing.sold ==1) {
+      listing.bottom_info = 'Sold';
+    }
+    if (listing.leased ==1) {
+      listing.bottom_info = 'Leased';
+    }
+
     return (
       <li className='grid-item property_tile'>
         <a href={listingURL} className='property_box'>
@@ -48,7 +55,7 @@ var Listing = React.createClass({
               <h4>{listing.property_location}</h4>
             </div>
             <div className='bottom-info'>
-              <p>{listing.openhouse}</p>
+              <p>{listing.bottom_info}</p>
             </div>
           </div>
         </a>

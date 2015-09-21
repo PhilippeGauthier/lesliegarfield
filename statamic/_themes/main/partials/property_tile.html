@@ -1,6 +1,7 @@
 {{ if no_results }}
 {{ else }}
 {{ if first }}
+<div class="tile-container">
 {{ if total_results == 1}}
 <div class="carousel_tile carousel_tile_1">
 {{ elseif total_results ==2 }}
@@ -32,12 +33,15 @@
 				</p>
 				{{ elseif sold }}
 				<p>Sold</p>
+				{{ elseif leased }}
+				<p>Leased</p>
 				{{ endif }}
 			</div>
 		</div>
 	</a >
 </div>
 {{ if last }}
+</div>
 </div>
 {{ endif }}
 {{ endif }}

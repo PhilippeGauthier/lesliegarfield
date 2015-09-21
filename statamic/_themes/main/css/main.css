@@ -1435,6 +1435,9 @@ head:hover ~ body .container:before {
   position: fixed;
   top: 0; }
 
+.grid {
+  padding-top: 60px; }
+
 .grid:before, .grid:after {
   content: "";
   display: table;
@@ -1631,6 +1634,15 @@ p {
   font-family: "Copernicus-Medium";
   font-size: 16px;
   line-height: 26px; }
+
+.large-body h3 {
+  margin-top: 0;
+  margin-bottom: 60px; }
+
+.large-body p {
+  font-size: 25px;
+  line-height: 40px;
+  margin-top: 0; }
 
 /* Slider */
 .slick-slider {
@@ -4689,11 +4701,11 @@ footer .footer-divider p {
   margin-top: 78px; }
 
 section {
-  padding: 100px 0;
+  padding: 60px 0;
   position: relative; }
 
 section.properties {
-  padding: 60px 0 100px; }
+  padding: 0px 0 100px; }
 
 section.leading {
   margin-top: 78px; }
@@ -4716,7 +4728,8 @@ section.services h3 {
   font-size: 17px;
   font-family: Arial, "Lucida Grande", sans-serif;
   text-align: center;
-  font-weight: 700; }
+  font-weight: 700;
+  margin: 0; }
 
 .light-gray-bg {
   background-color: #ECEBEC; }
@@ -4735,9 +4748,19 @@ section.services h3 {
   right: 0;
   text-align: center; }
 
+.circle-leader:before, .circle-leader:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 .circle-leader h4 {
   font-size: 12px;
   font-weight: 700; }
+
+.circle-leader h4:before, .circle-leader h4:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 .circle-leader .circle {
   margin: 0 auto;
@@ -5649,7 +5672,7 @@ section.services h3 {
   right: 0;
   bottom: 0;
   background-color: black;
-  opacity: .3;
+  opacity: .2;
   height: 100%;
   width: 100%; }
 
@@ -5904,12 +5927,15 @@ section.services h3 {
   max-height: 300px;
   margin-bottom: 10px; }
 
-.carousel_tile a {
+.tile-container {
+  padding-top: 60px; }
+
+.carousel_tile a, .property_tile a {
   padding: 10px;
   margin: 10px;
   position: relative; }
 
-.carousel_tile a:before, .carousel_tile a:after {
+.carousel_tile a:before, .carousel_tile a:after, .property_tile a:before, .property_tile a:after {
   content: "";
   display: table;
   clear: both; }
@@ -6079,7 +6105,7 @@ section.services h3 {
 .agents h2 {
   font-size: 22px;
   font-family: "Copernicus-Medium";
-  padding-bottom: 100px; }
+  padding-bottom: 40px; }
 
 .agents h3 {
   font-family: "Copernicus-MediumItalic";

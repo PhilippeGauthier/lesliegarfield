@@ -3,10 +3,10 @@
 }
 
 section {
-	padding: 100px 0;
+	padding: 60px 0;
 	position: relative;
 	&.properties {
-		padding: 60px 0 100px;
+		padding: 0px 0 100px;
 	}
 	&.leading {
 		margin-top: 78px;
@@ -43,6 +43,7 @@ section {
 		font-family: $base-font-family;
 		text-align: center;
 		font-weight: 700;
+		margin: 0;
 	}
 }
 
@@ -66,9 +67,11 @@ section {
 	left: 0;
 	right: 0;
 	text-align: center;
+	@include clearfix;
 	h4 {
 		font-size: 12px;
 		font-weight: 700;
+		@include clearfix;
 	}
 	.circle {
 		margin: 0 auto;

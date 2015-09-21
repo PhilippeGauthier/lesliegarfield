@@ -1,11 +1,12 @@
 	<section class="hero small leading" style="background-image: url( {{ path src="{{ hero_image }}" }} );">
+	<a id="description" class="secondary-nav-link"></a>
 		<h1>{{ title }}</h1>
 		<!-- <h3>{{ sub_headline }}</h3> -->
 		<div class="mask"></div>
 	</section>
 	<nav id="secondary-nav">
 	   <ul class="nav" role="tablist">
-      <li><a class="scroll" href="#description" >Description</a></li>
+      <li class="active"><a class="scroll" href="#description" >Description</a></li>
       <li><a class="scroll" href="#location">Location</a></li>
       <li><a class="scroll" href="#numbers">By the Numbers</a></li>
       <li><a class="scroll" href="#other_properties">Properties</a></li>
@@ -13,8 +14,8 @@
     
 	</nav>
 	<section class="content">
-	<a id="description" class="secondary-nav-link"></a>
-		<div class="container">
+	
+		<div class="container large-body">
 			<h3>description</h3>
 			{{ description }}
 		</div>

@@ -10,7 +10,11 @@
 			// 	}
 			// }
 
-.carousel_tile {
+.tile-container {
+	padding-top: 60px;
+}
+.carousel_tile, .property_tile {
+
 	a {
 		padding: 10px;
 		margin: 10px;

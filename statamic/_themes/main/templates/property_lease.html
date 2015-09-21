@@ -80,11 +80,17 @@
 						{{ endif }}
 					</div>
 					<div class="open-house">
-						{{ if openhouse }}
-						  {{ if openhouse_details }}
-							<span>Open House: {{ openhouse_details }}</span>
-						  {{ endif }}
+					<div class="open-house">
+						{{ if leased }}
+						<span>LEASED</span>
+						{{ elseif openhouse }}
+						{{ if openhouse_details }}
+						<span>Open House: {{ openhouse_details }}</span>
+						{{ else }}
+						<span>Open House: Enquire for Details</span>
 						{{ endif }}
+						{{ endif }}
+					</div>	
 					</div>				
 				</div>
 
