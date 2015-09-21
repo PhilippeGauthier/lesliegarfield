@@ -27,6 +27,8 @@ buttons:
   - alignment
   - html
 
+pastePlainText: true
+
 # Turn on/off cleanup on paste
 cleanOnPaste: true
 

@@ -219,6 +219,14 @@
 .summary {
 	@include span(100%);
 	margin-top: 30px;
+	font-family: $header-font-medium;
+	font-size: 16px;
+	line-height: 24px;
+	* {
+					font-family: $header-font-medium;
+			font-size: 16px;
+			line-height: 24px;
+	}
 	#summary_expander {
 		i {
 			color: $dark-gray;

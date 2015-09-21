@@ -1603,6 +1603,13 @@ img {
   font-style: normal; }
 
 @font-face {
+  font-family: 'Copernicus-Bold';
+  src: url("../fonts/Copernicus-Bold.eot");
+  src: url("../fonts/Copernicus-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Copernicus-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
   font-family: 'Copernicus-Semibold';
   src: url("../fonts/Copernicus-Semibold.eot");
   src: url("../fonts/Copernicus-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/Copernicus-Semibold.woff") format("woff");
@@ -5209,7 +5216,15 @@ section.services h3 {
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%;
-  margin-top: 30px; }
+  margin-top: 30px;
+  font-family: "Copernicus-Medium";
+  font-size: 16px;
+  line-height: 24px; }
+
+.summary * {
+  font-family: "Copernicus-Medium";
+  font-size: 16px;
+  line-height: 24px; }
 
 .summary #summary_expander i {
   color: #25282A; }
@@ -5283,8 +5298,8 @@ section.services h3 {
 
 .agent-individual main .agent-info * {
   box-sizing: border-box;
-  width: 77.77778%;
-  float: left;
+  width: 100%;
+  float: right;
   padding-left: 1.11111%;
   padding-right: 1.11111%; }
 
@@ -5684,6 +5699,9 @@ section.services h3 {
 
 .hero.small {
   height: 450px; }
+
+.hero.dark h1, .hero.dark h3 {
+  color: #25282A; }
 
 .hero * {
   color: #fff; }

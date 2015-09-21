@@ -1,4 +1,4 @@
-<section class="leading properties property-page background-gray">
+<section class="leading property-page background-gray">
 	<div class="container">
 
 		<aside>
@@ -274,7 +274,9 @@
 				<div class="summary">
 					{{ summary_intro }}
 					<div id="summary_expanded" style="display: none">{{ summary_full }}</div>
+					{{ if summary_full }}
 					<a id="summary_expander" href=""><i id="summary_icon" class="fa fa-plus-circle"></i><span class="read-more">Read More</span></a>
+					{{ endif }}
 				</div>
 				{{ endif }}
 			</div>

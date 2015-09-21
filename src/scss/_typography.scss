@@ -17,6 +17,15 @@ $header-font-family-medium-italic: "Copernicus-MediumItalic";
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Copernicus-Bold';
+    src: url('../fonts/Copernicus-Bold.eot');
+    src: url('../fonts/Copernicus-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Copernicus-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 @font-face {
     font-family: 'Copernicus-Semibold';
