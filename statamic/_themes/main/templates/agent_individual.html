@@ -65,8 +65,12 @@
 				{{ theme:partial src="property_tile_agent" use_context="true" }}  
 			{{ /entries:listing }}
 			
-			{{ entries:listing folder="properties/*" conditions="agents:{url}, sold:true" sort_by="sold_price" sort_dir="desc" }}
-			{{ theme:partial src="recent_transactions" use_context="true" }}
+			{{ entries:listing folder="properties/sale|properties/sold" conditions="agents:{url}, sold:true" sort_by="sold_price" sort_dir="desc" }}
+			{{ theme:partial src="recent_transactions_sale" use_context="true" }}
+			{{ /entries:listing }}
+
+			{{ entries:listing folder="properties/lease|properties/leased" conditions="agents:{url}, leased:true" sort_by="lease_price" sort_dir="desc" }}
+			{{ theme:partial src="recent_transactions_rental" use_context="true" }}
 			{{ /entries:listing }}
 
 		</main>

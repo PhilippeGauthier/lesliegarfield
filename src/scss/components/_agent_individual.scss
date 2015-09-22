@@ -108,8 +108,16 @@
 		.recent-transactions {
 			@include span(full no-gutter);
 			@include clearfix;
+			&.sale {
+				margin-bottom: 40px;
+			}
 			h1 {
 				margin-bottom: 30px;
+			}
+			h2 {
+				font-family: $base-font-family;
+				border-bottom: 2px solid $dark-gray;
+				padding-bottom: 10px;
 			}
 			ul {
 				@include clearfix;
@@ -137,3 +145,4 @@
 		}
 	}
 }
+

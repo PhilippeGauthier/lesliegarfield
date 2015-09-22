@@ -1642,6 +1642,18 @@ p {
   font-size: 16px;
   line-height: 26px; }
 
+p.no_results {
+  font-size: 24px;
+  margin-top: 60px;
+  line-height: 36px;
+  margin-left: 16.66667%;
+  box-sizing: border-box;
+  width: 66.66667%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  text-align: center; }
+
 .container.large-body h3 {
   margin-top: 0;
   margin-bottom: 60px;
@@ -5367,8 +5379,16 @@ section.services h3 {
   display: table;
   clear: both; }
 
+.agent-individual main .recent-transactions.sale {
+  margin-bottom: 40px; }
+
 .agent-individual main .recent-transactions h1 {
   margin-bottom: 30px; }
+
+.agent-individual main .recent-transactions h2 {
+  font-family: Arial, "Lucida Grande", sans-serif;
+  border-bottom: 2px solid #25282A;
+  padding-bottom: 10px; }
 
 .agent-individual main .recent-transactions ul {
   border-bottom: 1px solid #a1a8ad; }

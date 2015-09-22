@@ -67,6 +67,14 @@ p {
 	font-family: $header-font-medium;
 	font-size: 16px;
 	line-height: 26px;
+    &.no_results {
+        font-size: 24px;
+        margin-top: 60px;
+        line-height: 36px;
+        @include pre(2);
+        @include span (8 of 12);
+        text-align: center;
+    }
 }
 
 .container.large-body {

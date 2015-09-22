@@ -38,10 +38,13 @@ var path = {
   ASCENT_DIST: 'statamic/admin/themes/ascent/dist',
   ASCENT_OUT: 'statamic/admin/themes/ascent/css',
   MKDN_SRC: 'statamic/_content/1-properties',
+  MKDN_EXCLUDE: '/{sold,sold/*.md,leased,leased/*.md,/**/page.md}',
   PROP_SALE: '/sale',
   PROP_RENT: '/lease',
   JSON: 'statamic/JSON/'
 };
+
+var mark = ['statamic/_content/1-properties/lease/*.md','statamic/_content/1-properties/sale/*.md'];
 
 gulp.task('copy', function(){
   gulp.src(path.HTML)
@@ -80,7 +83,7 @@ gulp.task('ascent-minify-css', function() {
 });
 
 gulp.task('markdown', function(){
-  gulp.src([path.MKDN_SRC + '/**/*.md', '!' + path.MKDN_SRC + '/**/page.md' ])
+  gulp.src([path.MKDN_SRC + '/**/*.md','!'+ path.MKDN_SRC + path.MKDN_EXCLUDE])
     .pipe(gutil.buffer())
     .on('error', function(err){ console.log(err.message); })
     .pipe(markdown('properties.json'))
