@@ -29,17 +29,25 @@
 				</div>
 			</main>
 			<aside>
+				<div class="quote-slider">
+				
+				
 				{{ individual_quote }}
+				<div>
+				<div class="circle background-light-gray">
 				<div class="quote">
-					<span class="quote-symbol left">{{ theme:partial src="svg/quote_up" }}</span>{{ main }}<span class="quote-symbol right">{{ theme:partial src="svg/quote_down" }}</span>
+					<div class="quote-content">
+						<span class="quote-symbol left">{{ theme:partial src="svg/quote_up" }}</span>{{ main }}<span class="quote-symbol right">{{ theme:partial src="svg/quote_down" }}</span>
+					</div>
+					<div class="person">
+						{{ person }}
+					</div>
+					</div>
+					</div>
+					</div>
+					{{ /individual_quote }}
+					
 				</div>
-				<div class="person">
-					{{ person }}
-				</div>
-				<div class="description">
-					{{ description }}
-				</div>
-				{{ /individual_quote }}
 			</aside>
 		</div>
 	</section>
@@ -84,7 +92,7 @@
 			</main>
 			<aside>
 				<div class="quote">
-					foo
+					
 				</div>
 			</aside>
 		</div>
@@ -97,7 +105,7 @@
 			</main>
 			<aside>
 				<div class="quote">
-					foo
+					
 				</div>
 			</aside>
 		</div>

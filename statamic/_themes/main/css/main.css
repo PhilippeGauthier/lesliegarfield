@@ -1477,24 +1477,22 @@ section.services .container {
 
 section.services main {
   box-sizing: border-box;
-  width: 75%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%; }
-
-section.services main * {
-  box-sizing: border-box;
-  width: 66.66667%;
+  width: 50%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%; }
 
 section.services aside {
+  margin-left: 8.33333%;
   box-sizing: border-box;
-  width: 25%;
+  width: 41.66667%;
   float: right;
   padding-left: 0.83333%;
   padding-right: 0.83333%; }
+
+section.services aside .circle {
+  padding-top: 100%;
+  position: relative; }
 
 aside {
   box-sizing: border-box;
@@ -6218,25 +6216,45 @@ section.services h3 {
   line-height: 18px; }
 
 .quote {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 65%; }
+
+.quote-content {
   display: inline-block;
   font-family: "Copernicus-Semibold";
   font-size: 18px;
-  line-height: 30px;
-  position: relative;
-  margin-bottom: 50px; }
+  line-height: 30px; }
 
-.quote .quote-symbol {
+.quote-content .quote-symbol {
   position: absolute; }
 
-.quote .quote-symbol.left {
+.quote-content .quote-symbol.left {
   left: -35px; }
 
-.quote .quote-symbol.right {
+.quote-content .quote-symbol.right {
   right: -35px; }
 
 .person {
   font-weight: 700;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-top: 30px; }
+
+.service-quote {
+  position: relative; }
 
 .service-list * {
   color: #009B77; }

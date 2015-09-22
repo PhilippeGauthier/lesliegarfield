@@ -11,17 +11,19 @@ fields:
 		type: redactor
 		display: Individuals & Families Description
 	individual_services:
-		type: grid
+		type: suggest
+		create: new
 		display: Individual Services
-		max_rows: 1
-		fields:
-			services:
-				type: suggest
-				display: Individual Services
-				create: true
-				taxonomy:
-					folder: services
-					type: services
+		options:
+			- Detailed valuation
+			- Marketing strategy development
+			- Marketing plan execution
+			- Property prepping and staging
+			- Day-to-day fielding of leads
+			- Open houses & tours
+			- Tenant issues
+			- Offer evaluation & negotiation
+			- Closing support
 	individual_quote:
 		type: grid
 		display: Individuals Quote(s)
@@ -32,28 +34,27 @@ fields:
 			person:
 				type: text
 				display: Person's Name
-				width: 15%
-			description:
-				type: text
-				display: Description of Quote
+				width: 25%
 	trust_subheader:
 		type: text
 		display: Trusts & Estates Subheader
 	trust_description:
 		type: redactor
 		display: Trusts & Estates Description
-	trist_services:
-		type: grid
+	trust_services:
+		type: suggest
+		create: new
 		display: Individual Services
-		max_rows: 1
-		fields:
-			services:
-				type: suggest
-				display: Individual Services
-				create: true
-				taxonomy:
-					folder: services
-					type: services
+		options:
+			- Detailed valuation
+			- Marketing strategy development
+			- Marketing plan execution
+			- Property prepping and staging
+			- Day-to-day fielding of leads
+			- Open houses & tours
+			- Tenant issues
+			- Offer evaluation & negotiation
+			- Closing support
 	trust_quote:
 		type: grid
 		display: Trusts Quote(s)

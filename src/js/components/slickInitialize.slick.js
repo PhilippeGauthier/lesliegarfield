@@ -105,5 +105,16 @@ $('.property-carousel').slick({
   arrows: true
 });
 
+$('.quote-slider').slick({
+  infinite: true,
+  speed: 700,
+  slidesToShow: 1,
+  arrows: false,
+  dots: false,
+  fade: true,
+  autoplay: true,
+  cssEase: 'ease'
+});
+
 module.exports = slickInitialize;
 

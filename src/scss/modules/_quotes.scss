@@ -7,12 +7,20 @@
 }
 
 .quote {
-		display: inline-block;
-		font-family: $header-font-family;
-		font-size: 18px;
-		line-height: 30px;
-		position: relative;
-		margin-bottom: 50px;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 65%;
+}
+
+.quote-content {
+	display: inline-block;
+	font-family: $header-font-family;
+	font-size: 18px;
+	line-height: 30px;
 	.quote-symbol {
 		position: absolute;
 		&.left {
@@ -27,4 +35,9 @@
 .person {
 	font-weight: 700;
 	text-transform: uppercase;
+	margin-top: 30px;
+}
+
+.service-quote {
+	position: relative;
 }
