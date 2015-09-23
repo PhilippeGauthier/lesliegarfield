@@ -28,6 +28,21 @@ $slick-opacity-not-active: .25;
     margin-right: -60px;
 }
 
+.press {
+    .slick-prev:before,
+    .slick-next:before
+    {
+        font-family: none;
+        content: url('../img/carousel_arrow_green.svg');
+        font-size: 50px;
+        opacity: .75;
+        color: $text-green;
+        svg * {
+            fill: $text-green;
+        }
+    }
+}
+
 .property-carousel {
 
     /* Arrows */

@@ -5541,6 +5541,20 @@ section.services h3 {
   transform: rotate(180deg);
   margin-right: -60px; }
 
+.press .slick-prev:before,
+.press
+.slick-next:before {
+  font-family: none;
+  content: url("../img/carousel_arrow_green.svg");
+  font-size: 50px;
+  opacity: .75;
+  color: #009B77; }
+
+.press .slick-prev:before svg *,
+.press
+.slick-next:before svg * {
+  fill: #009B77; }
+
 .property-carousel {
   /* Arrows */ }
 
