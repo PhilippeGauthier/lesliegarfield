@@ -1,7 +1,7 @@
 .numbers {
 	padding-top: 60px;
-	padding-bottom: 60px;
-	border-bottom: 1px solid $dark-gray;
+	padding-bottom: 30px;
+	@include clearfix;
 	h1,h3 {
 		font-family: $header-font-extra-bold;
 		text-align: center;

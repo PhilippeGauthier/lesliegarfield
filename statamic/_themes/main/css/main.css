@@ -1652,6 +1652,14 @@ p.no_results {
   padding-right: 0.83333%;
   text-align: center; }
 
+p.light {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+  color: #868f95;
+  text-align: center; }
+
 .container.large-body h3 {
   margin-top: 0;
   margin-bottom: 60px;
@@ -5593,8 +5601,12 @@ section.services h3 {
 
 .numbers {
   padding-top: 60px;
-  padding-bottom: 60px;
-  border-bottom: 1px solid #25282A; }
+  padding-bottom: 30px; }
+
+.numbers:before, .numbers:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 .numbers h1, .numbers h3 {
   font-family: "Copernicus-ExtraBold";
