@@ -26,6 +26,13 @@
   padding: $size/10;
 }
 
+@mixin flex-vert {
+	display: flex;
+	justify-content: center;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
 @mixin svg-size($size) {
     height: $size - ($size/10)*2;
     width: $size - ($size/10)*2;

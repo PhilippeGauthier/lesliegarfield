@@ -25,6 +25,16 @@
 				<div class="carousel_tile carousel_tile_2 main_tile">
 				{{ press }}
 				<div>
+				{{ if link === "" }}
+				 <div class="carousel-tile press-item">
+				 	{{ if image|not_empty }}
+				 	<img src="{{ path src="{{ image }}" }}">
+				 	{{ endif }}
+				 	{{ if text|not_empty }}
+				 	<p>{{ text }}</p>
+				 	{{ endif }}
+				 </div>
+				 {{ else }}
 				 <a target="_blank" href="{{ link }}" class="carousel-tile press-item">
 				 	{{ if image|not_empty }}
 				 	<img src="{{ path src="{{ image }}" }}">
@@ -33,6 +43,7 @@
 				 	<p>{{ text }}</p>
 				 	{{ endif }}
 				 </a>
+				{{ endif }}
 				 </div>
 				 {{ /press }}
 				</div>
@@ -41,6 +52,16 @@
 				<div class="carousel_tile carousel_tile_1 main_tile">
 				{{ press }}
 				<div>
+				{{ if link === "" }}
+				 <div class="carousel-tile press-item">
+				 	{{ if image|not_empty }}
+				 	<img src="{{ path src="{{ image }}" }}">
+				 	{{ endif }}
+				 	{{ if text|not_empty }}
+				 	<p>{{ text }}</p>
+				 	{{ endif }}
+				 </div>
+				 {{ else }}
 				 <a target="_blank" href="{{ link }}" class="carousel-tile press-item">
 				 	{{ if image|not_empty }}
 				 	<img src="{{ path src="{{ image }}" }}">
@@ -49,6 +70,7 @@
 				 	<p>{{ text }}</p>
 				 	{{ endif }}
 				 </a>
+				{{ endif }}
 				 </div>
 				 {{ /press }}
 				</div>

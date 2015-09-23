@@ -82,9 +82,9 @@
 				@include clearfix;
 			}
 			.press-item {
-				display: block;
+				@include flex-vert;
 				margin: 0;
-				background-color: #fff;
+				padding: 0 15px;
 				&:first-of-type {
 					border-right: 1px solid $text-green;
 				}
@@ -93,6 +93,10 @@
 				}
 				p, img {
 					text-align: center;
+					margin: 0 auto;
+				}
+				img {
+					margin-bottom: 15px;
 				}
 				p {
 					font-size: 14px;

@@ -5345,15 +5345,30 @@ section.services h3 {
   clear: both; }
 
 .agent-individual main .green-specs .press-item {
-  display: block;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 0;
-  background-color: #fff; }
+  padding: 0 15px; }
 
 .agent-individual main .green-specs .press-item:first-of-type {
   border-right: 1px solid #009B77; }
 
 .agent-individual main .green-specs .press-item p, .agent-individual main .green-specs .press-item img {
-  text-align: center; }
+  text-align: center;
+  margin: 0 auto; }
+
+.agent-individual main .green-specs .press-item img {
+  margin-bottom: 15px; }
 
 .agent-individual main .green-specs .press-item p {
   font-size: 14px; }
