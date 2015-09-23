@@ -10,7 +10,6 @@
 			<li><a class="scroll" href="#institutions">Institutions</a></li>
 			<li><a class="scroll" href="#buyers">Buyers</a></li>
 		</ul>
-
 	</nav>
 	<section class="content services">
 		<a id="individuals" class="secondary-nav-link"></a>
@@ -30,28 +29,37 @@
 			</main>
 			<aside>
 				<div class="quote-slider">
-				
-				
-				{{ individual_quote }}
-				<div>
-				<div class="circle background-light-gray">
-				<div class="quote">
-					<div class="quote-content">
-						<span class="quote-symbol left">{{ theme:partial src="svg/quote_up" }}</span>{{ main }}<span class="quote-symbol right">{{ theme:partial src="svg/quote_down" }}</span>
-					</div>
-					<div class="person">
-						{{ person }}
-					</div>
-					</div>
-					</div>
+					{{ individual_quote }}
+					<div>
+						<div class="circle background-light-gray">
+							<div class="quote">
+							{{ if main }}
+								<div class="quote-content">
+									<span class="quote-symbol left">{{ theme:partial src="svg/quote_up" }}</span>{{ main }}<span class="quote-symbol right">{{ theme:partial src="svg/quote_down" }}</span>
+								</div>
+							{{ endif }}
+							{{ if logo }}
+								{{ logo|img }}
+							{{ endif }}
+							{{ if person }}
+								<div class="person">
+									{{ person }}
+								</div>
+							{{ endif }}
+							{{ if description }}
+								<div class="description">
+									{{ description }}
+								</div>
+							{{ endif }}
+							</div>
+						</div>
 					</div>
 					{{ /individual_quote }}
-					
 				</div>
 			</aside>
 		</div>
 	</section>
-	<section class="content services neighborhood light-blue">
+	<section class="content services neighborhood seafoam-bg">
 		<a id="trust" class="secondary-nav-link"></a>
 		<div class="container">
 			<main>
@@ -68,17 +76,36 @@
 				</div>
 			</main>
 			<aside>
+				<div class="quote-slider">
 				{{ trust_quote }}
-				<div class="quote">
-					<span class="quote-symbol left">{{ theme:partial src="svg/quote_up" }}</span>{{ main }}<span class="quote-symbol right">{{ theme:partial src="svg/quote_down" }}</span>
+					<div>
+						<div class="circle white">
+							<div class="quote">
+							{{ if main }}
+								<div class="quote-content">
+									<span class="quote-symbol left">{{ theme:partial src="svg/quote_up" }}</span>{{ main }}<span class="quote-symbol right">{{ theme:partial src="svg/quote_down" }}</span>
+								</div>
+							{{ endif }}
+							{{ if logo }}
+								<div class="logo">
+								{{ logo|img }}
+								</div>
+							{{ endif }}
+							{{ if person }}
+								<div class="person">
+									{{ person }}
+								</div>
+							{{ endif }}
+							{{ if description }}
+								<div class="description">
+									{{ description }}
+								</div>
+							{{ endif }}
+							</div>
+						</div>
+					</div>
+					{{ /trust_quote }}
 				</div>
-				<div class="person">
-					{{ person }}
-				</div>
-				<div class="description">
-					{{ description }}
-				</div>
-				{{ /trust_quote }}
 			</aside>
 			
 		</div>
@@ -87,25 +114,99 @@
 	<section class="content services">
 		<a id="institutions" class="secondary-nav-link"></a>
 		<div class="container">
-			<main>
+		<main>
 				<h2>Institutions</h2>
+				<h3>{{ institution_subheader }}</h3>
+				{{ institution_description }}
+				<div class="service-list">
+					<h4>Specific Service Delivered:</h4>
+					<ul>
+						{{ institution_services }}
+						<li>{{ value }}</li>
+						{{ /institution_services }}
+					</ul>
+				</div>
 			</main>
 			<aside>
-				<div class="quote">
-					
+				<div class="quote-slider">
+				{{ institution_quote }}
+					<div>
+						<div class="circle background-light-gray">
+							<div class="quote">
+							{{ if main }}
+								<div class="quote-content">
+									<span class="quote-symbol left">{{ theme:partial src="svg/quote_up" }}</span>{{ main }}<span class="quote-symbol right">{{ theme:partial src="svg/quote_down" }}</span>
+								</div>
+							{{ endif }}
+							{{ if logo }}
+								<div class="logo">
+								{{ logo|img }}
+								</div>
+							{{ endif }}
+							{{ if person }}
+								<div class="person">
+									{{ person }}
+								</div>
+							{{ endif }}
+							{{ if description }}
+								<div class="description">
+									{{ description }}
+								</div>
+							{{ endif }}
+							</div>
+						</div>
+					</div>
+					{{ /institution_quote }}
 				</div>
 			</aside>
 		</div>
 	</section>
-	<section class="content services dark-seafoam-bg">
+	<section class="content services background-light-gray">
 		<a id="buyers" class="secondary-nav-link"></a>
 		<div class="container">
-			<main>
+		<main>
 				<h2>Buyers</h2>
+				<h3>{{ buyers_subheader }}</h3>
+				{{ buyers_description }}
+				<div class="service-list">
+					<h4>Specific Service Delivered:</h4>
+					<ul>
+						{{ buyers_services }}
+						<li>{{ value }}</li>
+						{{ /buyers_services }}
+					</ul>
+				</div>
 			</main>
 			<aside>
-				<div class="quote">
-					
+				<div class="quote-slider">
+				{{ buyers_quote }}
+					<div>
+						<div class="circle white">
+							<div class="quote">
+							{{ if main }}
+								<div class="quote-content">
+									<span class="quote-symbol left">{{ theme:partial src="svg/quote_up" }}</span>{{ main }}<span class="quote-symbol right">{{ theme:partial src="svg/quote_down" }}</span>
+								</div>
+							{{ endif }}
+							{{ if logo }}
+								<div class="logo">
+								{{ logo|img }}
+								</div>
+							{{ endif }}
+							{{ if person }}
+								<div class="person">
+									{{ person }}
+								</div>
+							{{ endif }}
+							{{ if description }}
+								<div class="description">
+									{{ description }}
+								</div>
+							{{ endif }}
+							</div>
+						</div>
+					</div>
+					{{ /buyers_quote }}
 				</div>
 			</aside>
 		</div>

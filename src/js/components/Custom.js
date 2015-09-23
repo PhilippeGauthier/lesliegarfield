@@ -69,7 +69,7 @@ $(document).ready(function() {
 });
 
 // Sticky Sidebar
-$("aside").stick_in_parent();
+$(".sticky").stick_in_parent();
 
 // Nav Active Status Toggle
 function currentAdd () {
