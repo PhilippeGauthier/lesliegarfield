@@ -48,3 +48,4 @@ npm-debug.log
 node_modules/*
 package.json
 statamic/JSON/*.json
+backup/

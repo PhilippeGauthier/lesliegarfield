@@ -1,0 +1,28 @@
+title: Camp Spot
+
+fields:
+  beliefs:
+    type: redactor
+    display: Beliefs
+  history_1:
+    type: redactor
+    display: History Column 1
+  history_2:
+    type: redactor
+    display: History Column 2
+  why:
+    type: redactor
+    display: Why Garfield
+  why_grid:
+    type: grid
+    display: Why Garifled Items
+    fields:
+      name:
+        display: Title
+        type: text
+      description:
+        display: Description
+        type: textarea
+        height: 75
+  content:
+   hide: true

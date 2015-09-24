@@ -33,6 +33,11 @@
 	align-items: center;
 }
 
+@mixin flex-hor {
+	display: flex;
+	align-items: center;
+}
+
 @mixin svg-size($size) {
     height: $size - ($size/10)*2;
     width: $size - ($size/10)*2;

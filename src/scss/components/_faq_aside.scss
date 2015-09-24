@@ -1,0 +1,37 @@
+
+
+.faq-aside {
+	background-color: $light-gray;
+	padding: 30px;
+	h3, h4 {
+		font-size: 15px;
+		font-weight: 300;
+		margin: 5px 0;
+	}
+	h3 {
+		margin-top: 0;
+		font-weight: 700;
+	}
+
+	h4 {
+		margin-bottom: 15px;
+	}
+	li {
+		margin-bottom: 10px;
+	}
+	li, a {
+		@include flex-hor;
+		font-family: $base-font-family;
+		font-weight: 700;
+		font-size: 15px;
+		color: $text-green;
+	}
+	svg {
+		height: 30px;
+		width: 30px;
+		margin-right: 10px;
+		* {
+			fill: $text-green;
+		}
+	}
+}

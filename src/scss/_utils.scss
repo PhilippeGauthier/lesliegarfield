@@ -8,6 +8,7 @@ $header-font-bold: "Copernicus-Bold";
 $header-font-extra-bold: "Copernicus-ExtraBold";
 $header-font-family-book-italic: "Copernicus-BookItalic";
 $header-font-family-medium-italic: "Copernicus-MediumItalic";
+$header-font-family-book: "Copernicus-Book";
 
 @font-face {
     font-family: 'Copernicus-Medium';
@@ -64,6 +65,15 @@ $header-font-family-medium-italic: "Copernicus-MediumItalic";
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Copernicus-Book';
+    src: url('../fonts/Copernicus-Book.eot');
+    src: url('../fonts/Copernicus-Book.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Copernicus-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 // color pallette
 $green: #009880;
@@ -81,6 +91,7 @@ $light-font-color: #A7A4A4;
 $agents-background: #F5F5F5;
 $seafoam-bg: #F4FBF9;
 $dark-seafoam-bg: #e4f4f1;
+$darkest-seafoam-bg: #CEEBE7;
 $red: #FF0000;
 $modal-text: #CCCCCC;
 $light-blue: #E6F1FA;

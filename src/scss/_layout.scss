@@ -127,16 +127,29 @@ section.services {
 	}
 }
 
+section.faq {
+	main {
+		@include span (first 8 of 12);
+		@include post(1);
+	}
+	aside {
+		@include span(320px no-gutter);
+	}
+}
+
 aside {
-	// @include span(3 of 12);
-	// margin-bottom: 70px;
 	@include span(320px no-gutter);
 	padding-right: 15px;
 }
 
 main {
+	position: relative;
 	@include span (last 9 of 12);
 	// padding: 30px;
+}
+
+.sticky-wrapper {
+	position: relative;
 }
 
 .circle {

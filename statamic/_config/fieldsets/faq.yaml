@@ -1,0 +1,52 @@
+title: FAQ
+fields:
+
+
+
+  faq_items:
+    type: replicator
+    instructions: |
+      Replicate a new set for each piece of content you need.
+
+    sets:
+
+      seller_set:
+        display: FAQ Info Set
+        instructions: Closing Info
+        fields:
+          info_name:
+            display: Info Name
+            type: text
+          info_content:
+          	display: Info Cntent
+          	type: redactor
+      buyer_set:
+        display: FAQ Info Set
+        instructions: Closing Info
+        fields:
+          info_name:
+            display: Info Name
+            type: text
+          info_content:
+          	display: Info Cntent
+          	type: redactor
+      faq_set:
+        display: FAQ Letter Group
+        instructions: Grouped FAQ Info
+        fields:
+          letter_group:
+            display: Letter Group
+            type: text
+          items:
+          	display: FAQ items
+          	type: grid
+          	fields:
+          		item_name:
+          			type: text
+          			display: Item Name
+          		item_definition:
+          			type: textarea
+          			height: 75
+          			display: Item Definition
+  content:
+  	hide: true

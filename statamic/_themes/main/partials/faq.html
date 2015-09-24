@@ -1,0 +1,15 @@
+{{ entries:listing folder="faq/a" sort_by="title" }}
+	{{ if first }}
+	<a href="#a">foo</a>
+	{{ endif }}
+	<div>{{ title }}</div>
+	<div>{{ definition }}</div>
+{{ /entries:listing }}
+
+{{ entries:listing folder="faq/b" sort_by="title" }}
+	{{ if first }}
+	<a href="#a">foo</a>
+	{{ endif }}
+	<div>{{ title }}</div>
+	<div>{{ definition }}</div>
+{{ /entries:listing }}

@@ -1238,6 +1238,13 @@ th {
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'Copernicus-Book';
+  src: url("../fonts/Copernicus-Book.eot");
+  src: url("../fonts/Copernicus-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/Copernicus-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 * {
   box-sizing: border-box; }
 
@@ -1494,6 +1501,19 @@ section.services aside .circle {
   padding-top: 100%;
   position: relative; }
 
+section.faq main {
+  box-sizing: border-box;
+  width: 66.66667%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  margin-right: 8.33333%; }
+
+section.faq aside {
+  box-sizing: border-box;
+  width: 320px;
+  float: left; }
+
 aside {
   box-sizing: border-box;
   width: 320px;
@@ -1501,11 +1521,15 @@ aside {
   padding-right: 15px; }
 
 main {
+  position: relative;
   box-sizing: border-box;
   width: 75%;
   float: right;
   padding-left: 0.83333%;
   padding-right: 0.83333%; }
+
+.sticky-wrapper {
+  position: relative; }
 
 .circle {
   border-radius: 50%; }
@@ -1565,6 +1589,9 @@ img {
 
 .dark-seafoam-bg {
   background-color: #e4f4f1; }
+
+.darkest-seafoam-bg {
+  background-color: #CEEBE7; }
 
 .similar-properties-gray {
   background-color: #E5E4E4; }
@@ -4511,6 +4538,10 @@ header .flex {
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
+.block {
+  width: 100%;
+  height: 78px; }
+
 nav {
   width: 100%;
   height: auto;
@@ -4565,14 +4596,14 @@ nav a .left {
 nav a:focus {
   outline: none; }
 
-nav#secondary-nav {
+nav.secondary-nav {
   z-index: 100; }
 
-nav#secondary-nav.stuck {
+nav.secondary-nav.stuck {
   position: fixed;
   margin-top: 78px; }
 
-nav#secondary-nav ul li {
+nav.secondary-nav ul li {
   box-sizing: border-box;
   width: 25%;
   float: left;
@@ -4580,27 +4611,27 @@ nav#secondary-nav ul li {
   border-right: 1px solid white;
   background-color: #CCCCCC; }
 
-nav#secondary-nav ul li:nth-child(4n + 1) {
+nav.secondary-nav ul li:nth-child(4n + 1) {
   margin-left: 0;
   margin-right: -100%;
   clear: both; }
 
-nav#secondary-nav ul li:nth-child(4n + 2) {
+nav.secondary-nav ul li:nth-child(4n + 2) {
   margin-left: 25%;
   margin-right: -100%;
   clear: none; }
 
-nav#secondary-nav ul li:nth-child(4n + 3) {
+nav.secondary-nav ul li:nth-child(4n + 3) {
   margin-left: 50%;
   margin-right: -100%;
   clear: none; }
 
-nav#secondary-nav ul li:nth-child(4n + 4) {
+nav.secondary-nav ul li:nth-child(4n + 4) {
   margin-left: 75%;
   margin-right: -100%;
   clear: none; }
 
-nav#secondary-nav ul li a {
+nav.secondary-nav ul li a {
   display: block;
   text-align: center;
   color: white;
@@ -4609,20 +4640,20 @@ nav#secondary-nav ul li a {
   padding-top: 20px;
   padding-bottom: 20px; }
 
-nav#secondary-nav ul li a:last-of-type {
+nav.secondary-nav ul li a:last-of-type {
   border-right: none; }
 
-nav#secondary-nav ul li a:hover {
+nav.secondary-nav ul li a:hover {
   box-shadow: none;
   background-color: #ababab; }
 
-nav#secondary-nav ul li.active {
+nav.secondary-nav ul li.active {
   background-color: #009B77; }
 
-nav#secondary-nav ul li.active a {
+nav.secondary-nav ul li.active a {
   box-shadow: none; }
 
-nav#secondary-nav ul li.active a:hover {
+nav.secondary-nav ul li.active a:hover {
   background-color: #00aa83; }
 
 .nav-tabs > li > a:hover {
@@ -4736,6 +4767,10 @@ section.properties {
 
 section.leading {
   margin-top: 78px; }
+
+section.faq {
+  margin-top: 0;
+  padding-top: 0; }
 
 section.services h2, section.services h3 {
   text-align: left;
@@ -5546,8 +5581,6 @@ section.services h3 {
 .slick-next:before {
   font-family: none;
   content: url("../img/carousel_arrow_green.svg");
-  font-size: 50px;
-  opacity: .75;
   color: #009B77; }
 
 .press .slick-prev:before svg *,
@@ -5715,6 +5748,128 @@ section.services h3 {
   margin-bottom: 30px;
   height: 1px;
   background-color: #25282A; }
+
+.faq-aside {
+  background-color: #ECEBEC;
+  padding: 30px; }
+
+.faq-aside h3, .faq-aside h4 {
+  font-size: 15px;
+  font-weight: 300;
+  margin: 5px 0; }
+
+.faq-aside h3 {
+  margin-top: 0;
+  font-weight: 700; }
+
+.faq-aside h4 {
+  margin-bottom: 15px; }
+
+.faq-aside li {
+  margin-bottom: 10px; }
+
+.faq-aside li, .faq-aside a {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Arial, "Lucida Grande", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #009B77; }
+
+.faq-aside svg {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px; }
+
+.faq-aside svg * {
+  fill: #009B77; }
+
+.company {
+  text-align: center; }
+
+.company h2 {
+  font-family: "Copernicus-Medium";
+  font-size: 36px;
+  line-height: 46px;
+  text-transform: uppercase; }
+
+.company h3 {
+  display: inline-block;
+  text-align: center;
+  padding: 0 15px 25px 15px;
+  border-bottom: 1px solid #25282A;
+  margin: 0 auto;
+  font-weight: 700; }
+
+.company p {
+  font-family: "Copernicus-Medium";
+  line-height: 28px; }
+
+.company.beliefs, .company.why {
+  margin-left: 25%;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%; }
+
+.company.history h2, .company.history h4 {
+  font-family: "Copernicus-Medium";
+  line-height: 46px; }
+
+.company.history h2 {
+  font-size: 36px;
+  margin-bottom: 0;
+  margin-top: 20px; }
+
+.company.history h4 {
+  display: inline-block;
+  font-size: 26px;
+  border-bottom: 1px solid #25282A;
+  margin-top: 0;
+  padding: 0 15px 25px 15px; }
+
+.company.history h4:before, .company.history h4:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.company.history .history-1 {
+  margin-left: 8.33333%;
+  box-sizing: border-box;
+  width: 41.66667%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%; }
+
+.company.history .history-2 {
+  box-sizing: border-box;
+  width: 41.66667%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  margin-right: 8.33333%; }
+
+.company.history p {
+  text-align: left; }
+
+.company.why {
+  background-image: url("../img/G.svg");
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.company.why h2 {
+  margin-bottom: 0px; }
+
+.company.why h3 {
+  margin-bottom: 15px; }
+
+.company.why p {
+  margin-top: 0; }
 
 .hero {
   height: 600px;
@@ -6319,3 +6474,106 @@ section.services h3 {
 .service-list ul li {
   display: list-item;
   margin-left: 15px; }
+
+.faq-header {
+  background-color: #009B77;
+  margin-top: 78px;
+  padding: 30px 0;
+  margin-bottom: 60px; }
+
+.faq-header .container {
+  color: white;
+  font-family: "Copernicus-Semibold";
+  font-size: 26px; }
+
+.faq h2 {
+  font-family: "Copernicus-Book";
+  border-bottom: 1px solid #25282A;
+  font-size: 22px;
+  line-height: 46px;
+  margin: 20px 0; }
+
+.costs p, .costs li, .costs span {
+  font-family: "Copernicus-Medium";
+  line-height: 30px !important;
+  font-size: 19px !important;
+  margin: 0; }
+
+.costs ul {
+  list-style-type: circle;
+  margin: 10px 0; }
+
+.costs ul li {
+  display: list-item;
+  margin-left: 25px; }
+
+.costs h2:first-of-type {
+  margin-top: 0; }
+
+.cost-block {
+  padding: 15px 0;
+  border-bottom: 1px solid #CCCCCC; }
+
+#faq-nav {
+  margin-top: 30px;
+  padding-bottom: 15px; }
+
+.expander {
+  display: block; }
+
+.expander i {
+  color: #CCCCCC; }
+
+.expander span {
+  font-family: "Copernicus-Medium";
+  color: #009B77;
+  margin-left: 10px;
+  font-size: 19px;
+  line-height: 25px; }
+
+.expander:hover i {
+  color: #009B77; }
+
+.faq_expanded p:first-of-type {
+  margin-top: 20px; }
+
+.faq-link {
+  font-family: "Copernicus-Semibold";
+  font-size: 17px;
+  line-height: 17px;
+  padding: 0 5px !important;
+  border-right: 1px solid #25282A; }
+
+.faq-link:hover {
+  background-color: transparent !important;
+  box-shadow: none; }
+
+section.faq {
+  position: relative; }
+
+.faq-list {
+  margin-top: 20px;
+  position: relative; }
+
+.faq-items {
+  height: 400px;
+  position: relative;
+  overflow: auto;
+  padding: 20px 0; }
+
+.faq-item {
+  margin-bottom: 10px; }
+
+.item-name {
+  text-transform: uppercase; }
+
+.item-definition {
+  font-size: 13px; }
+
+.faq-anchor {
+  display: block !important;
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+  visibility: hidden !important; }

@@ -11,6 +11,10 @@ section {
 	&.leading {
 		margin-top: 78px;
 	}
+	&.faq {
+		margin-top: 0;
+		padding-top: 0;
+	}
 	&.services {
 		h2,h3 {
 			text-align: left;
