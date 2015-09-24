@@ -12,20 +12,20 @@ var pageWrap = $('.page-wrap');
 $(".report-expander").click(function() {
   event.preventDefault();
   if ($(this).children().first().hasClass('fa-plus-circle')) {
-    $('span').html('Fewer Reports');
+    $(this).children('span').html('Fewer Reports');
   }
   else if ($(this).children().first().hasClass('fa-minus-circle')) {
-   $('span').html('More Reports');
+   $(this).children('span').html('More Reports');
   }
 });
 
 $(".read-more-expander").click(function() {
   event.preventDefault();
   if ($(this).children().first().hasClass('fa-plus-circle')) {
-    $('span').html('Read Less');
+    $(this).children('span').html('Read Less');
   }
   else if ($(this).children().first().hasClass('fa-minus-circle')) {
-   $('span').html('Read More');
+   $(this).children('span').html('Read More');
   }
 });
 
