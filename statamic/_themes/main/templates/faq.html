@@ -1,67 +1,67 @@
 
 <div class="faq-header">
-<div class="container">Frequently Asked Questions</div>
+	<div class="container">Frequently Asked Questions</div>
 </div>
 
 <section class="leading faq">
 	<div class="container">
 		<main class="faq-main">
 
-	<div class="costs">
-		<h2>Closing Costs For Sellers</h2>
-			{{ faq_items }}
-			{{ if type == "seller_set" }}
-			<div class="cost-block">
-				<a class="expander" href=""><i id="summary_icon" class="fa fa-plus-circle"></i><span class="read-more">{{ info_name }}</span></a>
-				<div style="display: none" class="faq_expanded">{{ info_content }}</div>
-			</div>
-			{{ endif }}
-			{{ /faq_items }}
-
-		<h2>Closing Costs For Buyers</h2>
-			{{ faq_items }}
-			{{ if type == "buyer_set" }}
-			<div class="cost-block">
-				<a class="expander" href=""><i id="summary_icon" class="fa fa-plus-circle"></i><span class="read-more">{{ info_name }}</span></a>
-				<div style="display: none" class="faq_expanded">{{ info_content }}</div>
-			</div>
-			{{ endif }}
-			{{ /faq_items }}
-	</div>
-		<h2>What does this mean?</h2>
-	<div class=" faq-list">
-
-		<nav id="faq-nav">
-			<ul class="nav" role="tablist">
+			<div class="costs">
+				<h2>Closing Costs For Sellers</h2>
 				{{ faq_items }}
-				{{ if type == "faq_set" }}  
-				<li>
-					<a href="#{{ letter_group }}" class="scroll faq-link">{{ letter_group }}</a>
-				</li>
+				{{ if type == "seller_set" }}
+				<div class="cost-block">
+					<a class="expander" href=""><i id="summary_icon" class="fa fa-plus-circle"></i><span class="read-more">{{ info_name }}</span></a>
+					<div style="display: none" class="faq_expanded">{{ info_content }}</div>
+				</div>
 				{{ endif }}
 				{{ /faq_items }}
-			</ul>
-		</nav>
-		<div data-spy="scroll" data-target="faq-nav" class="faq-items">
-			{{ faq_items }}
-			{{ if type == "faq_set" }}
-			{{ items }}
-			{{ if first }}
-			<a class="faq-anchor" href="#" id="{{ letter_group }}">{{ letter_group }}</a>
-			{{ endif }}
-			<div class="faq-item">
-				<div class="item-name">{{ item_name }}</div>
-				<div clss="item-definition">{{ item_definition }}</div>
+
+				<h2>Closing Costs For Buyers</h2>
+				{{ faq_items }}
+				{{ if type == "buyer_set" }}
+				<div class="cost-block">
+					<a class="expander" href=""><i id="summary_icon" class="fa fa-plus-circle"></i><span class="read-more">{{ info_name }}</span></a>
+					<div style="display: none" class="faq_expanded">{{ info_content }}</div>
+				</div>
+				{{ endif }}
+				{{ /faq_items }}
 			</div>
-			{{ /items }}
-			{{ endif }}
-			{{ /faq_items }}
-		</div>
-	</div>
+			<h2>What does this mean?</h2>
+			<div class=" faq-list">
+
+				<nav id="faq-nav">
+					<ul class="nav" role="tablist">
+						{{ faq_items }}
+						{{ if type == "faq_set" }}  
+						<li>
+							<a href="#{{ letter_group }}" class="scroll faq-link">{{ letter_group }}</a>
+						</li>
+						{{ endif }}
+						{{ /faq_items }}
+					</ul>
+				</nav>
+				<div data-spy="scroll" data-target="faq-nav" class="faq-items">
+					{{ faq_items }}
+					{{ if type == "faq_set" }}
+					{{ items }}
+					{{ if first }}
+					<a class="faq-anchor" href="#" id="{{ letter_group }}">{{ letter_group }}</a>
+					{{ endif }}
+					<div class="faq-item">
+						<div class="item-name">{{ item_name }}</div>
+						<div clss="item-definition">{{ item_definition }}</div>
+					</div>
+					{{ /items }}
+					{{ endif }}
+					{{ /faq_items }}
+				</div>
+			</div>
 
 		</main>
 
-		<aside class="sticky faq-aside">
+		<aside class="sticky-faq faq-aside">
 			<h3>STILL NEED HELP?</h3>
 			<h4>Don't hesitate to contact us</h4>
 			<ul>

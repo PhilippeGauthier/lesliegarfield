@@ -89,7 +89,7 @@ $(".sticky").stick_in_parent();
 
 // sticky_faq
 $(".sticky-faq").stick_in_parent({
-  offset_top: 100
+  offset_top: 140
 });
 
 // Nav Active Status Toggle
