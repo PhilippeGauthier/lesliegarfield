@@ -16,10 +16,14 @@
 				</li>
 			{{ /reports }}
 			</ul>
-			<a class="expander-next green centered" href=""><i class="fa fa-plus-circle light-gray large"></i><span class="large light-gray">More Reports</span></a>
-			<div style="display: none" class="faq_expanded">{{ info_content }}</div>
+
+			<a class="report-expander expander-next green centered" href="">
+				<i class="fa fa-plus-circle light-gray large"></i>
+				<span class="large light-gray">More Reports</span>
+			</a>
+
 			<ul style="display: none" class="grid-constrained">
-				{{ reports limit="6"}}
+				{{ reports offset="6" }}
 					<li class="grid-3-constrained">
 						<a target="_blank" href="{{ report }}" class="report-tile">
 							<h4>{{ report_date }}</h4>

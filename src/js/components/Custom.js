@@ -9,21 +9,24 @@ var pageWrap = $('.page-wrap');
 // 		pageWrap.addClass('background-gray');
 // }
 
-$( "#summary_expander" ).click(function() {
-	event.preventDefault();
-	if ($('#summary_icon').hasClass('fa-plus-circle')) {
-		$('#summary_icon').removeClass('fa-plus-circle');
-		$('#summary_icon').addClass('fa-minus-circle');
-		$('.read-more').html('Read Less');
-	}
-	else if ($('#summary_icon').hasClass('fa-minus-circle')) {
-		$('#summary_icon').removeClass('fa-minus-circle');
-		$('#summary_icon').addClass('fa-plus-circle');
-		$('.read-more').html('Read More');
-	}
-  $( "#summary_expanded" ).slideToggle( "slow", function() {
+$(".report-expander").click(function() {
+  event.preventDefault();
+  if ($(this).children().first().hasClass('fa-plus-circle')) {
+    $('span').html('Fewer Reports');
+  }
+  else if ($(this).children().first().hasClass('fa-minus-circle')) {
+   $('span').html('More Reports');
+  }
+});
 
-  });
+$(".read-more-expander").click(function() {
+  event.preventDefault();
+  if ($(this).children().first().hasClass('fa-plus-circle')) {
+    $('span').html('Read Less');
+  }
+  else if ($(this).children().first().hasClass('fa-minus-circle')) {
+   $('span').html('Read More');
+  }
 });
 
 $( ".expander-prev" ).click(function() {
@@ -55,6 +58,8 @@ $( ".expander-next" ).click(function() {
 
   });
 });
+
+
 
 
 $('.facebooks').click(function() {
