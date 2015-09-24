@@ -46,7 +46,6 @@
 		}
 		.history-2 {
 			@include span(5 of 12);
-			@include post(1);
 		}
 		p {
 			text-align: left;
