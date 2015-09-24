@@ -43,22 +43,7 @@ a {
   }
 }
 
-img {
-  max-width: 100%;
-}
 
-.centered {
-  margin-left: auto;
-  margin-right: auto;
-  vertical-align: middle;
-  text-align: center;   
-  * {
-    margin-left: auto;
-    margin-right: auto;
-    vertical-align: middle;
-    text-align: center;    
-  }
-}
 
 .background-gray {
   background-color: $background-gray;

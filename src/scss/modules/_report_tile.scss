@@ -1,0 +1,112 @@
+
+.reports {
+	.grid-constrained {
+		@include pre(1.5);
+		@include post(1.5);
+	}
+	.grid-3-constrained:nth-child(6n+1) {
+		.report-tile {
+			$color: #009B77;
+			border-top: 2px solid $color;
+			border-bottom: 2px solid $color;
+			h4, span {
+				color: $color;
+			}
+		}
+	}
+	.grid-3-constrained:nth-child(6n+2) {
+		.report-tile {
+			$color: #a6978a;
+			border-top: 2px solid $color;
+			border-bottom: 2px solid $color;
+			h4, span {
+				color: $color;
+			}
+		}
+	}
+	.grid-3-constrained:nth-child(6n+3) {
+		.report-tile {
+			$color: #f7d880;
+			border-top: 2px solid $color;
+			border-bottom: 2px solid $color;
+			h4, span {
+				color: $color;
+			}
+		}
+	}
+	.grid-3-constrained:nth-child(6n+4) {
+		.report-tile {
+			$color: #86bbe6;
+			border-top: 2px solid $color;
+			border-bottom: 2px solid $color;
+			h4, span {
+				color: $color;
+			}
+		}
+	}
+	.grid-3-constrained:nth-child(6n+5) {
+		.report-tile {
+			$color: #fabcad;
+			border-top: 2px solid $color;
+			border-bottom: 2px solid $color;
+			h4, span {
+				color: $color;
+			}
+		}
+	}
+	.grid-3-constrained:nth-child(6n+6) {
+		.report-tile {
+			$color: #00698c;
+			border-top: 2px solid $color;
+			border-bottom: 2px solid $color;
+			h4, span {
+				color: $color;
+			}
+		}
+	}
+	.expander-next {
+		margin-top: 60px;
+		display: block;
+		&:hover span {
+			color: $text-green;
+		}
+	}
+}
+
+.report-tile {
+	padding: 30px;
+	margin: 10px;
+	background-color: #fff;
+	display: block;
+	border: 1px solid transparent;
+	transition: all 100ms ease;
+	&:hover {
+		background-color: $text-green;
+		border-top: 2px solid $text-green !important;
+		border-bottom: 2px solid $text-green !important;
+		* {
+			color: white !important;
+		}
+	}
+
+
+	h3 {
+		font-family: $header-font-family-medium-italic;
+		font-size: 22px;
+		line-height: 29px;
+		margin-bottom: 60px;
+		margin-top: 10px;
+	}
+	h4 {
+		margin-top: 0;
+		text-transform: uppercase;
+		font-family: $base-font-family;
+		font-weight: 700;
+		font-size: 12px;
+		margin-bottom: 30px;
+	}
+	span {
+		font-size: 12px;
+	}
+}
+

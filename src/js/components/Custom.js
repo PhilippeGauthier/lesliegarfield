@@ -26,7 +26,22 @@ $( "#summary_expander" ).click(function() {
   });
 });
 
-$( ".expander" ).click(function() {
+$( ".expander-prev" ).click(function() {
+  event.preventDefault();
+  if ($(this).children().first().hasClass('fa-plus-circle')) {
+    $(this).children().first().removeClass('fa-plus-circle');
+    $(this).children().first().addClass('fa-minus-circle');
+  }
+  else if ($(this).children().first().hasClass('fa-minus-circle')) {
+    $(this).children().first().removeClass('fa-minus-circle');
+    $(this).children().first().addClass('fa-plus-circle');
+  }
+  $(this).prev().slideToggle( "slow", function() {
+
+  });
+});
+
+$( ".expander-next" ).click(function() {
   event.preventDefault();
   if ($(this).children().first().hasClass('fa-plus-circle')) {
     $(this).children().first().removeClass('fa-plus-circle');

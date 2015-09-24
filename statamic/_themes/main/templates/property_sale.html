@@ -273,9 +273,9 @@
 				{{ if summary_intro|not_empty }}
 				<div class="summary">
 					{{ summary_intro }}
-					<div id="summary_expanded" style="display: none">{{ summary_full }}</div>
+					<div style="display: none">{{ summary_full }}</div>
 					{{ if summary_full }}
-					<a id="summary_expander" href=""><i id="summary_icon" class="fa fa-plus-circle"></i><span class="read-more">Read More</span></a>
+					<a class="expander-prev" href=""><i  class="fa fa-plus-circle green"></i><span class="">Read More</span></a>
 					{{ endif }}
 				</div>
 				{{ endif }}

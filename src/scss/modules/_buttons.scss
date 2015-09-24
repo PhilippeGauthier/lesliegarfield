@@ -19,3 +19,28 @@
 	}
 }
 
+.expander-prev, .expander-next {
+	&.block {
+		display: block;
+	}
+	.green {
+		color: $text-green;
+	}
+	.large {
+		font-size: 19px;
+	}
+	.light-gray {
+		color: #cccccc;
+	}
+	span {
+		font-family: $header-font-medium;
+		margin-left: 10px;
+	}
+	&:hover {
+		i {
+			color: $text-green;
+		}
+	}
+}
+
+

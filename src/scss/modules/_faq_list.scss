@@ -22,10 +22,10 @@
 }
 
 .costs {
-	p, li, span {
+	p {
 		font-family: $header-font-medium;
-		line-height: 30px !important;
-		font-size: 19px !important;
+		line-height: 30px;
+		font-size: 19px;
 		margin: 0;
 	}
 	ul {
@@ -56,24 +56,7 @@
 }
 
 
-.expander {
-	display: block;
-	i {
-		color: $modal-text;
-	}
-	span {
-		font-family: $header-font-medium;
-		color: $text-green;
-		margin-left: 10px;
-		font-size: 19px;
-		line-height: 25px;
-	}
-	&:hover {
-		i {
-			color: $text-green;
-		}
-	}
-}
+
 
 .faq_expanded {
 	p:first-of-type {

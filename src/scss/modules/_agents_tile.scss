@@ -1,6 +1,4 @@
-$agents: (
-	columns: 8
-);
+
 
 .agents {
 	h1,h2 {
@@ -38,14 +36,8 @@ $agents: (
 		font-family: $header-font-medium;
 		font-size: 12px;
 	}
-	@include layout($agents);
-	.grid {
-		@include pre(.5);
-		@include post(.5);
-	}
-	.grid-3-constrained {
-		@include gallery(2 of 6 1);
-		margin-bottom: gutter(1);
+	.grid-3-constrained-padding {
+
 		* {
 			vertical-align: middle;
 		}

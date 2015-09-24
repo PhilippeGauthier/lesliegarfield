@@ -8,6 +8,10 @@ $susy: (
   )
 );
 
+$constrained: (
+	columns: 8
+);
+
 * {
 	box-sizing: border-box;
 }
@@ -30,6 +34,24 @@ body {
 	// margin-bottom: -230px;
 
 }
+
+img {
+  max-width: 100%;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+  text-align: center;   
+  * {
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    text-align: center;    
+  }
+}
+
 .page-wrap {
 	flex: 1;
 	display: flex;
@@ -89,6 +111,23 @@ body {
 
 .grid-4 {
 	@include gallery (4 of 12);
+}
+
+.grid-constrained {
+	@include layout($constrained);
+	@include pre(.5);
+	@include post(.5);
+	@include clearfix;
+}
+
+.grid-3-constrained {
+	@include gallery(2 of 6 0);
+	
+}
+
+.grid-3-constrained-padding {
+	@include gallery(2 of 6 1);
+	margin-bottom: gutter(1);
 }
 
 .stuck {

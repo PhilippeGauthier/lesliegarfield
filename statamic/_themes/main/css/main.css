@@ -1266,6 +1266,21 @@ body {
   margin: 0;
   position: relative; }
 
+img {
+  max-width: 100%; }
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+  text-align: center; }
+
+.centered * {
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+  text-align: center; }
+
 .page-wrap {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -1438,6 +1453,58 @@ head:hover ~ body .container:before {
   margin-right: -100%;
   clear: none; }
 
+.grid-constrained {
+  margin-left: 6.25%;
+  margin-right: 6.25%; }
+
+.grid-constrained:before, .grid-constrained:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.grid-3-constrained {
+  box-sizing: border-box;
+  width: 33.33333%;
+  float: left; }
+
+.grid-3-constrained:nth-child(3n + 1) {
+  margin-left: 0;
+  margin-right: -100%;
+  clear: both; }
+
+.grid-3-constrained:nth-child(3n + 2) {
+  margin-left: 33.33333%;
+  margin-right: -100%;
+  clear: none; }
+
+.grid-3-constrained:nth-child(3n + 3) {
+  margin-left: 66.66667%;
+  margin-right: -100%;
+  clear: none; }
+
+.grid-3-constrained-padding {
+  box-sizing: border-box;
+  width: 33.33333%;
+  float: left;
+  padding-left: 4.16667%;
+  padding-right: 4.16667%;
+  margin-bottom: 10%; }
+
+.grid-3-constrained-padding:nth-child(3n + 1) {
+  margin-left: 0;
+  margin-right: -100%;
+  clear: both; }
+
+.grid-3-constrained-padding:nth-child(3n + 2) {
+  margin-left: 33.33333%;
+  margin-right: -100%;
+  clear: none; }
+
+.grid-3-constrained-padding:nth-child(3n + 3) {
+  margin-left: 66.66667%;
+  margin-right: -100%;
+  clear: none; }
+
 .stuck {
   position: fixed;
   top: 0; }
@@ -1490,7 +1557,7 @@ section.services main {
   padding-right: 0.83333%; }
 
 section.services aside {
-  margin-left: 8.33333%;
+  margin-left: 12.5%;
   box-sizing: border-box;
   width: 41.66667%;
   float: right;
@@ -1507,7 +1574,7 @@ section.faq main {
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%;
-  margin-right: 8.33333%; }
+  margin-right: 12.5%; }
 
 section.faq aside {
   box-sizing: border-box;
@@ -1562,21 +1629,6 @@ a {
 a:hover, a:focus {
   color: #009B77;
   text-decoration: none; }
-
-img {
-  max-width: 100%; }
-
-.centered {
-  margin-left: auto;
-  margin-right: auto;
-  vertical-align: middle;
-  text-align: center; }
-
-.centered * {
-  margin-left: auto;
-  margin-right: auto;
-  vertical-align: middle;
-  text-align: center; }
 
 .background-gray {
   background-color: #F2F2F2; }
@@ -1671,7 +1723,7 @@ p.no_results {
   font-size: 24px;
   margin-top: 60px;
   line-height: 36px;
-  margin-left: 16.66667%;
+  margin-left: 25%;
   box-sizing: border-box;
   width: 66.66667%;
   float: left;
@@ -5021,8 +5073,8 @@ section.services h3 {
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  padding-left: 1.25%;
+  padding-right: 1.25%; }
 
 .property-info .content {
   padding-left: 30px;
@@ -5174,8 +5226,8 @@ section.services h3 {
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  padding-left: 1.25%;
+  padding-right: 1.25%; }
 
 .property-agents .agent-image {
   box-sizing: border-box;
@@ -5267,8 +5319,8 @@ section.services h3 {
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.25%;
+  padding-right: 1.25%;
   margin-top: 30px;
   font-family: "Copernicus-Medium";
   font-size: 16px;
@@ -5535,15 +5587,15 @@ section.services h3 {
   box-sizing: border-box;
   width: 50%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  padding-left: 1.25%;
+  padding-right: 1.25%; }
 
 .green-specs .location_features {
   box-sizing: border-box;
-  width: 41.66667%;
+  width: 62.5%;
   float: right;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  padding-left: 1.25%;
+  padding-right: 1.25%; }
 
 .green-specs .location_features ul:first-of-type {
   margin-bottom: 30px; }
@@ -5810,7 +5862,7 @@ section.services h3 {
   line-height: 28px; }
 
 .company.beliefs, .company.why {
-  margin-left: 25%;
+  margin-left: 37.5%;
   box-sizing: border-box;
   width: 50%;
   float: left;
@@ -5839,7 +5891,7 @@ section.services h3 {
   clear: both; }
 
 .company.history .history-1 {
-  margin-left: 8.33333%;
+  margin-left: 12.5%;
   box-sizing: border-box;
   width: 41.66667%;
   float: left;
@@ -5851,8 +5903,7 @@ section.services h3 {
   width: 41.66667%;
   float: left;
   padding-left: 0.83333%;
-  padding-right: 0.83333%;
-  margin-right: 8.33333%; }
+  padding-right: 0.83333%; }
 
 .company.history p {
   text-align: left; }
@@ -5958,6 +6009,25 @@ section.services h3 {
 .btn-contact:hover {
   background-color: #009B77;
   color: white; }
+
+.expander-prev.block, .expander-next.block {
+  display: block; }
+
+.expander-prev .green, .expander-next .green {
+  color: #009B77; }
+
+.expander-prev .large, .expander-next .large {
+  font-size: 19px; }
+
+.expander-prev .light-gray, .expander-next .light-gray {
+  color: #cccccc; }
+
+.expander-prev span, .expander-next span {
+  font-family: "Copernicus-Medium";
+  margin-left: 10px; }
+
+.expander-prev:hover i, .expander-next:hover i {
+  color: #009B77; }
 
 .email-signup input {
   background-color: #25282A;
@@ -6174,25 +6244,25 @@ section.services h3 {
   clear: both; }
 
 .carousel_tile_1 {
-  margin-left: 33.33333%;
+  margin-left: 50%;
   box-sizing: border-box;
   width: 33.33333%;
   float: left; }
 
 .carousel_tile_1.agent_tile {
-  margin-left: 16.66667%;
+  margin-left: 25%;
   box-sizing: border-box;
   width: 66.66667%;
   float: left; }
 
 .carousel_tile_2 {
-  margin-left: 16.66667%;
+  margin-left: 25%;
   box-sizing: border-box;
   width: 66.66667%;
   float: left; }
 
 .carousel_tile_2.main_tile {
-  margin-left: 6.25%;
+  margin-left: 9.375%;
   box-sizing: border-box;
   width: 87.5%;
   float: left; }
@@ -6363,46 +6433,106 @@ section.services h3 {
   font-family: "Copernicus-Medium";
   font-size: 12px; }
 
-.agents .grid {
-  margin-left: 6.25%;
-  margin-right: 6.25%; }
-
-.agents .grid-3-constrained {
-  box-sizing: border-box;
-  width: 33.33333%;
-  float: left;
-  padding-left: 4.16667%;
-  padding-right: 4.16667%;
-  margin-bottom: 10%; }
-
-.agents .grid-3-constrained:nth-child(3n + 1) {
-  margin-left: 0;
-  margin-right: -100%;
-  clear: both; }
-
-.agents .grid-3-constrained:nth-child(3n + 2) {
-  margin-left: 33.33333%;
-  margin-right: -100%;
-  clear: none; }
-
-.agents .grid-3-constrained:nth-child(3n + 3) {
-  margin-left: 66.66667%;
-  margin-right: -100%;
-  clear: none; }
-
-.agents .grid-3-constrained * {
+.agents .grid-3-constrained-padding * {
   vertical-align: middle; }
 
-.agents .grid-3-constrained img {
+.agents .grid-3-constrained-padding img {
   max-width: 200px; }
 
-.agents .grid-3-constrained svg {
+.agents .grid-3-constrained-padding svg {
   width: 20px;
   height: 20px;
   margin: 0; }
 
-.agents .grid-3-constrained p {
+.agents .grid-3-constrained-padding p {
   margin-bottom: 10px; }
+
+.reports .grid-constrained {
+  margin-left: 18.75%;
+  margin-right: 18.75%; }
+
+.reports .grid-3-constrained:nth-child(6n+1) .report-tile {
+  border-top: 2px solid #009B77;
+  border-bottom: 2px solid #009B77; }
+
+.reports .grid-3-constrained:nth-child(6n+1) .report-tile h4, .reports .grid-3-constrained:nth-child(6n+1) .report-tile span {
+  color: #009B77; }
+
+.reports .grid-3-constrained:nth-child(6n+2) .report-tile {
+  border-top: 2px solid #a6978a;
+  border-bottom: 2px solid #a6978a; }
+
+.reports .grid-3-constrained:nth-child(6n+2) .report-tile h4, .reports .grid-3-constrained:nth-child(6n+2) .report-tile span {
+  color: #a6978a; }
+
+.reports .grid-3-constrained:nth-child(6n+3) .report-tile {
+  border-top: 2px solid #f7d880;
+  border-bottom: 2px solid #f7d880; }
+
+.reports .grid-3-constrained:nth-child(6n+3) .report-tile h4, .reports .grid-3-constrained:nth-child(6n+3) .report-tile span {
+  color: #f7d880; }
+
+.reports .grid-3-constrained:nth-child(6n+4) .report-tile {
+  border-top: 2px solid #86bbe6;
+  border-bottom: 2px solid #86bbe6; }
+
+.reports .grid-3-constrained:nth-child(6n+4) .report-tile h4, .reports .grid-3-constrained:nth-child(6n+4) .report-tile span {
+  color: #86bbe6; }
+
+.reports .grid-3-constrained:nth-child(6n+5) .report-tile {
+  border-top: 2px solid #fabcad;
+  border-bottom: 2px solid #fabcad; }
+
+.reports .grid-3-constrained:nth-child(6n+5) .report-tile h4, .reports .grid-3-constrained:nth-child(6n+5) .report-tile span {
+  color: #fabcad; }
+
+.reports .grid-3-constrained:nth-child(6n+6) .report-tile {
+  border-top: 2px solid #00698c;
+  border-bottom: 2px solid #00698c; }
+
+.reports .grid-3-constrained:nth-child(6n+6) .report-tile h4, .reports .grid-3-constrained:nth-child(6n+6) .report-tile span {
+  color: #00698c; }
+
+.reports .expander-next {
+  margin-top: 60px;
+  display: block; }
+
+.reports .expander-next:hover span {
+  color: #009B77; }
+
+.report-tile {
+  padding: 30px;
+  margin: 10px;
+  background-color: #fff;
+  display: block;
+  border: 1px solid transparent;
+  transition: all 100ms ease; }
+
+.report-tile:hover {
+  background-color: #009B77;
+  border-top: 2px solid #009B77 !important;
+  border-bottom: 2px solid #009B77 !important; }
+
+.report-tile:hover * {
+  color: white !important; }
+
+.report-tile h3 {
+  font-family: "Copernicus-MediumItalic";
+  font-size: 22px;
+  line-height: 29px;
+  margin-bottom: 60px;
+  margin-top: 10px; }
+
+.report-tile h4 {
+  margin-top: 0;
+  text-transform: uppercase;
+  font-family: Arial, "Lucida Grande", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 30px; }
+
+.report-tile span {
+  font-size: 12px; }
 
 .quote, .person, .description {
   text-align: center; }
@@ -6493,10 +6623,10 @@ section.services h3 {
   line-height: 46px;
   margin: 20px 0; }
 
-.costs p, .costs li, .costs span {
+.costs p {
   font-family: "Copernicus-Medium";
-  line-height: 30px !important;
-  font-size: 19px !important;
+  line-height: 30px;
+  font-size: 19px;
   margin: 0; }
 
 .costs ul {
@@ -6517,22 +6647,6 @@ section.services h3 {
 #faq-nav {
   margin-top: 30px;
   padding-bottom: 15px; }
-
-.expander {
-  display: block; }
-
-.expander i {
-  color: #CCCCCC; }
-
-.expander span {
-  font-family: "Copernicus-Medium";
-  color: #009B77;
-  margin-left: 10px;
-  font-size: 19px;
-  line-height: 25px; }
-
-.expander:hover i {
-  color: #009B77; }
 
 .faq_expanded p:first-of-type {
   margin-top: 20px; }
