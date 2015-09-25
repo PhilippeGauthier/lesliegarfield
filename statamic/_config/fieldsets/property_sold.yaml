@@ -14,14 +14,11 @@ fields:
   sold:
     default: true
     hide: true
-  sold_price:
+  price:
     type: text
     display: Sale Price
     instructions:
       above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
-  sold_date:
-    type: date
-    display: Sell Date
   agents:
     display: Agents
     type: suggest

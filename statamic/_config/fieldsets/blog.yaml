@@ -9,7 +9,7 @@ fields:
 		display: Featured?
 		default: false
 	authors:
-		type: suggest
+		type: suggest 
 		display: author
 		create: true
 		taxonomy:

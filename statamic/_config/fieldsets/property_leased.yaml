@@ -12,7 +12,7 @@ fields:
   leased:
     display: Leased?
     type: checkbox
-  lease_price:
+  price:
     type: text
     display: Lease Price
     instructions:

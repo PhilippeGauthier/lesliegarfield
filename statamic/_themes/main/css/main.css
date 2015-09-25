@@ -5592,10 +5592,10 @@ section.services h3 {
 
 .green-specs .location_features {
   box-sizing: border-box;
-  width: 62.5%;
+  width: 50%;
   float: right;
-  padding-left: 1.25%;
-  padding-right: 1.25%; }
+  padding-left: 0.83333%;
+  padding-right: 0.83333%; }
 
 .green-specs .location_features ul:first-of-type {
   margin-bottom: 30px; }
@@ -5862,7 +5862,7 @@ section.services h3 {
   line-height: 28px; }
 
 .company.beliefs, .company.why {
-  margin-left: 37.5%;
+  margin-left: 25%;
   box-sizing: border-box;
   width: 50%;
   float: left;
@@ -6175,7 +6175,7 @@ section.services h3 {
   width: 49.38272%;
   float: left;
   margin-bottom: 1.66667%;
-  padding: 10px 5px;
+  padding: 10px 10px;
   border: 1px solid #25282A;
   border-radius: 2px;
   font-family: "Copernicus-Medium";
@@ -6306,6 +6306,9 @@ section.services h3 {
   max-height: 300px;
   margin-bottom: 10px; }
 
+.landing-sub-nav a:hover .sub-title {
+  color: #009B77; }
+
 .tile-container {
   padding-top: 60px; }
 
@@ -6418,7 +6421,7 @@ section.services h3 {
 
 .property_box .bottom-info p {
   margin-bottom: 0;
-  color: #FF0000;
+  color: #CCCCCC;
   font-size: 17px; }
 
 .neighborhood-tile {
@@ -6447,6 +6450,7 @@ section.services h3 {
 
 .insight-tile {
   display: block;
+  margin-top: 60px;
   padding: 30px;
   color: #25282A; }
 

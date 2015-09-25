@@ -58,17 +58,12 @@ fields:
     type: text
     display: Open House Details
     instructions: "Enter details only such as "Tuesday, 9/6 10:00am - 1:00PM""
+  in_contract:
+    display: In Contract?
+    type: checkbox
   sold:
     display: Sold?
     type: checkbox
-  sold_price:
-    type: text
-    display: Sale Price
-    instructions:
-      above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
-  sold_date:
-    type: date
-    display: Sell Date
   agents:
     display: Agents
     type: suggest

@@ -40,7 +40,7 @@
 	input {
 		@include gallery(1 of 2 after .025);
 		margin-bottom: gutter(6);
-		padding: 10px 5px;
+		padding: 10px 10px;
 		border: 1px solid $dark-gray;
 		border-radius: 2px;
 		font-family: $header-font-medium;

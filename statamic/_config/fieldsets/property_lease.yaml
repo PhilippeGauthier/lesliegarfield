@@ -62,14 +62,12 @@ fields:
     type: text
     display: Open House Details
     instructions: "Enter details only such as "Tuesday, 9/6 10:00am - 1:00PM""
+  in_contract:
+    display: In Contract?
+    type: checkbox
   leased:
     display: Rented?
     type: checkbox
-  lease_price:
-    type: text
-    display: Rented Price
-    instructions:
-      above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
   agents:
     display: Agents
     type: suggest

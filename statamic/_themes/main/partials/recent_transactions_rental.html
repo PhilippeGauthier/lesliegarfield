@@ -26,11 +26,12 @@
 	<li class="transaction-details">{{ property_type }}</li>
 	<li class="transaction-details">{{ property_location }}</li>
 	<li class="transaction-details">
-	{{ if lease_price|not_empty }}
+<!-- 	{{ if lease_price|not_empty }}
 	${{ lease_price|format_number }}
 	{{ else }}
 	Undisclosed
-	{{ endif }}
+	{{ endif }} -->
+	${{ price|format_number }}
 	</li>
 	</ul>
 	{{ if last }}

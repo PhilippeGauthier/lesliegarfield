@@ -19,7 +19,7 @@
 		line-height: 28px;
 	}
 	&.beliefs, &.why {
-		@include pre(3);
+		@include pre(3 of 12);
 		@include span (6 of 12);
 	}
 	&.history {

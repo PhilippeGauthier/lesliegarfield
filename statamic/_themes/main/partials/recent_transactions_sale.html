@@ -27,11 +27,12 @@
 	<li class="transaction-details">{{ property_type }}</li>
 	<li class="transaction-details">{{ property_location }}</li>
 	<li class="transaction-details">
-	{{ if sold_price|not_empty }}
+<!-- 	{{ if sold_price|not_empty }}
 	${{ sold_price|format_number }}
 	{{ else }}
 	Undisclosed
-	{{ endif }}
+	{{ endif }} -->
+	${{ price|format_number }}
 	</li>
 	</ul>
 	{{ if last }}

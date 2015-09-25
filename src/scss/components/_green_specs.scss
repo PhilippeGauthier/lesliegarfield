@@ -32,7 +32,7 @@
 			}
 		}
 		.location_features {
-			@include span (last 5);
+			@include span (last 6 of 12);
 			ul:first-of-type {
 				margin-bottom: 30px;
 			}
