@@ -1,0 +1,41 @@
+.blog {
+	text-align: center;
+	span {
+		text-transform: uppercase;
+	}
+	a {
+		color: blue;
+	}
+	.blog-container {
+		@include clearfix;
+		position: relative;
+	}
+	.full-width {
+		background-color: #f7d880;
+		@include span(full);
+		@include clearfix;
+	}
+	.news-left, .news-right {
+		background-color: #fff;
+	}
+	.news-left {
+		@include span (8 of 12);
+	}
+	.news-right {
+		@include span (4 of 12);
+	}
+	.partial {
+		@include span(full);
+		@include clearfix;
+		&.entry {
+			@include span(8 of 12);
+		}
+		background-color: #86bbe6;
+		display: inline-block;
+	}
+	.authors {
+		@include span(last 4 of 12);
+		background-color: #fabcad;
+	}
+}
+

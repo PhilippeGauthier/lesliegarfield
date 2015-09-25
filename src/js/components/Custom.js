@@ -59,9 +59,6 @@ $( ".expander-next" ).click(function() {
   });
 });
 
-
-
-
 $('.facebooks').click(function() {
 	event.preventDefault();
 	FB.ui(

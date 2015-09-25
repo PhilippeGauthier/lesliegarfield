@@ -1,0 +1,63 @@
+<div class="blog">
+
+	
+	<section class="leading">
+		<div class="container">
+
+			<div class="blog-container">
+				{{ entries:listing folder="blog" limit="3" }}
+					{{ if get:page <= "1" && zero_index == "0" }}
+					<div class="full-width">Blog post <span>{{ title }}</span></div>
+					<div class="news-left">Latest News</div>
+					<div class="news-right">Authors</div>
+					{{ else }}
+					{{ if get:page <= "1" && zero_index == "1" }}
+					<div class="partial entry">Blog post <span>{{ title }}</span></div>
+						<div class="authors">
+				    {{ taxonomy:listing type="authors" folder="blog"}}
+				        <li><a href="{{ url }}">{{ name }}</a></li>     
+				    {{ /taxonomy:listing }}
+					</div>
+					{{ else }}
+					{{ if get:page > "1" && zero_index == "0" }}
+					<div class="author-headers">
+						<div class="news-left">Latest News</div>
+						<div class="news-right">Authors</div>
+					</div>
+					<div class="partial entry">Blog post <span>{{ title }}</span></div>
+						<div class="authors">
+				    {{ taxonomy:listing type="authors" folder="blog"}}
+				        <li><a href="{{ url }}">{{ name }}</a></li>     
+				    {{ /taxonomy:listing }}
+					</div>
+					{{ else }}
+					<div class="partial entry">Blog post <span>{{ title }}</span></div>
+					{{ endif }}
+					{{ endif }}
+					{{ endif }}
+				{{ /entries:listing }}
+			</div>
+		</div>
+	</section>
+	
+
+	
+	<div class="container">
+		{{ entries:pagination folder="blog" limit="3" }}
+		{{ if next_page || previous_page }}
+		<div class="pagination clearfix">
+			{{ if next_page }}
+			<a href="{{ next_page }}" class="older">Older Posts</a>
+			{{ endif }}
+			{{ if previous_page }}
+			<a href="{{ previous_page }}" class="newer">Newer Posts</a>
+			{{ endif }}
+		</div>
+		{{ endif }}
+		{{ /entries:pagination }}
+	</div>
+</div>
+
+<div class="blog-foo">
+
+</div>

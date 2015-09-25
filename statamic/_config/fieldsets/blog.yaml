@@ -1,0 +1,17 @@
+title: Blog
+fields:
+	preview_image:
+		type: file
+		display: Preview Image
+		destination: assets/img/blog
+	featured:
+		type: checkbox
+		display: Featured?
+		default: false
+	authors:
+		type: suggest
+		display: author
+		create: true
+		taxonomy:
+			type: authors
+			folder: blog
