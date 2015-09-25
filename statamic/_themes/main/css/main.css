@@ -1630,6 +1630,9 @@ a:hover, a:focus {
   color: #009B77;
   text-decoration: none; }
 
+.red {
+  color: #FF0000; }
+
 .background-gray {
   background-color: #F2F2F2; }
 
@@ -1668,9 +1671,6 @@ a:hover, a:focus {
 
 .preview-image {
   background-size: cover; }
-
-.highlight * {
-  font-family: "Copernicus-Semibold"; }
 
 @font-face {
   font-family: 'Copernicus-Medium';
@@ -5103,28 +5103,22 @@ section.services h3 {
   padding-right: 1.11111%; }
 
 .property-info .property-header .social {
+  height: 63px;
   box-sizing: border-box;
   width: 22.22222%;
   float: right;
   padding-left: 1.11111%;
-  padding-right: 1.11111%;
-  height: 63px; }
+  padding-right: 1.11111%; }
 
 .property-info .property-header .social a {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
   float: right;
-  margin-left: 10px;
-  vertical-align: middle; }
+  margin-left: 10px; }
 
-.property-info .property-header .social .fa-circle {
-  color: transparent;
+.property-info .property-header .social a .fa-circle {
   border: 1px solid #999999;
-  border-radius: 50%; }
+  height: 43px; }
 
-.property-info .property-header .social .fa-inverse {
+.property-info .property-header .social a .fa-inverse {
   color: #999999; }
 
 .property-info .property-header span {
@@ -5176,8 +5170,11 @@ section.services h3 {
   bottom: 0;
   font-family: "Copernicus-Medium";
   font-size: 13px;
-  color: #FF0000;
-  padding-top: 4px; }
+  padding-top: 4px;
+  color: #CCCCCC; }
+
+.property-info .property-subheader .open-house span.red {
+  color: #FF0000; }
 
 .dotted {
   border-bottom: 1px dotted #999999;
@@ -5326,16 +5323,21 @@ section.services h3 {
   font-size: 16px;
   line-height: 24px; }
 
-.summary #summary_expander i {
+.summary .small {
+  font-size: 12px;
+  color: #b3b3b3;
+  line-height: 15px; }
+
+.summary .read-more-expander i {
   color: #25282A; }
 
-.summary #summary_expander span {
+.summary .read-more-expander span {
   font-family: "Copernicus-Medium";
   font-size: 16px;
   line-height: 24px;
   margin-left: 5px; }
 
-.summary #summary_expander:hover span, .summary #summary_expander:hover i {
+.summary .read-more-expander:hover span, .summary .read-more-expander:hover i {
   color: #009B77; }
 
 .agent-individual aside {
@@ -5939,15 +5941,13 @@ section.services h3 {
   display: table;
   clear: both; }
 
-.blog .full-width {
-  background-color: #f7d880;
+.blog .featured {
+  background-color: #e4f4f1;
   box-sizing: border-box;
   width: 100%;
-  float: left;
-  padding-left: 1.25%;
-  padding-right: 1.25%; }
+  float: left; }
 
-.blog .full-width:before, .blog .full-width:after {
+.blog .featured:before, .blog .featured:after {
   content: "";
   display: table;
   clear: both; }
@@ -5997,6 +5997,22 @@ section.services h3 {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
   background-color: #fabcad; }
+
+.blog .entry .date, .blog .entry .author {
+  text-transform: none;
+  font-family: "Copernicus-ExtraBold";
+  font-size: 14px; }
+
+.blog .entry .author {
+  color: #009B77; }
+
+.blog .entry p {
+  line-height: 28px; }
+
+.blog .entry .read-more {
+  font-size: 16px;
+  font-family: "Copernicus-MediumItalic";
+  color: #009B77; }
 
 .hero {
   height: 600px;
@@ -6335,7 +6351,7 @@ section.services h3 {
   float: left; }
 
 .carousel_tile_2 {
-  margin-left: 25%;
+  margin-left: 16.66667%;
   box-sizing: border-box;
   width: 66.66667%;
   float: left; }
@@ -6395,6 +6411,9 @@ section.services h3 {
 .property_box .property_tile_info h2, .property_box .property_tile_info h3, .property_box .property_tile_info p {
   font-family: "Copernicus-MediumItalic"; }
 
+.property_box .property_tile_info span {
+  font-family: "Copernicus-Semibold"; }
+
 .property_box .property_tile_info h3, .property_box .property_tile_info h4 {
   font-size: 15px;
   line-height: 22px; }
@@ -6419,10 +6438,15 @@ section.services h3 {
 .property_box:hover h3, .property_box:hover h4, .property_box:focus h3, .property_box:focus h4 {
   color: #25282A; }
 
-.property_box .bottom-info p {
+.property_box .bottom-info {
+  font-family: "Copernicus-MediumItalic" !important;
   margin-bottom: 0;
   color: #CCCCCC;
   font-size: 17px; }
+
+.property_box .bottom-info .red {
+  color: #FF0000;
+  font-family: "Copernicus-MediumItalic" !important; }
 
 .neighborhood-tile {
   padding: 10px;
@@ -6772,3 +6796,49 @@ section.faq {
   padding: 0 !important;
   height: 0 !important;
   visibility: hidden !important; }
+
+.featured {
+  height: 400px;
+  text-align: left; }
+
+.featured h3 {
+  color: #009B77;
+  margin-top: 0;
+  font-family: "Copernicus-Medium"; }
+
+.featured h2 {
+  font-family: "Copernicus-MediumItalic";
+  font-size: 34px;
+  line-height: 43px; }
+
+.featured-image {
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  height: 400px;
+  background-size: cover; }
+
+.post-details {
+  box-sizing: border-box;
+  width: 50%;
+  float: right;
+  padding: 30px;
+  padding-right: 100px; }
+
+.social {
+  margin-top: 20px; }
+
+.social a {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  font-size: 12px; }
+
+.social .fa-circle {
+  color: transparent;
+  border: 1px solid #009B77;
+  border-radius: 50%;
+  height: 32px; }
+
+.social .fa-inverse {
+  color: #009B77; }

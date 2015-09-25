@@ -1,13 +1,12 @@
-<div class="blog">
-
-	
+<div class="blog">	
 	<section class="leading">
 		<div class="container">
 
 			<div class="blog-container">
 				{{ entries:listing folder="blog" limit="3" }}
 					{{ if get:page <= "1" && zero_index == "0" }}
-					<div class="full-width">Blog post <span>{{ title }}</span></div>
+					{{ theme:partial src="featured_post" use_context="true" }}
+
 					<div class="news-left">Latest News</div>
 					<div class="news-right">Authors</div>
 					{{ else }}

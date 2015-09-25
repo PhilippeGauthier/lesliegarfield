@@ -1,0 +1,19 @@
+		.social {
+			
+			margin-top: 20px;
+			a {
+				display: inline-block;
+				margin-right: 10px;
+				vertical-align: middle;
+				font-size: 12px;
+			}
+			.fa-circle {
+				color: transparent;
+				border: 1px solid $text-green;
+				border-radius: 50%;
+				height: 32px;
+			}
+			.fa-inverse {
+				color: $text-green;
+			}
+		}

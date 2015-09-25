@@ -32,7 +32,7 @@
 	}
 }
 .carousel_tile_2 {
-	@include pre(2);
+	@include pre(2 of 12);
 	@include span(8 of 12 no-gutter);
 	&.main_tile {
 		@include pre(.75);
@@ -70,6 +70,9 @@
 		h2,h3, p {
 			font-family: $header-font-family-medium-italic;
 		}
+		span {
+			font-family: $header-font-family;
+		}
 		h3,h4 {
 			font-size: 15px;
 			line-height: 22px;
@@ -97,10 +100,13 @@
 		transition: .25s;
 	}
 	.bottom-info {
-		p {
-			margin-bottom: 0;
-			color: $modal-text;
-			font-size: 17px;
+		font-family: $header-font-family-medium-italic !important;
+		margin-bottom: 0;
+		color: $modal-text;
+		font-size: 17px;
+		.red {
+			color: $red;
+			font-family: $header-font-family-medium-italic !important;
 		}
 	}
 }

@@ -43,21 +43,18 @@
 			@include span (7 of 9);
 		}
 		.social {
-			@include span (last 2 of 9);
 			height: 63px;
+			@include span (last 2 of 9);
 			a {
-				@include vertical-align;
 				float: right;
 				margin-left: 10px;
-				vertical-align: middle;
-			}
-			.fa-circle {
-				color: transparent;
-				border: 1px solid $light-font-color;
-				border-radius: 50%;
-			}
-			.fa-inverse {
-				color: $light-font-color;
+				.fa-circle {
+					border: 1px solid $light-font-color;
+					height: 43px;
+				}
+				.fa-inverse {
+					color: $light-font-color;
+				}
 			}
 		}
 		span {
@@ -87,11 +84,14 @@
 			justify-content: flex-end;
 			span {
 				text-align: right;
-			bottom: 0;
-			font-family: $header-font-medium;
-			font-size: 13px;
-			color: $red;		
-			padding-top: 4px;
+				bottom: 0;
+				font-family: $header-font-medium;
+				font-size: 13px;	
+				padding-top: 4px;
+				color: $modal-text;
+				&.red {
+					color: $red;
+				}
 			}
 
 		}
@@ -222,7 +222,12 @@
 	font-family: $header-font-medium;
 	font-size: 16px;
 	line-height: 24px;
-	#summary_expander {
+	.small {
+		font-size: 12px;
+		color: darken($modal-text,10%);
+		line-height: 15px;
+	}
+	.read-more-expander {
 		i {
 			color: $dark-gray;
 		}

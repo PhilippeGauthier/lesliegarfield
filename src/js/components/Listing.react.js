@@ -34,7 +34,9 @@ var Listing = React.createClass({
     if (listing.leased ==1) {
       listing.bottom_info = 'Leased';
     }
-
+    if (listing.in_contract ==1) {
+      listing.bottom_info_contract = 'In Contract';
+    }
     return (
       <li className='grid-item property_tile'>
         <a href={listingURL} className='property_box'>
@@ -55,7 +57,8 @@ var Listing = React.createClass({
               <h4>{listing.property_location}</h4>
             </div>
             <div className='bottom-info'>
-              <p>{listing.bottom_info}</p>
+              <div>{listing.bottom_info}</div>
+              <div className='red'>{listing.bottom_info_contract}</div>
             </div>
           </div>
         </a>

@@ -82,11 +82,13 @@
 					<div class="open-house">
 						{{ if sold }}
 						<span>SOLD</span>
+						{{ elseif in_contract }}
+						<span>In Contract</span>
 						{{ elseif openhouse }}
 						{{ if openhouse_details }}
-						<span>Open House: {{ openhouse_details }}</span>
+						<span class="red">Open House: {{ openhouse_details }}</span>
 						{{ else }}
-						<span>Open House: Enquire for Details</span>
+						<span class="red">Open House: Enquire for Details</span>
 						{{ endif }}
 						{{ endif }}
 					</div>				
@@ -117,7 +119,15 @@
 							{{ endif }}
 
 							{{ if building_size|not_empty }}
-							<li>Building Size</li>
+							<li>Building</li>
+							{{ endif }}
+
+							{{ if ownership|not_empty }}
+							<li>Ownership</li>
+							{{ endif }}
+
+							{{ if build_date|not_empty }}
+							<li>Built</li>
 							{{ endif }}
 
 							{{ if stories|not_empty }}
@@ -126,10 +136,6 @@
 
 							{{ if sqft|not_empty }}
 							<li>Square Feet</li>
-							{{ endif }}
-
-							{{ if build_date|not_empty }}
-							<li>Build Date</li>
 							{{ endif }}
 
 							{{ if units|not_empty }}
@@ -191,16 +197,20 @@
 							<li>{{ building_size }}</li>
 							{{ endif }}
 
+							{{ if ownership|not_empty }}
+							<li>{{ ownership}}</li>
+							{{ endif }}
+
+							{{ if build_date|not_empty }}
+							<li>{{ build_date }}</li>
+							{{ endif }}
+
 							{{ if stories|not_empty }}
 							<li>{{ stories }}</li>
 							{{ endif }}
 
 							{{ if sqft|not_empty }}
 							<li>{{ sqft|format_number }} ft<sup>2</sup></li>
-							{{ endif }}
-
-							{{ if build_date|not_empty }}
-							<li>{{ build_date }}</li>
 							{{ endif }}
 
 							{{ if units|not_empty }}
@@ -273,7 +283,15 @@
 				{{ if summary_intro|not_empty }}
 				<div class="summary">
 					{{ summary_intro }}
-					<div style="display: none">{{ summary_full }}</div>
+					<div style="display: none">
+						{{ summary_full }}
+						<p class="small">
+							All information regarding property for sale, rental or financing is from sources deemed reliable, no representation is made, or is to be implied. As to the accuracy thereof and it is submitted subject to errors, omissions, change of price, rental or other conditions, prior sale, lease or financing, or withdrawal without notice.
+						</p>
+						<p class="small">
+							The information contained herein has either been given to us by the owner of the property or obtained from sources that we deem reliable. We have no reason to doubt its accuracy but we do not guarantee it. All zoning, buildable footages and uses must be independently verified. The value of this investment is dependent on these estimates and assumptions made above, as well as the investment income, the tax bracket, and other factors which you tax advisor and/or legal counsel should evaluate. The prospective buyer should carefully verify each item of income, and all other information herein.
+						</p>
+					</div>
 					{{ if summary_full }}
 					<a class="read-more-expander expander-prev" href=""><i  class="fa fa-plus-circle green"></i><span>Read More</span></a>
 					{{ endif }}

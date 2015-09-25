@@ -1,0 +1,25 @@
+.featured {
+	height: 400px;
+	text-align: left;
+	h3 {
+		color: $text-green;
+		margin-top: 0;
+		font-family: $header-font-medium;
+	}
+	h2 {
+		font-family: $header-font-family-medium-italic;
+		font-size: 34px;
+		line-height: 43px;
+	}
+}
+
+.featured-image {
+	@include span (6 of 12 no-gutter);
+	height: 400px;
+	background-size: cover;
+}
+.post-details {
+	@include span(last 6 of 12 no-gutter);
+	padding: 30px;
+	padding-right: 100px;
+}

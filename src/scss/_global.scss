@@ -43,7 +43,9 @@ a {
   }
 }
 
-
+.red {
+  color: $red;
+}
 
 .background-gray {
   background-color: $background-gray;
@@ -94,6 +96,6 @@ a {
   background-size: cover;
 }
 
-.highlight * {
-	font-family: $header-font-family;
-}
+// .highlight * {
+// 	font-family: $header-font-family;
+// }

@@ -29,13 +29,13 @@
 			</div>
 			<div class="bottom-info">
 				{{ if openhouse }}
-				<p>
-					Open House
-				</p>
+				<div class="red">Open House</div>
 				{{ elseif sold }}
-				<p>Sold</p>
+				<div>Sold</div>
 				{{ elseif leased }}
-				<p>Leased</p>
+				<div>Leased</div>
+				{{ elseif in_contract }}
+				<div>In Contract</div>
 				{{ endif }}
 			</div>
 		</div>

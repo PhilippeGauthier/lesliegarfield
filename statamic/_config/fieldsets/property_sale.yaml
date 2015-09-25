@@ -80,15 +80,18 @@ fields:
     taxonomy:
       type: property_type
       folder: properties/*
-  build_date:
-    type: text
-    display: Build Date
   plot:
     type: text
     display: Plot
   building_size:
     type: text
     display: Building Size
+  ownership:
+    type: text
+    display: Ownership (condo, coop, etc);
+  build_date:
+    type: text
+    display: Build Date
   stories:
     type: text
     display: Stories
