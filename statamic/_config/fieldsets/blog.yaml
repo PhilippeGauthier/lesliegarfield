@@ -4,13 +4,9 @@ fields:
 		type: file
 		display: Preview Image
 		destination: assets/img/blog
-	featured:
-		type: checkbox
-		display: Featured?
-		default: false
 	authors:
 		type: suggest 
-		display: author
+		display: Author
 		create: true
 		taxonomy:
 			type: authors

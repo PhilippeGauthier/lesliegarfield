@@ -1,8 +1,9 @@
 <div class="featured entry">
-	<div class="featured-image" style="background-image: url( {{ path src="{{ main_image }}" }} );"></div>
+
+	<a href="{{ url }}" class="featured-image" style="background-image: url( {{ path src="{{ main_image }}" }} );"><div class="mask"></div></a>
 	<div class="post-details">
 		<h3>FEATURED POST</h3>
-		<h2>{{ title}}</h2>
+		<a href=""><h2>{{ title}}</h2></a>
 		<span class="date">Posted {{ date }} by </span>
 		<a href="{{ _site_root}}blog/authors/{{ authors }}{{ value }}{{/authors}}"class="author">
 		{{ authors }}{{ value }}{{/authors}}</a>

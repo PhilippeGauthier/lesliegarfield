@@ -1,10 +1,6 @@
 .blog {
-	text-align: center;
 	span {
 		text-transform: uppercase;
-	}
-	a {
-		color: blue;
 	}
 	.blog-container {
 		@include clearfix;
@@ -18,34 +14,58 @@
 	.news-left, .news-right {
 		background-color: #fff;
 	}
-	.news-left {
-		@include span (8 of 12);
+	.blog-left {
+		@include span (7 of 12 after);
 	}
-	.news-right {
-		@include span (4 of 12);
+	.blog-right {
+		@include span (last 4 of 12 after);
 	}
-	.partial {
-		@include span(full);
+	.entry, .authors {
+		@include span(full no-gutter);
 		@include clearfix;
-		&.entry {
-			@include span(8 of 12);
-		}
-		background-color: #86bbe6;
-		display: inline-block;
 	}
-	.authors {
-		@include span(last 4 of 12);
-		background-color: #fabcad;
+	.blog-header {
+		font-family: $header-font-family;
+		color: $light-font-color;
+		text-transform: uppercase;
+		font-size: 19px;
+		padding-bottom: 30px;
+		border-bottom: 1px solid $dark-gray;
+		margin-bottom: 30px;
+		margin-top: 60px;
+	}
+	.entries {
+		@include span(full no-gutter);
 	}
 	.entry {
+		margin-bottom: 60px;
+		border-bottom: 1px solid $light-font-color;
+		padding-bottom: 60px;
+		@include span(full no-gutter);
+		.preview-image-container {
+			@include span(3 of 7 no-gutter);
+			@include clearfix;
+			position: relative;	
+		}
+		.preview-image {
+			width: 100%;
+			padding-top: 100%;
+			display: block;
+			position: relative;
+		}
 		.date,.author {
 			text-transform: none;
 			font-family: $header-font-extra-bold;
 			font-size: 14px;
 		}
 		.author {
-
 			color: $text-green;
+		}
+		.preview {
+			@include span(last 4 of 7);
+		}
+		h2 {
+			margin-top: 0;
 		}
 		p {
 			line-height: 28px;

@@ -17,6 +17,18 @@
 	@include span (6 of 12 no-gutter);
 	height: 400px;
 	background-size: cover;
+	position: relative;
+	
+	.mask {
+		transition: all .25s;
+		opacity: 0;
+	}
+	&:hover {
+		transition: all .25s;
+		.mask {
+			opacity: 0.2;
+		}
+	}
 }
 .post-details {
 	@include span(last 6 of 12 no-gutter);

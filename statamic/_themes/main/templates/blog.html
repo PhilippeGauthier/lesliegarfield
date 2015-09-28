@@ -3,46 +3,72 @@
 		<div class="container">
 
 			<div class="blog-container">
-				{{ entries:listing folder="blog" limit="3" }}
-					{{ if get:page <= "1" && zero_index == "0" }}
-					{{ theme:partial src="featured_post" use_context="true" }}
 
-					<div class="news-left">Latest News</div>
-					<div class="news-right">Authors</div>
-					{{ else }}
-					{{ if get:page <= "1" && zero_index == "1" }}
-					<div class="partial entry">Blog post <span>{{ title }}</span></div>
-						<div class="authors">
-				    {{ taxonomy:listing type="authors" folder="blog"}}
-				        <li><a href="{{ url }}">{{ name }}</a></li>     
-				    {{ /taxonomy:listing }}
-					</div>
-					{{ else }}
-					{{ if get:page > "1" && zero_index == "0" }}
-					<div class="author-headers">
-						<div class="news-left">Latest News</div>
-						<div class="news-right">Authors</div>
-					</div>
-					<div class="partial entry">Blog post <span>{{ title }}</span></div>
-						<div class="authors">
-				    {{ taxonomy:listing type="authors" folder="blog"}}
-				        <li><a href="{{ url }}">{{ name }}</a></li>     
-				    {{ /taxonomy:listing }}
-					</div>
-					{{ else }}
-					<div class="partial entry">Blog post <span>{{ title }}</span></div>
+				{{ entries:listing folder="blog" limit="5" }}
+				{{ if get:page <= "1" && zero_index == "0" }}
+				{{ theme:partial src="featured_post" use_context="true" }}
+				{{ else }}
+
+				{{ if get:page <= "1" && zero_index == "1" || get:page > "1" && zero_index == "0"}}
+				<div class="blog-left">
+					<h2 class="blog-header">Latest News</h2>
+					<div class="entries">
 					{{ endif }}
+					<div class="entry">
+					<div class="preview-image-container">
+						<a href="{{ url }}" class="preview-image" style="background-image: url( {{ path src="{{ main_image }}" }} );"><div class="mask"></div></a>
+					</div>
+						<div class="preview">
+							<a href="{{ url }}"><h2>{{ title }}</h2></a>
+							<span class="date">Posted {{ date }} by </span>
+							<a href="{{ _site_root}}blog/authors/{{ authors }}{{ value }}{{/authors}}"class="author">
+							{{ authors }}{{ value }}{{/authors}}</a>
+							<div class="social">
+								<a href="">
+									<span class="fa-stack fa-lg">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+								<a href="javascript:selectPinImage()">
+									<span target="_blank" class="fa-stack fa-lg">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+								<a href="javascript:fbShare('{{ url }}', 'Fb Share', '{{ url }}', '{{ url }}', 500, 250)">
+									<span  class="fa-stack fa-lg">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+							</div>
+							<div class="truncated">
+								{{ content|truncate:100 }}
+								<a class="read-more" href="{{ url }}">Read More</a>
+							</div>
+						</div>
+					</div>
 					{{ endif }}
-					{{ endif }}
+					{{ if last }}
+				</div>
+				</div>
+				{{ endif }}
 				{{ /entries:listing }}
+				<div class="blog-right">
+					<div class="authors">
+						<h2 class="blog-header">Authors</h2>
+						{{ taxonomy:listing type="authors" folder="blog"}}
+						<li><a href="{{ url }}">{{ name }}</a></li>     
+						{{ /taxonomy:listing }}
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
-	
 
-	
 	<div class="container">
-		{{ entries:pagination folder="blog" limit="3" }}
+		{{ entries:pagination folder="blog" limit="5" }}
 		{{ if next_page || previous_page }}
 		<div class="pagination clearfix">
 			{{ if next_page }}
@@ -55,8 +81,6 @@
 		{{ endif }}
 		{{ /entries:pagination }}
 	</div>
-</div>
-
-<div class="blog-foo">
+	
 
 </div>

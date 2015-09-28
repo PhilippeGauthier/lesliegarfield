@@ -43,14 +43,14 @@
 			@include span (7 of 9);
 		}
 		.social {
-			height: 63px;
+			// height: 63px;
 			@include span (last 2 of 9);
 			a {
 				float: right;
 				margin-left: 10px;
+				margin-right: 0;
 				.fa-circle {
 					border: 1px solid $light-font-color;
-					height: 43px;
 				}
 				.fa-inverse {
 					color: $light-font-color;
