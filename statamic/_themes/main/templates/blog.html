@@ -19,7 +19,7 @@
 						<a href="{{ url }}" class="preview-image" style="background-image: url( {{ path src="{{ main_image }}" }} );"><div class="mask"></div></a>
 					</div>
 						<div class="preview">
-							<a href="{{ url }}"><h2>{{ title }}</h2></a>
+							<a href="{{ url"><h2>{{ title }}</h2></a>
 							<span class="date">Posted {{ date }} by </span>
 							<a href="{{ _site_root}}blog/authors/{{ authors }}{{ value }}{{/authors}}"class="author">
 							{{ authors }}{{ value }}{{/authors}}</a>
@@ -61,6 +61,7 @@
 						{{ taxonomy:listing type="authors" folder="blog"}}
 						<li><a href="{{ url }}">{{ name }}</a></li>     
 						{{ /taxonomy:listing }}
+						
 					</div>
 				</div>
 			</div>
