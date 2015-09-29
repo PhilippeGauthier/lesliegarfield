@@ -34,3 +34,10 @@ fields:
 			link:
 				type: text
 				display: Press Link
+	author:
+		type: checkbox
+		display: Show up in Author Blog List
+	hidden:
+		type: checkbox
+		display: Author only?
+		instructions: Check this if you want to create an author only. Won't show up in Agent list.

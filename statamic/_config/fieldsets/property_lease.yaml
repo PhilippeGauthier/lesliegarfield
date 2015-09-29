@@ -49,9 +49,6 @@ fields:
   location_granular:
     type: text
     display: More detailed location ie Between Fifth and Madison
-  featured:
-    display: Featured Property?
-    type: checkbox
   streeteasy:
     display: Street Easy?
     type: checkbox

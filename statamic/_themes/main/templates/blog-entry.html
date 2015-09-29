@@ -5,14 +5,20 @@
 			<div class="blog-container">
 
 				<div class="blog-left">
+					{{ title }}
 					{{ content}}
 				</div>
 				<div class="blog-right">
 					<div class="authors">
-						<h2 class="blog-header">Authors</h2>
-						{{ taxonomy:listing type="authors" folder="blog"}}
-						<li><a href="{{ url }}">{{ name }}</a></li>     
-						{{ /taxonomy:listing }}
+						<h2 class="blog-header">Author</h2>
+						<ul>
+						{{ relate:author }}
+							<li><a class="author-list" href="{{ _site_root }}blog/authors/{{ title|lower }}">
+							<img class="author-image" src="{{ path src="{{ image }}"}}">
+							{{ title }}
+							</a></li>  
+						{{ /relate:author }}
+						</ul>
 					</div>
 				</div>
 			</div>

@@ -30,7 +30,7 @@
 		text-transform: uppercase;
 		font-size: 19px;
 		padding-bottom: 30px;
-		border-bottom: 1px solid $dark-gray;
+		border-bottom: 1px solid $modal-text;
 		margin-bottom: 30px;
 		margin-top: 60px;
 	}
@@ -42,40 +42,105 @@
 		border-bottom: 1px solid $light-font-color;
 		padding-bottom: 60px;
 		@include span(full no-gutter);
-		.preview-image-container {
-			@include span(3 of 7 no-gutter);
-			@include clearfix;
-			position: relative;	
-		}
-		.preview-image {
+
+	}
+	.preview-image-container {
+		@include span(3 of 7 no-gutter);
+		@include clearfix;
+		position: relative;	
+	}
+	.preview-image, .featured-image {
+		.mask {
+			z-index: 11;
+			background-color: black;
+			height: 100%;
+			transition: all .25s;
+			opacity: 0;
 			width: 100%;
-			padding-top: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+		&:hover {
+			transition: all .25s;
+			.mask {
+				opacity: 0.2;
+			}
+		}
+	}
+	.preview-image {
+		width: 100%;
+		padding-top: 100%;
+		display: block;
+		position: relative;
+		background-position:center;
+	}
+	.date,.author {
+		text-transform: none;
+		font-family: $header-font-extra-bold;
+		font-size: 14px;
+	}
+	.author {
+		color: $text-green;
+	}
+	.authors {
+		li {
 			display: block;
-			position: relative;
-			background-position:center;
+			a {
+				font-family: $header-font-extra-bold;
+				font-size: 15px;				
+			}
 		}
-		.date,.author {
-			text-transform: none;
-			font-family: $header-font-extra-bold;
-			font-size: 14px;
+	}
+	.preview {
+		@include span(last 4 of 7);
+		.divider {
+			height: 1px;
+			width: 60px;
+			display: block;
+			margin: 20px 0;
+			background-color: $modal-text;
 		}
-		.author {
-			color: $text-green;
+		.social .fa-circle {
+			border: 1px solid $modal-text;
 		}
-		.preview {
-			@include span(last 4 of 7);
+		.social .fa-inverse {
+			color: $modal-text;
 		}
 		h2 {
-			margin-top: 0;
-		}
-		p {
-			line-height: 28px;
-		}
-		.read-more {
-			font-size: 16px;
 			font-family: $header-font-family-medium-italic;
-			color: $text-green;
+			font-size: 24px;
+			line-height: 30px;
 		}
+	}
+	h2 {
+		margin-top: 0;
+	}
+	p {
+		line-height: 28px;
+	}
+	.read-more {
+		font-size: 16px;
+		font-family: $header-font-family-medium-italic;
+		color: $text-green;
+	}
+	.author-list {
+		@include flex-hor;
+		margin-bottom: 20px;
+
+	}
+	.author-image {
+		margin-right: 10px;
+		border-radius: 50%;
+		height: 60px;
+		width: 60px;
 	}
 }
 
+.featured-image {
+	background-size: cover;
+	position: relative;
+	background-position: center;
+}

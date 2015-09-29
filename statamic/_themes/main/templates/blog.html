@@ -19,7 +19,8 @@
 						<a href="{{ url }}" class="preview-image" style="background-image: url( {{ path src="{{ main_image }}" }} );"><div class="mask"></div></a>
 					</div>
 						<div class="preview">
-							<a href="{{ url"><h2>{{ title }}</h2></a>
+							<a href="{{ url }}"><h2>{{ title }}</h2></a>
+							<div class="divider"></div>
 							<span class="date">Posted {{ date }} by </span>
 							<a href="{{ _site_root}}blog/authors/{{ authors }}{{ value }}{{/authors}}"class="author">
 							{{ authors }}{{ value }}{{/authors}}</a>
@@ -44,7 +45,7 @@
 								</a>
 							</div>
 							<div class="truncated">
-								{{ content|truncate:100 }}
+								{{ content|truncate:200 }}
 								<a class="read-more" href="{{ url }}">Read More</a>
 							</div>
 						</div>
@@ -55,15 +56,7 @@
 				</div>
 				{{ endif }}
 				{{ /entries:listing }}
-				<div class="blog-right">
-					<div class="authors">
-						<h2 class="blog-header">Authors</h2>
-						{{ taxonomy:listing type="authors" folder="blog"}}
-						<li><a href="{{ url }}">{{ name }}</a></li>     
-						{{ /taxonomy:listing }}
-						
-					</div>
-				</div>
+				{{ theme:partial src="blog_right" use_context="true" }}
 			</div>
 		</div>
 	</section>

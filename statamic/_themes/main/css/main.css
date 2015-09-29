@@ -5974,7 +5974,7 @@ section.services h3 {
   text-transform: uppercase;
   font-size: 19px;
   padding-bottom: 30px;
-  border-bottom: 1px solid #25282A;
+  border-bottom: 1px solid #CCCCCC;
   margin-bottom: 30px;
   margin-top: 60px; }
 
@@ -5991,61 +5991,113 @@ section.services h3 {
   width: 100%;
   float: left; }
 
-.blog .entry .preview-image-container {
+.blog .preview-image-container {
   box-sizing: border-box;
   width: 42.85714%;
   float: left;
   position: relative; }
 
-.blog .entry .preview-image-container:before, .blog .entry .preview-image-container:after {
+.blog .preview-image-container:before, .blog .preview-image-container:after {
   content: "";
   display: table;
   clear: both; }
 
-.blog .entry .preview-image {
+.blog .preview-image .mask, .blog .featured-image .mask {
+  z-index: 11;
+  background-color: black;
+  height: 100%;
+  transition: all 0.25s;
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+.blog .preview-image:hover, .blog .featured-image:hover {
+  transition: all 0.25s; }
+
+.blog .preview-image:hover .mask, .blog .featured-image:hover .mask {
+  opacity: 0.2; }
+
+.blog .preview-image {
   width: 100%;
   padding-top: 100%;
   display: block;
   position: relative;
   background-position: center; }
 
-.blog .entry .date, .blog .entry .author {
+.blog .date, .blog .author {
   text-transform: none;
   font-family: "Copernicus-ExtraBold";
   font-size: 14px; }
 
-.blog .entry .author {
+.blog .author {
   color: #009B77; }
 
-.blog .entry .preview {
+.blog .authors li {
+  display: block; }
+
+.blog .authors li a {
+  font-family: "Copernicus-ExtraBold";
+  font-size: 15px; }
+
+.blog .preview {
   box-sizing: border-box;
   width: 57.14286%;
   float: right;
   padding-left: 1.42857%;
   padding-right: 1.42857%; }
 
-.blog .entry h2 {
+.blog .preview .divider {
+  height: 1px;
+  width: 60px;
+  display: block;
+  margin: 20px 0;
+  background-color: #CCCCCC; }
+
+.blog .preview .social .fa-circle {
+  border: 1px solid #CCCCCC; }
+
+.blog .preview .social .fa-inverse {
+  color: #CCCCCC; }
+
+.blog .preview h2 {
+  font-family: "Copernicus-MediumItalic";
+  font-size: 24px;
+  line-height: 30px; }
+
+.blog h2 {
   margin-top: 0; }
 
-.blog .entry p {
+.blog p {
   line-height: 28px; }
 
-.blog .entry .read-more {
+.blog .read-more {
   font-size: 16px;
   font-family: "Copernicus-MediumItalic";
   color: #009B77; }
 
-.mask {
-  z-index: 9;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: black;
-  opacity: .2;
-  height: 100%;
-  width: 100%; }
+.blog .author-list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 20px; }
+
+.blog .author-image {
+  margin-right: 10px;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px; }
+
+.featured-image {
+  background-size: cover;
+  position: relative;
+  background-position: center; }
 
 .hero {
   height: 600px;
@@ -6069,6 +6121,18 @@ section.services h3 {
 
 .hero * {
   z-index: 10; }
+
+.hero .mask {
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: .2;
+  height: 100%;
+  width: 100%; }
 
 .hero.small {
   height: 450px; }
@@ -6824,6 +6888,12 @@ section.faq {
   margin-bottom: 0;
   border-bottom: none; }
 
+.featured .featured-image {
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  height: 400px; }
+
 .featured h3 {
   color: #009B77;
   margin-top: 0;
@@ -6833,25 +6903,6 @@ section.faq {
   font-family: "Copernicus-MediumItalic";
   font-size: 34px;
   line-height: 43px; }
-
-.featured-image {
-  box-sizing: border-box;
-  width: 50%;
-  float: left;
-  height: 400px;
-  background-size: cover;
-  position: relative;
-  background-position: center; }
-
-.featured-image .mask {
-  transition: all 0.25s;
-  opacity: 0; }
-
-.featured-image:hover {
-  transition: all 0.25s; }
-
-.featured-image:hover .mask {
-  opacity: 0.2; }
 
 .post-details {
   box-sizing: border-box;
