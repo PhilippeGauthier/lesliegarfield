@@ -95,7 +95,8 @@
 		}
 	}
 	.preview {
-		@include span(last 4 of 7);
+		@include span(last 4 of 7 );
+		padding-left: 30px;
 		.divider {
 			height: 1px;
 			width: 60px;
