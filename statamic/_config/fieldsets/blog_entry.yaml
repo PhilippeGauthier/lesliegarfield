@@ -4,13 +4,6 @@ fields:
 		type: file
 		display: Preview Image
 		destination: assets/img/blog
-	authors:
-		type: suggest 
-		display: Author
-		create: true
-		taxonomy:
-			type: authors
-			folder: blog
 	author:
 		type: suggest
 		display: Author
