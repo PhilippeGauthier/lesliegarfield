@@ -1,44 +1,40 @@
-<div class="blog">	
+<div class="blog blog-entry">	
 	<section class="leading">
 		<div class="container">
 
 			<div class="blog-container">
 
 				<div class="blog-left">
-					{{ title }}
-					{{ content}}
+					<ul class="categories">
+						{{ categories }}
+						<li><a href="{{ _site_root }}blog/categories/{{ title|lower }}">{{ value }}</a></li>
+						{{ /categories }}
+					</ul>
+					<h1>{{ title }}</h1>
+					{{ theme:partial src="blog_social" use_context="true" }}
+					<img class="main-image" src="{{ path src="{{ main_image }}"}}">
+					{{ content }}
 				</div>
 				<div class="blog-right">
 					<div class="authors">
-						<h2 class="blog-header">Author</h2>
+						<h2 class="blog-header">Authors</h2>
 						<ul>
 						{{ relate:author }}
-							<li><a class="author-list" href="{{ _site_root }}blog/authors/{{ title|lower }}">
-							<img class="author-image" src="{{ path src="{{ image }}"}}">
-							{{ title }}
-							</a></li>  
+						<li><a class="author-list" href="{{ _site_root }}blog/authors/{{ title|lower }}">
+						<img class="author-image" src="{{ path src="{{ image }}"}}">
+						{{ title }}
+						</a></li>  
 						{{ /relate:author }}
 						</ul>
+						</ul>
+						<h2 class="blog-header">Other News</h2>
+						<div class="twitter-feed">
+							
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-
-	<div class="container">
-		{{ entries:pagination folder="blog" limit="5" }}
-		{{ if next_page || previous_page }}
-		<div class="pagination clearfix">
-			{{ if next_page }}
-			<a href="{{ next_page }}" class="older">Older Posts</a>
-			{{ endif }}
-			{{ if previous_page }}
-			<a href="{{ previous_page }}" class="newer">Newer Posts</a>
-			{{ endif }}
-		</div>
-		{{ endif }}
-		{{ /entries:pagination }}
-	</div>
-	
+	</section>	
 
 </div>

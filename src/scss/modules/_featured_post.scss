@@ -1,7 +1,7 @@
 .featured {
 	height: 400px;
 	text-align: left;
-	margin-bottom: 0;
+	margin-bottom: 60px;
 	border-bottom: none;
 	.featured-image {
 		@include span (6 of 12 no-gutter);

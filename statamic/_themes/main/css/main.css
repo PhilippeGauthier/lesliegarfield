@@ -5975,8 +5975,7 @@ section.services h3 {
   font-size: 19px;
   padding-bottom: 30px;
   border-bottom: 1px solid #CCCCCC;
-  margin-bottom: 30px;
-  margin-top: 60px; }
+  margin-bottom: 30px; }
 
 .blog .entries {
   box-sizing: border-box;
@@ -6036,6 +6035,9 @@ section.services h3 {
 .blog .author {
   color: #009B77; }
 
+.blog .authors ul {
+  margin-bottom: 30px; }
+
 .blog .authors li {
   display: block; }
 
@@ -6043,7 +6045,7 @@ section.services h3 {
   font-family: "Copernicus-ExtraBold";
   font-size: 15px; }
 
-.blog .preview {
+.blog .preview, .blog .blog.blog-entry {
   box-sizing: border-box;
   width: 57.14286%;
   float: right;
@@ -6051,20 +6053,14 @@ section.services h3 {
   padding-right: 1.42857%;
   padding-left: 30px; }
 
-.blog .preview .divider {
+.blog .preview .divider, .blog .blog.blog-entry .divider {
   height: 1px;
   width: 60px;
   display: block;
   margin: 20px 0;
   background-color: #CCCCCC; }
 
-.blog .preview .social .fa-circle {
-  border: 1px solid #CCCCCC; }
-
-.blog .preview .social .fa-inverse {
-  color: #CCCCCC; }
-
-.blog .preview h2 {
+.blog .preview h2, .blog .blog.blog-entry h2 {
   font-family: "Copernicus-MediumItalic";
   font-size: 24px;
   line-height: 30px; }
@@ -6095,10 +6091,57 @@ section.services h3 {
   height: 60px;
   width: 60px; }
 
+.social.gray .fa-circle {
+  border: 1px solid #CCCCCC; }
+
+.social.gray .fa-inverse {
+  color: #CCCCCC; }
+
 .featured-image {
   background-size: cover;
   position: relative;
   background-position: center; }
+
+.categories {
+  border-bottom: 1px solid #CCCCCC;
+  padding-bottom: 30px;
+  margin-bottom: 30px; }
+
+.categories li {
+  text-transform: uppercase;
+  border-left: 1px solid #CCCCCC;
+  padding: 0 10px; }
+
+.categories li:first-of-type {
+  border-left: none;
+  padding-left: 0; }
+
+.categories li a {
+  font-family: "Copernicus-Semibold";
+  font-size: 19px;
+  color: #999999; }
+
+.blog.blog-entry h1 {
+  font-family: "Copernicus-MediumItalic";
+  font-size: 34px;
+  line-height: 43px; }
+
+.blog.blog-entry .main-image {
+  margin: 30px 0; }
+
+.blog.blog-entry .blog-left {
+  border-bottom: 1px solid #CCCCCC;
+  padding-bottom: 30px; }
+
+.blog.blog-entry p:first-of-type::first-letter {
+  float: left;
+  color: #009B77;
+  font-size: 83px;
+  line-height: 80px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+  font-family: "Copernicus-Semibold"; }
 
 .hero {
   height: 600px;
@@ -6886,7 +6929,7 @@ section.faq {
 .featured {
   height: 400px;
   text-align: left;
-  margin-bottom: 0;
+  margin-bottom: 60px;
   border-bottom: none; }
 
 .featured .featured-image {

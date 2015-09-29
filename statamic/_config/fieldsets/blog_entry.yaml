@@ -12,6 +12,24 @@ fields:
 			folder: agents
 			label: title
 			value: url
+	authors:
+		type: suggest
+		display: Author
+		create: true
+		content:
+			folder: agents
+			label: title
+			value: title
+	categories:
+		type: suggest
+		display: Categories
+		create: true
+		taxonomy:
+			type: categories
+			folder: blog
+
+
+
 	content:
 		type: redactor
 		display: Blog Content

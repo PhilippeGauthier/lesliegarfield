@@ -3,30 +3,33 @@
 	<a href="{{ url }}" class="featured-image" style="background-image: url( {{ path src="{{ main_image }}" }} );"><div class="mask"></div></a>
 	<div class="post-details">
 		<h3>FEATURED POST</h3>
-		<a href=""><h2>{{ title}}</h2></a>
+		<a href="{{ url }}"><h2>{{ title}}</h2></a>
 		<span class="date">Posted {{ date }} by </span>
-		<a href="{{ _site_root}}blog/authors/{{ authors }}{{ value }}{{/authors}}"class="author">
-		{{ authors }}{{ value }}{{/authors}}</a>
-		<div class="social">
-			<a href="">
-				<span class="fa-stack fa-lg">
-					<i class="fa fa-circle fa-stack-2x"></i>
-					<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-				</span>
+		{{ relate:author }}
+			<a class="author" href="{{ _site_root }}blog/authors/{{ title|lower }}">
+			{{ title }}
 			</a>
-			<a href="javascript:selectPinImage()">
-				<span target="_blank" class="fa-stack fa-lg">
-					<i class="fa fa-circle fa-stack-2x"></i>
-					<i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
-				</span>
-			</a>
-			<a href="javascript:fbShare('{{ url }}', 'Fb Share', '{{ url }}', '{{ url }}', 500, 250)">
-				<span  class="fa-stack fa-lg">
-					<i class="fa fa-circle fa-stack-2x"></i>
-					<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-				</span>
-			</a>
-		</div>
+		{{ /relate:author }}
+			<div class="social">
+				<a href="">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+				<a href="javascript:selectPinImage()">
+					<span target="_blank" class="fa-stack fa-lg">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+				<a href="javascript:fbShare('{{ url }}', 'Fb Share', '{{ url }}', '{{ url }}', 500, 250)">
+					<span  class="fa-stack fa-lg">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			</div>
 		<div class="truncated">
 			{{ content|truncate:100 }}
 			<a class="read-more" href="{{ url }}">Read More</a>

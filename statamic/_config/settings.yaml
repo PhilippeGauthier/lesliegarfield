@@ -55,6 +55,7 @@ _taxonomy:
   - ownership_type
   - services
   - authors
+  - author
   - agents
 
 # Turns your slugs into pretty urls (spaces become "-" instead of %20)

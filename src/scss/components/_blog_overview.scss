@@ -32,7 +32,6 @@
 		padding-bottom: 30px;
 		border-bottom: 1px solid $modal-text;
 		margin-bottom: 30px;
-		margin-top: 60px;
 	}
 	.entries {
 		@include span(full no-gutter);
@@ -86,6 +85,10 @@
 		color: $text-green;
 	}
 	.authors {
+		ul {
+			margin-bottom: 30px;
+		}
+		
 		li {
 			display: block;
 			a {
@@ -94,7 +97,7 @@
 			}
 		}
 	}
-	.preview {
+	.preview,.blog.blog-entry {
 		@include span(last 4 of 7 );
 		padding-left: 30px;
 		.divider {
@@ -103,12 +106,6 @@
 			display: block;
 			margin: 20px 0;
 			background-color: $modal-text;
-		}
-		.social .fa-circle {
-			border: 1px solid $modal-text;
-		}
-		.social .fa-inverse {
-			color: $modal-text;
 		}
 		h2 {
 			font-family: $header-font-family-medium-italic;
@@ -139,6 +136,15 @@
 		width: 60px;
 	}
 }
+
+		.social.gray {
+			.fa-circle {
+				border: 1px solid $modal-text;
+			}
+			.fa-inverse {
+				color: $modal-text;
+			}
+		}
 
 .featured-image {
 	background-size: cover;

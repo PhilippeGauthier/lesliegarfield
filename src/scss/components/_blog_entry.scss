@@ -1,0 +1,44 @@
+.categories {
+	border-bottom: 1px solid $modal-text;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	li {
+		text-transform: uppercase;
+		&:first-of-type {
+			border-left: none;
+			padding-left: 0;
+		}
+		border-left: 1px solid $modal-text;
+		padding: 0 10px;
+		a {
+			font-family: $header-font-family;
+			font-size: 19px;
+			color: $light-font-color;
+		}
+	}
+}
+
+.blog.blog-entry {
+	h1 {
+		font-family: $header-font-family-medium-italic;
+		font-size: 34px;
+		line-height: 43px;
+	}
+	.main-image {
+		margin: 30px 0;
+	}
+	.blog-left {
+		border-bottom: 1px solid $modal-text;
+		padding-bottom: 30px;
+	}
+	p:first-of-type::first-letter {
+		float: left; 
+		color: $text-green; 
+		font-size: 83px; 
+		line-height: 80px; 
+		padding-top: 4px; 
+		padding-right: 8px; 
+		padding-left: 3px; 
+		font-family: $header-font-family; 
+	}
+}
