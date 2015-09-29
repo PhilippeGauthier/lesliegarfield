@@ -22,8 +22,11 @@
 							<a href="{{ url }}"><h2>{{ title }}</h2></a>
 							<div class="divider"></div>
 							<span class="date">Posted {{ date }} by </span>
-							<a href="{{ _site_root}}blog/authors/{{ authors }}{{ value }}{{/authors}}"class="author">
-							{{ authors }}{{ value }}{{/authors}}</a>
+						{{ relate:author }}
+							<a class="author" href="{{ _site_root }}blog/authors/{{ title|lower }}">
+							{{ title }}
+							</a>
+						{{ /relate:author }}
 							<div class="social">
 								<a href="">
 									<span class="fa-stack fa-lg">
