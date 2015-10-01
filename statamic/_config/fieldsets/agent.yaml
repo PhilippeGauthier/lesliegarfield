@@ -3,6 +3,9 @@ fields:
 		hide: true
 	content:
 		hide: true
+ datestamp:
+    type: date
+    hide: true
 	image:
 		type: file
 		display: Agent Photo

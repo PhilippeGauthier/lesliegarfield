@@ -146,8 +146,23 @@
 		{{ if floor_plans|not_empty }}
 		<floorplan url="{{ _site_url }}{{ floor_plans }}" />
 		{{ endif }}
+		{{ if brochure|not_empty }}
+		<otherMedia url="{{ _site_url }}{{ brochure }}" description="Property Brochure"/>
+		{{ endif }}
 	</media>
-	
+	<agents>
+		{{ relate:agents }}
+		<agent>
+			<name>{{ title }}</name>
+			<company>Leslie J. Garfield</company>
+			<photo>{{ _site_url }}{{ image }}</photo>
+			<email>{{ email }}</email>
+			<phone_numbers>
+				<main>{{ phone }}</main>
+			</phone_numbers>
+		</agent>
+		{{ /relate:agents }}
+	</agents>
 </property>
 {{ /entries:listing }}
 </properties>
