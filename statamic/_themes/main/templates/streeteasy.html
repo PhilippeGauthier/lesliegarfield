@@ -143,6 +143,8 @@
 		{{ photo_carousel }}
 		<photo url="{{ _site_url }}{{ value }}" />
 		{{ /photo_carousel }}
+		{{ if floor_plans|not_empty }}
+		<floorplan url="{{ _site_url }}{{ floor_plans }}" />
 	</media>
 	
 </property>
