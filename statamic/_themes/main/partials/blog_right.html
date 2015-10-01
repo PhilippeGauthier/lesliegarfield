@@ -2,7 +2,7 @@
 	<div class="authors">
 		<h2 class="blog-header">Authors</h2>
 		<ul>
-		{{ entries:listing folder="agents" conditions="author:true"}}
+		{{ entries:listing folder="agents" conditions="author:"}}
 		<li><a class="author-list" href="{{ _site_root }}blog/authors/{{ title|lower }}">
 		<img class="author-image" src="{{ path src="{{ image }}"}}">
 		{{ title }}
@@ -12,7 +12,7 @@
 		</ul>
 		<h2 class="blog-header">Other News</h2>
 		<div class="twitter-feed">
-			
+			{{ theme:partial src="twitter" }}
 		</div>
 	</div>
 </div>
