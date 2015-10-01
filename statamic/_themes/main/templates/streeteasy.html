@@ -138,12 +138,13 @@
 		</openHouse>
 		{{ /openhouse_grid}}
 	</openHouses>
+	{{ endif }}
 	<media>
 		{{ photo_carousel }}
 		<photo url="{{ _site_root}}{{ value }}" />
 		{{ /photo_carousel }}
 	</media>
-	{{ endif }}
+	
 </property>
 {{ /entries:listing }}
 </properties>
