@@ -14,6 +14,23 @@ fields:
   datestamp:
     type: date
     hide: true
+  street_address:
+    type: text
+    display: Street Address
+  apartment:
+    type: text
+    display: Apartment Number or Letter (optional)
+  city:
+    type: text
+    display: City
+    default: New York
+  state:
+    type: text
+    display: State
+    default: NY
+  zip_code:
+    type: text
+    display: Zip Code
   price:
     type: text
     default: 0
@@ -48,13 +65,39 @@ fields:
   streeteasy:
     display: Street Easy?
     type: checkbox
+  streeteasy_status:
+    type: select
+    display: Status
+    options:
+      - active
+      - off-market
+      - temp-off-market
+      - in-contract
+      - contract-out
+      - contract-signed
+      - sold
   openhouse:
     display: Open House?
     type: checkbox
-  openhouse_details:
-    type: text
-    display: Open House Details
-    instructions: "Enter details only such as "Tuesday, 9/6 10:00am - 1:00PM""
+  openhouse_grid:
+    type: grid
+    display: Open House(s)
+    instructions:
+      above: 'Times MUST match this format: "2015-11-20 3:30pm"'
+    fields:
+      date:
+        type: date
+        display: Date
+      startTime:
+        type: time
+        display: Starting Time
+      endTime:
+        type: time
+        display: Ending Time
+      apptOnly:
+        type: checkbox
+        width: 28%
+        display: Is the Open House Appointment Only
   in_contract:
     display: In Contract?
     type: checkbox
@@ -129,6 +172,53 @@ fields:
       maintenance:
         type: text
         display: Maintenance
+  amenities:
+    type: grid
+    display: Amenities
+    max_rows: 1
+    fields:
+      balcony:
+        type: checkbox
+        display: Balcony
+      dishwasher:
+        type: checkbox
+        display: Dish Washer
+      doorman:
+        type: checkbox
+        display: Doorman
+      elevator:
+        type: checkbox
+        display: Elevator
+      fireplace:
+        type: checkbox
+        display: Fireplace
+      furnished:
+        type: checkbox
+        display: Furnished
+      garage:
+        type: checkbox
+        display: Garage
+      gym:
+        type: checkbox
+        display: Gym
+      pool:
+        type: checkbox
+        display: Pool
+      parking:
+        type: checkbox
+        display: Parking
+      patio:
+        type: checkbox
+        display: Patio
+      pets:
+        display: Pets Allowed?
+        type: checkbox
+      storage:
+        type: checkbox
+        display: Storage
+      washerDryer:
+        type: checkbox
+        display: Washer / Dryer
   key_features:
     display: Key Features
     instructions: Maximum of Six Items
@@ -139,8 +229,9 @@ fields:
       folder: properties/*
       type: key_features
   summary_intro:
-    type: redactor
+    type: textarea
     display: Enter the first paragraph of property summary
+    height: 200
   summary_full:
     type: redactor
     display: Enter the rest of the summary

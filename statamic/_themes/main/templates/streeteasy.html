@@ -1,6 +1,153 @@
 <properties>
 {{ entries:listing folder="properties/sale" conditions="streeteasy:true" }}
-<property type="sale" id="{{ datestamp }}">
+<property 
+	type="sale" id="{{ datestamp }}" status="{{ streeteasy_status}}" url="{{ url }}">
+	<location>
+		{{ if address|not_empty }}
+		<address>{{ street_address }}</address>
+		{{ endif }}
+		{{ if apartment|not_empty }}
+		<apartment>{{ apartment }}</apartment>
+		{{ endif }}
+		{{ if city|not_empty }}
+		<city>{{ city }}</city>
+		{{ endif }}
+		{{ if state|not_empty }}
+		<state>{{ state }}</state>
+		{{ endif }}
+		{{ if zip_code|not_empty }}
+		<zipcode>{{ zip_code }}</zipcode>
+		{{ endif }}
+		{{ if property_location|not_empty }}
+		<neighborhood>{{ property_location }}</neighborhood>
+		{{ endif }}
+	</location>
+	<details>
+		{{ if mlsName|not_empty }}
+			<mlsName>{{ mlsName }}</mlsName>
+		{{ endif }}
+		{{ if mlsId|not_empty }}
+			<mlsId>{{ mlsId }}</mlsId>
+		{{ endif }}
+		{{ if price|not_empty }}
+			<price>{{ price }}</price>
+		{{ endif }}
+		{{ if maintenance|not_empty }}
+			<maintenance>{{ maintenance }}</maintenance>
+		{{ endif }}
+		{{ if max_financing|not_empty }}
+			<max_financing>{{ max_financing }}</max_financing>
+		{{ endif }}
+		{{ if exclustive|not_empty }}
+			<exclustive>{{ exclustive }}</exclustive>
+		{{ endif }}
+		{{ if taxes|not_empty }}
+			<taxes>{{ taxes }}</taxes>
+		{{ endif }}
+		{{ if bedrooms|not_empty }}
+			<bedrooms>{{ bedrooms }}</bedrooms>
+		{{ endif }}
+		{{ if bathrooms|not_empty }}
+			<bathrooms>{{ bathrooms }}</bathrooms>
+		{{ endif }}
+		{{ if rooms|not_empty }}
+			<totalrooms>{{ rooms }}</totalrooms>
+		{{ endif }}
+		{{ if sqft|not_empty }}
+			<squareFeet>{{ sqft }}</squareFeet>
+		{{ endif }}
+		{{ if listedOn|not_empty }}
+			<listedOn>{{ listedOn }}</listedOn>
+		{{ endif }}
+		{{ if summary_intro|not_empty }}
+		<description>
+		<![CDATA[
+			{{ summary_intro }}
+		]]>
+		</description>
+		{{ endif }}
+		{{ if property_type|not_empty }}
+			<propertyType>{{ property_type }}</propertyType>
+		{{ endif }}
+		{{ if build_date|not_empty }}
+			<built>{{ build_date }}</built>
+		{{ endif }}
+		{{ if amenities|not_empty }}
+		{{ amenities }}
+		<amenities>
+		{{ if balcony }}
+			<balcony />
+		{{ endif }}
+		{{ if dishwasher }}
+			<dishwasher />
+		{{ endif }}
+		{{ if doorman }}
+			<doorman />
+		{{ endif }}
+		{{ if elevator }}
+			<elevator />
+		{{ endif }}
+		{{ if fireplace }}
+			<fireplace />
+		{{ endif }}
+		{{ if furnished }}
+			<furnished />
+		{{ endif }}
+		{{ if garage }}
+			<garage />
+		{{ endif }}
+		{{ if gym }}
+			<gym />
+		{{ endif }}
+		{{ if pool }}
+			<pool />
+		{{ endif }}
+		{{ if parking }}
+			<parking />
+		{{ endif }}
+		{{ if patio }}
+			<patio />
+		{{ endif }}
+		{{ if pets }}
+			<pets />
+		{{ endif }}
+		{{ if storage }}
+			<storage />
+		{{ endif }}
+		{{ if washerDryer }}
+			<washerDryer />
+		{{ endif }}
+		{{ if key_features|not_empty }}
+		<other>
+		{{ key_features|list }}
+		</other>
+		{{ endif }}
+		</amenities>
+		{{ /amenities }}
+		{{ endif }}
+	</details>
+	{{ if openhouse }}
+	<openHouses>
+		{{ openhouse_grid }}
+		<openHouse>
+			<startsAt>{{ date }} {{ startTime }}</startsAt>
+			<endsAt>{{ date }} {{ endTime }}</endsAt>
+			{{ if apptOnly }}
+			<apptOnly />
+			{{ endif }}
+		</openHouse>
+		{{ /openhouse_grid}}
+	</openHouses>
+	<media>
+		{{ photo_carousel }}
+		<photo url="{{ _site_root}}{{ value }}" />
+		{{ /photo_carousel }}
+	</media>
+	{{ endif }}
 </property>
 {{ /entries:listing }}
 </properties>
+
+
+
+
