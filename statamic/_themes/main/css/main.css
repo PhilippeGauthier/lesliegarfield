@@ -5327,6 +5327,9 @@ section.services h3 {
   color: #b3b3b3;
   line-height: 15px; }
 
+.summary .read-more-expander {
+  margin-top: 10px; }
+
 .summary .read-more-expander i {
   color: #25282A; }
 
