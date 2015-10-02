@@ -3,7 +3,7 @@
 <property 
 	type="sale" id="{{ datestamp }}" status="{{ if streeteasy_status =="Active" }}active{{ elseif streeteasy_status =="Contract Out"}}contract-out
 	{{ elseif streeteasy_status =="Contract Signed"}}contract-signed{{ elseif streeteasy_status =="In Contract"}}in-contract{{ elseif streeteasy_status =="Leased"}}leased{{ elseif streeteasy_status =="Off Market"}}off-market{{ elseif streeteasy_status =="Temporarily Off Market"}}temporarily-off-market{{ elseif streeteasy_status =="Sold"}}sold{{ endif }}" 
-	url="{{ url }}">
+	url="{{ _site_url }}{{ url }}">
 	<location>
 		{{ if address|not_empty }}
 		<address>{{ street_address }}</address>
