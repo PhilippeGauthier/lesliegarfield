@@ -80,19 +80,19 @@
 						{{ endif }}
 					</div>
 					<div class="open-house">
-					<div class="open-house">
-						{{ if leased }}
-						<span>LEASED</span>
-						{{ elseif in_contract }}
-						<span>In Contract</span>
-						{{ elseif openhouse }}
-						{{ if openhouse_details }}
-						<span class="red">Open House: {{ openhouse_details }}</span>
+
+						{{ if openhouse }}
+						{{ openhouse_grid }}
+						{{ if date|not_empty }}
+						<span class="red">Open House: {{date format="D, m-j" }}, {{startTime}} - {{ endTime }}</span>
 						{{ else }}
 						<span class="red">Open House: Enquire for Details</span>
 						{{ endif }}
+						{{ /openhouse_grid }}
+						{{ else }}
+						<span>{{ streeteasy_status }}</span>
 						{{ endif }}
-					</div>	
+
 					</div>				
 				</div>
 
