@@ -167,7 +167,7 @@
 {{ /entries:listing }}
 {{ entries:listing folder="properties/lease" conditions="streeteasy:true" }}
 <property 
-	type="rental" id="{{ datestamp }}" status="{{ streeteasy_status}}" url="{{ url }}">
+	type="sale" id="{{ datestamp }}" status="{{ streeteasy_status}}" url="{{ url }}">
 	<location>
 		{{ if address|not_empty }}
 		<address>{{ street_address }}</address>

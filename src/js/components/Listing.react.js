@@ -25,18 +25,14 @@ var Listing = React.createClass({
     var divStyle = {
       backgroundImage: 'url(' + listing.preview_image + ')'
     };
+    if (listing.streeteasy_status !='Active') {
+      listing.bottom_info = listing.streeteasy_status;
+    }
     if (listing.openhouse == 1) {
-      listing.bottom_info = 'Open House';
+      listing.bottom_info_red = 'Open House';
+      listing.bottom_info = "";
     }
-    if (listing.sold ==1) {
-      listing.bottom_info = 'Sold';
-    }
-    if (listing.leased ==1) {
-      listing.bottom_info = 'Leased';
-    }
-    if (listing.in_contract ==1) {
-      listing.bottom_info_contract = 'In Contract';
-    }
+
     return (
       <li className='grid-item property_tile'>
         <a href={listingURL} className='property_box'>
@@ -58,7 +54,7 @@ var Listing = React.createClass({
             </div>
             <div className='bottom-info'>
               <div>{listing.bottom_info}</div>
-              <div className='red'>{listing.bottom_info_contract}</div>
+              <div className='red'>{listing.bottom_info_red}</div>
             </div>
           </div>
         </a>

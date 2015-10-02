@@ -72,21 +72,20 @@ fields:
     type: select
     display: Status
     options:
-      - active
-      - off-market
-      - temp-off-market
-      - in-contract
-      - contract-out
-      - contract-signed
-      - sold
+      - Active
+      - Contract Out
+      - Contract Signed
+      - In Contract
+      - Leased
+      - Off Market
+      - Temporarily Off Market
+      - Sold
   openhouse:
     display: Open House?
     type: checkbox
   openhouse_grid:
     type: grid
     display: Open House(s)
-    instructions:
-      above: 'Times MUST match this format: "2015-11-20 3:30pm"'
     fields:
       date:
         type: date
@@ -100,13 +99,7 @@ fields:
       apptOnly:
         type: checkbox
         width: 28%
-        display: Is the Open House Appointment Only
-  in_contract:
-    display: In Contract?
-    type: checkbox
-  leased:
-    display: Rented?
-    type: checkbox
+        display: Appt Only?
   agents:
     display: Agents
     type: suggest

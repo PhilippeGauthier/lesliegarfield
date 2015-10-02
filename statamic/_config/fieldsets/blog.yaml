@@ -1,0 +1,12 @@
+title: Blog
+fields:
+	authors:
+		type: grid
+		display: Authors
+		fields:
+			name:
+				type: text
+				display: Name
+			image:
+				type: file
+				display: 

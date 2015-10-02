@@ -80,17 +80,19 @@
 						{{ endif }}
 					</div>
 					<div class="open-house">
-						{{ if sold }}
-						<span>SOLD</span>
-						{{ elseif in_contract }}
-						<span>In Contract</span>
-						{{ elseif openhouse }}
-						{{ if openhouse_details }}
-						<span class="red">Open House: {{ openhouse_details }}</span>
+
+						{{ if openhouse }}
+						{{ openhouse_grid }}
+						{{ if date|not_empty }}
+						<span class="red">Open House: {{date format="D, m-j" }}, {{startTime}} - {{ endTime }}</span>
 						{{ else }}
 						<span class="red">Open House: Enquire for Details</span>
 						{{ endif }}
+						{{ /openhouse_grid }}
+						{{ else }}
+						<span>{{ streeteasy_status }}</span>
 						{{ endif }}
+
 					</div>				
 				</div>
 
@@ -282,7 +284,7 @@
 
 				{{ if summary_intro|not_empty }}
 				<div class="summary">
-					<p>{{ summary_intro }}</p>
+					{{ summary_intro }}
 					<div style="display: none">
 						{{ summary_full }}
 						<p class="small">
@@ -292,9 +294,7 @@
 							The information contained herein has either been given to us by the owner of the property or obtained from sources that we deem reliable. We have no reason to doubt its accuracy but we do not guarantee it. All zoning, buildable footages and uses must be independently verified. The value of this investment is dependent on these estimates and assumptions made above, as well as the investment income, the tax bracket, and other factors which you tax advisor and/or legal counsel should evaluate. The prospective buyer should carefully verify each item of income, and all other information herein.
 						</p>
 					</div>
-					{{ if summary_full }}
 					<a class="read-more-expander expander-prev" href=""><i  class="fa fa-plus-circle green"></i><span>Read More</span></a>
-					{{ endif }}
 				</div>
 				{{ endif }}
 			</div>

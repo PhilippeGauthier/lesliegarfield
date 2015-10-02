@@ -1,11 +1,6 @@
 
 
 fields:
-  site_root:
-    type: select
-    options:
-      - http://104.131.23.73/
-      - http://localhost/~philippe/lesliegarfield/statamic/
   url:
     type: page_url
   title:
@@ -14,9 +9,6 @@ fields:
   datestamp:
     type: date
     hide: true
-  street_address:
-    type: text
-    display: Street Address
   apartment:
     type: text
     display: Apartment Number or Letter (optional)
@@ -69,21 +61,20 @@ fields:
     type: select
     display: Status
     options:
-      - active
-      - off-market
-      - temp-off-market
-      - in-contract
-      - contract-out
-      - contract-signed
-      - sold
+      - Active
+      - Contract Out
+      - Contract Signed
+      - In Contract
+      - Leased
+      - Off Market
+      - Temporarily Off Market
+      - Sold
   openhouse:
     display: Open House?
     type: checkbox
   openhouse_grid:
     type: grid
     display: Open House(s)
-    instructions:
-      above: 'Times MUST match this format: "2015-11-20 3:30pm"'
     fields:
       date:
         type: date
@@ -97,13 +88,7 @@ fields:
       apptOnly:
         type: checkbox
         width: 28%
-        display: Is the Open House Appointment Only
-  in_contract:
-    display: In Contract?
-    type: checkbox
-  sold:
-    display: Sold?
-    type: checkbox
+        display: Appt Only?
   agents:
     display: Agents
     type: suggest
@@ -173,54 +158,26 @@ fields:
         type: text
         display: Maintenance
   amenities:
-    type: grid
-    display: Amenities
-    max_rows: 1
-    fields:
-      balcony:
-        type: checkbox
-        display: Balcony
-      dishwasher:
-        type: checkbox
-        display: Dish Washer
-      doorman:
-        type: checkbox
-        display: Doorman
-      elevator:
-        type: checkbox
-        display: Elevator
-      fireplace:
-        type: checkbox
-        display: Fireplace
-      furnished:
-        type: checkbox
-        display: Furnished
-      garage:
-        type: checkbox
-        display: Garage
-      gym:
-        type: checkbox
-        display: Gym
-      pool:
-        type: checkbox
-        display: Pool
-      parking:
-        type: checkbox
-        display: Parking
-      patio:
-        type: checkbox
-        display: Patio
-      pets:
-        display: Pets Allowed?
-        type: checkbox
-      storage:
-        type: checkbox
-        display: Storage
-      washerDryer:
-        type: checkbox
-        display: Washer / Dryer
+    type: suggest
+    display: Key Features (Street Easy Categories, Not Editable)
+    create: false
+    options:
+      balcony: Balcony
+      dishwasher: Dishwasher
+      doorman: Doorman
+      elevator: Elevator
+      fireplace: Fireplace
+      furnished: Furnished
+      garage: Garage
+      gym: Gym
+      pool: Pool
+      parking: Parking
+      patio: Patio
+      pets: Pets Allowed
+      storage: Storage
+      washerDryer: Washer / Dryer
   key_features:
-    display: Key Features
+    display: Key Features (Non Street Easy Categories)
     instructions: Maximum of Six Items
     type: suggest
     create: true
