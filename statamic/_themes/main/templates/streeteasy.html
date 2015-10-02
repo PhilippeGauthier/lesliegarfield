@@ -128,7 +128,9 @@
 {{ /entries:listing }}
 {{ entries:listing folder="properties/lease" conditions="streeteasy:true" }}
 <property 
-	type="sale" id="{{ datestamp }}" status="{{ streeteasy_status}}" url="{{ url }}">
+	type="rental" id="{{ datestamp }}" status="{{ if streeteasy_status =="Active" }}active{{ elseif streeteasy_status =="Contract Out"}}contract-out
+	{{ elseif streeteasy_status =="Contract Signed"}}contract-signed{{ elseif streeteasy_status =="In Contract"}}in-contract{{ elseif streeteasy_status =="Leased"}}leased{{ elseif streeteasy_status =="Off Market"}}off-market{{ elseif streeteasy_status =="Temporarily Off Market"}}temporarily-off-market{{ elseif streeteasy_status =="Sold"}}sold{{ endif }}" 
+	url="{{ _site_url }}{{ url }}">
 	<location>
 		{{ if address|not_empty }}
 		<address>{{ street_address }}</address>
@@ -150,7 +152,6 @@
 		{{ endif }}
 	</location>
 	<details>
-
 		{{ if mlsName|not_empty }}
 			<mlsName>{{ mlsName }}</mlsName>
 		{{ endif }}
@@ -158,9 +159,7 @@
 			<mlsId>{{ mlsId }}</mlsId>
 		{{ endif }}
 		{{ if price|not_empty }}
-			<rental_period_pricing>
-			<year_round>{{ price }}</year_round>
-			</rental_period_pricing>
+			<price>{{ price }}</price>
 		{{ endif }}
 		{{ if maintenance|not_empty }}
 			<maintenance>{{ maintenance }}</maintenance>
@@ -202,58 +201,17 @@
 		{{ if build_date|not_empty }}
 			<built>{{ build_date }}</built>
 		{{ endif }}
-		{{ if amenities|not_empty }}
-		{{ amenities }}
+		{{ if amenities }}
 		<amenities>
-		{{ if balcony }}
-			<balcony />
-		{{ endif }}
-		{{ if dishwasher }}
-			<dishwasher />
-		{{ endif }}
-		{{ if doorman }}
-			<doorman />
-		{{ endif }}
-		{{ if elevator }}
-			<elevator />
-		{{ endif }}
-		{{ if fireplace }}
-			<fireplace />
-		{{ endif }}
-		{{ if furnished }}
-			<furnished />
-		{{ endif }}
-		{{ if garage }}
-			<garage />
-		{{ endif }}
-		{{ if gym }}
-			<gym />
-		{{ endif }}
-		{{ if pool }}
-			<pool />
-		{{ endif }}
-		{{ if parking }}
-			<parking />
-		{{ endif }}
-		{{ if patio }}
-			<patio />
-		{{ endif }}
-		{{ if pets }}
-			<pets />
-		{{ endif }}
-		{{ if storage }}
-			<storage />
-		{{ endif }}
-		{{ if washerDryer }}
-			<washerDryer />
-		{{ endif }}
+		{{ amenities }}
+		<{{ value }} />
+		{{/amenities }}
 		{{ if key_features|not_empty }}
 		<other>
 		{{ key_features|list }}
 		</other>
 		{{ endif }}
 		</amenities>
-		{{ /amenities }}
 		{{ endif }}
 	</details>
 	{{ if openhouse }}
