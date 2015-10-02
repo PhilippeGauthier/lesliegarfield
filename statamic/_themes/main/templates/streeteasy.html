@@ -72,58 +72,17 @@
 		{{ if build_date|not_empty }}
 			<built>{{ build_date }}</built>
 		{{ endif }}
-		{{ if amenities|not_empty }}
-		{{ amenities }}
+		{{ if amenities }}
 		<amenities>
-		{{ if balcony }}
-			<balcony />
-		{{ endif }}
-		{{ if dishwasher }}
-			<dishwasher />
-		{{ endif }}
-		{{ if doorman }}
-			<doorman />
-		{{ endif }}
-		{{ if elevator }}
-			<elevator />
-		{{ endif }}
-		{{ if fireplace }}
-			<fireplace />
-		{{ endif }}
-		{{ if furnished }}
-			<furnished />
-		{{ endif }}
-		{{ if garage }}
-			<garage />
-		{{ endif }}
-		{{ if gym }}
-			<gym />
-		{{ endif }}
-		{{ if pool }}
-			<pool />
-		{{ endif }}
-		{{ if parking }}
-			<parking />
-		{{ endif }}
-		{{ if patio }}
-			<patio />
-		{{ endif }}
-		{{ if pets }}
-			<pets />
-		{{ endif }}
-		{{ if storage }}
-			<storage />
-		{{ endif }}
-		{{ if washerDryer }}
-			<washerDryer />
-		{{ endif }}
+		{{ amenities }}
+		<{{ value }} />
+		{{/amenities }}
 		{{ if key_features|not_empty }}
 		<other>
 		{{ key_features|list }}
 		</other>
 		{{ endif }}
 		</amenities>
-		{{ /amenities }}
 		{{ endif }}
 	</details>
 	{{ if openhouse }}

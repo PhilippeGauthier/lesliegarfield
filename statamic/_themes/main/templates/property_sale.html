@@ -42,7 +42,7 @@
 			<div class="property-info">
 
 				<div class="property-header">
-					<h1>{{ title }}</h1>
+					<h1>{{ title }} {{ apartment }}</h1>
 
 					<div class="social">
 						<a href="">
@@ -275,9 +275,22 @@
 						</div>
 						
 						<ul>
+
+							{{ if amenities }}
+							{{ amenities }}
+							{{ if value =="washerDryer" }}
+							<li>Washer / Dryer</li>
+							{{ else }}
+							<li>{{ value|ucfirst }}</li>
+							{{ endif }}
+							{{ /amenities }}
+							{{ endif }}
+							
+
 							{{ key_features }}
 							<li>{{ value }}</li>
 							{{ /key_features }}
+
 						</ul>
 					</div>
 				</div>
