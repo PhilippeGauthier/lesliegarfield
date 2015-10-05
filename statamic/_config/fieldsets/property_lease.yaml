@@ -140,12 +140,6 @@ fields:
   powder:
     display: Powder Rooms
     type: text
-  pet_policy:
-    display: Pet Policy
-    type: text
-  furnished:
-    type: checkbox
-    display: Furnished? If not leave blank
   amenities:
     type: checkboxes
     display: Key Features
