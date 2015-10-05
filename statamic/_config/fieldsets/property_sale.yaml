@@ -54,21 +54,16 @@ fields:
   location_granular:
     type: text
     display: More detailed location ie Between Fifth and Madison
-  streeteasy:
-    display: Street Easy?
-    type: checkbox
   streeteasy_status:
     type: select
     display: Status
     options:
       - Active
-      - Contract Out
-      - Contract Signed
       - In Contract
-      - Leased
-      - Off Market
-      - Temporarily Off Market
       - Sold
+  streeteasy:
+    display: ACTIVATE STREETEASY?
+    type: checkbox
   openhouse:
     display: Open House?
     type: checkbox
@@ -158,8 +153,8 @@ fields:
         type: text
         display: Maintenance
   amenities:
-    type: suggest
-    display: Key Features (Street Easy Categories, Not Editable)
+    type: checkboxes
+    display: Key Features
     create: false
     options:
       balcony: Balcony
@@ -170,18 +165,18 @@ fields:
       furnished: Furnished
       garage: Garage
       gym: Gym
-      pool: Pool
       parking: Parking
       patio: Patio
       pets: Pets Allowed
+      pool: Pool
       storage: Storage
       washerDryer: Washer / Dryer
   key_features:
-    display: Key Features (Non Street Easy Categories)
+    display: Key Features (Other)
     instructions: Maximum of Six Items
     type: suggest
     create: true
-    max_items: 7
+    max_items: 6
     taxonomy:
       folder: properties/*
       type: key_features

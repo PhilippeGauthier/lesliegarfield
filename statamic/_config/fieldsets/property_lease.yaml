@@ -65,21 +65,16 @@ fields:
   location_granular:
     type: text
     display: More detailed location ie Between Fifth and Madison
-  streeteasy:
-    display: Street Easy?
-    type: checkbox
   streeteasy_status:
     type: select
     display: Status
     options:
       - Active
-      - Contract Out
-      - Contract Signed
       - In Contract
       - Leased
-      - Off Market
-      - Temporarily Off Market
-      - Sold
+  streeteasy:
+    display: ACTIVATE STREETEASY?
+    type: checkbox
   openhouse:
     display: Open House?
     type: checkbox
@@ -152,58 +147,30 @@ fields:
     type: checkbox
     display: Furnished? If not leave blank
   amenities:
-    type: grid
-    display: Amenities
-    max_rows: 1
-    fields:
-      balcony:
-        type: checkbox
-        display: Balcony
-      dishwasher:
-        type: checkbox
-        display: Dish Washer
-      doorman:
-        type: checkbox
-        display: Doorman
-      elevator:
-        type: checkbox
-        display: Elevator
-      fireplace:
-        type: checkbox
-        display: Fireplace
-      furnished:
-        type: checkbox
-        display: Furnished
-      garage:
-        type: checkbox
-        display: Garage
-      gym:
-        type: checkbox
-        display: Gym
-      pool:
-        type: checkbox
-        display: Pool
-      parking:
-        type: checkbox
-        display: Parking
-      patio:
-        type: checkbox
-        display: Patio
-      pets:
-        display: Pets Allowed?
-        type: checkbox
-      storage:
-        type: checkbox
-        display: Storage
-      washerDryer:
-        type: checkbox
-        display: Washer / Dryer
-  key_features:
+    type: checkboxes
     display: Key Features
+    create: false
+    options:
+      balcony: Balcony
+      dishwasher: Dishwasher
+      doorman: Doorman
+      elevator: Elevator
+      fireplace: Fireplace
+      furnished: Furnished
+      garage: Garage
+      gym: Gym
+      parking: Parking
+      patio: Patio
+      pets: Pets Allowed
+      pool: Pool
+      storage: Storage
+      washerDryer: Washer / Dryer
+  key_features:
+    display: Key Features (Other)
     instructions: Maximum of Six Items
     type: suggest
     create: true
-    max_items: 7
+    max_items: 6
     taxonomy:
       folder: properties/*
       type: key_features
