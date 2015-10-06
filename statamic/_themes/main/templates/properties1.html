@@ -1,7 +1,5 @@
-<section class="leading background-gray">
-	<div class="container">
-		<a href="{{ url }}?type=buy" class="{{ if get:type != "rent" }}current{{ endif }}">Buy</a><span>|</span>
-		<a href="{{ url }}?type=rent" class="{{ if get:type == "rent" }}current{{ endif }}"> Rent</a>
+<div id="properties"></div>
+
 	<a href="" onclick="location.href = $(this).attr('href')+'?location=chelsea';return false">Chelsea</a>
 		<div class="demo">
 			<div class="control-group">
@@ -30,22 +28,4 @@
 
 				</script>
 			</div>
-
-			{{ if get:type == "rent" }}
-
-				{{ entries:listing folder="properties/lease" }}
-					{{ theme:partial src="property_card" use_context="true" }}
-				{{ /entries:listing}}
-
-			{{ else }}
-
-					{{ entries:listing folder="properties/sale" conditions="property_location:xxxxx" }}
-						{{ theme:partial src="property_card" use_context="true" }}
-					{{ /entries:listing}}
-
-			{{ endif }}
-
-			<div>
-
-
-			</section>
+			</a>

@@ -14,12 +14,6 @@ fields:
   apartment:
     type: text
     display: Apartment Number or Letter (optional)
-  city:
-    type: text
-    display: City
-  country:
-    type: text
-    display: Country
   price:
     type: text
     default: 0
@@ -36,7 +30,7 @@ fields:
     max_items: 1
     taxonomy:
       type: property_location
-      folder: properties/beauchamp/*
+      folder: properties/international/*
   lat_long:
     display: Property Coordinates
     type: grid
@@ -86,7 +80,7 @@ fields:
     type: suggest
     create: true
     content:
-      folder: agents/beauchamp
+      folder: agents/international
       label: title
       value: url
   property_type:
@@ -96,7 +90,7 @@ fields:
     max_items: 1
     taxonomy:
       type: property_type
-      folder: properties/beauchamp/*
+      folder: properties/international/*
   ownership_type:
     display: Ownership Type
     type: suggest

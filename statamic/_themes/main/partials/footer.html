@@ -1,50 +1,48 @@
 <footer class="dark_gray">
 	<div class="container">
-			<div class="grid-3">
-				<h3>SIGN UP FOR EMAIL UPDATES</h3>
-				<form class="email-signup">
-					<input type="text" placeholder="type email address"></input>
-					<button type="submit">Submit</button>
-				</form>
-			</div>
-			<div class="grid-3">
-				<h3>VISIT US</h3>
-				<a href="{{ globals:map_url}}" target="_blank">
-					<h4>{{ globals:address_line1 }}</h4>
-					<h4>{{ globals:address_line2 }}</h4>
-				</a>
-			</div>
-			<div class="grid-3">
-				<h3>CONTACT US</h3>
-				<h4>{{ globals:phone }}</h4>
-				<h4><a href="mailto:{{ globals:email }}">{{ globals:email }}</a></h4>
-			</div>
-			<div class="grid-3 social">
-				<h3>FOLLOW US</h3>
-				<div>
-					<a href="{{ globals:facebook }}" target="_blank">
-						<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-						</span>
-					</a>
-					<a href="{{ globals:linkedin }}" target="_blank">
-						<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-						</span>
-					</a>
-					<a href="https://twitter.com/{{ globals:twitter }}" target="_blank">
-						<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-						</span>
-					</a>
-				</div>
+		<div class="grid-3">
+			<ul>
+				<li><a href="{{ _site_url }}/company">About Us</a></li>
+				<li><a href="{{ _site_url }}/reports">Reports</a></li>
+				<li><a href="{{ _site_url }}/faq">FAQ</a></li>
+			</ul>		
 		</div>
+		<div class="grid-3">
+			<a href="{{ globals:map_url}}" target="_blank">
+				<h4>{{ globals:address_line1 }}</h4>
+				<h4>{{ globals:address_line2 }}</h4>
+			</a>
+				<h4>{{ globals:phone }}</h4>
+				<h4>{{ globals:email_contact }}</h4>
+		</div>
+		<div class="grid-3">
+			<h3>SIGN UP FOR EMAIL UPDATES</h3>
+			<form class="email-signup">
+				<input type="text" placeholder="type email address"></input>
+				<button type="submit">Submit</button>
+			</form>
+		</div>
+
+		<div class="grid-3">
+			<h3>Exclusive Affiliate of</h3>
+			<a target="_blank" href="http://www.beauchamp.co.uk/en/">Beauchamp Logo</a>
+		</div>
+
 	</div>
 	<div class="footer-divider">
+	<div class="container">
 		<p>&copy; {{ current_date format="Y"}} Leslie J. Garfield &amp; Co., Inc. All Rights Reserved.</p>
+		<div class="social">
+			<a href="{{ globals:facebook }}" target="_blank">
+					<i class="fa fa-facebook"></i>
+			</a>
+			<a href="https://twitter.com/{{ globals:twitter }}" target="_blank">
+					<i class="fa fa-twitter"></i>
+			</a>
+			<a href="https://instagram.com/{{ globals:instagram }}" target="_blank">
+					<i class="fa fa-instagram"></i>
+			</a>
+		</div>
 	</div>
 </footer>
 

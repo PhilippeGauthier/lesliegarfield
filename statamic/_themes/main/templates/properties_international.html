@@ -1,2 +1,29 @@
-<div id="properties-international"></div>
+
+<div class="property_nav dark_gray leading properties_grid">
+	<div class="container">
+		<div class="rent-or-buy">
+			<ul>
+				<li><a href="{{ url }}?type=buy" class="{{ if get:type != "rent" }}active{{ endif }}">Buy</a></li>
+				<li><a href="{{ url }}?type=rent" class="{{ if get:type == "rent" }}active{{ endif }}"> Rent</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<section class="background-gray">
+	<div class="container">
+		{{ if get:type == "rent" }}
+
+		{{ entries:listing folder="properties/international/lease" sort_by="price" sort_dir="desc" }}
+		{{ theme:partial src="property_card" use_context="true" }}
+		{{ /entries:listing}}
+
+		{{ else }}
+
+		{{ entries:listing folder="properties/international/sale" sort_by="price" sort_dir="desc" }}
+		{{ theme:partial src="property_card" use_context="true" }}
+		{{ /entries:listing}}
+
+		{{ endif }}
+	<div>
+</section>
 

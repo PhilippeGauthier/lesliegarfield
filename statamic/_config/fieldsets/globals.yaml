@@ -16,6 +16,9 @@ fields:
   phone:
     type: text
     display: Company Phone Number Formatted
+  email_contact:
+    type: text
+    display: Company Contact Email Address
   email_support:
     type: text
     display: Company Support Email Address
