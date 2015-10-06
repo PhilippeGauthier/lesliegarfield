@@ -39,22 +39,11 @@
 
 			{{ else }}
 
-				{{ if get:location == "chelsea"}}
-
-					{{ entries:listing folder="properties/sale" conditions="property_location:Upper East Side|Chelsea" }}
+					{{ entries:listing folder="properties/sale" conditions="property_location:xxxxx" }}
 						{{ theme:partial src="property_card" use_context="true" }}
 					{{ /entries:listing}}
 
-				{{ else }}
-
-					{{ entries:listing folder="properties/sale" }}
-						{{ theme:partial src="property_card" use_context="true" }}
-					{{ /entries:listing}}			
-					
-				{{ endif }}
-
 			{{ endif }}
-
 
 			<div>
 

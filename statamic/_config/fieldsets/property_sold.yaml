@@ -10,10 +10,13 @@ fields:
     max_items: 1
     taxonomy:
       type: property_location
-      folder: properties/*
-  sold:
-    default: true
+      folder: properties/garfield/*
+  streeteasy_status:
+    type: select
     hide: true
+    display: Status
+    options:
+      - Sold
   price:
     type: text
     display: Sale Price
@@ -24,7 +27,7 @@ fields:
     type: suggest
     create: true
     content:
-      folder: agents
+      folder: agents/garfield
       label: title
       value: url
   property_type:
@@ -34,7 +37,9 @@ fields:
     max_items: 1
     taxonomy:
       type: property_type
-      folder: properties/*
+      folder: properties/garfield/*
+  content:
+    hide: true
 
 
 

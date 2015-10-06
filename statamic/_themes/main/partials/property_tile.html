@@ -1,11 +1,19 @@
+
 {{ if no_results }}
 <p class="no_results">We are currently have no properties for Sale or Lease in this neighborhood. Be sure to check back soon.</p>
 {{ else }}
 {{ if first }}
-<ul>
+<div class="tile-container">
+{{ if total_results == 1}}
+<div class="carousel_tile carousel_tile_1">
+{{ elseif total_results ==2 }}
+<div class="carousel_tile carousel_tile_2">
+{{ else }}
+<div class="carousel_tile carousel_tile_3">
 {{ endif }}
-<li>
-	<a href="{{ url }}" class="property_box">
+{{ endif }}
+<div>
+	<a href="{{ url }}" class="property_box slick">
 		<div class='preview-image' style='background-image: url( {{ path src='{{ preview_image }}' }} );'></div>
 		<div class="property_tile_info">
 			<div class="top-info">
@@ -33,9 +41,9 @@
 			</div>
 		</div>
 	</a >
-</li>
+</div>
 {{ if last }}
-</ul>
+</div>
 </div>
 {{ endif }}
 {{ endif }}

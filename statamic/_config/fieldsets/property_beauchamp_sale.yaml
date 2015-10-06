@@ -8,23 +8,15 @@ fields:
   title:
     type: text
     display: Property Name
-  datestamp:
-    type: date
-    hide: true
   apartment:
     type: text
     display: Apartment Number or Letter (optional)
   city:
     type: text
     display: City
-    default: New York
-  state:
+  country:
     type: text
-    display: State
-    default: NY
-  zip_code:
-    type: text
-    display: Zip Code
+    display: Country
   price:
     type: text
     default: 0
@@ -38,7 +30,7 @@ fields:
     max_items: 1
     taxonomy:
       type: property_location
-      folder: properties/garfield/*
+      folder: properties/beauchamp
   lat_long:
     display: Property Coordinates
     type: grid
@@ -63,12 +55,6 @@ fields:
       - Active
       - In Contract
       - Sold
-  streeteasy:
-    display: ACTIVATE STREETEASY?
-    type: checkbox
-  openhouse:
-    display: Open House?
-    type: checkbox
   openhouse_grid:
     type: grid
     display: Open House(s)
@@ -91,7 +77,7 @@ fields:
     type: suggest
     create: true
     content:
-      folder: agents/garfield
+      folder: agents/beauchamp
       label: title
       value: url
   property_type:
@@ -101,7 +87,7 @@ fields:
     max_items: 1
     taxonomy:
       type: property_type
-      folder: properties/garfield/*
+      folder: properties/beauchamp/*
   plot:
     type: text
     display: Plot

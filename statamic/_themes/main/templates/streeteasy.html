@@ -1,5 +1,5 @@
 <properties>
-{{ entries:listing folder="properties/sale" conditions="streeteasy:true" }}
+{{ entries:listing folder="properties/garfield/sale" conditions="streeteasy:true" }}
 <property 
 	type="sale" id="{{ id }}" status="{{ if streeteasy_status =="Active" }}active{{ elseif streeteasy_status =="Contract Out"}}contract-out
 	{{ elseif streeteasy_status =="Contract Signed"}}contract-signed{{ elseif streeteasy_status =="In Contract"}}in-contract{{ elseif streeteasy_status =="Leased"}}leased{{ elseif streeteasy_status =="Off Market"}}off-market{{ elseif streeteasy_status =="Temporarily Off Market"}}temporarily-off-market{{ elseif streeteasy_status =="Sold"}}sold{{ endif }}" 
@@ -126,7 +126,7 @@
 	</agents>
 </property>
 {{ /entries:listing }}
-{{ entries:listing folder="properties/lease" conditions="streeteasy:true" }}
+{{ entries:listing folder="properties/garfield/lease" conditions="streeteasy:true" }}
 <property 
 	type="rental" id="{{ id }}" status="{{ if streeteasy_status =="Active" }}active{{ elseif streeteasy_status =="Contract Out"}}contract-out
 	{{ elseif streeteasy_status =="Contract Signed"}}contract-signed{{ elseif streeteasy_status =="In Contract"}}in-contract{{ elseif streeteasy_status =="Leased"}}leased{{ elseif streeteasy_status =="Off Market"}}off-market{{ elseif streeteasy_status =="Temporarily Off Market"}}temporarily-off-market{{ elseif streeteasy_status =="Sold"}}sold{{ endif }}" 

@@ -44,7 +44,7 @@ fields:
     max_items: 1
     taxonomy:
       type: property_location
-      folder: properties/*
+      folder: properties/garfield/*
   lat_long:
     display: Property Coordinates
     type: grid
@@ -97,7 +97,7 @@ fields:
     type: suggest
     create: true
     content:
-      folder: agents
+      folder: agents/garfield
       label: title
       value: url
   property_type:
@@ -107,7 +107,7 @@ fields:
     max_items: 1
     taxonomy:
       type: property_type
-      folder: properties/*
+      folder: properties/garfield/*
   ownership_type:
     display: Ownership Type
     type: suggest

@@ -37,8 +37,9 @@ var path = {
   ASCENT_IN: 'statamic/admin/themes/ascent/scss/',
   ASCENT_DIST: 'statamic/admin/themes/ascent/dist',
   ASCENT_OUT: 'statamic/admin/themes/ascent/css',
-  MKDN_SRC: 'statamic/_content/1-properties',
-  MKDN_EXCLUDE: '/{sold,sold/*.md,leased,leased/*.md,/**/page.md}',
+  MKDN_SRC: 'statamic/_content/1-properties/garfield',
+  MKDN_SRC_INTER: 'statamic/_content/1-properties/beauchamp',
+  MKDN_EXCLUDE: '/{beauchamp,beauchamp/*.md,garfield/sold,garfield/sold/*.md,garfield/leased,garfield/leased/*.md,/**/page.md}',
   PROP_SALE: '/sale',
   PROP_RENT: '/lease',
   JSON: 'statamic/JSON/'
@@ -90,10 +91,19 @@ gulp.task('markdown', function(){
     .pipe(gulp.dest(path.JSON))
 });
 
+gulp.task('markdown-international', function(){
+  gulp.src([path.MKDN_SRC_INTER + '/**/*.md','!'+ path.MKDN_SRC_INTER + '/page.md'])
+    .pipe(gutil.buffer())
+    .on('error', function(err){ console.log(err.message); })
+    .pipe(markdown('properties-international.json'))
+    .pipe(gulp.dest(path.JSON))
+});
+
 gulp.task('watch', function() {
   livereload.listen();
   gulp.watch(path.HTML, ['copy']);
   gulp.watch([path.MKDN_SRC + '/sale/*.md',path.MKDN_SRC + '/lease/*.md'], ['markdown']);
+  gulp.watch([path.MKDN_SRC_INTER + '/*.md'], ['markdown-international']);
   gulp.watch(path.SCSS, ['sass']);
   gulp.watch([path.DEST + '/**/*.*'], reload_page);
 

@@ -49,22 +49,22 @@
 				</a>
 		</div>
 	</section>
-	<section class="circle-icon light-gray-bg" id="featured-properties">
+	<section class="circle-icon seafoam-bg" id="featured-properties">
 		<div class="circle-leader">
 			<div class="circle light-gray-bg">
 				{{ theme:partial src="svg/home_building" }}
 			</div>
-			<h4>FEATURED PROPERTIES</h4>
+			<h4>FEATURED NEW YORK PROPERTIES</h4>
 		</div>
 		<div class="container">
-			{{ entries:listing folder="properties/sale|properties/lease" sort_by="random" }}
+			{{ entries:listing folder="properties/garfield/sale|properties/garfield/lease" sort_by="random" }}
 				{{ theme:partial src="property_tile" use_context="true" }}
 			{{ /entries:listing }}
 		</div>
 	</section>
-	<section id="featured-properties" class="seafoam-bg">
+	<section id="featured-properties">
 		<div class="circle-leader">
-			<div class="circle seafoam-bg">
+			<div class="circle white">
 				{{ theme:partial src="svg/home_book" }}
 			</div>
 			<h4>LATEST NEWS &amp; INSIGHTS</h4>
@@ -88,5 +88,18 @@
 				</a>
 			</div>
 		{{ /insights }}
+		</div>
+	</section>
+		<section class="circle-icon light-gray-bg" id="featured-properties">
+		<div class="circle-leader">
+			<div class="circle light-gray-bg">
+				{{ theme:partial src="svg/home_building" }}
+			</div>
+			<h4>FEATURED INTERNATIONAL PROPERTIES</h4>
+		</div>
+		<div class="container">
+			{{ entries:listing folder="properties/beauchamp/sale|properties/beauchamp/lease" sort_by="random" }}
+				{{ theme:partial src="property_tile" use_context="true" }}
+			{{ /entries:listing }}
 		</div>
 	</section>

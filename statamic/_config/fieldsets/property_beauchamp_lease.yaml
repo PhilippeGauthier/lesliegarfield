@@ -1,50 +1,48 @@
 
 
 fields:
-  url:
-    type: page_url
   id:
     type: uuid
+  url:
+    type: page_url
   title:
     type: text
     display: Property Name
-  datestamp:
-    type: date
-    hide: true
+  street_address:
+    type: text
+    display: Street Address
   apartment:
     type: text
     display: Apartment Number or Letter (optional)
   city:
     type: text
     display: City
-    default: New York
-  state:
+  country:
     type: text
-    display: State
-    default: NY
-  zip_code:
-    type: text
-    display: Zip Code
+    display: Country
   price:
     type: text
     default: 0
     required: true
-    display: Price
+    display: Lease Price / Must be Monthly Rate
     instructions:
       above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
+  terms:
+    type: text
+    display: Lease Terms
   property_location:
     type: suggest
     create: true
     max_items: 1
     taxonomy:
       type: property_location
-      folder: properties/garfield/*
+      folder: properties/beauchamp/*
   lat_long:
     display: Property Coordinates
     type: grid
     starting_rows: 1
     max_rows: 1
-    fields: 732 661 9410
+    fields:
       latitude:
         display: Latitude (should be similar to 40.7590615)
         type: text
@@ -62,10 +60,7 @@ fields:
     options:
       - Active
       - In Contract
-      - Sold
-  streeteasy:
-    display: ACTIVATE STREETEASY?
-    type: checkbox
+      - Leased
   openhouse:
     display: Open House?
     type: checkbox
@@ -91,7 +86,7 @@ fields:
     type: suggest
     create: true
     content:
-      folder: agents/garfield
+      folder: agents/beauchamp
       label: title
       value: url
   property_type:
@@ -101,19 +96,18 @@ fields:
     max_items: 1
     taxonomy:
       type: property_type
-      folder: properties/garfield/*
+      folder: properties/beauchamp/*
+  ownership_type:
+    display: Ownership Type
+    type: suggest
+    create: true
+    max_items: 1
+    taxonomy:
+      type: ownership_type
+      folder: properties/*
   plot:
     type: text
     display: Plot
-  building_size:
-    type: text
-    display: Building Size
-  ownership:
-    type: text
-    display: Ownership (condo, coop, etc);
-  build_date:
-    type: text
-    display: Build Date
   stories:
     type: text
     display: Stories
@@ -123,9 +117,6 @@ fields:
   units:
     type: text
     display: Units / Apts
-  rooms:
-    type: text
-    display: Rooms
   bedrooms:
     display: Bedrooms
     type: text
@@ -135,25 +126,6 @@ fields:
   powder:
     display: Powder Rooms
     type: text
-  taxes:
-    display: Taxes
-    type: text
-  income:
-    type: checkbox
-    display: Income
-  expenses:
-    type: checkbox
-    display: Expenses
-  fees:
-    type: grid
-    display: Fill one or the other out
-    fields:
-      common_charges:
-        type: text
-        display: Common charges
-      maintenance:
-        type: text
-        display: Maintenance
   amenities:
     type: checkboxes
     display: Key Features
