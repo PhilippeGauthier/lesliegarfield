@@ -33,8 +33,8 @@ var GoogleMaps = require('./components/GoogleMaps.js');
 var Custom = require('./components/Custom.js');
 
 // React Components
-var elem = $('#properties');
 
+var elem = $('#properties');
 if (elem.length) {
 
 	var FilterBar = require('./components/FilterBar.react');
