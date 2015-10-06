@@ -151,3 +151,15 @@
 	position: relative;
 	background-position: center;
 }
+
+.pagination {
+	.older i {
+		margin-right: 10px;
+	}
+	.newer {
+		float: right;
+		i {
+			margin-left: 10px;
+		}
+	}
+}

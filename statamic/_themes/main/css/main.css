@@ -4152,6 +4152,15 @@ section.services h3 {
   position: relative;
   background-position: center; }
 
+.pagination .older i {
+  margin-right: 10px; }
+
+.pagination .newer {
+  float: right; }
+
+.pagination .newer i {
+  margin-left: 10px; }
+
 .categories {
   border-bottom: 1px solid #CCCCCC;
   padding-bottom: 30px;
