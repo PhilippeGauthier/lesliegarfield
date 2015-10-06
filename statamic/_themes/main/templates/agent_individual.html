@@ -83,15 +83,15 @@
 
 
 				
-			{{ entries:listing folder="properties/garfield/sale|properties/garfield/lease|properties/beauchamp/sale|properties/beauchamp/lease" conditions="agents:{url}" }}
+			{{ entries:listing folder="properties/new-york/sale|properties/new-york/lease|properties/international/sale|properties/international/lease" conditions="agents:{url}" }}
 				{{ theme:partial src="property_tile_agent" use_context="true" }}  
 			{{ /entries:listing }}
 			
-			{{ entries:listing folder="properties/garfield/sale|properties/garfield/sold|properties/beauchamp/sale|properties/beauchamp/sold" conditions="agents:{url}, sold:true" sort_by="price" sort_dir="desc" }}
+			{{ entries:listing folder="properties/new-york/sale|properties/new-york/sold|properties/international/sale|properties/international/sold" conditions="agents:{url}, sold:true" sort_by="price" sort_dir="desc" }}
 			{{ theme:partial src="recent_transactions_sale" use_context="true" }}
 			{{ /entries:listing }}
 
-			{{ entries:listing folder="properties/garfield/lease|properties/garfield/leased|properties/beauchamp/lease|properties/beauchamp/leased" conditions="agents:{url}, leased:true" sort_by="price" sort_dir="desc" }}
+			{{ entries:listing folder="properties/new-york/lease|properties/new-york/leased|properties/international/lease|properties/international/leased" conditions="agents:{url}, leased:true" sort_by="price" sort_dir="desc" }}
 			{{ theme:partial src="recent_transactions_rental" use_context="true" }}
 			{{ /entries:listing }}
 
