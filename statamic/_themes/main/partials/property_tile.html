@@ -17,7 +17,7 @@
 		<div class='preview-image' style='background-image: url( {{ path src='{{ preview_image }}' }} );'></div>
 		<div class="property_tile_info">
 			<div class="top-info">
-				<h2>{{ title }}</h2>
+				<h2>{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}</h2>
 				<div class="spacer"></div>
 				<h3>${{ price|format_number }}</h3>
 				<div class="spacer"></div>
