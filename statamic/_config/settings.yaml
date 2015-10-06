@@ -51,7 +51,6 @@ _taxonomy:
   - key_features
   - property_location
   - property_type
-  - property_location
   - ownership_type
   - services
   - authors

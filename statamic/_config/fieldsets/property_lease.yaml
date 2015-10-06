@@ -1,11 +1,8 @@
 
 
 fields:
-  site_root:
-    type: select
-    options:
-      - http://104.131.23.73/
-      - http://localhost/~philippe/lesliegarfield/statamic/
+  id:
+    type: uuid
   url:
     type: page_url
   title:

@@ -1,0 +1,40 @@
+.twitter-feed {
+	padding: 15px;
+	.follow {
+		a {
+			@include flex-hor;
+			padding: 10px;
+			&:hover {
+				background-color: lighten(#cccccc,3%);
+			}
+		}
+		
+		img {
+			display: inline-block;
+		}
+		span {
+			margin-left: 10px;
+			text-transform: none;
+			text-decoration: underline;
+		}
+	}
+	.tweet {
+		padding-top: 10px;
+		p {
+			font-family: $base-font-family;
+			font-size: 14px;
+			line-height: 19px;
+		}
+		.tweet-url {
+
+		}
+		.time {
+			margin: 0;
+		}
+		padding-bottom: 10px;
+		border-bottom: 1px solid $dark-gray;
+		&:last-of-type {
+			border-bottom: none;
+		}
+	}
+}

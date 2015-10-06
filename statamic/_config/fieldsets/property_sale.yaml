@@ -3,6 +3,8 @@
 fields:
   url:
     type: page_url
+  id:
+    type: uuid
   title:
     type: text
     display: Property Name

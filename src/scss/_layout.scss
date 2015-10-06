@@ -140,6 +140,9 @@ img {
   // padding-bottom: 0; 
   @include clearfix;
   padding-top: 60px;
+  &.properties {
+  	padding-top: 0;
+  }
 }
 
 .grid-item {

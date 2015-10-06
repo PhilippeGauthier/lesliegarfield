@@ -2,9 +2,9 @@
 <p class="no_results">We are currently have no properties for Sale or Lease in this neighborhood. Be sure to check back soon.</p>
 {{ else }}
 {{ if first }}
-<ul>
+<ul class="grid">
 {{ endif }}
-<li>
+<li class="grid-item property_tile">
 	<a href="{{ url }}" class="property_box">
 		<div class='preview-image' style='background-image: url( {{ path src='{{ preview_image }}' }} );'></div>
 		<div class="property_tile_info">
