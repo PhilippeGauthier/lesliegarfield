@@ -1,7 +1,7 @@
 <properties>
 {{ entries:listing folder="properties/sale" conditions="streeteasy:true" }}
 <property 
-	type="sale" id="{{ datestamp }}" status="{{ if streeteasy_status =="Active" }}active{{ elseif streeteasy_status =="Contract Out"}}contract-out
+	type="sale" id="{{ id }}" status="{{ if streeteasy_status =="Active" }}active{{ elseif streeteasy_status =="Contract Out"}}contract-out
 	{{ elseif streeteasy_status =="Contract Signed"}}contract-signed{{ elseif streeteasy_status =="In Contract"}}in-contract{{ elseif streeteasy_status =="Leased"}}leased{{ elseif streeteasy_status =="Off Market"}}off-market{{ elseif streeteasy_status =="Temporarily Off Market"}}temporarily-off-market{{ elseif streeteasy_status =="Sold"}}sold{{ endif }}" 
 	url="{{ _site_url }}{{ url }}">
 	<location>
@@ -128,7 +128,7 @@
 {{ /entries:listing }}
 {{ entries:listing folder="properties/lease" conditions="streeteasy:true" }}
 <property 
-	type="rental" id="{{ datestamp }}" status="{{ if streeteasy_status =="Active" }}active{{ elseif streeteasy_status =="Contract Out"}}contract-out
+	type="rental" id="{{ id }}" status="{{ if streeteasy_status =="Active" }}active{{ elseif streeteasy_status =="Contract Out"}}contract-out
 	{{ elseif streeteasy_status =="Contract Signed"}}contract-signed{{ elseif streeteasy_status =="In Contract"}}in-contract{{ elseif streeteasy_status =="Leased"}}leased{{ elseif streeteasy_status =="Off Market"}}off-market{{ elseif streeteasy_status =="Temporarily Off Market"}}temporarily-off-market{{ elseif streeteasy_status =="Sold"}}sold{{ endif }}" 
 	url="{{ _site_url }}{{ url }}">
 	<location>
