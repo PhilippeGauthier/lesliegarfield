@@ -4152,6 +4152,9 @@ section.services h3 {
   position: relative;
   background-position: center; }
 
+.pagination {
+  margin-top: 20px; }
+
 .pagination .older i {
   margin-right: 10px; }
 
