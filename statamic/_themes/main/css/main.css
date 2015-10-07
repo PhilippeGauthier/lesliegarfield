@@ -3302,12 +3302,12 @@ section.services h3 {
 .property-agents li, .property-agents a {
   vertical-align: top;
   font-family: "Copernicus-Medium";
-  font-size: 10px; }
+  font-size: 11px; }
 
 .property-agents svg {
   margin-right: 5px;
-  height: 25px;
-  width: 25px; }
+  height: 20px;
+  width: 20px; }
 
 .property-downloads a {
   width: 44.44444%;
