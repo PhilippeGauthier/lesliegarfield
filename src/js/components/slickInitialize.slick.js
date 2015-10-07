@@ -5,7 +5,7 @@ $('.carousel_tile_1').slick({
   speed: 300,
   slidesToShow: 1,
   slidesToScroll: 1,
-
+  autoplay: true,
   responsive: [
     {
       breakpoint: 1024,
@@ -38,6 +38,7 @@ $('.carousel_tile_2').slick({
   speed: 300,
   slidesToShow: 2,
   slidesToScroll: 1,
+  autoplay: true,
   arrows: true,
   responsive: [
     {
@@ -70,7 +71,8 @@ $('.carousel_tile_3').slick({
   infinite: true,
   speed: 300,
   slidesToShow: 3,
-  slidesToScroll: 3,
+  slidesToScroll: 1,
+  autoplay: true,
   responsive: [
     {
       breakpoint: 1024,
