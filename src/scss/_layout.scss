@@ -172,7 +172,7 @@ section.services {
 section.faq {
 	main {
 		@include span (first 8 of 12);
-		@include post(1);
+		@include post(1 of 12);
 	}
 	aside {
 		@include span(320px no-gutter);
