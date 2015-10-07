@@ -326,7 +326,11 @@
 	<div class="container">
 		<div class="property_tile">
 			{{ entries:listing folder="properties/sale" conditions="url:!{url}, property_location:{ property_location }"  }}
-			{{ theme:partial src="property_tile" use_context="true" }}		        
+			{{ if no_results }}
+			<p class="no_results">We are currently have no other properties for sale in this neighborhood. Be sure to check back soon.</p>
+			{{ else }}
+			{{ theme:partial src="property_tile" use_context="true" }}
+			{{ endif }}		        
 			{{ /entries:listing }}
 		</div>
 	</div>

@@ -80,7 +80,11 @@
 		<div class="container">
 			<h3>CURRENT PROPERTIES IN THIS NEIGHBORHOOD</h3>
 			{{ entries:listing folder="properties/new-york/sale|properties/new-york/lease" conditions="property_location:{title}"}}
+			{{ if no_results }}
+			<p class="no_results">We are currently have no other properties for sale or lease in this neighborhood. Be sure to check back soon.</p>
+			{{ else }}
 			{{ theme:partial src="property_tile" use_context="true" }}
+			{{ endif }}
 			{{ /entries:listing }}
 		</div>
 	</section>
