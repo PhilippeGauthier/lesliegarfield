@@ -4644,6 +4644,7 @@ section.services h3 {
   padding-left: 10px; }
 
 .property_box .property_tile_info h2, .property_box .property_tile_info h3, .property_box .property_tile_info h4 {
+  text-align: left;
   margin: 0; }
 
 .property_box .property_tile_info h2, .property_box .property_tile_info h3, .property_box .property_tile_info p {
