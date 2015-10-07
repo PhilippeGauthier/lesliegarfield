@@ -30,10 +30,11 @@
 
 .quote-content {
 	display: inline-block;
-	font-family: $header-font-family;
+	font-family: $header-font-family-medium-italic;
 	font-size: 18px;
 	line-height: 30px;
 	z-index: 100;
+	color: $quote-gray;
 	.quote-symbol {
 		position: absolute;
 		&.left {
@@ -50,6 +51,7 @@
 	text-transform: uppercase;
 	margin-top: 30px;
 	display: inline-block;
+	color: $quote-gray;
 }
 
 .service-quote {

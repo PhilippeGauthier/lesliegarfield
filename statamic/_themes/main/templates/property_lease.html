@@ -171,7 +171,7 @@
 						</ul>
 						<ul>
 							{{ if price|not_empty }}
-							<li>{{ price }}/month</li>
+							<li>${{ price|format_number }}/month</li>
 							{{ endif }}
 
 							{{ if terms|not_empty }}

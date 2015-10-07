@@ -37,7 +37,6 @@
 		font-size: 12px;
 	}
 	.grid-3-constrained-padding {
-
 		* {
 			vertical-align: middle;
 		}
@@ -51,6 +50,22 @@
 		}
 		p {
 			margin-bottom: 10px;
+		}
+		&.international {
+			img {
+				filter: grayscale(100%);
+			}
+		}
+	}
+	.divider {
+		@include clearfix;
+		margin-bottom: 60px;
+		span {
+			font-weight: 700;
+			font-size: 14px;
+			display: inline-block;
+			padding: 0 20px 30px 20px;
+			border-bottom: 1px solid $dark-gray;
 		}
 	}
 }

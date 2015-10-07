@@ -7,10 +7,7 @@
 		text-transform: uppercase;
 	}
 	h3 {
-		display: inline-block;
 		text-align: center;
-		padding: 0 15px 25px 15px;
-		border-bottom: 1px solid $dark-gray;
 		margin: 0 auto;
 		font-weight: 700;
 	}
@@ -22,10 +19,17 @@
 		@include pre(3 of 12);
 		@include span (6 of 12);
 	}
-	&.history {
+	.divider {
+		height: 1px;
+		width: 200px;
+		background-color: $dark-gray;
+		margin: 30px auto;
+	}
+	&.history,&.international {
 		h2,h4 {
 			font-family: $header-font-medium;
 			line-height: 46px;
+			margin-bottom: 0;
 		}
 		h2 {
 			font-size: 36px;
@@ -35,20 +39,26 @@
 		h4 {
 			display: inline-block;
 			font-size: 26px;
-			border-bottom: 1px solid $dark-gray;
 			margin-top: 0;
-			padding: 0 15px 25px 15px;
 			@include clearfix;
 		}
-		.history-1 {
+		img {
+			text-align: center;
+			display: inline-block;
+		}
+		.column-1 {
 			@include pre(1);
 			@include span(5 of 12);
 		}
-		.history-2 {
+		.column-2 {
 			@include span(5 of 12);
 		}
 		p {
 			text-align: left;
+		}
+		a {
+			font-family: $header-font-family-medium-italic;
+			font-size: 16px;
 		}
 	}
 	&.why {

@@ -5,12 +5,14 @@
 <section class="darkest-seafoam-bg">
 	<div class="container company beliefs">
 		<h3>OUR BELIEFS</h3>
+		.divider
 		{{ beliefs }}
 	</div>
 </section>
 <section>
 	<div class="container company why">
 		<h3>WHY GARFIELD</h3>
+		<div class="divider"></div>
 		{{ why }}
 		{{ why_grid }}
 			<h2>{{ name }}</h2>
@@ -18,14 +20,26 @@
 		{{ /why_grid }}
 	</div>
 </section>
-<section style="background-color: #cccccc;">
+<section class="seafoam-bg">
 	<div class="container company history">
 		<h3>OUR HISTORY</h3>
+		<div class="divider"></div>
 		<h2>TOWNHOMES &amp; BUILDING SPECIALISTS</h2>
 		<h4>SINCE 1982</h4>
+		<div class="divider"></div>
 		<div></div>
-		<div class="history-1">{{ history_1 }}</div>
-		<div class="history-2">{{ history_2 }}</div>
+		<div class="column-1">{{ history_1 }}</div>
+		<div class="column-2">{{ history_2 }}</div>
 	</div>
 </section>
-
+<section>
+	<div class="container company international">
+		<h3>OUR INTERNATIONAL PARTNER</h3>
+		<div class="divider"></div>
+		<div><img src="{{ path src="{{ international_image }}" }}" ></div>
+		<div class="divider"></div>
+		<div></div>
+		<div class="column-1">{{ international_1 }}</div>
+		<div class="column-2">{{ international_2 }}</div>
+	</div>
+</section>

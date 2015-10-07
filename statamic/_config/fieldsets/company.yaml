@@ -4,12 +4,6 @@ fields:
   beliefs:
     type: redactor
     display: Beliefs
-  history_1:
-    type: redactor
-    display: History Column 1
-  history_2:
-    type: redactor
-    display: History Column 2
   why:
     type: redactor
     display: Why Garfield
@@ -24,5 +18,22 @@ fields:
         display: Description
         type: textarea
         height: 75
+  history_1:
+    type: redactor
+    display: History Column 1
+  history_2:
+    type: redactor
+    display: History Column 2
+  international_image:
+    type: file
+    display: International Partner Logo
+    destination: assets/img
+    allowed: [jpg,jpeg,png]
+  international_1:
+    type: redactor
+    display: International Column 1
+  international_2:
+    type: redactor
+    display: International Column 2
   content:
    hide: true
