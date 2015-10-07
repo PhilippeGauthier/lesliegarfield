@@ -44,7 +44,7 @@
 					{{ entries:next folder="blog" }}
 						{{ if !no_results }}
 							<a href="{{ url }}" class="older">
-							<i class="fa fa-angle-double-left"></i>Previous Post: {{ title|widont }}
+							<i class="fa fa-angle-double-left"></i>Previous Post
 							</a>
 						{{ endif }}
 					{{ /entries:next }}
@@ -52,7 +52,7 @@
 					{{ entries:previous folder="blog" }}
 						{{ if !no_results }}
 							<a href="{{ url }}" class="newer">
-								Next Post: {{ title|widont }}<i class="fa fa-angle-double-right"></i>
+								Next Post<i class="fa fa-angle-double-right"></i>
 							</a>
 						{{ endif }}
 					{{ /entries:previous }}
