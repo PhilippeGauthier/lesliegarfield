@@ -3304,6 +3304,14 @@ section.services h3 {
   font-family: "Copernicus-Medium";
   font-size: 11px; }
 
+.property-agents li {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
 .property-agents svg {
   margin-right: 5px;
   height: 20px;

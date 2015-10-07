@@ -162,6 +162,9 @@
 		font-family: $header-font-medium;
 		font-size: 11px;
 	}
+	li {
+		@include flex-hor;
+	}
 	svg {
 		margin-right: 5px;
 		height: 20px;
