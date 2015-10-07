@@ -72,6 +72,45 @@
 			color: $text-green;
 		}
 	}
+	&.signup {
+		h2,h3 {
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		h2 {
+			font-family: $header-font-family-medium-italic;
+			font-size: 34px;
+		}
+		h3 {
+			font-family: $header-font-medium;
+			font-size: 16px;
+		}
+		form {
+			@include pre(2 of 12);
+			@include post(2 of 12);
+			text-align: center;
+		}
+		input {
+			width: 100%;
+			padding: 10px;
+			font-family: $header-font-medium;
+			border: 1px solid lighten($header-font-color,50%);
+		}
+		.form-group {
+			margin-bottom: gutter(6);
+		}
+		.full-span {
+			@include span(2 of 2 .025);
+		}
+		.half {
+			@include span (1 of 2 .025);	
+			@include clearfix;
+		}
+		button {
+			@include btn-garfield(10px, 100px,14px);
+			margin: 20px auto;
+		}
+	}
 }
 
 .report-tile {

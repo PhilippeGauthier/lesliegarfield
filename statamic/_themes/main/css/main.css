@@ -4873,6 +4873,66 @@ section.services h3 {
 .reports .expander-next:hover span {
   color: #009B77; }
 
+.reports.signup h2, .reports.signup h3 {
+  text-align: center;
+  margin-bottom: 30px; }
+
+.reports.signup h2 {
+  font-family: "Copernicus-MediumItalic";
+  font-size: 34px; }
+
+.reports.signup h3 {
+  font-family: "Copernicus-Medium";
+  font-size: 16px; }
+
+.reports.signup form {
+  margin-left: 16.66667%;
+  margin-right: 16.66667%;
+  text-align: center; }
+
+.reports.signup input {
+  width: 100%;
+  padding: 10px;
+  font-family: "Copernicus-Medium";
+  border: 1px solid #a1a8ad; }
+
+.reports.signup .form-group {
+  margin-bottom: 1.66667%; }
+
+.reports.signup .full-span {
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.60976%;
+  padding-right: 0.60976%; }
+
+.reports.signup .half {
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding-left: 0.60976%;
+  padding-right: 0.60976%; }
+
+.reports.signup .half:before, .reports.signup .half:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.reports.signup button {
+  border-radius: 0;
+  background-color: #009880;
+  padding: 10px 100px;
+  font-size: 14px;
+  border: 1px solid #009880;
+  border-radius: 0;
+  color: white;
+  text-transform: uppercase;
+  margin: 20px auto; }
+
+.reports.signup button:hover, .reports.signup button:focus {
+  color: white;
+  background-color: #009d84; }
+
 .report-tile {
   padding: 30px;
   margin: 10px;
