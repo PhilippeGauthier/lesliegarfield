@@ -6,13 +6,13 @@
 
 				<div class="blog-left">
 					<ul class="categories">
-					{{ if categories|not_empty }}
+						{{ if categories|not_empty }}
 						{{ categories }}
 						<li><a href="{{ _site_root }}blog/categories/{{ title|lower }}">{{ value }}</a></li>
 						{{ /categories }}
-					{{ else }}
+						{{ else }}
 						<div class="title-holder"></div>
-					{{ endif }}
+						{{ endif }}
 					</ul>
 					<h1>{{ title }}</h1>
 					{{ theme:partial src="blog_social" use_context="true" }}
@@ -23,22 +23,41 @@
 					<div class="authors">
 						<h2 class="blog-header">Authors</h2>
 						<ul>
-						{{ relate:author }}
-						<li><a class="author-list" href="{{ _site_root }}blog/authors/{{ title|lower }}">
-						<img class="author-image" src="{{ path src="{{ image }}"}}">
-						{{ title }}
-						</a></li>  
-						{{ /relate:author }}
+							{{ relate:author }}
+							<li><a class="author-list" href="{{ _site_root }}blog/authors/{{ title|lower }}">
+								<img class="author-image" src="{{ path src="{{ image }}"}}">
+								{{ title }}
+							</a></li>  
+							{{ /relate:author }}
 						</ul>
-						</ul>
-						<h2 class="blog-header">Other News</h2>
-						<div class="twitter-feed background-gray">
-							{{ theme:partial src="twitter" }}
-						</div>
+					</div>
+					<h2 class="blog-header">Other News</h2>
+					<div class="twitter-feed background-gray">
+						{{ theme:partial src="twitter" }}
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>	
+		<div class="container">
+			<div class="blog-left">
+				<div class="pagination">
+					{{ entries:next folder="blog" }}
+						{{ if !no_results }}
+							<a href="{{ url }}" class="older">
+							<i class="fa fa-angle-double-left"></i>Previous Post: {{ title|widont }}
+							</a>
+						{{ endif }}
+					{{ /entries:next }}
 
+					{{ entries:previous folder="blog" }}
+						{{ if !no_results }}
+							<a href="{{ url }}" class="newer">
+								Next Post: {{ title|widont }}<i class="fa fa-angle-double-right"></i>
+							</a>
+						{{ endif }}
+					{{ /entries:previous }}
+				</div>
+			</div>
+		</div>
+	</section>	
 </div>
