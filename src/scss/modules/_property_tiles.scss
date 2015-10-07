@@ -24,10 +24,10 @@
 }
 
 .carousel_tile_1 {
-	@include pre(4);
+	@include pre(4 of 12);
 	@include span(4 of 12 no-gutter);
 	&.agent_tile {
-		@include pre(2);
+		@include pre(2 of 12);
 		@include span (8 of 12 no-gutter);
 	}
 }

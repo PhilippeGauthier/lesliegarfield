@@ -4574,13 +4574,13 @@ section.services h3 {
   clear: both; }
 
 .carousel_tile_1 {
-  margin-left: 50%;
+  margin-left: 33.33333%;
   box-sizing: border-box;
   width: 33.33333%;
   float: left; }
 
 .carousel_tile_1.agent_tile {
-  margin-left: 25%;
+  margin-left: 16.66667%;
   box-sizing: border-box;
   width: 66.66667%;
   float: left; }
