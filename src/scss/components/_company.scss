@@ -1,7 +1,15 @@
+.company-hero {
+	padding-top: 200px;
+	padding-bottom: 200px;
+	h1 {
+		margin-top: 0;
+	}
+}
+
 .company {
 	text-align: center;
-	@include pre(2 of 12);
-	@include span(8 of 12);
+	@include pre(2.75 of 12);
+	@include span(6.5 of 12);
 	h2 {
 		font-family: $base-font-family;
 		font-size: 23px;

@@ -3738,7 +3738,7 @@ section.services h3 {
   clear: both; }
 
 .numbers h1, .numbers h3 {
-  font-family: "Copernicus-ExtraBold";
+  font-family: "Copernicus-ExtraBold", georgia, serif;
   text-align: center; }
 
 .numbers h1 {
@@ -3855,11 +3855,18 @@ section.services h3 {
 .faq-aside svg * {
   fill: #009B77; }
 
+.company-hero {
+  padding-top: 200px;
+  padding-bottom: 200px; }
+
+.company-hero h1 {
+  margin-top: 0; }
+
 .company {
   text-align: center;
-  margin-left: 16.66667%;
+  margin-left: 22.91667%;
   box-sizing: border-box;
-  width: 66.66667%;
+  width: 54.16667%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%; }
@@ -4044,7 +4051,7 @@ section.services h3 {
 
 .blog .date, .blog .author {
   text-transform: none;
-  font-family: "Copernicus-ExtraBold";
+  font-family: "Copernicus-ExtraBold", georgia, serif;
   font-size: 14px; }
 
 .blog .author {
@@ -4057,7 +4064,7 @@ section.services h3 {
   display: block; }
 
 .blog .authors li a {
-  font-family: "Copernicus-ExtraBold";
+  font-family: "Copernicus-ExtraBold", georgia, serif;
   font-size: 15px; }
 
 .blog .preview, .blog .blog.blog-entry {
@@ -4261,7 +4268,8 @@ section.services h3 {
 .hero h1 {
   margin-top: 0;
   margin-bottom: 15px;
-  font-size: 68px; }
+  font-family: "Copernicus-BookItalic";
+  font-size: 70px; }
 
 .hero h3 {
   font-family: "Copernicus-Medium";

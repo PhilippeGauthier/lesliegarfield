@@ -1,14 +1,7 @@
 
 // Font Family
 // $base-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-$base-font-family: Arial, "Lucida Grande", sans-serif; 
-$header-font-medium: "Copernicus-Medium";
-$header-font-family: "Copernicus-Semibold";
-$header-font-bold: "Copernicus-Bold";
-$header-font-extra-bold: "Copernicus-ExtraBold";
-$header-font-family-book-italic: "Copernicus-BookItalic";
-$header-font-family-medium-italic: "Copernicus-MediumItalic";
-$header-font-family-book: "Copernicus-Book";
+
 
 @font-face {
     font-family: 'Copernicus-Medium';
@@ -101,6 +94,34 @@ $quote-gray: #7a7a7a;
 // fonts
 $base-font-color: #404041;
 $light-font-color: #999999;
+
+// Defining font family
+$fontDefault: Helvetica, Arial, sans-serif !default;
+$fontHighlight: 'Roboto Condensed', Helvetica, sans-serif !default;
+$fontIcon: 'icons' !default;
+
+$base-font-family: Arial, "Lucida Grande", sans-serif; 
+$header-font-medium: "Copernicus-Medium", georgia, serif;
+$header-font-family: "Copernicus-Semibold", georgia, serif;
+$header-font-bold: "Copernicus-Bold", georgia, serif;
+$header-font-extra-bold: "Copernicus-ExtraBold", georgia, serif;
+$header-font-family-book-italic: "Copernicus-BookItalic", georgia, serif;
+$header-font-family-medium-italic: "Copernicus-MediumItalic", georgia, serif;
+$header-font-family-book: "Copernicus-Book";
+
+// Defining font sizes
+$fontSmall: 13px !default;
+$fontBase: 16px  !default;
+$fontMedium: 22px !default;
+$fontLarge: 28px !default;
+$fontXLarge: 34px !default;
+$fontXXLarge: 50px !default;
+$fontHuge: 70px !default;
+
+@mixin hhuge {
+    font-family: $header-font-family-book-italic;
+    font-size: 70px;
+}
 
 
 
