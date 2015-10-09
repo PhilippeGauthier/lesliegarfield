@@ -85,9 +85,6 @@
 				@include flex-vert;
 				margin: 0;
 				padding: 0 15px;
-				&:first-of-type {
-					border-right: 1px solid $text-green;
-				}
 				&:hover {
 					// background-color: darken($lightest-green, 3%);
 				}

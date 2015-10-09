@@ -3462,9 +3462,6 @@ section.services h3 {
   margin: 0;
   padding: 0 15px; }
 
-.agent-individual main .green-specs .press-item:first-of-type {
-  border-right: 1px solid #009B77; }
-
 .agent-individual main .green-specs .press-item p, .agent-individual main .green-specs .press-item img {
   text-align: center;
   margin: 0 auto; }
