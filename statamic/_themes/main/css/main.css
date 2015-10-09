@@ -3470,7 +3470,8 @@ section.services h3 {
   margin: 0 auto; }
 
 .agent-individual main .green-specs .press-item img {
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  display: block; }
 
 .agent-individual main .green-specs .press-item p {
   font-size: 14px; }
