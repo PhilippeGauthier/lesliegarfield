@@ -35,7 +35,7 @@
 	@include pre(2 of 12);
 	@include span(8 of 12 no-gutter);
 	&.main_tile {
-		@include pre(.75);
+		@include pre(.75 of 12);
 		@include span (10.5 of 12 no-gutter);
 	}
 }
