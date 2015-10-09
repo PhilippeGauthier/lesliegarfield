@@ -1,14 +1,11 @@
 
 
-{{ if first }}
-<div class="tile-container">
 {{ if total_results == 1}}
 <div class="carousel_tile carousel_tile_1">
 {{ elseif total_results ==2 }}
 <div class="carousel_tile carousel_tile_2">
 {{ else }}
 <div class="carousel_tile carousel_tile_3">
-{{ endif }}
 {{ endif }}
 <div>
 	<a href="{{ url }}" class="property_box slick">
@@ -36,7 +33,3 @@
 		</div>
 	</a >
 </div>
-{{ if last }}
-</div>
-</div>
-{{ endif }}

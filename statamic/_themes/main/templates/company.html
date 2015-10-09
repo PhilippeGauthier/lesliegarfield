@@ -1,45 +1,52 @@
-<section class="hero small leading dark">
-	<h1>Truth Builds Trust</h1>
-	<h3>At least that's how we see it</h3>
+<section class="leading dark">
+<div class="container">
+	<div class="company">
+		<h1>Truth Builds Trust</h1>
+		<h3>At least that's how we see it</h3>
+	</div>
+</div>
 </section>
 <section class="darkest-seafoam-bg">
-	<div class="container company beliefs">
-		<h3>OUR BELIEFS</h3>
-		<div class="divider"></div>
-		{{ beliefs }}
-	</div>
-</section>
-<section>
-	<div class="container company why">
-		<h3>WHY GARFIELD</h3>
-		<div class="divider"></div>
-		{{ why }}
-		{{ why_grid }}
-			<h2>{{ name }}</h2>
-			<p>{{ description }}</p>
-		{{ /why_grid }}
-	</div>
-</section>
-<section class="seafoam-bg">
-	<div class="container company history">
-		<h3>OUR HISTORY</h3>
-		<div class="divider"></div>
-		<h2>TOWNHOMES &amp; BUILDING SPECIALISTS</h2>
-		<h4>SINCE 1972</h4>
-		<div class="divider"></div>
-		<div></div>
-		<div class="column-1">{{ history_1 }}</div>
-		<div class="column-2">{{ history_2 }}</div>
-	</div>
-</section>
-<section>
-	<div class="container company international">
-		<h3>OUR INTERNATIONAL PARTNER</h3>
-		<div class="divider"></div>
-		<div><img src="{{ path src="{{ international_image }}" }}" ></div>
-		<div class="divider"></div>
-		<div></div>
-		<div class="column-1">{{ international_1 }}</div>
-		<div class="column-2">{{ international_2 }}</div>
-	</div>
-</section>
+	<div class="container">
+		<div class="company beliefs">
+			<h2>OUR BELIEFS</h2>
+			<div class="divider"></div>
+			<p>{{ beliefs }}</p>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="company why">
+				<h2>WHY GARFIELD</h2>
+				<div class="divider"></div>
+				{{ why }}
+				{{ why_grid }}
+				<h2>{{ name }}</h2>
+				<p>{{ description }}</p>
+				{{ /why_grid }}
+			</div>
+		</div>
+	</section>
+	<section class="background-gray">
+		<div class="container">
+			<div class="company inner-content">
+				<h2>OUR HISTORY</h2>
+				<div class="divider"></div>
+				<h2>TOWNHOMES &amp; BUILDING SPECIALISTS SINCE 1972</h2>
+				<div class="divider"></div>
+				{{ history }}
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="company inner-content">
+				<h2>OUR INTERNATIONAL PARTNER</h2>
+				<div class="divider"></div>
+				<div><img src="{{ path src="{{ international_image }}" }}" ></div>
+				<div class="divider"></div>
+				<div></div>
+				{{ international }}
+			</div>
+		</div>
+	</section>

@@ -1303,46 +1303,6 @@ img {
   display: block;
   clear: both; }
 
-head {
-  display: block;
-  position: fixed;
-  right: 10px;
-  top: 10px;
-  z-index: 999;
-  color: #333;
-  background: rgba(255, 255, 255, 0.25); }
-
-head:before {
-  content: "|||";
-  display: block;
-  padding: 5px 10px;
-  font-family: sans-serif;
-  font-size: 16px;
-  font-weight: bold; }
-
-head:hover {
-  background: rgba(255, 255, 255, 0.5);
-  color: red; }
-
-head:hover ~ .container,
-head:hover ~ body .container {
-  position: relative; }
-
-head:hover ~ .container:before,
-head:hover ~ body .container:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  content: " ";
-  z-index: 998;
-  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
-  background-size: 8.33333%;
-  background-origin: content-box;
-  background-clip: content-box;
-  background-position: left top; }
-
 .container:before, .container:after {
   content: "";
   display: table;
@@ -1369,16 +1329,6 @@ head:hover ~ body .container:before {
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap; }
 
-.content-wrap {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  padding-top: 60px;
-  margin-top: 78px; }
-
-.content-wrap.leading {
-  padding-top: 0; }
-
 .full {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -1386,23 +1336,6 @@ head:hover ~ body .container:before {
 
 .grid-3 *, .grid-4 *, .grid-6 * {
   outline: none; }
-
-.grid-6 {
-  box-sizing: border-box;
-  width: 50%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%; }
-
-.grid-6:nth-child(2n + 1) {
-  margin-left: 0;
-  margin-right: -100%;
-  clear: both; }
-
-.grid-6:nth-child(2n + 2) {
-  margin-left: 50%;
-  margin-right: -100%;
-  clear: none; }
 
 .grid-3 {
   box-sizing: border-box;
@@ -1450,6 +1383,23 @@ head:hover ~ body .container:before {
 
 .grid-4:nth-child(3n + 3) {
   margin-left: 66.66667%;
+  margin-right: -100%;
+  clear: none; }
+
+.grid-6 {
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%; }
+
+.grid-6:nth-child(2n + 1) {
+  margin-left: 0;
+  margin-right: -100%;
+  clear: both; }
+
+.grid-6:nth-child(2n + 2) {
+  margin-left: 50%;
   margin-right: -100%;
   clear: none; }
 
@@ -1541,7 +1491,7 @@ head:hover ~ body .container:before {
   margin-right: -100%;
   clear: none; }
 
-section.services .container {
+.services .container {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1552,14 +1502,14 @@ section.services .container {
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
-section.services main {
+.services main {
   box-sizing: border-box;
   width: 50%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%; }
 
-section.services aside {
+.services aside {
   margin-left: 12.5%;
   box-sizing: border-box;
   width: 41.66667%;
@@ -1567,11 +1517,11 @@ section.services aside {
   padding-left: 0.83333%;
   padding-right: 0.83333%; }
 
-section.services aside .circle {
+.services aside .circle {
   padding-top: 100%;
   position: relative; }
 
-section.faq main {
+.faq main {
   box-sizing: border-box;
   width: 66.66667%;
   float: left;
@@ -1579,7 +1529,7 @@ section.faq main {
   padding-right: 0.83333%;
   margin-right: 8.33333%; }
 
-section.faq aside {
+.faq aside {
   box-sizing: border-box;
   width: 320px;
   float: left; }
@@ -2747,7 +2697,12 @@ nav.secondary-nav ul li.active a:hover {
   padding: 0 !important;
   height: 0 !important;
   top: -202px;
+  margin-top: 0 !important;
+  border: none !important;
   visibility: hidden !important; }
+
+.secondary-nav-link.leading {
+  top: -243px; }
 
 nav li a:hover, nav li a.current {
   color: #009880;
@@ -2858,7 +2813,7 @@ footer .footer-divider .social a i {
   margin-top: 78px; }
 
 section {
-  padding: 60px 0;
+  padding: 68px 0;
   position: relative; }
 
 section.properties {
@@ -3901,30 +3856,31 @@ section.services h3 {
   fill: #009B77; }
 
 .company {
-  text-align: center; }
+  text-align: center;
+  margin-left: 16.66667%;
+  box-sizing: border-box;
+  width: 66.66667%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%; }
 
 .company h2 {
-  font-family: "Copernicus-Medium";
-  font-size: 36px;
-  line-height: 46px;
+  font-family: Arial, "Lucida Grande", sans-serif;
+  font-size: 23px;
+  line-height: 33px;
   text-transform: uppercase; }
 
 .company h3 {
   text-align: center;
   margin: 0 auto;
-  font-weight: 700; }
+  font-size: 23px;
+  line-height: 33px;
+  font-weight: 700;
+  font-family: "Copernicus-Medium"; }
 
 .company p {
   font-family: "Copernicus-Medium";
   line-height: 28px; }
-
-.company.beliefs, .company.why {
-  margin-left: 25%;
-  box-sizing: border-box;
-  width: 50%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%; }
 
 .company .divider {
   height: 1px;
@@ -3932,49 +3888,39 @@ section.services h3 {
   background-color: #25282A;
   margin: 30px auto; }
 
-.company.history h2, .company.history h4, .company.international h2, .company.international h4 {
+.company .beliefs p {
+  font-family: Arial, "Lucida Grande", sans-serif;
+  font-size: 23px;
+  line-height: 33px; }
+
+.company.inner-content h2, .company.inner-content h4 {
   font-family: "Copernicus-Medium";
   line-height: 46px;
   margin-bottom: 0; }
 
-.company.history h2, .company.international h2 {
+.company.inner-content h2 {
   font-size: 36px;
   margin-bottom: 0;
   margin-top: 20px; }
 
-.company.history h4, .company.international h4 {
+.company.inner-content h4 {
   display: inline-block;
   font-size: 26px;
   margin-top: 0; }
 
-.company.history h4:before, .company.history h4:after, .company.international h4:before, .company.international h4:after {
+.company.inner-content h4:before, .company.inner-content h4:after {
   content: "";
   display: table;
   clear: both; }
 
-.company.history img, .company.international img {
+.company.inner-content img {
   text-align: center;
   display: inline-block; }
 
-.company.history .column-1, .company.international .column-1 {
-  margin-left: 12.5%;
-  box-sizing: border-box;
-  width: 41.66667%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%; }
-
-.company.history .column-2, .company.international .column-2 {
-  box-sizing: border-box;
-  width: 41.66667%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%; }
-
-.company.history p, .company.international p {
+.company.inner-content p {
   text-align: left; }
 
-.company.history a, .company.international a {
+.company.inner-content a {
   font-family: "Copernicus-MediumItalic";
   font-size: 16px; }
 
@@ -4306,7 +4252,7 @@ section.services h3 {
 .hero.small {
   height: 450px; }
 
-.hero.dark h1, .hero.dark h3 {
+.hero.dark h1, .hero.dark h2, .hero.dark h3, .hero.dark h4 {
   color: #25282A; }
 
 .hero * {

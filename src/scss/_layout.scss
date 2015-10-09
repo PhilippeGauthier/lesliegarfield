@@ -20,7 +20,6 @@ html {
 }
 
 html,body {
-	// height: 100%;
 	font-size: 16px;
 	font-weight: 500;
 }
@@ -31,8 +30,6 @@ body {
 	flex-direction: column;
 	margin: 0;
 	position: relative;
-	// margin-bottom: -230px;
-
 }
 
 img {
@@ -60,7 +57,7 @@ img {
 }
 
 .container {
-	@include container(show overlay);
+	@include container;
 	@include clearfix;
 }
 
@@ -82,15 +79,6 @@ img {
 	}
 }
 
-.content-wrap {
-	flex: 1;
-	padding-top: 60px;
-	margin-top: 78px;
-	&.leading {
-		padding-top: 0;
-	}
-}
-
 .full {
 	flex: 1;
 }
@@ -101,16 +89,16 @@ img {
 	}
 }
 
-.grid-6 {
-	@include gallery (6 of 12);
-}
-
 .grid-3 {
 	@include gallery (3 of 12);
 }
 
 .grid-4 {
 	@include gallery (4 of 12);
+}
+
+.grid-6 {
+	@include gallery (6 of 12);
 }
 
 .grid-constrained {
@@ -136,8 +124,6 @@ img {
 }
 
 .grid {
-  // padding: gutter(12);
-  // padding-bottom: 0; 
   @include clearfix;
   padding-top: 60px;
   &.properties {
@@ -150,7 +136,7 @@ img {
   margin-bottom: gutter(4); 
 }
 
-section.services {
+.services {
 	.container {
 		display: flex;
 		align-items: center;
@@ -169,7 +155,7 @@ section.services {
 	}
 }
 
-section.faq {
+.faq {
 	main {
 		@include span (first 8 of 12);
 		@include post(1 of 12);

@@ -136,6 +136,11 @@ nav {
 	padding: 0!important;
 	height: 0!important;
 	top: -202px;
+	margin-top: 0 !important;
+	border: none !important;
+	&.leading {
+		top: -243px;
+	}
 	visibility: hidden!important;
 }
 

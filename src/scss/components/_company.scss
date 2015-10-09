@@ -1,23 +1,24 @@
 .company {
 	text-align: center;
+	@include pre(2 of 12);
+	@include span(8 of 12);
 	h2 {
-		font-family: $header-font-medium;
-		font-size: 36px;
-		line-height: 46px;
+		font-family: $base-font-family;
+		font-size: 23px;
+		line-height: 33px;
 		text-transform: uppercase;
 	}
 	h3 {
 		text-align: center;
 		margin: 0 auto;
+		font-size: 23px;
+		line-height: 33px;
 		font-weight: 700;
+		font-family: $header-font-medium;
 	}
 	p {
 		font-family: $header-font-medium;
 		line-height: 28px;
-	}
-	&.beliefs, &.why {
-		@include pre(3 of 12);
-		@include span (6 of 12);
 	}
 	.divider {
 		height: 1px;
@@ -25,7 +26,14 @@
 		background-color: $dark-gray;
 		margin: 30px auto;
 	}
-	&.history,&.international {
+	.beliefs {
+		p {
+			font-family: $base-font-family;
+			font-size: 23px;
+			line-height: 33px;
+		}
+	}
+	&.inner-content{
 		h2,h4 {
 			font-family: $header-font-medium;
 			line-height: 46px;
@@ -45,13 +53,6 @@
 		img {
 			text-align: center;
 			display: inline-block;
-		}
-		.column-1 {
-			@include pre(1);
-			@include span(5 of 12);
-		}
-		.column-2 {
-			@include span(5 of 12);
 		}
 		p {
 			text-align: left;
