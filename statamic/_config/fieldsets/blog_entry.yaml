@@ -9,7 +9,7 @@ fields:
 		display: Author
 		create: true
 		content:
-			folder: agents
+			folder: agents/*
 			label: title
 			value: url
 	authors:
@@ -17,7 +17,7 @@ fields:
 		display: Enter the author again (used for filtering by author)
 		create: true
 		content:
-			folder: agents
+			folder: agents/*
 			label: title
 			value: title
 	categories:
