@@ -3320,12 +3320,10 @@ footer .footer-divider .social a i {
   margin-left: auto;
   margin-right: auto; }
 
-.agent-individual aside h2 {
-  font-family: "Copernicus-Bold";
-  font-size: 22px; }
-
-.agent-individual aside h3 {
-  text-align: left; }
+.agent-individual aside .agent-name {
+  font-family: "Copernicus-Medium";
+  font-size: 22px;
+  line-height: 33px; }
 
 .agent-individual aside svg {
   height: 25px;
