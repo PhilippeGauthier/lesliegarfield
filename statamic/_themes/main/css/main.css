@@ -1438,7 +1438,7 @@ img {
   float: left;
   padding-left: 4.16667%;
   padding-right: 4.16667%;
-  margin-bottom: 10%; }
+  margin-bottom: 6.66667%; }
 
 .grid-3-constrained-padding:nth-child(3n + 1) {
   margin-left: 0;
@@ -4708,16 +4708,21 @@ section.services h3 {
 .insight-tile span {
   font-size: 12px; }
 
-.agents h1, .agents span {
+.agents h1, .agents p {
   margin-left: 12.5%;
   margin-right: 12.5%; }
 
-.agents span {
-  padding-bottom: 40px;
+.agents p {
   font-family: "Copernicus-Medium";
   font-size: 22px;
   line-height: 33px;
-  display: block; }
+  margin-top: 2.5em;
+  margin-bottom: 2.5em; }
+
+.agents p:before, .agents p:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 .agents img {
   border: 2px solid white; }
@@ -4725,18 +4730,29 @@ section.services h3 {
 .agents a:first-of-type {
   display: block; }
 
-.agents a:hover, .agents p:hover {
+.agents span {
+  display: block; }
+
+.agents span.name {
+  font-family: "Copernicus-MediumItalic";
+  font-size: 22px;
+  line-height: 33px;
+  margin: 1em auto; }
+
+.agents span.details {
+  font-family: "Copernicus-Medium";
+  font-size: 12px;
+  line-height: 14.4px;
+  margin-bottom: 1em; }
+
+.agents a:hover, .agents span:hover {
   color: #009B77; }
 
-.agents a:hover img, .agents p:hover img {
+.agents a:hover img, .agents span:hover img {
   border: 2px solid #009B77; }
 
-.agents a:hover svg *, .agents p:hover svg * {
+.agents a:hover svg *, .agents span:hover svg * {
   fill: #009B77; }
-
-.agents a:last-of-type, .agents p {
-  font-family: "Copernicus-Medium";
-  font-size: 12px; }
 
 .agents .grid-3-constrained-padding * {
   vertical-align: middle; }

@@ -1,13 +1,14 @@
 
 
 .agents {
-	h1,span {
+	h1, p {
 		@include squish(1 of 8);
 	}
-	span {
-		padding-bottom: 40px;
+	p {
 		@include hlmedium($hFontM);
-		display: block;
+		margin-top: 2.5em;
+		margin-bottom: 2.5em;
+		@include clearfix;
 	}
 	img {
 		border: 2px solid white;
@@ -15,8 +16,18 @@
 	a:first-of-type {
 		display: block;
 	}
-
-	a:hover, p:hover {
+	span {
+		display: block;
+		&.name {
+			@include hlmedium($hFontMI);
+			margin: 1em auto;
+		}
+		&.details {
+			@include hmin($hFontM);
+			margin-bottom: 1em;
+		}
+	}
+	a:hover, span:hover {
 		img {
 			border: 2px solid $text-green;	
 		}
@@ -25,10 +36,10 @@
 		}
 		color: $text-green;
 	}
-	a:last-of-type, p {
-		font-family: $hFontM;
-		font-size: 12px;
-	}
+	// span:last-of-type {
+	// 	font-family: $hFontM;
+	// 	font-size: 12px;
+	// }
 	.grid-3-constrained-padding {
 		* {
 			vertical-align: middle;

@@ -115,7 +115,7 @@ img {
 
 .grid-3-constrained-padding {
 	@include gallery(2 of 6 1);
-	margin-bottom: gutter(1);
+	margin-bottom: gutter(1.5);
 }
 
 .stuck {
