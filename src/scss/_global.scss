@@ -6,10 +6,6 @@
 **/
 // @include border-box-sizing;
 
-
-
-
-
 // @include establish-baseline;
 
 html, body, a, span, p {
@@ -25,6 +21,7 @@ ul {
   -webkit-padding-start: 0;
   li {
     display: inline-block;
+    line-height: 24px;
   }
 }
 
@@ -34,6 +31,10 @@ a {
     color: $text-green;
     text-decoration: none;
   }
+}
+
+.fa-stack {
+  line-height: 2em !important;
 }
 
 .red {

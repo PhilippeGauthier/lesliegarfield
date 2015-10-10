@@ -1575,7 +1575,8 @@ ul {
   -webkit-padding-start: 0; }
 
 ul li {
-  display: inline-block; }
+  display: inline-block;
+  line-height: 24px; }
 
 a {
   text-decoration: none; }
@@ -1583,6 +1584,9 @@ a {
 a:hover, a:focus {
   color: #009B77;
   text-decoration: none; }
+
+.fa-stack {
+  line-height: 2em !important; }
 
 .red {
   color: #FF0000; }
@@ -1683,7 +1687,8 @@ h3 {
 
 h4 {
   font-family: Arial, "Lucida Grande", sans-serif;
-  font-size: 12px; }
+  font-size: 12px;
+  line-height: 14.4px; }
 
 p {
   font-family: "Copernicus-Medium";
@@ -1691,9 +1696,10 @@ p {
   line-height: 26px; }
 
 p.no_results {
-  font-size: 24px;
+  font-family: "Copernicus-Medium";
+  font-size: 22px;
+  line-height: 33px;
   margin-top: 60px;
-  line-height: 36px;
   margin-left: 16.66667%;
   box-sizing: border-box;
   width: 66.66667%;
@@ -3053,9 +3059,7 @@ section.services h3 {
   display: table;
   clear: both; }
 
-.property-info .property-header h1 {
-  font-family: "Copernicus-BookItalic";
-  font-size: 47px;
+.property-info .property-header h2 {
   color: #25282A;
   margin: 0 0 5px 0;
   box-sizing: border-box;
@@ -3085,6 +3089,7 @@ section.services h3 {
 .property-info .property-header span {
   font-family: "Copernicus-Medium";
   font-size: 16px;
+  line-height: 26px;
   color: #999999; }
 
 .property-info .property-subheader {
@@ -3173,14 +3178,25 @@ section.services h3 {
   margin-top: 138px;
   color: #25282A; }
 
-.property-agents h3 {
+.property-agents a {
+  display: block; }
+
+.property-agents span {
   font-family: "Copernicus-MediumItalic";
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 27.9px;
   margin-top: 0;
+  display: block;
   margin-bottom: 10px; }
 
 .property-agents .agent-block {
   margin-bottom: 20px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   box-sizing: border-box;
   width: 100%;
   float: left;
@@ -3291,12 +3307,13 @@ section.services h3 {
   margin-top: 30px;
   font-family: "Copernicus-Medium";
   font-size: 16px;
-  line-height: 24px; }
+  line-height: 26px; }
 
 .summary .small {
+  font-family: "Copernicus-Medium";
   font-size: 12px;
-  color: #b3b3b3;
-  line-height: 15px; }
+  line-height: 14.4px;
+  color: #b3b3b3; }
 
 .summary .read-more-expander {
   margin-top: 10px; }
@@ -3305,9 +3322,6 @@ section.services h3 {
   color: #25282A; }
 
 .summary .read-more-expander span {
-  font-family: "Copernicus-Medium";
-  font-size: 16px;
-  line-height: 24px;
   margin-left: 5px; }
 
 .summary .read-more-expander:hover span, .summary .read-more-expander:hover i {
@@ -3543,11 +3557,14 @@ section.services h3 {
   align-items: center;
   margin-bottom: 20px; }
 
-.green-specs .title h3, .green-specs .title svg {
+.green-specs .title svg {
   display: inline-block; }
 
-.green-specs .title h3 {
-  margin: 0; }
+.green-specs .title span {
+  margin: 0;
+  font-family: Arial, "Lucida Grande", sans-serif;
+  font-size: 18px;
+  line-height: 27.9px; }
 
 .green-specs li {
   display: block; }
@@ -4464,6 +4481,7 @@ section.services h3 {
 .landing-sub-nav .sub-title {
   font-family: Arial, "Lucida Grande", sans-serif;
   font-size: 12px;
+  line-height: 14.4px;
   font-weight: 700; }
 
 .landing-sub-nav p {
@@ -4604,19 +4622,15 @@ section.services h3 {
   padding-left: 10px; }
 
 .property_box .property_tile_info span {
-  margin: 0; }
+  margin: 0;
+  display: block; }
 
 .property_box .property_tile_info .prop-title {
   font-family: "Copernicus-MediumItalic";
   font-size: 18px;
   line-height: 27.9px; }
 
-.property_box .property_tile_info .prop-price, .property_box .property_tile_info .bottom-info {
-  font-family: "Copernicus-MediumItalic";
-  font-size: 16px;
-  line-height: 26px; }
-
-.property_box .property_tile_info .prop-details, .property_box .property_tile_info .prop-location {
+.property_box .property_tile_info .prop-price, .property_box .property_tile_info .bottom-info, .property_box .property_tile_info .prop-details, .property_box .property_tile_info .prop-location {
   font-family: "Copernicus-Medium";
   font-size: 15px;
   line-height: 21.75px; }
@@ -4694,21 +4708,16 @@ section.services h3 {
 .insight-tile span {
   font-size: 12px; }
 
-.agents h1, .agents h2 {
+.agents h1, .agents span {
   margin-left: 12.5%;
   margin-right: 12.5%; }
 
-.agents h1 {
-  font-size: 70px; }
-
-.agents h2 {
-  font-size: 22px;
+.agents span {
+  padding-bottom: 40px;
   font-family: "Copernicus-Medium";
-  padding-bottom: 40px; }
-
-.agents h3 {
-  font-family: "Copernicus-MediumItalic";
-  font-size: 22px; }
+  font-size: 22px;
+  line-height: 33px;
+  display: block; }
 
 .agents img {
   border: 2px solid white; }

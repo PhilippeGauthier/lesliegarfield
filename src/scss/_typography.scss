@@ -68,7 +68,7 @@ h3 {
     @include hxlarge($hFontM);
 }
 h4 {
-    @include hmin;
+    @include hmin($bFont);
 }
 
 p {
@@ -76,9 +76,8 @@ p {
 	font-size: 16px;
 	line-height: 26px;
     &.no_results {
-        font-size: 24px;
+        @include hlmedium($hFontM);
         margin-top: 60px;
-        line-height: 36px;
         @include pre(2 of 12);
         @include span (8 of 12);
         text-align: center;

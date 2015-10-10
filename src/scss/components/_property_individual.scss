@@ -19,7 +19,6 @@
 	margin-bottom: 30px;
 	background-color: #fff;
 	@include clearfix;
-
 	.location {
 		@include span (full);
 	}
@@ -35,15 +34,12 @@
 	}
 	.property-header {
 		@include clearfix;
-		h1 {
-			font-family: $hFontBI;
-			font-size: 47px;
+		h2 {
 			color: $header-font-color;
 			margin: 0 0 5px 0;
 			@include span (7 of 9);
 		}
 		.social {
-			// height: 63px;
 			@include span (last 2 of 9);
 			a {
 				float: right;
@@ -58,8 +54,7 @@
 			}
 		}
 		span {
-			font-family: $hFontM;
-			font-size: 16px;
+			@include hbase($hFontM);
 			color: $light-font-color;
 		}
 	}
@@ -124,14 +119,18 @@
 .property-agents {
 	margin-top: 138px;
 	color: $header-font-color;
-	h3 {
-		font-family: $hFontMI;
-		font-size: 16px;
+	a {
+		display: block;
+	}
+	span {
+		@include hsmedium($hFontMI);
 		margin-top: 0;
+		display: block;
 		margin-bottom: 10px;
 	}
 	.agent-block {
 		margin-bottom: 20px;
+		@include flex-hor;
 		@include span (100%);
 	}
 	.agent-image {
@@ -223,13 +222,11 @@
 .summary {
 	@include span(100%);
 	margin-top: 30px;
-	font-family: $hFontM;
-	font-size: 16px;
-	line-height: 24px;
+	@include hbase($hFontM);
 	.small {
-		font-size: 12px;
+		@include hmin($hFontM);
 		color: darken($modal-text,10%);
-		line-height: 15px;
+
 	}
 	.read-more-expander {
 		margin-top: 10px;
@@ -237,9 +234,6 @@
 			color: $dark-gray;
 		}
 		span {
-			font-family: $hFontM;
-			font-size: 16px;
-			line-height: 24px;
 			margin-left: 5px;
 		}
 		&:hover {

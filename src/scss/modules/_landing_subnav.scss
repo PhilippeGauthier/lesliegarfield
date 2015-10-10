@@ -44,7 +44,7 @@
 	}
 
 	.sub-title {
-		@include hmin;
+		@include hmin($bFont);
 		font-weight: 700;
 	}
 	p {

@@ -10,7 +10,7 @@
 						<img src="{{ transform src="{{ image }}" width="300" }}" class="img-circle" />
 					</a>
 					<div class="agent-details">
-						<a href="{{ url }}"><h3>{{ title }}</h3></a>
+						<a href="{{ url }}"><span>{{ title }}</span></a>
 						<ul>
 							<li>{{ theme:partial src="svg/phone" }} {{ phone }}</li>
 							<li>{{ theme:partial src="svg/mail" }} {{ email|link }}</li>
@@ -42,7 +42,7 @@
 			<div class="property-info">
 
 				<div class="property-header">
-					<h1>{{ title }} {{ apartment }}</h1>
+					<h2>{{ title }} {{ apartment }}</h2>
 
 					<div class="social">
 						<a href="">
@@ -108,7 +108,7 @@
 					<div class="specs">
 					<div class="title">
 						{{ theme:partial src="svg/glasses" }}
-						<h3>SPECIFICATIONS</h3>
+						<span>SPECIFICATIONS</span>
 					</div>
 						
 						<ul>
@@ -264,14 +264,14 @@
 					<div class="location_features">
 						<div class="title">
 							{{ theme:partial src="svg/maps" }}
-							<h3>LOCATION</h3>
+							<span>LOCATION</span>
 						</div>
 						<ul>
 							<li>{{ location_granular }}</li>
 						</ul>
 						<div class="title">
 							{{ theme:partial src="svg/stars" }}
-							<h3>KEY FEATURES</h3>
+							<span>KEY FEATURES</span>
 						</div>
 						
 						<ul>
@@ -325,7 +325,7 @@
 	</div>
 	<div class="container">
 		<div class="property_tile">
-			{{ entries:listing folder="properties/sale" conditions="url:!{url}, property_location:{ property_location }"  }}
+			{{ entries:listing folder="properties/new-york/sale|properties/international/sale" conditions="url:!{url}, property_location:{ property_location }"  }}
 			{{ if no_results }}
 			<p class="no_results">We are currently have no other properties for sale in this neighborhood. Be sure to check back soon.</p>
 			{{ else }}

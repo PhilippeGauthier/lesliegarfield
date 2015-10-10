@@ -1,20 +1,13 @@
 
 
 .agents {
-	h1,h2 {
+	h1,span {
 		@include squish(1 of 8);
 	}
-	h1 {
-		font-size: 70px;
-	}
-	h2 {
-		font-size: 22px;
-		font-family: $hFontM;
+	span {
 		padding-bottom: 40px;
-	}
-	h3 {
-		font-family: $hFontMI;
-		font-size: 22px;
+		@include hlmedium($hFontM);
+		display: block;
 	}
 	img {
 		border: 2px solid white;

@@ -58,14 +58,12 @@
 		padding-left: 10px;
 		span {
 			margin: 0;
+			display: block;
 		}
 		.prop-title {
 			@include hsmedium($hFontMI);
 		}
-		.prop-price, .bottom-info {
-			@include hbase($hFontMI);
-		}
-		.prop-details,.prop-location,  {
+		.prop-price, .bottom-info, .prop-details,.prop-location {
 			@include hsmall($hFontM);
 		}
 		.bottom-info {

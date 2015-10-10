@@ -189,9 +189,10 @@ $fontHuge: 70px;
     font-size: $fontTiny;
 }
 
-@mixin hmin {
-    font-family: $bFont;
+@mixin hmin ($font){
+    font-family: $font;
     font-size: $fontMini;
+    line-height: 1.2*$fontMini;
 }
 
 

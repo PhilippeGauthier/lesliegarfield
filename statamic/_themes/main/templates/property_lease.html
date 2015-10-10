@@ -42,7 +42,7 @@
 			<div class="property-info">
 
 				<div class="property-header">
-					<h1>{{ title }}</h1>
+					<h2>{{ title }}</h2>
 
 					<div class="social">
 						<a href="">
@@ -106,7 +106,7 @@
 
 				<div class="green-specs">
 					<div class="specs">
-						<h3>{{ theme:partial src="svg/glasses" }}SPECIFICATIONS</h3>
+						<span>{{ theme:partial src="svg/glasses" }}SPECIFICATIONS</span>
 						<ul>
 							{{ if price|not_empty }}
 							<li>Lease Price</li>
@@ -233,11 +233,11 @@
 						</ul>
 					</div>
 					<div class="location_features">
-						<h3>{{ theme:partial src="svg/maps" }}LOCATION</h3>
+						<span>{{ theme:partial src="svg/maps" }}LOCATION</span>
 						<ul>
 							<li>{{ location_granular }}</li>
 						</ul>
-						<h3>{{ theme:partial src="svg/stars" }}KEY FEATURES</h3>
+						<span>{{ theme:partial src="svg/stars" }}KEY FEATURES</span>
 						<ul>
 
 							{{ if amenities }}
@@ -278,7 +278,7 @@
 	</div>
 </section>
 
-{{ entries:listing folder="properties/new-york/lease" conditions="url:!{url}, property_location:{ property_location }"  }}
+{{ entries:listing folder="properties/new-york/lease|properties/international/lease" conditions="url:!{url}, property_location:{ property_location }"  }}
 {{ if no_results }}
 {{ else }}
 {{ if first }}
