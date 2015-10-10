@@ -79,8 +79,9 @@
 						<span>{{ location_granular }}</span>
 						{{ endif }}
 					</div>
+					{{ if openhouse or streeteasy_status !="active" }}
+					{{ else }}
 					<div class="open-house">
-
 						{{ if openhouse }}
 						{{ openhouse_grid }}
 						{{ if date|not_empty }}
@@ -92,7 +93,7 @@
 						{{ elseif streeteasy_status != "Active" }}
 						<span>{{ streeteasy_status }}</span>
 						{{ endif }}
-
+						{{ endif }}
 					</div>				
 				</div>
 

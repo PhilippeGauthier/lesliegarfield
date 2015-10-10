@@ -4569,7 +4569,7 @@ section.services h3 {
   width: 66.66667%;
   float: left; }
 
-.carousel_tile_2.main_tile {
+.carousel_tile_2.main_tile, .carousel_tile_2.agent_tile {
   margin-left: 6.25%;
   box-sizing: border-box;
   width: 87.5%;
