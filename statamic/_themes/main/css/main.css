@@ -3029,6 +3029,7 @@ section.services h3 {
 
 .property-info {
   padding: 30px;
+  padding-bottom: 0;
   margin-bottom: 30px;
   background-color: #fff; }
 
