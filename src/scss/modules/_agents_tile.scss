@@ -9,11 +9,11 @@
 	}
 	h2 {
 		font-size: 22px;
-		font-family: $header-font-medium;
+		font-family: $hFontM;
 		padding-bottom: 40px;
 	}
 	h3 {
-		font-family: $header-font-family-medium-italic;
+		font-family: $hFontMI;
 		font-size: 22px;
 	}
 	img {
@@ -33,7 +33,7 @@
 		color: $text-green;
 	}
 	a:last-of-type, p {
-		font-family: $header-font-medium;
+		font-family: $hFontM;
 		font-size: 12px;
 	}
 	.grid-3-constrained-padding {

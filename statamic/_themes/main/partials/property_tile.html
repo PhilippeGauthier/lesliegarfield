@@ -1,5 +1,5 @@
-
-
+{{ if first }}
+<div class="tile-container">
 {{ if total_results == 1}}
 <div class="carousel_tile carousel_tile_1">
 {{ elseif total_results ==2 }}
@@ -7,29 +7,40 @@
 {{ else }}
 <div class="carousel_tile carousel_tile_3">
 {{ endif }}
+{{ endif }}
 <div>
 	<a href="{{ url }}" class="property_box slick">
 		<div class='preview-image' style='background-image: url( {{ path src='{{ preview_image }}' }} );'></div>
 		<div class="property_tile_info">
 			<div class="top-info">
-				<h2>{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}</h2>
+				<span class="prop-title">{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}</span>
 				<div class="spacer"></div>
-				<h3>${{ price|format_number }}</h3>
+				<span class="prop-price">${{ price|format_number }}</span>
 				<div class="spacer"></div>
-				<h4>{{ property_type }}</h4>
+				<span class="prop-details">{{ property_type }}</span>
 				{{ if sqft|not_empty }}
-				<h4>{{ sqft|format_number }} ft<sup>2</sup></h4>
+				<span class="prop-details">{{ sqft|format_number }} ft<sup>2</sup></span>
 				{{ endif }}
 				<div class="spacer"></div>
-				<h4>{{ property_location }}</h4>
+				<span class="prop-location">{{ property_location }}</span>
 			</div>
 			<div class="bottom-info">
 				{{ if openhouse }}
 					<div class="red">Open House</div>
-				{{ elseif streeteasy_status != "Active"}}
-				<div>{{ streeteasy_status }}</div>
+				{{ elseif streeteasy_status == "sold" }}
+				<div>Sold</div>
+				{{ elseif streeteasy_status == "leased" }}
+				<div>Leased</div>
+				{{ elseif streeteasy_status == "in-contract" }}
+				<div>In Contract</div>
+				{{ elseif streeteasy_status == "leased" }}
+				<div>Leased</div>
 				{{ endif }}
 			</div>
 		</div>
 	</a >
 </div>
+{{ if last }}
+</div>
+</div>
+{{ endif }}

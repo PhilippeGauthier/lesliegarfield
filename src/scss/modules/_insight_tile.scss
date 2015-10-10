@@ -13,18 +13,14 @@
 			color: $header-font-color;
 		}
 	}
-	h2 {
+	h3 {
 		max-width: 60%;
-		font-family: $header-font-family-medium-italic;
-		font-size: 30px;
-		line-height: 34px;
+		@include hxlarge($hFontMI)
 	}
 	p {
-		font-family: $header-font-medium;
-		font-size: 15px;
-		line-height: 20px;
+		@include hsmall($hFontM);
 	}
 	span {
-		font-size: 12px;
+		font-size: $fontMini;
 	}
 }

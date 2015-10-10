@@ -36,7 +36,7 @@
 	.property-header {
 		@include clearfix;
 		h1 {
-			font-family: $header-font-family-book-italic;
+			font-family: $hFontBI;
 			font-size: 47px;
 			color: $header-font-color;
 			margin: 0 0 5px 0;
@@ -58,7 +58,7 @@
 			}
 		}
 		span {
-			font-family: $header-font-medium;
+			font-family: $hFontM;
 			font-size: 16px;
 			color: $light-font-color;
 		}
@@ -67,7 +67,7 @@
 		@include clearfix;
 		padding-bottom: 15px;
 		span {
-			font-family: $header-font-medium;
+			font-family: $hFontM;
 			font-size: 16px;
 			color: $light-font-color;
 		}
@@ -85,7 +85,7 @@
 			span {
 				text-align: right;
 				bottom: 0;
-				font-family: $header-font-medium;
+				font-family: $hFontM;
 				font-size: 13px;	
 				padding-top: 4px;
 				color: $modal-text;
@@ -114,7 +114,7 @@
 		text-align: center;
 		margin: auto;
 	}
-	background-color: $background-light-gray;
+	background-color: $bg-light-gray;
 }
 
 .agent {
@@ -125,7 +125,7 @@
 	margin-top: 138px;
 	color: $header-font-color;
 	h3 {
-		font-family: $header-font-family-medium-italic;
+		font-family: $hFontMI;
 		font-size: 16px;
 		margin-top: 0;
 		margin-bottom: 10px;
@@ -140,7 +140,7 @@
 	}
 	img {
 		border-radius: 50%;
-		border: 2px solid $background-gray;
+		border: 2px solid $bg-gray;
 		&:hover {
 			border: 2px solid $text-green;
 		}
@@ -159,7 +159,7 @@
 	}
 	li, a {
 		vertical-align: top;
-		font-family: $header-font-medium;
+		font-family: $hFontM;
 		font-size: 11px;
 	}
 	li {
@@ -223,7 +223,7 @@
 .summary {
 	@include span(100%);
 	margin-top: 30px;
-	font-family: $header-font-medium;
+	font-family: $hFontM;
 	font-size: 16px;
 	line-height: 24px;
 	.small {
@@ -237,7 +237,7 @@
 			color: $dark-gray;
 		}
 		span {
-			font-family: $header-font-medium;
+			font-family: $hFontM;
 			font-size: 16px;
 			line-height: 24px;
 			margin-left: 5px;

@@ -24,7 +24,7 @@
 .modal-content {
 	border-radius: 0;
 	h2,h3 {
-		font-family: $header-font-family-medium-italic;
+		font-family: $hFontMI;
 	}
 	h2 {
 		font-size: 24px;
@@ -43,7 +43,7 @@
 		padding: 10px 10px;
 		border: 1px solid $dark-gray;
 		border-radius: 2px;
-		font-family: $header-font-medium;
+		font-family: $hFontM;
 		font-size: 16px;
 		color: $modal-text;
 		&:focus, &:active {

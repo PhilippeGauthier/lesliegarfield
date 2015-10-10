@@ -2,11 +2,11 @@ $ = require("jquery");
 jQuery = require('jquery');
 
 var properties = $('#properties');
-var backgroundGray = $('.background-gray');
+var backgroundGray = $('.bg-gray');
 var pageWrap = $('.page-wrap');
 
 // if (properties.length > 0 || backgroundGray.length > 0) {
-// 		pageWrap.addClass('background-gray');
+// 		pageWrap.addClass('bg-gray');
 // }
 
 $(".report-expander").click(function() {

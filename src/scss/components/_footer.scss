@@ -8,7 +8,7 @@ footer {
 		padding-bottom: 40px;
 	}
 	h3,h4 {
-		font-family: $base-font-family;
+		font-family: $bFont;
 		margin: 0;
 		font-size: 18px;
 		line-height: 24px;
@@ -42,7 +42,7 @@ footer {
 		p {
 			font-weight: 300;
 			@include span(6 of 12);
-			font-family: $base-font-family;
+			font-family: $bFont;
 		}
 		.social {
 			@include span(last 6 of 12);

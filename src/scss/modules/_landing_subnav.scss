@@ -38,24 +38,17 @@
 	* {
 		color: $dark-gray;
 	}
-	h4 {
-		font-family: $header-font-bold;
-		font-size: 18px;
+	h4,.title {
+		@include hsmedium($hFontB);
 		margin: 0;
 	}
-	.title {
-		font-family: $header-font-bold;
-		font-size: 18px;
-	}
+
 	.sub-title {
-		font-size: 12px;
-		font-family: $base-font-family;
+		@include hmin;
 		font-weight: 700;
 	}
 	p {
-		font-family: $header-font-medium;
-		font-size: 15px;
-		line-height: 20px;
+		@include hsmall($hFontM);
 	}
 	a {
 		&:hover {

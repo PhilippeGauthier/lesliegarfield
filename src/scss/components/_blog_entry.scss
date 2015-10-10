@@ -11,7 +11,7 @@
 		border-left: 1px solid $modal-text;
 		padding: 0 10px;
 		a {
-			font-family: $header-font-family;
+			font-family: $hFontM;
 			font-size: 19px;
 			color: $light-font-color;
 		}
@@ -20,7 +20,7 @@
 
 .blog.blog-entry .blog-left {
 	h1 {
-		font-family: $header-font-family-medium-italic;
+		font-family: $hFontMI;
 		font-size: 34px;
 		line-height: 43px;
 	}
@@ -39,7 +39,7 @@
 		padding-top: 4px; 
 		padding-right: 8px; 
 		padding-left: 3px; 
-		font-family: $header-font-family; 
+		font-family: $hFontM; 
 	}
 }
 

@@ -1,12 +1,11 @@
 
 // Font Family
-// $base-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-$base-font-family: Arial, "Lucida Grande", sans-serif; 
-$header-font-medium: "Copernicus-Medium";
-$header-font-family: "Copernicus-Semibold";
-$header-font-bold: "Copernicus-Bold";
-$header-font-family-book-italic: "Copernicus-BookItalic";
-$header-font-family-medium-italic: "Copernicus-MediumItalic";
+// $bFont: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+$bFont: Arial, "Lucida Grande", sans-serif; 
+$hFontM: "Copernicus-Medium";
+$hFontB: "Copernicus-Bold";
+$hFontBI: "Copernicus-BookItalic";
+$hFontMI: "Copernicus-MediumItalic";
 
 @font-face {
     font-family: 'Copernicus-Medium';
@@ -54,17 +53,26 @@ $header-font-family-medium-italic: "Copernicus-MediumItalic";
     font-style: normal;
 }
 
-h1 {
-	font-size: 52px;
-	font-family: $header-font-family-book-italic;
+h1,h2,h3 {
+    font-weight: 100;
 }
 
-h1,h2,h3 {
-	font-weight: 100;
+h1 {
+    @include hhuge;
+}
+
+h2 {
+    @include hxxlarge;
+}
+h3 {
+    @include hxlarge($hFontM);
+}
+h4 {
+    @include hmin;
 }
 
 p {
-	font-family: $header-font-medium;
+	font-family: $hFontM;
 	font-size: 16px;
 	line-height: 26px;
     &.no_results {
@@ -78,22 +86,22 @@ p {
     &.light {
         font-size: 13px;
         line-height: 18px;
-        font-family: $base-font-family;
+        font-family: $bFont;
         font-weight: 100;
         color: lighten($dark-gray,40%);
         text-align: center;
     }
 }
 
-.container.large-body {
-    h3 {
-        margin-top: 0;
-        margin-bottom: 60px;
-        display: block;
-    }
-    p {
-        font-size: 25px;
-        line-height: 40px;
-        margin-top: 0;
-    }
-}
+// .container.large-body {
+//     h3 {
+//         margin-top: 0;
+//         margin-bottom: 60px;
+//         display: block;
+//     }
+//     p {
+//         font-size: 25px;
+//         line-height: 40px;
+//         margin-top: 0;
+//     }
+// }

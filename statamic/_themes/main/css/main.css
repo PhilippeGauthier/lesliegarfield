@@ -1491,6 +1491,9 @@ img {
   margin-right: -100%;
   clear: none; }
 
+.leading {
+  margin-top: 78px; }
+
 .services .container {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1561,6 +1564,7 @@ main {
 **/
 html, body, a, span, p {
   color: #404041;
+  font-size: 16px;
   font-family: Arial, "Lucida Grande", sans-serif; }
 
 ul {
@@ -1571,13 +1575,10 @@ ul {
   -webkit-padding-start: 0; }
 
 ul li {
-  display: inline-block;
-  font-weight: 300;
-  line-height: 24px; }
+  display: inline-block; }
 
 a {
-  text-decoration: none;
-  color: #404041; }
+  text-decoration: none; }
 
 a:hover, a:focus {
   color: #009B77;
@@ -1586,19 +1587,19 @@ a:hover, a:focus {
 .red {
   color: #FF0000; }
 
-.background-gray {
+.bg-gray {
   background-color: #F2F2F2; }
 
-.background-light-gray {
+.bg-light-gray {
   background-color: #F7F7F7; }
 
-.seafoam-bg {
+.bg-seafoam {
   background-color: #F4FBF9; }
 
-.dark-seafoam-bg {
+.bg-dark-seafoam {
   background-color: #e4f4f1; }
 
-.darkest-seafoam-bg {
+.bg-darkest-seafoam {
   background-color: #CEEBE7; }
 
 .similar-properties-gray {
@@ -1607,8 +1608,11 @@ a:hover, a:focus {
 .agents-background {
   background-color: #F5F5F5; }
 
-.light-blue {
+.bg-light-blue {
   background-color: #E6F1FA; }
+
+.light-gray-bg {
+  background-color: #ECEBEC; }
 
 .white {
   background-color: #fff; }
@@ -1660,12 +1664,26 @@ a:hover, a:focus {
   font-weight: normal;
   font-style: normal; }
 
-h1 {
-  font-size: 52px;
-  font-family: "Copernicus-BookItalic"; }
-
 h1, h2, h3 {
   font-weight: 100; }
+
+h1 {
+  font-family: "Copernicus-BookItalic";
+  font-size: 70px; }
+
+h2 {
+  font-family: "Copernicus-BookItalic";
+  font-size: 50px;
+  line-height: 60px; }
+
+h3 {
+  font-family: "Copernicus-Medium";
+  font-size: 34px;
+  line-height: 44.2px; }
+
+h4 {
+  font-family: Arial, "Lucida Grande", sans-serif;
+  font-size: 12px; }
 
 p {
   font-family: "Copernicus-Medium";
@@ -1691,16 +1709,6 @@ p.light {
   font-weight: 100;
   color: #868f95;
   text-align: center; }
-
-.container.large-body h3 {
-  margin-top: 0;
-  margin-bottom: 60px;
-  display: block; }
-
-.container.large-body p {
-  font-size: 25px;
-  line-height: 40px;
-  margin-top: 0; }
 
 /* Slider */
 .slick-slider {
@@ -2615,7 +2623,8 @@ nav a {
   color: #25282A;
   display: block;
   padding: 23px 15px;
-  font-size: 13px; }
+  font-size: 13px;
+  line-height: 24px; }
 
 nav a .left {
   padding: 0; }
@@ -2809,9 +2818,6 @@ footer .footer-divider .social a i {
   height: 800px;
   margin-top: 60px; }
 
-.leading {
-  margin-top: 78px; }
-
 section {
   padding: 68px 0;
   position: relative; }
@@ -2834,7 +2840,7 @@ section.services h2, section.services h3 {
   margin: 0; }
 
 section.services h2 {
-  font-family: "Copernicus-Semibold"; }
+  font-family: "Copernicus-Medium"; }
 
 section.services h3 {
   font-family: "Copernicus-BookItalic"; }
@@ -2846,52 +2852,6 @@ section.services h3 {
   text-align: center;
   font-weight: 700;
   margin: 0; }
-
-.light-gray-bg {
-  background-color: #ECEBEC; }
-
-.light-green-bg {
-  background-color: #F2FAF8; }
-
-.leader {
-  padding-top: 80px; }
-
-.circle-leader {
-  width: 100%;
-  position: absolute;
-  top: -40px;
-  left: 0;
-  right: 0;
-  text-align: center; }
-
-.circle-leader:before, .circle-leader:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.circle-leader h4 {
-  font-size: 12px;
-  font-weight: 700; }
-
-.circle-leader h4:before, .circle-leader h4:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.circle-leader .circle {
-  margin: 0 auto;
-  box-sizing: border-box;
-  border-radius: 50%;
-  height: 80px;
-  width: 80px;
-  padding: 8px; }
-
-.circle-leader .circle svg {
-  height: 64px;
-  width: 64px; }
-
-.circle-leader .circle svg * {
-  fill: #404041; }
 
 .Select {
   border: 1px solid transparent; }
@@ -3497,13 +3457,21 @@ section.services h3 {
 .agent-individual main .recent-transactions.sale {
   margin-bottom: 40px; }
 
-.agent-individual main .recent-transactions h1 {
+.agent-individual main .recent-transactions h2 {
   margin-bottom: 30px; }
 
-.agent-individual main .recent-transactions h2 {
-  font-family: Arial, "Lucida Grande", sans-serif;
+.agent-individual main .recent-transactions h3 {
   border-bottom: 2px solid #25282A;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-family: Arial, "Lucida Grande", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.agent-individual main .recent-transactions span {
+  font-family: "Copernicus-Bold";
+  font-size: 16px;
+  line-height: 26px; }
 
 .agent-individual main .recent-transactions ul {
   border-bottom: 1px solid #a1a8ad; }
@@ -3512,10 +3480,6 @@ section.services h3 {
   content: "";
   display: table;
   clear: both; }
-
-.agent-individual main .recent-transactions h3 {
-  font-family: "Copernicus-Bold";
-  font-size: 16px; }
 
 .agent-individual main .recent-transactions li {
   box-sizing: border-box;
@@ -3735,7 +3699,7 @@ section.services h3 {
   clear: both; }
 
 .numbers h1, .numbers h3 {
-  font-family: "Copernicus-ExtraBold", georgia, serif;
+  font-family: "Copernicus-Bold";
   text-align: center; }
 
 .numbers h1 {
@@ -3988,7 +3952,7 @@ section.services h3 {
   clear: both; }
 
 .blog .blog-header {
-  font-family: "Copernicus-Semibold";
+  font-family: "Copernicus-Medium";
   color: #999999;
   text-transform: uppercase;
   font-size: 19px;
@@ -4048,7 +4012,7 @@ section.services h3 {
 
 .blog .date, .blog .author {
   text-transform: none;
-  font-family: "Copernicus-ExtraBold", georgia, serif;
+  font-family: "Copernicus-Bold";
   font-size: 14px; }
 
 .blog .author {
@@ -4061,7 +4025,7 @@ section.services h3 {
   display: block; }
 
 .blog .authors li a {
-  font-family: "Copernicus-ExtraBold", georgia, serif;
+  font-family: "Copernicus-Bold";
   font-size: 15px; }
 
 .blog .preview, .blog .blog.blog-entry {
@@ -4148,7 +4112,7 @@ section.services h3 {
   padding-left: 0; }
 
 .categories li a {
-  font-family: "Copernicus-Semibold";
+  font-family: "Copernicus-Medium";
   font-size: 19px;
   color: #999999; }
 
@@ -4172,7 +4136,7 @@ section.services h3 {
   padding-top: 4px;
   padding-right: 8px;
   padding-left: 3px;
-  font-family: "Copernicus-Semibold"; }
+  font-family: "Copernicus-Medium"; }
 
 .title-holder {
   height: 24px;
@@ -4219,8 +4183,6 @@ section.services h3 {
   border-bottom: none; }
 
 .hero {
-  height: 600px;
-  position: relative;
   width: 100%;
   background-position: center;
   background-size: cover;
@@ -4236,9 +4198,12 @@ section.services h3 {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  text-align: center; }
+  text-align: center;
+  height: 600px;
+  position: relative; }
 
 .hero * {
+  color: #fff;
   z-index: 10; }
 
 .hero .mask {
@@ -4259,19 +4224,14 @@ section.services h3 {
 .hero.dark h1, .hero.dark h2, .hero.dark h3, .hero.dark h4 {
   color: #25282A; }
 
-.hero * {
-  color: #fff; }
-
 .hero h1 {
   margin-top: 0;
-  margin-bottom: 15px;
-  font-family: "Copernicus-BookItalic";
-  font-size: 70px; }
+  margin-bottom: 15px; }
 
 .hero h3 {
   font-family: "Copernicus-Medium";
   font-size: 22px;
-  line-height: 32px;
+  line-height: 33px;
   box-sizing: border-box;
   width: 25%;
   float: left;
@@ -4495,24 +4455,21 @@ section.services h3 {
 .landing-sub-nav * {
   color: #25282A; }
 
-.landing-sub-nav h4 {
+.landing-sub-nav h4, .landing-sub-nav .title {
   font-family: "Copernicus-Bold";
   font-size: 18px;
+  line-height: 27.9px;
   margin: 0; }
 
-.landing-sub-nav .title {
-  font-family: "Copernicus-Bold";
-  font-size: 18px; }
-
 .landing-sub-nav .sub-title {
-  font-size: 12px;
   font-family: Arial, "Lucida Grande", sans-serif;
+  font-size: 12px;
   font-weight: 700; }
 
 .landing-sub-nav p {
   font-family: "Copernicus-Medium";
   font-size: 15px;
-  line-height: 20px; }
+  line-height: 21.75px; }
 
 .landing-sub-nav a:hover svg {
   opacity: 0;
@@ -4529,6 +4486,39 @@ section.services h3 {
 
 .landing-sub-nav a:hover .sub-title {
   color: #009B77; }
+
+.circle-leader {
+  width: 100%;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  right: 0;
+  text-align: center; }
+
+.circle-leader:before, .circle-leader:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.circle-leader h4:before, .circle-leader h4:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.circle-leader .circle {
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  padding: 8px; }
+
+.circle-leader .circle svg {
+  height: 64px;
+  width: 64px; }
+
+.circle-leader .circle svg * {
+  fill: #404041; }
 
 .tile-container {
   padding-top: 60px; }
@@ -4613,26 +4603,29 @@ section.services h3 {
   justify-content: space-between;
   padding-left: 10px; }
 
-.property_box .property_tile_info h2, .property_box .property_tile_info h3, .property_box .property_tile_info h4 {
-  text-align: left;
+.property_box .property_tile_info span {
   margin: 0; }
 
-.property_box .property_tile_info h2, .property_box .property_tile_info h3, .property_box .property_tile_info p {
-  font-family: "Copernicus-MediumItalic"; }
-
-.property_box .property_tile_info span {
-  font-family: "Copernicus-Semibold"; }
-
-.property_box .property_tile_info h3, .property_box .property_tile_info h4 {
-  font-size: 15px;
-  line-height: 22px; }
-
-.property_box .property_tile_info h2 {
+.property_box .property_tile_info .prop-title {
+  font-family: "Copernicus-MediumItalic";
   font-size: 18px;
-  line-height: 24px; }
+  line-height: 27.9px; }
 
-.property_box .property_tile_info h4 {
-  font-family: "Copernicus-Medium"; }
+.property_box .property_tile_info .prop-price, .property_box .property_tile_info .bottom-info {
+  font-family: "Copernicus-MediumItalic";
+  font-size: 16px;
+  line-height: 26px; }
+
+.property_box .property_tile_info .prop-details, .property_box .property_tile_info .prop-location {
+  font-family: "Copernicus-Medium";
+  font-size: 15px;
+  line-height: 21.75px; }
+
+.property_box .property_tile_info .bottom-info {
+  color: #CCCCCC; }
+
+.property_box .property_tile_info .bottom-info .red {
+  color: #FF0000; }
 
 .property_box .spacer {
   height: 1px;
@@ -4646,16 +4639,6 @@ section.services h3 {
 
 .property_box:hover h3, .property_box:hover h4, .property_box:focus h3, .property_box:focus h4 {
   color: #25282A; }
-
-.property_box .bottom-info {
-  font-family: "Copernicus-MediumItalic" !important;
-  margin-bottom: 0;
-  color: #CCCCCC;
-  font-size: 17px; }
-
-.property_box .bottom-info .red {
-  color: #FF0000;
-  font-family: "Copernicus-MediumItalic" !important; }
 
 .neighborhood-tile {
   padding: 10px;
@@ -4697,16 +4680,16 @@ section.services h3 {
 .insight-tile:hover * {
   color: #25282A; }
 
-.insight-tile h2 {
+.insight-tile h3 {
   max-width: 60%;
   font-family: "Copernicus-MediumItalic";
-  font-size: 30px;
-  line-height: 34px; }
+  font-size: 34px;
+  line-height: 44.2px; }
 
 .insight-tile p {
   font-family: "Copernicus-Medium";
   font-size: 15px;
-  line-height: 20px; }
+  line-height: 21.75px; }
 
 .insight-tile span {
   font-size: 12px; }
@@ -5008,11 +4991,11 @@ section.services h3 {
 
 .faq-header .container {
   color: white;
-  font-family: "Copernicus-Semibold";
+  font-family: "Copernicus-Medium";
   font-size: 26px; }
 
 .faq h2 {
-  font-family: "Copernicus-Book";
+  font-family: "Copernicus-Medium";
   border-bottom: 1px solid #25282A;
   font-size: 22px;
   line-height: 46px;
@@ -5047,7 +5030,7 @@ section.services h3 {
   margin-top: 20px; }
 
 .faq-link {
-  font-family: "Copernicus-Semibold";
+  font-family: "Copernicus-Medium";
   font-size: 17px;
   line-height: 17px;
   padding: 0 5px !important;

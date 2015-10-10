@@ -78,11 +78,11 @@
 			margin-bottom: 30px;
 		}
 		h2 {
-			font-family: $header-font-family-medium-italic;
+			font-family: $hFontMI;
 			font-size: 34px;
 		}
 		h3 {
-			font-family: $header-font-medium;
+			font-family: $hFontM;
 			font-size: 16px;
 		}
 		form {
@@ -93,7 +93,7 @@
 		input {
 			width: 100%;
 			padding: 10px;
-			font-family: $header-font-medium;
+			font-family: $hFontM;
 			border: 1px solid lighten($header-font-color,50%);
 		}
 		.form-group {
@@ -131,7 +131,7 @@
 
 
 	h3 {
-		font-family: $header-font-family-medium-italic;
+		font-family: $hFontMI;
 		font-size: 22px;
 		line-height: 29px;
 		margin-bottom: 60px;
@@ -140,7 +140,7 @@
 	h4 {
 		margin-top: 0;
 		text-transform: uppercase;
-		font-family: $base-font-family;
+		font-family: $bFont;
 		font-weight: 700;
 		font-size: 12px;
 		margin-bottom: 30px;

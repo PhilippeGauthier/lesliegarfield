@@ -1,91 +1,24 @@
-
-// .circle-nav {
-// 	position: relative;
-// 	display: block;
-// 	width: 100%;
-// 	// height: 150px;
-// 	* {
-// 		font-family: $header-font-family;
-// 	}
-// 	h4 {
-// 		margin-bottom: 0;
-// 		text-align: center;
-// 	}
-// 	svg {
-// 		* {
-// 			fill: $text-green;
-// 		}
-// 	}
-// 	.no-hover {
-// 		position: absolute;
-// 		top: 0;
-// 		left: 0;
-// 		right: 0;
-// 		height: 100%;
-// 		display: flex;
-// 		flex-flow: column nowrap;
-// 		justify-content: flex-end;
-// 		h4 {
-// 			font-family: $header-font-bold;
-// 			font-size: 18px;
-// 			opacity: 1;
-// 			// transition: .15s;
-// 			// transition-delay: .1s;
-// 		}
-// 	}
-// 	.hover {
-// 		position: absolute;
-// 		top: 0;
-// 		left: 0;
-// 		right: 0;
-// 		height: 100%;
-// 		display: flex;
-// 		flex-flow: column nowrap;
-// 		justify-content: flex-end;
-// 		opacity: 0;
-// 		// transition: .15s;
-// 		* {
-// 			color: $text-green;
-// 		}
-		
-// 		p {
-// 			margin-bottom: 15px;
-// 			font-family: $header-font-medium;
-// 			font-size: 15px;
-// 			line-height: 20px;
-// 		}
-// 		.title {
-// 			margin-bottom: 15px;
-// 			font-family: $header-font-bold;
-// 			font-size: 18px;
-// 		}
-// 		.sub-title {
-// 			font-size: 12px;
-// 			font-family: $base-font-family;
-// 			font-weight: 700;
-// 		}
-// 	}
-// 	&:hover, &:focus {
-// 		.no-hover {
-// 			h4 {
-// 				opacity: 0;
-// 				// transition: .15s;
-// 			}
-// 			svg {
-// 				// transition: .15s;
-// 			}
-// 			svg * {
-// 				fill-opacity: .05;
-// 				stroke: none;
-// 				// transition: .15s;
-				
-// 			}			
-// 		}
-// 		.hover {
-// 			opacity: 1;	
-// 			// transition: .15s;
-// 			// transition-delay: .1s;
-// 		}
-// 	}
-// }
-
+.circle-leader {
+	$size: 80px;
+	width: 100%;
+	position: absolute;
+	@include circle-position($size);
+	left: 0;
+	right: 0;
+	text-align: center;
+	@include clearfix;
+	h4 {
+		@include clearfix;
+	}
+	.circle {
+		margin: 0 auto;
+		box-sizing: border-box;
+		@include circle($size);
+		svg {
+			@include svg-size($size);
+			* {
+				fill: $base-font-color;
+			}
+		}
+	}
+}

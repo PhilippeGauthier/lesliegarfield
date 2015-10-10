@@ -21,7 +21,7 @@
 	}
 	li, a {
 		@include flex-hor;
-		font-family: $base-font-family;
+		font-family: $bFont;
 		font-weight: 700;
 		font-size: 15px;
 		color: $text-green;

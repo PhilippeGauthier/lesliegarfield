@@ -3,7 +3,7 @@
 	padding-bottom: 30px;
 	@include clearfix;
 	h1,h3 {
-		font-family: $header-font-extra-bold;
+		font-family: $hFontB;
 		text-align: center;
 	}
 	h1 {
@@ -38,7 +38,7 @@
 			flex-flow: column nowrap;
 		}
 		.price {
-			font-family: $header-font-medium;
+			font-family: $hFontM;
 			font-size: 56px;
 			line-height: 66px;
 			&.tilted {
@@ -49,17 +49,17 @@
 			}
 		}
 		h1 {
-			font-family: $header-font-medium;
+			font-family: $hFontM;
 			font-weight: 100;
 		}
 	}
 		.price-descriptor {
-			font-family: $header-font-bold;
+			font-family: $hFontB;
 			font-size: 13px;
 			display: block;
 			text-align: center;
 			.first-letter {
-				font-family: $header-font-bold;
+				font-family: $hFontB;
 				font-size: 17px;
 			}
 		}

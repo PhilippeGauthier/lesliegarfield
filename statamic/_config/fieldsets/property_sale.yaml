@@ -38,7 +38,7 @@ fields:
     max_items: 1
     taxonomy:
       type: property_location
-      folder: properties/garfield/*
+      folder: properties/new-york/*
   lat_long:
     display: Property Coordinates
     type: grid
@@ -101,7 +101,7 @@ fields:
     max_items: 1
     taxonomy:
       type: property_type
-      folder: properties/garfield/*
+      folder: properties/new-york/*
   plot:
     type: text
     display: Plot

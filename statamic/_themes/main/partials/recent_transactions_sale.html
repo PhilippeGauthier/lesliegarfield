@@ -3,20 +3,20 @@
 {{ else }}
 	{{ if first }}
 	<div class="recent-transactions sale">
-	<h1>Recent Transactions</h1>
-	<h2>Sales</h2>
+	<h2>Recent Transactions</h2>
+	<h3>Sales</h3>
 	<ul>
 	<li>
-		<h3>Property Name</h3>
+		<span>Property Name</span>
 	</li>
 	<li>
-		<h3>Property Type</h3>
+		<span>Property Type</span>
 	</li>
 	<li>
-		<h3>Neighborhood</h3>
+		<span>Neighborhood</span>
 	</li>
 	<li>
-		<h3>Price</h3>
+		<span>Price</span>
 	</li>
 
 	</ul>
@@ -26,14 +26,7 @@
 	<li class="transaction-details">{{ title }}</li>
 	<li class="transaction-details">{{ property_type }}</li>
 	<li class="transaction-details">{{ property_location }}</li>
-	<li class="transaction-details">
-<!-- 	{{ if sold_price|not_empty }}
-	${{ sold_price|format_number }}
-	{{ else }}
-	Undisclosed
-	{{ endif }} -->
-	${{ price|format_number }}
-	</li>
+	<li class="transaction-details">${{ price|format_number }}</li>
 	</ul>
 	{{ if last }}
 	</div>

@@ -1,6 +1,4 @@
-.leading {
-	margin-top: 78px;
-}
+
 
 section {
 	padding: 68px 0;
@@ -24,70 +22,26 @@ section {
 			margin: 0;
 		}
 		h2 {
-			font-family: $header-font-family;
-
+			font-family: $hFontM;
 		}
 		h3 {
-			font-family: $header-font-family-book-italic;
-
+			font-family: $hFontBI;
 		}
 	}
-	// h3:first-child {
-	// 	text-align: center;
-	// 	font-weight: 700;
-	// 	text-transform: uppercase;
-	// 	padding-bottom: 30px;
-	// }
 }
 
 .content {
 	h3 {
 		text-transform: uppercase;
 		font-size: 17px;
-		font-family: $base-font-family;
+		font-family: $bFont;
 		text-align: center;
 		font-weight: 700;
 		margin: 0;
 	}
 }
 
-.light-gray-bg {
-	background-color: $light-gray;
-}
 
-.light-green-bg {
-	background-color: $light-green;
-}
 
-.leader {
-	padding-top: 80px;
-}
-
-.circle-leader {
-	$size: 80px;
-	width: 100%;
-	position: absolute;
-	@include circle-position($size);
-	left: 0;
-	right: 0;
-	text-align: center;
-	@include clearfix;
-	h4 {
-		font-size: 12px;
-		font-weight: 700;
-		@include clearfix;
-	}
-	.circle {
-		margin: 0 auto;
-		box-sizing: border-box;
-		@include circle($size);
-		svg {
-			@include svg-size($size);
-			* {
-				fill: $base-font-color;
-			}
-		}
-	}
-}
 
 

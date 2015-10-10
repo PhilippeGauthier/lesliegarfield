@@ -6,14 +6,14 @@
 	margin-bottom: 60px;
 	.container {
 		color: white;
-		font-family: $header-font-family;	
+		font-family: $hFontM;	
 		font-size: 26px;	
 	}
 }
 
 .faq {
 	h2 {
-		font-family: $header-font-family-book;
+		font-family: $hFontM;
 		border-bottom: 1px solid $header-font-color;
 		font-size: 22px;
 		line-height: 46px;
@@ -23,7 +23,7 @@
 
 .costs {
 	p {
-		font-family: $header-font-medium;
+		font-family: $hFontM;
 		line-height: 30px;
 		font-size: 19px;
 		margin: 0;
@@ -65,7 +65,7 @@
 }
 
 .faq-link {
-	font-family: $header-font-family;
+	font-family: $hFontM;
 	font-size: 17px;
 	line-height: 17px;
 	padding: 0 5px !important;

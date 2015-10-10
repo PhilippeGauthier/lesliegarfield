@@ -1,34 +1,6 @@
 
 
 .hero {
-
-	height: 600px;
-	position: relative;
-
-	* {
-		z-index: 10;
-	}
-	.mask {
-			z-index: 9;
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background-color: black;
-			opacity: .2;
-			height: 100%;
-			width: 100%;
-	}
-
-	&.small {
-		height: 450px;
-	}
-	&.dark {
-		h1,h2,h3,h4 {
-			color: $dark-gray;
-		}
-	}
 	width: 100%;
 	background-position: center;
   background-size: cover;
@@ -37,18 +9,38 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	height: 600px;
+	position: relative;
 	* {
 		color: #fff;
+		z-index: 10;
+	}
+	.mask {
+		z-index: 9;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: black;
+		opacity: .2;
+		height: 100%;
+		width: 100%;
+	}
+	&.small {
+		height: 450px;
+	}
+	&.dark {
+		h1,h2,h3,h4 {
+			color: $dark-gray;
+		}
 	}
 	h1 {
 		margin-top: 0;
 		margin-bottom: 15px;
-		@include hhuge;
 	}
 	h3 {
-		font-family: $header-font-medium;
-		font-size: 22px;
-		line-height: 32px;
+		@include hlmedium($hFontM);
 		@include span (3 of 12);
 		margin-top: 0;
 		margin-bottom: 15px;

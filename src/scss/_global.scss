@@ -7,19 +7,15 @@
 // @include border-box-sizing;
 
 
-$small: 768px;
-$medium: 992px;
-$large: 1170px;
+
 
 
 // @include establish-baseline;
 
 html, body, a, span, p {
   color: $base-font-color;
-  font-family: $base-font-family;
+  @include bbase;
 }
-
-
 
 ul {
   -webkit-margin-before: 0;
@@ -29,14 +25,11 @@ ul {
   -webkit-padding-start: 0;
   li {
     display: inline-block;
-    font-weight: 300;
-    line-height: 24px;
   }
 }
 
 a {
   text-decoration: none;
-  color: $base-font-color;
   &:hover,&:focus {
     color: $text-green;
     text-decoration: none;
@@ -47,24 +40,24 @@ a {
   color: $red;
 }
 
-.background-gray {
-  background-color: $background-gray;
+.bg-gray {
+  background-color: $bg-gray;
 }
 
-.background-light-gray {
-  background-color: $background-light-gray;
+.bg-light-gray {
+  background-color: $bg-light-gray;
 }
 
-.seafoam-bg {
-  background-color: $seafoam-bg;
+.bg-seafoam {
+  background-color: $bg-seafoam;
 }
 
-.dark-seafoam-bg {
-  background-color: $dark-seafoam-bg;
+.bg-dark-seafoam {
+  background-color: $dark-bg-seafoam;
 }
 
-.darkest-seafoam-bg {
-  background-color: $darkest-seafoam-bg;
+.bg-darkest-seafoam {
+  background-color: $darkest-bg-seafoam;
 }
 
 .similar-properties-gray {
@@ -75,8 +68,12 @@ a {
   background-color: $agents-background;
 }
 
-.light-blue {
-  background-color: $light-blue;
+.bg-light-blue {
+  background-color: $bg-light-blue;
+}
+
+.light-gray-bg {
+  background-color: $light-gray;
 }
 
 .white {
@@ -97,5 +94,5 @@ a {
 }
 
 // .highlight * {
-// 	font-family: $header-font-family;
+// 	font-family: $hFontM;
 // }

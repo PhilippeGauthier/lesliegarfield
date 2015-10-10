@@ -7,7 +7,7 @@
 		position: relative;
 	}
 	.featured {
-		background-color: $dark-seafoam-bg;
+		background-color: $dark-bg-seafoam;
 		@include span(full no-gutter);
 		@include clearfix;
 	}
@@ -25,7 +25,7 @@
 		@include clearfix;
 	}
 	.blog-header {
-		font-family: $header-font-family;
+		font-family: $hFontM;
 		color: $light-font-color;
 		text-transform: uppercase;
 		font-size: 19px;
@@ -78,7 +78,7 @@
 	}
 	.date,.author {
 		text-transform: none;
-		font-family: $header-font-extra-bold;
+		font-family: $hFontB;
 		font-size: 14px;
 	}
 	.author {
@@ -92,7 +92,7 @@
 		li {
 			display: block;
 			a {
-				font-family: $header-font-extra-bold;
+				font-family: $hFontB;
 				font-size: 15px;				
 			}
 		}
@@ -108,7 +108,7 @@
 			background-color: $modal-text;
 		}
 		h2 {
-			font-family: $header-font-family-medium-italic;
+			font-family: $hFontMI;
 			font-size: 24px;
 			line-height: 30px;
 		}
@@ -121,7 +121,7 @@
 	}
 	.read-more {
 		font-size: 16px;
-		font-family: $header-font-family-medium-italic;
+		font-family: $hFontMI;
 		color: $text-green;
 	}
 	.author-list {

@@ -9,7 +9,7 @@
 			margin-right: auto;
 		}
 		h2 {
-			font-family: $header-font-bold;
+			font-family: $hFontB;
 			font-size: 22px;
 		}
 		h3 {
@@ -27,7 +27,7 @@
 			margin-top: 20px;
 		}
 		li {
-			font-family: $header-font-medium;
+			font-family: $hFontM;
 			font-size: 14px;
 			margin-bottom: 10px;
 			&:hover {
@@ -68,7 +68,7 @@
 			margin-bottom: 0;
 		}
 		p, span {
-			font-family: $header-font-medium;
+			font-family: $hFontM;
 			line-height: 26px;
 		}
 		.green-specs {
@@ -112,28 +112,30 @@
 			&.sale {
 				margin-bottom: 40px;
 			}
-			h1 {
+			h2 {
 				margin-bottom: 30px;
 			}
-			h2 {
-				font-family: $base-font-family;
+			h3 {
 				border-bottom: 2px solid $dark-gray;
 				padding-bottom: 10px;
+				font-size: 16px;
+				font-family: $bFont;
+				font-weight: 700;
+				text-transform: uppercase;
+			}
+			span {
+				@include hbase($hFontB);
 			}
 			ul {
 				@include clearfix;
 				border-bottom: 1px solid lighten($dark-gray, 50%);
 				// display: flex;
 			}
-			h3 {
-				font-family: $header-font-bold;
-				font-size: 16px;
-			}
 			li {
 				@include gallery(1 of 4);
 				padding: 20px 0;
 				padding-right: 5px;
-				font-family: $header-font-medium;
+				font-family: $hFontM;
 				font-size: 16px;
 				text-align: left;
 				&.transaction-details {

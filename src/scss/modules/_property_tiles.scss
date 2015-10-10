@@ -1,20 +1,8 @@
-			// .property_tile_1, .property_tile_2 {
-			// 	a {
-			// 		padding: 10px;
-			// 	}
-			// }
-
-			// .property_tile_2 {
-			// 	a {
-			// 		margin: 10px;
-			// 	}
-			// }
 
 .tile-container {
 	padding-top: 60px;
 }
 .carousel_tile, .property_tile {
-
 	a {
 		padding: 10px;
 		margin: 10px;
@@ -67,28 +55,25 @@
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: space-between;
-		h2,h3,h4 {
-			text-align: left;
+		padding-left: 10px;
+		span {
 			margin: 0;
 		}
-		h2,h3, p {
-			font-family: $header-font-family-medium-italic;
+		.prop-title {
+			@include hsmedium($hFontMI);
 		}
-		span {
-			font-family: $header-font-family;
+		.prop-price, .bottom-info {
+			@include hbase($hFontMI);
 		}
-		h3,h4 {
-			font-size: 15px;
-			line-height: 22px;
+		.prop-details,.prop-location,  {
+			@include hsmall($hFontM);
 		}
-		h2 {
-			font-size: 18px;
-			line-height: 24px;
+		.bottom-info {
+			color: $modal-text;
+			.red {
+				color: $red;
+			}
 		}
-		h4 {
-			font-family: $header-font-medium ;
-		}
-		padding-left: 10px;
 	}
 	.spacer {
 		height: 1px;
@@ -102,15 +87,5 @@
 		}
 		box-shadow: 0px 0px 0px 1px $green;
 		transition: .25s;
-	}
-	.bottom-info {
-		font-family: $header-font-family-medium-italic !important;
-		margin-bottom: 0;
-		color: $modal-text;
-		font-size: 17px;
-		.red {
-			color: $red;
-			font-family: $header-font-family-medium-italic !important;
-		}
 	}
 }

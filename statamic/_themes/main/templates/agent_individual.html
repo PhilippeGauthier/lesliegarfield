@@ -1,4 +1,4 @@
-<section class="leading background-gray agent-individual">
+<section class="leading bg-gray agent-individual">
 	<div class="container">
 
 		<aside class="sticky">					
@@ -87,11 +87,11 @@
 				{{ theme:partial src="property_tile_agent" use_context="true" }}  
 			{{ /entries:listing }}
 			
-			{{ entries:listing folder="properties/new-york/sale|properties/new-york/sold|properties/international/sale|properties/international/sold" conditions="agents:{url}, sold:true" sort_by="price" sort_dir="desc" }}
+			{{ entries:listing folder="properties/new-york/sale|properties/new-york/sold|properties/international/sale|properties/international/sold" conditions="agents:{url}, streeteasy_status:sold" sort_by="price" sort_dir="desc" }}
 			{{ theme:partial src="recent_transactions_sale" use_context="true" }}
 			{{ /entries:listing }}
 
-			{{ entries:listing folder="properties/new-york/lease|properties/new-york/leased|properties/international/lease|properties/international/leased" conditions="agents:{url}, leased:true" sort_by="price" sort_dir="desc" }}
+			{{ entries:listing folder="properties/new-york/lease|properties/new-york/leased|properties/international/lease|properties/international/leased" conditions="agents:{url}, streeteasy_status:leased" sort_by="price" sort_dir="desc" }}
 			{{ theme:partial src="recent_transactions_rental" use_context="true" }}
 			{{ /entries:listing }}
 

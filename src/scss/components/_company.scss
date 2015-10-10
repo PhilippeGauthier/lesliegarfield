@@ -11,7 +11,7 @@
 	@include pre(2.75 of 12);
 	@include span(6.5 of 12);
 	h2 {
-		font-family: $base-font-family;
+		font-family: $bFont;
 		font-size: 23px;
 		line-height: 33px;
 		text-transform: uppercase;
@@ -22,10 +22,10 @@
 		font-size: 23px;
 		line-height: 33px;
 		font-weight: 700;
-		font-family: $header-font-medium;
+		font-family: $hFontM;
 	}
 	p {
-		font-family: $header-font-medium;
+		font-family: $hFontM;
 		line-height: 28px;
 	}
 	.divider {
@@ -36,14 +36,14 @@
 	}
 	.beliefs {
 		p {
-			font-family: $base-font-family;
+			font-family: $bFont;
 			font-size: 23px;
 			line-height: 33px;
 		}
 	}
 	&.inner-content{
 		h2,h4 {
-			font-family: $header-font-medium;
+			font-family: $hFontM;
 			line-height: 46px;
 			margin-bottom: 0;
 		}
@@ -66,7 +66,7 @@
 			text-align: left;
 		}
 		a {
-			font-family: $header-font-family-medium-italic;
+			font-family: $hFontMI;
 			font-size: 16px;
 		}
 	}
