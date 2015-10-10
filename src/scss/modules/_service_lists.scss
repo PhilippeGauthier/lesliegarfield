@@ -1,4 +1,23 @@
+.services {
+	h3:first-of-type {
+		@include hxlarge($hFontM);
+	}
+	h3:last-of-type {
+		@include hxlarge($hFontBI);
+	}
+	h3 {
+		margin-bottom: 15px;
+		text-align: left;
+	}
+}
+
 .service-list {
+	span {
+		@include hsmall($hFontB);
+		margin-bottom: 1em;
+		font-weight: 700;
+		display: block;
+	}
 	* {
 		color: $text-green;
 	}

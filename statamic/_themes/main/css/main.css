@@ -1668,8 +1668,9 @@ a:hover, a:focus {
   font-weight: normal;
   font-style: normal; }
 
-h1, h2, h3 {
-  font-weight: 100; }
+h1, h2, h3, h4 {
+  font-weight: 100;
+  margin: 0; }
 
 h1 {
   font-family: "Copernicus-BookItalic";
@@ -2838,19 +2839,6 @@ section.faq {
   margin-top: 0;
   padding-top: 0; }
 
-section.services h2, section.services h3 {
-  text-align: left;
-  font-size: 34px;
-  line-height: 50px;
-  text-transform: none;
-  margin: 0; }
-
-section.services h2 {
-  font-family: "Copernicus-Medium"; }
-
-section.services h3 {
-  font-family: "Copernicus-BookItalic"; }
-
 .content h3 {
   text-transform: uppercase;
   font-size: 17px;
@@ -3849,23 +3837,20 @@ section.services h3 {
   padding-left: 0.83333%;
   padding-right: 0.83333%; }
 
-.company h2 {
-  font-family: Arial, "Lucida Grande", sans-serif;
-  font-size: 23px;
-  line-height: 33px;
-  text-transform: uppercase; }
-
-.company h3 {
-  text-align: center;
-  margin: 0 auto;
-  font-size: 23px;
-  line-height: 33px;
-  font-weight: 700;
-  font-family: "Copernicus-Medium"; }
-
 .company p {
   font-family: "Copernicus-Medium";
-  line-height: 28px; }
+  line-height: 28px;
+  text-align: left; }
+
+.company span {
+  font-family: "Copernicus-Medium";
+  font-size: 20px; }
+
+.company span.company-title {
+  font-family: Arial, "Lucida Grande", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700; }
 
 .company .divider {
   height: 1px;
@@ -3878,50 +3863,13 @@ section.services h3 {
   font-size: 23px;
   line-height: 33px; }
 
-.company.inner-content h2, .company.inner-content h4 {
-  font-family: "Copernicus-Medium";
-  line-height: 46px;
-  margin-bottom: 0; }
-
-.company.inner-content h2 {
-  font-size: 36px;
-  margin-bottom: 0;
-  margin-top: 20px; }
-
-.company.inner-content h4 {
-  display: inline-block;
-  font-size: 26px;
-  margin-top: 0; }
-
-.company.inner-content h4:before, .company.inner-content h4:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.company.inner-content img {
-  text-align: center;
-  display: inline-block; }
-
-.company.inner-content p {
-  text-align: left; }
-
-.company.inner-content a {
-  font-family: "Copernicus-MediumItalic";
-  font-size: 16px; }
-
 .company.why {
   background-image: url("../img/G.svg");
   background-repeat: no-repeat;
   background-position: center; }
 
-.company.why h2 {
-  margin-bottom: 0px; }
-
 .company.why h3 {
-  margin-bottom: 15px; }
-
-.company.why p {
-  margin-top: 0; }
+  text-transform: uppercase; }
 
 .blog span {
   text-transform: uppercase; }
@@ -4997,6 +4945,28 @@ section.services h3 {
 
 .service-quote {
   position: relative; }
+
+.services h3:first-of-type {
+  font-family: "Copernicus-Medium";
+  font-size: 34px;
+  line-height: 44.2px; }
+
+.services h3:last-of-type {
+  font-family: "Copernicus-BookItalic";
+  font-size: 34px;
+  line-height: 44.2px; }
+
+.services h3 {
+  margin-bottom: 15px;
+  text-align: left; }
+
+.service-list span {
+  font-family: "Copernicus-Bold";
+  font-size: 15px;
+  line-height: 21.75px;
+  margin-bottom: 1em;
+  font-weight: 700;
+  display: block; }
 
 .service-list * {
   color: #009B77; }
