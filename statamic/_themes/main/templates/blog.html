@@ -11,7 +11,7 @@
 
 				{{ if get:page <= "1" && zero_index == "1" || get:page > "1" && zero_index == "0"}}
 				<div class="blog-left">
-					<h2 class="blog-header">Latest News</h2>
+					<div class="blog-header">LATEST NEWS</div>
 					<div class="entries">
 						{{ endif }}
 						<div class="entry">
@@ -19,11 +19,11 @@
 								<a href="{{ url }}" class="preview-image" style="background-image: url( {{ path src="{{ main_image }}" }} );"><div class="mask"></div></a>
 							</div>
 							<div class="preview">
-								<a href="{{ url }}"><h2>{{ title }}</h2></a>
+								<a href="{{ url }}"><div class="blog-title">{{ title }}</div></a>
 								<div class="divider"></div>
 								{{ theme:partial src="blog_social" use_context="true" }}
 								<div class="truncated">
-									{{ content|truncate:200 }}
+									{{ content|truncate:100 }}
 									<a class="read-more" href="{{ url }}">Read More</a>
 								</div>
 							</div>

@@ -90,6 +90,9 @@ $modal-text: #CCCCCC;
 $bg-light-blue: #E6F1FA;
 $quote-gray: #7a7a7a;
 
+// base sizes
+$bPadding: 60px;
+
 // breakpoints
 $small: 768px;
 $medium: 992px;
@@ -184,8 +187,9 @@ $fontHuge: 70px;
     line-height: 1.45*$fontSmall;
 }
 
-@mixin btiny {
-    font-family: $bFont;
+@mixin btiny ($font){
+    font-family: $font;
+    line-height: 1.5*$fontTiny;
     font-size: $fontTiny;
 }
 

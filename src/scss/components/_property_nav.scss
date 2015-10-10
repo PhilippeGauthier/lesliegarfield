@@ -176,7 +176,7 @@
 	}
 	.sort-bar-divider {
 		width: 1px;
-		height: 60px;
+		height: $bPadding;
 		vertical-align: top;
 		border-right: 1px solid $light-font-color;
 		margin-left: 20px;

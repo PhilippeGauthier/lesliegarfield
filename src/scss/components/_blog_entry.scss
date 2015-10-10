@@ -1,7 +1,10 @@
 .categories {
 	border-bottom: 1px solid $modal-text;
-	padding-bottom: 30px;
 	margin-bottom: 30px;
+	padding-bottom: 1.5em;
+	.blog-header {
+		border-bottom: none;
+	}
 	li {
 		text-transform: uppercase;
 		&:first-of-type {
@@ -10,20 +13,10 @@
 		}
 		border-left: 1px solid $modal-text;
 		padding: 0 10px;
-		a {
-			font-family: $hFontM;
-			font-size: 19px;
-			color: $light-font-color;
-		}
 	}
 }
 
 .blog.blog-entry .blog-left {
-	h1 {
-		font-family: $hFontMI;
-		font-size: 34px;
-		line-height: 43px;
-	}
 	.main-image {
 		margin: 30px 0;
 	}

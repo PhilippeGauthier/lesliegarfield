@@ -5,6 +5,11 @@
 	display: block;
 	border: 1px solid transparent;
 	transition: all 100ms ease;
+	.neighborhood-title {
+		@include hlarge;
+		margin-bottom: 60px;
+		margin-top: 10px;
+	}
 	&:hover {
 		border: 1px solid $text-green;
 		h2 {
@@ -14,11 +19,5 @@
 	.preview-image {
 		height: 260px;
 		width: 100%;
-	}
-	h2 {
-		font-family: $hFontMI;
-		font-size: 28px;
-		margin-bottom: 60px;
-		margin-top: 10px;
 	}
 }

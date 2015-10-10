@@ -36,10 +36,6 @@
 		}
 		color: $text-green;
 	}
-	// span:last-of-type {
-	// 	font-family: $hFontM;
-	// 	font-size: 12px;
-	// }
 	.grid-3-constrained-padding {
 		* {
 			vertical-align: middle;
@@ -63,7 +59,7 @@
 	}
 	.divider {
 		@include clearfix;
-		margin-bottom: 60px;
+		margin-bottom: $bPadding;
 		span {
 			font-weight: 700;
 			font-size: 14px;

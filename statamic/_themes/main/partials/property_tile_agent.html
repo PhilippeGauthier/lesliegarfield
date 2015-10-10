@@ -28,14 +28,8 @@
 			<div class="bottom-info">
 				{{ if openhouse }}
 					<div class="red">Open House</div>
-				{{ elseif streeteasy_status == "sold" }}
-				<div>Sold</div>
-				{{ elseif streeteasy_status == "leased" }}
-				<div>Leased</div>
-				{{ elseif streeteasy_status == "in-contract" }}
-				<div>In Contract</div>
-				{{ elseif streeteasy_status == "leased" }}
-				<div>Leased</div>
+				{{ elseif streeteasy_status != "Active" }}
+				<div>{{ streeteasy_status }}</div>
 				{{ endif }}
 			</div>
 		</div>

@@ -1,6 +1,6 @@
 <div class="blog-right">
 	<div class="authors">
-		<h2 class="blog-header">Authors</h2>
+		<div class="blog-header">AUTHORS</div>
 		<ul>
 		{{ entries:listing folder="agents/garfield" conditions="author"}}
 		<li><a class="author-list" href="{{ _site_root }}blog/authors/{{ title|lower }}">
@@ -10,7 +10,7 @@
 		{{ /entries:listing }}
 		</ul>
 		</ul>
-		<h2 class="blog-header">Other News</h2>
+		<div class="blog-header">OTHER NEWS</div>
 		<div class="twitter-feed bg-gray">
 			{{ theme:partial src="twitter" }}
 		</div>

@@ -1,6 +1,7 @@
 
 .reports {
 	.grid-constrained {
+		margin-top: 60px;
 		@include pre(1.5);
 		@include post(1.5);
 	}
@@ -65,8 +66,8 @@
 		}
 	}
 	.expander-next {
-		margin-top: 60px;
-		margin-bottom: 60px;
+		margin-top: $bPadding;
+		margin-bottom: $bPadding;
 		display: block;
 		&:hover span {
 			color: $text-green;
@@ -134,7 +135,7 @@
 		font-family: $hFontMI;
 		font-size: 22px;
 		line-height: 29px;
-		margin-bottom: 60px;
+		margin-bottom: $bPadding;
 		margin-top: 10px;
 	}
 	h4 {

@@ -1,5 +1,5 @@
 .numbers {
-	padding-top: 60px;
+	padding-top: $bPadding;
 	padding-bottom: 30px;
 	@include clearfix;
 	h1,h3 {
@@ -22,7 +22,7 @@
 	}
 	.full {
 		border-right: 1px solid $dark-gray;
-		padding: 0 60px;
+		padding: 0 $bPadding;
 
 	}
 	.half {

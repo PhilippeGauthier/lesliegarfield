@@ -1491,6 +1491,13 @@ img {
   margin-right: -100%;
   clear: none; }
 
+section {
+  padding: 68px 0;
+  position: relative; }
+
+.properties {
+  padding: 0px 0 100px; }
+
 .leading {
   margin-top: 78px; }
 
@@ -1523,6 +1530,10 @@ img {
 .services aside .circle {
   padding-top: 100%;
   position: relative; }
+
+.faq {
+  margin-top: 0;
+  padding-top: 0; }
 
 .faq main {
   box-sizing: border-box;
@@ -1715,6 +1726,12 @@ p.light {
   font-family: Arial, "Lucida Grande", sans-serif;
   font-weight: 100;
   color: #868f95;
+  text-align: center; }
+
+.section-title {
+  font-size: 16px;
+  font-family: Arial, "Lucida Grande", sans-serif;
+  font-weight: 700;
   text-align: center; }
 
 /* Slider */
@@ -2825,28 +2842,6 @@ footer .footer-divider .social a i {
   height: 800px;
   margin-top: 60px; }
 
-section {
-  padding: 68px 0;
-  position: relative; }
-
-section.properties {
-  padding: 0px 0 100px; }
-
-section.leading {
-  margin-top: 78px; }
-
-section.faq {
-  margin-top: 0;
-  padding-top: 0; }
-
-.content h3 {
-  text-transform: uppercase;
-  font-size: 17px;
-  font-family: Arial, "Lucida Grande", sans-serif;
-  text-align: center;
-  font-weight: 700;
-  margin: 0; }
-
 .Select {
   border: 1px solid transparent; }
 
@@ -3917,13 +3912,13 @@ section.faq {
   clear: both; }
 
 .blog .blog-header {
-  font-family: "Copernicus-Medium";
   color: #999999;
-  text-transform: uppercase;
-  font-size: 19px;
-  padding-bottom: 30px;
+  font-family: "Copernicus-Medium";
+  font-size: 18px;
+  line-height: 27.9px;
+  padding-bottom: 1.5em;
   border-bottom: 1px solid #CCCCCC;
-  margin-bottom: 30px; }
+  margin-bottom: 1.5em; }
 
 .blog .entries {
   box-sizing: border-box;
@@ -3978,6 +3973,7 @@ section.faq {
 .blog .date, .blog .author {
   text-transform: none;
   font-family: "Copernicus-Bold";
+  line-height: 21px;
   font-size: 14px; }
 
 .blog .author {
@@ -3991,7 +3987,8 @@ section.faq {
 
 .blog .authors li a {
   font-family: "Copernicus-Bold";
-  font-size: 15px; }
+  font-size: 15px;
+  line-height: 21.75px; }
 
 .blog .preview, .blog .blog.blog-entry {
   box-sizing: border-box;
@@ -4008,20 +4005,15 @@ section.faq {
   margin: 20px 0;
   background-color: #CCCCCC; }
 
-.blog .preview h2, .blog .blog.blog-entry h2 {
+.blog .preview .blog-title, .blog .blog.blog-entry .blog-title {
   font-family: "Copernicus-MediumItalic";
-  font-size: 24px;
-  line-height: 30px; }
-
-.blog h2 {
-  margin-top: 0; }
-
-.blog p {
-  line-height: 28px; }
+  font-size: 28px;
+  line-height: 33.6px; }
 
 .blog .read-more {
-  font-size: 16px;
   font-family: "Copernicus-MediumItalic";
+  font-size: 16px;
+  line-height: 26px;
   color: #009B77; }
 
 .blog .author-list {
@@ -4064,8 +4056,11 @@ section.faq {
 
 .categories {
   border-bottom: 1px solid #CCCCCC;
-  padding-bottom: 30px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  padding-bottom: 1.5em; }
+
+.categories .blog-header {
+  border-bottom: none; }
 
 .categories li {
   text-transform: uppercase;
@@ -4075,16 +4070,6 @@ section.faq {
 .categories li:first-of-type {
   border-left: none;
   padding-left: 0; }
-
-.categories li a {
-  font-family: "Copernicus-Medium";
-  font-size: 19px;
-  color: #999999; }
-
-.blog.blog-entry .blog-left h1 {
-  font-family: "Copernicus-MediumItalic";
-  font-size: 34px;
-  line-height: 43px; }
 
 .blog.blog-entry .blog-left .main-image {
   margin: 30px 0; }
@@ -4610,6 +4595,13 @@ section.faq {
   border: 1px solid transparent;
   transition: all 100ms ease; }
 
+.neighborhood-tile .neighborhood-title {
+  font-family: "Copernicus-MediumItalic";
+  font-size: 28px;
+  line-height: 33.6px;
+  margin-bottom: 60px;
+  margin-top: 10px; }
+
 .neighborhood-tile:hover {
   border: 1px solid #009B77; }
 
@@ -4619,12 +4611,6 @@ section.faq {
 .neighborhood-tile .preview-image {
   height: 260px;
   width: 100%; }
-
-.neighborhood-tile h2 {
-  font-family: "Copernicus-MediumItalic";
-  font-size: 28px;
-  margin-bottom: 60px;
-  margin-top: 10px; }
 
 .insight-tile {
   display: block;
@@ -4736,6 +4722,7 @@ section.faq {
   border-bottom: 1px solid #25282A; }
 
 .reports .grid-constrained {
+  margin-top: 60px;
   margin-left: 18.75%;
   margin-right: 18.75%; }
 
@@ -5071,6 +5058,12 @@ section.faq {
   margin-bottom: 60px;
   border-bottom: none; }
 
+.featured .featured-title {
+  font-family: "Copernicus-Bold";
+  font-size: 18px;
+  line-height: 27.9px;
+  color: #009B77; }
+
 .featured .featured-image {
   box-sizing: border-box;
   width: 50%;
@@ -5078,14 +5071,7 @@ section.faq {
   height: 400px; }
 
 .featured h3 {
-  color: #009B77;
-  margin-top: 0;
-  font-family: "Copernicus-Medium"; }
-
-.featured h2 {
-  font-family: "Copernicus-MediumItalic";
-  font-size: 34px;
-  line-height: 43px; }
+  margin-bottom: .5em; }
 
 .post-details {
   box-sizing: border-box;

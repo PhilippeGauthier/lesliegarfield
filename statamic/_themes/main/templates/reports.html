@@ -2,10 +2,10 @@
 	<h1>{{ header }}</h1>
 	<h3>{{ sub_header }}</h3>
 </section>
-<section class="darkest-bg-seafoam">
+<section class="bg-darkest-seafoam">
 	<div class="container reports">
-		<h3 class="centered">OUR LATEST REPORTS</h3>
-		<ul class="grid-constrained">
+		<div class="section-title">OUR LATEST REPORTS</div>
+		<ul class="grid-constrained report-header">
 			{{ reports limit="6"}}
 				<li class="grid-3-constrained">
 					<a target="_blank" href="{{ report }}" class="report-tile">

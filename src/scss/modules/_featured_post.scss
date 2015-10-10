@@ -1,21 +1,18 @@
 .featured {
 	height: 400px;
 	text-align: left;
-	margin-bottom: 60px;
+	margin-bottom: $bPadding;
 	border-bottom: none;
+	.featured-title {
+		@include hsmedium($hFontB);
+		color: $text-green;
+	}
 	.featured-image {
 		@include span (6 of 12 no-gutter);
 		height: 400px;
 	}
 	h3 {
-		color: $text-green;
-		margin-top: 0;
-		font-family: $hFontM;
-	}
-	h2 {
-		font-family: $hFontMI;
-		font-size: 34px;
-		line-height: 43px;
+		margin-bottom: .5em;
 	}
 }
 

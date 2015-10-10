@@ -8,20 +8,20 @@
 					<ul class="categories">
 						{{ if categories|not_empty }}
 						{{ categories }}
-						<li><a href="{{ _site_root }}blog/categories/{{ title|lower }}">{{ value }}</a></li>
+						<li><a class="blog-header" href="{{ _site_root }}blog/categories/{{ title|lower }}">{{ value }}</a></li>
 						{{ /categories }}
 						{{ else }}
 						<div class="title-holder"></div>
 						{{ endif }}
 					</ul>
-					<h1>{{ title }}</h1>
+					<h2>{{ title }}</h2>
 					{{ theme:partial src="blog_social" use_context="true" }}
 					<img class="main-image" src="{{ path src="{{ main_image }}"}}">
 					{{ content }}
 				</div>
 				<div class="blog-right">
 					<div class="authors">
-						<h2 class="blog-header">Authors</h2>
+						<div class="blog-header">AUTHORS</div>
 						<ul>
 							{{ relate:author }}
 							<li><a class="author-list" href="{{ _site_root }}blog/authors/{{ title|lower }}">
@@ -31,7 +31,7 @@
 							{{ /relate:author }}
 						</ul>
 					</div>
-					<h2 class="blog-header">Other News</h2>
+					<div class="blog-header">OTHER NEWS</div>
 					<div class="twitter-feed bg-gray">
 						{{ theme:partial src="twitter" }}
 					</div>

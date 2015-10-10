@@ -78,7 +78,7 @@ p {
 	line-height: 26px;
     &.no_results {
         @include hlmedium($hFontM);
-        margin-top: 60px;
+        margin-top: $bPadding;
         @include pre(2 of 12);
         @include span (8 of 12);
         text-align: center;
@@ -93,10 +93,15 @@ p {
     }
 }
 
+
+.section-title {
+    @include bbasebold;
+    text-align: center;
+}
 // .container.large-body {
 //     h3 {
 //         margin-top: 0;
-//         margin-bottom: 60px;
+//         margin-bottom: $bPadding;
 //         display: block;
 //     }
 //     p {

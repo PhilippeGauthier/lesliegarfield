@@ -125,7 +125,7 @@ img {
 
 .grid {
   @include clearfix;
-  padding-top: 60px;
+  padding-top: $bPadding;
   &.properties {
   	padding-top: 0;
   }
@@ -136,9 +136,18 @@ img {
   margin-bottom: gutter(4); 
 }
 
+section {
+	padding: 68px 0;
+	position: relative;
+}
+
+.properties {
+	padding: 0px 0 100px;
+}
 .leading {
 	margin-top: 78px;
 }
+
 
 .services {
 	.container {
@@ -160,6 +169,8 @@ img {
 }
 
 .faq {
+	margin-top: 0;
+	padding-top: 0;
 	main {
 		@include span (first 8 of 12);
 		@include post(1 of 12);
