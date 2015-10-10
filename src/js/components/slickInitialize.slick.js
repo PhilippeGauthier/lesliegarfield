@@ -111,6 +111,7 @@ $('.quote-slider').slick({
   infinite: true,
   speed: 700,
   slidesToShow: 1,
+  adaptiveHeight: true,
   arrows: false,
   dots: false,
   fade: true,
