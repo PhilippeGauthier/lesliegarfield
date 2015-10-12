@@ -110,7 +110,7 @@ fields:
       folder: properties/new-york/*
   ownership:
     type: select
-    display: Ownership Type (condo, coop, etc). REQUIRED
+    display: Ownership Type. REQUIRED.
     required: True
     options:
       rental: Rental
