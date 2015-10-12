@@ -102,15 +102,22 @@ fields:
     taxonomy:
       type: property_type
       folder: properties/new-york/*
+  ownership:
+    type: select
+    display: Ownership Type (condo, coop, etc). REQUIRED
+    required: True
+    options:
+      townhouse: Townhouse
+      house: House
+      condo: Condo
+      coop: Co-op
+      rental: Rental
   plot:
     type: text
     display: Plot
   building_size:
     type: text
     display: Building Size
-  ownership:
-    type: text
-    display: Ownership (condo, coop, etc);
   build_date:
     type: text
     display: Build Date

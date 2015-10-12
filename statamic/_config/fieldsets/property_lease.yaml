@@ -108,14 +108,16 @@ fields:
     taxonomy:
       type: property_type
       folder: properties/new-york/*
-  ownership_type:
-    display: Ownership Type
-    type: suggest
-    create: true
-    max_items: 1
-    taxonomy:
-      type: ownership_type
-      folder: properties/*
+  ownership:
+    type: select
+    display: Ownership Type (condo, coop, etc). REQUIRED
+    required: True
+    options:
+      rental: Rental
+      townhouse: Townhouse
+      condo: Condo
+      coop: Co-op
+      house: House
   plot:
     type: text
     display: Plot
