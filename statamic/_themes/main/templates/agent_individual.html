@@ -3,7 +3,7 @@
 
 		<aside class="sticky">					
 			<img class="circle" src="{{ path src="{{ image }}" }}" class="img-circle" />
-			<div class="agent-name">Contact {{ title }}</div>
+			<div class="agent-name">{{ title }}</div>
 			<ul>
 				<li>{{ theme:partial src="svg/phone" }} {{ phone }}</li>
 				<li>{{ theme:partial src="svg/mail" }} {{ email|link }}</li>
@@ -13,12 +13,12 @@
 
 		<main>
 			<div class="agent-info">
-				<h1>{{ title }}</h1>
+				<h2>{{ title }}</h2>
 				{{ info }}
 			</div>
 			{{ if press|not_empty }}
 			<div class="green-specs">
-				<h4>PRESS</h4>
+				<h3>PRESS</h3>
 				<div class="press">
 				
 				{{ if press|length > 1 }}

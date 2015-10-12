@@ -3,9 +3,9 @@
 	text-align: left;
 	margin-bottom: $bPadding;
 	border-bottom: none;
-	.featured-title {
-		@include hsmedium($hFontB);
+	.blog-header {
 		color: $text-green;
+		border-bottom: none;
 	}
 	.featured-image {
 		@include span (6 of 12 no-gutter);
@@ -13,6 +13,7 @@
 	}
 	h3 {
 		margin-bottom: .5em;
+		@include hxlarge($hFontMI);
 	}
 }
 

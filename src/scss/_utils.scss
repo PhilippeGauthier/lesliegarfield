@@ -82,7 +82,7 @@ $bg-light-gray: #F7F7F7;
 $header-font-color: #25282A;
 $light-font-color: #A7A4A4;
 $agents-background: #F5F5F5;
-$bg-seafoam: #F4FBF9;
+$bg-seafoam: #E9F7F3;
 $dark-bg-seafoam: #e4f4f1;
 $darkest-bg-seafoam: #CEEBE7;
 $red: #FF0000;
@@ -161,7 +161,7 @@ $fontHuge: 70px;
 @mixin hsmedium ($font){
     font-family: $font;
     font-size: $fontSmallMedium;
-    line-height: 1.55*$fontSmallMedium;
+    line-height: 1.33*$fontSmallMedium;
 }
 
 @mixin hbase ($font){
@@ -197,6 +197,7 @@ $fontHuge: 70px;
     font-family: $font;
     font-size: $fontMini;
     line-height: 1.2*$fontMini;
+    font-weight: 700;
 }
 
 

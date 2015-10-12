@@ -71,7 +71,8 @@ fields:
     type: checkbox
   openhouse_grid:
     type: grid
-    display: Open House(s)
+    display: Open House
+    max_rows: 1
     fields:
       date:
         type: date
@@ -112,6 +113,7 @@ fields:
       condo: Condo
       coop: Co-op
       rental: Rental
+      other: Other
   plot:
     type: text
     display: Plot

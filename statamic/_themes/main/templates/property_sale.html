@@ -42,7 +42,7 @@
 			<div class="property-info">
 
 				<div class="property-header">
-					<h2>{{ title }} {{ apartment }}</h2>
+					<h2>{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}</h2>
 
 					<div class="social">
 						<a href="">
@@ -84,7 +84,7 @@
 						{{ if openhouse }}
 						{{ openhouse_grid }}
 						{{ if date|not_empty }}
-						<span class="red">Open House: {{date format="D, m-j" }}, {{startTime}} - {{ endTime }}</span>
+						<span class="red">Open House: {{date format="D, m/j" }}, {{startTime}} - {{ endTime }}</span>
 						{{ else }}
 						<span class="red">Open House: Enquire for Details</span>
 						{{ endif }}

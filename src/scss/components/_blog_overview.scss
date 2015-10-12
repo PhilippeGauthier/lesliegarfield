@@ -25,9 +25,9 @@
 		@include clearfix;
 	}
 	.blog-header {
-		color: $light-font-color;
-		@include hsmedium($hFontM);
-		padding-bottom: 1.5em;
+		color: darken($light-font-color,10%);
+		@include hbase($hFontM);
+		padding-bottom: .75em;
 		border-bottom: 1px solid $modal-text;
 		margin-bottom: 1.5em;
 	}

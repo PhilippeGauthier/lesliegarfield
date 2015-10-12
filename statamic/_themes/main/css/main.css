@@ -1609,7 +1609,7 @@ a:hover, a:focus {
   background-color: #F7F7F7; }
 
 .bg-seafoam {
-  background-color: #F4FBF9; }
+  background-color: #E9F7F3; }
 
 .bg-dark-seafoam {
   background-color: #e4f4f1; }
@@ -1685,7 +1685,8 @@ h1, h2, h3, h4 {
 
 h1 {
   font-family: "Copernicus-BookItalic";
-  font-size: 70px; }
+  font-size: 70px;
+  font-weight: 100; }
 
 h2 {
   font-family: "Copernicus-BookItalic";
@@ -1700,7 +1701,8 @@ h3 {
 h4 {
   font-family: Arial, "Lucida Grande", sans-serif;
   font-size: 12px;
-  line-height: 14.4px; }
+  line-height: 14.4px;
+  font-weight: 700; }
 
 p {
   font-family: "Copernicus-Medium";
@@ -3044,7 +3046,7 @@ footer .footer-divider .social a i {
 
 .property-info .property-header h2 {
   color: #25282A;
-  margin: 0 0 5px 0;
+  margin: 0 0 10px 0;
   box-sizing: border-box;
   width: 77.77778%;
   float: left;
@@ -3167,7 +3169,7 @@ footer .footer-divider .social a i {
 .property-agents span {
   font-family: "Copernicus-MediumItalic";
   font-size: 18px;
-  line-height: 27.9px;
+  line-height: 23.94px;
   margin-top: 0;
   display: block;
   margin-bottom: 10px; }
@@ -3296,6 +3298,7 @@ footer .footer-divider .social a i {
   font-family: "Copernicus-Medium";
   font-size: 12px;
   line-height: 14.4px;
+  font-weight: 700;
   color: #b3b3b3; }
 
 .summary .read-more-expander {
@@ -3321,9 +3324,10 @@ footer .footer-divider .social a i {
   margin-right: auto; }
 
 .agent-individual aside .agent-name {
-  font-family: "Copernicus-Medium";
+  font-family: "Copernicus-Bold";
   font-size: 22px;
-  line-height: 33px; }
+  line-height: 33px;
+  margin-top: 10px; }
 
 .agent-individual aside svg {
   height: 25px;
@@ -3373,9 +3377,7 @@ footer .footer-divider .social a i {
   padding-left: 1.11111%;
   padding-right: 1.11111%; }
 
-.agent-individual main h1 {
-  font-size: 47px;
-  margin-top: 0;
+.agent-individual main h2 {
   margin-bottom: 60px; }
 
 .agent-individual main p:first-of-type, .agent-individual main span:first-of-type {
@@ -3391,10 +3393,14 @@ footer .footer-divider .social a i {
 .agent-individual main .green-specs {
   margin-bottom: 60px; }
 
-.agent-individual main .green-specs h4 {
+.agent-individual main .green-specs h3 {
   padding-bottom: 20px;
   border-bottom: 1px solid #009B77;
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  font-size: 16px;
+  font-family: Arial, "Lucida Grande", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase; }
 
 .agent-individual main .green-specs .press:before, .agent-individual main .green-specs .press:after {
   content: "";
@@ -3545,7 +3551,7 @@ footer .footer-divider .social a i {
   margin: 0;
   font-family: Arial, "Lucida Grande", sans-serif;
   font-size: 18px;
-  line-height: 27.9px; }
+  line-height: 23.94px; }
 
 .green-specs li {
   display: block; }
@@ -3851,6 +3857,9 @@ footer .footer-divider .social a i {
   background-color: #25282A;
   margin: 30px auto; }
 
+.company.beliefs p, .company.beliefs span, .company.why p, .company.why span {
+  text-align: center; }
+
 .company .beliefs p {
   font-family: Arial, "Lucida Grande", sans-serif;
   font-size: 23px;
@@ -3910,11 +3919,11 @@ footer .footer-divider .social a i {
   clear: both; }
 
 .blog .blog-header {
-  color: #999999;
+  color: gray;
   font-family: "Copernicus-Medium";
-  font-size: 18px;
-  line-height: 27.9px;
-  padding-bottom: 1.5em;
+  font-size: 16px;
+  line-height: 26px;
+  padding-bottom: .75em;
   border-bottom: 1px solid #CCCCCC;
   margin-bottom: 1.5em; }
 
@@ -4072,9 +4081,8 @@ footer .footer-divider .social a i {
 .blog.blog-entry .blog-left .main-image {
   margin: 30px 0; }
 
-.blog.blog-entry .blog-left .blog-left {
-  border-bottom: 1px solid #CCCCCC;
-  padding-bottom: 30px; }
+.blog.blog-entry .blog-left h2 {
+  margin-bottom: 10px; }
 
 .blog.blog-entry .blog-left p:first-of-type::first-letter {
   float: left;
@@ -4406,13 +4414,14 @@ footer .footer-divider .social a i {
 .landing-sub-nav h4, .landing-sub-nav .title {
   font-family: "Copernicus-Bold";
   font-size: 18px;
-  line-height: 27.9px;
+  line-height: 23.94px;
   margin: 0; }
 
 .landing-sub-nav .sub-title {
   font-family: Arial, "Lucida Grande", sans-serif;
   font-size: 12px;
   line-height: 14.4px;
+  font-weight: 700;
   font-weight: 700; }
 
 .landing-sub-nav p {
@@ -4559,7 +4568,7 @@ footer .footer-divider .social a i {
 .property_box .property_tile_info .prop-title {
   font-family: "Copernicus-MediumItalic";
   font-size: 18px;
-  line-height: 27.9px; }
+  line-height: 23.94px; }
 
 .property_box .property_tile_info .prop-price, .property_box .property_tile_info .bottom-info, .property_box .property_tile_info .prop-details, .property_box .property_tile_info .prop-location {
   font-family: "Copernicus-Medium";
@@ -4675,6 +4684,7 @@ footer .footer-divider .social a i {
   font-family: "Copernicus-Medium";
   font-size: 12px;
   line-height: 14.4px;
+  font-weight: 700;
   margin-bottom: 1em; }
 
 .agents a:hover, .agents span:hover {
@@ -4874,10 +4884,9 @@ footer .footer-divider .social a i {
 .person, .description {
   font-size: 14px;
   line-height: 20px;
-  text-transform: uppercase; }
-
-.description {
-  font-weight: 100; }
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #7a7a7a; }
 
 .quote {
   margin: auto;
@@ -4942,7 +4951,7 @@ footer .footer-divider .social a i {
   line-height: 44.2px; }
 
 .services h3 {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   text-align: left; }
 
 .service-list span {
@@ -4982,9 +4991,6 @@ footer .footer-divider .social a i {
   margin: 20px 0; }
 
 .costs p {
-  font-family: "Copernicus-Medium";
-  line-height: 30px;
-  font-size: 19px;
   margin: 0; }
 
 .costs ul {
@@ -4993,7 +4999,10 @@ footer .footer-divider .social a i {
 
 .costs ul li {
   display: list-item;
-  margin-left: 25px; }
+  margin-left: 25px;
+  font-family: "Copernicus-Medium";
+  font-size: 16px;
+  line-height: 26px; }
 
 .costs h2:first-of-type {
   margin-top: 0; }
@@ -5056,11 +5065,9 @@ section.faq {
   margin-bottom: 60px;
   border-bottom: none; }
 
-.featured .featured-title {
-  font-family: "Copernicus-Bold";
-  font-size: 18px;
-  line-height: 27.9px;
-  color: #009B77; }
+.featured .blog-header {
+  color: #009B77;
+  border-bottom: none; }
 
 .featured .featured-image {
   box-sizing: border-box;
@@ -5069,7 +5076,10 @@ section.faq {
   height: 400px; }
 
 .featured h3 {
-  margin-bottom: .5em; }
+  margin-bottom: .5em;
+  font-family: "Copernicus-MediumItalic";
+  font-size: 34px;
+  line-height: 44.2px; }
 
 .post-details {
   box-sizing: border-box;

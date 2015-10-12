@@ -28,6 +28,11 @@
 		background-color: $dark-gray;
 		margin: 30px auto;
 	}
+	&.beliefs, &.why {
+		p, span {
+			text-align: center;
+		}
+	}
 	.beliefs {
 		p {
 			font-family: $bFont;

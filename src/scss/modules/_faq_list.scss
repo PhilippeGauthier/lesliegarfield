@@ -23,9 +23,6 @@
 
 .costs {
 	p {
-		font-family: $hFontM;
-		line-height: 30px;
-		font-size: 19px;
 		margin: 0;
 	}
 	ul {
@@ -34,6 +31,7 @@
 		li {
 			display: list-item;
 			margin-left: 25px;
+			@include hbase($hFontM);
 		}
 	}
 }

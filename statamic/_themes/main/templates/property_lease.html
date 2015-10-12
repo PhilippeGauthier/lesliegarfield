@@ -10,10 +10,10 @@
 						<img src="{{ transform src="{{ image }}" width="300" }}" class="img-circle" />
 					</a>
 					<div class="agent-details">
-						<a href="{{ url }}"><h3>{{ title }}</h3></a>
+						<a href="{{ url }}"><span>{{ title }}</span></a>
 						<ul>
-							<li>{{ theme:partial src="svg/phone" }} <span>{{ phone }}</span></li>
-							<li>{{ theme:partial src="svg/mail" }} <span>{{ email|link }}</span></li>
+							<li>{{ theme:partial src="svg/phone" }} {{ phone }}</li>
+							<li>{{ theme:partial src="svg/mail" }} {{ email|link }}</li>
 						</ul>
 					</div>
 				</div>
@@ -42,7 +42,7 @@
 			<div class="property-info">
 
 				<div class="property-header">
-					<h2>{{ title }}</h2>
+					<h2>{{if apartment }}, {{ apartment }}{{ endif }}</h2>
 
 					<div class="social">
 						<a href="">
@@ -84,7 +84,7 @@
 						{{ if openhouse }}
 						{{ openhouse_grid }}
 						{{ if date|not_empty }}
-						<span class="red">Open House: {{date format="D, m-j" }}, {{startTime}} - {{ endTime }}</span>
+						<span class="red">Open House: {{date format="D, m/j" }}, {{startTime}} - {{ endTime }}</span>
 						{{ else }}
 						<span class="red">Open House: Enquire for Details</span>
 						{{ endif }}
@@ -106,7 +106,10 @@
 
 				<div class="green-specs">
 					<div class="specs">
-						<span>{{ theme:partial src="svg/glasses" }}SPECIFICATIONS</span>
+					<div class="title">
+						{{ theme:partial src="svg/glasses" }}
+						<span>SPECIFICATIONS</span>
+					</div>
 						<ul>
 							{{ if price|not_empty }}
 							<li>Lease Price</li>
@@ -169,6 +172,7 @@
 							{{ /fees}}
 							{{ endif }}
 						</ul>
+					</div>
 						<ul>
 							{{ if price|not_empty }}
 							<li>${{ price|format_number }}/month</li>
@@ -233,11 +237,18 @@
 						</ul>
 					</div>
 					<div class="location_features">
-						<span>{{ theme:partial src="svg/maps" }}LOCATION</span>
+						<div class="title">
+							{{ theme:partial src="svg/maps" }}
+							<span>LOCATION</span>
+						</div>
 						<ul>
 							<li>{{ location_granular }}</li>
 						</ul>
-						<span>{{ theme:partial src="svg/stars" }}KEY FEATURES</span>
+						<div class="title">
+							{{ theme:partial src="svg/stars" }}
+							<span>KEY FEATURES</span>
+						</div>
+						
 						<ul>
 
 							{{ if amenities }}
