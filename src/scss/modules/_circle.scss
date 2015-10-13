@@ -17,7 +17,7 @@
 		svg {
 			@include svg-size($size);
 			* {
-				fill: $base-font-color;
+				// fill: $base-font-color;
 			}
 		}
 	}

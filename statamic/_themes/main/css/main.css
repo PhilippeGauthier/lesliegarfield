@@ -2799,6 +2799,9 @@ footer .fa-inverse {
   border: 1px solid #999999;
   border-radius: 50%; }
 
+footer .beauchamp svg {
+  width: 200px; }
+
 footer .footer-divider {
   border-top: 1px solid #666666;
   padding-top: 10px;
@@ -4463,9 +4466,6 @@ footer .footer-divider .social a i {
 .circle-leader .circle svg {
   height: 64px;
   width: 64px; }
-
-.circle-leader .circle svg * {
-  fill: #404041; }
 
 .tile-container {
   padding-top: 60px; }
