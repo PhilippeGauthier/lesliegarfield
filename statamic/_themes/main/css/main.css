@@ -2799,35 +2799,20 @@ footer .fa-inverse {
   border: 1px solid #999999;
   border-radius: 50%; }
 
+footer .beauchamp {
+  text-align: right; }
+
 footer .beauchamp svg {
   width: 255px; }
 
 footer .footer-divider {
-  border-top: 1px solid #666666;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  border-top: 1px solid #666666; }
 
-footer .footer-divider .container {
-  padding: 0; }
+footer .social {
+  text-align: right;
+  margin-top: 0; }
 
-footer .footer-divider p {
-  font-weight: 300;
-  box-sizing: border-box;
-  width: 50%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-  font-family: Arial, "Lucida Grande", sans-serif; }
-
-footer .footer-divider .social {
-  box-sizing: border-box;
-  width: 50%;
-  float: right;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-  text-align: right; }
-
-footer .footer-divider .social a i {
+footer .social a i {
   font-size: 24px; }
 
 #map-canvas {
@@ -3299,6 +3284,9 @@ footer .footer-divider .social a i {
   line-height: 14.4px;
   font-weight: 700;
   color: #b3b3b3; }
+
+.summary .legal {
+  margin: 45px 0; }
 
 .summary .read-more-expander {
   margin-top: 10px; }
