@@ -2806,7 +2806,8 @@ footer .beauchamp {
   margin-top: 10px; }
 
 footer .beauchamp svg {
-  width: 255px; }
+  width: 255px;
+  z-index: 11; }
 
 footer .footer-divider {
   border-top: 1px solid #666666; }
