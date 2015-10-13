@@ -1,7 +1,10 @@
-<section class="leading agents agents-background">
+	<section class="hero leading dark agents-background" {{ if hero_image }} style="background-image: url( {{ path src="{{ hero_image }}" }} );" {{ endif }}>
+		<h1>{{ header }}</h1>
+		<h3>{{ sub_header }}</h3>
+	</section>	
+
+<section class="agents agents-background">
 	<div class="container centered">
-		<h1>Our Team</h1>
-		<p>In-depth real estate knowledge. Neighborhood focus &amp; expertise. A clear commitment to your goals. An entire company as your team. We are Garfield.</p>
 		<div class="grid-constrained">
 			{{ entries:listing folder="agents/garfield" }}
 			<div class="grid-3-constrained-padding">

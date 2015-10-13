@@ -82,10 +82,15 @@ a {
 }
 .dark_gray {
   background-color: $dark-gray;
-  a,p,span,h1,h2,h3,h4, .fa-inverse {
+  a,p,span,h1,h2,h3,h4,div, .fa-inverse {
     color: $light-font-color;
+  }
+  a {
     &:hover {
-      color: $light-font-color;
+      color: white;
+      * {
+        color: white;
+      }
     }
   }
 }

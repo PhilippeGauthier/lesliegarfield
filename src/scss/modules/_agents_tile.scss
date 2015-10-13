@@ -1,6 +1,7 @@
 
 
 .agents {
+	padding-top: 0;
 	h1, p {
 		@include squish(1 of 8);
 	}

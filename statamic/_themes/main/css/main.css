@@ -1576,7 +1576,8 @@ main {
 html, body, a, span, p {
   color: #404041;
   font-size: 16px;
-  font-family: Arial, "Lucida Grande", sans-serif; }
+  font-family: Arial, "Lucida Grande", sans-serif;
+  line-height: 26px; }
 
 ul {
   -webkit-margin-before: 0;
@@ -1635,11 +1636,14 @@ a:hover, a:focus {
 .dark_gray {
   background-color: #25282A; }
 
-.dark_gray a, .dark_gray p, .dark_gray span, .dark_gray h1, .dark_gray h2, .dark_gray h3, .dark_gray h4, .dark_gray .fa-inverse {
+.dark_gray a, .dark_gray p, .dark_gray span, .dark_gray h1, .dark_gray h2, .dark_gray h3, .dark_gray h4, .dark_gray div, .dark_gray .fa-inverse {
   color: #999999; }
 
-.dark_gray a:hover, .dark_gray p:hover, .dark_gray span:hover, .dark_gray h1:hover, .dark_gray h2:hover, .dark_gray h3:hover, .dark_gray h4:hover, .dark_gray .fa-inverse:hover {
-  color: #999999; }
+.dark_gray a:hover {
+  color: white; }
+
+.dark_gray a:hover * {
+  color: white; }
 
 .preview-image {
   background-size: cover; }
@@ -1686,6 +1690,7 @@ h1, h2, h3, h4 {
 h1 {
   font-family: "Copernicus-BookItalic";
   font-size: 70px;
+  line-height: 1.5em;
   font-weight: 100; }
 
 h2 {
@@ -2781,18 +2786,15 @@ footer .container {
   padding-top: 40px;
   padding-bottom: 40px; }
 
-footer h3, footer h4 {
+footer div, footer a {
+  font-size: 16px;
   font-family: Arial, "Lucida Grande", sans-serif;
-  margin: 0;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 300; }
+  line-height: 26px;
+  display: block;
+  margin: 0; }
 
 footer li {
   display: block; }
-
-footer h3 {
-  margin-bottom: 10px; }
 
 footer .social a {
   margin-right: 10px; }
@@ -4155,7 +4157,7 @@ footer .footer-divider .social a i {
   -ms-flex-align: center;
   align-items: center;
   text-align: center;
-  height: 600px;
+  height: 550px;
   position: relative; }
 
 .hero * {
@@ -4174,22 +4176,15 @@ footer .footer-divider .social a i {
   height: 100%;
   width: 100%; }
 
-.hero.small {
-  height: 450px; }
-
 .hero.dark h1, .hero.dark h2, .hero.dark h3, .hero.dark h4 {
   color: #25282A; }
-
-.hero h1 {
-  margin-top: 0;
-  margin-bottom: 15px; }
 
 .hero h3 {
   font-family: "Copernicus-Medium";
   font-size: 22px;
   line-height: 33px;
   box-sizing: border-box;
-  width: 25%;
+  width: 33.33333%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%;
@@ -4246,7 +4241,7 @@ footer .footer-divider .social a i {
   background-color: #25282A;
   border: 1px solid white;
   border-right: none;
-  padding: 10px 0 10px 10px;
+  padding: 14px 0 14px 10px;
   font-style: italic;
   font-size: 15px;
   color: white; }
@@ -4648,6 +4643,9 @@ footer .footer-divider .social a i {
 
 .insight-tile span {
   font-size: 12px; }
+
+.agents {
+  padding-top: 0; }
 
 .agents h1, .agents p {
   margin-left: 12.5%;

@@ -1,8 +1,9 @@
-	<section class="hero small leading" style="background-image: url( {{ path src="{{ hero_image }}" }} );">
-	<a id="individuals" class="secondary-nav-link leading"></a>
-		<h1>{{ title }}</h1>
+	<section class="hero leading" {{ if hero_image }} style="background-image: url( {{ path src="{{ hero_image }}" }} );" {{ endif }}>
+		<a id="individuals" class="secondary-nav-link leading"></a>
+		<h1>{{ header }}</h1>
+		{{ if sub_header }}<h3>{{ sub_header }}</h3>{{ endif }}
 		<div class="mask"></div>
-	</section>
+	</section>	
 	<nav id="scroll-spy-nav" class="secondary-nav">
 		<ul class="nav" role="tablist">
 			<li class="active"><a class="scroll smooth" href="#individuals" >Individuals &amp; Families</a></li>
