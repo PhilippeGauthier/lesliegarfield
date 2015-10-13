@@ -4660,13 +4660,13 @@ footer .footer-divider {
   font-weight: 700;
   margin-bottom: 1em; }
 
-.agents a:hover, .agents span:hover, .agents div:hover {
+.agents a:hover, .agents span:hover {
   color: #009B77; }
 
-.agents a:hover img, .agents span:hover img, .agents div:hover img {
+.agents a:hover img, .agents span:hover img {
   border: 2px solid #009B77; }
 
-.agents a:hover svg *, .agents span:hover svg *, .agents div:hover svg * {
+.agents a:hover svg *, .agents span:hover svg * {
   fill: #009B77; }
 
 .agents .grid-3-constrained-padding * {
