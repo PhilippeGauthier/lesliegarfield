@@ -4,7 +4,7 @@ fields:
 		destination: assets/img/
 		display: Hero Image
 		allowed: [jpeg, jpg, png]
-  header: 
+  header:
     type: text
     display: Main Tagline
   sub_header:
