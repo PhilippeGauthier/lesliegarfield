@@ -9,11 +9,7 @@
 		position: relative;
 		@include clearfix;
 	}
-		&:hover {
-			.preview-image {
-				transform: scale(1.1);
-			}
-		}
+
 }
 
 .carousel_tile_1 {
@@ -38,12 +34,16 @@
 	flex-flow: row nowrap;
 	position: relative;
 	background-color: #fff;
+	&:hover {
+		.preview-image {
+			transform: scale(1.1);
+		}
+	}
 	.image-wrap {
 		@include span(4 of 8 no-gutter);
 		position: relative;
 		overflow: hidden;
 		height: 300px;
-
 	}
 	.preview-image {
 		height: 100%;
