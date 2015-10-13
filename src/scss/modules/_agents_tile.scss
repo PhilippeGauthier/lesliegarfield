@@ -29,13 +29,14 @@
 		}
 	}
 	a:hover, span:hover {
-		img {
-			border: 2px solid $text-green;	
-		}
+
 		svg * {
 			fill: $text-green;
 		}
 		color: $text-green;
+	}
+	img:hover {
+		border: 2px solid $text-green;
 	}
 	.grid-3-constrained-padding {
 		* {
