@@ -168,6 +168,7 @@ fields:
     display: Key Features
     create: false
     options:
+      prewar: Prewar
       balcony: Balcony
       dishwasher: Dishwasher
       doorman: Doorman

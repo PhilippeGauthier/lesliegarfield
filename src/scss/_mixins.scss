@@ -57,3 +57,20 @@
 		background-color: $hover-green;
 	}
 }
+
+@mixin social($size, $color) {
+		color: $color;
+		a {
+			color: $color;
+			height: $size;
+			width: $size;
+			border: 1px solid $color;
+			&:hover {
+				color: white;
+				background-color: $color;
+			}
+		}
+		i {
+			line-height: $size;
+		}
+}

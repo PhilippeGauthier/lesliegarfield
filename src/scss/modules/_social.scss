@@ -1,19 +1,45 @@
-		.social {
-			
-			margin-top: 20px;
+	.social {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		display: inline-block;
+		a {
+			display: inline-block;
+			position: relative;
+			text-align: center;
+			border-radius: 50%;
+			transition: all .15s;
+		}
+		i {
+			@include vertical-align;
+		}
+		&.left-align {
 			a {
-				display: inline-block;
-				margin-right: 10px;
-				vertical-align: middle;
-				font-size: 12px;
-			}
-			.fa-circle {
-				color: transparent;
-				border: 1px solid $text-green;
-				border-radius: 50%;
-				height: 32px;
-			}
-			.fa-inverse {
-				color: $text-green;
+				margin-right: 5px;
 			}
 		}
+		&.right-align {
+			text-align: right;
+			a {
+				margin-left: 5px;
+			}
+		}
+		i {
+			position: relative;
+			font-size: 18px;
+		}
+		&.gray {
+			@include social(32px, $light-font-color);
+		}
+		&.light {
+			@include social(32px, $modal-text);
+		}
+		&.green {
+			@include social(32px, $text-green);
+		}
+		&.footer {
+			text-align: right;
+			@include social(32px, $footer-gray);
+			margin-top: 0;
+			margin-bottom: 0;
+		}	
+	}

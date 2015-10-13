@@ -7,6 +7,16 @@
 	<div class="container centered">
 		<div class="grid-constrained">
 			{{ entries:listing folder="agents/garfield" }}
+			{{ if first }}
+			<div class="grid-3-constrained-padding">
+				<div>
+					<img class="circle" src="{{ path src="{{ image }}" }}"></img>
+					<span class="name">{{ title }}</span>
+				</div>
+				<span class="details">{{ theme:partial src="svg/phone" }} {{ phone }}</span>
+				<div href="{{ email}}"><span class="details">{{ theme:partial src="svg/mail" }} {{ email }}</span></div>
+			</div>
+			{{ else }}
 			<div class="grid-3-constrained-padding">
 				<a href="{{ url }}">
 					<img class="circle" src="{{ path src="{{ image }}" }}"></img>
@@ -15,6 +25,7 @@
 				<span class="details">{{ theme:partial src="svg/phone" }} {{ phone }}</span>
 				<a href="{{ email}}"><span class="details">{{ theme:partial src="svg/mail" }} {{ email }}</span></a>
 			</div>
+			{{ endif }}
 			{{ /entries:listing }}
 		</div>
 

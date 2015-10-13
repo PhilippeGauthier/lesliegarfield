@@ -9,26 +9,17 @@
 			{{ title }}
 			</a>
 		{{ /relate:author }}
-			<div class="social">
-				<a href="">
-					<span class="fa-stack fa-lg">
-						<i class="fa fa-circle fa-stack-2x"></i>
-						<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-					</span>
-				</a>
-				<a href="javascript:selectPinImage()">
-					<span target="_blank" class="fa-stack fa-lg">
-						<i class="fa fa-circle fa-stack-2x"></i>
-						<i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
-					</span>
-				</a>
-				<a href="javascript:fbShare('{{ url }}', 'Fb Share', '{{ url }}', '{{ url }}', 500, 250)">
-					<span  class="fa-stack fa-lg">
-						<i class="fa fa-circle fa-stack-2x"></i>
-						<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-					</span>
-				</a>
-			</div>
+		<div class="social left green">
+			<a href="">
+				<i class="fa fa-twitter fa-lg"></i>
+			</a>
+			<a href="javascript:selectPinImage()">
+				<i class="fa fa-pinterest fa-lg"></i>
+			</a>
+			<a href="javascript:fbShare('{{ url }}', 'Fb Share', '{{ url }}', '{{ url }}', 500, 250)">
+				<i class="fa fa-facebook fa-lg"></i>
+			</a>
+		</div>
 		<div class="truncated">
 			{{ content|truncate:200 }}
 			<a class="read-more" href="{{ url }}">Read More</a>
