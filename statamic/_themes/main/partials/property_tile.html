@@ -24,6 +24,8 @@
 				&#163;{{ price|format_number }}
 				{{ elseif currency == "euro" }}
 				&#128;{{ price|format_number }}
+				{{ elseif currency == "dollar" }}
+				${{ price|format_number }}
 				{{ endif }}
 				{{ else }}
 				${{ price|format_number }}

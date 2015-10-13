@@ -20,6 +20,7 @@ fields:
     options:
        - sterling
        - euros
+       - dollars
   price:
     type: text
     default: 0
