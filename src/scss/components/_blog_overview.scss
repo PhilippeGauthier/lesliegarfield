@@ -7,7 +7,7 @@
 		position: relative;
 	}
 	.featured {
-		background-color: $dark-bg-seafoam;
+		background-color: $bg-seafoam;
 		@include span(full no-gutter);
 		@include clearfix;
 	}

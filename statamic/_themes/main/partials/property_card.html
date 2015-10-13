@@ -6,7 +6,10 @@
 {{ endif }}
 <li class="grid-item property_tile">
 	<a href="{{ url }}" class="property_box">
-		<div class='preview-image' style='background-image: url( {{ path src='{{ preview_image }}' }} );'></div>
+		<div class="image-wrap">
+			<div class='preview-image' style='background-image: url( {{ path src='{{ preview_image }}' }} );'>
+			</div>
+		</div>
 		<div class="property_tile_info">
 			<div class="top-info">
 				<span class="prop-title">{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}</span>

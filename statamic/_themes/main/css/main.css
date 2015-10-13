@@ -1612,12 +1612,6 @@ a:hover, a:focus {
 .bg-seafoam {
   background-color: #E9F7F3; }
 
-.bg-dark-seafoam {
-  background-color: #e4f4f1; }
-
-.bg-darkest-seafoam {
-  background-color: #CEEBE7; }
-
 .similar-properties-gray {
   background-color: #E5E4E4; }
 
@@ -3521,7 +3515,7 @@ footer .footer-divider .social a i {
 
 .green-specs {
   padding: 30px;
-  background-color: #E9F6F3;
+  background-color: #E9F7F3;
   box-sizing: border-box;
   width: 100%;
   float: left; }
@@ -3887,7 +3881,7 @@ footer .footer-divider .social a i {
   clear: both; }
 
 .blog .featured {
-  background-color: #e4f4f1;
+  background-color: #E9F7F3;
   box-sizing: border-box;
   width: 100%;
   float: left; }
@@ -4419,6 +4413,9 @@ footer .footer-divider .social a i {
   font-weight: 700;
   font-weight: 700; }
 
+.landing-sub-nav .sub-title:hover {
+  color: #009B77; }
+
 .landing-sub-nav p {
   font-family: "Copernicus-Medium";
   font-size: 15px;
@@ -4436,9 +4433,6 @@ footer .footer-divider .social a i {
   opacity: 1;
   max-height: 300px;
   margin-bottom: 10px; }
-
-.landing-sub-nav a:hover .sub-title {
-  color: #009B77; }
 
 .circle-leader {
   width: 100%;
@@ -4486,6 +4480,10 @@ footer .footer-divider .social a i {
   display: table;
   clear: both; }
 
+.carousel_tile:hover .preview-image, .property_tile:hover .preview-image {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1); }
+
 .carousel_tile_1 {
   margin-left: 33.33333%;
   box-sizing: border-box;
@@ -4520,11 +4518,19 @@ footer .footer-divider .social a i {
   position: relative;
   background-color: #fff; }
 
-.property_box .preview-image {
-  height: 300px;
+.property_box .image-wrap {
   box-sizing: border-box;
   width: 50%;
   float: left;
+  position: relative;
+  overflow: hidden;
+  height: 300px; }
+
+.property_box .preview-image {
+  height: 100%;
+  width: 100%;
+  transition: all 300ms ease-in-out;
+  position: absolute;
   background-color: #ECEBEC;
   background-size: cover;
   text-align: center; }
@@ -4977,9 +4983,7 @@ footer .footer-divider .social a i {
   margin-bottom: 60px; }
 
 .faq-header .container {
-  color: white;
-  font-family: "Copernicus-Medium";
-  font-size: 26px; }
+  color: white; }
 
 .faq h2 {
   font-family: "Copernicus-Medium";

@@ -42,10 +42,12 @@
 		@include hsmedium($hFontB);
 		margin: 0;
 	}
-
 	.sub-title {
 		@include hmin($bFont);
 		font-weight: 700;
+		&:hover {
+			color: $text-green;
+		}
 	}
 	p {
 		@include hsmall($hFontM);
@@ -64,9 +66,6 @@
 				opacity: 1;
 				max-height: 300px;
 				margin-bottom: 10px;
-			}
-			.sub-title {
-				color: $text-green;
 			}
 		}
 	}
