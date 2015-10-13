@@ -1,9 +1,4 @@
 fields:
-	hero_image:
-		type: file
-		destination: assets/img/
-		display: Hero Image
-		allowed: [jpeg, jpg, png]
   header:
     type: text
     display: Main Tagline
@@ -11,6 +6,11 @@ fields:
     type: textarea
     display: Sub Tagline
     height: 100
+	hero_image:
+		type: file
+		destination: assets/img/
+		display: Hero Image
+		allowed: [jpeg, jpg, png]
 	individual_subheader:
 		type: text
 		display: Individuals & Families Subheader
