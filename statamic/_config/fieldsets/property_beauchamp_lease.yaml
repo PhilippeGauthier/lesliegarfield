@@ -14,6 +14,12 @@ fields:
   apartment:
     type: text
     display: Apartment Number or Letter (optional)
+  currency:
+    type: select
+    display: Choose currency
+    options:
+       - sterling
+       - euros
   price:
     type: text
     default: 0

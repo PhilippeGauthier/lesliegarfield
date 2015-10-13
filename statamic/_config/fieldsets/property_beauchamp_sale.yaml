@@ -17,6 +17,12 @@ fields:
   country:
     type: text
     display: Country
+  currency:
+    type: select
+    display: Choose currency
+    options:
+       - sterling
+       - euros
   price:
     type: text
     default: 0
