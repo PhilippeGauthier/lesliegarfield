@@ -1,16 +1,14 @@
-	<section class="hero leading dark" style="background-image: url( {{ path src="{{ hero_image }}" }} );">
-		<h1>{{ tag_line }}</h1>
-		<h3>{{ sub_tag_line}}</h3>
-	</section>
+<section class="hero leading dark" {{ if hero_image }} style="background-image: url( {{ path src="{{ hero_image }}" }} );" {{ endif }}>
+	<h1>{{ header }}</h1>
+	{{ if sub_header }}<h3>{{ sub_header }}</h3>{{ endif }}
+</section>	
 <section class="bg-gray">
-<div class="container">
-<ul class="grid">
-	
-
-{{ entries:listing folder="neighborhoods/individual_neighborhoods" }}	
-	 {{ theme:partial src="neighborhood_tile" use_context="true" }}
-	{{ /entries:listing }}
-</ul>
-</div>
-	</section>
+	<div class="container">
+		<ul class="grid">	
+			{{ entries:listing folder="neighborhoods/individual_neighborhoods" }}	
+			{{ theme:partial src="neighborhood_tile" use_context="true" }}
+			{{ /entries:listing }}
+		</ul>
+	</div>
+</section>
 

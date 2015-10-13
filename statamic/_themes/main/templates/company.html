@@ -1,11 +1,7 @@
-<section class="company-hero leading dark">
-<div class="container">
-	<div class="company">
-		<h1>Truth Builds Trust</h1>
-		<span>At least that's how we see it</span>
-	</div>
-</div>
-</section>
+<section class="hero leading dark" {{ if hero_image }} style="background-image: url( {{ path src="{{ hero_image }}" }} );" {{ endif }}>
+	<h1>{{ header }}</h1>
+	{{ if sub_header }}<h3>{{ sub_header }}</h3>{{ endif }}
+</section>	
 <section class="bg-darkest-seafoam">
 	<div class="container">
 		<div class="company beliefs">

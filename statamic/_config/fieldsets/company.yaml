@@ -1,6 +1,13 @@
 title: Company
 
 fields:
+  header: 
+    type: text
+    display: Main Tagline
+  sub_header: 
+    type: textarea
+    display: Sub Tagline
+    height: 100 
   beliefs:
     type: textarea
     display: Beliefs
