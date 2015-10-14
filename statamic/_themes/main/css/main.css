@@ -4641,10 +4641,10 @@ footer .footer-divider {
   clear: both; }
 
 .agents img {
-  border: 3px solid #F5F5F5; }
+  border: 4px solid white; }
 
 .agents a:first-of-type {
-  display: block; }
+  display: inline-block; }
 
 .agents span {
   display: block; }
@@ -4662,14 +4662,14 @@ footer .footer-divider {
   font-weight: 700;
   margin-bottom: 1em; }
 
-.agents a:hover, .agents span:hover {
-  color: #009B77; }
+.agents a:hover img, .agents .name:hover img {
+  border: 4px solid #009B77; }
 
-.agents a:hover svg *, .agents span:hover svg * {
+.agents a:hover svg *, .agents .name:hover svg * {
   fill: #009B77; }
 
-.agents img:hover {
-  border: 3px solid #009B77; }
+.agents a:hover span, .agents .name:hover span {
+  color: #009B77; }
 
 .agents .grid-3-constrained-padding * {
   vertical-align: middle; }

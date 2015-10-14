@@ -12,10 +12,10 @@
 		@include clearfix;
 	}
 	img {
-		border: 3px solid $agents-background;
+		border: 4px solid white;
 	}
 	a:first-of-type {
-		display: block;
+		display: inline-block;
 	}
 	span {
 		display: block;
@@ -28,15 +28,16 @@
 			margin-bottom: 1em;
 		}
 	}
-	a:hover, span:hover {
-
+	a:hover, .name:hover {
+		img {
+			border: 4px solid $text-green;
+		}
 		svg * {
 			fill: $text-green;
 		}
-		color: $text-green;
-	}
-	img:hover {
-		border: 3px solid $text-green;
+		span {
+			color: $text-green;
+		}
 	}
 	.grid-3-constrained-padding {
 		* {
