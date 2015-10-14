@@ -1,11 +1,7 @@
 <div class="blog">	
 	<section class="leading">
 		<div class="container">
-
 			<div class="blog-container">
-
-				
-
 				<div class="blog-left">
 					<h2 class="blog-header">{{ taxonomy_name|title|upper }}</h2>
 					<div class="entries">
@@ -27,26 +23,24 @@
 					{{ /entries:listing }}
 				</div>
 				</div>
-				
 				{{ theme:partial src="blog_right" use_context="true" }}
+				<div class="container">
+					<div class="blog-left">
+						{{ entries:pagination folder="blog" limit="5" }}
+						{{ if next_page || previous_page }}
+						<div class="pagination clearfix">
+							{{ if next_page }}
+							<a href="{{ next_page }}" class="older"><i class="fa fa-angle-double-left"></i>Older Posts</a>
+							{{ endif }}
+							{{ if previous_page }}
+							<a href="{{ previous_page }}" class="newer">Newer Posts<i class="fa fa-angle-double-right"></i></a>
+							{{ endif }}
+						</div>
+						{{ endif }}
+						{{ /entries:pagination }}
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
-
-	<div class="container">
-		{{ entries:pagination folder="blog" limit="5" }}
-		{{ if next_page || previous_page }}
-		<div class="pagination clearfix">
-			{{ if next_page }}
-			<a href="{{ next_page }}" class="older">Older Posts</a>
-			{{ endif }}
-			{{ if previous_page }}
-			<a href="{{ previous_page }}" class="newer">Newer Posts</a>
-			{{ endif }}
-		</div>
-		{{ endif }}
-		{{ /entries:pagination }}
-	</div>
-	
-
 </div>
