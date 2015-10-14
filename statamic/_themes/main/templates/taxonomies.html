@@ -7,7 +7,7 @@
 				
 
 				<div class="blog-left">
-					<h2 class="blog-header">{{ taxonomy_name|title }}</h2>
+					<h2 class="blog-header">{{ taxonomy_name|title|upper }}</h2>
 					<div class="entries">
 					{{ entries:listing folder="blog" limit="5" taxonomy="true" }}
 						<div class="entry">
