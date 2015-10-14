@@ -24,15 +24,26 @@
   <script src="{{ theme:js }}"></script>
   <script type="text/javascript">
 
-window.onload = function(){
-  var elements = document.getElementsByClassName("price-descriptor");
-  for (var i=0; i<elements.length; i++){
-    console.log(i);
-    elements[i].innerHTML = elements[i].innerHTML.replace(/\\b([a-z])([a-z]+)?\\b/gim, "<span class='first-letter'>$1</span>$2");
+  window.onload = function(){
+    var elements = document.getElementsByClassName("price-descriptor");
+    for (var i=0; i<elements.length; i++){
+      console.log(i);
+      elements[i].innerHTML = elements[i].innerHTML.replace(/\\b([a-z])([a-z]+)?\\b/gim, "<span class='first-letter'>$1</span>$2");
+    }
   }
-}
+
 
   </script>
+<script>
+function pinIt()
+{
+  var e = document.createElement('script');
+  e.setAttribute('type','text/javascript');
+  e.setAttribute('charset','UTF-8');
+  e.setAttribute('src','https://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);
+  document.body.appendChild(e);
+}
+</script>
   <!-- endbuild -->
 </body>
 </html>
