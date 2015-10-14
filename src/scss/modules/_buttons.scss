@@ -32,6 +32,9 @@
 	.light-gray {
 		color: #cccccc;
 	}
+	.gray {
+		color: $base-font-color;
+	}
 	span {
 		font-family: $hFontM;
 		margin-left: 10px;

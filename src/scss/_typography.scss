@@ -94,6 +94,12 @@ p {
     }
 }
 
+&.large {
+    p {
+        @include hlmedium($hFontM);
+        text-align: center;
+    }
+}
 
 .section-title {
     @include bbasebold;

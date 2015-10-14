@@ -12,7 +12,7 @@
 		@include clearfix;
 	}
 	img {
-		border: 2px solid white;
+		border: 3px solid $agents-background;
 	}
 	a:first-of-type {
 		display: block;
@@ -36,7 +36,7 @@
 		color: $text-green;
 	}
 	img:hover {
-		border: 2px solid $text-green;
+		border: 3px solid $text-green;
 	}
 	.grid-3-constrained-padding {
 		* {

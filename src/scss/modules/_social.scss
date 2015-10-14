@@ -2,6 +2,10 @@
 		margin-top: 20px;
 		margin-bottom: 20px;
 		display: inline-block;
+		&.block {
+			display: block;
+			width: 100%;
+		}
 		a {
 			display: inline-block;
 			position: relative;

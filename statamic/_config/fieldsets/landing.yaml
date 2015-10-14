@@ -23,25 +23,3 @@ fields:
     required: false
     default:
     type: redactor
-
-  insights:
-    type: grid
-    display: News & Insights Liks
-    starting_rows: 2
-    max_rows: 2
-    fields:
-      headline:
-        type: text
-        display: headline
-        width: 20%
-      info:
-        type: textarea
-        display: Sub headline
-        width: 40%
-      link_title:
-        type: text
-        display: Link Verbage
-        width: 20%
-      link:
-        type: text
-        display: URL

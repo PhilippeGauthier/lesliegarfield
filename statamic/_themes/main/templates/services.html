@@ -1,18 +1,18 @@
 <section class="hero leading" {{ if hero_image }} style="background-image: url( {{ path src="{{ hero_image }}" }} );" {{ endif }}>
-	<a id="individuals" class="secondary-nav-link leading"></a>
 	<h1>{{ header }}</h1>
 	{{ if sub_header }}<h3>{{ sub_header }}</h3>{{ endif }}
 	<div class="mask"></div>
 </section>	
 <nav id="scroll-spy-nav" class="secondary-nav">
 	<ul class="nav" role="tablist">
-		<li class="active"><a class="scroll smooth" href="#individuals" >Individuals &amp; Families</a></li>
+		<li><a class="scroll smooth" href="#individuals" >Individuals &amp; Families</a></li>
 		<li><a class="scroll smooth" href="#trust">Trust &amp; Estates</a></li>
 		<li><a class="scroll smooth" href="#institutions">Institutions</a></li>
 		<li><a class="scroll smooth" href="#buyers">Buyers</a></li>
 	</ul>
 </nav>
 <section class="services">
+	<a id="individuals" class="secondary-nav-link"></a>
 	<div class="container">
 		<main>
 			<h3>Individuals &amp; Familes</h3>
@@ -35,7 +35,13 @@
 						<div class="quote">
 							{{ if main }}
 							<div class="quote-content">
-								&ldquo;{{ main }}&rdquo;
+								<span class="quote-symbol left">
+								{{ theme:partial src="svg/quote_up" }}
+								</span>
+								{{ main }}
+								<span class="quote-symbol right">
+								{{ theme:partial src="svg/quote_down" }}
+								</span>
 							</div>
 							{{ endif }}
 							{{ if logo }}
@@ -83,7 +89,13 @@
 						<div class="quote">
 							{{ if main }}
 							<div class="quote-content">
-								<span class="quote-symbol left">{{ theme:partial src="svg/quote_up" }}</span>{{ main }}<span class="quote-symbol right">{{ theme:partial src="svg/quote_down" }}</span>
+								<span class="quote-symbol left">
+								{{ theme:partial src="svg/quote_up" }}
+								</span>
+								{{ main }}
+								<span class="quote-symbol right">
+								{{ theme:partial src="svg/quote_down" }}
+								</span>
 							</div>
 							{{ endif }}
 							{{ if logo }}

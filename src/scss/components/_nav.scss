@@ -28,11 +28,6 @@ header {
 	}
 }
 
-.block {
-	width: 100%;
-	height: 78px;
-}
-
 nav {
 	width: 100%;
 	height: auto;
@@ -137,9 +132,6 @@ nav {
 	top: -202px;
 	margin-top: 0 !important;
 	border: none !important;
-	&.leading {
-		top: -243px;
-	}
 	visibility: hidden!important;
 }
 

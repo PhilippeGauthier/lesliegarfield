@@ -1,11 +1,11 @@
 	<section class="hero small leading" style="background-image: url( {{ path src="{{ hero_image }}" }} );">
-		<a id="description" class="secondary-nav-link leading"></a>
+		
 		<h1>{{ title }}</h1>
 		<div class="mask"></div>
 	</section>
 	<nav id="scroll-spy-nav" class="secondary-nav">
 		<ul class="nav" role="tablist">
-			<li class="active"><a class="scroll smooth" href="#description" >Description</a></li>
+			<li><a class="scroll smooth" href="#description" >Description</a></li>
 			<li><a class="scroll smooth" href="#location">Location</a></li>
 			<li><a class="scroll smooth" href="#numbers">By the Numbers</a></li>
 			<li><a class="scroll smooth" href="#other_properties">Properties</a></li>
@@ -13,7 +13,7 @@
 
 	</nav>
 	<section>
-
+		<a id="description" class="secondary-nav-link"></a>
 		<div class="container large-body">
 			<div class="section-title">DESCRIPTION</div>
 			{{ description }}

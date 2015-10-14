@@ -69,6 +69,10 @@
 		margin-top: $bPadding;
 		margin-bottom: $bPadding;
 		display: block;
+		span {
+			@include bbase;
+			font-weight: 700;
+		}
 		&:hover span {
 			color: $text-green;
 		}
