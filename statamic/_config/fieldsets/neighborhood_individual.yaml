@@ -27,6 +27,10 @@ fields:
         display: Longitude (should be similar to -73.969231)
         type: text
         width: 50%
+  description:
+    type: textarea
+    display: Description
+    height: 200
   left:
     type: text
     display: 'Number for left column. Do not include percentage symbol. Text below will read: RISE IN PROPERTY PRICES IN THE LAST FIVE YEARS'
@@ -45,9 +49,5 @@ fields:
       simple_graphic:
         type: text
         display: 'Townhouses Sold In The last Year (Number only, no symbols or commas)'
-
-  description:
-    type: redactor
-    display: Description
   content:
     hide: true

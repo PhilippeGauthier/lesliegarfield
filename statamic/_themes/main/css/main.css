@@ -1715,7 +1715,7 @@ p {
   line-height: 26px; }
 
 p.no_results {
-  font-family: "Copernicus-Medium";
+  font-family: "Copernicus-MediumItalic";
   font-size: 22px;
   line-height: 33px;
   margin-top: 60px;
@@ -1733,6 +1733,12 @@ p.light {
   font-family: Arial, "Lucida Grande", sans-serif;
   font-weight: 100;
   color: #868f95;
+  text-align: center; }
+
+p.intro-section {
+  font-family: "Copernicus-Medium";
+  font-size: 22px;
+  line-height: 33px;
   text-align: center; }
 
 .large p {
@@ -3801,8 +3807,6 @@ footer .footer-divider {
   padding-right: 0.83333%; }
 
 .company p {
-  font-family: "Copernicus-Medium";
-  line-height: 28px;
   text-align: left; }
 
 .company span {

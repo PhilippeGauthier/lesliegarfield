@@ -11,8 +11,6 @@
 	@include pre(2.75 of 12);
 	@include span(6.5 of 12);
 	p {
-		font-family: $hFontM;
-		line-height: 28px;
 		text-align: left
 	}
 	span {

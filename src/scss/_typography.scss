@@ -78,7 +78,7 @@ p {
 	font-size: 16px;
 	line-height: 26px;
     &.no_results {
-        @include hlmedium($hFontM);
+        @include hlmedium($hFontMI);
         margin-top: $bPadding;
         @include pre(2 of 12);
         @include span (8 of 12);
@@ -90,6 +90,10 @@ p {
         font-family: $bFont;
         font-weight: 100;
         color: lighten($dark-gray,40%);
+        text-align: center;
+    }
+    &.intro-section {
+        @include hlmedium($hFontM);
         text-align: center;
     }
 }
