@@ -81,7 +81,7 @@
 				@include clearfix;
 			}
 			.press-item {
-				@include flex-vert;
+				display: block;
 				margin: 0;
 				padding: 0 15px;
 				&:hover {
