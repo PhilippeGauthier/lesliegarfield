@@ -2,6 +2,21 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="description" content="Leslie J. Garfield - NYC's premier broker for townhouses and small buildings.">
+  <meta name="keywords" content="New York Real Estate, New York Townhouses">
+  <meta name="geo.region" content="US-NY" />
+  <meta name="geo.placename" content="New York City" />
+  <meta name="geo.position" content="41.884013;-74.320194" />
+  <meta name="ICBM" content="40.7628871, -73.9714047" />
+  <meta property="og:latitude" content="40.7628871" />
+  <meta property="og:longitude" content="-73.9714047" />
+  <meta property="og:street-address" content="505 Park Ave #303" />
+  <meta property="og:locality" content="New York" />
+  <meta property="og:region" content="NY" />
+  <meta property="og:postal-code" content="10022" />
+  <meta property="og:country-name" content="USA" />
   <title>{{ title }} - {{ _site_name }}</title>
   <!-- build:css -->
   <link rel="stylesheet" href="{{ theme:css }}" />
@@ -45,27 +60,7 @@ function pinIt()
 }
 </script>
 <script type="text/javascript">
-window.fbAsyncInit = function(){
-FB.init({
-    appId: '1637077719911107', status: true, cookie: true, xfbml: true }); 
-};
-(function(d, debug){var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-    if(d.getElementById(id)) {return;}
-    js = d.createElement('script'); js.id = id; 
-    js.async = true;js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
-    ref.parentNode.insertBefore(js, ref);}(document, /*debug*/ false));
-function postToFeed(title, desc, url, image){
-var obj = {method: 'feed',link: url, picture: 'http://104.131.23.73'+image,name: title,description: desc};
-function callback(response){}
-FB.ui(obj, callback);
-}
 
-$('.fb').click(function(){
-elem = $(this);
-postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('image'));
-
-return false;
-});
 </script>
   <!-- endbuild -->
 </body>

@@ -35,23 +35,13 @@ fields:
     type: suggest
     create: true
     max_items: 1
+    display: Neighborhood
     taxonomy:
       type: property_location
       folder: properties/international/*
-  lat_long:
-    display: Property Coordinates
-    type: grid
-    starting_rows: 1
-    max_rows: 1
-    fields:
-      latitude:
-        display: Latitude (should be similar to 40.7590615)
-        type: text
-        width: 50%
-      longitude:
-        display: Longitude (should be similar to -73.969231)
-        type: text
-        width: 50%
+  location:
+    type: location
+    display: Location
   location_granular:
     type: text
     display: More detailed location ie Between Fifth and Madison

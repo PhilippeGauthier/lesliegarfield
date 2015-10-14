@@ -118,15 +118,6 @@ function currentRemove () {
 	$('.current').removeClass('muted');
 }
 
-
-// function activeAdd () {
-// 	$('.active').addClass('muted');
-// }
-
-// function activeRemove () {
-// 	$('.active').removeClass('muted');
-// }
-
 $('#primary-nav a').hover( currentAdd, currentRemove );
 
 $(document).ready(function() {
@@ -161,38 +152,61 @@ $(function(){
 });
 
 // First Letter Hack for Neighborhood Pricing Titles
-    $(document).ready(function()
+$(document).ready(function()
+{
+    // For each of the eachword class
+    $(".price-descriptor").each(function()
     {
-        // For each of the eachword class
-        $(".price-descriptor").each(function()
+        // Get the string (html) and split it by " " (like PHP's explode)
+        var self         = $(this);
+        var theText      = self.html();
+        var theTextArray = theText.split(" ");
+        
+        // Cycle them
+        for( var i=0; i<theTextArray.length; i++ )
         {
-            // Get the string (html) and split it by " " (like PHP's explode)
-            var self         = $(this);
-            var theText      = self.html();
-            var theTextArray = theText.split(" ");
-            
-            // Cycle them
-            for( var i=0; i<theTextArray.length; i++ )
+            // Get this particular word and split it into individual letters
+            var thisWord      = theTextArray[i];
+            var thisWordArray = thisWord.split("");
+
+            // Wrap the first letter
+            if( thisWordArray[0] != "&" )
             {
-                // Get this particular word and split it into individual letters
-                var thisWord      = theTextArray[i];
-                var thisWordArray = thisWord.split("");
-
-                // Wrap the first letter
-                if( thisWordArray[0] != "&" )
-                {
-                    thisWordArray[0]  = "<span class='first-letter'>"+thisWordArray[0]+"</span>";
-                }
-
-                // Stitch the letters back up
-                theTextArray[i] = thisWordArray.join("");
+                thisWordArray[0]  = "<span class='first-letter'>"+thisWordArray[0]+"</span>";
             }
 
-            // Join the original string back up
-            var result = theTextArray.join(" ");
+            // Stitch the letters back up
+            theTextArray[i] = thisWordArray.join("");
+        }
 
-            self.html( result );
-        });
+        // Join the original string back up
+        var result = theTextArray.join(" ");
 
+        self.html( result );
     });
+
+});
+
+// fb share init
+window.fbAsyncInit = function(){
+FB.init({
+    appId: '1637077719911107', status: true, cookie: true, xfbml: true }); 
+};
+(function(d, debug){var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+    if(d.getElementById(id)) {return;}
+    js = d.createElement('script'); js.id = id; 
+    js.async = true;js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
+    ref.parentNode.insertBefore(js, ref);}(document, /*debug*/ false));
+function postToFeed(title, desc, url, image){
+var obj = {method: 'feed',link: url, picture: 'http://104.131.23.73'+image,name: title,description: desc};
+function callback(response){}
+FB.ui(obj, callback);
+}
+
+$('.fb').click(function(){
+elem = $(this);
+postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('image'));
+
+return false;
+});
 
