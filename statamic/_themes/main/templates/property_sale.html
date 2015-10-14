@@ -53,7 +53,11 @@
 						<a href="javascript:pinIt();">
 							<i class="fa fa-pinterest fa-lg"></i>
 						</a>
-						<a href="javascript:fbShare('{{ url }}', 'Fb Share', '{{ url }}', '{{ url }}', 500, 250)">
+						<a class="fb" 
+						data-title="{{ title }}" 
+						data-desc="Property listed at Leslie Garfield" 
+						data-image="{{ preview_image}}"
+						href="{{ _site_url }}{{ url }}">
 							<i class="fa fa-facebook fa-lg"></i>
 						</a>
 					</div>
