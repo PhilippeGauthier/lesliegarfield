@@ -3376,6 +3376,7 @@ footer .footer-divider {
 
 .agent-individual main .green-specs .press-item {
   display: block;
+  position: relative;
   margin: 0;
   padding: 0 15px; }
 
@@ -3384,7 +3385,11 @@ footer .footer-divider {
   margin: 0 auto; }
 
 .agent-individual main .green-specs .press-item img {
-  display: block; }
+  display: block;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
 
 .agent-individual main .green-specs .press-item p {
   font-size: 14px; }

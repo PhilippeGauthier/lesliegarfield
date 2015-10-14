@@ -82,6 +82,8 @@
 			}
 			.press-item {
 				display: block;
+				position: relative;
+
 				margin: 0;
 				padding: 0 15px;
 				&:hover {
@@ -93,6 +95,7 @@
 				}
 				img {
 					display: block;
+					@include vertical-align;
 				}
 				p {
 					font-size: 14px;
