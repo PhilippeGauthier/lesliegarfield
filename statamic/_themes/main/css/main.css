@@ -3380,19 +3380,22 @@ footer .footer-divider {
   margin: 0;
   padding: 0 15px; }
 
-.agent-individual main .green-specs .press-item p, .agent-individual main .green-specs .press-item img {
-  text-align: center;
-  margin: 0 auto; }
-
-.agent-individual main .green-specs .press-item img {
-  display: block;
+.agent-individual main .green-specs .press-item div {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%); }
 
+.agent-individual main .green-specs .press-item p, .agent-individual main .green-specs .press-item img {
+  text-align: center;
+  margin: 0 auto;
+  display: block; }
+
 .agent-individual main .green-specs .press-item p {
   font-size: 14px; }
+
+.agent-individual main .green-specs .press-item p {
+  margin: 10px auto; }
 
 .agent-individual main .agent-properties {
   padding: 30px;

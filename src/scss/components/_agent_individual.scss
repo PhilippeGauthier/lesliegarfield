@@ -83,22 +83,24 @@
 			.press-item {
 				display: block;
 				position: relative;
-
 				margin: 0;
 				padding: 0 15px;
+				div {
+					@include vertical-align;
+				}
 				&:hover {
 					// background-color: darken($lightest-green, 3%);
 				}
 				p, img {
 					text-align: center;
 					margin: 0 auto;
-				}
-				img {
 					display: block;
-					@include vertical-align;
 				}
 				p {
 					font-size: 14px;
+				}
+				p {
+					margin: 10px auto;
 				}
 			}
 		}
