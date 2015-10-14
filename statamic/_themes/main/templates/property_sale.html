@@ -44,7 +44,7 @@
 				<div class="property-header">
 					<h2>{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}</h2>
 					<div class="social right-align gray">
-						<a href="">
+						<a href="mailto:?subject={{ title }} - Property Found on lesliegarfield.com&body={{ url }}">
 							<i class="fa fa-envelope fa-lg"></i>
 						</a>
 						<a href="">
@@ -59,7 +59,11 @@
 					</div>
 				</div>
 				<div class="property-subheader">
+					{{ if openhouse }}
+					<div class="location split">
+					{{ else }}
 					<div class="location">
+					{{ endif }}
 						<span>{{ property_location }}</span>
 						{{ if location_granular|not_empty }}
 						<span class="divider"></span>

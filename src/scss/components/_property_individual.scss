@@ -48,7 +48,10 @@
 			color: $light-font-color;
 		}
 		.location {
-			@include span (5 of 9);
+			@include span (full);
+			&.split {
+				@include span (5 of 9);
+			}
 		}
 		.open-house {
 			@include span (last 4 of 9);
