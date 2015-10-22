@@ -155,7 +155,7 @@
 				// display: flex;
 			}
 			li {
-				@include gallery(1 of 4);
+				@include gallery(2 of 4);
 				padding: 20px 0;
 				padding-right: 5px;
 				font-family: $hFontM;
@@ -164,9 +164,16 @@
 				&:nth-child(4n+2),&:nth-child(4n+3) {
 					display: none;
 				}
+					&:nth-child(4n+4) {
+						text-align: right;
+					}
 				@include breakpoint($small) {
+					@include gallery(1 of 4);
 					&:nth-child(4n+2),&:nth-child(4n+3) {
 						display: inline-block;
+					}
+					&:nth-child(4n+4) {
+						text-align: left;
 					}
 				}
 				&.transaction-details {
