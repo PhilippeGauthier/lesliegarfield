@@ -3998,10 +3998,10 @@ footer .footer-divider {
 
 .green-specs .specs {
   box-sizing: border-box;
-  width: 50%;
+  width: 100%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  padding-left: 1.25%;
+  padding-right: 1.25%; }
 
 .green-specs .specs ul {
   box-sizing: border-box;
@@ -4012,13 +4012,29 @@ footer .footer-divider {
 
 .green-specs .location_features {
   box-sizing: border-box;
-  width: 50%;
-  float: right;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  width: 100%;
+  float: left;
+  padding-left: 1.25%;
+  padding-right: 1.25%;
+  margin-top: 20px; }
 
 .green-specs .location_features ul:first-of-type {
-  margin-bottom: 30px; }
+  margin-bottom: 20px; }
+
+@media (min-width: 768px) {
+  .green-specs .specs {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%; }
+  .green-specs .location_features {
+    box-sizing: border-box;
+    width: 50%;
+    float: right;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin-top: 0; } }
 
 .green-specs svg {
   height: 25px;

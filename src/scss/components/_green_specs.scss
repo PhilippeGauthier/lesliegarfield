@@ -26,16 +26,27 @@
 			display: block;
 		}
 		.specs {
-			@include span (6 of 12);
+			@include span (full);
 			ul {
 				@include span(50%);
-
 			}
 		}
 		.location_features {
-			@include span (last 6 of 12);
+			@include span(full);
+			margin-top: 20px;
 			ul:first-of-type {
-				margin-bottom: 30px;
+				margin-bottom: 20px;
+			}
+		}
+		@include breakpoint($small) {
+			.specs {
+				@include span (6 of 12);
+
+			}
+			.location_features {
+				@include span (last 6 of 12);
+				margin-top: 0;
+
 			}
 		}
 		svg {
