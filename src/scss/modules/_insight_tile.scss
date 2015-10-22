@@ -1,6 +1,6 @@
 .insight-tile {
 	display: block;
-	margin-top: $bPadding;
+	
 	padding: 30px;
 	color: $header-font-color;
 	* {
@@ -22,5 +22,8 @@
 	}
 	span {
 		font-size: $fontMini;
+	}
+	@include breakpoint($small) {
+		margin-top: $bPadding;
 	}
 }

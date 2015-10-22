@@ -1,13 +1,10 @@
-<section class="hero leading dark" {{ if hero_image }} style="background-image: url( {{ path src="{{ hero_image }}" }} );" {{ endif }}>
-	<h1>{{ header }}</h1>
-	{{ if sub_header }}<h3>{{ sub_header }}</h3>{{ endif }}
-</section>	
+{{ theme:partial src="hero_dark" }}	
 <section class="bg-seafoam">
 	<div class="container reports">
 		<div class="section-title">OUR LATEST REPORTS</div>
 		<ul class="grid-constrained report-header">
 			{{ reports limit="6"}}
-				<li class="grid-3-constrained">
+				<li class="grid-3-constrained report">
 					<a target="_blank" href="{{ report }}" class="report-tile">
 						<h4>{{ report_date }}</h4>
 						<h3>{{ report_title }}</h3>
@@ -24,7 +21,7 @@
 
 			<ul style="display: none" class="grid-constrained">
 				{{ reports offset="6" }}
-					<li class="grid-3-constrained">
+					<li class="grid-3-constrained report">
 						<a target="_blank" href="{{ report }}" class="report-tile">
 							<h4>{{ report_date }}</h4>
 							<h3>{{ report_title }}</h3>

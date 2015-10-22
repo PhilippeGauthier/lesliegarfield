@@ -2,8 +2,17 @@
 .reports {
 	.grid-constrained {
 		margin-top: 60px;
-		@include pre(1.5);
-		@include post(1.5);
+		@include pre(1);
+		@include post(1);	
+		@include breakpoint($tiny) {
+			@include pre(0);
+			@include post(0);	
+		}
+		@include breakpoint($small) {
+			@include pre(1.5);
+			@include post(1.5);			
+		}
+
 	}
 	.grid-3-constrained:nth-child(6n+1) {
 		.report-tile {
@@ -89,6 +98,7 @@
 		h3 {
 			font-family: $hFontM;
 			font-size: 16px;
+			line-height: 24px;
 		}
 		form {
 			@include pre(2 of 12);
@@ -104,12 +114,14 @@
 		.form-group {
 			margin-bottom: gutter(6);
 		}
-		.full-span {
+		.full-span, .half {
 			@include span(2 of 2 .025);
 		}
-		.half {
-			@include span (1 of 2 .025);	
-			@include clearfix;
+		@include breakpoint($small) {
+			.half {
+				@include span (1 of 2 .025);	
+				@include clearfix;
+			}
 		}
 		button {
 			@include btn-garfield(10px, 100px,14px);
@@ -133,13 +145,9 @@
 			color: white !important;
 		}
 	}
-
-
 	h3 {
-		font-family: $hFontMI;
-		font-size: 22px;
-		line-height: 29px;
-		margin-bottom: $bPadding;
+		@include hlmedium($hFontMI);
+		height: 200px;
 		margin-top: 10px;
 	}
 	h4 {

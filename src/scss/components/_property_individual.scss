@@ -33,8 +33,10 @@
 		margin: 0 10px 0 5px;
 	}
 	.property-header {
-		@include flex-hor;
-		justify-content: space-between;
+		@include breakpoint($medium) {
+			@include flex-hor;
+			justify-content: space-between;			
+		}
 		h2 {
 			color: $header-font-color;
 		}
@@ -96,12 +98,15 @@
 	background-color: $bg-light-gray;
 }
 
-.agent {
-	@include span(full no-gutter);
+.agent-container {
+	margin-right: 30px;
 }
 
 .property-agents {
-	margin-top: 145px;
+	
+	@include breakpoint($medium) {
+		margin-top: 145px;
+	}
 	color: $header-font-color;
 	a {
 		display: block;
@@ -113,12 +118,38 @@
 		margin-bottom: 10px;
 	}
 	.agent-block {
-		margin-bottom: 20px;
-		@include flex-hor;
-		@include span (100%);
+		padding-bottom: 20px;
+		padding-top: 20px;
+		border-bottom: 1px dotted $light-font-color;
+		&:first-of-type {
+			padding-top: 0;
+		}
+		&:last-of-type {
+		 border-bottom: none;
+		}
+		@include clearfix;
+		@include breakpoint($small) {		
+			@include span(1 of 2 no-gutter);
+		}
+		
+		@include breakpoint($medium) {
+			
+			@include flex-vert;
+			align-items: flex-start;
+			@include span(2 of 2 no-gutter);
+		}
+		@include breakpoint($large) {
+			border-bottom: none;
+			@include flex-hor;
+		}
+
 	}
 	.agent-image {
-		@include span (1 of 3 no-gutter);
+		@include span(1 of 3 no-gutter clear);
+		@include breakpoint($large) {
+			@include span (1 of 3 no-gutter);
+		}
+		
 		padding-right: 10px;
 	}
 	img {
@@ -129,7 +160,10 @@
 		}
 	}
 	.agent-details {
-		@include span (last 2 of 3 no-gutter);
+		@include breakpoint($large) {
+			@include span (last 2 of 3 no-gutter);
+		}
+		
 	}
 	li:hover {
 		color: $text-green;

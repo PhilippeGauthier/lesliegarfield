@@ -1,42 +1,68 @@
 .landing-sub-nav {
 	padding: 45px 0;
 	@include clearfix;
-	.grid-3 {
-		position: relative;
-		@include clearfix;
-		padding-top: 25%;
-		width: 25%;
-		&:focus {
-			outline: none;
-		}
-	}
 	overflow: hidden;
-	figure {
-		position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: 0;
-    padding: 20px;
-    display: block;
-    width: 100%;
-	}
-	p, span {
-		opacity: 0;
-		overflow: hidden;
-		margin: 0;
+	.grid-3 {
+		padding-bottom: 30px;
 	}
 	svg {
-		transition: all 500ms ease;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: $bPadding;
-		margin-bottom: 20px;
 		* {
 			fill: $text-green;
 		}
+		height: 80px;
+		width: 80px;
+		margin-bottom: 10px;
 	}
-	* {
-		color: $dark-gray;
+	@include breakpoint($medium) {
+		.grid-3 {
+			position: relative;
+			@include clearfix;
+			padding-top: 25%;
+			padding-bottom: 0;
+			&:focus {
+				outline: none;
+			}
+		}
+		figure {
+			position: absolute;
+	    top: 50%;
+	    transform: translateY(-50%);
+	    margin: 0;
+	    padding: 20px;
+	    display: block;
+	    width: 100%;
+		}
+		p, span {
+			opacity: 0;
+			overflow: hidden;
+			margin: 0;
+		}
+		svg {
+			transition: all 500ms ease;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: $bPadding;
+			margin-bottom: 20px;
+			height: 116px;
+			width: 116px;
+		}	
+		a {
+			&:hover {
+				svg {
+					opacity: 0;
+					margin-top: -50%;
+				}
+				h4 {
+					margin-bottom: 15px;
+					color: $text-green;
+				}
+				p, span {
+					opacity: 1;
+					max-height: 300px;
+					margin-bottom: 10px;
+				}
+			}
+		}	
 	}
 	h4,.title {
 		@include hsmedium($hFontB);
@@ -52,21 +78,5 @@
 	p {
 		@include hsmall($hFontM);
 	}
-	a {
-		&:hover {
-			svg {
-				opacity: 0;
-				margin-top: -50%;
-			}
-			h4 {
-				margin-bottom: 15px;
-				color: $text-green;
-			}
-			p, span {
-				opacity: 1;
-				max-height: 300px;
-				margin-bottom: 10px;
-			}
-		}
-	}
+
 }

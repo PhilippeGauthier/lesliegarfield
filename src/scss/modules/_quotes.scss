@@ -32,9 +32,10 @@
 
 .quote-content {
 	display: inline-block;
-	font-family: $hFontMI;
-	font-size: 18px;
-	line-height: 30px;
+	@include hsmall($hFontMI);
+	@include breakpoint($small) {
+		@include hsmedium($hFontMI);
+	}
 	z-index: 100;
 	color: $quote-gray;
 	.quote-symbol {
@@ -44,6 +45,16 @@
 		}
 		&.right {
 			right: -35px;
+		}
+		display: none;
+		@include breakpoint($tiny) {
+			display: inline-block;
+		}
+		@include breakpoint($small) {
+			display: none;
+		}
+		@include breakpoint($medium) {
+			display: inline-block;;
 		}
 	}
 }

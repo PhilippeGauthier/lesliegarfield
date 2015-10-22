@@ -8,8 +8,13 @@
 
 .company {
 	text-align: center;
-	@include pre(2.75 of 12);
-	@include span(6.5 of 12);
+	@include breakpoint($medium) {
+		@include pre(2.75 of 12);
+		@include span(6.5 of 12);		
+	}
+	svg {
+		max-width: 100%;
+	}
 	p {
 		text-align: left
 	}

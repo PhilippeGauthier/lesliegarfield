@@ -1,0 +1,80 @@
+.contact {
+	
+	.sales, .info {
+		h3 {
+			@include hxlarge($hFontMI);
+			margin-bottom: 30px;
+		}
+	}
+	.radio {
+		display: inline-block;
+		@include span(.5 of 12);
+		margin-right: 5px;
+	}
+	.btn-garfield {
+		margin-top: 10px;
+	}
+	.sales {
+		@include span(full);
+		input {
+			margin-bottom: 10px;
+		}
+	}
+	.info {
+		@include span(full);
+		margin-bottom: 30px;
+		div {
+			@include flex-hor;
+		}
+		div, a,span {
+			@include hmedium;
+		}
+		.line-two {
+			margin-left: 25px;
+		}
+		svg {
+			height: 20px;
+			width: 20px;
+			margin-right: 5px;
+			* {
+				fill: $text-green;
+			}
+		}
+		.map {
+			background-color: #fff;
+			width: 100%;
+			a {
+				display: block;
+				width: 100%;
+				padding-top: 100%;
+			}
+		}
+	}
+	@include breakpoint($tiny) {
+		.sales, .info {
+			@include pre(1 of 12);
+			@include span(10 of 12);
+		}
+	}
+	@include breakpoint($small) {
+		.sales {
+			@include pre(0);
+			@include span(first 6 of 12 1);
+		}
+		.info {
+			@include pre(0);
+			@include span(last 6 of 12 1);
+		}
+	}
+	@include breakpoint($large) {
+		@include pre(1 of 12);
+		.sales {
+			@include span(first 4 of 12);
+		}
+		.info {
+			// @include pre(2 of 12);
+			@include span(4 last of 12);
+			@include post(last 2 of 12);
+		}
+	}
+}

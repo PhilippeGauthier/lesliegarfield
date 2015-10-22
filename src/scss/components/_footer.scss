@@ -1,8 +1,4 @@
 footer {
-	.grid-3 {
-		@include gallery(3 of 12 after);
-	}
-	z-index: 1000;
 	.container {
 		padding-top: 40px;
 		padding-bottom: 40px;

@@ -34,11 +34,21 @@
 		line-height: 22px;
 		padding-bottom: 15px;
 	}
-	form {
-		@include clearfix;
-	}
+}
+
+.input-clear {
+	@include clearfix;
 	input {
-		@include gallery(1 of 2 after .025);
+		@include breakpoint($medium) {
+			@include gallery(1 of 2 after .025 break);
+		}
+	}
+}
+
+form {
+	@include clearfix;
+	input {
+		@include span(full);
 		margin-bottom: gutter(6);
 		padding: 10px 10px;
 		border: 1px solid $dark-gray;
@@ -51,10 +61,10 @@
 			outline-width: 2px;
 		}
 	}
+
 	.btn-garfield {
 		margin: auto;
 		@include btn-garfield(10px, 100px, 20px);
-		font-style: bold;
 		&:hover {
 			border: 1px solid $text-green;
 		}
@@ -62,7 +72,7 @@
 			outline: none;
 		}
 	}
-}
+}	
 
 .modal-footer {
 	border-top: none;

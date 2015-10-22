@@ -4,7 +4,7 @@ fields:
 		display: Header
 	sub_header:
 		type: textarea
-		display: sub_header
+		display: Sub Header
 		height: 75
 	reports:
 		type: grid

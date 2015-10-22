@@ -1,15 +1,19 @@
 
 .tile-container {
 	padding-top: $bPadding;
+	margin: 0 45px;
 }
 .carousel_tile, .property_tile {
 	a {
 		padding: 10px;
-		margin: 10px;
 		position: relative;
 		@include clearfix;
 	}
-
+	@include breakpoint($small) {
+		a {
+			margin: 10px;
+		}
+	}
 }
 
 .carousel_tile_1 {
@@ -21,11 +25,15 @@
 	}
 }
 .carousel_tile_2 {
-	@include pre(2 of 12);
-	@include span(8 of 12 no-gutter);
+	@include span(full);
 	&.main_tile, &.agent_tile {
 		@include pre(.75 of 12);
 		@include span (10.5 of 12 no-gutter);
+	}
+	@include breakpoint($large) {
+		@include pre(2 of 12);
+		@include span(8 of 12 no-gutter);
+
 	}
 }
 

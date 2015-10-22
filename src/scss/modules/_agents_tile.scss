@@ -45,6 +45,13 @@
 		}
 		img {
 			max-width: 200px;
+			@include breakpoint($tiny) {
+				max-width: 125px;
+			}
+			@include breakpoint($small) {
+				max-width: 200px;
+			}
+			
 		}
 		svg {
 			width: 20px;

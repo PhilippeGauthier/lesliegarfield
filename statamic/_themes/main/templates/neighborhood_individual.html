@@ -1,8 +1,4 @@
-	<section class="hero small leading" style="background-image: url( {{ path src="{{ hero_image }}" }} );">
-		
-		<h1>{{ title }}</h1>
-		<div class="mask"></div>
-	</section>
+{{ theme:partial src="hero_mask" }}
 	<nav id="scroll-spy-nav" class="secondary-nav">
 		<ul class="nav" role="tablist">
 			<li><a class="scroll smooth" href="#description" >Description</a></li>
@@ -36,6 +32,7 @@
 					<h1>{{ left }}%</h1>
 					<h3>RISE IN PROPERTY PRICES IN THE LAST FIVE YEARS</h3>
 					{{ theme:partial src="svg/graph" }}
+					<div class="divider"></div>
 				</div>
 				<div class="grid-6">
 

@@ -92,7 +92,7 @@ $footer-gray: #999999;
 $bPadding: 60px;
 
 // breakpoints
-$mini: 480px;
+$tiny: 480px;
 $small: 768px;
 $medium: 992px;
 $large: 1280px;
@@ -125,14 +125,22 @@ $fontHuge: 70px;
 
 @mixin hhuge {
     font-family: $hFontBI;
-    font-size: $fontHuge;
-    line-height: 1.5em;
+    font-size: $fontHuge/2;
+    line-height: 1.25em;
+    @include breakpoint($medium) {
+        font-size: $fontHuge;
+        line-height: 1.5em;
+    }
 }
 
 @mixin hxxlarge {
     font-family: $hFontBI;
-    font-size: $fontXXLarge;
-    line-height: 1.2*$fontXXLarge;
+    font-size: $fontXXLarge/2;
+    line-height: 1.2*($fontXXLarge/2);
+    @include breakpoint($medium) {
+        font-size: $fontXXLarge;
+        line-height: 1.2*$fontXXLarge;
+    }
 }
 
 @mixin hxlarge ($font) {

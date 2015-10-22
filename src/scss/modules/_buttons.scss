@@ -7,15 +7,21 @@
 // }
 
 .btn-contact {
-	padding: 6px 10px;
-	border: 1px solid $text-green;
-	border-radius: 2px;
-	top: 3px;
-	margin-top: 14px;
-	margin-left: 15px;
-	&:hover {
-		background-color: $text-green;
-		color: white;
+	@include breakpoint($small) {
+		padding: 6px 10px;
+		border: 1px solid $text-green;
+		border-radius: 2px;
+		top: 3px;
+		margin-top: 9px;
+		margin-left: 10px;	
+		&:hover, &.current {
+			background-color: $text-green;
+			color: white;
+		}
+	}
+	@include breakpoint($medium) {
+		margin-top: 18px;
+		margin-left: 15px;
 	}
 }
 

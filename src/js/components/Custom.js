@@ -99,6 +99,18 @@ $(document).ready(function() {
 	  // Set each height to the max height
 	  $('.press-item').height(maxHeight);  	
   }
+  // if ($('.report').length) {
+  //   var elementHeights = $('.report').map(function() {
+  //     return $(this).height();
+  //   }).get();
+
+  //   // Math.max takes a variable number of arguments
+  //   // `apply` is equivalent to passing each height as an argument
+  //   var maxHeight = Math.max.apply(null, elementHeights);
+
+  //   // Set each height to the max height
+  //   $('.report').height(maxHeight);   
+  // }
 });
 
 // Sticky Sidebar

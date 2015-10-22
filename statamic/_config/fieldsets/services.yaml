@@ -1,10 +1,10 @@
 fields:
   header:
     type: text
-    display: Main Tagline
+    display: Header
   sub_header:
     type: textarea
-    display: Sub Tagline
+    display: Sub Header
     height: 100
 	hero_image:
 		type: file

@@ -1,5 +1,5 @@
 .featured {
-	height: 400px;
+	
 	text-align: left;
 	margin-bottom: $bPadding;
 	border-bottom: none;
@@ -8,18 +8,28 @@
 		border-bottom: none;
 	}
 	.featured-image {
-		@include span (6 of 12 no-gutter);
-		height: 400px;
+		@include span (full);
+		height: 200px;
+	}
+	.post-details {
+		@include span(full);
+		padding: 30px;
+		padding-right: 100px;
 	}
 	h3 {
 		margin-bottom: .5em;
 		@include hxlarge($hFontMI);
 	}
+	@include breakpoint($medium) {
+		height: 400px;
+		.featured-image {
+			@include span (first 6 of 12 no-gutter);
+			height: 400px;
+		}
+		.post-details {
+			@include span(last 6 of 12 no-gutter);
+		}
+	}
 }
 
 
-.post-details {
-	@include span(last 6 of 12 no-gutter);
-	padding: 30px;
-	padding-right: 100px;
-}

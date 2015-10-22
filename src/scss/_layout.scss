@@ -1,7 +1,7 @@
 
 $susy: (
 	columns: 12,
-	container: 1280px,
+	container: 1310px,
 	gutter-position: inside,
   debug: (
     image: hide,
@@ -54,11 +54,23 @@ img {
 	display: flex;
 	min-height: 100%;
 	flex-direction: column;
+
 }
 
 .container {
 	@include container;
 	@include clearfix;
+	padding-left: 15px;
+	padding-right: 15px;
+	// &.nav-container {
+	// 	padding-left: 0;
+	// 	padding-right: 0;
+	// }
+}
+
+section {
+	padding: 68px 0;
+	position: relative;
 }
 
 .right {
@@ -90,15 +102,31 @@ img {
 }
 
 .grid-3 {
-	@include gallery (3 of 12);
+	@include span (12 of 12);
+	@include breakpoint($small) {
+		@include gallery(6 of 12);
+	}
+	@include breakpoint($medium) {
+		@include gallery (3 of 12);
+	}
 }
 
 .grid-4 {
-	@include gallery (4 of 12);
+	@include span(12 of 12);
+	@include breakpoint($small) {
+		@include span(8 of 12);
+		@include pre(2 of 12);
+	}
+	@include breakpoint($medium) {
+		@include gallery (4 of 12);
+	}
 }
 
 .grid-6 {
-	@include gallery (6 of 12);
+	@include span(12 of 12);
+	@include breakpoint($medium) {
+		@include gallery (6 of 12);
+	}
 }
 
 .grid-constrained {
@@ -109,13 +137,29 @@ img {
 }
 
 .grid-3-constrained {
-	@include gallery(2 of 6 0);
-	
+	@include span(6 of 6 0);
+	@include breakpoint($tiny) {
+		@include gallery(3 of 6 0);
+	}
+	@include breakpoint($medium) {
+		@include gallery(2 of 6 0);
+	}
 }
 
 .grid-3-constrained-padding {
-	@include gallery(2 of 6 1);
+	@include span(6 of 6 1);
 	margin-bottom: gutter(1.5);
+	@include breakpoint($tiny) {
+		@include gallery(3 of 6 1);
+	}
+	@include breakpoint($medium) {
+		@include gallery(2 of 6 1);
+	}
+}
+
+.hero-content {
+	@include span(8 of 12);
+	@include pre(2 of 12);
 }
 
 .stuck {
@@ -132,35 +176,53 @@ img {
 }
 
 .grid-item {
-  @include gallery(4 of 12 .5 after); 
-  margin-bottom: gutter(4); 
+  @include span(12 of 12); 
+  margin-bottom: gutter(4);
+  @include breakpoint($tiny) {
+  	@include span(8 of 12);
+  	@include pre(2 of 12);
+  }
+  @include breakpoint($small) {
+   	@include gallery (6 of 12 .5);
+   } 
+	@include breakpoint($medium) {
+		@include gallery(4 of 12 .5); 
+	}
 }
 
-section {
-	padding: 68px 0;
-	position: relative;
-}
+
 
 .properties {
 	padding: 0px 0 100px;
 }
 .leading {
-	margin-top: 78px;
+	margin-top: 62px;
+	@include breakpoint($medium) {
+		margin-top: 78px;
+	}
 }
 
 
 .services {
-	.container {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
 	main {
-		@include span(6 of 12);
+		@include span(full);
+		
+		@include breakpoint($small) {
+			@include span(6 of 12);
+		}
 	}
 	aside {
-		@include pre(1);
-		@include span(last 5 of 12);
+		@include span(full);	
+		margin-top: 30px;
+		@include breakpoint($tiny) {
+			@include pre(2 of 12);
+			@include span(8 of 12);
+		}
+		@include breakpoint($small) {	
+			margin-top: 0;
+			@include pre(1 of 12);
+			@include span(last 5 of 12);
+		}
 		.circle {
 			padding-top: gutter(.1);
 			position: relative;
@@ -171,24 +233,44 @@ section {
 .faq {
 	margin-top: 0;
 	padding-top: 0;
+	@include span(full no-gutter);
 	main {
-		@include span (first 8 of 12);
-		@include post(1 of 12);
+		@include breakpoint($medium) {
+			@include span (first 8 of 12 no-gutter);
+		}
+		
 	}
 	aside {
-		@include span(320px no-gutter);
+		@include span(full no-gutter);
+		@include breakpoint($medium) {
+			@include span(last 3 of 12 no-gutter);
+		}
+		
 	}
 }
 
 aside {
-	@include span(320px no-gutter);
-	padding-right: 15px;
+	@include span(full no-gutter);
+	@include breakpoint($medium) {
+		@include span(2.95 of 12 no-gutter);
+	}
 }
 
 main {
 	position: relative;
-	@include span (last 9 of 12);
-	// padding: 30px;
+	@include span(full no-gutter);
+	@include breakpoint($medium) {
+		@include span (last 9 of 12 no-gutter);
+	}
+}
+
+.agent-individual {
+	aside {
+		text-align: center;
+	}
+	@include breakpoint($medium) {
+		text-align: left;
+	}
 }
 
 .sticky-wrapper {

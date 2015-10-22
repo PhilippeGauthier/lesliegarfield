@@ -2,7 +2,6 @@
 	aside {
 		padding-right: $bPadding;
 		img {
-			margin-top: 183px;
 			max-width: 200px;
 			text-align: center;
 			margin-left: auto;
@@ -41,13 +40,24 @@
 			margin-top: 30px;
 			margin-bottom: 0;
 		}
+		@include breakpoint($medium) {
+			img {
+				margin-top: 183px;
+			}
+		}
 	}
 	main {
-		padding: $bPadding;
+		padding: $bPadding/2;
+		@include breakpoint($small) {
+			padding: $bPadding;
+		}
 		background-color: #fff;
 		.agent-info {
 			@include clearfix;
-			margin-bottom: $bPadding;
+			margin-bottom: $bPadding/2;
+			@include breakpoint($small) {
+				margin-bottom: $bPadding;
+			}
 		}
 		.agent-info * {
 			@include span (last 9 of 9 );
@@ -67,11 +77,17 @@
 			line-height: 26px;
 		}
 		.green-specs {
-			margin-bottom: $bPadding;
+			margin-bottom: $bPadding/2;
+			@include breakpoint($small) {
+				margin-bottom: $bPadding;
+			}
 			h3 {
 				padding-bottom: 20px;
 				border-bottom: 1px solid $text-green;
-				margin-bottom: $bPadding;
+				margin-bottom: $bPadding/2;
+				@include breakpoint($small) {
+					margin-bottom: $bPadding;
+				}
 				font-size: 16px;
 				font-family: $bFont;
 				font-weight: 700;
@@ -106,7 +122,10 @@
 		}
 		.agent-properties {
 			padding: 30px;
-			margin-bottom: $bPadding;
+			margin-bottom: $bPadding/2;
+			@include breakpoint($small) {
+				margin-bottom: $bPadding;
+			}
 			@include span(full no-gutter);
 			@include clearfix;
 		}
@@ -142,9 +161,18 @@
 				font-family: $hFontM;
 				font-size: 16px;
 				text-align: left;
+				&:nth-child(4n+2),&:nth-child(4n+3) {
+					display: none;
+				}
+				@include breakpoint($small) {
+					&:nth-child(4n+2),&:nth-child(4n+3) {
+						display: inline-block;
+					}
+				}
 				&.transaction-details {
 					font-size: 14px;
 				}
+
 			}
 			// li:nth-child(4n + 3),li:nth-child(4n + 4)  {
 			// 	text-align: right;

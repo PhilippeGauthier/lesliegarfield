@@ -1,7 +1,11 @@
-	<section class="hero leading dark agents-background" {{ if hero_image }} style="background-image: url( {{ path src="{{ hero_image }}" }} );" {{ endif }}>
-		<h1>{{ header }}</h1>
-		<h3>{{ sub_header }}</h3>
-	</section>	
+<section class="hero leading dark agents-background" {{ if hero_image }} style="background-image: url( {{ path src="{{ hero_image }}" }} );" {{ endif }}>
+	<div class="container">
+		<div class="hero-container">
+			<h1>{{ header }}</h1>
+			<h3>{{ sub_header }}</h3>
+		</div>
+	</div>
+</section>	
 
 <section class="agents agents-background">
 	<div class="container centered">

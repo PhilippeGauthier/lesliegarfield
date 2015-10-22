@@ -1,0 +1,9 @@
+<section class="hero leading" {{ if hero_image }} style="background-image: url( {{ path src="{{ hero_image }}" }} );" {{ endif }}>
+	<div class="container">
+		<div class="hero-container">
+			<h1>{{ header }}</h1>
+			{{ if sub_header }}<h3>{{ sub_header }}</h3>{{ endif }}
+		</div>
+	</div>
+	<div class="mask"></div>
+</section>	

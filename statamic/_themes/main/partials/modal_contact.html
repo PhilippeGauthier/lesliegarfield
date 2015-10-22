@@ -5,19 +5,21 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         {{ theme:partial src="svg/home_valuation" }}
       </div>
+
       <div class="modal-body">
         <h2>More Than Mere Numbers</h2>
         <h3>Get in touch to make a more informed decision about your property with a Garfield Valuation</h3>
-        <form>
-          <input placeholder="Listing Address" type="text">
-          <input placeholder="First &amp; Last Name" type="text">
-          <input placeholder="Phone Number" type="text">
-          <input placeholder="Email Address" type="text">
-        </form>
+        {{ raven:form formset="valuation" }}
+        <div class="input-clear">
+          <input class="input" placeholder="Listing Address" type="text" name="address">
+          <input class="input" placeholder="First &amp; Last Name" type="text" name="name">
+          <input class="input" placeholder="Phone Number" type="text" name="phone">
+          <input class="input" placeholder="Email Address" type="text" name="email">
+        </div>
+          <input type="submit" value="SEND" class="btn-garfield">
+        {{ /raven:form }}
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn-garfield" data-dismiss="modal">SEND</button>
-      </div>
+     
     </div>
   </div>
 </div>

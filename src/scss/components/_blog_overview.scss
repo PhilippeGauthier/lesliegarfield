@@ -15,10 +15,22 @@
 		background-color: #fff;
 	}
 	.blog-left {
-		@include span (7 of 12 after);
+		@include span (full);
+		.truncated {
+			display: none;
+		}
+		@include breakpoint($medium) {
+			@include span (7 of 12 after);
+			.truncated {
+				display: block;
+			}
+		}
 	}
 	.blog-right {
-		@include span (last 4 of 12 after);
+		@include span (full);
+		@include breakpoint($medium) {
+			@include span (last 4 of 12 after);
+		}
 	}
 	.entry, .authors {
 		@include span(full no-gutter);

@@ -36,6 +36,7 @@
 @mixin flex-hor {
 	display: flex;
 	align-items: center;
+	flex-flow: row nowrap;
 }
 
 @mixin svg-size($size) {

@@ -1,7 +1,11 @@
-	<section class="hero leading" style="background-image: url( {{ path src="{{ hero_image }}" }} );">
-		<h1>{{ tag_line }}</h1>
-		<h3>{{ sub_tag_line}}</h3>
-		<a href="{{ url }}properties/new-york" class="btn btn-garfield">VIEW PROPERTIES</a>
+	<section class="hero leading landing" style="background-image: url( {{ path src="{{ hero_image }}" }} );">
+		<div class="container">
+			<div class="hero-container">
+				<h1>{{ tag_line }}</h1>
+				<h3>{{ sub_tag_line}}</h3>
+				<a href="{{ url }}properties/new-york" class="btn btn-garfield">VIEW PROPERTIES</a>
+			</div>
+		</div>
 		<div class="mask"></div>
 	</section>	
 
@@ -49,7 +53,7 @@
 				</a>
 		</div>
 	</section>
-	<section class="circle-icon bg-seafoam" id="featured-properties">
+	<section class="circle-icon bg-seafoam">
 		<div class="circle-leader">
 			<div class="circle bg-seafoam">
 				{{ theme:partial src="svg/home_building" }}
@@ -62,13 +66,13 @@
 			{{ /entries:listing }}
 		</div>
 	</section>
-	<section id="featured-properties">
+	<section>
 		<div class="circle-leader">
 			<div class="circle white">
 				{{ theme:partial src="svg/home_book" }}
 			</div>
 			<h4>LATEST NEWS &amp; INSIGHTS</h4>
-	{{ theme:partial src="modal_contact" }}
+		{{ theme:partial src="modal_contact" }}
 
 		</div>
 		<div class="container">
@@ -96,7 +100,7 @@
 
 		</div>
 	</section>
-		<section class="circle-icon light-gray-bg" id="featured-properties">
+		<section class="circle-icon light-gray-bg">
 		<div class="circle-leader">
 			<div class="circle light-gray-bg">
 				{{ theme:partial src="svg/international" }}
