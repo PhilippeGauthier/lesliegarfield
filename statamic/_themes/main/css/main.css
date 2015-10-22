@@ -4342,6 +4342,11 @@ footer .footer-divider {
 .company.why h3 {
   text-transform: uppercase; }
 
+.company a {
+  font-family: "Copernicus-MediumItalic";
+  font-size: 16px;
+  line-height: 26px; }
+
 .blog span {
   text-transform: uppercase; }
 
