@@ -36,43 +36,6 @@
 	}
 }
 
-.input-clear {
-	@include clearfix;
-	input {
-		@include breakpoint($medium) {
-			@include gallery(1 of 2 after .025 break);
-		}
-	}
-}
-
-form {
-	@include clearfix;
-	input {
-		@include span(full);
-		margin-bottom: gutter(6);
-		padding: 10px 10px;
-		border: 1px solid $dark-gray;
-		border-radius: 2px;
-		font-family: $hFontM;
-		font-size: 16px;
-		color: $modal-text;
-		&:focus, &:active {
-			outline-color: $text-green;
-			outline-width: 2px;
-		}
-	}
-
-	.btn-garfield {
-		margin: auto;
-		@include btn-garfield(10px, 100px, 20px);
-		&:hover {
-			border: 1px solid $text-green;
-		}
-		&:focus {
-			outline: none;
-		}
-	}
-}	
 
 .modal-footer {
 	border-top: none;
