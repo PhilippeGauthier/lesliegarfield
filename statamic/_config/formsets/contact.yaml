@@ -12,8 +12,8 @@ submission_save_path: _forms/_non_specific/
 # Fields allowed to be submitted in the form, automatically
 # purging anything and everything else
 allowed:
-  - name
-  - address
+  - FNAME
+  - LNAME
   - email
   - phone
 
