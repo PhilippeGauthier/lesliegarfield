@@ -23,7 +23,7 @@
 		margin-bottom: 20px;
 	}
 	h3 {
-		@include hlmedium($hFontM);
+		@include hxlarge($hFontM);
 		@include break;
 		margin-top: 0;
 		margin-bottom: 15px;
