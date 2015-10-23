@@ -151,8 +151,8 @@ $fontHuge: 70px;
     font-size: $fontSmallMedium;
     line-height: 1.3*$fontSmallMedium;
     @include breakpoint($medium) {
-        font-size: $fontXLarge;
-        line-height: 1.3*$fontXLarge;
+        font-size: $fontLargeMedium;
+        line-height: 1.3*$fontLargeMedium;
     }
 }
 
