@@ -5873,7 +5873,7 @@ footer .footer-divider {
   font-family: "Copernicus-Medium";
   line-height: 36px; }
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   .services h3 {
     font-size: 34px;
     line-height: 44.2px; } }
