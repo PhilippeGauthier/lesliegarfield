@@ -3508,9 +3508,13 @@ footer .footer-divider {
   margin-top: 30px; }
 
 .property-info {
-  padding: 30px;
+  padding: 15px;
   margin-bottom: 30px;
   background-color: #fff; }
+
+@media (min-width: 768px) {
+  .property-info {
+    padding: 30px; } }
 
 .property-info:before, .property-info:after {
   content: "";

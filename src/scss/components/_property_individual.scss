@@ -25,7 +25,10 @@
 }
 
 .property-info {
-	padding: 30px;
+	padding: 15px;
+	@include breakpoint($small) {
+		padding: 30px;
+	}
 	margin-bottom: 30px;
 	background-color: #fff;
 	@include clearfix;
