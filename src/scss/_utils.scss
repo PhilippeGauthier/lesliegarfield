@@ -150,9 +150,9 @@ $fontHuge: 70px;
     font-family: $font;
     font-size: $fontSmallMedium;
     line-height: 1.55*$fontSmallMedium;
-    @include breakpoint($small) {
-        font-size: $fontXLarge;
-        line-height: 1.55*$fontXLarge;
+    @include breakpoint($medium) {
+        font-size: $fontLargeMedium;
+        line-height: 1.55*$fontLargeMedium;
     }
 }
 
@@ -164,8 +164,12 @@ $fontHuge: 70px;
 
 @mixin hlmedium ($font) {
     font-family: $font;
-    font-size: $fontLargeMedium;
-    line-height: 1.5*$fontLargeMedium;
+    font-size: $fontSmallMedium;
+    line-height: 1.5*$fontSmallMedium;
+    @include breakpoint($small) {
+        font-size: $fontLargeMedium;
+        line-height: 1.5*$fontLargeMedium;
+    }
 }
 
 @mixin hmedium {

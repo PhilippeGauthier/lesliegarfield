@@ -2112,10 +2112,10 @@ h3 {
   font-size: 18px;
   line-height: 27.9px; }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   h3 {
-    font-size: 34px;
-    line-height: 52.7px; } }
+    font-size: 22px;
+    line-height: 34.1px; } }
 
 h4 {
   font-family: Arial, "Lucida Grande", sans-serif;
@@ -2125,8 +2125,13 @@ h4 {
 
 h5 {
   font-family: "Copernicus-Medium";
-  font-size: 22px;
-  line-height: 33px; }
+  font-size: 18px;
+  line-height: 27px; }
+
+@media (min-width: 768px) {
+  h5 {
+    font-size: 22px;
+    line-height: 33px; } }
 
 p {
   font-family: "Copernicus-Medium";
@@ -2140,8 +2145,8 @@ p {
 
 p.no_results {
   font-family: "Copernicus-MediumItalic";
-  font-size: 22px;
-  line-height: 33px;
+  font-size: 18px;
+  line-height: 27px;
   margin-top: 60px;
   margin-left: 16.66667%;
   box-sizing: border-box;
@@ -2150,6 +2155,11 @@ p.no_results {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
   text-align: center; }
+
+@media (min-width: 768px) {
+  p.no_results {
+    font-size: 22px;
+    line-height: 33px; } }
 
 p.light {
   font-size: 13px;
@@ -2161,15 +2171,25 @@ p.light {
 
 p.intro-section {
   font-family: "Copernicus-Medium";
-  font-size: 22px;
-  line-height: 33px;
+  font-size: 18px;
+  line-height: 27px;
   text-align: center; }
+
+@media (min-width: 768px) {
+  p.intro-section {
+    font-size: 22px;
+    line-height: 33px; } }
 
 .large p {
   font-family: "Copernicus-Medium";
-  font-size: 22px;
-  line-height: 33px;
+  font-size: 18px;
+  line-height: 27px;
   text-align: center; }
+
+@media (min-width: 768px) {
+  .large p {
+    font-size: 22px;
+    line-height: 33px; } }
 
 .section-title {
   font-size: 16px;
@@ -3881,9 +3901,14 @@ footer .footer-divider {
 
 .agent-individual aside .agent-name {
   font-family: "Copernicus-Bold";
-  font-size: 22px;
-  line-height: 33px;
+  font-size: 18px;
+  line-height: 27px;
   margin-top: 10px; }
+
+@media (min-width: 768px) {
+  .agent-individual aside .agent-name {
+    font-size: 22px;
+    line-height: 33px; } }
 
 .agent-individual aside svg {
   height: 25px;
@@ -4822,10 +4847,10 @@ footer .footer-divider {
   line-height: 27.9px;
   margin-bottom: 30px; }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .contact .sales h3, .contact .info h3 {
-    font-size: 34px;
-    line-height: 52.7px; } }
+    font-size: 22px;
+    line-height: 34.1px; } }
 
 .contact .radio {
   display: inline-block;
@@ -5539,10 +5564,15 @@ footer .footer-divider {
 
 .agents p {
   font-family: "Copernicus-Medium";
-  font-size: 22px;
-  line-height: 33px;
+  font-size: 18px;
+  line-height: 27px;
   margin-top: 2.5em;
   margin-bottom: 2.5em; }
+
+@media (min-width: 768px) {
+  .agents p {
+    font-size: 22px;
+    line-height: 33px; } }
 
 .agents p:before, .agents p:after {
   content: "";
@@ -5560,9 +5590,14 @@ footer .footer-divider {
 
 .agents span.name {
   font-family: "Copernicus-MediumItalic";
-  font-size: 22px;
-  line-height: 33px;
+  font-size: 18px;
+  line-height: 27px;
   margin: 1em auto; }
+
+@media (min-width: 768px) {
+  .agents span.name {
+    font-size: 22px;
+    line-height: 33px; } }
 
 .agents span.details {
   font-family: "Copernicus-Medium";
@@ -5771,10 +5806,15 @@ footer .footer-divider {
 
 .report-tile h3 {
   font-family: "Copernicus-MediumItalic";
-  font-size: 22px;
-  line-height: 33px;
+  font-size: 18px;
+  line-height: 27px;
   height: 200px;
   margin-top: 10px; }
+
+@media (min-width: 768px) {
+  .report-tile h3 {
+    font-size: 22px;
+    line-height: 33px; } }
 
 .report-tile h4 {
   margin-top: 0;
@@ -6023,10 +6063,10 @@ section.faq {
   font-size: 18px;
   line-height: 27.9px; }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .featured h3 {
-    font-size: 34px;
-    line-height: 52.7px; } }
+    font-size: 22px;
+    line-height: 34.1px; } }
 
 @media (min-width: 992px) {
   .featured {
