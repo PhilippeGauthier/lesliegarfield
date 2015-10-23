@@ -149,10 +149,10 @@ $fontHuge: 70px;
 @mixin hxlarge ($font) {
     font-family: $font;
     font-size: $fontSmallMedium;
-    line-height: 1.3*$fontSmallMedium;
+    line-height: 1.55*$fontSmallMedium;
     @include breakpoint($medium) {
         font-size: $fontLargeMedium;
-        line-height: 1.3*$fontLargeMedium;
+        line-height: 1.55*$fontLargeMedium;
     }
 }
 
