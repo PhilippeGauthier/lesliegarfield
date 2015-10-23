@@ -2133,7 +2133,7 @@ p {
   font-size: 15px;
   line-height: 25px; }
 
-@media (min-width: 480px) {
+@media (min-width: 992px) {
   p {
     font-size: 16px;
     line-height: 26px; } }

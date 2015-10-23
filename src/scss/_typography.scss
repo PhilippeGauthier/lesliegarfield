@@ -81,7 +81,7 @@ p {
 	font-family: $hFontM;
 	font-size: 15px;
 	line-height: 25px;
-    @include breakpoint($tiny) {
+    @include breakpoint($medium) {
         font-size: 16px;
         line-height: 26px
     }
