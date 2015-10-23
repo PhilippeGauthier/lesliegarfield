@@ -5463,6 +5463,7 @@ footer .footer-divider {
 
 .insight-tile {
   display: block;
+  position: relative;
   padding: 30px;
   color: #25282A; }
 
@@ -5493,7 +5494,8 @@ footer .footer-divider {
 
 .insight-tile span {
   font-size: 12px;
-  font-weight: 700; }
+  font-weight: 700;
+  display: block; }
 
 @media (min-width: 768px) {
   .insight-tile {
