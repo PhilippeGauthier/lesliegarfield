@@ -14,7 +14,12 @@
 		}
 	}
 	h3 {
-		@include hlarge;
+		max-width: 60%;
+		@include breakpoint($medium) {
+			font-size: $fontXLarge;
+			font-family: $hFontMI;
+			line-height: 1.3*$fontXLarge;			
+		}
 	}
 	p {
 		@include hsmall($hFontM);

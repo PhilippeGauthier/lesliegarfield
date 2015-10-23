@@ -5477,9 +5477,10 @@ footer .footer-divider {
   color: #25282A; }
 
 .insight-tile h3 {
+  max-width: 60%;
+  font-size: 34px;
   font-family: "Copernicus-MediumItalic";
-  font-size: 28px;
-  line-height: 33.6px; }
+  line-height: 44.2px; }
 
 .insight-tile p {
   font-family: "Copernicus-Medium";
