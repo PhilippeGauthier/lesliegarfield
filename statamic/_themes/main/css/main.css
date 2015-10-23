@@ -5465,6 +5465,7 @@ footer .footer-divider {
   display: block;
   position: relative;
   padding: 30px;
+  margin-bottom: 30px;
   color: #25282A; }
 
 .insight-tile * {
@@ -5479,9 +5480,14 @@ footer .footer-divider {
 
 .insight-tile h3 {
   max-width: 60%;
-  font-size: 34px;
+  font-size: 26px;
   font-family: "Copernicus-MediumItalic";
-  line-height: 44.2px; }
+  line-height: 36px; }
+
+@media (min-width: 480px) {
+  .insight-tile h3 {
+    font-size: 34px;
+    line-height: 44.2px; } }
 
 .insight-tile p {
   font-family: "Copernicus-Medium";
@@ -5496,8 +5502,7 @@ footer .footer-divider {
 
 @media (min-width: 768px) {
   .insight-tile {
-    margin-top: 60px;
-    margin-bottom: 30px; } }
+    margin-top: 60px; } }
 
 .agents {
   padding-top: 0; }
