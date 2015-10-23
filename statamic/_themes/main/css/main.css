@@ -2125,8 +2125,13 @@ h4 {
 
 p {
   font-family: "Copernicus-Medium";
-  font-size: 16px;
-  line-height: 26px; }
+  font-size: 14px;
+  line-height: 24px; }
+
+@media (min-width: 480px) {
+  p {
+    font-size: 16px;
+    line-height: 26px; } }
 
 p.no_results {
   font-family: "Copernicus-MediumItalic";
@@ -3309,7 +3314,8 @@ footer .beauchamp {
   margin-top: 10px; }
 
 footer .beauchamp svg {
-  width: 255px; }
+  width: 255px;
+  max-width: 100%; }
 
 footer .beauchamp svg * {
   z-index: 10; }

@@ -75,8 +75,12 @@ h4 {
 
 p {
 	font-family: $hFontM;
-	font-size: 16px;
-	line-height: 26px;
+	font-size: 14px;
+	line-height: 24px;
+    @include breakpoint($tiny) {
+        font-size: 16px;
+        line-height: 26px
+    }
     &.no_results {
         @include hlmedium($hFontMI);
         margin-top: $bPadding;
