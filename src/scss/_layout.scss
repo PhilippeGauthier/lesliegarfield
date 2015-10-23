@@ -104,7 +104,7 @@ section {
 .grid-3 {
 	@include span (12 of 12);
 	@include breakpoint($small) {
-		@include gallery(6 of 12);
+		@include gallery(6 of 12 1);
 	}
 	@include breakpoint($medium) {
 		@include gallery (3 of 12);
