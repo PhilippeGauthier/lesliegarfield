@@ -14,8 +14,7 @@
 		}
 	}
 	h3 {
-		max-width: 60%;
-		@include hxlarge($hFontMI)
+		@include hlarge;
 	}
 	p {
 		@include hsmall($hFontM);
