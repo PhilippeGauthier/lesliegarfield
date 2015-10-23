@@ -5477,18 +5477,23 @@ footer .footer-divider {
   color: #25282A; }
 
 .insight-tile h3 {
-  max-width: 60%;
-  font-size: 34px;
-  font-family: "Copernicus-MediumItalic";
-  line-height: 44.2px; }
+  max-width: 60%; }
+
+@media (min-width: 992px) {
+  .insight-tile h3 {
+    font-size: 34px;
+    font-family: "Copernicus-MediumItalic";
+    line-height: 44.2px; } }
 
 .insight-tile p {
   font-family: "Copernicus-Medium";
   font-size: 15px;
-  line-height: 21.75px; }
+  line-height: 21.75px;
+  max-width: 80%; }
 
 .insight-tile span {
-  font-size: 12px; }
+  font-size: 12px;
+  font-weight: 700; }
 
 @media (min-width: 768px) {
   .insight-tile {

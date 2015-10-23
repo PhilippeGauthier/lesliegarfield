@@ -23,9 +23,11 @@
 	}
 	p {
 		@include hsmall($hFontM);
+		max-width: 80%;
 	}
 	span {
 		font-size: $fontMini;
+		font-weight: 700;
 	}
 	@include breakpoint($small) {
 		margin-top: $bPadding;
