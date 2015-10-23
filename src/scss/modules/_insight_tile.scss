@@ -2,6 +2,7 @@
 	display: block;
 	position: relative;
 	padding: 30px;
+	margin-bottom: 30px;
 	color: $header-font-color;
 	* {
 		color: $header-font-color;
@@ -30,6 +31,6 @@
 	}
 	@include breakpoint($small) {
 		margin-top: $bPadding;
-		margin-bottom: 30px;
+		
 	}
 }
