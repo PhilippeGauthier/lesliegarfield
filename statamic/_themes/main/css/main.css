@@ -5294,7 +5294,11 @@ footer .footer-divider {
 
 .tile-container {
   padding-top: 60px;
-  margin: 0 45px; }
+  margin: 0 15px; }
+
+@media (min-width: 480px) {
+  .tile-container {
+    margin: 0 45px; } }
 
 .carousel_tile a, .property_tile a {
   padding: 10px;

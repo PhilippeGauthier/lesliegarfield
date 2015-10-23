@@ -5,13 +5,14 @@ $('.carousel_tile_1').slick({
   speed: 300,
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: true,
+  autoplay: false,
   responsive: [
     {
       breakpoint: 768,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
+        arrows: false
       }
     }
   ]
@@ -22,14 +23,14 @@ $('.carousel_tile_2').slick({
   speed: 300,
   slidesToShow: 2,
   slidesToScroll: 1,
-  autoplay: true,
-  arrows: true,
+  autoplay: false,
   responsive: [
     {
       breakpoint: 768,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
+        arrows: false
       }
     }
   ]
@@ -40,7 +41,7 @@ $('.carousel_tile_3').slick({
   speed: 300,
   slidesToShow: 3,
   slidesToScroll: 1,
-  autoplay: true,
+  autoplay: false,
   responsive: [
     {
       breakpoint: 1280,
@@ -55,6 +56,7 @@ $('.carousel_tile_3').slick({
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
+        arrows: false
       }
     }
   ]

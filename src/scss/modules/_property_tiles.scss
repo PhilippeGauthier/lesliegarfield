@@ -1,7 +1,10 @@
 
 .tile-container {
 	padding-top: $bPadding;
-	margin: 0 45px;
+	margin: 0 15px;
+	@include breakpoint($tiny) {
+		margin: 0 45px;
+	}
 }
 .carousel_tile, .property_tile {
 	a {
