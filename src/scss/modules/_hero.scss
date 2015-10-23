@@ -22,8 +22,7 @@
 	h1 {
 		margin-bottom: 20px;
 	}
-	h3 {
-		@include hxlarge($hFontM);
+	h5 {
 		@include break;
 		margin-top: 0;
 		margin-bottom: 15px;
@@ -55,7 +54,7 @@
 		@include btn-garfield(10px, 35px, 10px);
 		margin-top: 15px;
 	}
-	h3 {
+	h5 {
 		max-width: 700px;
 	}
 	@include breakpoint($medium) {
@@ -68,7 +67,7 @@
 			@include btn-garfield(20px, 70px, 12px);
 		}
 		&.landing {
-			h3 {
+			h5 {
 				max-width: 500px;
 			}
 		}

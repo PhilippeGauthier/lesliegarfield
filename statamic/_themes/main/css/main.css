@@ -2078,7 +2078,7 @@ a .no-click * {
   font-weight: normal;
   font-style: normal; }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   font-weight: 100;
   margin: 0; }
 
@@ -2114,14 +2114,19 @@ h3 {
 
 @media (min-width: 992px) {
   h3 {
-    font-size: 22px;
-    line-height: 34.1px; } }
+    font-size: 34px;
+    line-height: 52.7px; } }
 
 h4 {
   font-family: Arial, "Lucida Grande", sans-serif;
   font-size: 12px;
   line-height: 14.4px;
   font-weight: 700; }
+
+h5 {
+  font-family: "Copernicus-Medium";
+  font-size: 22px;
+  line-height: 33px; }
 
 p {
   font-family: "Copernicus-Medium";
@@ -4819,8 +4824,8 @@ footer .footer-divider {
 
 @media (min-width: 992px) {
   .contact .sales h3, .contact .info h3 {
-    font-size: 22px;
-    line-height: 34.1px; } }
+    font-size: 34px;
+    line-height: 52.7px; } }
 
 .contact .radio {
   display: inline-block;
@@ -4963,18 +4968,10 @@ footer .footer-divider {
 .hero h1 {
   margin-bottom: 20px; }
 
-.hero h3 {
-  font-family: "Copernicus-Medium";
-  font-size: 18px;
-  line-height: 27.9px;
+.hero h5 {
   clear: both;
   margin-top: 0;
   margin-bottom: 15px; }
-
-@media (min-width: 992px) {
-  .hero h3 {
-    font-size: 22px;
-    line-height: 34.1px; } }
 
 .hero .mask {
   z-index: 9;
@@ -5011,7 +5008,7 @@ footer .footer-divider {
   color: white;
   background-color: #009d84; }
 
-.hero h3 {
+.hero h5 {
   max-width: 700px; }
 
 @media (min-width: 992px) {
@@ -5031,7 +5028,7 @@ footer .footer-divider {
   .hero a:hover, .hero a:focus {
     color: white;
     background-color: #009d84; }
-  .hero.landing h3 {
+  .hero.landing h5 {
     max-width: 500px; } }
 
 @media (min-width: 768px) {
@@ -5878,8 +5875,8 @@ footer .footer-divider {
 
 @media (min-width: 992px) {
   .services h3:first-of-type {
-    font-size: 22px;
-    line-height: 34.1px; } }
+    font-size: 34px;
+    line-height: 52.7px; } }
 
 .services h3:last-of-type {
   font-family: "Copernicus-BookItalic";
@@ -5888,8 +5885,8 @@ footer .footer-divider {
 
 @media (min-width: 992px) {
   .services h3:last-of-type {
-    font-size: 22px;
-    line-height: 34.1px; } }
+    font-size: 34px;
+    line-height: 52.7px; } }
 
 .services h3 {
   margin-bottom: 5px;
@@ -6035,8 +6032,8 @@ section.faq {
 
 @media (min-width: 992px) {
   .featured h3 {
-    font-size: 22px;
-    line-height: 34.1px; } }
+    font-size: 34px;
+    line-height: 52.7px; } }
 
 @media (min-width: 992px) {
   .featured {

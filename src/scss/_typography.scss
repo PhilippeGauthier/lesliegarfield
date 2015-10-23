@@ -53,7 +53,7 @@ $hFontMI: "Copernicus-MediumItalic";
     font-style: normal;
 }
 
-h1,h2,h3,h4 {
+h1,h2,h3,h4, h5 {
     font-weight: 100;
     margin: 0;
 }
@@ -71,6 +71,10 @@ h3 {
 }
 h4 {
     @include hmin($bFont);
+}
+
+h5 {
+    @include hlmedium($hFontM);
 }
 
 p {
