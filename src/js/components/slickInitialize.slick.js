@@ -6,7 +6,6 @@ $('.carousel_tile_1').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: false,
-  adaptiveHeight: true
   responsive: [
     {
       breakpoint: 768,
@@ -25,7 +24,6 @@ $('.carousel_tile_2').slick({
   slidesToShow: 2,
   slidesToScroll: 1,
   autoplay: false,
-  adaptiveHeight: true
   responsive: [
     {
       breakpoint: 768,
@@ -44,7 +42,6 @@ $('.carousel_tile_3').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   autoplay: false,
-  adaptiveHeight: true
   responsive: [
     {
       breakpoint: 1280,
@@ -69,7 +66,8 @@ $('.property-carousel').slick({
   infinite: true,
   speed: 300,
   slidesToShow: 1,
-  arrows: true
+  arrows: true,
+  adaptiveHeight: true
 });
 
 $('.quote-slider').slick({
