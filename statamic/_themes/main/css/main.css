@@ -3489,6 +3489,15 @@ footer .footer-divider {
   padding-left: 20px;
   color: #999999; }
 
+.property-page .container {
+  padding-left: 0;
+  padding-right: 0; }
+
+@media (min-width: 768px) {
+  .property-page .container {
+    padding-left: 15px;
+    padding-right: 15px; } }
+
 .property-page .sticky-wrapper {
   position: relative;
   box-sizing: border-box;
@@ -3623,9 +3632,13 @@ footer .footer-divider {
   clear: both; }
 
 .property-carousel img {
-  max-height: 585px;
+  max-height: 206px;
   text-align: center;
   margin: auto; }
+
+@media (min-width: 768px) {
+  .property-carousel img {
+    max-height: 585px; } }
 
 .agent-container {
   margin-right: 30px; }

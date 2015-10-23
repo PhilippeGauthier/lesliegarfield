@@ -1,5 +1,15 @@
 
 .property-page {
+	.container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	@include breakpoint($small) {
+		.container {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
 	.sticky-wrapper {
 		position: relative;
 		@include span(320px no-gutter);
@@ -91,10 +101,16 @@
 	@include span (full no-gutter);
 	@include clearfix;
 	img {
-		max-height: 585px;
+		max-height: 206px;
 		text-align: center;
 		margin: auto;
 	}
+	@include breakpoint($small) {
+		img {
+			max-height: 585px;
+		}
+	}
+
 	background-color: $bg-light-gray;
 }
 
