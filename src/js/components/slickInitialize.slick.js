@@ -66,8 +66,7 @@ $('.property-carousel').slick({
   infinite: true,
   speed: 300,
   slidesToShow: 1,
-  arrows: true,
-  adaptiveHeight: true
+  arrows: true
 });
 
 $('.quote-slider').slick({
