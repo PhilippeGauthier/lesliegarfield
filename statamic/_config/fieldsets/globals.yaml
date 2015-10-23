@@ -22,6 +22,9 @@ fields:
   email_support:
     type: text
     display: Company Support Email Address
+  email_info:
+    type: text
+    display: Company Info Email Address
   email:
     type: text
     display: Company Email Address
