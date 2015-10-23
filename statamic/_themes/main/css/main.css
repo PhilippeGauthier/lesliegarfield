@@ -5198,6 +5198,9 @@ footer .footer-divider {
 .landing-sub-nav svg * {
   fill: #009B77; }
 
+.landing-sub-nav p {
+  max-width: 80%; }
+
 @media (min-width: 992px) {
   .landing-sub-nav .grid-3 {
     position: relative;
@@ -5209,6 +5212,8 @@ footer .footer-divider {
     clear: both; }
   .landing-sub-nav .grid-3:focus {
     outline: none; }
+  .landing-sub-nav .grid-3 p {
+    max-width: 100%; }
   .landing-sub-nav figure {
     position: absolute;
     top: 50%;

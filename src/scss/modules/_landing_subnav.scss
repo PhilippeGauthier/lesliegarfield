@@ -13,6 +13,9 @@
 		width: 80px;
 		margin-bottom: 10px;
 	}
+	p {
+		max-width: 80%;
+	}
 	@include breakpoint($medium) {
 		.grid-3 {
 			position: relative;
@@ -21,6 +24,9 @@
 			padding-bottom: 0;
 			&:focus {
 				outline: none;
+			}
+			p {
+				max-width: 100%;
 			}
 		}
 		figure {
