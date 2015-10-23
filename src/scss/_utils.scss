@@ -150,7 +150,7 @@ $fontHuge: 70px;
     font-family: $font;
     font-size: $fontSmallMedium;
     line-height: 1.55*$fontSmallMedium;
-    @include breakpoint($medium) {
+    @include breakpoint($small) {
         font-size: $fontXLarge;
         line-height: 1.55*$fontXLarge;
     }

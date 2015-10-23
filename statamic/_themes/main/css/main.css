@@ -2112,7 +2112,7 @@ h3 {
   font-size: 18px;
   line-height: 27.9px; }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   h3 {
     font-size: 34px;
     line-height: 52.7px; } }
@@ -4822,7 +4822,7 @@ footer .footer-divider {
   line-height: 27.9px;
   margin-bottom: 30px; }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .contact .sales h3, .contact .info h3 {
     font-size: 34px;
     line-height: 52.7px; } }
@@ -6023,7 +6023,7 @@ section.faq {
   font-size: 18px;
   line-height: 27.9px; }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .featured h3 {
     font-size: 34px;
     line-height: 52.7px; } }
