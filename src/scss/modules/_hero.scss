@@ -55,14 +55,15 @@
 		@include btn-garfield(10px, 35px, 10px);
 		margin-top: 15px;
 	}
+	h3 {
+		max-width: 700px;
+	}
 	@include breakpoint($medium) {
 		height: 550px;
 		h1 {
 			margin-bottom: 0;
 		}
-		h3 {
-			max-width: 700px;
-		}
+
 		a {
 			@include btn-garfield(20px, 70px, 12px);
 		}
