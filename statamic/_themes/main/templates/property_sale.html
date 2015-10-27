@@ -1,6 +1,45 @@
 <section class="leading property-page bg-gray">
 	<div class="container">
 
+		<aside class="sticky">
+		<div class="agent-container">
+			<div class="agent property-agents">
+				<div class="dotted"></div>
+				{{ relate:agents }}
+				<div class="agent-block">
+					<a class="agent-image" href="{{ url }}">
+						<img src="{{ transform src="{{ image }}" width="300" }}" class="img-circle" />
+					</a>
+					<div class="agent-details">
+						<a href="{{ url }}"><span>{{ title }}</span></a>
+						<ul>
+							{{ if phone }}<li>{{ theme:partial src="svg/phone" }} {{ phone }}</li>{{ endif }}
+							{{ if email }}<li>{{ theme:partial src="svg/mail" }} {{ email|link }}</li>{{ endif }}
+						</ul>
+					</div>
+				</div>
+				{{ /relate:agents }}
+
+			</div>
+			<div class="dotted"></div>
+			<div class="agent property-downloads">
+				<a href="{{ brochure }}" target="_blank">
+					{{ theme:partial src="svg/download" }}
+					<span>Download</span>
+				</a>
+				<a href="{{ floor_plans }}" target="_blank">
+					{{ theme:partial src="svg/floorplans" }}
+					<span>Floorplans</span>
+				</a>
+			</div>
+			<div class="dotted"></div>
+			<div class="agent property-schedule">
+				<a href="{{ url }} properties" class="btn btn-garfield">Schedule a viewing</a>
+			</div>
+			<div class="dotted"></div>
+			</div>
+		</aside>
+
 		<main>
 			<div class="property-info">
 
@@ -268,44 +307,7 @@
 			</div>
 		</main>
 
-		<aside class="sticky">
-		<div class="agent-container">
-			<div class="agent property-agents">
-				<div class="dotted"></div>
-				{{ relate:agents }}
-				<div class="agent-block">
-					<a class="agent-image" href="{{ url }}">
-						<img src="{{ transform src="{{ image }}" width="300" }}" class="img-circle" />
-					</a>
-					<div class="agent-details">
-						<a href="{{ url }}"><span>{{ title }}</span></a>
-						<ul>
-							<li>{{ theme:partial src="svg/phone" }} {{ phone }}</li>
-							<li>{{ theme:partial src="svg/mail" }} {{ email|link }}</li>
-						</ul>
-					</div>
-				</div>
-				{{ /relate:agents }}
 
-			</div>
-			<div class="dotted"></div>
-			<div class="agent property-downloads">
-				<a href="{{ brochure }}" target="_blank">
-					{{ theme:partial src="svg/download" }}
-					<span>Download</span>
-				</a>
-				<a href="{{ floor_plans }}" target="_blank">
-					{{ theme:partial src="svg/floorplans" }}
-					<span>Floorplans</span>
-				</a>
-			</div>
-			<div class="dotted"></div>
-			<div class="agent property-schedule">
-				<a href="{{ url }} properties" class="btn btn-garfield">Schedule a viewing</a>
-			</div>
-			<div class="dotted"></div>
-			</div>
-		</aside>
 
 	</div>
 </section>

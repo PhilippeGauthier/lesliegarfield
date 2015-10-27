@@ -12,8 +12,8 @@
 					<div class="agent-details">
 						<a href="{{ url }}"><span>{{ title }}</span></a>
 						<ul>
-							<li>{{ theme:partial src="svg/phone" }} {{ phone }}</li>
-							<li>{{ theme:partial src="svg/mail" }} {{ email|link }}</li>
+							{{ if phone }}<li>{{ theme:partial src="svg/phone" }} {{ phone }}</li>{{ endif }}
+							{{ if email }}<li>{{ theme:partial src="svg/mail" }} {{ email|link }}</li>{{ endif }}
 						</ul>
 					</div>
 				</div>
