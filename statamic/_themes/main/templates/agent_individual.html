@@ -5,7 +5,7 @@
 			<img class="circle" src="{{ path src="{{ image }}" }}" class="img-circle" />
 			<div class="agent-name">{{ title }}</div>
 			<ul>
-				<li>{{ theme:partial src="svg/phone" }} {{ phone }}</li>
+				{{ if phone }}<li>{{ theme:partial src="svg/phone" }} {{ phone }}</li>{{ endif }}
 				<li>{{ theme:partial src="svg/mail" }} {{ email|link }}</li>
 			</ul>
 			<div class="dotted"></div>
@@ -16,76 +16,26 @@
 				<h2>{{ title }}</h2>
 				{{ info }}
 			</div>
+
 			{{ if press|not_empty }}
 			<div class="green-specs">
 				<h3>PRESS</h3>
 				<div class="press">
-				
-				{{ if press|length > 1 }}
-				<div class="carousel_tile carousel_tile_2 main_tile">
-				{{ press }}
-				<div>
-				{{ if link === "" }}
-				 <div class="carousel-tile press-item">
-					<div>
-						{{ if image|not_empty }}
-						<img src="{{ path src="{{ image }}" }}">
-						{{ endif }}
-						{{ if text|not_empty }}
-						<p>{{ text }}</p>
-						{{ endif }}
-						</div>
-				 </div>
-				 {{ else }}
-				 <a target="_blank" href="{{ link }}" class="carousel-tile press-item">
-					<div>
-						{{ if image|not_empty }}
-						<img src="{{ path src="{{ image }}" }}">
-						{{ endif }}
-						{{ if text|not_empty }}
-						<p>{{ text }}</p>
-						{{ endif }}
-						</div>
-				 </a>
-				{{ endif }}
-				 </div>
-				 {{ /press }}
-				</div>
-				{{ else }}
-
-				<div class="carousel_tile carousel_tile_1 main_tile">
-				{{ press }}
-				<div>
-				{{ if link === "" }}
-				 <div class="carousel-tile press-item">
-					<div>
-						{{ if image|not_empty }}
-						<img src="{{ path src="{{ image }}" }}">
-						{{ endif }}
-						{{ if text|not_empty }}
-						<p>{{ text }}</p>
-						{{ endif }}
-						</div>
-				 </div>
-				 {{ else }}
-				 <a target="_blank" href="{{ link }}" class="carousel-tile press-item">
-					<div>
-						{{ if image|not_empty }}
-						<img src="{{ path src="{{ image }}" }}">
-						{{ endif }}
-						{{ if text|not_empty }}
-						<p>{{ text }}</p>
-						{{ endif }}
-						</div>
-				 </a>
-				{{ endif }}
-				 </div>
-				 {{ /press }}
-				</div>
-				{{ endif }}
-				
-				</div>
+					{{ if press|length <= 1 }}
+					<div class="carousel_tile carousel_tile_1 main_tile">
+						{{ press }}
+							{{ theme:partial src="press_item" use_context="true" }}
+						{{ /press }}
+					</div>
+					{{ else }}
+					<div class="carousel_tile carousel_tile_2 main_tile">
+					{{ press }}
+							{{ theme:partial src="press_item" use_context="true" }}
+						{{ /press }}
+					</div>
+					{{ endif }}
 			</div>
+			{{ else }}
 			{{ endif }}
 
 			{{ entries:listing folder="properties/new-york/sale|properties/new-york/lease|properties/international/sale|properties/international/lease" conditions="agents:{url}" }}

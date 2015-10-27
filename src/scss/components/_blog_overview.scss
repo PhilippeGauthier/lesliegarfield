@@ -19,11 +19,13 @@
 		.truncated {
 			display: none;
 		}
-		@include breakpoint($medium) {
-			@include span (7 of 12 after);
+		@include breakpoint($tiny) {
 			.truncated {
 				display: block;
 			}
+		}
+		@include breakpoint($medium) {
+			@include span (7 of 12 after);
 		}
 	}
 	.blog-right {
@@ -54,7 +56,13 @@
 
 	}
 	.preview-image-container {
-		@include span(3 of 7 no-gutter);
+		@include span(full no-gutter);
+		margin-bottom: 30px;
+		@include breakpoint($tiny) {
+			margin-bottom: 0;
+			@include span(3 of 7 no-gutter);
+		}
+		
 		@include clearfix;
 		position: relative;	
 	}
@@ -82,6 +90,7 @@
 	.preview-image {
 		width: 100%;
 		padding-top: 100%;
+		
 		display: block;
 		position: relative;
 		background-position:center;
@@ -105,8 +114,13 @@
 		}
 	}
 	.preview,.blog.blog-entry {
-		@include span(last 4 of 7 );
-		padding-left: 30px;
+		@include span(full);
+		@include breakpoint($tiny) {
+			@include span(last 4 of 7 );
+			padding-left: 30px;
+		}
+		
+		
 		.divider {
 			height: 1px;
 			width: 60px;

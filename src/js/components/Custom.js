@@ -12,10 +12,10 @@ var pageWrap = $('.page-wrap');
 $(".report-expander").click(function() {
   event.preventDefault();
   if ($(this).children().first().hasClass('fa-plus-circle')) {
-    $(this).children('span').html('Fewer Reports');
+    $(this).children('span').html('FEWER REPORTS');
   }
   else if ($(this).children().first().hasClass('fa-minus-circle')) {
-   $(this).children('span').html('More Reports');
+   $(this).children('span').html('MORE REPORTS');
   }
 });
 

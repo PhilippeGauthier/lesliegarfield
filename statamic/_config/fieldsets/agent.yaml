@@ -30,13 +30,19 @@ fields:
 				destination: assets/img/agents
 				allowed: [png, gif, jpg, jpeg]
 				display: Press Image
-				width: 33%
+				width: 25%
+			file:
+				type: file
+				destination: assets/img/agents
+				display: File Upload
+				width: 25%
 			text:
 				type: textarea
 				display: Preview Text
 			link:
 				type: text
 				display: Press Link
+
 	author:
 		type: checkbox
 		display: Show up in Author Blog List
