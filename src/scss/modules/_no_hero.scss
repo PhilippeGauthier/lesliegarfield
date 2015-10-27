@@ -1,0 +1,23 @@
+.no-hero-header {
+	margin-top: 78px;
+	padding: 30px 0;
+	margin-bottom: $bPadding;
+	.container {
+		color: white;
+	}
+	&.faq-header {
+		background-color: $text-green;
+	}
+	&.terms-header {
+		background-color: darken(lightgray,20%);
+		// h2 {
+		// 	color: $dark-gray;
+		// }
+	}
+
+}
+
+.no-hero {
+	margin-top: 0;
+	padding-top: 0;
+}

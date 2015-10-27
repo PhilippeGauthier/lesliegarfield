@@ -14,8 +14,15 @@
 			transition: all .15s;
 		}
 		i {
+			position: relative;
+			font-size: 18px;
 			@include vertical-align;
+			&.fa-envelope {
+				font-size: 15px;
+				top: 44%;
+			}
 		}
+
 		&.left-align {
 			a {
 				margin-right: 5px;
@@ -26,10 +33,6 @@
 			a {
 				margin-left: 5px;
 			}
-		}
-		i {
-			position: relative;
-			font-size: 18px;
 		}
 		&.gray {
 			@include social(32px, $light-font-color);

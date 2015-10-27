@@ -71,6 +71,7 @@
 			<p class="light">* These numbers are averages and fluctuate frequently. Contact us for the most up-to-date data on NYC neighborhoods and blocks.</p>
 		</div>
 	</section>
+
 	<section class="bg-seafoam">
 		<a id="other_properties" class="secondary-nav-link"></a>
 		<div class="container">
@@ -79,11 +80,30 @@
 			{{ if no_results }}
 			<p class="no_results">We are currently have no other properties for sale or lease in this neighborhood. Be sure to check back soon.</p>
 			{{ else }}
-			{{ theme:partial src="property_tile" use_context="true" }}
+			{{ if first }}
+			<div class="property_tile">
+			<div class="tile-container">
+
+			{{ if total_results == 1}}
+			<div class="carousel_tile carousel_tile_1">
+			{{ elseif total_results == 2 }}
+			<div class="carousel_tile carousel_tile_2">
+			{{ else }}
+			<div class="carousel_tile carousel_tile_3">
+			{{ endif }}
+			
+			{{ endif }}
+				{{ theme:partial src="property_tile" use_context="true" }}
+			{{ if last }}        
+			</div>
+			</div>
+			</div>
+			{{ endif }}
 			{{ endif }}
 			{{ /entries:listing }}
 		</div>
 	</section>
+
 	<section id="other_neighborhoods" class="bg-gray">
 		<div class="container">
 			<div class="section-title">OTHER NEIGHBORHOODS</div>

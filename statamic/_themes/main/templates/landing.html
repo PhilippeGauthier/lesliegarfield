@@ -53,6 +53,13 @@
 				</a>
 		</div>
 	</section>
+
+
+
+{{ entries:listing folder="properties/new-york/sale|properties/new-york/lease" sort_by="random" }}
+{{ if no_results }}
+{{ else }}
+{{ if first }}
 	<section class="circle-icon bg-seafoam">
 		<div class="circle-leader">
 			<div class="circle bg-seafoam">
@@ -61,11 +68,30 @@
 			<h4>FEATURED NEW YORK PROPERTIES</h4>
 		</div>
 		<div class="container">
-			{{ entries:listing folder="properties/new-york/sale|properties/new-york/lease" sort_by="random" }}
-				{{ theme:partial src="property_tile" use_context="true" }}
-			{{ /entries:listing }}
+		<div class="property_tile">
+		<div class="tile-container">
+
+		{{ if total_results == 1 }}
+		<div class="carousel_tile carousel_tile_1">
+		{{ elseif total_results == 2 }}
+		<div class="carousel_tile carousel_tile_2">
+		{{ else }}
+		<div class="carousel_tile carousel_tile_3">
+		{{ endif }}
+		
+		{{ endif }}
+			{{ theme:partial src="property_tile" use_context="true" }}
+		{{ if last }}        
 		</div>
-	</section>
+		</div>
+		</div>
+	</div>
+</section> 
+{{ endif }}
+
+{{ endif }}
+{{ /entries:listing }}
+
 	<section>
 		<div class="circle-leader">
 			<div class="circle white">
@@ -100,7 +126,14 @@
 
 		</div>
 	</section>
-		<section class="circle-icon light-gray-bg">
+
+
+
+{{ entries:listing folder="properties/international/sale|properties/international/lease" sort_by="random" }}
+{{ if no_results }}
+{{ else }}
+{{ if first }}
+	<section class="circle-icon light-gray-bg">
 		<div class="circle-leader">
 			<div class="circle light-gray-bg">
 				{{ theme:partial src="svg/international" }}
@@ -108,8 +141,26 @@
 			<h4>FEATURED INTERNATIONAL PROPERTIES</h4>
 		</div>
 		<div class="container">
-			{{ entries:listing folder="properties/international/sale|properties/international/lease" sort_by="random" }}
-				{{ theme:partial src="property_tile" use_context="true" }}
-			{{ /entries:listing }}
+		<div class="property_tile">
+		<div class="tile-container">
+
+		{{ if total_results == 1 }}
+		<div class="carousel_tile carousel_tile_1">
+		{{ elseif total_results == 2 }}
+		<div class="carousel_tile carousel_tile_2">
+		{{ else }}
+		<div class="carousel_tile carousel_tile_3">
+		{{ endif }}
+		
+		{{ endif }}
+			{{ theme:partial src="property_tile" use_context="true" }}
+		{{ if last }}        
 		</div>
-	</section>
+		</div>
+		</div>
+	</div>
+</section> 
+{{ endif }}
+
+{{ endif }}
+{{ /entries:listing }}

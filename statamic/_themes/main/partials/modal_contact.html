@@ -11,10 +11,18 @@
         <h3>Get in touch to make a more informed decision about your property with a Garfield Valuation</h3>
         {{ raven:form formset="valuation" attr="class:multi"}}
         <div class="input-clear">
-          <input class="input" placeholder="Listing Address" type="text" name="address">
-          <input class="input" placeholder="First &amp; Last Name" type="text" name="name">
-          <input class="input" placeholder="Phone Number" type="text" name="phone">
-          <input class="input" placeholder="Email Address" type="text" name="email">
+          <div class="form">
+            <input class="input" placeholder="Listing Address" type="text" name="address">
+          </div>
+          <div class="form">
+            <input class="input" placeholder="First &amp; Last Name" type="text" name="name">
+          </div>
+          <div class="form">
+            <input class="input" placeholder="Phone Number" type="text" name="phone">
+          </div>
+          <div class="form">
+            <input class="input" placeholder="Email Address" type="text" name="email">
+          </div>
         </div>
           <input type="submit" value="SEND" class="btn-garfield">
         {{ /raven:form }}

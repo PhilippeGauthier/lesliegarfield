@@ -88,9 +88,28 @@
 			</div>
 			{{ endif }}
 
-				
 			{{ entries:listing folder="properties/new-york/sale|properties/new-york/lease|properties/international/sale|properties/international/lease" conditions="agents:{url}" }}
-				{{ theme:partial src="property_tile_agent" use_context="true" }}  
+			{{ if no_results }}
+			{{ else }}
+			{{ if first }}
+			<div class="agent-properties bg-gray">
+			<h2>Current Listings</h2>
+
+					{{ if total_results == 1 }}
+					<div class="carousel_tile carousel_tile_1 agent_tile">
+					{{ elseif total_results > 1 }}
+					<div class="carousel_tile carousel_tile_2 agent_tile">
+					{{ endif }}
+					
+					{{ endif }}
+						{{ theme:partial src="property_tile" use_context="true" }}
+					{{ if last }}        
+				
+					</div>
+					</div>
+			{{ endif }}
+
+			{{ endif }}
 			{{ /entries:listing }}
 			
 			{{ entries:listing folder="properties/new-york/sale|properties/new-york/sold|properties/international/sale|properties/international/sold" conditions="agents:{url}, streeteasy_status:sold" sort_by="price" sort_dir="desc" }}

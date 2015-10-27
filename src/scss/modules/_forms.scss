@@ -1,6 +1,6 @@
 .input-clear {
 	@include clearfix;
-	input {
+	.form {
 		@include breakpoint($medium) {
 			@include gallery(1 of 2 after .025 break);
 		}

@@ -282,14 +282,22 @@
 		<div class="circle similar-properties-gray">
 			{{ theme:partial src="svg/home_building" }}
 		</div>
-		<h4>Similar Properties</h4>
+		<h4>SIMILAR PROPERTIES</h4>
 	</div>
 	<div class="container">
 		<div class="property_tile">
 		<div class="tile-container">
+
+		{{ if total_results == 1}}
+		<div class="carousel_tile carousel_tile_1">
+		{{ elseif total_results == 2 }}
+		<div class="carousel_tile carousel_tile_2">
 		{{ else }}
+		<div class="carousel_tile carousel_tile_3">
+		{{ endif }}
+		
+		{{ endif }}
 			{{ theme:partial src="property_tile" use_context="true" }}
-			{{ endif }}
 		{{ if last }}        
 		</div>
 		</div>
@@ -297,6 +305,7 @@
 	</div>
 </section> 
 {{ endif }}
+
 {{ endif }}
 {{ /entries:listing }}
 

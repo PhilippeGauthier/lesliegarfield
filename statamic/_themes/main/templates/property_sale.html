@@ -310,22 +310,39 @@
 	</div>
 </section>
 
+{{ entries:listing folder="properties/new-york/sale|properties/international/sale" conditions="url:!{url}, property_location:{ property_location }"  }}
+{{ if no_results }}
+{{ else }}
+{{ if first }}
 <section class="circle-icon similar-properties-gray" id="featured-properties">
 	<div class="circle-leader">
 		<div class="circle similar-properties-gray">
 			{{ theme:partial src="svg/home_building" }}
 		</div>
-		<h4>Similar Properties</h4>
+		<h4>SIMILAR PROPERTIES</h4>
 	</div>
 	<div class="container">
 		<div class="property_tile">
-			{{ entries:listing folder="properties/new-york/sale|properties/international/sale" conditions="url:!{url}, property_location:{ property_location }"  }}
-			{{ if no_results }}
-			<p class="no_results">We are currently have no other properties for sale in this neighborhood. Be sure to check back soon.</p>
-			{{ else }}
+		<div class="tile-container">
+
+		{{ if total_results == 1}}
+		<div class="carousel_tile carousel_tile_1">
+		{{ elseif total_results == 2 }}
+		<div class="carousel_tile carousel_tile_2">
+		{{ else }}
+		<div class="carousel_tile carousel_tile_3">
+		{{ endif }}
+		
+		{{ endif }}
 			{{ theme:partial src="property_tile" use_context="true" }}
-			{{ endif }}		        
-			{{ /entries:listing }}
+		{{ if last }}        
+		</div>
+		</div>
 		</div>
 	</div>
-</section>
+</section> 
+{{ endif }}
+
+{{ endif }}
+{{ /entries:listing }}
+

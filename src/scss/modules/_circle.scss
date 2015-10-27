@@ -11,7 +11,7 @@
 		@include clearfix;
 	}
 	.circle {
-		margin: 0 auto;
+		margin: 0 auto 18px;
 		box-sizing: border-box;
 		@include circle($size);
 		svg {
