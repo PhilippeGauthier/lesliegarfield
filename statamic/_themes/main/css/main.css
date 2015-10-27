@@ -3085,7 +3085,7 @@ header button {
 header button .patty {
   display: block;
   width: 24px;
-  height: 3px;
+  height: 2px;
   margin: 10px 0;
   transition: all 0.3s;
   background: none; }
@@ -3094,7 +3094,7 @@ header button .patty:before, header button .patty:after {
   content: '';
   display: block;
   width: 24px;
-  height: 3px;
+  height: 2px;
   background: #25282A;
   position: absolute;
   z-index: -1;
@@ -3112,12 +3112,12 @@ header button.collapsed .patty {
   background-color: #25282A; }
 
 header button.collapsed .patty:before {
-  top: 10px;
+  top: 12px;
   -webkit-transform: rotate(0);
   transform: rotate(0); }
 
 header button.collapsed .patty:after {
-  bottom: 10px;
+  bottom: 12px;
   -webkit-transform: rotate(0);
   transform: rotate(0); }
 
