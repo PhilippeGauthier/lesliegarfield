@@ -6117,8 +6117,7 @@ section.faq {
   float: left;
   padding-left: 1.25%;
   padding-right: 1.25%;
-  padding: 30px;
-  padding-right: 100px; }
+  padding: 15px; }
 
 .featured h3 {
   margin-bottom: .5em;
@@ -6142,7 +6141,9 @@ section.faq {
   .featured .post-details {
     box-sizing: border-box;
     width: 50%;
-    float: right; } }
+    float: right;
+    padding: 30px;
+    padding-right: 100px; } }
 
 .social {
   margin-top: 20px;
