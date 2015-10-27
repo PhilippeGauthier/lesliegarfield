@@ -4632,7 +4632,7 @@ footer .footer-divider {
   .blog .blog-left .truncated {
     display: block; } }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .blog .blog-left {
     width: 57.62712%;
     float: left;
