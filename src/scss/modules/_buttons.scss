@@ -7,7 +7,7 @@
 // }
 
 .btn-contact {
-	@include breakpoint($small) {
+	@include breakpoint($medium) {
 		padding: 6px 10px;
 		border: 1px solid $text-green;
 		border-radius: 2px;

@@ -3079,7 +3079,51 @@ header li a .left {
 header li a:focus {
   outline: none; }
 
-@media (min-width: 768px) {
+header button {
+  transition: all 0.6s cubic-bezier(0.7, 0.01, 0.3, 1); }
+
+header button .patty {
+  display: block;
+  width: 24px;
+  height: 3px;
+  margin: 10px 0;
+  transition: all 0.3s;
+  background: none; }
+
+header button .patty:before, header button .patty:after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #25282A;
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s; }
+
+header button .patty:before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+header button .patty:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+header button.collapsed .patty {
+  background-color: #25282A; }
+
+header button.collapsed .patty:before {
+  top: 10px;
+  -webkit-transform: rotate(0);
+  transform: rotate(0); }
+
+header button.collapsed .patty:after {
+  bottom: 10px;
+  -webkit-transform: rotate(0);
+  transform: rotate(0); }
+
+@media (min-width: 992px) {
+  header .patty {
+    display: none; }
   header .navbar-right {
     padding-right: 15px; }
   header .nvabar-toggle {
@@ -5056,7 +5100,7 @@ footer .footer-divider {
   .hero.landing h5 {
     max-width: 500px; } }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .btn-contact {
     padding: 6px 10px;
     border: 1px solid #009B77;
@@ -6170,7 +6214,8 @@ section.faq {
   text-align: right;
   color: #999999;
   margin-top: 0;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  border: none; }
 
 .social.footer a {
   color: #999999;
@@ -6184,6 +6229,15 @@ section.faq {
 
 .social.footer i {
   line-height: 32px; }
+
+.social.footer a {
+  background: none;
+  border: none;
+  margin: 0; }
+
+.social.footer a:hover {
+  color: white;
+  background: none; }
 
 .no-hero-header {
   margin-top: 78px;

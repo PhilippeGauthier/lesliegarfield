@@ -48,5 +48,16 @@
 			@include social(32px, $footer-gray);
 			margin-top: 0;
 			margin-bottom: 0;
+			border: none;
+			
+			a {
+				background: none;
+				border: none;
+				margin: 0;
+				&:hover {
+					color: white;
+					background:none;
+				}
+			}
 		}	
 	}
