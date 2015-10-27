@@ -26,6 +26,10 @@
 		}
 		@include breakpoint($medium) {
 			@include span (7 of 12 after);
+			.entry {
+				margin-bottom: $bPadding;
+				padding-bottom: $bPadding;
+			}
 		}
 	}
 	.blog-right {
@@ -49,9 +53,9 @@
 		@include span(full no-gutter);
 	}
 	.entry {
-		margin-bottom: $bPadding;
+		margin-bottom: $bPadding/2;
 		border-bottom: 1px solid $light-font-color;
-		padding-bottom: $bPadding;
+		padding-bottom: $bPadding/2;
 		@include span(full no-gutter);
 
 	}

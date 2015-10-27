@@ -4636,7 +4636,10 @@ footer .footer-divider {
   .blog .blog-left {
     width: 57.62712%;
     float: left;
-    margin-right: 1.69492%; } }
+    margin-right: 1.69492%; }
+  .blog .blog-left .entry {
+    margin-bottom: 60px;
+    padding-bottom: 60px; } }
 
 .blog .blog-right {
   box-sizing: border-box;
@@ -4676,9 +4679,9 @@ footer .footer-divider {
   float: left; }
 
 .blog .entry {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   border-bottom: 1px solid #999999;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   box-sizing: border-box;
   width: 100%;
   float: left; }
