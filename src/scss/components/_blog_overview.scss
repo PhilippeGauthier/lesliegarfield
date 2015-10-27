@@ -23,8 +23,11 @@
 			.truncated {
 				display: block;
 			}
+			.entry {
+				padding-bottom: $bPadding/2;
+			}
 		}
-		@include breakpoint($tiny) {
+		@include breakpoint($medium) {
 			@include span (7 of 12 after);
 			.entry {
 				margin-bottom: $bPadding;
@@ -97,7 +100,7 @@
 		display: block;
 		position: relative;
 		background-position:center;
-		@include breakpoint($small) {
+		@include breakpoint($tiny) {
 			padding-top: 100%;
 		}
 	}
