@@ -4726,10 +4726,14 @@ footer .footer-divider {
 
 .blog .preview-image {
   width: 100%;
-  padding-top: 100%;
+  padding-top: 75%;
   display: block;
   position: relative;
   background-position: center; }
+
+@media (min-width: 768px) {
+  .blog .preview-image {
+    padding-top: 100%; } }
 
 .blog .date, .blog .author {
   text-transform: none;

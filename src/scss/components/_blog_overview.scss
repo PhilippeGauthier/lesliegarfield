@@ -93,11 +93,13 @@
 	}
 	.preview-image {
 		width: 100%;
-		padding-top: 100%;
-		
+		padding-top: 75%;
 		display: block;
 		position: relative;
 		background-position:center;
+		@include breakpoint($small) {
+			padding-top: 100%;
+		}
 	}
 	.date,.author {
 		text-transform: none;
