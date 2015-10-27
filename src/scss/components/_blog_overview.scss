@@ -24,7 +24,7 @@
 				display: block;
 			}
 		}
-		@include breakpoint($medium) {
+		@include breakpoint($small) {
 			@include span (7 of 12 after);
 			.entry {
 				margin-bottom: $bPadding;
@@ -93,7 +93,7 @@
 	}
 	.preview-image {
 		width: 100%;
-		padding-top: 75%;
+		padding-top: 60%;
 		display: block;
 		position: relative;
 		background-position:center;
