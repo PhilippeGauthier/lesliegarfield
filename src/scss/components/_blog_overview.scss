@@ -55,7 +55,7 @@
 	.entry {
 		margin-bottom: $bPadding/2;
 		border-bottom: 1px solid $light-font-color;
-		padding-bottom: $bPadding/2;
+		padding-bottom: 0;
 		@include span(full no-gutter);
 
 	}

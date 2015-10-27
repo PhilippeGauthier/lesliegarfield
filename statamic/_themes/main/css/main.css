@@ -4681,7 +4681,7 @@ footer .footer-divider {
 .blog .entry {
   margin-bottom: 30px;
   border-bottom: 1px solid #999999;
-  padding-bottom: 30px;
+  padding-bottom: 0;
   box-sizing: border-box;
   width: 100%;
   float: left; }
