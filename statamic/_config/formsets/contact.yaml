@@ -66,12 +66,8 @@ control_panel:
     - email
     - phone
   metrics:
-    -
-      type: average
-      field: phone
-      label: Average phone Stranded
     - 
-      type: sum
-      field: phone
-      label: Total phone Stranded
+      type: count
+      field: email
+      label: Total Forms Received
 

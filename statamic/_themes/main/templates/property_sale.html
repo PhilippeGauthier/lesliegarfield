@@ -3,7 +3,7 @@
 
 		<aside class="sticky">
 		<div class="agent-container">
-			<div class="agent property-agents">
+			<div class="agent property-agents aside">
 				<div class="dotted"></div>
 				{{ relate:agents }}
 				<div class="agent-block">
@@ -81,9 +81,9 @@
 						{{ if openhouse }}
 						{{ openhouse_grid }}
 						{{ if date|not_empty }}
-						<span class="red">Open House: {{date format="D, m/j" }}, {{startTime}} - {{ endTime }}</span>
+						<span class="red"><i class="fa fa-home"></i> {{date format="D, m/j" }}, {{startTime}} - {{ endTime }}</span>
 						{{ else }}
-						<span class="red">Open House: Enquire for Details</span>
+						<span class="red"><i class="fa fa-home"></i> Enquire for Details</span>
 						{{ endif }}
 						{{ /openhouse_grid }}
 						{{ elseif streeteasy_status != "Active" }}
@@ -101,7 +101,24 @@
 					</div>
 					{{ /photo_carousel}}
 				</div>
-
+				<div class="agent-internal">
+					<div class="agent property-agents">
+						{{ relate:agents }}
+						<div class="agent-block">
+							<a class="agent-image" href="{{ url }}">
+								<img src="{{ transform src="{{ image }}" width="300" }}" class="img-circle" />
+							</a>
+							<div class="agent-details">
+								<a href="{{ url }}"><span>{{ title }}</span></a>
+								<ul>
+									{{ if phone }}<li>{{ theme:partial src="svg/phone" }} {{ phone }}</li>{{ endif }}
+									{{ if email }}<li>{{ theme:partial src="svg/mail" }} {{ email|link }}</li>{{ endif }}
+								</ul>
+							</div>
+						</div>
+						{{ /relate:agents }}
+					</div>
+				</div>
 				<div class="green-specs">
 					<div class="specs">
 					<div class="title">

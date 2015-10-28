@@ -3568,10 +3568,17 @@ footer .footer-divider {
   padding-left: 0;
   padding-right: 0; }
 
+.property-page aside {
+  display: none; }
+
 @media (min-width: 768px) {
   .property-page .container {
     padding-left: 15px;
     padding-right: 15px; } }
+
+@media (min-width: 992px) {
+  .property-page aside {
+    display: block; } }
 
 .property-page .sticky-wrapper {
   position: relative;
@@ -3641,7 +3648,7 @@ footer .footer-divider {
 
 .property-info .property-subheader span {
   font-family: "Copernicus-Medium";
-  font-size: 16px;
+  font-size: 15px;
   color: #999999; }
 
 .property-info .property-subheader .location {
@@ -3653,40 +3660,54 @@ footer .footer-divider {
 
 .property-info .property-subheader .location.split {
   box-sizing: border-box;
-  width: 55.55556%;
+  width: 100%;
   float: left;
-  padding-left: 1.11111%;
-  padding-right: 1.11111%; }
+  padding-left: 1.25%;
+  padding-right: 1.25%; }
 
 .property-info .property-subheader .open-house {
   box-sizing: border-box;
-  width: 44.44444%;
-  float: right;
-  padding-left: 1.11111%;
-  padding-right: 1.11111%;
-  text-align: right;
+  width: 100%;
+  float: left;
+  padding-left: 1.25%;
+  padding-right: 1.25%;
   height: 25px;
-  position: relative;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-end;
-  -ms-flex-align: end;
-  align-items: flex-end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end; }
+  position: relative; }
 
 .property-info .property-subheader .open-house span {
   text-align: right;
   bottom: 0;
   font-family: "Copernicus-Medium";
-  font-size: 13px;
+  font-size: 15px;
   padding-top: 4px;
   color: #CCCCCC; }
 
 .property-info .property-subheader .open-house span.red {
   color: #FF0000; }
+
+@media (min-width: 992px) {
+  .property-info .property-subheader .location.split {
+    box-sizing: border-box;
+    width: 55.55556%;
+    float: left;
+    padding-left: 1.11111%;
+    padding-right: 1.11111%; }
+  .property-info .property-subheader .open-house {
+    box-sizing: border-box;
+    width: 44.44444%;
+    float: right;
+    padding-left: 1.11111%;
+    padding-right: 1.11111%;
+    text-align: right;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; } }
 
 .dotted {
   border-bottom: 1px dotted #999999;
@@ -3722,11 +3743,18 @@ footer .footer-divider {
 .agent-container {
   margin-right: 30px; }
 
+.agent-internal {
+  display: block; }
+
+@media (min-width: 992px) {
+  .agent-internal {
+    display: none; } }
+
 .property-agents {
   color: #25282A; }
 
 @media (min-width: 992px) {
-  .property-agents {
+  .property-agents.aside {
     margin-top: 145px; } }
 
 .property-agents a {
@@ -3741,12 +3769,7 @@ footer .footer-divider {
   margin-bottom: 10px; }
 
 .property-agents .agent-block {
-  padding-bottom: 20px;
-  padding-top: 20px;
-  border-bottom: 1px dotted #999999; }
-
-.property-agents .agent-block:first-of-type {
-  padding-top: 0; }
+  padding: 10px 0; }
 
 .property-agents .agent-block:last-of-type {
   border-bottom: none; }
@@ -3764,6 +3787,9 @@ footer .footer-divider {
 
 @media (min-width: 992px) {
   .property-agents .agent-block {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #999999;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -3781,7 +3807,9 @@ footer .footer-divider {
     align-items: flex-start;
     box-sizing: border-box;
     width: 100%;
-    float: left; } }
+    float: left; }
+  .property-agents .agent-block:first-of-type {
+    padding-top: 0; } }
 
 @media (min-width: 1280px) {
   .property-agents .agent-block {
@@ -3797,10 +3825,17 @@ footer .footer-divider {
     flex-flow: row nowrap; } }
 
 .property-agents .agent-image {
+  text-align: center;
   box-sizing: border-box;
   width: 33.33333%;
   float: left;
   padding-right: 10px; }
+
+@media (min-width: 992px) {
+  .property-agents .agent-image {
+    text-align: left; }
+  .property-agents .agent-image img {
+    max-width: 100%; } }
 
 @media (min-width: 1280px) {
   .property-agents .agent-image {
@@ -3810,7 +3845,8 @@ footer .footer-divider {
 
 .property-agents img {
   border-radius: 50%;
-  border: 2px solid #F2F2F2; }
+  border: 2px solid #F2F2F2;
+  max-width: 100px; }
 
 .property-agents img:hover {
   border: 2px solid #009B77; }

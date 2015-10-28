@@ -4,10 +4,19 @@
 		padding-left: 0;
 		padding-right: 0;
 	}
+	aside {
+		display: none;
+	}
 	@include breakpoint($small) {
+
 		.container {
 			padding-left: 15px;
 			padding-right: 15px;
+		}
+	}
+	@include breakpoint($medium) {
+		aside {
+			display: block;
 		}
 	}
 	.sticky-wrapper {
@@ -59,28 +68,26 @@
 		padding-bottom: 15px;
 		span {
 			font-family: $hFontM;
-			font-size: 16px;
+			font-size: 15px;
 			color: $light-font-color;
 		}
 		.location {
 			@include span (full);
 			&.split {
-				@include span (5 of 9);
+				@include span (full);
 			}
 		}
 		.open-house {
-			@include span (last 4 of 9);
-			text-align: right;
+			@include span (full);
+			
 			height: 25px;
 			position: relative;
-			display: flex;
-			align-items: flex-end;
-			justify-content: flex-end;
+
 			span {
 				text-align: right;
 				bottom: 0;
 				font-family: $hFontM;
-				font-size: 13px;	
+				font-size: 15px;	
 				padding-top: 4px;
 				color: $modal-text;
 				&.red {
@@ -88,6 +95,18 @@
 				}
 			}
 
+		}
+		@include breakpoint($medium) {
+			.location.split {
+				@include span (5 of 9);
+			}
+			.open-house {
+				@include span (last 4 of 9);
+				text-align: right;
+				display: flex;
+				align-items: flex-end;
+				justify-content: flex-end;
+			}
 		}
 	}
 }
@@ -121,10 +140,18 @@
 	margin-right: 30px;
 }
 
-.property-agents {
-	
+.agent-internal {
+	display: block;
 	@include breakpoint($medium) {
-		margin-top: 145px;
+		display: none;
+	}
+}
+
+.property-agents {
+	&.aside {
+		@include breakpoint($medium) {
+			margin-top: 145px;
+		}	
 	}
 	color: $header-font-color;
 	a {
@@ -137,12 +164,7 @@
 		margin-bottom: 10px;
 	}
 	.agent-block {
-		padding-bottom: 20px;
-		padding-top: 20px;
-		border-bottom: 1px dotted $light-font-color;
-		&:first-of-type {
-			padding-top: 0;
-		}
+		padding: 10px 0;
 		&:last-of-type {
 		 border-bottom: none;
 		}
@@ -152,7 +174,12 @@
 		}
 		
 		@include breakpoint($medium) {
-			
+			&:first-of-type {
+				padding-top: 0;
+			}
+			padding-top: 20px;
+			padding-bottom: 20px;
+			border-bottom: 1px dotted $light-font-color;
 			@include flex-vert;
 			align-items: flex-start;
 			@include span(2 of 2 no-gutter);
@@ -164,7 +191,14 @@
 
 	}
 	.agent-image {
+		text-align: center;
 		@include span(1 of 3 no-gutter clear);
+		@include breakpoint($medium) {
+			text-align: left;
+			img {
+				max-width: 100%;
+			}
+		}
 		@include breakpoint($large) {
 			@include span (1 of 3 no-gutter);
 		}
@@ -174,6 +208,7 @@
 	img {
 		border-radius: 50%;
 		border: 2px solid $bg-gray;
+		max-width: 100px;
 		&:hover {
 			border: 2px solid $text-green;
 		}
