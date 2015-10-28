@@ -3921,6 +3921,9 @@ footer .footer-divider {
 .property-downloads svg * {
   fill: #999999; }
 
+.property-schedule {
+  text-align: center; }
+
 .property-schedule a {
   background-color: #009880;
   padding-top: 10px;
@@ -3928,10 +3931,11 @@ footer .footer-divider {
   display: block;
   color: white;
   border-radius: 0;
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
   margin-bottom: 30px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  max-width: 345px; }
 
 .property-schedule a:hover {
   background-color: #009d84;
