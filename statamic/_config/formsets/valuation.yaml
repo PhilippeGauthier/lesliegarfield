@@ -14,8 +14,10 @@ submission_save_path: _forms/_non_specific/
 allowed:
   - name
   - address
-  - email
+  - email-address
+  - listing-address
   - phone
+  - agents
 
 # You are not required to require fields, but once you do, any missing
 # from the POST will squash this submission and send a list of
@@ -51,8 +53,8 @@ messages:
 # Configure notification email
 email:
   to: pgauthier@gmail.com
-  from: dude@example.com
-  subject: The raven has flown
+  from: info@lesliegarfield.com
+  subject: '{{ listing-address }}'
   automagic: true
   # html_template: html_email
   # text_template: text_email

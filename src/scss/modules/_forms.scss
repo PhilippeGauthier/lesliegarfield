@@ -1,14 +1,11 @@
 .input-clear {
 	@include clearfix;
+	margin-bottom: 15px;
 	.form {
 		@include breakpoint($medium) {
 			@include gallery(1 of 2 after .025 break);
 		}
 	}
-}
-
-.multi {
-	@include clearfix;
 	input {
 		@include span(full);
 		margin-bottom: gutter(6);
@@ -16,26 +13,18 @@
 		border: 1px solid $dark-gray;
 		border-radius: 2px;
 		font-family: $hFontM;
-		font-size: 16px;
+		font-size: 14px;
 		color: $modal-text;
 		&:focus, &:active {
 			outline-color: $text-green;
 			outline-width: 2px;
 		}
-	}
-
-	.btn-garfield {
-		margin: auto;
-		@include btn-garfield(10px, 100px, 20px);
-		&:hover {
-			border: 1px solid $text-green;
-		}
-		&:focus {
-			outline: none;
+		@include breakpoint($small) {
+			font-size: 16px;
+			padding: 10px 10px;
 		}
 	}
-}	
-
+}
 
 .email-signup {
 	input {

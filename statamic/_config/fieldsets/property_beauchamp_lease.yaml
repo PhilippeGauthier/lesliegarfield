@@ -8,6 +8,10 @@ fields:
   title:
     type: text
     display: Property Name
+  streeteasy_type:
+    type: text
+    hide: true
+    default: rental
   street_address:
     type: text
     display: Street Address

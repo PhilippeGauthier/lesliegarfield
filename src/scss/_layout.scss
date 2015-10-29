@@ -176,17 +176,22 @@ section {
 }
 
 .grid-item {
-  @include span(12 of 12); 
+  @include span(12 of 12 after); 
   margin-bottom: gutter(4);
   @include breakpoint($tiny) {
-  	@include span(8 of 12);
+  	@include span(8 of 12 after);
   	@include pre(2 of 12);
   }
   @include breakpoint($small) {
-   	@include gallery (6 of 12 .5);
+   	@include gallery (6 of 12 .5 after);
    } 
 	@include breakpoint($medium) {
-		@include gallery(4 of 12 .5); 
+		@include gallery(4 of 12 .1 after); 
+		margin-bottom: gutter(12);
+	}
+	@include breakpoint($large) {
+		@include gallery(4 of 12 .5 after); 
+		margin-bottom: gutter(4);
 	}
 }
 

@@ -1,13 +1,44 @@
+.modal {
+	svg {
+		max-height: 100px;
+		max-width: 100px;
+		@include breakpoint($small) {
+			max-height: 150px;
+			max-width: 150px;
+		}
+	}
+	.submit {
+		text-align: center;
+	}
+	.btn-garfield {
+		margin: auto;
+		@include btn-garfield(10px, 120px, 20px);
+		max-width: 100%;
+		&:hover {
+			border: 1px solid $text-green;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+}	
+
 .modal-header, .modal-body, .modal-footer {
-	padding-left: $bPadding;
-	padding-right: $bPadding;
+	padding-left: $bPadding/2;
+	padding-right: $bPadding/2;
+	@include breakpoint($small) {
+		padding-left: $bPadding;
+		padding-right: $bPadding;		
+	}
 }
 
 .modal-header {
+	padding-top: $bPadding/2;
+	padding-bottom: $bPadding/2;
 	border-bottom: none;
-	padding-top: 30px;
+	text-align: center;
 	.close {
-		margin-top: -45px;
+		margin-top: -75px;
     margin-right: -75px;
     color: white;
     background-color: $dark-gray;
@@ -19,26 +50,46 @@
     	color: white;
     }
 	}
+	@include breakpoint($small) {
+		padding-top: $bPadding;
+		padding-bottom: $bPadding;
+	}
 }
 
 .modal-content {
 	border-radius: 0;
 	h2,h3 {
 		font-family: $hFontMI;
+		text-align: center;
 	}
 	h2 {
-		font-size: 24px;
+		font-size: 18px;
 	}
 	h3 {
-		font-size: 16px;
-		line-height: 22px;
+		font-size: 14px;
+		line-height: 20px;
 		padding-bottom: 15px;
+	}
+	@include breakpoint($small) {
+		h2 {
+			font-size: 24px;
+		}
+		h3 {
+			font-size: 16px;
+			line-height: 22px;
+			padding-bottom: 15px;
+		}
 	}
 }
 
+.modal-body {
+	padding-top: 0;
+	padding-bottom: 60px;
+}
 
 .modal-footer {
 	border-top: none;
 	padding-bottom: 30px;
 	text-align: center;
 }
+

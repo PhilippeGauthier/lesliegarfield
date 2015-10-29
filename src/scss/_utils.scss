@@ -132,7 +132,7 @@ $fontHuge: 70px;
     }
     @include breakpoint($medium) {
         font-size: $fontHuge;
-        line-height: 1.5em;
+        line-height: 1.35em;
     }
 }
 

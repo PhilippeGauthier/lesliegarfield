@@ -51,7 +51,7 @@ messages:
 # Configure notification email
 email:
   to: pgauthier@gmail.com
-  from: dude@example.com
+  from: info@lesliegarfield.com
   subject: The raven has flown
   automagic: true
   # html_template: html_email

@@ -11,8 +11,8 @@
 	padding-bottom: 0;
 	.container {
 		z-index: 10;
-		padding-top: 68px;
-		padding-bottom: 68px;
+		padding-top: 30px;
+		padding-bottom: 30px;
 		height: 100%;
 	}
 	.hero-container {
@@ -21,6 +21,12 @@
 	}
 	h1 {
 		margin-bottom: 20px;
+		@include breakpoint($small) {
+			max-width: 70%;
+		}
+		@include breakpoint($large) {
+			max-width: 100%;
+		}
 	}
 	h5 {
 		@include break;

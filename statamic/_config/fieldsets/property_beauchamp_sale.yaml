@@ -8,6 +8,10 @@ fields:
   title:
     type: text
     display: Property Name
+  streeteasy_type:
+    type: text
+    hide: true
+    default: sale
   apartment:
     type: text
     display: Apartment Number or Letter (optional)

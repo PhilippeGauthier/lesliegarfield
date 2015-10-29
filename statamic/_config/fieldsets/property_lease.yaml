@@ -11,6 +11,10 @@ fields:
   datestamp:
     type: date
     hide: true
+  streeteasy_type:
+    type: text
+    hide: true
+    default: rental
   street_address:
     type: text
     display: Street Address
