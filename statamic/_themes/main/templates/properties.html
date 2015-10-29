@@ -13,7 +13,7 @@
 	<div class="container">
 		{{ if get:type == "rent" }}
 
-		{{ entries:listing folder="properties/new-york/lease" sort_by="price" sort_dir="desc"}}
+		{{ entries:listing folder="properties/new-york/rental" sort_by="price" sort_dir="desc"}}
 		{{ theme:partial src="property_card" use_context="true" }}
 		{{ /entries:listing}}
 

@@ -1,7 +1,7 @@
 <properties>
-{{ entries:listing folder="properties/new-york/sale" conditions="streeteasy:true" }}
+{{ entries:listing folder="properties/new-york/*" conditions="streeteasy:true" sort_by="{ streeteasy_type}" }}
 <property 
-	type="sale" id="{{ id }}" status="{{ if streeteasy_status =="Active" }}active{{ elseif streeteasy_status =="Contract Out"}}contract-out
+	type="{{ streeteasy_type }}" id="{{ id }}" status="{{ if streeteasy_status =="Active" }}active{{ elseif streeteasy_status =="Contract Out"}}contract-out
 	{{ elseif streeteasy_status =="Contract Signed"}}contract-signed{{ elseif streeteasy_status =="In Contract"}}in-contract{{ elseif streeteasy_status =="Leased"}}leased{{ elseif streeteasy_status =="Off Market"}}off-market{{ elseif streeteasy_status =="Temporarily Off Market"}}temporarily-off-market{{ elseif streeteasy_status =="Sold"}}sold{{ endif }}" 
 	url="{{ _site_url }}{{ url }}">
 	<location>
@@ -40,135 +40,8 @@
 		{{ if max_financing|not_empty }}
 			<max_financing>{{ max_financing }}</max_financing>
 		{{ endif }}
-		{{ if exclustive|not_empty }}
-			<exclustive>{{ exclustive }}</exclustive>
-		{{ endif }}
-		{{ if taxes|not_empty }}
-			<taxes>{{ taxes }}</taxes>
-		{{ endif }}
-		{{ if bedrooms|not_empty }}
-			<bedrooms>{{ bedrooms }}</bedrooms>
-		{{ endif }}
-		{{ if bathrooms|not_empty }}
-			<bathrooms>{{ bathrooms }}</bathrooms>
-		{{ endif }}
-		{{ if rooms|not_empty }}
-			<totalrooms>{{ rooms }}</totalrooms>
-		{{ endif }}
-		{{ if sqft|not_empty }}
-			<squareFeet>{{ sqft }}</squareFeet>
-		{{ endif }}
-		{{ if listedOn|not_empty }}
-			<listedOn>{{ listedOn }}</listedOn>
-		{{ endif }}
-		{{ if summary_intro|not_empty }}
-		<description>
-		<![CDATA[
-			{{ summary_intro }}
-		]]>
-		</description>
-		{{ endif }}
-		{{ if ownership|not_empty }}
-			<propertyType>{{ ownership }}</propertyType>
-		{{ endif }}
-		{{ if build_date|not_empty }}
-			<built>{{ build_date }}</built>
-		{{ endif }}
-		{{ if amenities }}
-		<amenities>
-		{{ amenities }}
-		<{{ value }} />
-		{{/amenities }}
-		{{ if key_features|not_empty }}
-		<other>
-		{{ key_features|list }}
-		</other>
-		{{ endif }}
-		</amenities>
-		{{ endif }}
-	</details>
-	{{ if openhouse }}
-	<openHouses>
-		{{ openhouse_grid }}
-		<openHouse>
-			<startsAt>{{ date }} {{ startTime }}</startsAt>
-			<endsAt>{{ date }} {{ endTime }}</endsAt>
-			{{ if apptOnly }}
-			<apptOnly />
-			{{ endif }}
-		</openHouse>
-		{{ /openhouse_grid}}
-	</openHouses>
-	{{ endif }}
-	<media>
-		{{ photo_carousel }}
-		<photo url="{{ _site_url }}{{ value }}" />
-		{{ /photo_carousel }}
-		{{ if floor_plans|not_empty }}
-		<floorplan url="{{ _site_url }}{{ floor_plans }}" />
-		{{ endif }}
-		{{ if brochure|not_empty }}
-		<otherMedia url="{{ _site_url }}{{ brochure }}" description="Property Brochure"/>
-		{{ endif }}
-	</media>
-	<agents>
-		{{ relate:agents }}
-		<agent>
-			<name>{{ title }}</name>
-			<company>Leslie J. Garfield</company>
-			<photo>{{ _site_url }}{{ image }}</photo>
-			<email>{{ email }}</email>
-			<phone_numbers>
-				<main>{{ phone }}</main>
-			</phone_numbers>
-		</agent>
-		{{ /relate:agents }}
-	</agents>
-</property>
-{{ /entries:listing }}
-{{ entries:listing folder="properties/new-york/lease" conditions="streeteasy:true" }}
-<property 
-	type="rental" id="{{ id }}" status="{{ if streeteasy_status =="Active" }}active{{ elseif streeteasy_status =="Contract Out"}}contract-out
-	{{ elseif streeteasy_status =="Contract Signed"}}contract-signed{{ elseif streeteasy_status =="In Contract"}}in-contract{{ elseif streeteasy_status =="Leased"}}leased{{ elseif streeteasy_status =="Off Market"}}off-market{{ elseif streeteasy_status =="Temporarily Off Market"}}temporarily-off-market{{ elseif streeteasy_status =="Sold"}}sold{{ endif }}" 
-	url="{{ _site_url }}{{ url }}">
-	<location>
-		{{ if address|not_empty }}
-		<address>{{ street_address }}</address>
-		{{ endif }}
-		{{ if apartment|not_empty }}
-		<apartment>{{ apartment }}</apartment>
-		{{ endif }}
-		{{ if city|not_empty }}
-		<city>{{ city }}</city>
-		{{ endif }}
-		{{ if state|not_empty }}
-		<state>{{ state }}</state>
-		{{ endif }}
-		{{ if zip_code|not_empty }}
-		<zipcode>{{ zip_code }}</zipcode>
-		{{ endif }}
-		{{ if property_location|not_empty }}
-		<neighborhood>{{ property_location }}</neighborhood>
-		{{ endif }}
-	</location>
-	<details>
-		{{ if mlsName|not_empty }}
-			<mlsName>{{ mlsName }}</mlsName>
-		{{ endif }}
-		{{ if mlsId|not_empty }}
-			<mlsId>{{ mlsId }}</mlsId>
-		{{ endif }}
-		{{ if price|not_empty }}
-			<price>{{ price }}</price>
-		{{ endif }}
-		{{ if maintenance|not_empty }}
-			<maintenance>{{ maintenance }}</maintenance>
-		{{ endif }}
-		{{ if max_financing|not_empty }}
-			<max_financing>{{ max_financing }}</max_financing>
-		{{ endif }}
-		{{ if exclustive|not_empty }}
-			<exclustive>{{ exclustive }}</exclustive>
+		{{ if exclusive|not_empty }}
+			<exclusive>{{ exclusive }}</exclusive>
 		{{ endif }}
 		{{ if taxes|not_empty }}
 			<taxes>{{ taxes }}</taxes>
@@ -254,7 +127,3 @@
 </property>
 {{ /entries:listing }}
 </properties>
-
-
-
-
