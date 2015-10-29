@@ -168,7 +168,7 @@
 						text-align: right;
 					}
 				@include breakpoint($small) {
-					@include gallery(1 of 4);
+					@include gallery(1 of 4 after);
 					&:nth-child(4n+2),&:nth-child(4n+3) {
 						display: inline-block;
 					}

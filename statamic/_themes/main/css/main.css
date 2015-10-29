@@ -4211,25 +4211,23 @@ footer .footer-divider {
 
 @media (min-width: 768px) {
   .agent-individual main .recent-transactions li {
-    box-sizing: border-box;
-    width: 25%;
-    float: left;
-    padding-left: 2.5%;
-    padding-right: 2.5%; }
+    width: 21.05263%;
+    float: left; }
   .agent-individual main .recent-transactions li:nth-child(4n + 1) {
     margin-left: 0;
     margin-right: -100%;
-    clear: both; }
+    clear: both;
+    margin-left: 0; }
   .agent-individual main .recent-transactions li:nth-child(4n + 2) {
-    margin-left: 25%;
+    margin-left: 26.31579%;
     margin-right: -100%;
     clear: none; }
   .agent-individual main .recent-transactions li:nth-child(4n + 3) {
-    margin-left: 50%;
+    margin-left: 52.63158%;
     margin-right: -100%;
     clear: none; }
   .agent-individual main .recent-transactions li:nth-child(4n + 4) {
-    margin-left: 75%;
+    margin-left: 78.94737%;
     margin-right: -100%;
     clear: none; }
   .agent-individual main .recent-transactions li:nth-child(4n+2), .agent-individual main .recent-transactions li:nth-child(4n+3) {
