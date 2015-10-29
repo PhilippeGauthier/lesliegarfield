@@ -1,0 +1,26 @@
+
+{{ if file|empty && link|empty }}
+ <div class="carousel-tile press-item">
+	<div>
+		{{ if image|not_empty }}
+		<img src="{{ path src="{{ image }}" }}">
+		{{ endif }}
+		{{ if text|not_empty }}
+		<p>{{ text }}</p>
+		{{ endif }}
+	</div>
+ </div>
+{{ else }}
+ <a target="_blank" href="{{ link or file }}" class="carousel-tile press-item">
+	<div>
+		{{ if image|not_empty }}
+		<img src="{{ path src="{{ image }}" }}">
+		{{ endif }}
+		{{ if text|not_empty }}
+		<p>{{ text }}</p>
+		{{ endif }}
+	</div>
+ </a>
+{{ endif }}
+
+
