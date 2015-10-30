@@ -18,6 +18,7 @@ statamic/!_logs/index.html
 statamic/assets/*
 statamic/_content/*
 statamic/_config/users/*
+statamic/_forms/*
 .htaccess
 
 
