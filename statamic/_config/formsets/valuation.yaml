@@ -7,26 +7,20 @@
 ###########################################################################################
 
 # Location (from root) to save form submissions
-submission_save_path: _forms/_non_specific/
+submission_save_path: _forms/_valuation/
 
 # Fields allowed to be submitted in the form, automatically
 # purging anything and everything else
 allowed:
   - name
   - address
-  - email-address
-  - listing-address
+  - email
   - phone
-  - agents
 
 # You are not required to require fields, but once you do, any missing
 # from the POST will squash this submission and send a list of
 # missing fields to your {{ raven:errors }} tagpair
-required:
-  - name
-  - address
-  - email
-  - phone
+
 
 submission_save_extension: yaml
 
@@ -52,9 +46,9 @@ messages:
 
 # Configure notification email
 email:
-  to: pgauthier@gmail.com
+  to: info@lesliegarfield
   from: info@lesliegarfield.com
-  subject: '{{ listing-address }}'
+  subject: Get a Valuation Lead
   automagic: true
   # html_template: html_email
   # text_template: text_email
@@ -68,12 +62,8 @@ control_panel:
     - email
     - phone
   metrics:
-    -
-      type: average
-      field: phone
-      label: Average phone Stranded
     - 
-      type: sum
-      field: phone
-      label: Total phone Stranded
+      type: count
+      field: name
+      label: Total Forms Received
 

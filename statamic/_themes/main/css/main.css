@@ -4975,16 +4975,30 @@ footer .footer-divider {
     line-height: 34.1px; } }
 
 .contact .radio {
-  display: inline-block;
-  box-sizing: border-box;
-  width: 4.16667%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-  margin-right: 5px; }
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  padding: 0;
+  margin: 0 !important; }
+
+.contact .radio:hover {
+  cursor: default; }
+
+.contact .radio input {
+  margin: 0 !important; }
+
+.contact .radio span {
+  margin-left: 10px; }
 
 .contact .btn-garfield {
-  margin-top: 10px; }
+  margin-top: 10px;
+  width: 100%; }
 
 .contact .sales {
   box-sizing: border-box;
@@ -5247,7 +5261,20 @@ footer .footer-divider {
     margin-right: -100%;
     clear: none; } }
 
-.input-clear input {
+.input-clear .form-full {
+  clear: both;
+  box-sizing: border-box;
+  width: 100%;
+  float: left; }
+
+.input-clear .form-full textarea {
+  height: 100px;
+  text-align: top; }
+
+.input-clear form {
+  text-align: center; }
+
+.input-clear input[type=text], .input-clear input[type=email], .input-clear input[type=date], .input-clear input[type=time], .input-clear textarea {
   box-sizing: border-box;
   width: 100%;
   float: left;
@@ -5261,14 +5288,39 @@ footer .footer-divider {
   font-size: 14px;
   color: #CCCCCC; }
 
-.input-clear input:focus, .input-clear input:active {
+.input-clear input[type=text]:focus, .input-clear input[type=text]:active, .input-clear input[type=email]:focus, .input-clear input[type=email]:active, .input-clear input[type=date]:focus, .input-clear input[type=date]:active, .input-clear input[type=time]:focus, .input-clear input[type=time]:active, .input-clear textarea:focus, .input-clear textarea:active {
   outline-color: #009B77;
   outline-width: 2px; }
 
 @media (min-width: 768px) {
-  .input-clear input {
+  .input-clear input[type=text], .input-clear input[type=email], .input-clear input[type=date], .input-clear input[type=time], .input-clear textarea {
     font-size: 16px;
     padding: 10px 10px; } }
+
+input.btn-garfield {
+  margin: auto;
+  border-radius: 0;
+  background-color: #009880;
+  padding: 10px 120px;
+  font-size: 20px;
+  border: 1px solid #009880;
+  border-radius: 0;
+  color: white;
+  text-transform: uppercase;
+  max-width: 100%; }
+
+input.btn-garfield:hover, input.btn-garfield:focus {
+  color: white;
+  background-color: #009d84; }
+
+input.btn-garfield:hover {
+  border: 1px solid #009B77; }
+
+input.btn-garfield:focus {
+  outline: none; }
+
+input.radio {
+  text-align: left; }
 
 .email-signup input {
   background-color: #25282A;
@@ -5306,29 +5358,8 @@ footer .footer-divider {
     max-width: 150px; } }
 
 .modal .submit {
-  text-align: center; }
-
-.modal .btn-garfield {
-  margin: auto;
-  border-radius: 0;
-  background-color: #009880;
-  padding: 10px 120px;
-  font-size: 20px;
-  border: 1px solid #009880;
-  border-radius: 0;
-  color: white;
-  text-transform: uppercase;
-  max-width: 100%; }
-
-.modal .btn-garfield:hover, .modal .btn-garfield:focus {
-  color: white;
-  background-color: #009d84; }
-
-.modal .btn-garfield:hover {
-  border: 1px solid #009B77; }
-
-.modal .btn-garfield:focus {
-  outline: none; }
+  text-align: center;
+  margin: 0 auto; }
 
 .modal-header, .modal-body, .modal-footer {
   padding-left: 30px;
@@ -5360,8 +5391,7 @@ footer .footer-divider {
 
 @media (min-width: 768px) {
   .modal-header {
-    padding-top: 60px;
-    padding-bottom: 60px; } }
+    padding-top: 60px; } }
 
 .modal-content {
   border-radius: 0; }

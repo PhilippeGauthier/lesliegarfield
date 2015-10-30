@@ -7,17 +7,22 @@
 ###########################################################################################
 
 # Location (from root) to save form submissions
-submission_save_path: _forms/_non_specific/
+submission_save_path: _forms/_listings/
 
 # Fields allowed to be submitted in the form, automatically
 # purging anything and everything else
 allowed:
-  - address
   - name
   - email
+  - phone_mobile
+  - phone_office
+  - date_1
+  - time_1
+  - date_2
+  - time_2
+  - message
   - email_address
   - listing-address
-  - phone
 
 # You are not required to require fields, but once you do, any missing
 # from the POST will squash this submission and send a list of
@@ -49,7 +54,7 @@ messages:
 
 # Configure notification email
 email:
-  to: "{{ email_address }}"
+  to: " {{ email_address }}"
   from: info@lesliegarfield.com
   subject: '{{ listing-address }}'
   automagic: true
@@ -64,9 +69,10 @@ control_panel:
     - address
     - email
     - phone
+    - listing-address
   metrics:
     - 
       type: count
-      field: email
+      field: name
       label: Total Forms Received
 

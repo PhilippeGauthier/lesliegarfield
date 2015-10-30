@@ -9,17 +9,7 @@
 	}
 	.submit {
 		text-align: center;
-	}
-	.btn-garfield {
-		margin: auto;
-		@include btn-garfield(10px, 120px, 20px);
-		max-width: 100%;
-		&:hover {
-			border: 1px solid $text-green;
-		}
-		&:focus {
-			outline: none;
-		}
+		margin: 0 auto;
 	}
 }	
 
@@ -52,7 +42,6 @@
 	}
 	@include breakpoint($small) {
 		padding-top: $bPadding;
-		padding-bottom: $bPadding;
 	}
 }
 

@@ -21,12 +21,13 @@ send_notification_email: true
 #    - postmark
 #    - sendgrid
 
-#email_handler: mandrill
-email_handler: sendgrid
+email_handler: mandrill
+#email_handler: sendgrid
 
 # chosen mail service's api key
-#email_handler_key:Ko-n7XPY1DYpUVcPpDYq2A
-email_handler_key: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
+email_handler_key:Ko-n7XPY1DYpUVcPpDYq2A
+#sendgrid
+#email_handler_key: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
 
 master_killswitch: false
 

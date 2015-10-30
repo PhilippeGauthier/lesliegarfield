@@ -6,7 +6,17 @@
 			@include gallery(1 of 2 after .025 break);
 		}
 	}
-	input {
+	.form-full {
+		@include span(full no-gutter break);
+		textarea {
+			height: 100px;
+			text-align: top;
+		}
+	}
+	form {
+		text-align: center;
+	}
+	input[type=text], input[type=email], input[type=date], input[type=time], textarea {
 		@include span(full);
 		margin-bottom: gutter(6);
 		padding: 10px 10px;
@@ -23,6 +33,23 @@
 			font-size: 16px;
 			padding: 10px 10px;
 		}
+	}
+}
+
+input {
+	&.btn-garfield {
+		margin: auto;
+		@include btn-garfield(10px, 120px, 20px);
+		max-width: 100%;
+		&:hover {
+			border: 1px solid $text-green;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+	&.radio {
+		text-align: left;
 	}
 }
 
