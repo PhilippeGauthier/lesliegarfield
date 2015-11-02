@@ -1,6 +1,19 @@
 .agent-individual {
+	.container {
+		padding-left: 0;
+		padding-right: 0;			
+	}
+	@include breakpoint($medium) {
+		.container {
+			padding-left: 15px;
+			padding-right: 15px;					
+		}
+	}
 	aside {
-		padding-right: $bPadding;
+		
+		@include breakpoint($medium) {
+			padding-right: $bPadding;
+		}
 		img {
 			max-width: 200px;
 			text-align: center;
@@ -11,6 +24,7 @@
 			@include hlmedium($hFontB);
 			margin-top: 10px;
 		}
+
 		svg {
 			height: 25px;
 			width: 25px;
@@ -21,6 +35,7 @@
 		}
 		ul {
 			margin-top: 20px;
+			margin-bottom: 20px;
 		}
 		li {
 			font-family: $hFontM;
@@ -39,6 +54,9 @@
 		.dotted {
 			margin-top: 30px;
 			margin-bottom: 0;
+			@include breakpoint($small) {
+				display: none;
+			}
 		}
 		@include breakpoint($medium) {
 			img {
@@ -48,7 +66,8 @@
 	}
 	main {
 		padding: $bPadding/2;
-		@include breakpoint($small) {
+		
+		@include breakpoint($large) {
 			padding: $bPadding;
 		}
 		background-color: #fff;
@@ -64,7 +83,11 @@
 			
 		}
 		h2 {
-			margin-bottom: 60px;
+			display: none;
+			@include breakpoint($medium) {
+				margin-top: 60px;
+				display: block;
+			}
 		}
 		p:first-of-type, span:first-of-type {
 			margin-top: 0;

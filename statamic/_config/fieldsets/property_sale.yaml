@@ -15,25 +15,32 @@ fields:
     type: text
     hide: true
     default: sale
+  street_address:
+    type: text
+    display: Street Address Line 1 (No Apartment Numbers) *STREETEASY
+    required: true
   apartment:
     type: text
     display: Apartment Number or Letter (optional)
   city:
     type: text
-    display: City
+    display: City *STREETEASY
     default: New York
+    required: true
   state:
     type: text
-    display: State
+    display: State *STREETEASY
     default: NY
+    required: true
   zip_code:
     type: text
-    display: Zip Code
+    display: Zip Code *STREETEASY
+    required: true
   price:
     type: text
     default: 0
     required: true
-    display: Price
+    display: Price *STREETEASY
     instructions:
       above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
   property_location:
@@ -47,12 +54,14 @@ fields:
   location:
     type: location
     display: Location
+    required: true
   location_granular:
     type: text
     display: More detailed location ie Between Fifth and Madison
   streeteasy_status:
     type: select
-    display: Status
+    display: Status *STREETEASY
+    required: true
     options:
       - Active
       - In Contract
@@ -82,9 +91,10 @@ fields:
         width: 28%
         display: Appt Only?
   agents:
-    display: Agents
+    display: Agents *STREETEASY
     type: suggest
     create: true
+    required: true
     content:
       folder: agents/garfield
       label: title
@@ -99,7 +109,7 @@ fields:
       folder: properties/new-york/*
   ownership:
     type: select
-    display: Ownership Type. REQUIRED.
+    display: Ownership Type. *STREETEASY
     required: True
     options:
       townhouse: Townhouse
@@ -122,19 +132,22 @@ fields:
     display: Stories
   sqft:
     type: text
-    display: Square Feet
+    display: Square Feet (Number Only, No Commas, No Extra Text)
   units:
     type: text
     display: Units / Apts
   rooms:
     type: text
-    display: Rooms
+    display: Total Rooms *STREETEASY
+    required: true
   bedrooms:
-    display: Bedrooms
+    display: Bedrooms *STREETEASY
     type: text
+    required: true
   bathrooms:
-    display: Bathrooms
+    display: Bathrooms *STREETEASY
     type: text
+    required: true
   powder:
     display: Powder Rooms
     type: text
@@ -142,21 +155,14 @@ fields:
     display: Taxes
     type: text
   income:
-    type: checkbox
+    type: text
     display: Income
   expenses:
-    type: checkbox
+    type: text
     display: Expenses
-  fees:
-    type: grid
-    display: Fill one or the other out
-    fields:
-      common_charges:
-        type: text
-        display: Common charges
-      maintenance:
-        type: text
-        display: Maintenance
+  common_charges:
+    type: text
+    display: Common charges
   amenities:
     type: checkboxes
     display: Key Features
@@ -188,8 +194,9 @@ fields:
       type: key_features
   summary_intro:
     type: textarea
-    display: Enter the first paragraph of property summary
+    display: Enter the first paragraph of property summary *STREETEASY
     height: 200
+    required: true
   summary_full:
     type: redactor
     display: Enter the rest of the summary

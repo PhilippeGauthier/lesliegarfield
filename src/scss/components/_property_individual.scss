@@ -55,13 +55,15 @@
 		margin: 0 10px 0 5px;
 	}
 	.property-header {
+		h2 {
+			font-size: 40px;
+			line-height: 50px;
+		}
 		@include breakpoint($medium) {
 			@include flex-hor;
 			justify-content: space-between;			
 		}
-		h2 {
-			color: $header-font-color;
-		}
+
 	}
 	.property-subheader {
 		@include clearfix;
@@ -114,9 +116,15 @@
 .dotted {
 	border-bottom: 1px dotted $light-font-color;
 	vertical-align: bottom;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 	width: 100%;
 	@include clearfix;
+	&.first {
+		margin-bottom: 0;
+	}
+	@include breakpoint($large) {
+		margin-bottom: 30px;
+	}
 }
 
 .property-carousel {
@@ -157,11 +165,14 @@
 	a {
 		display: block;
 	}
+	li {
+		margin-bottom: 0;
+	}
 	span {
 		@include hsmedium($hFontMI);
 		margin-top: 0;
 		display: block;
-		margin-bottom: 10px;
+		margin-bottom: 5px;
 	}
 	.agent-block {
 		padding: 10px 0;
@@ -174,11 +185,9 @@
 		}
 		
 		@include breakpoint($medium) {
-			&:first-of-type {
-				padding-top: 0;
-			}
-			padding-top: 20px;
-			padding-bottom: 20px;
+
+			padding-top: 15px;
+			padding-bottom: 15px;
 			border-bottom: 1px dotted $light-font-color;
 			@include flex-vert;
 			align-items: flex-start;
@@ -187,6 +196,12 @@
 		@include breakpoint($large) {
 			border-bottom: none;
 			@include flex-hor;
+			span {
+				margin-bottom: 10px;
+			}
+			li {
+				margin-bottom: 5px;
+			}
 		}
 
 	}
@@ -235,7 +250,6 @@
 	}
 	li {
 		@include flex-hor;
-		margin-bottom: 5px;
 	}
 	svg {
 		margin-right: 5px;
@@ -284,12 +298,15 @@
 		border-radius: 0;
 		margin: 0 auto;
 		text-align: center;
-		margin-bottom: 30px;
+		margin-bottom: 15px;
 		text-transform: uppercase;
 		max-width: 345px;
 		&:hover {
 			background-color: $hover-green;
 			color: white;
+		}
+		@include breakpoint($large) {
+			margin-bottom: 30px;
 		}
 	}
 }

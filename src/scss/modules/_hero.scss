@@ -9,6 +9,11 @@
 	position: relative;
 	padding-top: 0;
 	padding-bottom: 0;
+	&.agents-background {
+		.container {
+			padding-bottom: 0;
+		}
+	}
 	.container {
 		z-index: 10;
 		padding-top: 30px;

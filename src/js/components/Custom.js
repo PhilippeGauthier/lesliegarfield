@@ -222,18 +222,18 @@ postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('
 return false;
 });
 
-// if ($('#mc-embedded-subscribe-form').length) {
-//   $('.subscribe').click(function() {
-//     $("#subscribe").toggle(this.checked);
-//   })
-//   $("input[name='subscribe']").change(function(){
-//     if ($('#mc-embedded-subscribe-form').attr('action')) {
-//         $('#mc-embedded-subscribe-form').removeAttr('action');
-//     } else {
-//         $('#mc-embedded-subscribe-form').attr('action', '//lesliegarfield.us12.list-manage.com/subscribe/post?u=5645fb1229acab9604f9f450f&amp;id=8327ab2928');
-//     }
-//   });
-// }
+if ($('#mc-embedded-subscribe-form').length) {
+  $('.subscribe').click(function() {
+    $("#subscribe").toggle(this.checked);
+  })
+  $("input[name='subscribe']").change(function(){
+    if ($('#mc-embedded-subscribe-form').attr('action')) {
+        $('#mc-embedded-subscribe-form').removeAttr('action');
+    } else {
+        $('#mc-embedded-subscribe-form').attr('action', 'action="//lesliegarfield.us12.list-manage.com/subscribe/post?u=5645fb1229acab9604f9f450f&amp;id=8327ab2928"');
+    }
+  });
+}
 
 
 

@@ -4,7 +4,7 @@
 		<aside class="sticky">
 		<div class="agent-container">
 			<div class="agent property-agents aside">
-				<div class="dotted"></div>
+				<div class="dotted first"></div>
 				{{ relate:agents }}
 				<div class="agent-block">
 					<a class="agent-image" href="{{ url }}">
@@ -203,18 +203,12 @@
 							<li>Expenses</li>
 							{{ endif }}
 
-							{{ if fees|not_empty }}
-							{{ fees }}
-
 							{{ if common_charges|not_empty }}
 							<li>Common Charges</li>
 							{{ endif }}
 
 							{{ if maintenance|not_empty }}
 							<li>Maintenance</li>
-							{{ endif }}
-
-							{{ /fees}}
 							{{ endif }}
 						</ul>
 						<ul>
@@ -235,7 +229,7 @@
 							{{ endif }}
 
 							{{ if ownership|not_empty }}
-							<li>{{ ownership}}</li>
+							<li>{{ ownership|ucfirst }}</li>
 							{{ endif }}
 
 							{{ if build_date|not_empty }}
@@ -271,11 +265,11 @@
 							{{ endif }}
 
 							{{ if pet_policy|not_empty }}
-							<li>{{ pet_policy }}</li>
+							<li>{{ pet_policy|ucfirst  }}</li>
 							{{ endif }}
 
 							{{ if furnished|not_empty }}
-							<li>{{ furnished }}</li>
+							<li>{{ furnished|ucfirst  }}</li>
 							{{ endif }}
 
 							{{ if taxes|not_empty }}
@@ -290,18 +284,14 @@
 							<li>{{ expenses }}</li>
 							{{ endif }}
 
-							{{ if fees|not_empty }}
-							{{ fees }}
-
 							{{ if common_charges|not_empty }}
 							<li>{{ common_charges }}</li>
 							{{ endif }}
+							
 							{{ if maintenance|not_empty }}
 							<li>{{ maintenance }}</li>
 							{{ endif }}
 
-							{{ /fees}}
-							{{ endif }}
 						</ul>
 					</div>
 					<div class="location_features">
