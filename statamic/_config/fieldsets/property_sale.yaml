@@ -17,30 +17,30 @@ fields:
     default: sale
   street_address:
     type: text
-    display: Street Address Line 1 (No Apartment Numbers) *STREETEASY
+    display: Street Address Line 1 (No Apartment Numbers) (STREETEASY)
     required: true
   apartment:
     type: text
     display: Apartment Number or Letter (optional)
   city:
     type: text
-    display: City *STREETEASY
+    display: City (STREETEASY)
     default: New York
     required: true
   state:
     type: text
-    display: State *STREETEASY
+    display: State (STREETEASY)
     default: NY
     required: true
   zip_code:
     type: text
-    display: Zip Code *STREETEASY
+    display: Zip Code (STREETEASY)
     required: true
   price:
     type: text
     default: 0
     required: true
-    display: Price *STREETEASY
+    display: Price (STREETEASY)
     instructions:
       above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
   property_location:
@@ -60,7 +60,7 @@ fields:
     display: More detailed location ie Between Fifth and Madison
   streeteasy_status:
     type: select
-    display: Status *STREETEASY
+    display: Status (STREETEASY)
     required: true
     options:
       - Active
@@ -91,7 +91,7 @@ fields:
         width: 28%
         display: Appt Only?
   agents:
-    display: Agents *STREETEASY
+    display: Agents (STREETEASY)
     type: suggest
     create: true
     required: true
@@ -109,7 +109,7 @@ fields:
       folder: properties/new-york/*
   ownership:
     type: select
-    display: Ownership Type. *STREETEASY
+    display: Ownership Type. (STREETEASY)
     required: True
     options:
       townhouse: Townhouse
@@ -138,14 +138,14 @@ fields:
     display: Units / Apts
   rooms:
     type: text
-    display: Total Rooms *STREETEASY
+    display: Total Rooms (STREETEASY)
     required: true
   bedrooms:
-    display: Bedrooms *STREETEASY
+    display: Bedrooms (STREETEASY)
     type: text
     required: true
   bathrooms:
-    display: Bathrooms *STREETEASY
+    display: Bathrooms (STREETEASY)
     type: text
     required: true
   powder:
@@ -194,7 +194,7 @@ fields:
       type: key_features
   summary_intro:
     type: textarea
-    display: Enter the first paragraph of property summary *STREETEASY
+    display: Enter the first paragraph of property summary (STREETEASY)
     height: 200
     required: true
   summary_full:
