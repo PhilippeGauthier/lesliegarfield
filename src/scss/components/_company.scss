@@ -15,15 +15,11 @@
 	svg {
 		max-width: 100%;
 	}
+	h3 {
+			
+	}
 	p {
 		text-align: left
-	}
-	span {
-		@include hmedium;
-		&.company-title {
-			@include hbase($bFont);
-			font-weight: 700;
-		}
 	}
 	.divider {
 		height: 1px;

@@ -1,4 +1,8 @@
 .services {
+	padding-top: 30px;
+	@include breakpoint($medium) {
+		padding-top: 60px;
+	}
 	h3 {
 		font-size: 24px;
 		font-family: $hFontM;
@@ -19,7 +23,7 @@
 
 .service-list {
 	span {
-		@include hsmall($hFontB);
+		@include hsmedium($bFont);
 		margin-bottom: 1em;
 		font-weight: 700;
 		display: block;

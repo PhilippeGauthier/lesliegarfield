@@ -2097,7 +2097,7 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-family: "Copernicus-BookItalic";
-  font-size: 35px;
+  font-size: 36px;
   line-height: 1.25em;
   font-weight: 100; }
 
@@ -2127,8 +2127,8 @@ h3 {
 
 @media (min-width: 992px) {
   h3 {
-    font-size: 22px;
-    line-height: 34.1px; } }
+    font-size: 34px;
+    line-height: 52.7px; } }
 
 h4 {
   font-family: Arial, "Lucida Grande", sans-serif;
@@ -2139,9 +2139,15 @@ h4 {
 h5 {
   font-family: "Copernicus-Medium";
   font-size: 18px;
-  line-height: 27px; }
+  line-height: 23.94px; }
 
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
+  h5 {
+    font-family: "Copernicus-Medium";
+    font-size: 18px;
+    line-height: 27px; } }
+
+@media (min-width: 1280px) and (min-width: 480px) {
   h5 {
     font-size: 22px;
     line-height: 33px; } }
@@ -2169,7 +2175,7 @@ p.no_results {
   padding-right: 0.83333%;
   text-align: center; }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   p.no_results {
     font-size: 22px;
     line-height: 33px; } }
@@ -2188,7 +2194,7 @@ p.intro-section {
   line-height: 27px;
   text-align: center; }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   p.intro-section {
     font-size: 22px;
     line-height: 33px; } }
@@ -2199,14 +2205,15 @@ p.intro-section {
   line-height: 27px;
   text-align: center; }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   .large p {
     font-size: 22px;
     line-height: 33px; } }
 
 .section-title {
-  font-size: 16px;
   font-family: Arial, "Lucida Grande", sans-serif;
+  font-size: 18px;
+  line-height: 23.94px;
   font-weight: 700;
   text-align: center; }
 
@@ -3215,9 +3222,15 @@ header button.collapsed .patty:after {
   text-align: center;
   color: white;
   font-family: "Copernicus-Medium";
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 23.94px;
   padding-top: 20px;
   padding-bottom: 20px; }
+
+@media (min-width: 1280px) {
+  .secondary-nav ul li a {
+    font-family: "Copernicus-Medium";
+    font-size: 20px; } }
 
 .secondary-nav ul li a:last-of-type {
   border-right: none; }
@@ -4028,7 +4041,7 @@ footer .footer-divider {
   line-height: 27px;
   margin-top: 10px; }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   .agent-individual aside .agent-name {
     font-size: 22px;
     line-height: 33px; } }
@@ -4504,10 +4517,11 @@ footer .footer-divider {
   width: 100%; }
 
 .numbers .full {
-  padding: 0 60px; }
+  padding: 0 30px; }
 
 @media (min-width: 992px) {
   .numbers .full {
+    padding: 0 60px;
     border-right: 1px solid #25282A; }
   .numbers .full .divider {
     display: none; } }
@@ -4543,8 +4557,8 @@ footer .footer-divider {
   -webkit-transform: rotate(-22deg);
   transform: rotate(-22deg);
   color: white;
-  margin-right: 60px;
-  font-size: 30px; }
+  margin-right: 70px;
+  font-size: 24px; }
 
 @media (min-width: 480px) {
   .numbers .half .price {
@@ -4559,22 +4573,39 @@ footer .footer-divider {
 
 .numbers .price-descriptor {
   font-family: "Copernicus-Bold";
-  font-size: 13px;
+  font-size: 12px;
   display: block;
-  text-align: center; }
+  text-align: center;
+  max-width: 80%;
+  text-align: center;
+  margin: 0 auto; }
 
 .numbers .price-descriptor .first-letter {
   font-family: "Copernicus-Bold";
-  font-size: 17px; }
+  font-size: 16px; }
+
+@media (min-width: 480px) {
+  .numbers .price-descriptor {
+    font-size: 14px; }
+  .numbers .price-descriptor .first-letter {
+    font-size: 18px; } }
+
+@media (min-width: 1280px) {
+  .numbers .price-descriptor {
+    font-size: 16px; }
+  .numbers .price-descriptor .first-letter {
+    font-size: 20px; } }
 
 .numbers .divider {
-  margin-left: 15.38462%;
-  margin-right: 15.38462%;
+  width: 250px;
   position: relative;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 30px auto;
   height: 1px;
   background-color: #25282A; }
+
+@media (min-width: 1280px) {
+  .numbers .divider {
+    width: 400px; } }
 
 .faq-aside {
   background-color: #ECEBEC;
@@ -4642,16 +4673,6 @@ footer .footer-divider {
 
 .company p {
   text-align: left; }
-
-.company span {
-  font-family: "Copernicus-Medium";
-  font-size: 20px; }
-
-.company span.company-title {
-  font-family: Arial, "Lucida Grande", sans-serif;
-  font-size: 16px;
-  line-height: 26px;
-  font-weight: 700; }
 
 .company .divider {
   height: 1px;
@@ -5007,8 +5028,8 @@ footer .footer-divider {
 
 @media (min-width: 992px) {
   .contact .sales h3, .contact .info h3 {
-    font-size: 22px;
-    line-height: 34.1px; } }
+    font-size: 34px;
+    line-height: 52.7px; } }
 
 .contact .radio {
   display: -webkit-flex;
@@ -5809,7 +5830,7 @@ input.radio {
   margin-top: 2.5em;
   margin-bottom: 2.5em; }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   .agents p {
     font-size: 22px;
     line-height: 33px; } }
@@ -5835,7 +5856,7 @@ input.radio {
   line-height: 27px;
   margin: 1em auto; }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   .agents span.name {
     font-size: 22px;
     line-height: 33px; } }
@@ -6052,7 +6073,7 @@ input.radio {
   height: 200px;
   margin-top: 10px; }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   .report-tile h3 {
     font-size: 22px;
     line-height: 33px; } }
@@ -6149,6 +6170,13 @@ input.radio {
 .service-quote {
   position: relative; }
 
+.services {
+  padding-top: 30px; }
+
+@media (min-width: 992px) {
+  .services {
+    padding-top: 60px; } }
+
 .services h3 {
   font-size: 24px;
   font-family: "Copernicus-Medium";
@@ -6167,9 +6195,9 @@ input.radio {
   text-align: left; }
 
 .service-list span {
-  font-family: "Copernicus-Bold";
-  font-size: 15px;
-  line-height: 21.75px;
+  font-family: Arial, "Lucida Grande", sans-serif;
+  font-size: 18px;
+  line-height: 23.94px;
   margin-bottom: 1em;
   font-weight: 700;
   display: block; }
@@ -6305,8 +6333,8 @@ section.faq {
 
 @media (min-width: 992px) {
   .featured h3 {
-    font-size: 22px;
-    line-height: 34.1px; } }
+    font-size: 34px;
+    line-height: 52.7px; } }
 
 @media (min-width: 992px) {
   .featured {
