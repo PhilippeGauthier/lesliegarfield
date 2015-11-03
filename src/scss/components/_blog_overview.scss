@@ -47,7 +47,7 @@
 	}
 	.blog-header {
 		color: darken($light-font-color,10%);
-		@include hbase($hFontM);
+		@include btiny($hFontM);
 		padding-bottom: .75em;
 		border-bottom: 1px solid $modal-text;
 		margin-bottom: 1.5em;

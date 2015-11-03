@@ -1,12 +1,14 @@
 .categories {
 	border-bottom: 1px solid $modal-text;
 	margin-bottom: 30px;
-	padding-bottom: 1.5em;
+	padding-bottom: .75em;
+	@include btiny($hFontM);
 	.blog-header {
 		border-bottom: none;
 	}
 	li {
 		text-transform: uppercase;
+		line-height: 21px;
 		&:first-of-type {
 			border-left: none;
 			padding-left: 0;
@@ -22,6 +24,12 @@
 	}
 	h2 {
 		margin-bottom: 10px;
+		font-size: 28px;
+		line-height: 38px;
+		@include breakpoint($medium) {
+			font-size: 50px;
+			line-height: 60px;
+		}
 	}
 	// .blog-left {
 	// 	border-bottom: 1px solid $modal-text;
