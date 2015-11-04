@@ -114,8 +114,12 @@
 		.form-group {
 			margin-bottom: gutter(6);
 		}
-		.full-span, .half {
+		.full-span {
 			@include span(2 of 2 .025);
+		}
+		.half-span {
+			@include pre(.5 of 2);
+			@include span (1 of 2);
 		}
 		@include breakpoint($small) {
 			.half {
