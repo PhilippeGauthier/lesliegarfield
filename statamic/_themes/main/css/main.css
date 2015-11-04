@@ -6027,20 +6027,21 @@ input.radio {
 .reports.signup .form-group {
   margin-bottom: 1.66667%; }
 
-.reports.signup .full-span {
+.reports.signup .full-span, .reports.signup .half-span {
   box-sizing: border-box;
   width: 100%;
   float: left;
   padding-left: 0.60976%;
   padding-right: 0.60976%; }
 
-.reports.signup .half-span {
-  margin-left: 25%;
-  box-sizing: border-box;
-  width: 50%;
-  float: left;
-  padding-left: 5%;
-  padding-right: 5%; }
+@media (min-width: 768px) {
+  .reports.signup .half-span {
+    margin-left: 25%;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-left: 5%;
+    padding-right: 5%; } }
 
 @media (min-width: 768px) {
   .reports.signup .half {
