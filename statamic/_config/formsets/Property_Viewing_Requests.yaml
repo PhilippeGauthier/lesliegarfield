@@ -55,7 +55,7 @@ submission_save_extension: yaml
 # Configure notification email
 email:
   to: pgauthier@gmail.com
-#  to: "{{ email_address }}"
+ # to: "{{ email_address }}"
   from: info@lesliegarfield.com
   subject: '{{ listing-address }}'
   automagic: true
