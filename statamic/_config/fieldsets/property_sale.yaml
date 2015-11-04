@@ -91,7 +91,7 @@ fields:
         width: 28%
         display: Appt Only?
   agents:
-    display: Agents (STREETEASY)
+    display: Agents (STREETEASY) - First listed agent will receive Viewing Requests
     type: suggest
     create: true
     required: true

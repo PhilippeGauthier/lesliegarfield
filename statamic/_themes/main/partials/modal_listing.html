@@ -40,7 +40,7 @@
           </div>
 
           <input type="hidden" name="email_address" 
-            value="{{ relate:agents}}{{ if first && total_results == 1 }}{{ email }}{{ elseif last}}{{ email }}{{ else }}{{ email }}, {{ endif }}{{/relate:agents}}">
+            value="{{ relate:agents}}{{ if first }}{{ email }}{{ endif }}{{/relate:agents}}">
           <input type="hidden" name="listing-address" value="{{ title }}">
         </div>
           <div class="form centered">
