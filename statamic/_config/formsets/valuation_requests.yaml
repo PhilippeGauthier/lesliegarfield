@@ -46,7 +46,7 @@ submission_save_extension: yaml
 
 # Configure notification email
 email:
-  to: pgauthier@gmail.com
+  to: info@lesliegarfield.com
   from: info@lesliegarfield.com
   subject: Get a Valuation Lead
   automagic: true
