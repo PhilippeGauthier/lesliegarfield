@@ -5095,7 +5095,8 @@ footer .footer-divider {
   align-items: center;
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap; }
+  flex-flow: row nowrap;
+  margin-bottom: 5px; }
 
 .contact .info div, .contact .info a, .contact .info span {
   font-family: "Copernicus-Medium";

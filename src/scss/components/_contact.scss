@@ -35,6 +35,7 @@
 		margin-bottom: 30px;
 		div {
 			@include flex-hor;
+			margin-bottom: 5px;
 		}
 		div, a,span {
 			@include hmedium;
