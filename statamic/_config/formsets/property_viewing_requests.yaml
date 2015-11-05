@@ -66,10 +66,13 @@ datestamp_format: "m/d/Y"
 control_panel:
   fields:
     - name
-    - address
     - email
-    - phone
-    - listing-address
+    - phone_mobile
+    - phone_office
+    - date_1
+    - time_1
+    - date_2
+    - time_2
   metrics:
     - 
       type: count
