@@ -5101,6 +5101,9 @@ footer .footer-divider {
   font-family: "Copernicus-Medium";
   font-size: 20px; }
 
+.contact .info span {
+  line-height: 20px; }
+
 .contact .info .line-two {
   margin-left: 25px; }
 

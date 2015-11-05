@@ -39,6 +39,9 @@
 		div, a,span {
 			@include hmedium;
 		}
+		span {
+			line-height: 20px;
+		}
 		.line-two {
 			margin-left: 25px;
 		}
