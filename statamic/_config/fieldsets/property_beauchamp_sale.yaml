@@ -42,7 +42,7 @@ fields:
     display: Neighborhood
     taxonomy:
       type: property_location
-      folder: properties/beauchamp
+      folder: properties/international
   location:
     type: location
     display: Location
@@ -88,7 +88,7 @@ fields:
     max_items: 1
     taxonomy:
       type: property_type
-      folder: properties/beauchamp/*
+      folder: properties/international/*
   plot:
     type: text
     display: Plot
