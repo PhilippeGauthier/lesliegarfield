@@ -42,7 +42,7 @@ fields:
     display: Neighborhood
     taxonomy:
       type: property_location
-      folder: properties/international
+      folder: properties/international/*
   location:
     type: location
     display: Location
