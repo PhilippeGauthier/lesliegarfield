@@ -25,7 +25,10 @@
 				<div class="spacer"></div>
 				<span class="prop-details">{{ property_type }}</span>
 				{{ if sqft|not_empty }}
-				<span class="prop-details">{{ sqft|format_number }} ft<sup>2</sup></span>
+				<span class="prop-details">
+					<span class="sqft-details">{{ sqft|format_number }}</span>
+					<span class="sqft-details sup">ft<sup>2</sup></span></span>
+				<span>
 				{{ endif }}
 				<div class="spacer"></div>
 				<span class="prop-location">{{ property_location }}</span>

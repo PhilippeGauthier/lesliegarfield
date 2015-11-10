@@ -26,6 +26,7 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCa3ywQ6GzCRIlFJsqT0_a1fBhaP7MoJpM">
     </script>
     <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+
 </head>
 <body data-spy="scroll" data-target="#scroll-spy-nav">
 
@@ -43,7 +44,7 @@
     var elements = document.getElementsByClassName("price-descriptor");
     for (var i=0; i<elements.length; i++){
       console.log(i);
-      elements[i].innerHTML = elements[i].innerHTML.replace(/\\b([a-z])([a-z]+)?\\b/gim, "<span class='first-letter'>$1</span>$2");
+      elements[i].innerHTML = elements[i].innerHTML.replace(/\\b([a-z])([a-z]+)?\\b/gim, "<span class='first-letter'>1</span>$2");
     }
   }
 

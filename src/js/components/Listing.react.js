@@ -2,7 +2,7 @@ var React = require('react');
 
 var Listing = React.createClass({
   componentDidMount: function() {
-    $('.price').currency({
+    $('.prop-price').currency({
       decimals: 0
     });
     $('.sqft').currency({
@@ -11,7 +11,7 @@ var Listing = React.createClass({
     });
   },
   componentDidUpdate: function() {
-    $('.price').currency({
+    $('.prop-price').currency({
       decimals: 0
     });
     $('.sqft').currency({
@@ -25,6 +25,7 @@ var Listing = React.createClass({
     var divStyle = {
       backgroundImage: 'url(' + listing.preview_image + ')'
     };
+    function createMarkup() { return {__html: 'ft<sup>2</sup>'}; };
     if (listing.streeteasy_status !='Active') {
       listing.bottom_info = listing.streeteasy_status;
     }
@@ -36,26 +37,31 @@ var Listing = React.createClass({
     return (
       <li className='grid-item property_tile'>
         <a href={listingURL} className='property_box'>
+        <div className="image-wrap">
         <div className='preview-image' style={divStyle}></div>
+        </div>
           
-          <div className='property_tile_info highlight'>
+          <div className='property_tile_info'>
+
             <div className='top-info'>
-              <h2>{listing.title}</h2>
+              <span className="prop-title">{listing.title}</span>
               <div className='spacer'></div>
-              <h3 className="price">{listing.price}</h3>
+              <span className="prop-price">{listing.price}</span>
               <div className='spacer'></div>
-              <h4>{listing.property_type}</h4>
-              <h4>
-                <span className="sqft">{listing.sqft}</span>
-                ft<sup>2</sup>
-              </h4>
-              <div className='spacer'></div>              
-              <h4>{listing.property_location}</h4>
+              <span className="prop-details">{listing.property_type}</span>
+              <span className="prop-details">
+                <span className="sqft-details sqft">{listing.sqft}</span>
+                <span className="sqft-details sup" dangerouslySetInnerHTML={createMarkup()} />
+              </span>
+              <div className='spacer'></div>    
+              <span className="prop-location">{listing.property_location}</span>          
             </div>
+
             <div className='bottom-info'>
               <div>{listing.bottom_info}</div>
               <div className='red'>{listing.bottom_info_red}</div>
             </div>
+
           </div>
         </a>
       </li>

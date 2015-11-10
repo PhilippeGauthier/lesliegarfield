@@ -92,6 +92,12 @@
 		.prop-price, .bottom-info, .prop-details,.prop-location {
 			@include hsmall($hFontM);
 		}
+		.sqft-details {
+			display: inline-block;
+			&.sup {
+				margin-left: 3px;
+			}
+		}
 		.bottom-info {
 			color: $modal-text;
 			.red {

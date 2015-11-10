@@ -3,14 +3,7 @@ var Listings = require('../components/Listings.react');
 var Select = require('react-select');
 var _ = require('lodash');
 
-//  {
-//    'value': 'sqft:descend',
-//    'label': 'Square Feet - Highest to Lowest'
-//  },  
-//  {
-//    'value': 'sqft:ascend',
-//    'label': 'Square Feet - Lowest to Highest'
-//  },
+
 
 var sortOptions = [
   {
@@ -21,10 +14,14 @@ var sortOptions = [
     'value': 'price:ascend',
     'label': 'Price - Lowest to Highest'
   },
-  {
-    'value': 'datestamp:descend',
-    'label': 'Date Posted - Most Recent'
-  }
+ {
+   'value': 'sqft:descend',
+   'label': 'Square Feet - Highest to Lowest'
+ },  
+ {
+   'value': 'sqft:ascend',
+   'label': 'Square Feet - Lowest to Highest'
+ }
 ];
 
 var SortBar = React.createClass({

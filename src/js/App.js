@@ -83,9 +83,11 @@ if (elem.length) {
 	};
 
 	// start up the app by loading in JSON file of properties
-	loadJSON('JSON/properties.json', function(properties) {
-	  startApp(properties);
-	}); 
+	// loadJSON('../JSON/properties.json', function(properties) {
+	//   startApp(properties);
+	// }); 
+	properties = window.data
+	startApp(properties)
 }
 
 

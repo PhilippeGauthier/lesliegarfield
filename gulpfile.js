@@ -47,21 +47,21 @@ var path = {
 
 var mark = ['statamic/_content/1-properties/lease/*.md','statamic/_content/1-properties/sale/*.md'];
 
-gulp.task('markdown', function(){
-  gulp.src([path.MKDN_SRC_NEW_YORK + '/**/*.md','!'+ path.MKDN_SRC + path.MKDN_EXCLUDE])
-    .pipe(gutil.buffer())
-    .on('error', function(err){ console.log(err.message); })
-    .pipe(markdown('properties.json'))
-    .pipe(gulp.dest(path.JSON))
-});
+// gulp.task('markdown', function(){
+//   gulp.src([path.MKDN_SRC_NEW_YORK + '/**/*.md','!'+ path.MKDN_SRC + path.MKDN_EXCLUDE])
+//     .pipe(gutil.buffer())
+//     .on('error', function(err){ console.log(err.message); })
+//     .pipe(markdown('properties.json'))
+//     .pipe(gulp.dest(path.JSON))
+// });
 
-gulp.task('markdown-international', function(){
-  gulp.src([path.MKDN_SRC_INTER + '/**/*.md','!'+ path.MKDN_SRC_INTER + '/page.md'])
-    .pipe(gutil.buffer())
-    .on('error', function(err){ console.log(err.message); })
-    .pipe(markdown('properties-international.json'))
-    .pipe(gulp.dest(path.JSON))
-});
+// gulp.task('markdown-international', function(){
+//   gulp.src([path.MKDN_SRC_INTER + '/**/*.md','!'+ path.MKDN_SRC_INTER + '/page.md'])
+//     .pipe(gutil.buffer())
+//     .on('error', function(err){ console.log(err.message); })
+//     .pipe(markdown('properties-international.json'))
+//     .pipe(gulp.dest(path.JSON))
+// });
 
 gulp.task('copy', function(){
   gulp.src(path.HTML)
@@ -102,8 +102,8 @@ gulp.task('ascent-minify-css', function() {
 gulp.task('watch', function() {
   livereload.listen();
   gulp.watch(path.HTML, ['copy']);
-  gulp.watch([path.MKDN_SRC_NEW_YORK + '/sale/*.md',path.MKDN_SRC + '/lease/*.md'], ['markdown']);
-  gulp.watch([path.MKDN_SRC_INTER + '/*.md'], ['markdown-international']);
+  // gulp.watch([path.MKDN_SRC_NEW_YORK + '/sale/*.md',path.MKDN_SRC + '/lease/*.md'], ['markdown']);
+  // gulp.watch([path.MKDN_SRC_INTER + '/*.md'], ['markdown-international']);
   gulp.watch(path.SCSS, ['sass']);
   gulp.watch([path.DEST + '/**/*.*'], reload_page);
 

@@ -2502,6 +2502,9 @@ p.intro-section {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
+.Select-placeholder:focus {
+  outline: none; }
+
 .has-value > .Select-control > .Select-placeholder {
   color: #333333; }
 
@@ -5743,6 +5746,12 @@ input.radio {
   font-family: "Copernicus-Medium";
   font-size: 15px;
   line-height: 21.75px; }
+
+.property_box .property_tile_info .sqft-details {
+  display: inline-block; }
+
+.property_box .property_tile_info .sqft-details.sup {
+  margin-left: 3px; }
 
 .property_box .property_tile_info .bottom-info {
   color: #CCCCCC; }
