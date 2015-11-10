@@ -65,14 +65,15 @@ datestamp_format: "m/d/Y"
 
 control_panel:
   fields:
-    - name
-    - email
-    - phone_mobile
-    - phone_office
-    - date_1
-    - time_1
-    - date_2
-    - time_2
+    datestamp: Date
+    name: Name
+    email: Email
+    phone_mobile: Cell
+    phone_office: Office
+    date_1: Date 1
+    time_1: Time 1
+    date_2: Date 2
+    time_2: Time 2
   metrics:
     - 
       type: count

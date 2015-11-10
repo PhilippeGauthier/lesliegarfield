@@ -57,10 +57,11 @@ datestamp_format: "m/d/Y"
 
 control_panel:
   fields:
-    - name
-    - address
-    - email
-    - phone
+    datestamp: Date
+    name: Name
+    address: Address
+    email: Email
+    phone: Phone
   metrics:
     - 
       type: count

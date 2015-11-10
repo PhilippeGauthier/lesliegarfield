@@ -53,14 +53,15 @@ email:
   # html_template: html_email
   # text_template: text_email
 
-datestamp_format: "m/d/Y"
+datestamp_format: "m/d/Y/g/h/a"
 
 control_panel:
   fields:
-    - FNAME
-    - LNAME
-    - EMAIL
-    - phone
+    datestamp: Date
+    FNAME: First Name
+    LNAME: Last Name
+    EMAIL: Email
+    phone: Phone
   metrics:
     - 
       type: count
