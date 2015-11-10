@@ -21,7 +21,6 @@ var Listing = React.createClass({
   },
   render: function() {
     var listing = this.props.listing;
-    var listingURL = window.location.origin + listing.url;
     var divStyle = {
       backgroundImage: 'url(' + listing.preview_image + ')'
     };
@@ -36,7 +35,7 @@ var Listing = React.createClass({
 
     return (
       <li className='grid-item property_tile'>
-        <a href={listingURL} className='property_box'>
+        <a href={listing.url} className='property_box'>
         <div className="image-wrap">
         <div className='preview-image' style={divStyle}></div>
         </div>
