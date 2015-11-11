@@ -5628,6 +5628,9 @@ input.radio {
   height: 64px;
   width: 64px; }
 
+#properties section {
+  padding-top: 54px; }
+
 .tile-container {
   padding-top: 60px;
   margin: 0 15px; }
