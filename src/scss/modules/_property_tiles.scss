@@ -89,7 +89,7 @@
 		.prop-title {
 			@include hsmedium($hFontMI);
 		}
-		.prop-price, .bottom-info, .prop-details,.prop-location {
+		.prop-price, .bottom-info, .prop-details,.prop-location,.price,.currency {
 			@include hsmall($hFontM);
 		}
 		.sqft-details {
@@ -97,6 +97,9 @@
 			&.sup {
 				margin-left: 3px;
 			}
+		}
+		.price,.currency {
+			display: inline-block;
 		}
 		.bottom-info {
 			color: $modal-text;

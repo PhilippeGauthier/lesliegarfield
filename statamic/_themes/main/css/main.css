@@ -5748,7 +5748,7 @@ input.radio {
   font-size: 18px;
   line-height: 23.94px; }
 
-.property_box .property_tile_info .prop-price, .property_box .property_tile_info .bottom-info, .property_box .property_tile_info .prop-details, .property_box .property_tile_info .prop-location {
+.property_box .property_tile_info .prop-price, .property_box .property_tile_info .bottom-info, .property_box .property_tile_info .prop-details, .property_box .property_tile_info .prop-location, .property_box .property_tile_info .price, .property_box .property_tile_info .currency {
   font-family: "Copernicus-Medium";
   font-size: 15px;
   line-height: 21.75px; }
@@ -5758,6 +5758,9 @@ input.radio {
 
 .property_box .property_tile_info .sqft-details.sup {
   margin-left: 3px; }
+
+.property_box .property_tile_info .price, .property_box .property_tile_info .currency {
+  display: inline-block; }
 
 .property_box .property_tile_info .bottom-info {
   color: #CCCCCC; }

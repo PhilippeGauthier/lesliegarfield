@@ -48,7 +48,7 @@ var Listing = React.createClass({
               <span className="prop-title">{listing.title}</span>
               <div className='spacer'></div>
               <span className="prop-price">
-                <span className="price-currency">{listing.currency}</span>
+                <span className="currency">{listing.currency}</span>
                 <span className="price">{listing.price}</span>
               </span>
               <div className='spacer'></div>
