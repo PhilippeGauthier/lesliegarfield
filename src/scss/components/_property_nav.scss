@@ -119,6 +119,9 @@
 	}
 	.filter-view {
 		vertical-align: top;
+		.rent-or-buy, .nav {
+			vertical-align: middle;
+		}
 
 	}
 	.view-type {
@@ -176,7 +179,7 @@
 	}
 	.sort-bar-divider {
 		width: 1px;
-		height: $bPadding;
+		height: 64px;
 		vertical-align: top;
 		border-right: 1px solid $light-font-color;
 		margin-left: 20px;

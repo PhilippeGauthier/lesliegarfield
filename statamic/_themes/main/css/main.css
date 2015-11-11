@@ -3434,6 +3434,9 @@ footer .footer-divider {
   height: 800px;
   margin-top: 60px; }
 
+.big-map .map {
+  height: 400px; }
+
 .Select {
   border: 1px solid transparent; }
 
@@ -3530,6 +3533,9 @@ footer .footer-divider {
 .property_nav .filter-view {
   vertical-align: top; }
 
+.property_nav .filter-view .rent-or-buy, .property_nav .filter-view .nav {
+  vertical-align: middle; }
+
 .property_nav .view-type {
   float: right; }
 
@@ -3578,7 +3584,7 @@ footer .footer-divider {
 
 .sort-nav .sort-bar-divider {
   width: 1px;
-  height: 60px;
+  height: 64px;
   vertical-align: top;
   border-right: 1px solid #999999;
   margin-left: 20px; }

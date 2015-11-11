@@ -10,7 +10,7 @@
 
     <div class="collapse navbar-collapse" id="primary-nav">
       <ul class="nav navbar-nav navbar-right">
-        {{ nav from="/properties" exclude="properties/international" max_depth="1" sort_dir="desc" }}
+        {{ nav from="/properties" max_depth="1" sort_dir="desc" }}
         <li><a href="{{ url }}"{{ if is_current || is_parent }} class="current"{{ endif }}>{{ title }} </a>
          {{ if is_current || is_parent }}
          {{ if children }}

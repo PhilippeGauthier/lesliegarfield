@@ -12,9 +12,9 @@ submission_save_path: _forms/_contact/
 # Fields allowed to be submitted in the form, automatically
 # purging anything and everything else
 allowed:
-  - FNAME
-  - LNAME
-  - EMAIL
+  - first_name
+  - last_name
+  - email
   - phone
 
 # You are not required to require fields, but once you do, any missing
@@ -58,13 +58,12 @@ datestamp_format: "m/d/Y/g/h/a"
 control_panel:
   fields:
     datestamp: Date
-    FNAME: First Name
-    LNAME: Last Name
-    EMAIL: Email
+    first_name: First Name
+    email: Email
     phone: Phone
   metrics:
     - 
       type: count
-      field: FNAME
+      field: first_name
       label: Total Forms Received
 

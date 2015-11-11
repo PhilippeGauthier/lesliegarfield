@@ -235,6 +235,8 @@ return false;
 //   });
 // }
 
+$('#map-link').attr('href',"http://google.com");
+
 
 
 

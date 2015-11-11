@@ -1,29 +1,73 @@
-
-<div class="property_nav dark_gray leading properties_grid">
-	<div class="container">
-		<div class="rent-or-buy">
-			<ul>
-				<li><a href="{{ url }}?type=buy" class="{{ if get:type != "rent" }}active{{ endif }}">Buy</a></li>
-				<li><a href="{{ url }}?type=rent" class="{{ if get:type == "rent" }}active{{ endif }}"> Rent</a></li>
-			</ul>
-		</div>
-	</div>
-</div>
-<section class="bg-gray">
-	<div class="container">
-		{{ if get:type == "rent" }}
-
-		{{ entries:listing folder="properties/international/rental" sort_by="price" sort_dir="desc" }}
-		{{ theme:partial src="property_card" use_context="true" }}
-		{{ /entries:listing}}
-
-		{{ else }}
-
-		{{ entries:listing folder="properties/international/sale" sort_by="price" sort_dir="desc" }}
-		{{ theme:partial src="property_card" use_context="true" }}
-		{{ /entries:listing}}
-
-		{{ endif }}
-	<div>
-</section>
-
+<script type="text/javascript">
+  var data = {
+    {{ entries:listing folder="properties/international/sale"  }}
+    {{ if first }}
+    "sale": {
+    {{ endif }}
+      "{{ slug }}":
+        {
+          "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
+          "preview_image":"{{ preview_image }}",
+          "url":"{{ url }}",
+          "streeteasy_status": "{{ streeteasy_status }}",
+          "openhouse": "{{ openhouse }}",
+          "price": "{{ price }}",
+          "currency": "$",
+          "property_type": "{{ property_type }}",
+          "sqft": "{{ sqft }}",
+          "property_location": "{{ property_location }}"
+        },
+    {{ if last }}
+      "{{ slug }}":
+        {
+          "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
+          "preview_image":"{{ preview_image }}",
+          "url":"{{ url }}",
+          "streeteasy_status": "{{ streeteasy_status }}",
+          "openhouse": "{{ openhouse }}",
+          "price": "{{ price }}",
+          "currency": "$",
+          "property_type": "{{ property_type }}",
+          "sqft": "{{ sqft }}",
+          "property_location": "{{ property_location }}"
+        }
+    },
+    {{ endif }}
+    {{ /entries:listing}}
+    {{ entries:listing folder="properties/international/rental"  }}
+    {{ if first }}
+    "lease": {
+    {{ endif }}
+      "{{ slug }}":
+        {
+          "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
+          "preview_image":"{{ preview_image }}",
+          "url":"{{ url }}",
+          "streeteasy_status": "{{ streeteasy_status }}",
+          "openhouse": "{{ openhouse }}",
+          "price": "{{ price }}",
+          "property_type": "{{ property_type }}",
+          "sqft": "{{ sqft }}",
+          "property_location": "{{ property_location }}"
+        },
+    {{ if last }}
+      "{{ slug }}":
+        {
+          "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
+          "preview_image":"{{ preview_image }}",
+          "url":"{{ url }}",
+          "streeteasy_status": "{{ streeteasy_status }}",
+          "openhouse": "{{ openhouse }}",
+          "price": "{{ price }}",
+          "property_type": "{{ property_type }}",
+          "sqft": "{{ sqft }}",
+          "property_location": "{{ property_location }}"
+        }
+    }
+    {{ endif }}
+    {{ /entries:listing}}
+  }
+</script>
+{{ if get:view != "map" }}
+<div id="properties"></div>
+{{ endif }}

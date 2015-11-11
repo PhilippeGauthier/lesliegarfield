@@ -2,8 +2,9 @@ var React = require('react');
 
 var Listing = React.createClass({
   componentDidMount: function() {
-    $('.prop-price').currency({
-      decimals: 0
+    $('.price').currency({
+      decimals: 0,
+      hidePrefix: true
     });
     $('.sqft').currency({
       decimals: 0,
@@ -11,8 +12,9 @@ var Listing = React.createClass({
     });
   },
   componentDidUpdate: function() {
-    $('.prop-price').currency({
-      decimals: 0
+    $('.price').currency({
+      decimals: 0,
+      hidePrefix: true
     });
     $('.sqft').currency({
       decimals: 0,
@@ -45,7 +47,10 @@ var Listing = React.createClass({
             <div className='top-info'>
               <span className="prop-title">{listing.title}</span>
               <div className='spacer'></div>
-              <span className="prop-price">{listing.price}</span>
+              <span className="prop-price">
+                <span className="price-currency">{listing.currency}</span>
+                <span className="price">{listing.price}</span>
+              </span>
               <div className='spacer'></div>
               <span className="prop-details">{listing.property_type}</span>
               <span className="prop-details">

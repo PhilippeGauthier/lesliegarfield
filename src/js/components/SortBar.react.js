@@ -21,6 +21,14 @@ var sortOptions = [
  {
    'value': 'sqft:ascend',
    'label': 'Square Feet - Lowest to Highest'
+ },
+ {
+   'value': 'datestamp:descend',
+   'label': 'Date Posted - Newest First'
+ },  
+ {
+   'value': 'datestamp:ascend',
+   'label': 'Date Posted - Oldeswt First'
  }
 ];
 
