@@ -101,9 +101,11 @@
 	</openHouses>
 	{{ endif }}
 	<media>
+		{{ if photo_carousel|not_empty }}
 		{{ photo_carousel }}
 		<photo url="{{ _site_url }}{{ value }}" />
 		{{ /photo_carousel }}
+		{{ endif }}
 		{{ if floor_plans|not_empty }}
 		<floorplan url="{{ _site_url }}{{ floor_plans }}" />
 		{{ endif }}

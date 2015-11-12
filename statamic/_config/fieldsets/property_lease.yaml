@@ -195,13 +195,11 @@ fields:
     allowed: [png, gif, jpg, jpeg]
   photo_carousel:
     type: file
+    force_array: true
     display: Photo Carousel
     instructions: Click Upload a File or Drag and Drop on the Upload box. You can upload multiple files at once.
     allowed: [png, gif, jpg, jpeg]
     destination: assets/img/properties/sale
-    resize:
-      width: 900
-      height: 600
   brochure:
     type: file
     display: Property Brochure
