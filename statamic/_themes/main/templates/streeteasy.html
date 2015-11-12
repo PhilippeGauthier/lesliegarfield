@@ -5,7 +5,7 @@
 	{{ elseif streeteasy_status =="Contract Signed"}}contract-signed{{ elseif streeteasy_status =="In Contract"}}in-contract{{ elseif streeteasy_status =="Leased"}}leased{{ elseif streeteasy_status =="Off Market"}}off-market{{ elseif streeteasy_status =="Temporarily Off Market"}}temporarily-off-market{{ elseif streeteasy_status =="Sold"}}sold{{ endif }}" 
 	url="{{ _site_url }}{{ url }}">
 	<location>
-		{{ if address|not_empty }}
+		{{ if street_address|not_empty }}
 		<address>{{ street_address }}</address>
 		{{ endif }}
 		{{ if apartment|not_empty }}
@@ -56,7 +56,7 @@
 			<totalrooms>{{ rooms }}</totalrooms>
 		{{ endif }}
 		{{ if sqft|not_empty }}
-			<squareFeet>{{ sqft }}</squareFeet>
+			<squareFeet>{{ sqft|format_number }}</squareFeet>
 		{{ endif }}
 		{{ if listedOn|not_empty }}
 			<listedOn>{{ listedOn }}</listedOn>

@@ -31,6 +31,6 @@ email_handler_key:Ko-n7XPY1DYpUVcPpDYq2A
 
 master_killswitch: false
 
-datestamp_format: "m/d/Y g:ha"
+datestamp_format: "m/d/Y"
 
 # akismet_api_key: 

@@ -5369,8 +5369,7 @@ footer .footer-divider {
   border: 1px solid #25282A;
   border-radius: 2px;
   font-family: "Copernicus-Medium";
-  font-size: 14px;
-  color: #CCCCCC; }
+  font-size: 14px; }
 
 .input-clear input[type=text]:focus, .input-clear input[type=text]:active, .input-clear input[type=email]:focus, .input-clear input[type=email]:active, .input-clear input[type=date]:focus, .input-clear input[type=date]:active, .input-clear input[type=time]:focus, .input-clear input[type=time]:active, .input-clear textarea:focus, .input-clear textarea:active {
   outline-color: #009B77;
@@ -5380,6 +5379,9 @@ footer .footer-divider {
   .input-clear input[type=text], .input-clear input[type=email], .input-clear input[type=date], .input-clear input[type=time], .input-clear textarea {
     font-size: 16px;
     padding: 10px 10px; } }
+
+input {
+  color: black; }
 
 input.btn-garfield {
   margin: auto;
@@ -5630,6 +5632,9 @@ input.radio {
 
 #properties section {
   padding-top: 54px; }
+
+#properties section a {
+  margin: 0; }
 
 .tile-container {
   padding-top: 60px;

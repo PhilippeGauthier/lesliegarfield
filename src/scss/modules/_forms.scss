@@ -24,7 +24,7 @@
 		border-radius: 2px;
 		font-family: $hFontM;
 		font-size: 14px;
-		color: $modal-text;
+		
 		&:focus, &:active {
 			outline-color: $text-green;
 			outline-width: 2px;
@@ -37,6 +37,7 @@
 }
 
 input {
+	color: black;
 	&.btn-garfield {
 		margin: auto;
 		@include btn-garfield(10px, 120px, 20px);
