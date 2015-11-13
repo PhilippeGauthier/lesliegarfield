@@ -82,7 +82,7 @@ translations:
   editing: Editing
   enter_title: Enter a title...
   order_number: Order Number
-  publish_date: Publish Date
+  publish_date: Publish Date or Sold Date
   publish_time: Publish Time
   save: Save
   save_publish: "Publish"

@@ -63,15 +63,12 @@ fields:
     display: Status (STREETEASY)
     required: true
     options:
-      - Active
-      - In Contract
-      - Sold
+      active: Active
+      in-contract: In Contract
+      sold: Sold
   streeteasy:
     display: ACTIVATE STREETEASY?
     type: checkbox
-  sold_date:
-    type: date
-    display: Sold Date
   openhouse:
     display: Open House?
     type: checkbox

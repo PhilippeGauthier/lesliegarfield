@@ -1,8 +1,7 @@
 <properties>
 {{ entries:listing folder="properties/new-york/*" conditions="streeteasy:true" sort_by="{ streeteasy_type}" }}
 <property 
-	type="{{ streeteasy_type }}" id="{{ id }}" status="{{ if streeteasy_status =="Active" }}active{{ elseif streeteasy_status =="Contract Out"}}contract-out
-	{{ elseif streeteasy_status =="Contract Signed"}}contract-signed{{ elseif streeteasy_status =="In Contract"}}in-contract{{ elseif streeteasy_status =="Leased"}}leased{{ elseif streeteasy_status =="Off Market"}}off-market{{ elseif streeteasy_status =="Temporarily Off Market"}}temporarily-off-market{{ elseif streeteasy_status =="Sold"}}sold{{ endif }}" 
+	type="{{ streeteasy_type }}" id="{{ id }}" status="{{ streeteasy_status }}" 
 	url="{{ _site_url }}{{ url }}">
 	<location>
 		{{ if street_address|not_empty }}

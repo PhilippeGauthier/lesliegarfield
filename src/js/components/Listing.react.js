@@ -27,9 +27,16 @@ var Listing = React.createClass({
       backgroundImage: 'url(' + listing.preview_image + ')'
     };
     function createMarkup() { return {__html: 'ft<sup>2</sup>'}; };
-    if (listing.streeteasy_status !='Active') {
-      listing.bottom_info = listing.streeteasy_status;
+    if (listing.streeteasy_status == 'active' || 'Active') {
+      listing.bottom_info = "";
     }
+    if (listing.streeteasy_status == 'sold') {
+      listing.bottom_info = "Sold";
+    }
+    if (listing.streeteasy_status == 'in-contract' ) {
+      listing.bottom_info = "In Contract";
+    }
+
     if (listing.openhouse == 1) {
       listing.bottom_info_red = 'Open House';
       listing.bottom_info = "";
