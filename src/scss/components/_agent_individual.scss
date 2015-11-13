@@ -82,12 +82,15 @@
 			@include span (last 9 of 9 );
 			
 		}
-		.agent-title {
+		h2.agent-title {
 			display: none;
 			@include breakpoint($medium) {
-				margin-top: 60px;
+				margin-bottom: 30px;
 				display: block;
 			}
+		}
+		h2 {
+			margin-bottom: 30px;
 		}
 		p:first-of-type, span:first-of-type {
 			margin-top: 0;
