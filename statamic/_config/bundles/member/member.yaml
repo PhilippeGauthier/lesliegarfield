@@ -15,3 +15,10 @@ reset_password_age_limit: 20
 # email templates
 reset_password_text_email:
 reset_password_html_email:
+
+avatar:
+  type: file
+  allowed: [jpg, jpeg]
+  destination: assets/images
+  max_files: 1
+  display: "Image of user" 

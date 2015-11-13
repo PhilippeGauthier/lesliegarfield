@@ -42,6 +42,12 @@ fields:
     display: Password
     type: show_password
     save_value: false
+  avatar:
+    type: file
+    allowed: [jpg, jpeg, png]
+    destination: assets/img
+    max_files: 1
+    display: "Image of user" 
   roles:
     type: checkboxes
     display: Roles

@@ -48,7 +48,7 @@ submission_save_extension: yaml
 email:
   to: info@lesliegarfield.com
   from: info@lesliegarfield.com
-  subject: Get a Valuation Lead
+  subject: Valuation Request
   automagic: true
   # html_template: html_email
   # text_template: text_email

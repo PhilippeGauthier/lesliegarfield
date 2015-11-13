@@ -10,6 +10,9 @@
         <h2>Schedule a Viewing</h2>
         <h3>Let us know what times work best for you and we'll try our best to make it happen</h3>
         {{ raven:form formset="property_viewing_requests" attr="class:multi"}}
+                {{ if {raven:success} }}
+<h1>Good job, son!</h1>
+{{ endif }}
         <div class="input-clear">
           <div class="form">
             <input class="input" placeholder="First &amp; Last Name" type="text" name="name">
