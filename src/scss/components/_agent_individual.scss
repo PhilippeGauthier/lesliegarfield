@@ -82,7 +82,7 @@
 			@include span (last 9 of 9 );
 			
 		}
-		h2 {
+		.agent-title {
 			display: none;
 			@include breakpoint($medium) {
 				margin-top: 60px;

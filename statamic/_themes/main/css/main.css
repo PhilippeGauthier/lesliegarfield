@@ -4120,11 +4120,11 @@ footer .footer-divider {
   padding-left: 1.11111%;
   padding-right: 1.11111%; }
 
-.agent-individual main h2 {
+.agent-individual main .agent-title {
   display: none; }
 
 @media (min-width: 992px) {
-  .agent-individual main h2 {
+  .agent-individual main .agent-title {
     margin-top: 60px;
     display: block; } }
 
