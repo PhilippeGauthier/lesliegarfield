@@ -25,10 +25,10 @@ fields:
     type: select
     display: Choose currency
     options:
+       - none
        - sterling
        - euros
        - dollars
-       - none
   price:
     type: text
     default: 0
