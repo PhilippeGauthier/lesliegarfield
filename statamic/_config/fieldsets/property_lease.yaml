@@ -36,6 +36,11 @@ fields:
     type: text
     display: Zip Code (STREETEASY)
     required: true
+  currency:
+    type: text
+    display: Choose currency
+    hide: true
+    default: dollars
   price:
     type: text
     default: 0
@@ -66,9 +71,9 @@ fields:
     display: Status (STREETEASY)
     required: true
     options:
-      - Active
-      - In Contract
-      - Leased
+      active: Active
+      in-contract: In Contract
+      sold: Sold
   streeteasy:
     display: ACTIVATE STREETEASY?
     type: checkbox

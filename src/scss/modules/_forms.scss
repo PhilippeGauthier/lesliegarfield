@@ -37,7 +37,7 @@
 }
 
 input {
-	color: black;
+	color: $dark-gray;
 	&.btn-garfield {
 		margin: auto;
 		@include btn-garfield(10px, 120px, 20px);
@@ -52,6 +52,22 @@ input {
 	&.radio {
 		text-align: left;
 	}
+}
+
+::-webkit-input-placeholder {
+   color: darken($modal-text, 20%);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: darken($modal-text, 20%);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: darken($modal-text, 20%);
+}
+
+:-ms-input-placeholder {  
+   color: darken($modal-text, 20%);
 }
 
 .email-signup {

@@ -36,12 +36,22 @@ var Listing = React.createClass({
     if (listing.streeteasy_status == 'in-contract' ) {
       listing.bottom_info = "In Contract";
     }
-
     if (listing.openhouse == 1) {
       listing.bottom_info_red = 'Open House';
       listing.bottom_info = "";
     }
-
+    if (listing.currency == "dollars") {
+      listing.currency = "$";
+    }
+    if (listing.currency == "sterling") {
+      listing.currency = "£";
+    }
+    if (listing.currency == "dollars") {
+      listing.currency = "€";
+    }
+    if (listing.currency == "none") {
+      listing.currency = "";
+    }
     return (
       <li className='grid-item property_tile'>
         <a href={listing.url} className='property_box'>

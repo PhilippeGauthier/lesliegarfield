@@ -25,7 +25,7 @@
 			<div class="agent property-downloads">
 				<a href="{{ brochure }}" target="_blank">
 					{{ theme:partial src="svg/download" }}
-					<span>Download</span>
+					<span>Brochure</span>
 				</a>
 				<a href="{{ floor_plans }}" target="_blank">
 					{{ theme:partial src="svg/floorplans" }}
@@ -87,8 +87,8 @@
 						<span class="red"><i class="fa fa-home"></i> Enquire for Details</span>
 						{{ endif }}
 						{{ /openhouse_grid }}
-						{{ elseif streeteasy_status != "Active" }}
-						<span>{{ streeteasy_status }}</span>
+						{{ elseif streeteasy_status != "active" }}
+						<span>{{ if streeteasy_status == "in-contract"}}In Contract{{ elseif streeteasy_status == "sold" }}Sold{{ endif }}</span>
 						{{ endif }}
 					</div>	
 					{{ else }}			
@@ -214,7 +214,7 @@
 						</ul>
 						<ul>
 							{{ if price|not_empty }}
-							<li>${{ price|format_number }}</li>
+							<li>{{ if currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ else }}${{ endif }}{{ price|format_number }}</li>
 							{{ endif }}
 
 							{{ if terms|not_empty }}

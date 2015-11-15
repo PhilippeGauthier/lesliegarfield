@@ -17,9 +17,7 @@
 			<h3>Sales Enquiries</h3>
 			<div class="input-clear">
         {{ raven:form formset="general_enquiries" attr="class:multi" return="/success"}}
-        {{ if {raven:success} }}
-<h1>Good job, son!</h1>
-{{ endif }}
+        
      		<div class="form-full">
         	<input type="text" value="" placeholder="First Name" name="first_name" class="input">
         </div>

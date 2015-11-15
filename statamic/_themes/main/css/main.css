@@ -2139,7 +2139,7 @@ h4 {
 h5 {
   font-family: "Copernicus-Medium";
   font-size: 18px;
-  line-height: 23.94px; }
+  line-height: 27px; }
 
 @media (min-width: 1280px) {
   h5 {
@@ -2213,7 +2213,7 @@ p.intro-section {
 .section-title {
   font-family: Arial, "Lucida Grande", sans-serif;
   font-size: 18px;
-  line-height: 23.94px;
+  line-height: 27px;
   font-weight: 700;
   text-align: center; }
 
@@ -3179,14 +3179,16 @@ header button.collapsed .patty:after {
   header .navbar-brand {
     padding-left: 0; } }
 
-.secondary-nav {
-  z-index: 100;
-  width: 100%;
+.sticky-wrapper {
   display: none; }
 
 @media (min-width: 992px) {
-  .secondary-nav {
+  .sticky-wrapper {
     display: block; } }
+
+.secondary-nav {
+  z-index: 100;
+  width: 100%; }
 
 .secondary-nav.stuck {
   position: fixed;
@@ -3226,7 +3228,7 @@ header button.collapsed .patty:after {
   color: white;
   font-family: "Copernicus-Medium";
   font-size: 18px;
-  line-height: 23.94px;
+  line-height: 27px;
   padding-top: 20px;
   padding-bottom: 20px; }
 
@@ -3809,7 +3811,7 @@ footer .footer-divider {
 .property-agents span {
   font-family: "Copernicus-MediumItalic";
   font-size: 18px;
-  line-height: 23.94px;
+  line-height: 27px;
   margin-top: 0;
   display: block;
   margin-bottom: 5px; }
@@ -4333,7 +4335,7 @@ footer .footer-divider {
   margin: 0;
   font-family: Arial, "Lucida Grande", sans-serif;
   font-size: 18px;
-  line-height: 23.94px; }
+  line-height: 27px; }
 
 .green-specs li {
   display: block; }
@@ -5384,7 +5386,7 @@ footer .footer-divider {
     padding: 10px 10px; } }
 
 input {
-  color: black; }
+  color: #25282A; }
 
 input.btn-garfield {
   margin: auto;
@@ -5410,6 +5412,20 @@ input.btn-garfield:focus {
 
 input.radio {
   text-align: left; }
+
+::-webkit-input-placeholder {
+  color: #999999; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #999999; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #999999; }
+
+:-ms-input-placeholder {
+  color: #999999; }
 
 .email-signup input {
   background-color: #25282A;
@@ -5585,7 +5601,7 @@ input.radio {
 .landing-sub-nav h4, .landing-sub-nav .title {
   font-family: "Copernicus-Bold";
   font-size: 18px;
-  line-height: 23.94px;
+  line-height: 27px;
   margin: 0; }
 
 .landing-sub-nav .sub-title {
@@ -5757,7 +5773,7 @@ input.radio {
 .property_box .property_tile_info .prop-title {
   font-family: "Copernicus-MediumItalic";
   font-size: 18px;
-  line-height: 23.94px; }
+  line-height: 27px; }
 
 .property_box .property_tile_info .prop-price, .property_box .property_tile_info .bottom-info, .property_box .property_tile_info .prop-details, .property_box .property_tile_info .prop-location, .property_box .property_tile_info .price, .property_box .property_tile_info .currency {
   font-family: "Copernicus-Medium";
@@ -6189,7 +6205,7 @@ input.radio {
   .quote-content {
     font-family: "Copernicus-MediumItalic";
     font-size: 18px;
-    line-height: 23.94px; } }
+    line-height: 27px; } }
 
 .quote-content .quote-symbol {
   position: absolute;
@@ -6250,7 +6266,7 @@ input.radio {
 .service-list span {
   font-family: Arial, "Lucida Grande", sans-serif;
   font-size: 18px;
-  line-height: 23.94px;
+  line-height: 27px;
   margin-bottom: 1em;
   font-weight: 700;
   display: block; }

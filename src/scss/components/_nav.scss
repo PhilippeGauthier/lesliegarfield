@@ -152,13 +152,17 @@ header {
 	}
 }
 
-.secondary-nav {
-	z-index: 100;
-	width: 100%;
+.sticky-wrapper {
 	display: none;
 	@include breakpoint($medium) {
 		display: block;
 	}
+}
+
+.secondary-nav {
+	z-index: 100;
+	width: 100%;
+
 	&.stuck {
 		position: fixed;
 		margin-top: 78px;

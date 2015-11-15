@@ -36,6 +36,11 @@ fields:
     type: text
     display: Zip Code (STREETEASY)
     required: true
+  currency:
+    type: text
+    display: Choose currency
+    hide: true
+    default: dollars
   price:
     type: text
     default: 0

@@ -28,6 +28,7 @@ fields:
        - sterling
        - euros
        - dollars
+       - none
   price:
     type: text
     default: 0
