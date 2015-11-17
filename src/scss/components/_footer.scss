@@ -17,6 +17,9 @@ footer {
 	}
 	form {
 		max-width: 100%;
+		.form-full {
+			margin-bottom: 10px;
+		}
 	}
 	input {
 		max-width: 100%;
@@ -28,9 +31,6 @@ footer {
 
 		@include breakpoint($tiny) {
 			@include span(6 of 12 no-gutter clear);
-			input {
-				max-width: 150px;
-			}
 			&.signup {
 				margin-top: 0;
 			}
@@ -42,9 +42,6 @@ footer {
 		}
 		@include breakpoint($small) {
 			@include span(4 of 12 no-gutter clear);
-				input {
-					max-width: 150px;
-				}
 		}
 		@include breakpoint($large) {
 			@include span(3 of 12 no-gutter clear);
@@ -67,6 +64,10 @@ footer {
 	}
 	.signup {
 		margin-top: 20px;
+	}
+	.response {
+		font-size: 14px;
+		line-height: 20px;
 	}
 	.grid-6 {
 

@@ -4,7 +4,7 @@
 		<div class="contact">
 
 			<div class="input-clear">
-        {{ raven:form formset="general_enquiries" attr="class:multi" }}
+        {{ raven:form formset="general_enquiries" attr="class:multi" return="{ _site_root}success_general" }}
         
      		<div class="form">
         	<input type="text" value="" placeholder="Name*" name="name" class="input">

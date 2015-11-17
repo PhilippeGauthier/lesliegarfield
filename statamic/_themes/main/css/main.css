@@ -3303,6 +3303,9 @@ footer li {
 footer form {
   max-width: 100%; }
 
+footer form .form-full {
+  margin-bottom: 10px; }
+
 footer input {
   max-width: 100%; }
 
@@ -3324,8 +3327,6 @@ footer .footer-group:before, footer .footer-group:after {
     box-sizing: border-box;
     width: 50%;
     float: left; }
-  footer .footer-group input {
-    max-width: 150px; }
   footer .footer-group.signup {
     margin-top: 0; } }
 
@@ -3337,9 +3338,7 @@ footer .footer-group:before, footer .footer-group:after {
   footer .footer-group {
     box-sizing: border-box;
     width: 33.33333%;
-    float: left; }
-  footer .footer-group input {
-    max-width: 150px; } }
+    float: left; } }
 
 @media (min-width: 1280px) {
   footer .footer-group {
@@ -3364,6 +3363,10 @@ footer .bottom div, footer .bottom a {
 
 footer .signup {
   margin-top: 20px; }
+
+footer .response {
+  font-size: 14px;
+  line-height: 20px; }
 
 @media (min-width: 768px) {
   footer .grid-6 {
