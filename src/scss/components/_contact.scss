@@ -1,25 +1,4 @@
 .contact {
-	
-	.sales, .info {
-		h3 {
-			@include hxlarge($hFontMI);
-			margin-bottom: 30px;
-		}
-	}
-	.radio {
-		@include flex-hor;
-		padding: 0;
-		margin: 0 !important;
-		&:hover {
-			cursor: default;
-		}
-		input {
-			margin: 0 !important;
-		}
-		span {
-			margin-left: 10px;
-		}
-	}
 	.btn-garfield {
 		margin-top: 10px;
 		width: 100%;
@@ -81,14 +60,7 @@
 		}
 	}
 	@include breakpoint($large) {
-		@include pre(1 of 12);
-		.sales {
-			@include span(first 4 of 12);
-		}
-		.info {
-			// @include pre(2 of 12);
-			@include span(4 last of 12);
-			@include post(last 2 of 12);
-		}
+		@include pre(2 of 12);
+		@include span(8 of 12);
 	}
 }

@@ -5045,39 +5045,6 @@ footer .footer-divider {
 .twitter-feed .tweet:last-of-type {
   border-bottom: none; }
 
-.contact .sales h3, .contact .info h3 {
-  font-family: "Copernicus-MediumItalic";
-  font-size: 18px;
-  line-height: 27.9px;
-  margin-bottom: 30px; }
-
-@media (min-width: 992px) {
-  .contact .sales h3, .contact .info h3 {
-    font-size: 34px;
-    line-height: 52.7px; } }
-
-.contact .radio {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  padding: 0;
-  margin: 0 !important; }
-
-.contact .radio:hover {
-  cursor: default; }
-
-.contact .radio input {
-  margin: 0 !important; }
-
-.contact .radio span {
-  margin-left: 10px; }
-
 .contact .btn-garfield {
   margin-top: 10px;
   width: 100%; }
@@ -5166,20 +5133,12 @@ footer .footer-divider {
 
 @media (min-width: 1280px) {
   .contact {
-    margin-left: 8.33333%; }
-  .contact .sales {
+    margin-left: 16.66667%;
     box-sizing: border-box;
-    width: 33.33333%;
+    width: 66.66667%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
-  .contact .info {
-    box-sizing: border-box;
-    width: 33.33333%;
-    float: right;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-    margin-right: 16.66667%; } }
+    padding-right: 0.83333%; } }
 
 .hero {
   width: 100%;
@@ -5356,14 +5315,26 @@ footer .footer-divider {
   width: 100%;
   float: left; }
 
+.input-clear .form-full:before, .input-clear .form-full:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 .input-clear .form-full textarea {
   height: 100px;
   text-align: top; }
 
+@media (min-width: 992px) {
+  .input-clear .form-half {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    margin-left: 23.07692%; } }
+
 .input-clear form {
   text-align: center; }
 
-.input-clear input[type=text], .input-clear input[type=email], .input-clear input[type=date], .input-clear input[type=time], .input-clear textarea {
+.input-clear input[type=text], .input-clear input[type=email], .input-clear input[type=date], .input-clear input[type=time], .input-clear select, .input-clear textarea {
   box-sizing: border-box;
   width: 100%;
   float: left;
@@ -5376,19 +5347,28 @@ footer .footer-divider {
   font-family: "Copernicus-Medium";
   font-size: 14px; }
 
-.input-clear input[type=text]:focus, .input-clear input[type=text]:active, .input-clear input[type=email]:focus, .input-clear input[type=email]:active, .input-clear input[type=date]:focus, .input-clear input[type=date]:active, .input-clear input[type=time]:focus, .input-clear input[type=time]:active, .input-clear textarea:focus, .input-clear textarea:active {
+.input-clear input[type=text]:focus, .input-clear input[type=text]:active, .input-clear input[type=email]:focus, .input-clear input[type=email]:active, .input-clear input[type=date]:focus, .input-clear input[type=date]:active, .input-clear input[type=time]:focus, .input-clear input[type=time]:active, .input-clear select:focus, .input-clear select:active, .input-clear textarea:focus, .input-clear textarea:active {
   outline-color: #009B77;
   outline-width: 2px; }
 
 @media (min-width: 768px) {
-  .input-clear input[type=text], .input-clear input[type=email], .input-clear input[type=date], .input-clear input[type=time], .input-clear textarea {
+  .input-clear input[type=text], .input-clear input[type=email], .input-clear input[type=date], .input-clear input[type=time], .input-clear select, .input-clear textarea {
     font-size: 16px;
     padding: 10px 10px; } }
 
-input {
+.input-clear select {
+  padding: 20px;
+  height: 47px;
+  border-radius: 2px; }
+
+@media (min-width: 992px) {
+  .input-clear select {
+    padding: 30px; } }
+
+input, select {
   color: #25282A; }
 
-input.btn-garfield {
+input.btn-garfield, select.btn-garfield {
   margin: auto;
   border-radius: 0;
   background-color: #009880;
@@ -5400,17 +5380,17 @@ input.btn-garfield {
   text-transform: uppercase;
   max-width: 100%; }
 
-input.btn-garfield:hover, input.btn-garfield:focus {
+input.btn-garfield:hover, input.btn-garfield:focus, select.btn-garfield:hover, select.btn-garfield:focus {
   color: white;
   background-color: #009d84; }
 
-input.btn-garfield:hover {
+input.btn-garfield:hover, select.btn-garfield:hover {
   border: 1px solid #009B77; }
 
-input.btn-garfield:focus {
+input.btn-garfield:focus, select.btn-garfield:focus {
   outline: none; }
 
-input.radio {
+input.radio, select.radio {
   text-align: left; }
 
 ::-webkit-input-placeholder {
