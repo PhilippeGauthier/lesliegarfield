@@ -15,17 +15,7 @@
 				<span class="prop-title">{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}</span>
 				<div class="spacer"></div>
 				<span class="prop-price">
-				{{ if currency|not_empty }}
-				{{ if currency == "sterling" }}
-				&#163;{{ price|format_number }}
-				{{ elseif currency == "euro" }}
-				&#128;{{ price|format_number }}
-				{{ elseif currency == "dollar" }}
-				${{ price|format_number }}
-				{{ endif }}
-				{{ else }}
-				${{ price|format_number }}
-				{{ endif }}
+				{{ if currency == "dollars" }}${{ elseif currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ else }}{{ endif }}{{ price|format_number }}
 				</span>
 				<div class="spacer"></div>
 				<span class="prop-details">{{ property_type }}</span>
