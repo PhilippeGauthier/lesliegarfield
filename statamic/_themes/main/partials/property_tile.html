@@ -10,7 +10,7 @@
 				<span class="prop-title">{{ title }}</span>
 				<div class="spacer"></div>
 				<span class="prop-price">
-				{{ if currency == "dollars" }}${{ elseif currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ else }}{{ endif }}{{ price|format_number }}
+				{{ if currency == "dollars" }}${{ elseif currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ elseif currency == "none" }}{{ else }}${{ endif }}{{ price|format_number }}
 				</span>
 				<div class="spacer"></div>
 				<span class="prop-details">{{ property_type }}</span>
