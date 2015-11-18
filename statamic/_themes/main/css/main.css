@@ -3665,10 +3665,6 @@ footer .footer-divider {
   height: 100%;
   margin: 0 10px 0 5px; }
 
-.property-info .property-header h2 {
-  font-size: 40px;
-  line-height: 50px; }
-
 @media (min-width: 992px) {
   .property-info .property-header {
     display: -webkit-flex;

@@ -55,15 +55,10 @@
 		margin: 0 10px 0 5px;
 	}
 	.property-header {
-		h2 {
-			font-size: 40px;
-			line-height: 50px;
-		}
 		@include breakpoint($medium) {
 			@include flex-hor;
-			justify-content: space-between;			
+			justify-content: space-between;
 		}
-
 	}
 	.property-subheader {
 		@include clearfix;

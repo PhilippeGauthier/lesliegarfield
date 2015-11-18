@@ -157,7 +157,7 @@ fields:
     display: Powder Rooms
     type: text
   taxes:
-    display: Taxes
+    display: Annual Taxes
     type: text
     instructions:
       above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
