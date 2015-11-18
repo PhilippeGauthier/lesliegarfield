@@ -28,7 +28,7 @@ var sortOptions = [
  },  
  {
    'value': 'datestamp:ascend',
-   'label': 'Date Posted - Oldeswt First'
+   'label': 'Date Posted - Oldest First'
  }
 ];
 

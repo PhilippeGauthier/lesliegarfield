@@ -11,7 +11,7 @@ fields:
     display: Neighborhood
     taxonomy:
       type: property_location
-      folder: properties/garfield/*
+      folder: properties/new-york/*
   streeteasy_status:
     type: select
     hide: true
@@ -38,7 +38,7 @@ fields:
     max_items: 1
     taxonomy:
       type: property_type
-      folder: properties/garfield/*
+      folder: properties/new-york/*
   content:
     hide: true
 
