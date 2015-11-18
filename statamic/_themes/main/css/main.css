@@ -4181,7 +4181,8 @@ footer .footer-divider {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  transform: translateY(-50%);
+  height: 114px; }
 
 .agent-individual main .green-specs .press-item .carousel-image-container {
   display: -webkit-flex;

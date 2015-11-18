@@ -3,9 +3,7 @@
  <div class="carousel-tile press-item">
 	<div>
 		{{ if image|not_empty }}
-		<div class="carousel-image-container">
 		<img src="{{ path src="{{ image }}" }}">
-		</div>
 		{{ endif }}
 		{{ if text|not_empty }}
 		<p>{{ text }}</p>
@@ -16,9 +14,7 @@
  <a target="_blank" href="{{ link or file }}" class="carousel-tile press-item">
 	<div>
 		{{ if image|not_empty }}
-		<div class="carousel-image-container">
 		<img src="{{ path src="{{ image }}" }}">
-		</div>
 		{{ endif }}
 		{{ if text|not_empty }}
 		<p>{{ text }}</p>
