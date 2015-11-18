@@ -130,6 +130,10 @@
 				div {
 					@include vertical-align;
 				}
+				.carousel-image-container {
+					@include flex-vert;
+					height: 114px;
+				}
 				&:hover {
 					// background-color: darken($lightest-green, 3%);
 				}
