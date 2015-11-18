@@ -3648,13 +3648,6 @@ footer .footer-divider {
   display: table;
   clear: both; }
 
-.property-info .location {
-  box-sizing: border-box;
-  width: 100%;
-  float: left;
-  padding-left: 1.25%;
-  padding-right: 1.25%; }
-
 .property-info .content {
   padding-left: 30px;
   padding-right: 30px;
@@ -3694,18 +3687,16 @@ footer .footer-divider {
   color: #999999; }
 
 .property-info .property-subheader .location {
-  box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.25%;
-  padding-right: 1.25%; }
+  margin-left: 0;
+  margin-right: 0; }
 
 .property-info .property-subheader .location.split {
-  box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.25%;
-  padding-right: 1.25%; }
+  margin-left: 0;
+  margin-right: 0; }
 
 .property-info .property-subheader .open-house {
   box-sizing: border-box;

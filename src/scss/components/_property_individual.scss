@@ -41,9 +41,6 @@
 	margin-bottom: 30px;
 	background-color: #fff;
 	@include clearfix;
-	.location {
-		@include span (full);
-	}
 	.content {
 		padding-left: 30px;
 		padding-right: 30px;
@@ -70,9 +67,9 @@
 			color: $light-font-color;
 		}
 		.location {
-			@include span (full);
+			@include span (full after no-gutter);
 			&.split {
-				@include span (full);
+				@include span (full after no-gutter);
 			}
 		}
 		.open-house {
