@@ -52,6 +52,9 @@ var Listing = React.createClass({
     if (listing.currency == "none") {
       listing.currency = "";
     }
+    if (listing.currency == null) {
+      listing.currency = "$";
+    }
     return (
       <li className='grid-item property_tile'>
         <a href={listing.url} className='property_box'>
