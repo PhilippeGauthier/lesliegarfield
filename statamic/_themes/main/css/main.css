@@ -3651,7 +3651,9 @@ footer .footer-divider {
 .property-info .location {
   box-sizing: border-box;
   width: 100%;
-  float: left; }
+  float: left;
+  padding-left: 1.25%;
+  padding-right: 1.25%; }
 
 .property-info .content {
   padding-left: 30px;
@@ -3692,15 +3694,18 @@ footer .footer-divider {
   color: #999999; }
 
 .property-info .property-subheader .location {
+  box-sizing: border-box;
   width: 100%;
   float: left;
-  margin-left: 0;
-  margin-right: 0; }
+  padding-left: 1.25%;
+  padding-right: 1.25%; }
 
 .property-info .property-subheader .location.split {
   box-sizing: border-box;
   width: 100%;
-  float: left; }
+  float: left;
+  padding-left: 1.25%;
+  padding-right: 1.25%; }
 
 .property-info .property-subheader .open-house {
   box-sizing: border-box;

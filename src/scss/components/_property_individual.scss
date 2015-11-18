@@ -42,7 +42,7 @@
 	background-color: #fff;
 	@include clearfix;
 	.location {
-		@include span (full no-gutter);
+		@include span (full);
 	}
 	.content {
 		padding-left: 30px;
@@ -59,6 +59,7 @@
 			@include flex-hor;
 			justify-content: space-between;
 		}
+
 	}
 	.property-subheader {
 		@include clearfix;
@@ -69,9 +70,9 @@
 			color: $light-font-color;
 		}
 		.location {
-			@include span (full no-gutter after);
+			@include span (full);
 			&.split {
-				@include span (full no-gutter);
+				@include span (full);
 			}
 		}
 		.open-house {
