@@ -69,7 +69,7 @@
 			color: $light-font-color;
 		}
 		.location {
-			@include span (full);
+			@include span (full no-gutter);
 			&.split {
 				@include span (full);
 			}
