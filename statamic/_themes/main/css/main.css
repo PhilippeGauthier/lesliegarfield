@@ -4178,10 +4178,18 @@ footer .footer-divider {
   padding: 0 15px; }
 
 .agent-individual main .green-specs .press-item div {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 114px; }
 
 .agent-individual main .green-specs .press-item .carousel-image-container {
