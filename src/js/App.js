@@ -27,7 +27,7 @@ var StickyKit = require('./components/StickyKit.js');
 
 var JqueryEasing = require('./components/JqueryEasing.js');
 
-var GoogleMaps = require('./components/GoogleMaps.js');
+// var GoogleMaps = require('./components/GoogleMaps.js');
 
 // Custom JS
 var Custom = require('./components/Custom.js');
