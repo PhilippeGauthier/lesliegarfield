@@ -17,7 +17,8 @@
 	{{ latitude}},
 	{{ longitude }}{{/location}},
 	'{{url}}',
-	'{{ preview_image }}'
+	'{{ preview_image }}',
+	{{ if openhouse == "1" }}'_themes/main/img/map_marker_red.svg'{{ else }}'_themes/main/img/map_marker_green.svg'{{endif}}
 	],
 	{{ /entries:listing }}
 	];
@@ -51,18 +52,23 @@
 			var long = locations[i][2];
 			var url = locations[i][3];
 			var image = locations[i][4];
+			var icon = locations[i][5];
+
 
 			latlngset = new google.maps.LatLng(lat, long);
 
 			var marker = new google.maps.Marker({  
-				map: map, title: title , position: latlngset  
+				map: map, 
+				title: title, 
+				position: latlngset,
+				icon: icon  
 			});
 			map.setCenter(marker.getPosition())
 
 
 			var content = 
 
-			'<a href=' + '"' + url + '"' + 'class=' + '"' + 'property_box slick' + '"' + '>' +
+			'<a href=' + '"' + url + '"' + 'class=' + '"' + 'property_box' + '"' + '>' +
 				'<div class="image-wrap">' +
 					'<div class="preview-image" style=' + '"background-image: url(' + image + '">' + '</div>' +
 				'</div>' +

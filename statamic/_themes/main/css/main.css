@@ -5796,6 +5796,9 @@ input.radio, select.radio {
 .property_box:hover h3, .property_box:hover h4, .property_box:focus h3, .property_box:focus h4, .gm-style-iw:hover h3, .gm-style-iw:hover h4, .gm-style-iw:focus h3, .gm-style-iw:focus h4 {
   color: #25282A; }
 
+.gm-style-iw .property_box {
+  width: 300px; }
+
 .neighborhood-tile {
   padding: 10px;
   margin: 10px;

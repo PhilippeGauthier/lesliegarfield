@@ -47,6 +47,8 @@
 	}
 }
 
+
+
 .property_box, .gm-style-iw {
 	display: flex;
 	flex-flow: row nowrap;
@@ -129,3 +131,10 @@
 		transition: .25s;
 	}
 }
+
+.gm-style-iw {
+	.property_box {
+		width: 300px;
+	}
+}
+
