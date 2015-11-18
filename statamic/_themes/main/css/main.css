@@ -3696,16 +3696,12 @@ footer .footer-divider {
 .property-info .property-subheader .location {
   box-sizing: border-box;
   width: 100%;
-  float: left;
-  padding-left: 1.25%;
-  padding-right: 1.25%; }
+  float: left; }
 
 .property-info .property-subheader .location.split {
   box-sizing: border-box;
   width: 100%;
-  float: left;
-  padding-left: 1.25%;
-  padding-right: 1.25%; }
+  float: left; }
 
 .property-info .property-subheader .open-house {
   box-sizing: border-box;

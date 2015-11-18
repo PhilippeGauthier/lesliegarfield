@@ -71,7 +71,7 @@
 		.location {
 			@include span (full no-gutter);
 			&.split {
-				@include span (full);
+				@include span (full no-gutter);
 			}
 		}
 		.open-house {
