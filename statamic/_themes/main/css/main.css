@@ -2524,6 +2524,12 @@ p.intro-section {
   display: inline-block;
   -webkit-appearance: none; }
 
+.has-value {
+  padding: 1px 0; }
+
+.is-focused .has-value {
+  padding: 0; }
+
 .is-focused .Select-input > input {
   cursor: text; }
 
