@@ -156,6 +156,8 @@ fields:
   maintenance:
     display: Maintenance Fees
     type: text
+    instructions:
+      above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
   amenities:
     type: checkboxes
     display: Key Features

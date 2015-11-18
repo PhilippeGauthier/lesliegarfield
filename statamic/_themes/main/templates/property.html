@@ -193,7 +193,7 @@
 							{{ endif }}
 
 							{{ if taxes|not_empty }}
-							<li>Taxes</li>
+							<li>Annual Taxes</li>
 							{{ endif }}
 
 							{{ if income|not_empty }}
@@ -278,19 +278,19 @@
 							{{ endif }}
 
 							{{ if income|not_empty }}
-							<li>{{ income }}</li>
+							<li>${{ income|format_number }}</li>
 							{{ endif }}
 
 							{{ if expenses|not_empty }}
-							<li>{{ expenses }}</li>
+							<li>${{ expenses|format_number }}</li>
 							{{ endif }}
 
 							{{ if common_charges|not_empty }}
-							<li>{{ common_charges }}</li>
+							<li>${{ common_charges|format_number }}</li>
 							{{ endif }}
 							
 							{{ if maintenance|not_empty }}
-							<li>{{ maintenance }}</li>
+							<li>${{ maintenance|format_number }}</li>
 							{{ endif }}
 
 						</ul>

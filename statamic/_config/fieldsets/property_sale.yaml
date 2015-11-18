@@ -159,15 +159,23 @@ fields:
   taxes:
     display: Taxes
     type: text
+    instructions:
+      above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
   income:
     type: text
     display: Income
+    instructions:
+      above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
   expenses:
     type: text
     display: Expenses
+    instructions:
+      above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
   common_charges:
     type: text
     display: Common charges
+    instructions:
+      above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
   amenities:
     type: checkboxes
     display: Key Features
