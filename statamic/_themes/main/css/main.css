@@ -5750,7 +5750,7 @@ input.radio, select.radio {
   font-size: 18px;
   line-height: 27px; }
 
-.property_box .property_tile_info .prop-price, .property_box .property_tile_info .bottom-info, .property_box .property_tile_info .prop-details, .property_box .property_tile_info .prop-location, .property_box .property_tile_info .price, .property_box .property_tile_info .currency, .gm-style-iw .property_tile_info .prop-price, .gm-style-iw .property_tile_info .bottom-info, .gm-style-iw .property_tile_info .prop-details, .gm-style-iw .property_tile_info .prop-location, .gm-style-iw .property_tile_info .price, .gm-style-iw .property_tile_info .currency {
+.property_box .property_tile_info .prop-price, .property_box .property_tile_info .bottom-info, .property_box .property_tile_info .prop-details, .property_box .property_tile_info .prop-location, .property_box .property_tile_info .price, .property_box .property_tile_info .currency, .property_box .property_tile_info .sqft-details, .gm-style-iw .property_tile_info .prop-price, .gm-style-iw .property_tile_info .bottom-info, .gm-style-iw .property_tile_info .prop-details, .gm-style-iw .property_tile_info .prop-location, .gm-style-iw .property_tile_info .price, .gm-style-iw .property_tile_info .currency, .gm-style-iw .property_tile_info .sqft-details {
   font-family: "Copernicus-Medium";
   font-size: 15px;
   line-height: 21.75px; }

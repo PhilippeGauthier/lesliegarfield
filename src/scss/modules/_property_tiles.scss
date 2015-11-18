@@ -98,7 +98,7 @@
 		.prop-title {
 			@include hsmedium($hFontMI);
 		}
-		.prop-price, .bottom-info, .prop-details,.prop-location,.price,.currency {
+		.prop-price, .bottom-info, .prop-details,.prop-location,.price,.currency, .sqft-details {
 			@include hsmall($hFontM);
 		}
 		.sqft-details {
