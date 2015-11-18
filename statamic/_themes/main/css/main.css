@@ -4063,7 +4063,7 @@ footer .footer-divider {
 .agent-individual aside svg {
   height: 25px;
   width: 25px;
-  margin-right: 10px; }
+  margin-right: 3px; }
 
 .agent-individual aside svg, .agent-individual aside li {
   vertical-align: middle; }
@@ -4072,18 +4072,18 @@ footer .footer-divider {
   margin-top: 20px;
   margin-bottom: 20px; }
 
-.agent-individual aside li {
+.agent-individual aside li, .agent-individual aside li a {
   font-family: "Copernicus-Medium";
   font-size: 14px;
   margin-bottom: 10px; }
 
-.agent-individual aside li:hover {
+.agent-individual aside li:hover, .agent-individual aside li a:hover {
   color: #009B77; }
 
-.agent-individual aside li:hover svg * {
+.agent-individual aside li:hover svg *, .agent-individual aside li a:hover svg * {
   fill: #009B77; }
 
-.agent-individual aside li:hover * {
+.agent-individual aside li:hover *, .agent-individual aside li a:hover * {
   color: #009B77; }
 
 .agent-individual aside .dotted {

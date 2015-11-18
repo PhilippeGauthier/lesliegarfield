@@ -28,7 +28,7 @@
 		svg {
 			height: 25px;
 			width: 25px;
-			margin-right: 10px;
+			margin-right: 3px;
 		}
 		svg, li {
 			vertical-align: middle;
@@ -37,7 +37,7 @@
 			margin-top: 20px;
 			margin-bottom: 20px;
 		}
-		li {
+		li, li a {
 			font-family: $hFontM;
 			font-size: 14px;
 			margin-bottom: 10px;
