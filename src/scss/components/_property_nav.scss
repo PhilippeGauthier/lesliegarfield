@@ -69,6 +69,10 @@
 		margin: 0;
 	}
 	.nav {
+		display: none;
+		@include breakpoint($small) {
+			display: inline-block;
+		}
 		a {
 			background-color: #fff;
 			color: $base-font-color;

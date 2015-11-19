@@ -52,11 +52,12 @@ fields:
     display: More detailed location ie Between Fifth and Madison
   streeteasy_status:
     type: select
-    display: Status
+    display: Status (STREETEASY)
+    required: true
     options:
-      - Active
-      - In Contract
-      - Leased
+      active: Active
+      in-contract: In Contract
+      sold: Sold
   openhouse:
     display: Open House?
     type: checkbox

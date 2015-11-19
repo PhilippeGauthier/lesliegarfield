@@ -3507,6 +3507,13 @@ footer .footer-divider {
   display: inline-block;
   margin: 0; }
 
+.property_nav .nav {
+  display: none; }
+
+@media (min-width: 768px) {
+  .property_nav .nav {
+    display: inline-block; } }
+
 .property_nav .nav a {
   background-color: #fff;
   color: #404041;
