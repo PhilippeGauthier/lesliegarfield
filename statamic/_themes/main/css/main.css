@@ -4068,8 +4068,8 @@ footer .footer-divider {
     line-height: 33px; } }
 
 .agent-individual aside svg {
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   margin-right: 3px; }
 
 .agent-individual aside svg, .agent-individual aside li {
@@ -4081,7 +4081,7 @@ footer .footer-divider {
 
 .agent-individual aside li, .agent-individual aside li a {
   font-family: "Copernicus-Medium";
-  font-size: 14px;
+  font-size: 11px;
   margin-bottom: 10px; }
 
 .agent-individual aside li:hover, .agent-individual aside li a:hover {
