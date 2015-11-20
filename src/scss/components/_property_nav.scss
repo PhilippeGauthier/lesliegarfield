@@ -1,13 +1,21 @@
 .Select {
-	border: 1px solid transparent;
+	// border: 1px solid transparent;
 	&.is-open {
 		.Select-control {
-			border: 1px solid $dark-gray;
+			// border: 1px solid $dark-gray;
 			border-radius: 0;
 		}
 	}
 }
 
+
+.sort-bar {
+	* {
+		&:focus, &:active {
+			outline: none !important;
+		}
+	}
+}
 
 
 .Select-placeholder, .sort-bar, .Select-menu {
@@ -17,8 +25,8 @@
 
 .Select-menu {
 	box-shadow: none;
-	border: 1px solid $dark-gray;
-	border-top: 1px solid $light-gray;
+	// border: 1px solid $dark-gray;
+	// border-top: 1px solid $light-gray;
 }
 .Select-menu-outer {
 	border-radius: 0;

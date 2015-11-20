@@ -50,7 +50,7 @@ var FilterBar = React.createClass({
   },
   render: function() {
     return (
-      <div>
+      <div className="property_container">
         <div className='property_nav dark_gray leading properties_grid'>
           <div className='container'>
             <div className='nav-container'>
@@ -62,7 +62,7 @@ var FilterBar = React.createClass({
             </div>
           </div>
         </div>
-        <div>
+        <div className="property_search">
           <SortBar listings={this.state.listings} />
         </div>
       </div>

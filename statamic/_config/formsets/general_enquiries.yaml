@@ -62,6 +62,7 @@ control_panel:
     name: Name
     email: Email
     phone: Phone
+    message: Message
   metrics:
     - 
       type: count

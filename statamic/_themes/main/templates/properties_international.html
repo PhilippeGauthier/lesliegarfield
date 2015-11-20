@@ -1,73 +1,87 @@
 <script type="text/javascript">
   var data = {
-    {{ entries:listing folder="properties/international/sale"  }}
+    {{ entries:listing folder="properties/international/sale" conditions="streeteasy_status:active||in-contract" show_future="true" }}
     {{ if first }}
     "sale": {
     {{ endif }}
+    {{ if !no_results }}
       "{{ slug }}":
         {
           "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
+          "datestamp": "{{ datestamp }}",
           "preview_image":"{{ preview_image }}",
           "url":"{{ url }}",
           "streeteasy_status": "{{ streeteasy_status }}",
           "openhouse": "{{ openhouse }}",
           "price": "{{ price }}",
-          "currency": "{{ currency }}",
+          "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
           "property_type": "{{ property_type }}",
           "sqft": "{{ sqft }}",
           "property_location": "{{ property_location }}"
         },
-    {{ if last }}
+      {{ endif }}
+    {{ /entries:listing}}
+    {{ entries:listing folder="properties/international/sale" conditions="streeteasy_status:sold" show_future="true" since="{var:my_date_since}" }}
+    {{ if !no_results }}
       "{{ slug }}":
         {
           "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
+          "datestamp": "{{ datestamp }}",
           "preview_image":"{{ preview_image }}",
           "url":"{{ url }}",
           "streeteasy_status": "{{ streeteasy_status }}",
           "openhouse": "{{ openhouse }}",
           "price": "{{ price }}",
-          "currency": "{{ currency }}",
+          "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
           "property_type": "{{ property_type }}",
           "sqft": "{{ sqft }}",
+          "results": "{{ total_results }}",
           "property_location": "{{ property_location }}"
-        }
-    },
-    {{ endif }}
+        },
+     {{ endif   }}
     {{ /entries:listing}}
-    {{ entries:listing folder="properties/international/rental"  }}
+    },
+    {{ entries:listing folder="properties/international/rental" conditions="streeteasy_status:active||in-contract" show_future="true" }}
     {{ if first }}
     "lease": {
     {{ endif }}
+    {{ if !no_results }}
       "{{ slug }}":
         {
           "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
+          "datestamp": "{{ datestamp }}",
           "preview_image":"{{ preview_image }}",
           "url":"{{ url }}",
           "streeteasy_status": "{{ streeteasy_status }}",
           "openhouse": "{{ openhouse }}",
           "price": "{{ price }}",
-          "currency": "{{ currency }}",
+          "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
           "property_type": "{{ property_type }}",
           "sqft": "{{ sqft }}",
           "property_location": "{{ property_location }}"
         },
-    {{ if last }}
+      {{ endif }}
+    {{ /entries:listing}}
+    {{ entries:listing folder="properties/international/rental" since="{ var:my_date_since }" conditions="streeteasy_status:leased" show_future="true" }}
+      {{ if !no_results }}
       "{{ slug }}":
         {
           "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
+          "datestamp": "{{ datestamp }}",
           "preview_image":"{{ preview_image }}",
           "url":"{{ url }}",
           "streeteasy_status": "{{ streeteasy_status }}",
           "openhouse": "{{ openhouse }}",
           "price": "{{ price }}",
-          "currency": "{{ currency }}",
+          "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
           "property_type": "{{ property_type }}",
           "sqft": "{{ sqft }}",
+          "results": "{{ total_results }}",
           "property_location": "{{ property_location }}"
-        }
-    }
-    {{ endif }}
+        },
+      {{ endif }}
     {{ /entries:listing}}
+    }
   }
 </script>
 {{ if get:view != "map" }}

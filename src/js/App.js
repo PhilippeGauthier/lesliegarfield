@@ -72,9 +72,9 @@ if (elem.length) {
 	    },
 	    render: function() {
 	      return (
-	        <div>
+	        
 	          <FilterBar />
-	        </div>
+	        
 	      );
 	    }
 	  });

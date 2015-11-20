@@ -7,82 +7,82 @@
     {{ entries:listing folder="properties/new-york/sale" conditions="streeteasy_status:active||in-contract" show_future="true" }}
     {{ if first }}
     "sale": {
-    {{ endif }}
+      {{ endif }}
       "{{ slug }}":
-        {
-          "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
-          "datestamp": "{{ datestamp }}",
-          "preview_image":"{{ preview_image }}",
-          "url":"{{ url }}",
-          "streeteasy_status": "{{ streeteasy_status }}",
-          "openhouse": "{{ openhouse }}",
-          "price": "{{ price }}",
-          "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
-          "property_type": "{{ property_type }}",
-          "sqft": "{{ sqft }}",
-          "property_location": "{{ property_location }}"
-        },
-    {{ /entries:listing}}
-    {{ entries:listing folder="properties/new-york/sale" conditions="streeteasy_status:sold" show_future="true" since="{var:my_date_since}" }}
-    {{ if !no_results }}
+      {
+        "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
+        "datestamp": "{{ datestamp }}",
+        "preview_image":"{{ preview_image }}",
+        "url":"{{ url }}",
+        "streeteasy_status": "{{ streeteasy_status }}",
+        "openhouse": "{{ openhouse }}",
+        "price": "{{ price }}",
+        "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
+        "property_type": "{{ property_type }}",
+        "sqft": "{{ sqft }}",
+        "property_location": "{{ property_location }}"
+      },
+      {{ /entries:listing}}
+      {{ entries:listing folder="properties/new-york/sale" conditions="streeteasy_status:sold" show_future="true" since="{var:my_date_since}" }}
+      {{ if !no_results }}
       "{{ slug }}":
-        {
-          "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
-          "datestamp": "{{ datestamp }}",
-          "preview_image":"{{ preview_image }}",
-          "url":"{{ url }}",
-          "streeteasy_status": "{{ streeteasy_status }}",
-          "openhouse": "{{ openhouse }}",
-          "price": "{{ price }}",
-          "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
-          "property_type": "{{ property_type }}",
-          "sqft": "{{ sqft }}",
-          "results": "{{ total_results }}",
-          "property_location": "{{ property_location }}"
-        },
-     {{ endif 	}}
-    {{ /entries:listing}}
-  	},
+      {
+        "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
+        "datestamp": "{{ datestamp }}",
+        "preview_image":"{{ preview_image }}",
+        "url":"{{ url }}",
+        "streeteasy_status": "{{ streeteasy_status }}",
+        "openhouse": "{{ openhouse }}",
+        "price": "{{ price }}",
+        "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
+        "property_type": "{{ property_type }}",
+        "sqft": "{{ sqft }}",
+        "results": "{{ total_results }}",
+        "property_location": "{{ property_location }}"
+      },
+      {{ endif 	}}
+      {{ /entries:listing}}
+    },
     {{ entries:listing folder="properties/new-york/rental" conditions="streeteasy_status:active||in-contract" show_future="true" }}
     {{ if first }}
     "lease": {
-    {{ endif }}
+      {{ endif }}
       "{{ slug }}":
-        {
-          "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
-          "datestamp": "{{ datestamp }}",
-          "preview_image":"{{ preview_image }}",
-          "url":"{{ url }}",
-          "streeteasy_status": "{{ streeteasy_status }}",
-          "openhouse": "{{ openhouse }}",
-          "price": "{{ price }}",
-          "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
-          "property_type": "{{ property_type }}",
-          "sqft": "{{ sqft }}",
-          "results": "{{ total_results }}",
-          "property_location": "{{ property_location }}"
-        },
-    {{ /entries:listing}}
-    {{ entries:listing folder="properties/new-york/rental" since="{ var:my_date_since }" conditions="streeteasy_status:leased" show_future="true" }}
-    	{{ if !no_results }}
+      {
+        "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
+        "datestamp": "{{ datestamp }}",
+        "preview_image":"{{ preview_image }}",
+        "url":"{{ url }}",
+        "streeteasy_status": "{{ streeteasy_status }}",
+        "openhouse": "{{ openhouse }}",
+        "price": "{{ price }}",
+        "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
+        "property_type": "{{ property_type }}",
+        "sqft": "{{ sqft }}",
+        "results": "{{ total_results }}",
+        "property_location": "{{ property_location }}"
+      },
+      {{ /entries:listing}}
+      {{ entries:listing folder="properties/new-york/rental" since="{ var:my_date_since }" conditions="streeteasy_status:leased" show_future="true" }}
+      {{ if !no_results }}
       "{{ slug }}":
-        {
-          "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
-          "datestamp": "{{ datestamp }}",
-          "preview_image":"{{ preview_image }}",
-          "url":"{{ url }}",
-          "streeteasy_status": "{{ streeteasy_status }}",
-          "openhouse": "{{ openhouse }}",
-          "price": "{{ price }}",
-          "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
-          "property_type": "{{ property_type }}",
-          "sqft": "{{ sqft }}",
-          "results": "{{ total_results }}",
-          "property_location": "{{ property_location }}"
-        },
-     	{{ endif }}
-    {{ /entries:listing}}
-  	}
+      {
+        "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
+        "datestamp": "{{ datestamp }}",
+        "preview_image":"{{ preview_image }}",
+        "url":"{{ url }}",
+        "streeteasy_status": "{{ streeteasy_status }}",
+        "openhouse": "{{ openhouse }}",
+        "price": "{{ price }}",
+        "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
+        "property_type": "{{ property_type }}",
+        "sqft": "{{ sqft }}",
+        "results": "{{ total_results }}",
+        "property_location": "{{ property_location }}"
+      },
+      {{ endif }}
+      {{ /entries:listing}}
+    }
   }
 </script>
 {{ if get:view != "map" }}
@@ -92,42 +92,162 @@
 	<div class="container">
 		<div class="rent-or-buy">
 			<ul>
-				<li><a href="{{ url }}?type=buy" class="{{ if get:type != "rent" }}active{{ endif }}">Buy</a></li>
-				<li><a href="{{ url }}?type=rent" class="{{ if get:type == "rent" }}active{{ endif }}"> Rent</a></li>
+				<li><a  id="buy" class="active">Buy</a></li>
+				<li><a  id="rent"> Rent</a></li>
 			</ul>
 		</div>
-      <div class='view-type'>
-        <ul class='views'>
-          <li>
-            <a href="{{ url }}"><i class='fa fa-th-large'></i>Grid View</a>
-          </li>
-          <li>
-            <a class="active" id="map-link"><i class='fa fa-map-marker'></i>Map View</a>
-          </li>
-        </ul>
-      </div>
-	</div>
+    <div class='view-type'>
+      <ul class='views'>
+        <li>
+          <a href="{{ url }}"><i class='fa fa-th-large'></i>Grid View</a>
+        </li>
+        <li>
+          <a class="active" id="map-link"><i class='fa fa-map-marker'></i>Map View</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
-<section class="bg-gray">
-	<div class="container">
-		{{ if get:type == "rent" }}
+<section style="padding: 0 !important" class="bg-gray">
 
-		{{ entries:listing folder="properties/new-york/rental" sort_by="price" sort_dir="desc"}}
-		{{ theme:partial src="property_card" use_context="true" }}
-		{{ /entries:listing}}
+  <script type="text/javascript">
 
-		{{ else }}
+  $('#buy').click(function() {
+    if ($('#rent').hasClass('active')) {
+      $('#rent').removeClass('active');
+      $(this).addClass('active');
+      var locations = [
+        {{ entries:listing folder="properties/new-york/sale"}}
+        [
+        '{{ title }}', 
+        {{ location }}
+        {{ latitude}},
+        {{ longitude }}{{/location}},
+        '{{url}}',
+        '{{ preview_image }}',
+        {{ if openhouse == "1" }}'../_themes/main/img/map_marker_red.svg'{{ else }}'../_themes/main/img/map_marker_green.svg'{{endif}}
+        ],
+        {{ /entries:listing }}
+      ];
+    }
+
+  });
+
+  $('#rent').click(function() {
+    if ($('#buy').hasClass('active')) {
+      $('#buy').removeClass('active');
+      $(this).addClass('active');
+      var locations = [
+        {{ entries:listing folder="properties/new-york/rental"}}
+        [
+        '{{ title }}', 
+        {{ location }}
+        {{ latitude}},
+        {{ longitude }}{{/location}},
+        '{{url}}',
+        '{{ preview_image }}',
+        {{ if openhouse == "1" }}'../_themes/main/img/map_marker_red.svg'{{ else }}'../_themes/main/img/map_marker_green.svg'{{endif}}
+        ],
+        {{ /entries:listing }}
+      ];
+    }
+  });
 
 
-			<div class="big-map">
-				{{ location:map_listing folder="properties/new-york/sale" locate_with="location" }}
-					<h3><a href="{{url}}">{{ title }}</a></h3>
-					<p>{{ comment }}</p>
-				{{ /location:map_listing }}
-			</div>
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 13,
+        center: {lat: 40.763542, lng: -73.968007}, 
+        scrollwheel: false
+      });
 
-		{{ endif }}
-	<div>
-</section>
-{{ endif }}
+      setMarkers(map, locations);
+
+    }
+    var infos = [];
+
+
+
+    function setMarkers(map,locations){
+
+      var marker, i
+
+      for (i = 0; i < locations.length; i++)
+      {  
+
+        var title = locations[i][0];
+        var lat = locations[i][1];
+        var long = locations[i][2];
+        var url = locations[i][3];
+        var image = locations[i][4];
+        var icon = locations[i][5];
+
+
+        latlngset = new google.maps.LatLng(lat, long);
+
+        var marker = new google.maps.Marker({  
+          map: map, 
+          title: title, 
+          position: latlngset,
+          icon: icon  
+        });
+        map.setCenter(marker.getPosition())
+
+
+        var content = 
+        '<a href=' + '"' + url + '"' + 'class=' + '"' + 'property_box' + '"' + '>' +
+        '<div class="image-wrap">' +
+        '<div class="preview-image" style=' + '"background-image: url(' + image + '">' + '</div>' +
+          '</div>' +
+          '</a>';
+
+        var infowindow = new google.maps.InfoWindow();
+
+
+        google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+          return function() {
+
+            /* close the previous info-window */
+            closeInfos();
+
+            infowindow.setContent(content);
+            infowindow.open(map,marker);
+
+            /* keep the handle, in order to close it on next click event */
+            infos[0]=infowindow;
+
+          };
+        })(marker,content,infowindow)); 
+        
+      }
+    }
+
+      function closeInfos(){
+
+        if(infos.length > 0){
+
+          /* detach the info-window from the marker ... undocumented in the API docs */
+          infos[0].set("marker", null);
+
+          /* and close it */
+          infos[0].close();
+
+          /* blank the array */
+          infos.length = 0;
+        }
+      }
+
+      function toggleMarkers() {
+        marker.setVisible(false); 
+      }
+
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNoSfsI1ielEAA_2AX1XgZAb8eMaXG6Y4&callback=initMap"
+    async defer></script>
+
+    <div id="map"></div>
+
+  </section>
+  {{ endif }}
 

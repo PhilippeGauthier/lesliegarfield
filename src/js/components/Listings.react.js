@@ -9,7 +9,7 @@ var Listings = React.createClass({
     });
 
     return (
-      <section className="bg-gray">
+      <section className="bg-gray property_grid">
         <div className='container'>
         <ul className='grid properties'>
           {rows}

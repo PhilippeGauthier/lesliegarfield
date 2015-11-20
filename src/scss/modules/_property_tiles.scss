@@ -1,9 +1,33 @@
 
-#properties section {
-	padding-top: 54px;
-	a {
-		margin: 0;
+#properties {
+	display: flex;
+	flex-flow: column nowrap;
+	flex: 1 1 auto;
+	&:first-child {
+		min-height: 100%;
 	}
+	section {
+		padding-top: 54px;
+		a {
+			margin: 0;
+		}
+	}
+}
+
+.property_container {
+	width: 100%;
+	flex: 1 1 auto;
+}
+
+.property_search {
+	display: flex;
+	flex-flow: column nowrap;
+	flex: 1 ;
+	min-height: 100%;
+}
+
+.property_grid {
+	min-height: 100%;
 }
 
 .tile-container {
