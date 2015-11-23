@@ -66,7 +66,7 @@ $('.property-carousel').slick({
   infinite: true,
   speed: 300,
   slidesToShow: 1,
-  lazyLoad: 'ondemand',
+  lazyLoad: 'progressive',
   arrows: true
 });
 
