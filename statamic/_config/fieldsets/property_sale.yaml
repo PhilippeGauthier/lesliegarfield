@@ -114,7 +114,7 @@ fields:
       folder: properties/new-york/*
   ownership:
     type: select
-    display: Ownership Type. (STREETEASY)
+    display: Ownership Type (STREETEASY)
     required: True
     options:
       townhouse: Townhouse
@@ -218,6 +218,10 @@ fields:
     type: file
     destination: assets/img/properties/sale
     allowed: [png, gif, jpg, jpeg]
+    resize:
+      width: 300
+      height: 300
+      quality: 90
   photo_carousel:
     type: file
     force_array: true
@@ -229,10 +233,12 @@ fields:
     type: file
     display: Property Brochure
     destination: assets/downloads
+    max_files: 1
   floor_plans:
     type: file
     display: Property Floorplans
     destination: assets/downloads
+    max_files: 1
   content:
     type: redactor
     hide: true

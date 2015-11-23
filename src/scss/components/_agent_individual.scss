@@ -66,9 +66,10 @@
 	}
 	main {
 		padding: $bPadding/2;
-		min-height: 650px;
+		
 		@include breakpoint($large) {
 			padding: $bPadding;
+			min-height: 650px;
 		}
 		background-color: #fff;
 		.agent-info {

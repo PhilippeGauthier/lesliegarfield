@@ -4103,12 +4103,12 @@ footer .footer-divider {
 
 .agent-individual main {
   padding: 30px;
-  min-height: 650px;
   background-color: #fff; }
 
 @media (min-width: 1280px) {
   .agent-individual main {
-    padding: 60px; } }
+    padding: 60px;
+    min-height: 650px; } }
 
 .agent-individual main .agent-info {
   margin-bottom: 30px; }

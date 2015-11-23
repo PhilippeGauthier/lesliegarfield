@@ -117,7 +117,7 @@ fields:
       folder: properties/new-york/*
   ownership:
     type: select
-    display: Ownership Type. (STREETEASY)
+    display: Ownership Type (STREETEASY)
     required: True
     options:
       rental: Rental
