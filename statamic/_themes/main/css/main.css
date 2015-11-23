@@ -5722,14 +5722,12 @@ input.radio, select.radio {
 .carousel_tile_2 {
   box-sizing: border-box;
   width: 100%;
-  float: left;
-  padding-left: 1.25%;
-  padding-right: 1.25%; }
+  float: left; }
 
 .carousel_tile_2.main_tile, .carousel_tile_2.agent_tile {
-  margin-left: 6.25%;
+  margin-left: 5.41667%;
   box-sizing: border-box;
-  width: 87.5%;
+  width: 89.16667%;
   float: left; }
 
 @media (min-width: 1280px) {

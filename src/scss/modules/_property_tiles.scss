@@ -59,10 +59,10 @@
 	}
 }
 .carousel_tile_2 {
-	@include span(full);
+	@include span(full no-gutter);
 	&.main_tile, &.agent_tile {
-		@include pre(.75 of 12);
-		@include span (10.5 of 12 no-gutter);
+		@include pre(.65 of 12);
+		@include span (10.7 of 12 no-gutter);
 	}
 	@include breakpoint($large) {
 		@include pre(2 of 12);
