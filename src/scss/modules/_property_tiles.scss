@@ -62,8 +62,11 @@
 	@include span(full no-gutter);
 	&.main_tile, &.agent_tile {
 		@include pre(.65 of 12);
-		.slick-next:before {
+		.slick-prev:before {
 			margin-left: -20px;
+		}
+		.slick-next:before {
+			margin-left: -50px;
 		}
 		@include span (10.7 of 12 no-gutter);
 	}

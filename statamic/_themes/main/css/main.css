@@ -5730,8 +5730,11 @@ input.radio, select.radio {
   width: 89.16667%;
   float: left; }
 
-.carousel_tile_2.main_tile .slick-next:before, .carousel_tile_2.agent_tile .slick-next:before {
+.carousel_tile_2.main_tile .slick-prev:before, .carousel_tile_2.agent_tile .slick-prev:before {
   margin-left: -20px; }
+
+.carousel_tile_2.main_tile .slick-next:before, .carousel_tile_2.agent_tile .slick-next:before {
+  margin-left: -50px; }
 
 @media (min-width: 1280px) {
   .carousel_tile_2 {
