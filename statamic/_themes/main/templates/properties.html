@@ -2,7 +2,7 @@
 {{ var:my_date_since }}{{ date_calc start_date="{current_date}" method="subDays" value="30" format="F d, Y" }}{{ /var:my_date_since }}
 
 <script type="text/javascript">
-
+{{ if get:view != "map" }}
   var data = {
     {{ entries:listing folder="properties/new-york/sale" conditions="streeteasy_status:active||in-contract" show_future="true" }}
     {{ if first }}
@@ -84,6 +84,7 @@
       {{ /entries:listing}}
     }
   }
+  {{ endif }}
 </script>
 {{ if get:view != "map" }}
 <div id="properties"></div>
@@ -110,144 +111,134 @@
 </div>
 <section style="padding: 0 !important" class="bg-gray">
 
-  <script type="text/javascript">
+<script type="text/javascript">
 
-  $('#buy').click(function() {
-    if ($('#rent').hasClass('active')) {
-      $('#rent').removeClass('active');
-      $(this).addClass('active');
-      var locations = [
-        {{ entries:listing folder="properties/new-york/sale"}}
-        [
-        '{{ title }}', 
-        {{ location }}
-        {{ latitude}},
-        {{ longitude }}{{/location}},
-        '{{url}}',
-        '{{ preview_image }}',
-        {{ if openhouse == "1" }}'../_themes/main/img/map_marker_red.svg'{{ else }}'../_themes/main/img/map_marker_green.svg'{{endif}}
-        ],
-        {{ /entries:listing }}
-      ];
-    }
 
+
+function initialize() {
+  var locations = [
+  {{ entries:listing folder="properties/new-york/sale"}}
+  [
+  '{{ title }}', 
+  {{ location }}
+  {{ latitude}},
+  {{ longitude }}{{/location}},
+  '{{url}}',
+  '{{ preview_image }}',
+  {{ if openhouse == "1" }}'../_themes/main/img/map_marker_red.svg'{{ else }}'../_themes/main/img/map_marker_green.svg'{{endif}},
+  '{{ if currency == "dollars" }}${{ elseif currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ elseif currency == "none" }}{{ else }}${{ endif }}{{ if streeteasy_type == "rental"}}{{ price|format_number }}/month{{ else }}{{ price|format_number }}{{ endif }}',
+  '{{ property_type }}',
+  '{{ sqft|format_number }} ft',
+  '{{ property_location }}'
+  ],
+  {{ /entries:listing }}
+  ];
+
+  window.map = new google.maps.Map(document.getElementById('map'), {
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
   });
 
-  $('#rent').click(function() {
-    if ($('#buy').hasClass('active')) {
-      $('#buy').removeClass('active');
-      $(this).addClass('active');
-      var locations = [
-        {{ entries:listing folder="properties/new-york/rental"}}
-        [
-        '{{ title }}', 
-        {{ location }}
-        {{ latitude}},
-        {{ longitude }}{{/location}},
-        '{{url}}',
-        '{{ preview_image }}',
-        {{ if openhouse == "1" }}'../_themes/main/img/map_marker_red.svg'{{ else }}'../_themes/main/img/map_marker_green.svg'{{endif}}
-        ],
-        {{ /entries:listing }}
-      ];
-    }
-  });
+  var infowindow = new google.maps.InfoWindow();
+  var bounds = new google.maps.LatLngBounds();
+  var markers = [];
 
-
-    function initMap() {
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 13,
-        center: {lat: 40.763542, lng: -73.968007}, 
-        scrollwheel: false
-      });
-
-      setMarkers(map, locations);
-
-    }
-    var infos = [];
+  for (i = 0; i < locations.length; i++) {
 
 
 
-    function setMarkers(map,locations){
+    var title = locations[i][0];
+    var lat = locations[i][1];
+    var long = locations[i][2];
+    var url = locations[i][3];
+    var image = locations[i][4];
+    var icon = locations[i][5];
+    var price = locations[i][6];
+    var type = locations[i][7];
+    var size = locations[i][8];
+    var location = locations[i][9];
+    var content = 
+    '<a href=' + '"' + url + '"' + 'class=' + '"' + 'property_box map' + '"' + '>' +
+      '<div class="image-wrap">' +
+        '<div class="preview-image" style=' + '"background-image: url(' + image + '">' + 
+        '</div>' +
+      '</div>' +
+      
+      '<div class=' + '"' + 'property_tile_info' + '"' + '>' +
+        '<div class=' + '"' + 'top-info' + '"' + '>' +
+          '<span class=' + '"' + 'prop-title' + '"' + '>' + title + '</span>' +
+          '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
+          '<span class=' + '"' + 'prop-price' + '"' + '>' + price + '</span>' +
+          '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
+          '<span class=' + '"' + 'prop-details' + '"' + '>' + type + '</span>' +
+          '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
+          '<span class=' + '"' + 'prop-details' + '"' + '>' + size + '<sup>2</sup>' + '</span>' +
+          '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
+          '<span class=' + '"' + 'prop-location' + '"' + '>' + location + '</span>' +
+        '</div>' +
+        '<div class=' + '"' + 'bottom-info' + '"' + '>' +
+        '</div>' +
+      '</div>' +
+    '</a>';
 
-      var marker, i
+    var infowindow = new google.maps.InfoWindow();
 
-      for (i = 0; i < locations.length; i++)
-      {  
+    markers.push(infowindow);
 
-        var title = locations[i][0];
-        var lat = locations[i][1];
-        var long = locations[i][2];
-        var url = locations[i][3];
-        var image = locations[i][4];
-        var icon = locations[i][5];
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+      map: map,
+      icon: icon  
+    });
 
+    bounds.extend(marker.position);
 
-        latlngset = new google.maps.LatLng(lat, long);
-
-        var marker = new google.maps.Marker({  
-          map: map, 
-          title: title, 
-          position: latlngset,
-          icon: icon  
-        });
-        map.setCenter(marker.getPosition())
-
-
-        var content = 
-        '<a href=' + '"' + url + '"' + 'class=' + '"' + 'property_box' + '"' + '>' +
-        '<div class="image-wrap">' +
-        '<div class="preview-image" style=' + '"background-image: url(' + image + '">' + '</div>' +
-          '</div>' +
-          '</a>';
-
-        var infowindow = new google.maps.InfoWindow();
-
-
-        google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
-          return function() {
-
-            /* close the previous info-window */
-            closeInfos();
-
-            infowindow.setContent(content);
-            infowindow.open(map,marker);
-
-            /* keep the handle, in order to close it on next click event */
-            infos[0]=infowindow;
-
-          };
-        })(marker,content,infowindow)); 
-        
+    google.maps.event.addListener(marker, 'click', (function (marker, i) {
+      return function () {
+        infowindow.setContent(content);
+        infowindow.open(map, marker);
       }
-    }
+    })(marker, i));
 
-      function closeInfos(){
-
-        if(infos.length > 0){
-
-          /* detach the info-window from the marker ... undocumented in the API docs */
-          infos[0].set("marker", null);
-
-          /* and close it */
-          infos[0].close();
-
-          /* blank the array */
-          infos.length = 0;
+    google.maps.event.addListener(map, "click", function(event) {
+        for (var i = 0; i < markers.length; i++ ) {  //I assume you have your infoboxes in some array
+             markers[i].close();
         }
-      }
+    });
+  }
 
-      function toggleMarkers() {
-        marker.setVisible(false); 
-      }
+  map.fitBounds(bounds);
 
-    </script>
+  var listener = google.maps.event.addListener(map, "idle", function () {
+    map.setZoom(13);
+    google.maps.event.removeListener(listener);
+  });
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNoSfsI1ielEAA_2AX1XgZAb8eMaXG6Y4&callback=initMap"
-    async defer></script>
 
-    <div id="map"></div>
+}
 
-  </section>
-  {{ endif }}
+function loadScript() {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDNoSfsI1ielEAA_2AX1XgZAb8eMaXG6Y4&' + 'callback=initialize';
+  document.body.appendChild(script);
+}
+
+function test() {
+  console.log('foo');
+}
+
+window.onload = loadScript();
+
+
+
+
+
+
+
+</script>
+
+  <div id="map"></div>
+
+</section>
+{{ endif }}
 

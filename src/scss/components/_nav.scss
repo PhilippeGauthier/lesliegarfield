@@ -232,6 +232,64 @@ header li a:hover, header li a.current {
 	}
 }
 
+header li.dropdown a:hover, header li.dropdown a.current {
+	box-shadow: 0 0 0 0;
+}
+
 nav li .current.muted:hover {
 	box-shadow: 0px 3px 0px 0px;
 }
+
+.nav > .dropdown {
+	display: none;
+}
+
+@include breakpoint($medium) {
+	.nav > .drop-small {
+		display: none;
+	}
+	.nav > .dropdown {
+		display: block;
+	}
+}
+
+.dropdown:hover .dropdown-menu {
+	display: block;
+}
+
+.dropdown-menu {
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 0;
+    margin: 2px 0 0;
+    list-style: none;
+		font-size: 13px;
+    line-height: 24px;
+    text-align: left;
+    background-color: #fff;
+    border: none;
+    border-radius:0;
+    box-shadow: none;
+    background-clip: padding-box;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: white;
+    border-color: none;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    text-decoration: none;
+    color: $text-green;
+    background-color: white;
+    box-shadow: none;
+}
+
+.dropdown-menu > li > a {
+	padding: 8px 20px;
+}
+

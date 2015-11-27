@@ -10,22 +10,14 @@
 	}
 	var infos = [];
 	var locations = [
-	if $('#buy').hasClass('active') {
-		{{ entries:listing folder="properties/new-york/sale"}}
-		console.log('buy')
-	}
-	else {
-		{{ entries:listing folder="properties/new-york/rental"}}
-		console.log('rent')
-	}
+	{{ entries:listing folder="properties/new-york/rental"}}
 	[
 	'{{ title }}', 
 	{{ location }}
 	{{ latitude}},
 	{{ longitude }}{{/location}},
 	'{{url}}',
-	'{{ preview_image }}',
-	{{ if openhouse == "1" }}'_themes/main/img/map_marker_red.svg'{{ else }}'_themes/main/img/map_marker_green.svg'{{endif}}
+	'{{ preview_image }}'
 	],
 	{{ /entries:listing }}
 	];

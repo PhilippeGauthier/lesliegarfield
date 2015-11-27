@@ -79,14 +79,24 @@
 
 
 
-.property_box, .gm-style-iw {
+.property_box {
 	display: flex;
 	flex-flow: row nowrap;
 	position: relative;
 	background-color: #fff;
-	&:hover {
+	&:hover, &:focus {
+		h3,h4 {
+			color: $header-font-color;
+		}
+		box-shadow: 0px 0px 0px 1px $green;
+		transition: .25s;
 		.preview-image {
 			transform: scale(1.1);
+		}
+	}
+	&.map {
+		&:hover, &:focus {
+			box-shadow: none;
 		}
 	}
 	.image-wrap {
