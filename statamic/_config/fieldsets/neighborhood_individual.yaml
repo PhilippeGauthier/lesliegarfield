@@ -13,20 +13,6 @@ fields:
     type: text
     display: Sub Headline
     default: 'Expert views, opinions and thinking from the Garfield team.'
-  lat_long:
-    display: Property Coordinates
-    type: grid
-    starting_rows: 1
-    max_rows: 1
-    fields:
-      latitude:
-        display: Latitude (should be similar to 40.7590615)
-        type: text
-        width: 50%
-      longitude:
-        display: Longitude (should be similar to -73.969231)
-        type: text
-        width: 50%
   description:
     type: textarea
     display: Description
@@ -49,5 +35,9 @@ fields:
       simple_graphic:
         type: text
         display: 'Townhouses Sold In The last Year (Number only, no symbols or commas)'
+  location:
+    type: location
+    display: Location
+    required: true
   content:
     hide: true
