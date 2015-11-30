@@ -94,14 +94,6 @@ fields:
     taxonomy:
       type: property_type
       folder: properties/international/*
-  ownership_type:
-    display: Ownership Type
-    type: suggest
-    create: true
-    max_items: 1
-    taxonomy:
-      type: ownership_type
-      folder: properties/*
   plot:
     type: text
     display: Plot
