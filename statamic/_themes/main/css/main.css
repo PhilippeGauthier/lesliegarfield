@@ -3632,8 +3632,12 @@ footer .footer-divider {
 
 .neighborhood #map {
   width: 100%;
-  height: 800px;
+  height: 400px;
   margin-top: 60px; }
+
+@media (min-width: 768px) {
+  .neighborhood #map {
+    height: 800px; } }
 
 .big-map .map {
   height: 400px; }

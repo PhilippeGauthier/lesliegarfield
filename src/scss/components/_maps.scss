@@ -11,7 +11,11 @@
 
 .neighborhood #map {
 	width: 100%;
-	height: 800px;
+	height: 400px;
+	@include breakpoint($small) {
+		height: 800px;
+	}
+	
 	margin-top: $bPadding;
 }
 
