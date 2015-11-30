@@ -3639,8 +3639,12 @@ footer .footer-divider {
   height: 400px; }
 
 #map {
-  height: 1000px;
+  height: 400px;
   width: 100%; }
+
+@media (min-width: 992px) {
+  #map {
+    height: 1000px; } }
 
 .Select.is-open .Select-control {
   border-radius: 0; }
