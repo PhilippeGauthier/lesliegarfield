@@ -3644,7 +3644,7 @@ footer .footer-divider {
 
 @media (min-width: 992px) {
   #map {
-    height: 1000px; } }
+    height: 100%; } }
 
 .Select.is-open .Select-control {
   border-radius: 0; }
