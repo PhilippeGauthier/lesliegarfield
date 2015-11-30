@@ -2016,7 +2016,7 @@ section {
   padding-left: 1.25%;
   padding-right: 1.25%; }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .services main {
     box-sizing: border-box;
     width: 50%;
@@ -2041,7 +2041,7 @@ section {
     padding-left: 0.83333%;
     padding-right: 0.83333%; } }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .services aside {
     margin-top: 0;
     margin-left: 8.33333%;

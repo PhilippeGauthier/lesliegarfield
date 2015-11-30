@@ -212,7 +212,7 @@ section {
 	main {
 		@include span(full);
 		
-		@include breakpoint($small) {
+		@include breakpoint($medium ) {
 			@include span(6 of 12);
 		}
 	}
@@ -223,7 +223,7 @@ section {
 			@include pre(2 of 12);
 			@include span(8 of 12);
 		}
-		@include breakpoint($small) {	
+		@include breakpoint($medium) {	
 			margin-top: 0;
 			@include pre(1 of 12);
 			@include span(last 5 of 12);
