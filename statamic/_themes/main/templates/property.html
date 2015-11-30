@@ -228,7 +228,7 @@
 							{{ endif }}
 
 							{{ if plot|not_empty }}
-							<li>{{ plot }}</li>
+							<li>{{ plot|format_number }}</li>
 							{{ endif }}
 
 							{{ if building_size|not_empty }}

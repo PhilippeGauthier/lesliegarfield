@@ -83,7 +83,7 @@ fields:
     type: suggest
     create: true
     content:
-      folder: agents/international
+      folder: agents/beauchamp
       label: title
       value: url
   property_type:

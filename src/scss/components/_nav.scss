@@ -263,18 +263,20 @@ nav li .current.muted:hover {
     z-index: 1000;
     display: none;
     float: left;
-    min-width: 160px;
     padding: 0;
     margin: 2px 0 0;
     list-style: none;
 		font-size: 13px;
     line-height: 24px;
     text-align: left;
-    background-color: #fff;
+    background-color: rgba(white,.7);
     border: none;
     border-radius:0;
     box-shadow: none;
     background-clip: padding-box;
+    li {
+    	background-color: transparent;
+    }
 }
 
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
