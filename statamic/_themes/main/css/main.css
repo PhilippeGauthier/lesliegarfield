@@ -6029,9 +6029,6 @@ input.radio, select.radio {
 .property_box .property_tile_info .sqft-details.sup {
   margin-left: 3px; }
 
-.property_box .property_tile_info .ownership {
-  margin-left: 3px; }
-
 .property_box .property_tile_info .price, .property_box .property_tile_info .currency, .property_box .property_tile_info .ownership {
   display: inline-block; }
 
