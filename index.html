@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    // center: {lat: -34.397, lng: 150.644},
+    zoom: 8
+  });
+
+	var bounds = new google.maps.LatLngBounds();
+	var i;
+
+	// The Bermuda Triangle
+	var polygonCoords = [
+	  new google.maps.LatLng(25.774252, -80.190262),
+	  new google.maps.LatLng(18.466465, -66.118292),
+	  new google.maps.LatLng(32.321384, -64.757370),
+	  new google.maps.LatLng(25.774252, -80.190262)
+	];
+
+	for (i = 0; i < polygonCoords.length; i++) {
+	  bounds.extend(polygonCoords[i]);
+	}
+
+	// The Center of the Bermuda Triangle - (25.3939245, -72.473816)
+	console.log(bounds.getCenter());
+
+	map.fitBounds(bounds);
+}
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNoSfsI1ielEAA_2AX1XgZAb8eMaXG6Y4&callback=initMap"
+        async defer></script>
+  </body>
+</html>
