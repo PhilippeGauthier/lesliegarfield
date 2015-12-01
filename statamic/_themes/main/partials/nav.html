@@ -11,10 +11,10 @@
     <div class="collapse navbar-collapse" id="primary-nav">
       <ul class="nav navbar-nav navbar-right">
         <li role="presentation" class="dropdown"> 
-          <a id="property_drop" href="{{ _site_root }}properties/new-york" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Properties <i class="fa fa-angle-down fa-lg"></i></a> 
+          <a id="property_drop" href="{{ _site_root }}properties/new-york"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Properties <i class="fa fa-angle-down fa-lg"></i></a> 
           <ul id="menu1" class="dropdown-menu" aria-labelledby="property_drop"> 
             {{ nav from="/properties" max_depth="1" sort_dir="desc" }}
-            <li><a href="{{ url }}"{{ if is_current || is_parent }} class="current"{{ endif }}>{{ title }} </a>
+            <li><a href="{{ url }}">{{ title }} </a>
             {{ if is_current || is_parent }}
             {{ if children }}
             <ul>

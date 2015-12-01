@@ -5,7 +5,7 @@
 		<div class="agent-container">
 			<div class="agent property-agents aside">
 				<div class="dotted first"></div>
-
+				{{ if realtor === "garfield" }}
 				{{ relate:agents }}
 				<div class="agent-block">
 					<a class="agent-image" href="{{ url }}">
@@ -20,6 +20,20 @@
 					</div>
 				</div>
 				{{ /relate:agents }}
+				{{ else }}
+				<div class="agent-block">
+					<a class="agent-image" href="beauchampestates.com" target="_blank" >
+						<img src="../../../_themes/main/img/beauchamp.jpg" class="img-circle" />
+					</a>
+					<div class="agent-details">
+						<a href="{{ url }}"><span>Beauchamp Estates</span></a>
+						<ul>
+							<li>{{ theme:partial src="svg/phone" }} +44 (0) 20 7499 7722</li>
+							<li>{{ theme:partial src="svg/mail" }}<a href="mailto:info@beauchamp.co.uk">info@beauchamp.co.uk</a></li>
+						</ul>
+					</div>
+				</div>
+				{{ endif }}
 
 			</div>
 			{{ if brochure or floor_plans }}

@@ -130,7 +130,7 @@ header {
 			padding-left: 0;
 			padding-right: 0;
 			a {
-				padding: 28px 15px 23px;
+				padding: 28px 18px 23px;
 				font-size: 13px;
 				line-height: 24px;
 			}
@@ -232,8 +232,8 @@ header li a:hover, header li a.current {
 	}
 }
 
-header li.dropdown a:hover, header li.dropdown a.current {
-	box-shadow: 0 0 0 0;
+header li.dropdown:hover .dropdown-menu {
+	border-top: 3px solid $text-green;
 }
 
 nav li .current.muted:hover {
@@ -261,6 +261,7 @@ nav li .current.muted:hover {
     top: 100%;
     left: 0;
     z-index: 1000;
+    min-width: 96px;
     display: none;
     float: left;
     padding: 0;
@@ -269,10 +270,10 @@ nav li .current.muted:hover {
 		font-size: 13px;
     line-height: 24px;
     text-align: left;
-    background-color: rgba(white,.7);
+    background-color: white;
     border: none;
     border-radius:0;
-    box-shadow: none;
+		box-shadow: none;
     background-clip: padding-box;
     li {
     	background-color: transparent;
@@ -293,5 +294,7 @@ nav li .current.muted:hover {
 
 .dropdown-menu > li > a {
 	padding: 8px 20px;
+	
 }
+
 

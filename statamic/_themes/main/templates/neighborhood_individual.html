@@ -209,29 +209,6 @@ function initialize() {
     var type = locations[i][7];
     var size = locations[i][8];
     var location = locations[i][9];
-    var content = 
-    '<a href=' + '"' + url + '"' + 'class=' + '"' + 'property_box map' + '"' + '>' +
-      '<div class="image-wrap">' +
-        '<div class="preview-image" style=' + '"background-image: url(' + image + '">' + 
-        '</div>' +
-      '</div>' +
-      
-      '<div class=' + '"' + 'property_tile_info' + '"' + '>' +
-        '<div class=' + '"' + 'top-info' + '"' + '>' +
-          '<span class=' + '"' + 'prop-title' + '"' + '>' + title + '</span>' +
-          '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
-          '<span class=' + '"' + 'prop-price' + '"' + '>' + price + '</span>' +
-          '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
-          '<span class=' + '"' + 'prop-details' + '"' + '>' + type + '</span>' +
-          '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
-          '<span class=' + '"' + 'prop-details' + '"' + '>' + size + '<sup>2</sup>' + '</span>' +
-          '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
-          '<span class=' + '"' + 'prop-location' + '"' + '>' + location + '</span>' +
-        '</div>' +
-        '<div class=' + '"' + 'bottom-info' + '"' + '>' +
-        '</div>' +
-      '</div>' +
-    '</a>';
 
     var infowindow = new google.maps.InfoWindow();
 
@@ -247,7 +224,29 @@ function initialize() {
 
     google.maps.event.addListener(marker, 'click', (function (marker, i) {
       return function () {
-        infowindow.setContent(content);
+        infowindow.setContent(
+        '<a href=' + '"' + locations[i][3] + '"' + 'class=' + '"' + 'property_box map' + '"' + '>' +
+          '<div class="image-wrap">' +
+            '<div class="preview-image" style=' + '"background-image: url(' + locations[i][4] + '">' + 
+            '</div>' +
+          '</div>' +
+          
+          '<div class=' + '"' + 'property_tile_info' + '"' + '>' +
+            '<div class=' + '"' + 'top-info' + '"' + '>' +
+              '<span class=' + '"' + 'prop-title' + '"' + '>' + locations[i][0] + '</span>' +
+              '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
+              '<span class=' + '"' + 'prop-price' + '"' + '>' + locations[i][6] + '</span>' +
+              '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
+              '<span class=' + '"' + 'prop-details' + '"' + '>' + locations[i][7] + '</span>' +
+              '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
+              '<span class=' + '"' + 'prop-details' + '"' + '>' + locations[i][8] + '<sup>2</sup>' + '</span>' +
+              '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
+              '<span class=' + '"' + 'prop-location' + '"' + '>' + locations[i][9] + '</span>' +
+            '</div>' +
+            '<div class=' + '"' + 'bottom-info' + '"' + '>' +
+            '</div>' +
+          '</div>' +
+        '</a>');
         infowindow.open(map, marker);
       }
     })(marker, i));

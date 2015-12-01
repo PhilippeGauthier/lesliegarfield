@@ -3316,7 +3316,7 @@ header button.collapsed .patty:after {
     padding-left: 0;
     padding-right: 0; }
   header li a {
-    padding: 28px 15px 23px;
+    padding: 28px 18px 23px;
     font-size: 13px;
     line-height: 24px; } }
 
@@ -3421,8 +3421,8 @@ header li a:hover, header li a.current {
 header li a:hover.muted, header li a:hover.btn-contact, header li a.current.muted, header li a.current.btn-contact {
   box-shadow: 0px 0px 0px 0px; }
 
-header li.dropdown a:hover, header li.dropdown a.current {
-  box-shadow: 0 0 0 0; }
+header li.dropdown:hover .dropdown-menu {
+  border-top: 3px solid #009B77; }
 
 nav li .current.muted:hover {
   box-shadow: 0px 3px 0px 0px; }
@@ -3443,6 +3443,7 @@ nav li .current.muted:hover {
   top: 100%;
   left: 0;
   z-index: 1000;
+  min-width: 96px;
   display: none;
   float: left;
   padding: 0;
@@ -3451,7 +3452,7 @@ nav li .current.muted:hover {
   font-size: 13px;
   line-height: 24px;
   text-align: left;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: white;
   border: none;
   border-radius: 0;
   box-shadow: none;
