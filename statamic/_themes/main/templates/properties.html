@@ -20,7 +20,8 @@
         "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
         "property_type": "{{ property_type }}",
         "sqft": "{{ sqft }}",
-        "property_location": "{{ property_location }}"
+        "property_location": "{{ property_location }}",
+        "ownership": "{{ if ownership == "rental" }} /month{{ endif }}"
       },
       {{ /entries:listing}}
       {{ entries:listing folder="properties/new-york/sale" conditions="streeteasy_status:sold" show_future="true" since="{var:my_date_since}" }}
@@ -38,7 +39,8 @@
         "property_type": "{{ property_type }}",
         "sqft": "{{ sqft }}",
         "results": "{{ total_results }}",
-        "property_location": "{{ property_location }}"
+        "property_location": "{{ property_location }}",
+        "ownership": "{{ if ownership == "rental" }} /month{{ endif }}"
       },
       {{ endif 	}}
       {{ /entries:listing}}
@@ -60,7 +62,8 @@
         "property_type": "{{ property_type }}",
         "sqft": "{{ sqft }}",
         "results": "{{ total_results }}",
-        "property_location": "{{ property_location }}"
+        "property_location": "{{ property_location }}",
+        "ownership": "{{ if ownership == "rental" }} /month{{ endif }}"
       },
       {{ /entries:listing}}
       {{ entries:listing folder="properties/new-york/rental" since="{ var:my_date_since }" conditions="streeteasy_status:leased" show_future="true" }}
@@ -78,7 +81,8 @@
         "property_type": "{{ property_type }}",
         "sqft": "{{ sqft }}",
         "results": "{{ total_results }}",
-        "property_location": "{{ property_location }}"
+        "property_location": "{{ property_location }}",
+        "ownership": "{{ if ownership == "rental" }} /month{{ endif }}"
       },
       {{ endif }}
       {{ /entries:listing}}
@@ -137,14 +141,14 @@ function initialize() {
   var rental_properties = [
   {{ entries:listing folder="properties/new-york/rental"}}
   [
-  '{{ title }}', 
+  '{{ title }} {{ if apartment }}{{ apartment }}{{ endif }}', 
   {{ location }}
   {{ latitude}},
   {{ longitude }}{{/location}},
   '{{url}}',
   '{{ preview_image }}',
   '../_themes/main/img/map_marker_green.svg',
-  '{{ if currency == "dollars" }}${{ elseif currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ elseif currency == "none" }}{{ else }}${{ endif }}{{ if streeteasy_type == "rental"}}{{ price|format_number }}/month{{ else }}{{ price|format_number }}{{ endif }}',
+  '{{ if currency == "dollars" }}${{ elseif currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ elseif currency == "none" }}{{ else }}${{ endif }}{{ if ownership == "rental"}}{{ price|format_number }}/month{{ else }}{{ price|format_number }}{{ endif }}',
   '{{ property_type }}',
   '{{ sqft|format_number }} ft',
   '{{ property_location }}'

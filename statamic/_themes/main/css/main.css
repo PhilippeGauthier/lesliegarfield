@@ -6018,7 +6018,7 @@ input.radio, select.radio {
   font-size: 18px;
   line-height: 27px; }
 
-.property_box .property_tile_info .prop-price, .property_box .property_tile_info .bottom-info, .property_box .property_tile_info .prop-details, .property_box .property_tile_info .prop-location, .property_box .property_tile_info .price, .property_box .property_tile_info .currency, .property_box .property_tile_info .sqft-details {
+.property_box .property_tile_info .prop-price, .property_box .property_tile_info .bottom-info, .property_box .property_tile_info .prop-details, .property_box .property_tile_info .prop-location, .property_box .property_tile_info .price, .property_box .property_tile_info .currency, .property_box .property_tile_info .ownership, .property_box .property_tile_info .sqft-details {
   font-family: "Copernicus-Medium";
   font-size: 15px;
   line-height: 21.75px; }
@@ -6029,7 +6029,10 @@ input.radio, select.radio {
 .property_box .property_tile_info .sqft-details.sup {
   margin-left: 3px; }
 
-.property_box .property_tile_info .price, .property_box .property_tile_info .currency {
+.property_box .property_tile_info .ownership {
+  margin-left: 3px; }
+
+.property_box .property_tile_info .price, .property_box .property_tile_info .currency, .property_box .property_tile_info .ownership {
   display: inline-block; }
 
 .property_box .property_tile_info .bottom-info {

@@ -55,6 +55,12 @@ var Listing = React.createClass({
     if (listing.currency == null) {
       listing.currency = "$";
     }
+    if (listing.ownernship == "rental") {
+      listing.ownership = " /month"
+    }
+    if (listing.ownership != "rental") {
+      listing.owernship = "";
+    }
     return (
       <li className='grid-item property_tile'>
         <a href={listing.url} className='property_box'>
@@ -70,6 +76,7 @@ var Listing = React.createClass({
               <span className="prop-price">
                 <span className="currency">{listing.currency}</span>
                 <span className="price">{listing.price}</span>
+                <span className="ownership">{listing.ownership}</span>
               </span>
               <div className='spacer'></div>
               <span className="prop-details">{listing.property_type}</span>
