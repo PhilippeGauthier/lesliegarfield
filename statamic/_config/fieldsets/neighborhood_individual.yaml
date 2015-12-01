@@ -39,5 +39,9 @@ fields:
     type: location
     display: Location
     required: true
+  zoom_level:
+    type: text
+    display: Map Zoom Level
+    default: 15
   content:
     hide: true
