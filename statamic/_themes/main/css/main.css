@@ -2607,7 +2607,7 @@ p.intro-section {
   transition: all 200ms ease; }
 
 .Select-control:hover {
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06); }
+  box-shadow: none; }
 
 .is-searchable.is-open > .Select-control {
   cursor: text; }
