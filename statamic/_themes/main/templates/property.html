@@ -153,10 +153,8 @@
 					</div>
 						
 						<ul>
-							{{ if price|not_empty }}
 							<li>Price</li>
-							{{ endif }}
-
+						
 							{{ if terms|not_empty }}
 							<li>Lease Terms</li>
 							{{ endif }}
@@ -181,9 +179,7 @@
 							<li>Stories</li>
 							{{ endif }}
 
-							{{ if sqft|not_empty }}
 							<li>Square Feet</li>
-							{{ endif }}
 
 							{{ if units|not_empty }}
 							<li>Units</li>
@@ -193,13 +189,7 @@
 							<li>Rooms</li>
 							{{ endif }}
 
-							{{ if bedrooms|not_empty }}
 							<li>Bedrooms</li>
-							{{ endif }}
-
-							{{ if bathrooms|not_empty }}
-							<li>Bathrooms</li>
-							{{ endif }}
 
 							{{ if powder|not_empty }}
 							<li>Powder Rooms</li>
@@ -234,9 +224,7 @@
 							{{ endif }}
 						</ul>
 						<ul>
-							{{ if price|not_empty }}
-							<li>{{ if currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ else }}${{ endif }}{{ price|format_number }}{{ if ownership == "rental" }}/month{{endif }}</li>
-							{{ endif }}
+							<li>{{ if currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ else }}${{ endif }}{{ price|format_number }}{{ if ownership == "rental" }}/month{{ endif }}</li>
 
 							{{ if terms|not_empty }}
 							<li>{{ terms }}</li>
@@ -262,9 +250,7 @@
 							<li>{{ stories }}</li>
 							{{ endif }}
 
-							{{ if sqft|not_empty }}
 							<li>{{ sqft|format_number }} ft<sup>2</sup></li>
-							{{ endif }}
 
 							{{ if units|not_empty }}
 							<li>{{ units|format_number }}</li>
@@ -274,13 +260,9 @@
 							<li>{{ rooms }}</li>
 							{{ endif }}
 
-							{{ if bedrooms|not_empty }}
 							<li>{{ bedrooms }}</li>
-							{{ endif }}
 
-							{{ if bathrooms|not_empty }}
 							<li>{{ bathrooms }}</li>
-							{{ endif }}
 
 							{{ if powder|not_empty }}
 							<li>{{ powder }}</li>
@@ -370,8 +352,9 @@
 
 
 
-{{ entries:listing folder="properties/new-york/{streeteasy_type}|properties/international/{streeteasy_type}" conditions="property_location:{property_location}, url:!{current_url}"  }}
-
+{{ entries:listing folder="properties/new-york/{streeteasy_type}|properties/international/{streeteasy_type}" conditions="url:!{url}, property_location:{ property_location }"  }}
+{{ if no_results }}
+{{ else }}
 {{ if first }}
 <section class="circle-icon similar-properties-gray" id="featured-properties">
 	<div class="circle-leader">
@@ -401,7 +384,7 @@
 	</div>
 </section> 
 {{ endif }}
-
+{{ endif }}
 {{ /entries:listing }}
 
 
