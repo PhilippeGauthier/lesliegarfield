@@ -125,7 +125,7 @@ function initialize() {
   {{ longitude }}{{/location}},
   '{{url}}',
   '{{ preview_image }}',
-  {{ if openhouse == "1" }}'../_themes/main/img/map_marker_red.svg'{{ else }}'../_themes/main/img/map_marker_green.svg'{{endif}},
+  '../_themes/main/img/map_marker_green.svg',
   '{{ if currency == "dollars" }}${{ elseif currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ elseif currency == "none" }}{{ else }}${{ endif }}{{ if streeteasy_type == "rental"}}{{ price|format_number }}/month{{ else }}{{ price|format_number }}{{ endif }}',
   '{{ property_type }}',
   '{{ sqft|format_number }} ft',
@@ -143,7 +143,7 @@ function initialize() {
   {{ longitude }}{{/location}},
   '{{url}}',
   '{{ preview_image }}',
-  {{ if openhouse == "1" }}'../_themes/main/img/map_marker_red.svg'{{ else }}'../_themes/main/img/map_marker_green.svg'{{endif}},
+  '../_themes/main/img/map_marker_green.svg',
   '{{ if currency == "dollars" }}${{ elseif currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ elseif currency == "none" }}{{ else }}${{ endif }}{{ if streeteasy_type == "rental"}}{{ price|format_number }}/month{{ else }}{{ price|format_number }}{{ endif }}',
   '{{ property_type }}',
   '{{ sqft|format_number }} ft',
@@ -288,13 +288,13 @@ function initialize() {
     });
   }
 
-  $('#buy').click(function() {
+  buy.click(function() {
     if ($(this).hasClass('active')) {
 
     }
     else {
       $(this).addClass('active');
-      $('#rent').removeClass('active');
+      rent.removeClass('active');
     }
       for (var i = 0; i < saleMarkers.length; i++ ) {
            saleMarkers[i].setVisible(true);
@@ -307,13 +307,13 @@ function initialize() {
       }
 
   });
-  $('#rent').click(function() {
+  rent.click(function() {
     if ($(this).hasClass('active')) {
 
     }
     else {
       $(this).addClass('active');
-      $('#buy').removeClass('active');
+      buy.removeClass('active');
     }
       for (var i = 0; i < rentalMarkers.length; i++ ) {
            rentalMarkers[i].setVisible(true);
