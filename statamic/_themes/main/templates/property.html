@@ -370,8 +370,10 @@
 
 
 
-{{ entries:listing folder="properties/new-york/{streeteasy_type}|properties/international/{streeteasy_type}" conditions="url:!{url}, property_location:{ property_location }"  }}
-
+{{ entries:listing folder="properties/new-york/{streeteasy_type}|properties/international/{streeteasy_type}" conditions="property_location:{property_location}, url:!{current_url}"  }}
+{{ if no_results }}
+foo
+{{ else }}
 {{ if first }}
 <section class="circle-icon similar-properties-gray" id="featured-properties">
 	<div class="circle-leader">
@@ -401,7 +403,7 @@
 	</div>
 </section> 
 {{ endif }}
-
+{{ endif }}
 {{ /entries:listing }}
 
 
