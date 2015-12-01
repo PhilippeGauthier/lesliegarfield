@@ -235,7 +235,7 @@
 						</ul>
 						<ul>
 							{{ if price|not_empty }}
-							<li>{{ if currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ else }}${{ endif }}{{ price|format_number }}{{ if ownership == "rental" }} /month{{endif }}</li>
+							<li>{{ if currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ else }}${{ endif }}{{ price|format_number }}{{ if ownership == "rental" }}/month{{endif }}</li>
 							{{ endif }}
 
 							{{ if terms|not_empty }}
