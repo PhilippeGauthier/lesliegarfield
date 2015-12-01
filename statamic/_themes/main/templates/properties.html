@@ -289,6 +289,13 @@ function initialize() {
   }
 
   $('#buy').click(function() {
+    if ($(this).hasClass('active')) {
+
+    }
+    else {
+      $(this).addClass('active');
+      $('#rent').removeClass('active');
+    }
       for (var i = 0; i < saleMarkers.length; i++ ) {
            saleMarkers[i].setVisible(true);
       }
@@ -298,9 +305,16 @@ function initialize() {
       for (var i = 0; i < infoWindows.length; i++ ) {
            infoWindows[i].close();
       }
-      
+
   });
   $('#rent').click(function() {
+    if ($(this).hasClass('active')) {
+
+    }
+    else {
+      $(this).addClass('active');
+      $('#buy').removeClass('active');
+    }
       for (var i = 0; i < rentalMarkers.length; i++ ) {
            rentalMarkers[i].setVisible(true);
       }
