@@ -3649,7 +3649,7 @@ footer .footer-divider {
 
 @media (min-width: 992px) {
   #map {
-    height: 100%; } }
+    height: 1000px; } }
 
 .Select.is-open .Select-control {
   border-radius: 0; }
