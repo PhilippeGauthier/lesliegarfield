@@ -148,6 +148,9 @@
 			&:last-of-type {
 				margin-left: 15px;
 			}
+			a.active:hover i{
+				color: $text-green;
+			}
 		}
 		span {
 			color: white;

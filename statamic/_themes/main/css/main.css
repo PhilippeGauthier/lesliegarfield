@@ -3767,6 +3767,9 @@ footer .footer-divider {
 .property_nav .views li:last-of-type {
   margin-left: 15px; }
 
+.property_nav .views li a.active:hover i {
+  color: #009B77; }
+
 .property_nav .views span {
   color: white; }
 
