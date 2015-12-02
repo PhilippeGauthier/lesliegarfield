@@ -103,7 +103,6 @@ fields:
     display: Agents (STREETEASY) - First listed agent will receive Viewing Requests
     type: suggest
     create: true
-    required: false
     content:
       folder: agents/garfield
       label: title
