@@ -3734,6 +3734,9 @@ footer .footer-divider {
   vertical-align: top;
   display: inline-block; }
 
+.property_nav .rent-or-buy #buy {
+  margin-right: 4px; }
+
 .property_nav .rent-or-buy a {
   background-color: black;
   padding: 5px 15px;

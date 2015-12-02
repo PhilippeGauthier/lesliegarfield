@@ -9,7 +9,7 @@ var RentOrBuy = React.createClass({
       <div className='rent-or-buy'>
       <ul >
         <li>
-          <a className={this.props.buy ? 'active': ''} onClick={this.updateRentOrBuy.bind(this, true)}>Buy</a>
+          <a id="buy" className={this.props.buy ? 'active': ''} onClick={this.updateRentOrBuy.bind(this, true)}>Buy</a>
         </li>
         <li>
           <a className={this.props.buy ? '': 'active'} onClick={this.updateRentOrBuy.bind(this, false)}>Rent</a>
