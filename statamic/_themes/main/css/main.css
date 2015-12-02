@@ -3761,6 +3761,9 @@ footer .footer-divider {
 .property_nav .view-type {
   float: right; }
 
+.property_nav .views {
+  height: 45px; }
+
 .property_nav .views li {
   padding-top: 5px; }
 
