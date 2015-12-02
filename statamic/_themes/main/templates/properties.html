@@ -4,7 +4,7 @@
 <script type="text/javascript">
 {{ if get:view != "map" }}
   var data = {
-    {{ entries:listing folder="properties/new-york/sale" conditions="streeteasy_status:active||in-contract" show_future="true" }}
+    {{ entries:listing folder="properties/new-york/sale" conditions="streeteasy_status:!sold" show_future="true" }}
     {{ if first }}
     "sale": {
       {{ endif }}
@@ -45,7 +45,7 @@
       {{ endif 	}}
       {{ /entries:listing}}
     },
-    {{ entries:listing folder="properties/new-york/rental" conditions="streeteasy_status:active||in-contract" show_future="true" }}
+    {{ entries:listing folder="properties/new-york/rental" conditions="streeteasy_status:!sold" show_future="true" }}
     {{ if first }}
     "lease": {
       {{ endif }}
@@ -121,7 +121,7 @@
 
 function initialize() {
   var sale_properties = [
-  {{ entries:listing folder="properties/new-york/sale|properties/new-york/rental"}}
+  {{ entries:listing folder="properties/new-york/sale|properties/new-york/rental" conditions="streeteasy_status:!sold"}}
   {{ if last }}
   ['{{ title }}', {{ location }}{{ latitude}},{{ longitude }}{{/location}},'{{url}}','{{ preview_image }}','../_themes/main/img/map_marker_green.svg',
   '{{ if currency == "dollars" }}${{ elseif currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ elseif currency == "none" }}{{ else }}${{ endif }}{{ if streeteasy_type == "rental"}}{{ price|format_number }}/month{{ else }}{{ price|format_number }}{{ endif }}','{{ property_type }}','{{ sqft|format_number }} ft','{{ property_location }}']

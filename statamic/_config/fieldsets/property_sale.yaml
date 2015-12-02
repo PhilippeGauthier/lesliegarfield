@@ -75,6 +75,8 @@ fields:
       active: Active
       in-contract: In Contract
       sold: Sold
+      off-market: Off Market
+      temp-off-market: Temporarily Off Market
   streeteasy:
     display: ACTIVATE STREETEASY?
     type: checkbox

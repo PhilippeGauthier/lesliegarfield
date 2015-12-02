@@ -36,6 +36,9 @@ var Listing = React.createClass({
     if (listing.streeteasy_status == 'in-contract' ) {
       listing.bottom_info = "In Contract";
     }
+    if (listing.streeteasy_status == 'temp-off-market'||'off-market') {
+      listing.bottom_info = "";
+    }
     if (listing.openhouse == 1) {
       listing.bottom_info_red = 'Open House';
       listing.bottom_info = "";

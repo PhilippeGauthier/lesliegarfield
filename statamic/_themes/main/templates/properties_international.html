@@ -1,6 +1,6 @@
 <script type="text/javascript">
   var data = {
-    {{ entries:listing folder="properties/international/sale" conditions="streeteasy_status:active||in-contract" show_future="true" }}
+    {{ entries:listing folder="properties/international/sale" conditions="streeteasy_status:!sold" show_future="true" }}
     {{ if first }}
     "sale": {
     {{ endif }}
@@ -41,7 +41,7 @@
      {{ endif   }}
     {{ /entries:listing}}
     },
-    {{ entries:listing folder="properties/international/rental" conditions="streeteasy_status:active||in-contract" show_future="true" }}
+    {{ entries:listing folder="properties/international/rental" conditions="streeteasy_status:!sold" show_future="true" }}
     {{ if first }}
     "lease": {
     {{ endif }}

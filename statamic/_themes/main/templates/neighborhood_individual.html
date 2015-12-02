@@ -76,7 +76,7 @@
 		<a id="other_properties" class="secondary-nav-link"></a>
 		<div class="container">
 			<div class="section-title">CURRENT PROPERTIES IN THIS NEIGHBORHOOD</div>
-			{{ entries:listing folder="properties/new-york/sale|properties/new-york/rental" conditions="property_location:{title}, streeteasy_status:active||in-contract" }}
+			{{ entries:listing folder="properties/new-york/sale|properties/new-york/rental" conditions="property_location:{title}, streeteasy_status:!sold" }}
 			{{ if no_results }}
 			<p class="no_results">We currently have no other properties for sale or lease in this neighborhood. Be sure to check back soon.</p>
 			{{ else }}
@@ -123,7 +123,7 @@
 
 function initialize() {
   var locations = [
-  {{ entries:listing folder="properties/new-york/sale|properties/new-york/rental" conditions="property_location:{title}, streeteasy_status:active||in-contract" }}
+  {{ entries:listing folder="properties/new-york/sale|properties/new-york/rental" conditions="property_location:{title}, streeteasy_status:!sold" }}
   {{ if !no_results }}
   [
   '{{ title }}', 
@@ -194,7 +194,7 @@ function initialize() {
   var bounds = new google.maps.LatLngBounds();
   var markers = [];
 
-  {{ entries:listing folder="properties/new-york/sale|properties/new-york/rental" conditions="property_location:{title}, streeteasy_status:active||in-contract" }}
+  {{ entries:listing folder="properties/new-york/sale|properties/new-york/rental" conditions="property_location:{title}, streeteasy_status:!sold" }}
   {{ if !no_results }}
 
   for (i = 0; i < locations.length; i++) {
