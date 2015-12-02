@@ -1,5 +1,5 @@
 <properties>
-{{ entries:listing folder="properties/new-york/*" conditions="streeteasy:true" conditions="streeteasy_status:active|in-contract" }}
+{{ entries:listing folder="properties/new-york/*" conditions="streeteasy:true,streeteasy_status:active|in-contract" }}
 <property 
 	type="{{ streeteasy_type }}" id="{{ id }}" status="{{ streeteasy_status }}" 
 	url="{{ _site_url }}{{ url }}">
