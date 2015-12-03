@@ -3532,7 +3532,7 @@ footer .footer-group:before, footer .footer-group:after {
   footer .footer-group input {
     max-width: 100%; } }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   footer .footer-group {
     box-sizing: border-box;
     width: 33.33333%;
@@ -4755,6 +4755,10 @@ footer .footer-divider {
 
 .numbers .full {
   padding: 0 30px; }
+
+@media (min-width: 768px) {
+  .numbers .full {
+    padding: 0 120px; } }
 
 @media (min-width: 992px) {
   .numbers .full {
@@ -6245,8 +6249,8 @@ input.radio, select.radio {
 
 @media (min-width: 768px) {
   .reports .grid-constrained {
-    margin-left: 18.75%;
-    margin-right: 18.75%; } }
+    margin-left: 12.5%;
+    margin-right: 12.5%; } }
 
 .reports .grid-3-constrained:nth-child(6n+1) .report-tile {
   border-top: 2px solid #009B77;
@@ -6359,7 +6363,7 @@ input.radio, select.radio {
     display: table;
     clear: both; } }
 
-.reports.signup button {
+.reports.signup .submit {
   border-radius: 0;
   background-color: #009880;
   padding: 10px 100px;
@@ -6368,15 +6372,20 @@ input.radio, select.radio {
   border-radius: 0;
   color: white;
   text-transform: uppercase;
-  margin: 20px auto; }
+  margin: 20px auto;
+  width: 100%; }
 
-.reports.signup button:hover, .reports.signup button:focus {
+.reports.signup .submit:hover, .reports.signup .submit:focus {
   color: white;
   background-color: #009d84; }
 
+@media (min-width: 768px) {
+  .reports.signup .submit {
+    width: 50%; } }
+
 .report-tile {
   padding: 30px;
-  margin: 10px;
+  margin: 20px;
   background-color: #fff;
   display: block;
   border: 1px solid transparent;

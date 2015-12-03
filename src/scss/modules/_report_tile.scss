@@ -9,8 +9,8 @@
 			@include post(0);	
 		}
 		@include breakpoint($small) {
-			@include pre(1.5);
-			@include post(1.5);			
+			@include pre(1);
+			@include post(1);			
 		}
 
 	}
@@ -129,16 +129,23 @@
 				@include clearfix;
 			}
 		}
-		button {
+		.submit {
 			@include btn-garfield(10px, 100px,14px);
 			margin: 20px auto;
+			width: 100%;
+			@include breakpoint($small) {
+				width: 50%;
+			}
+		}
+		button {
+
 		}
 	}
 }
 
 .report-tile {
 	padding: 30px;
-	margin: 10px;
+	margin: 20px;
 	background-color: #fff;
 	display: block;
 	border: 1px solid transparent;
