@@ -11,6 +11,10 @@ fields:
   datestamp:
     type: date
     hide: true
+  realtor:
+    type: text
+    default: garfield
+    hide: true
   streeteasy_type:
     type: text
     hide: true

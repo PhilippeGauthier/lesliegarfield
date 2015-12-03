@@ -140,7 +140,7 @@ $fontHuge: 70px;
     font-family: $hFontBI;
     font-size: $fontXXLarge/2;
     line-height: 1.2*($fontXXLarge/2);
-    @include breakpoint($medium) {
+    @include breakpoint($small) {
         font-size: $fontXXLarge;
         line-height: 1.2*$fontXXLarge;
     }
@@ -150,7 +150,7 @@ $fontHuge: 70px;
     font-family: $font;
     font-size: $fontSmallMedium;
     line-height: 1.55*$fontSmallMedium;
-    @include breakpoint($medium) {
+    @include breakpoint($small) {
         font-size: $fontXLarge;
         line-height: 1.55*$fontXLarge;
     }
@@ -166,7 +166,7 @@ $fontHuge: 70px;
     font-family: $font;
     font-size: $fontSmallMedium;
     line-height: 1.5*$fontSmallMedium;
-    @include breakpoint($tiny) {
+    @include breakpoint($medium) {
         font-size: $fontLargeMedium;
         line-height: 1.5*$fontLargeMedium;
     }
