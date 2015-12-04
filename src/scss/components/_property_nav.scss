@@ -130,7 +130,13 @@
 		}
 	}
 	.filter-view, .view-type {
-		display: inline-block;
+		@include breakpoint($tiny) {
+			display: inline-block;
+		}
+		
+
+
+		
 	}
 	.filter-view {
 		vertical-align: top;
@@ -140,7 +146,12 @@
 
 	}
 	.view-type {
-		float: right;
+		float: left;
+		margin-top: 10px;
+		@include breakpoint($tiny) {
+			float: right;
+			margin-top: 0;
+		}
 	}
 	.views {
 		height: 45px;
@@ -204,7 +215,11 @@
 		margin-left: 20px;
 	}
 	.sort-select {
-		width: 250px;
+		width: 210px;
+		@include breakpoint($small) {
+			width: 250px;
+		}
+		
 
 	}
 	.Select-control {

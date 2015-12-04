@@ -3749,8 +3749,9 @@ footer .footer-divider {
 .property_nav .rent-or-buy a.active {
   background-color: #009880; }
 
-.property_nav .filter-view, .property_nav .view-type {
-  display: inline-block; }
+@media (min-width: 480px) {
+  .property_nav .filter-view, .property_nav .view-type {
+    display: inline-block; } }
 
 .property_nav .filter-view {
   vertical-align: top; }
@@ -3759,7 +3760,13 @@ footer .footer-divider {
   vertical-align: middle; }
 
 .property_nav .view-type {
-  float: right; }
+  float: left;
+  margin-top: 10px; }
+
+@media (min-width: 480px) {
+  .property_nav .view-type {
+    float: right;
+    margin-top: 0; } }
 
 .property_nav .views {
   height: 45px; }
@@ -3818,7 +3825,11 @@ footer .footer-divider {
   margin-left: 20px; }
 
 .sort-nav .sort-select {
-  width: 250px; }
+  width: 210px; }
+
+@media (min-width: 768px) {
+  .sort-nav .sort-select {
+    width: 250px; } }
 
 .sort-nav .Select-control {
   border: none; }
@@ -5631,14 +5642,19 @@ input.radio, select.radio {
   text-align: center; }
 
 .modal-header .close {
-  margin-top: -75px;
-  margin-right: -75px;
+  margin-top: -10px;
+  margin-right: -10px;
   color: white;
   background-color: #25282A;
   opacity: 1;
   border-radius: 50%;
   height: 30px;
   width: 30px; }
+
+@media (min-width: 768px) {
+  .modal-header .close {
+    margin-top: -75px;
+    margin-right: -75px; } }
 
 .modal-header .close span {
   color: white; }
