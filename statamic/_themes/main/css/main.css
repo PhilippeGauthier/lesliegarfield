@@ -3520,7 +3520,7 @@ footer .footer-group:before, footer .footer-group:after {
   display: table;
   clear: both; }
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   footer .footer-group {
     box-sizing: border-box;
     width: 50%;
@@ -4249,7 +4249,10 @@ footer .footer-divider {
     padding-left: 15px;
     padding-right: 15px; } }
 
-@media (min-width: 992px) {
+.agent-individual aside {
+  padding-right: 15px; }
+
+@media (min-width: 1280px) {
   .agent-individual aside {
     padding-right: 60px; } }
 
@@ -4848,6 +4851,20 @@ footer .footer-divider {
   .numbers .divider {
     width: 400px; } }
 
+.faq-header h2 {
+  font-size: 20px; }
+
+@media (min-width: 768px) {
+  .faq-header h2 {
+    font-family: "Copernicus-BookItalic";
+    font-size: 25px;
+    line-height: 30px; } }
+
+@media (min-width: 768px) and (min-width: 768px) {
+  .faq-header h2 {
+    font-size: 50px;
+    line-height: 60px; } }
+
 .faq-aside {
   background-color: #ECEBEC;
   padding: 30px; }
@@ -5272,93 +5289,18 @@ footer .footer-divider {
 .twitter-feed .tweet:last-of-type {
   border-bottom: none; }
 
+.contact {
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%; }
+
 .contact .btn-garfield {
   margin-top: 10px;
   width: 100%; }
 
-.contact .sales {
-  box-sizing: border-box;
-  width: 100%;
-  float: left;
-  padding-left: 1.25%;
-  padding-right: 1.25%; }
-
-.contact .sales input {
-  margin-bottom: 10px; }
-
-.contact .info {
-  box-sizing: border-box;
-  width: 100%;
-  float: left;
-  padding-left: 1.25%;
-  padding-right: 1.25%;
-  margin-bottom: 30px; }
-
-.contact .info div {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  margin-bottom: 5px; }
-
-.contact .info div, .contact .info a, .contact .info span {
-  font-family: "Copernicus-Medium";
-  font-size: 20px; }
-
-.contact .info span {
-  line-height: 20px; }
-
-.contact .info .line-two {
-  margin-left: 25px; }
-
-.contact .info svg {
-  height: 20px;
-  width: 20px;
-  margin-right: 5px; }
-
-.contact .info svg * {
-  fill: #009B77; }
-
-.contact .info .map {
-  background-color: #fff;
-  width: 100%; }
-
-.contact .info .map a {
-  display: block;
-  width: 100%;
-  padding-top: 100%; }
-
 @media (min-width: 480px) {
-  .contact .sales, .contact .info {
-    margin-left: 8.33333%;
-    box-sizing: border-box;
-    width: 83.33333%;
-    float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%; } }
-
-@media (min-width: 768px) {
-  .contact .sales {
-    margin-left: 0%;
-    box-sizing: border-box;
-    width: 50%;
-    float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%; }
-  .contact .info {
-    margin-left: 0%;
-    box-sizing: border-box;
-    width: 50%;
-    float: right;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%; } }
-
-@media (min-width: 1280px) {
   .contact {
     margin-left: 16.66667%;
     box-sizing: border-box;
@@ -6322,9 +6264,12 @@ input.radio, select.radio {
   line-height: 24px; }
 
 .reports.signup form {
-  margin-left: 16.66667%;
-  margin-right: 16.66667%;
   text-align: center; }
+
+@media (min-width: 480px) {
+  .reports.signup form {
+    margin-left: 16.66667%;
+    margin-right: 16.66667%; } }
 
 .reports.signup input {
   width: 100%;
@@ -6333,7 +6278,11 @@ input.radio, select.radio {
   border: 1px solid #a1a8ad; }
 
 .reports.signup .form-group {
-  margin-bottom: 1.66667%; }
+  margin-bottom: 10px; }
+
+@media (min-width: 768px) {
+  .reports.signup .form-group {
+    margin-bottom: 1.66667%; } }
 
 .reports.signup .full-span, .reports.signup .half-span {
   box-sizing: border-box;
@@ -6342,6 +6291,18 @@ input.radio, select.radio {
   padding-left: 0.60976%;
   padding-right: 0.60976%; }
 
+.reports.signup .half-span-center {
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.60976%;
+  padding-right: 0.60976%; }
+
+.reports.signup #mce-responses:before, .reports.signup #mce-responses:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 @media (min-width: 768px) {
   .reports.signup .half-span {
     margin-left: 25%;
@@ -6349,7 +6310,14 @@ input.radio, select.radio {
     width: 50%;
     float: left;
     padding-left: 5%;
-    padding-right: 5%; } }
+    padding-right: 5%; }
+  .reports.signup .half-span-center {
+    margin-left: 25%;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-left: 0.60976%;
+    padding-right: 0.60976%; } }
 
 @media (min-width: 768px) {
   .reports.signup .half {
@@ -6366,30 +6334,29 @@ input.radio, select.radio {
 .reports.signup .submit {
   border-radius: 0;
   background-color: #009880;
-  padding: 10px 100px;
+  padding: 10px 10px;
   font-size: 14px;
   border: 1px solid #009880;
   border-radius: 0;
   color: white;
   text-transform: uppercase;
-  margin: 20px auto;
   width: 100%; }
 
 .reports.signup .submit:hover, .reports.signup .submit:focus {
   color: white;
   background-color: #009d84; }
 
-@media (min-width: 768px) {
-  .reports.signup .submit {
-    width: 50%; } }
-
 .report-tile {
   padding: 30px;
-  margin: 20px;
+  margin: 10px auto;
   background-color: #fff;
   display: block;
   border: 1px solid transparent;
   transition: all 100ms ease; }
+
+@media (min-width: 480px) {
+  .report-tile {
+    margin: 20px; } }
 
 .report-tile:hover {
   background-color: #009B77;
@@ -6664,13 +6631,13 @@ section.faq {
   font-size: 28px;
   line-height: 33.6px; }
 
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
   .featured h3 {
     font-family: "Copernicus-MediumItalic";
     font-size: 18px;
     line-height: 27.9px; } }
 
-@media (min-width: 1280px) and (min-width: 768px) {
+@media (min-width: 768px) and (min-width: 768px) {
   .featured h3 {
     font-size: 34px;
     line-height: 52.7px; } }
@@ -6681,6 +6648,10 @@ section.faq {
 @media (min-width: 768px) {
   .featured .truncated {
     display: block; } }
+
+@media (min-width: 768px) {
+  .featured .featured-image {
+    height: 300px; } }
 
 @media (min-width: 992px) {
   .featured {

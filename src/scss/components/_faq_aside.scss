@@ -1,4 +1,12 @@
+.faq-header {
+	h2 {
+		font-size: 20px;
+		@include breakpoint($small) {
+			@include hxxlarge;
+		}
+	}
 
+}
 
 .faq-aside {
 	background-color: $light-gray;

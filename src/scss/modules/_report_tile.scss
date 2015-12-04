@@ -101,8 +101,11 @@
 			line-height: 24px;
 		}
 		form {
-			@include pre(2 of 12);
-			@include post(2 of 12);
+			@include breakpoint($tiny) {
+				@include pre(2 of 12);
+				@include post(2 of 12);				
+			}
+
 			text-align: center;
 		}
 		input {
@@ -112,15 +115,28 @@
 			border: 1px solid lighten($header-font-color,50%);
 		}
 		.form-group {
-			margin-bottom: gutter(6);
+			margin-bottom: 10px;
+			@include breakpoint($small) {
+				margin-bottom: gutter(6);
+			}
 		}
 		.full-span, .half-span {
 			@include span(2 of 2 .025);
+		}
+		.half-span-center {
+			@include span(2 of 2 .025);
+		}
+		#mce-responses {
+			@include clearfix;
 		}
 		@include breakpoint($small) {
 			.half-span {
 				@include pre(.5 of 2);
 				@include span (1 of 2);
+			}
+			.half-span-center {
+				@include pre(.5 of 2);
+				@include span (1 of 2 .025);
 			}
 		}
 		@include breakpoint($small) {
@@ -130,12 +146,8 @@
 			}
 		}
 		.submit {
-			@include btn-garfield(10px, 100px,14px);
-			margin: 20px auto;
+			@include btn-garfield(10px, 10px,14px);
 			width: 100%;
-			@include breakpoint($small) {
-				width: 50%;
-			}
 		}
 		button {
 
@@ -145,7 +157,10 @@
 
 .report-tile {
 	padding: 30px;
-	margin: 20px;
+	margin: 10px auto;
+	@include breakpoint($tiny) {
+		margin: 20px;
+	}
 	background-color: #fff;
 	display: block;
 	border: 1px solid transparent;

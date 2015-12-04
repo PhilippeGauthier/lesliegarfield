@@ -29,7 +29,7 @@ footer {
 		@include clearfix;
 		vertical-align: top;
 
-		@include breakpoint($tiny) {
+		@include breakpoint($small) {
 			@include span(6 of 12 no-gutter clear);
 			&.signup {
 				margin-top: 0;

@@ -10,8 +10,8 @@
 		}
 	}
 	aside {
-		
-		@include breakpoint($medium) {
+		padding-right: 15px;
+		@include breakpoint($large) {
 			padding-right: $bPadding;
 		}
 		img {
