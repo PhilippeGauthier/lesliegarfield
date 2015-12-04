@@ -136,10 +136,17 @@
 			display: block;
 		}
 		.prop-title {
-			@include hsmedium($hFontMI);
+			@include btiny($hFontMI);
+			@include breakpoint($tiny) {
+				@include hsmall($hFontMI);
+			}
 		}
 		.prop-price, .bottom-info, .prop-details,.prop-location,.price,.currency,.ownership, .sqft-details {
-			@include hsmall($hFontM);
+			@include hmin($hFontM);
+			@include breakpoint($tiny) {
+				@include hsmall($hFontM);
+			}
+			
 		}
 		.sqft-details {
 			display: inline-block;
@@ -174,7 +181,11 @@
 
 .gm-style-iw {
 	.property_box {
-		width: 300px;
+		width: 225px;
+		@include breakpoint($tiny) {
+			width: 300px;
+		}
+		
 	}
 }
 
