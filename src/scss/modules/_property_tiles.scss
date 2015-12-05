@@ -145,6 +145,7 @@
 			@include hmin($hFontM);
 			@include breakpoint($tiny) {
 				@include hsmall($hFontM);
+				font-weight: 500;
 			}
 			
 		}
