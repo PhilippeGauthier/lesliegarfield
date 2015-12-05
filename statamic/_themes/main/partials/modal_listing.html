@@ -41,7 +41,7 @@
           </div>
 
           <input type="hidden" name="email_address" 
-            value='"pgauthier@gmail.com, philippe@philippe.io"'>
+            value="{{ relate:agents}}{{ if first }}{{ email }}{{ endif }}{{/relate:agents}}">
           <input type="hidden" name="listing-address" value="{{ title }}">
         </div>
           <div class="form centered">
@@ -53,4 +53,3 @@
     </div>
   </div>
 </div>
-<!-- {{ relate:agents}}{{ if last }}{{ email }}{{ else }}{{ email }}, {{ endif }}{{ /relate:agents }} -->
