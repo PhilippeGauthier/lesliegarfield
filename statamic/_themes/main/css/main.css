@@ -5992,8 +5992,8 @@ input.radio, select.radio {
 @media (min-width: 480px) {
   .property_box .property_tile_info .prop-title {
     font-family: "Copernicus-MediumItalic";
-    font-size: 15px;
-    line-height: 21.75px; } }
+    font-size: 18px;
+    line-height: 27px; } }
 
 .property_box .property_tile_info .prop-price, .property_box .property_tile_info .bottom-info, .property_box .property_tile_info .prop-details, .property_box .property_tile_info .prop-location, .property_box .property_tile_info .price, .property_box .property_tile_info .currency, .property_box .property_tile_info .ownership, .property_box .property_tile_info .sqft-details {
   font-family: "Copernicus-Medium";

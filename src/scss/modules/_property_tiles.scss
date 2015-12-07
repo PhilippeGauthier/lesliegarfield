@@ -138,7 +138,7 @@
 		.prop-title {
 			@include btiny($hFontMI);
 			@include breakpoint($tiny) {
-				@include hsmall($hFontMI);
+				@include hsmedium($hFontMI);
 			}
 		}
 		.prop-price, .bottom-info, .prop-details,.prop-location,.price,.currency,.ownership, .sqft-details {
