@@ -140,10 +140,30 @@
 						</div>
 						{{ /relate:agents }}
 					</div>
+					</div>
 					<div class="dotted"></div>
+					{{ if brochure or floor_plans }}
+					
+					<div class="agent property-downloads">
+					{{ if brochure }}
+						<a href="{{ brochure }}" target="_blank">
+							{{ theme:partial src="svg/download" }}
+							<span>Brochure</span>
+						</a>
+					{{ endif }}
+					{{ if floor_plans }}
+						<a href="{{ floor_plans }}" target="_blank">
+							{{ theme:partial src="svg/floorplans" }}
+							<span>Floorplans</span>
+						</a>
+					{{ endif }}
+					</div>
+					{{ endif }}
+					<div class="dotted"></div>
+
 					<div class="agent property-schedule">
 						<a data-toggle="modal" data-target="#viewing-modal" href="#" class="btn btn-garfield">Schedule a viewing</a>
-					</div>
+
 				</div>
 				<div class="green-specs">
 					<div class="specs">

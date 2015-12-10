@@ -200,6 +200,7 @@
 
 	}
 	.agent-image {
+		@include clearfix;
 		text-align: center;
 		@include span(1 of 3 no-gutter clear);
 		@include breakpoint($medium) {
@@ -254,8 +255,14 @@
 }
 
 .property-downloads {
+	position: relative;
+	@include clearfix;
 	a {
 		@include gallery(1 of 2 after);
+		text-align: center;
+		@include breakpoint($medium) {
+			text-align: left;
+		}
 		margin-bottom: 20px;
 		&:hover {
 			* {

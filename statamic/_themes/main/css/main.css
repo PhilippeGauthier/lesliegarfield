@@ -4105,6 +4105,11 @@ footer .footer-divider {
   float: left;
   padding-right: 10px; }
 
+.property-agents .agent-image:before, .property-agents .agent-image:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 @media (min-width: 992px) {
   .property-agents .agent-image {
     text-align: left; }
@@ -4161,9 +4166,18 @@ footer .footer-divider {
   height: 20px;
   width: 20px; }
 
+.property-downloads {
+  position: relative; }
+
+.property-downloads:before, .property-downloads:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 .property-downloads a {
   width: 44.44444%;
   float: left;
+  text-align: center;
   margin-bottom: 20px; }
 
 .property-downloads a:nth-child(2n + 1) {
@@ -4176,6 +4190,10 @@ footer .footer-divider {
   margin-left: 55.55556%;
   margin-right: -100%;
   clear: none; }
+
+@media (min-width: 992px) {
+  .property-downloads a {
+    text-align: left; } }
 
 .property-downloads a:hover * {
   color: #009B77;
