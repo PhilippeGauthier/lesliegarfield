@@ -4131,14 +4131,14 @@ footer .footer-divider {
   border: 2px solid #009B77; }
 
 .property-agents .agent-details {
-  margin-left: 5px; }
+  margin-left: 5px;
+  box-sizing: border-box;
+  width: 66.66667%;
+  float: right; }
 
 @media (min-width: 1280px) {
   .property-agents .agent-details {
-    margin-left: 0;
-    box-sizing: border-box;
-    width: 66.66667%;
-    float: right; } }
+    margin-left: 0; } }
 
 .property-agents li:hover {
   color: #009B77; }
