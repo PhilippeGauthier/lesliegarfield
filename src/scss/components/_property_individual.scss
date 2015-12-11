@@ -224,11 +224,15 @@
 		}
 	}
 	.agent-details {
-		margin-left: 5px;
-		@include span (last 2 of 3 no-gutter);
+		li {
+			padding-left: 5px;
+		}
 		@include breakpoint($large) {
+			li {
+				padding-left: 0;
+			}
 			margin-left: 0;
-			
+			@include span (last 2 of 3 no-gutter);
 		}
 		
 	}
