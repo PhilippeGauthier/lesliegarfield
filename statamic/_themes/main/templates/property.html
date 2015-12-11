@@ -133,8 +133,8 @@
 							<div class="agent-details">
 								<a href="{{ url }}"><span>{{ title }}</span></a>
 								<ul>
-									{{ if phone }}<li>{{ theme:partial src="svg/phone" }} {{ phone }}</li>{{ endif }}
-									{{ if email }}<li>{{ theme:partial src="svg/mail" }} {{ email|link }}</li>{{ endif }}
+								{{ if phone }}<li>{{ theme:partial src="svg/phone" }} {{ phone }}</li>{{ endif }}
+								{{ if email }}<li>{{ theme:partial src="svg/mail" }} {{ email|link }}</li>{{ endif }}
 								</ul>
 							</div>
 						</div>
@@ -353,7 +353,7 @@
 					</div>
 				</div>
 
-				{{ if summary_intro|not_empty }}
+				
 				<div class="summary">
 					{{ summary_intro }}
 					{{ if summary_full|not_empty }}
@@ -363,7 +363,7 @@
 					<a class="read-more-expander expander-prev block" href=""><i  class="fa fa-plus-circle green"></i><span>Read More</span></a>
 					{{ endif }}
 				</div>
-				{{ endif }}
+				
 			</div>
 		</main>
 
