@@ -5260,7 +5260,7 @@ footer .footer-divider {
 .blog.blog-entry .blog-left .main-image {
   margin: 30px 0; }
 
-.blog.blog-entry .blog-left a {
+.blog.blog-entry .blog-left p a {
   text-decoration: underline;
   font-family: "Copernicus-Medium";
   font-size: 16px;
