@@ -4130,6 +4130,9 @@ footer .footer-divider {
 .property-agents img:hover {
   border: 2px solid #009B77; }
 
+.property-agents .agent-details {
+  margin-left: 10px; }
+
 @media (min-width: 1280px) {
   .property-agents .agent-details {
     box-sizing: border-box;
