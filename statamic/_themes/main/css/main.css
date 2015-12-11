@@ -4101,7 +4101,7 @@ footer .footer-divider {
 .property-agents .agent-image {
   text-align: center;
   box-sizing: border-box;
-  width: 25%;
+  width: 33.33333%;
   float: left;
   padding-right: 10px; }
 
@@ -4112,9 +4112,6 @@ footer .footer-divider {
 
 @media (min-width: 992px) {
   .property-agents .agent-image {
-    box-sizing: border-box;
-    width: 33.33333%;
-    float: left;
     text-align: left; }
   .property-agents .agent-image img {
     max-width: 100%; } }
