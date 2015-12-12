@@ -41,10 +41,13 @@ fields:
     display: Zip Code (STREETEASY)
     required: true
   currency:
-    type: text
+    type: select
     display: Choose currency
-    hide: true
-    default: dollars
+    options:
+       - dollars
+       - none
+       - sterling
+       - euros
   price:
     type: text
     default: 0
