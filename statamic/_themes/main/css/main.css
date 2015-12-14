@@ -3852,7 +3852,9 @@ footer .footer-divider {
 
 @media (min-width: 992px) {
   .property-page aside {
-    display: block; } }
+    display: block; }
+  .property-page .details-small {
+    display: none; } }
 
 .property-page .sticky-wrapper {
   position: relative;
