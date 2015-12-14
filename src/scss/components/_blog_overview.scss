@@ -123,9 +123,6 @@
 		}
 	}
 	.preview,.blog.blog-entry {
-		a {
-			text-decoration: underline;
-		}
 		@include span(full);
 		@include breakpoint($tiny) {
 			@include span(last 4 of 7 );
@@ -142,6 +139,7 @@
 		}
 		.blog-title {
 			@include hlarge;
+			text-decoration: none;
 		}
 	}
 	.read-more {

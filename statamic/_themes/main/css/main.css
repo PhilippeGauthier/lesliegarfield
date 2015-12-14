@@ -5165,9 +5165,6 @@ footer .footer-divider {
   padding-left: 1.25%;
   padding-right: 1.25%; }
 
-.blog .preview a, .blog .blog.blog-entry a {
-  text-decoration: underline; }
-
 @media (min-width: 480px) {
   .blog .preview, .blog .blog.blog-entry {
     box-sizing: border-box;
@@ -5187,7 +5184,8 @@ footer .footer-divider {
 .blog .preview .blog-title, .blog .blog.blog-entry .blog-title {
   font-family: "Copernicus-MediumItalic";
   font-size: 28px;
-  line-height: 33.6px; }
+  line-height: 33.6px;
+  text-decoration: none; }
 
 .blog .read-more {
   font-family: "Copernicus-MediumItalic";
