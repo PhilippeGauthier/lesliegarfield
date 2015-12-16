@@ -5,7 +5,7 @@ class Fieldtype_uuid extends Fieldtype
 {
     public function render_field()
     {
-    	$uuid = (string) Uuid::generate(4);
+    	$uuid = $this->field_data ?: Uuid::generate(4);
 			return '<input type="hidden" name="'.$this->fieldname.'" value="'.$uuid.'"/>';
     }
 }
