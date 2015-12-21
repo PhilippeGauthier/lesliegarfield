@@ -45,7 +45,7 @@
 			<exclusive>{{ exclusive }}</exclusive>
 		{{ endif }}
 		{{ if taxes|not_empty }}
-			<taxes>{{ taxes }}</taxes>
+			<taxes>{{ taxes|/:12|round }}</taxes>
 		{{ endif }}
 		{{ if bedrooms|not_empty }}
 			<bedrooms>{{ bedrooms }}</bedrooms>
