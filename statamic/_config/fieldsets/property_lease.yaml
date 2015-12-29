@@ -208,10 +208,6 @@ fields:
     type: file
     destination: assets/img/properties/sale
     allowed: [png, gif, jpg, jpeg]
-    resize:
-      width: 300
-      height: 300
-      quality: 90
   photo_carousel:
     type: file
     force_array: true
