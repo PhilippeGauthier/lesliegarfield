@@ -2171,6 +2171,10 @@ a .no-click * {
 .agents-background {
   background-color: #F5F5F5; }
 
+@media (min-width: 992px) {
+  .agents-background {
+    height: 450px !important; } }
+
 .bg-light-blue {
   background-color: #E6F1FA; }
 
@@ -6052,7 +6056,7 @@ input.radio, select.radio {
   display: inline-block; }
 
 .property_box .property_tile_info .bottom-info {
-  color: #CCCCCC; }
+  color: #a6a6a6; }
 
 .property_box .property_tile_info .bottom-info .red {
   color: #FF0000; }

@@ -159,7 +159,7 @@
 			display: inline-block;
 		}
 		.bottom-info {
-			color: $modal-text;
+			color: darken($modal-text, 15%);
 			.red {
 				color: $red;
 			}
