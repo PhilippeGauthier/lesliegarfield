@@ -70,6 +70,10 @@
 	}
 	@include breakpoint($medium) {
 		height: 550px;
+		&.agents-background {
+			height: 450px;
+		}
+		.a
 		h1 {
 			margin-bottom: 0;
 		}

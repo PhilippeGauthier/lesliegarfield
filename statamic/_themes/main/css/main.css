@@ -2171,10 +2171,6 @@ a .no-click * {
 .agents-background {
   background-color: #F5F5F5; }
 
-@media (min-width: 992px) {
-  .agents-background {
-    height: 450px !important; } }
-
 .bg-light-blue {
   background-color: #E6F1FA; }
 
@@ -5449,7 +5445,10 @@ footer .footer-divider {
 @media (min-width: 992px) {
   .hero {
     height: 550px; }
-  .hero h1 {
+  .hero.agents-background {
+    height: 450px; }
+  .hero .a
+h1 {
     margin-bottom: 0; }
   .hero a {
     border-radius: 0;

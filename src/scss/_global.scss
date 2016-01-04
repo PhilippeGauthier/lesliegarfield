@@ -63,10 +63,6 @@ a {
 
 .agents-background {
   background-color: $agents-background;
-  @include breakpoint($medium) {
-    height: 450px !important;
-  }
-  
 }
 
 .bg-light-blue {

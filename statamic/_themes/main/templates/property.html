@@ -87,7 +87,7 @@
 					</div>
 				</div>
 				<div class="property-subheader">
-					{{ if openhouse }}
+					{{ if openhouse || streeteasy_status == "in-contract" || streeteasy_status == "sold"  || streeteasy_status == "temp-off-market"}}
 					<div class="location split">
 					{{ else }}
 					<div class="location">
