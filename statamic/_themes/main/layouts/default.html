@@ -19,7 +19,7 @@
   <meta property="og:country-name" content="USA" />
   <title>{{ title }} - {{ _site_name }}</title>
   <!-- build:css -->
-  <link rel="stylesheet" href="{{ theme:css }}" />
+  <link rel="stylesheet" href="{{ theme:css src="main.min" }}" />
   <!-- endbuild -->
   <link rel="shortcut icon" type="image/ico" href="{{ theme:img src="" }}">
 
@@ -55,7 +55,7 @@
     {{ theme:partial src="footer" }}
 
   <!-- build:js -->
-  <script src="{{ theme:js  }}"></script>
+  <script src="{{ theme:js src="main.min" }}"></script>
   <script type="text/javascript">
 
   window.onload = function(){

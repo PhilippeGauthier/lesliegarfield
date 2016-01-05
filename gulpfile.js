@@ -152,7 +152,7 @@ gulp.task('replaceHTML', function(){
 });
 
 gulp.task('minify-css', function() {
-  return gulp.src(path.SCSS_BUILD + '/*.css')
+  return gulp.src(path.SCSS_BUILD + '/main.css')
     .pipe(minifyCss())
     .pipe(rename("main.min.css"))
     .pipe(gulp.dest(path.SCSS_BUILD));
