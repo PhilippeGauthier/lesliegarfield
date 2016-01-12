@@ -227,8 +227,8 @@ fields:
     destination: assets/img/properties/sale
     allowed: [png, gif, jpg, jpeg]
     resize:
-      width: 340
-      height: 340
+      width: 360
+      height: 360
       quality: 100
   photo_carousel:
     type: file
