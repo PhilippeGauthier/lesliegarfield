@@ -15,12 +15,14 @@ fields:
 				destination: assets/reports
 				display: Report File
 				width: 25%
+				max_items: 1
+			report_title:
+				type: textarea
+				display: Report Title
+				width: 25%
 			report_date:
 				type: text
 				display: Report Date (example June 2015)
 				width: 25%
-			report_title:
-				type: text
-				display: Report Title
 	content:
 		hide: true
