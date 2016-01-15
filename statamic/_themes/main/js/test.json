@@ -1,3 +1,0 @@
-{{ entries:listing folder="properties/**/*" }}
-	{{ title }}
-{{ /entries:listing}}

@@ -61,14 +61,19 @@
 .carousel_tile_2 {
 	@include span(full no-gutter);
 	&.main_tile, &.agent_tile {
-		@include pre(.65 of 12);
+		@include span(full no-gutter);
+		@include breakpoint($small) {
+			@include pre(.65 of 12);
+			@include span (10.7 of 12 no-gutter);
+		}
+		
 		.slick-prev:before {
 			margin-left: -20px;
 		}
 		.slick-next:before {
 			margin-left: -50px;
 		}
-		@include span (10.7 of 12 no-gutter);
+		
 	}
 	@include breakpoint($large) {
 		@include pre(2 of 12);

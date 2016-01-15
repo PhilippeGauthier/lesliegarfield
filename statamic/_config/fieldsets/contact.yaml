@@ -1,9 +1,0 @@
-title: Contact
-fields:
-	header:
-		type: text
-		display: Header
-	sub_header:
-		type: textarea
-		display: Sub Header
-		height: 75
