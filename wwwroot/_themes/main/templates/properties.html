@@ -1,0 +1,343 @@
+
+{{ var:my_date_since }}{{ date_calc start_date="{current_date}" method="subDays" value="30" format="F d, Y" }}{{ /var:my_date_since }}
+
+<script type="text/javascript">
+{{ if get:view != "map" }}
+  var data = {
+    {{ entries:listing folder="properties/new-york/sale" conditions="streeteasy_status:!sold" show_future="true" }}
+    {{ if first }}
+    "sale": {
+      {{ endif }}
+      "{{ slug }}":
+      {
+        "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
+        "datestamp": "{{ datestamp }}",
+        "preview_image":"{{ preview_image }}",
+        "url":"{{ url }}",
+        "streeteasy_status": "{{ streeteasy_status }}",
+        "openhouse": "{{ openhouse }}",
+        "price": "{{ price }}",
+        "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
+        "property_type": "{{ property_type }}",
+        "sqft": "{{ sqft }}",
+        "property_location": "{{ property_location }}",
+        "ownership": "{{ if ownership == "rental" }} /month{{ endif }}"
+      },
+      {{ /entries:listing}}
+      {{ entries:listing folder="properties/new-york/sale" conditions="streeteasy_status:sold" show_future="true" since="{var:my_date_since}" }}
+      {{ if !no_results }}
+      "{{ slug }}":
+      {
+        "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
+        "datestamp": "{{ datestamp }}",
+        "preview_image":"{{ preview_image }}",
+        "url":"{{ url }}",
+        "streeteasy_status": "{{ streeteasy_status }}",
+        "openhouse": "{{ openhouse }}",
+        "price": "{{ price }}",
+        "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
+        "property_type": "{{ property_type }}",
+        "sqft": "{{ sqft }}",
+        "results": "{{ total_results }}",
+        "property_location": "{{ property_location }}",
+        "ownership": "{{ if ownership == "rental" }} /month{{ endif }}"
+      },
+      {{ endif 	}}
+      {{ /entries:listing}}
+    },
+    {{ entries:listing folder="properties/new-york/rental" conditions="streeteasy_status:!sold" show_future="true" }}
+    {{ if first }}
+    "lease": {
+      {{ endif }}
+      "{{ slug }}":
+      {
+        "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
+        "datestamp": "{{ datestamp }}",
+        "preview_image":"{{ preview_image }}",
+        "url":"{{ url }}",
+        "streeteasy_status": "{{ streeteasy_status }}",
+        "openhouse": "{{ openhouse }}",
+        "price": "{{ price }}",
+        "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
+        "property_type": "{{ property_type }}",
+        "sqft": "{{ sqft }}",
+        "results": "{{ total_results }}",
+        "property_location": "{{ property_location }}",
+        "ownership": "{{ if ownership == "rental" }} /month{{ endif }}"
+      },
+      {{ /entries:listing}}
+      {{ entries:listing folder="properties/new-york/rental" since="{ var:my_date_since }" conditions="streeteasy_status:leased" show_future="true" }}
+      {{ if !no_results }}
+      "{{ slug }}":
+      {
+        "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
+        "datestamp": "{{ datestamp }}",
+        "preview_image":"{{ preview_image }}",
+        "url":"{{ url }}",
+        "streeteasy_status": "{{ streeteasy_status }}",
+        "openhouse": "{{ openhouse }}",
+        "price": "{{ price }}",
+        "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
+        "property_type": "{{ property_type }}",
+        "sqft": "{{ sqft }}",
+        "results": "{{ total_results }}",
+        "property_location": "{{ property_location }}",
+        "ownership": "{{ if ownership == "rental" }} /month{{ endif }}"
+      },
+      {{ endif }}
+      {{ /entries:listing}}
+    }
+  }
+  {{ endif }}
+</script>
+{{ if get:view != "map" }}
+<div id="properties"></div>
+{{ else }}
+<div class="property_nav dark_gray leading properties_grid">
+	<div class="container">
+<!-- 		<div class="rent-or-buy">
+			<ul>
+				<li><a id="buy" class="active">Buy</a></li>
+				<li><a id="rent"> Rent</a></li>
+			</ul>
+		</div> -->
+    <div class='view-type'>
+      <ul class='views'>
+        <li>
+          <a href="{{ url }}"><i class='fa fa-th-large'></i>Grid View</a>
+        </li>
+        <li>
+          <a class="active" href="{{ url }}?view=map" id="map-link"><i class='fa fa-map-marker'></i>Map View</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<section style="padding: 0 !important" class="bg-gray">
+
+<script type="text/javascript">
+
+
+
+function initialize() {
+  var sale_properties = [
+  {{ entries:listing folder="properties/new-york/sale|properties/new-york/rental" conditions="streeteasy_status:!sold"}}
+  {{ if last }}
+  ['{{ title }}', {{ location }}{{ latitude}},{{ longitude }}{{/location}},'{{url}}','{{ preview_image }}','../_themes/main/img/map_marker_green.svg',
+  '{{ if currency == "dollars" }}${{ elseif currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ elseif currency == "none" }}{{ else }}${{ endif }}{{ if streeteasy_type == "rental"}}{{ price|format_number }}/month{{ else }}{{ price|format_number }}{{ endif }}','{{ property_type }}','{{ sqft|format_number }} ft','{{ property_location }}']
+  {{ else }}
+  ['{{ title }}', {{ location }}{{ latitude}},{{ longitude }}{{/location}},'{{url}}','{{ preview_image }}','../_themes/main/img/map_marker_green.svg','{{ if currency == "dollars" }}${{ elseif currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ elseif currency == "none" }}{{ else }}${{ endif }}{{ if streeteasy_type == "rental"}}{{ price|format_number }}/month{{ else }}{{ price|format_number }}{{ endif }}','{{ property_type }}','{{ sqft|format_number }} ft','{{ property_location }}'],
+  {{ endif }}
+  {{ /entries:listing }}
+  ];
+
+  // var rental_properties = [
+  // {{ entries:listing folder="properties/new-york/rental"}}
+  // {{ if last }}
+  // ['{{ title }}', {{ location }}{{ latitude}},{{ longitude }}{{/location}},'{{url}}','{{ preview_image }}','../_themes/main/img/map_marker_green.svg',
+  // '{{ if currency == "dollars" }}${{ elseif currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ elseif currency == "none" }}{{ else }}${{ endif }}{{ if streeteasy_type == "rental"}}{{ price|format_number }}/month{{ else }}{{ price|format_number }}{{ endif }}','{{ property_type }}','{{ sqft|format_number }} ft','{{ property_location }}']
+  // {{ else }}
+  // ['{{ title }}', {{ location }}{{ latitude}},{{ longitude }}{{/location}},'{{url}}','{{ preview_image }}','../_themes/main/img/map_marker_green.svg','{{ if currency == "dollars" }}${{ elseif currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ elseif currency == "none" }}{{ else }}${{ endif }}{{ if streeteasy_type == "rental"}}{{ price|format_number }}/month{{ else }}{{ price|format_number }}{{ endif }}','{{ property_type }}','{{ sqft|format_number }} ft','{{ property_location }}'],
+  // {{ endif }}
+  // {{ /entries:listing }}
+  // ];
+
+  window.map = new google.maps.Map(document.getElementById('map'), {
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    scrollwheel: false,
+    styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+  });
+
+  var buy = $('#buy');
+  var rent = $('#rent');
+  var bounds = new google.maps.LatLngBounds();
+  var infoWindows = [];
+  var infowindow = new google.maps.InfoWindow();
+  var marker = new google.maps.Marker();
+  var saleMarkers = [];
+  var rentalMarkers = [];
+
+  for (i = 0; i < sale_properties.length; i++) {
+
+    var title = sale_properties[i][0];
+    var lat = sale_properties[i][1];
+    var long = sale_properties[i][2];
+    var url = sale_properties[i][3];
+    var image = sale_properties[i][4];
+    var icon = sale_properties[i][5];
+    var price = sale_properties[i][6];
+    var type = sale_properties[i][7];
+    var size = sale_properties[i][8];
+    var location = sale_properties[i][9];
+
+    infoWindows.push(infowindow);
+    saleMarkers.push(marker);
+
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(sale_properties[i][1], sale_properties[i][2]),
+      map: map,
+      icon: sale_properties[i][5],
+    });
+
+    bounds.extend(marker.position);
+
+    google.maps.event.addListener(marker, 'click', (function (marker, i) {
+      return function () {
+        infowindow.setContent(
+        '<a href=' + '"' + sale_properties[i][3] + '"' + 'class=' + '"' + 'property_box map' + '"' + '>' +
+          '<div class="image-wrap">' +
+            '<div class="preview-image" style=' + '"background-image: url(' + sale_properties[i][4] + '">' + 
+            '</div>' +
+          '</div>' +
+          
+          '<div class=' + '"' + 'property_tile_info' + '"' + '>' +
+            '<div class=' + '"' + 'top-info' + '"' + '>' +
+              '<span class=' + '"' + 'prop-title' + '"' + '>' + sale_properties[i][0] + '</span>' +
+              '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
+              '<span class=' + '"' + 'prop-price' + '"' + '>' + sale_properties[i][6] + '</span>' +
+              '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
+              '<span class=' + '"' + 'prop-details' + '"' + '>' + sale_properties[i][7] + '</span>' +
+              '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
+              '<span class=' + '"' + 'prop-details' + '"' + '>' + sale_properties[i][8] + '<sup>2</sup>' + '</span>' +
+              '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
+              '<span class=' + '"' + 'prop-location' + '"' + '>' + sale_properties[i][9] + '</span>' +
+            '</div>' +
+            '<div class=' + '"' + 'bottom-info' + '"' + '>' +
+            '</div>' +
+          '</div>' +
+        '</a>');
+        infowindow.open(map, marker);
+      }
+    })(marker, i));
+
+    google.maps.event.addListener(map, "click", function(event) {
+        for (var i = 0; i < infoWindows.length; i++ ) {
+             infoWindows[i].close();
+        }
+    });
+  }
+
+  // for (i = 0; i < rental_properties.length; i++) {
+
+  //   var title = rental_properties[i][0];
+  //   var lat = rental_properties[i][1];
+  //   var long = rental_properties[i][2];
+  //   var url = rental_properties[i][3];
+  //   var image = rental_properties[i][4];
+  //   var icon = rental_properties[i][5];
+  //   var price = rental_properties[i][6];
+  //   var type = rental_properties[i][7];
+  //   var size = rental_properties[i][8];
+  //   var location = rental_properties[i][9];
+
+  //   infoWindows.push(infowindow);
+  //   rentalMarkers.push(marker);
+
+  //   marker = new google.maps.Marker({
+  //     position: new google.maps.LatLng(rental_properties[i][1], rental_properties[i][2]),
+  //     map: map,
+  //     icon: rental_properties[i][5],
+  //     visible: false
+  //   });
+
+  //   bounds.extend(marker.position);
+
+  //   google.maps.event.addListener(marker, 'click', (function (marker, i) {
+  //     return function () {
+  //       infowindow.setContent(
+  //       '<a href=' + '"' + rental_properties[i][3] + '"' + 'class=' + '"' + 'property_box map' + '"' + '>' +
+  //         '<div class="image-wrap">' +
+  //           '<div class="preview-image" style=' + '"background-image: url(' + rental_properties[i][4] + '">' + 
+  //           '</div>' +
+  //         '</div>' +
+          
+  //         '<div class=' + '"' + 'property_tile_info' + '"' + '>' +
+  //           '<div class=' + '"' + 'top-info' + '"' + '>' +
+  //             '<span class=' + '"' + 'prop-title' + '"' + '>' + rental_properties[i][0] + '</span>' +
+  //             '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
+  //             '<span class=' + '"' + 'prop-price' + '"' + '>' + rental_properties[i][6] + '</span>' +
+  //             '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
+  //             '<span class=' + '"' + 'prop-details' + '"' + '>' + rental_properties[i][7] + '</span>' +
+  //             '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
+  //             '<span class=' + '"' + 'prop-details' + '"' + '>' + rental_properties[i][8] + '<sup>2</sup>' + '</span>' +
+  //             '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
+  //             '<span class=' + '"' + 'prop-location' + '"' + '>' + rental_properties[i][9] + '</span>' +
+  //           '</div>' +
+  //           '<div class=' + '"' + 'bottom-info' + '"' + '>' +
+  //           '</div>' +
+  //         '</div>' +
+  //       '</a>');
+  //       infowindow.open(map, marker);
+  //     }
+  //   })(marker, i));
+
+  //   google.maps.event.addListener(map, "click", function(event) {
+  //       for (var i = 0; i < infoWindows.length; i++ ) {
+  //            infoWindows[i].close();
+  //       }
+  //   });
+  // }
+
+  // buy.click(function() {
+  //   if ($(this).hasClass('active')) {
+
+  //   }
+  //   else {
+  //     $(this).addClass('active');
+  //     rent.removeClass('active');
+  //   }
+  //     for (var i = 0; i < saleMarkers.length; i++ ) {
+  //          saleMarkers[i].setVisible(true);
+  //     }
+  //     for (var i = 0; i < rentalMarkers.length; i++ ) {
+  //          rentalMarkers[i].setVisible(false);
+  //     }
+  //     for (var i = 0; i < infoWindows.length; i++ ) {
+  //          infoWindows[i].close();
+  //     }
+
+  // });
+  // rent.click(function() {
+  //   if ($(this).hasClass('active')) {
+
+  //   }
+  //   else {
+  //     $(this).addClass('active');
+  //     buy.removeClass('active');
+  //   }
+  //     for (var i = 0; i < rentalMarkers.length; i++ ) {
+  //          rentalMarkers[i].setVisible(true);
+  //     }
+  //     for (var i = 0; i < saleMarkers.length; i++ ) {
+  //          saleMarkers[i].setVisible(false);
+  //     }
+  //     for (var i = 0; i < infoWindows.length; i++ ) {
+  //          infoWindows[i].close();
+  //     }
+  // });
+
+  map.fitBounds(bounds);
+
+  var listener = google.maps.event.addListener(map, "idle", function () {
+    // map.setZoom(13);
+    google.maps.event.removeListener(listener);
+  });
+
+}
+
+function loadScript() {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDNoSfsI1ielEAA_2AX1XgZAb8eMaXG6Y4&' + 'callback=initialize';
+  document.body.appendChild(script);
+}
+
+window.onload = loadScript();
+
+</script>
+
+  <div id="map"></div>
+
+</section>
+{{ endif }}
+

@@ -1,0 +1,63 @@
+<div class="blog blog-entry">	
+	<section class="leading">
+		<div class="container">
+
+			<div class="blog-container">
+
+				<div class="blog-left">
+					<ul class="categories">
+						{{ if categories|not_empty }}
+						{{ categories }}
+						<li><a class="blog-header" href="{{ _site_root }}blog/categories/{{ title|lower }}">{{ value }}</a></li>
+						{{ /categories }}
+						{{ else }}
+						<div class="title-holder"></div>
+						{{ endif }}
+					</ul>
+					<h2>{{ title }}</h2>
+					{{ theme:partial src="blog_social" use_context="true" }}
+					<img class="main-image" src="{{ path src="{{ main_image }}"}}">
+					{{ content }}
+				</div>
+				<div class="blog-right">
+					<div class="authors">
+						<div class="blog-header">AUTHORS</div>
+						<ul>
+							{{ relate:author }}
+							<li><a class="author-list" href="{{ _site_root }}blog/authors/{{ title|lower }}">
+								<img class="author-image" src="{{ path src="{{ image }}"}}">
+								{{ title }}
+							</a></li>  
+							{{ /relate:author }}
+						</ul>
+					</div>
+					<div class="blog-header">OTHER NEWS</div>
+					<div class="twitter-feed bg-gray">
+						{{ theme:partial src="twitter" }}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="blog-left">
+				<div class="pagination">
+					{{ entries:next folder="blog" }}
+						{{ if !no_results }}
+							<a href="{{ url }}" class="older">
+							<i class="fa fa-angle-double-left"></i>Previous Post
+							</a>
+						{{ endif }}
+					{{ /entries:next }}
+
+					{{ entries:previous folder="blog" }}
+						{{ if !no_results }}
+							<a href="{{ url }}" class="newer">
+								Next Post<i class="fa fa-angle-double-right"></i>
+							</a>
+						{{ endif }}
+					{{ /entries:previous }}
+				</div>
+			</div>
+		</div>
+	</section>	
+</div>

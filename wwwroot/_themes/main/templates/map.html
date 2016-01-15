@@ -1,0 +1,104 @@
+<script type="text/javascript">
+
+	function initMap() {
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 13,
+			center: {lat: 40.763542, lng: -73.968007}
+		});
+
+		setMarkers(map, locations);
+	}
+	var infos = [];
+	var locations = [
+	{{ entries:listing folder="properties/new-york/rental"}}
+	[
+	'{{ title }}', 
+	{{ location }}
+	{{ latitude}},
+	{{ longitude }}{{/location}},
+	'{{url}}',
+	'{{ preview_image }}'
+	],
+	{{ /entries:listing }}
+	];
+
+
+	function setMarkers(map,locations){
+
+		var marker, i
+
+		for (i = 0; i < locations.length; i++)
+		{  
+
+			var title = locations[i][0];
+			var lat = locations[i][1];
+			var long = locations[i][2];
+			var url = locations[i][3];
+			var image = locations[i][4];
+			var icon = locations[i][5];
+
+
+			latlngset = new google.maps.LatLng(lat, long);
+
+			var marker = new google.maps.Marker({  
+				map: map, 
+				title: title, 
+				position: latlngset,
+				icon: icon  
+			});
+			map.setCenter(marker.getPosition())
+
+
+			var content = 
+				'<a href=' + '"' + url + '"' + 'class=' + '"' + 'property_box' + '"' + '>' +
+					'<div class="image-wrap">' +
+						'<div class="preview-image" style=' + '"background-image: url(' + image + '">' + '</div>' +
+					'</div>' +
+				'</a>';
+
+			var infowindow = new google.maps.InfoWindow();
+
+
+			google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+				return function() {
+
+					/* close the previous info-window */
+					closeInfos();
+
+					infowindow.setContent(content);
+					infowindow.open(map,marker);
+
+					/* keep the handle, in order to close it on next click event */
+					infos[0]=infowindow;
+
+				};
+			})(marker,content,infowindow)); 
+
+		}
+	}
+
+	function closeInfos(){
+
+		if(infos.length > 0){
+
+			/* detach the info-window from the marker ... undocumented in the API docs */
+			infos[0].set("marker", null);
+
+			/* and close it */
+			infos[0].close();
+
+			/* blank the array */
+			infos.length = 0;
+		}
+	}
+
+	function toggleMarkers() {
+		marker.setVisible(false); 
+	}
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNoSfsI1ielEAA_2AX1XgZAb8eMaXG6Y4&callback=initMap"
+async defer></script>
+
+<div id="map"></div>

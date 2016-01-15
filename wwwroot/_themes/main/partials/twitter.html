@@ -1,0 +1,22 @@
+
+
+{{ bluebird screen_name="LeslieJGarfield" count="5" }}
+
+    {{ user }}
+        <div class="follow" style="background-color: #CCCCCC">
+            <a target="_blank" href="https://twitter.com/{{ screen_name }}">
+                <img src="{{ profile_image_url }}" alt="{{ screen_name }} on Twitter">
+                <span>Follow Leslie J. Garfield on Twitter</span>
+            </a>
+        </div>
+    {{ /user }}
+    {{ tweets }}
+        <div class="tweet">
+            <p class="tweet-text">"{{ text }}"</p>
+            <p class="time">
+                <a target="_blank" class="tweet-url"href="{{ tweet_url }}">{{ created_at format="h:ia F jS, Y" }}</a>
+            </p>
+        </div>
+    {{ /tweets }}
+
+{{ /bluebird }}

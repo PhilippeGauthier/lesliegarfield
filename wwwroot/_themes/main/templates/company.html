@@ -1,0 +1,45 @@
+{{ theme:partial src="hero_dark" }}
+<section class="bg-seafoam">
+	<div class="container">
+		<div class="company beliefs">
+			<span class="section-title">OUR BELIEFS</span>
+			<div class="divider"></div>
+			<p class="intro-section">{{ beliefs }}</p>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="company why">
+				<span class="section-title">WHY GARFIELD</span>
+				<div class="divider"></div>
+				{{ why }}
+				{{ why_grid }}
+				<h3>{{ name }}</h3>
+				<p>{{ description }}</p>
+				{{ /why_grid }}
+			</div>
+		</div>
+	</section>
+	<section class="bg-gray">
+		<div class="container">
+			<div class="company inner-content">
+				<span class="section-title">OUR HISTORY</span>
+				<div class="divider"></div>
+				<h3>TOWNHOUSE AND SMALL BUILDING SPECIALISTS SINCE 1972</h3>
+				<div class="divider"></div>
+				{{ history }}
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="company inner-content">
+				<span class="section-title">OUR INTERNATIONAL PARTNER</span>
+				<div class="divider"></div>
+				<div>{{ theme:partial src="svg/beauchamp_logo" }}</div>
+				<div class="divider"></div>
+				<div></div>
+				{{ international }}
+			</div>
+		</div>
+	</section>

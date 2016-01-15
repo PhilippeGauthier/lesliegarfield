@@ -1,0 +1,12 @@
+---
+title: "Don't settle when trying to find your dream home in NYC"
+main_image: /assets/img/blog/Untitled-20151006162904.jpg
+author:
+  - /agents/garfield/alex-yoel
+authors:
+  - Alex Yoel
+categories:
+  - Multi-Unit Properties
+  - Real Estate Investment
+---
+<p>Nobody wants to ‘settle’ when purchasing what will become his or her dream home. Even when buying an un-renovated townhouse as a blank canvas, it’s hard to find a space that perfectly suits your needs. With supply in the city remaining low, you may find yourself tempted to compromise your requirements.  Well I have a thought that, with some creative thinking and a good architect, can seriously expand the pool of properties you have access to.</p><p>Why not buy a multi-unit investment property and take a few floors for yourself?<br></p><p>After thinking this idea through, it seems to me that there are plenty of benefits. Firstly, higher property width becomes more easily attainable. There is certainly a premium for a 25’ wide investment property over one that’s 20’ wide, but the difference is not nearly as drastic as in the townhouse world. On top of that, there are plenty of apartment buildings that get even wider than that!<br></p><p>Second is the investment factor of your purchase. Say you buy a mixed-use building in the middle of the block on a side street – built 25’ x 78’, retail income, a few stabilized tenants on the second and third floors, and two free market floors above. Not only can you create a 4,000 square foot duplex with a roof deck, you can also use the income from the retail and residential tenants to support the work you’re doing. If you’re planning on staying in the space for a long time, chances are that some or all of the rent stabilized and control tenants will have vacated their units by the time you’re ready to leave, adding huge upside for you in the investment over time.<br></p><p>This strategy also gives you access to shop in areas without many townhouses. Where there are 30-40 townhouses on the market on the UWS, there are only about five available in the East Village. So next time you’re considering compromising your personal requirements, just remember that you can tap into the commercial property market to get exactly what you want out of your home.<span></span><br></p>

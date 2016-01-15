@@ -1,0 +1,71 @@
+<div class="property_nav dark_gray">
+	<div class="container">
+		<div class="flex">
+
+			<div>
+				<ul class="rent_or_buy">
+					<li><a href="
+						{{ if get:view == "map" }}{{ url }}?type=buy&&view=map
+						{{ else }}
+						{{ url }}
+						{{ endif }}"
+						{{ if get:type != "rent" }}class="active"{{ endif }}>Buy</a></li>
+					<li><a href="
+						{{ if get:view == "map" }}{{ url }}?type=rent&&view=map
+						{{ else }}
+						{{ url }}?type=rent
+						{{ endif }}" 
+						{{ if get:type == "rent"}}class="active"{{ endif }} >Rent</a></li>
+				</ul>
+
+				<ul class="nav " role="tablist">
+					<li role="presentation" class="dropdown">
+						<a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							All Neighborhoods
+							<span class="caret"></span>
+						</a>
+						<ul id="menu1" class="dropdown-menu" aria-labelledby="drop4">
+						{{ if get:view == "map" }}
+						<li><a href="">foo</a>
+						{{ elseif get:type == "rent" }}
+							<li><a href="#">East Village</a></li>
+							<li><a href="#">Greenwich Village</a></li>
+							<li><a href="#">Harlem</a></li>
+							<li><a href="#">Midtown East</a></li>
+							<li><a href="#">Midtown West</a></li>
+							<li><a href="#">Upper East Side</a></li>
+							<li><a href="#">Upper West Side</a></li>
+						{{ else }}
+						<li><a href="">bar</a></li>
+						{{ endif }}
+						</ul>
+					</li>
+				</ul>
+
+
+			</div>
+
+			<div>
+				<ul class="views">
+					<li><a href="
+						{{ if get:type == "rent" }}{{ url }}?type=rent
+						{{ else }}
+						{{ url }}
+						{{ endif }}" 
+						{{ if get:view != "map" }}class="active"{{ endif }}>
+						<i class="fa fa-th-large"></i> Grid View
+					</a></li>
+					<li><a href="
+						{{ if get:type == "rent" }}{{ url }}?type=rent&&view=map
+						{{ else }}
+						{{ url }}?type=buy&&view=map
+						{{ endif }}" 
+						{{ if get:view == "map"}}class="active"{{ endif }}>
+						<i class="fa fa-map-marker"></i> Map View
+					</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+</div>

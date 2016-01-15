@@ -1,0 +1,55 @@
+<div class="modal fade" id="viewing-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        {{ theme:partial src="svg/magnifying" }}
+      </div>
+
+      <div class="modal-body">
+        <h2>Schedule a Viewing</h2>
+        <h3>Let us know what times work best for you and we'll try our best to make it happen</h3>
+        {{ raven:form formset="property_viewing_requests" attr="class:multi" return="{ _site_root}success_property" }}
+
+        <div class="input-clear">
+          <div class="form">
+            <input class="input" placeholder="First &amp; Last Name" type="text" name="name">
+          </div>
+          <div class="form">
+            <input class="input" placeholder="Email Address" type="text" name="email" >
+          </div>
+          <div class="form">
+            <input class="input" placeholder="Mobile Number" type="text" name="phone_mobile" >
+          </div>
+          <div class="form">
+            <input class="input" placeholder="Office Number" type="text" name="phone_office" >
+          </div>
+          <div class="form">
+            <input class="input" placeholder="Preferred Date 1" type="date" name="date_1" >
+          </div>
+          <div class="form">
+            <input class="input" placeholder="Preferred Time" type="time" name="time_1" >
+          </div>
+          <div class="form">
+            <input class="input" placeholder="Preferred Date 2" type="date" name="date_2" >
+          </div>
+          <div class="form">
+            <input class="input" placeholder="Preferred Time" type="time" name="time_2" >
+          </div>
+          <div class="form-full">
+            <textarea name="message" placeholder="Message">{{ value:message }}</textarea>
+          </div>
+
+          <input type="hidden" name="email_address" 
+            value="{{ relate:agents}}{{ if first }}{{ email }}{{ endif }}{{/relate:agents}}">
+          <input type="hidden" name="listing-address" value="{{ title }}">
+        </div>
+          <div class="form centered">
+            <input type="submit" value="SEND" class="submit btn-garfield">
+          </div>
+        {{ /raven:form }}
+      </div>
+     
+    </div>
+  </div>
+</div>

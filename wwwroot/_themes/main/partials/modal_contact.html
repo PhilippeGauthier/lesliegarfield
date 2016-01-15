@@ -1,0 +1,35 @@
+<div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        {{ theme:partial src="svg/home_valuation" }}
+      </div>
+
+      <div class="modal-body">
+        <h2>More Than Mere Numbers</h2>
+        <h3>Get in touch to make a more informed decision about your property with a Garfield Valuation</h3>
+        {{ raven:form formset="General_Enquiries" }}
+        <div class="input-clear">
+          <div class="form">
+            <input class="input" placeholder="Listing Address" type="text" name="address" value="{{ value:address }}">
+          </div>
+          <div class="form">
+            <input class="input" placeholder="First &amp; Last Name" type="text" name="name" value="{{ value:name }}">
+          </div>
+          <div class="form">
+            <input class="input" placeholder="Phone Number" type="text" name="phone" value="{{ value:phone }}">
+          </div>
+          <div class="form">
+            <input class="input" placeholder="Email Address" type="text" name="email" value="{{ value:email }}">
+          </div>
+        </div>
+        <div class="submit">
+          <input type="submit" value="SEND" class="btn-garfield">
+        </div>
+        {{ /raven:form }}
+      </div>
+     
+    </div>
+  </div>
+</div>

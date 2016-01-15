@@ -1,0 +1,6 @@
+fields:
+	terms:
+		type: redactor
+		display: Terms & Conditions
+	content:
+		hide: true

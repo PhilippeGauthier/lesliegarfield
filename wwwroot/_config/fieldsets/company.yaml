@@ -1,0 +1,41 @@
+title: Company
+
+fields:
+  header: 
+    type: text
+    display: Main Tagline
+  sub_header: 
+    type: textarea
+    display: Sub Tagline
+    height: 100 
+  beliefs:
+    type: textarea
+    display: Beliefs
+    height: 100
+  why:
+    type: redactor
+    display: Why Garfield
+  why_grid:
+    type: grid
+    display: Why Garifled Items
+    fields:
+      name:
+        display: Title
+        type: text
+      description:
+        display: Description
+        type: textarea
+        height: 75
+  history:
+    type: redactor
+    display: History Column 1
+  international_image:
+    type: file
+    display: International Partner Logo
+    destination: assets/img
+    allowed: [jpg,jpeg,png]
+  international:
+    type: redactor
+    display: International Column 1
+  content:
+   hide: true

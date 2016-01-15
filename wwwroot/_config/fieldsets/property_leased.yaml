@@ -1,0 +1,41 @@
+fields:
+  title:
+    type: text
+    display: Property Name
+  property_location:
+    type: suggest
+    create: true
+    max_items: 1
+    display: Neighborhood
+    taxonomy:
+      type: property_location
+      folder: properties/new-york/*
+  streeteasy_status:
+    type: select
+    hide: true
+    display: Status
+    options:
+      - Leased
+  price:
+    type: text
+    display: Lease Price
+    instructions:
+      above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
+  agents:
+    display: Agents
+    type: suggest
+    create: true
+    content:
+      folder: agents/garfield
+      label: title
+      value: url
+  property_type:
+    display: Property Type
+    type: suggest
+    create: true
+    max_items: 1
+    taxonomy:
+      type: property_type
+      folder: properties/new-york/*
+  content:
+    hide: true

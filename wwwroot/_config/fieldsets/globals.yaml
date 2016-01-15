@@ -1,0 +1,41 @@
+hide: true
+
+fields:
+
+  slug:
+    hide: yes
+  content:
+    type: hidden
+
+  address_line1:
+    type: text
+    display: Address Line One
+  address_line2:
+    type: text
+    display: Address Line Two
+  phone:
+    type: text
+    display: Company Phone Number Formatted
+  email_contact:
+    type: text
+    display: Company Contact Email Address
+  email_support:
+    type: text
+    display: Company Support Email Address
+  email_info:
+    type: text
+    display: Company Info Email Address
+  email:
+    type: text
+    display: Company Email Address
+  facebook:
+    type: text
+    display: Company Facebook Address
+  twitter:
+    type: text
+    display: Company Twitter Address
+  instagram:
+    type: text
+    display: Company Instagram Address
+
+  # add your fields here...

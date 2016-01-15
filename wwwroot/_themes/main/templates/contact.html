@@ -1,0 +1,38 @@
+{{ theme:partial src="hero_dark" }}
+<section class="bg-seafoam">
+	<div class="container">
+		<div class="contact">
+
+			<div class="input-clear">
+                {{ raven:form formset="general_enquiries" attr="class:multi" return="{ _site_root}success_general" }}
+                
+                <div class="form">
+                   <input type="text" value="" placeholder="Name*" name="name" class="input">
+               </div>
+               <div class="form">
+                   <input type="email" value="" placeholder="Email Address*" name="email" class="input">
+               </div>
+               <div class="form">
+                   <select name="regarding" value="">
+                    <option value="" disabled selected>What is this regarding?</option>
+                    <option value="general_question">General question</option>
+                    <option value="customer_support">Customer support / feedback</option>
+                    <option value="selling_leasing">Selling / leasing my property</option>
+                    <option value="press">Press</option>
+                </select>
+            </div>
+            <div class="form">
+               <input type="text" value="" placeholder="Phone(optional)" name="phone" class="input">
+           </div>
+           <div class="form-full">
+               <textarea value="" placeholder="Message" name="message"></textarea>
+           </div>
+           <div class="form-half">
+               <input type="submit" value="SEND" name="subscribe" class="btn-garfield">
+           </div>
+
+           {{ /raven:form }}
+       </div>
+   </div>
+</div>
+</section>

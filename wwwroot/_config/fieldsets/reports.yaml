@@ -1,0 +1,28 @@
+fields:
+	header:
+		type: text
+		display: Header
+	sub_header:
+		type: textarea
+		display: Sub Header
+		height: 75
+	reports:
+		type: grid
+		display: Reports
+		fields:
+			report:
+				type: file
+				destination: assets/reports
+				display: Report File
+				width: 25%
+				max_items: 1
+			report_title:
+				type: textarea
+				display: Report Title
+				width: 25%
+			report_date:
+				type: text
+				display: Report Date (example June 2015)
+				width: 25%
+	content:
+		hide: true

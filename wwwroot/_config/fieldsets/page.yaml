@@ -1,0 +1,16 @@
+
+fields:
+  hero_image:
+    display: Hero Image (Optional)
+    type: file
+    destination: assets/img/
+    allowed: [png, gif, jpg, jpeg]
+  header: 
+    type: text
+    display: Main Tagline
+  sub_header: 
+    type: textarea
+    display: Sub Tagline
+    height: 100 
+  content:
+    hide: true

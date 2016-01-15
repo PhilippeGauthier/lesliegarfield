@@ -1,0 +1,39 @@
+{{ if no_results }}
+
+{{ else }}
+	{{ if first }}
+	<div class="recent-transactions">
+	<h3>Rentals</h3>
+	<ul>
+	<li>
+		<span>Property Name</span>
+	</li>
+	<li>
+		<span>Property Type</span>
+	</li>
+	<li>
+		<span>Neighborhood</span>
+	</li>
+	<li>
+		<span>Price</span>
+	</li>
+
+	</ul>
+	{{ endif }}
+	
+	<ul>
+	<li class="transaction-details">{{ title }}</li>
+	<li class="transaction-details">{{ property_type }}</li>
+	<li class="transaction-details">{{ property_location }}</li>
+	<li class="transaction-details">
+	${{ price|format_number }}
+	</li>
+	</ul>
+	{{ if last }}
+	</div>
+	{{ endif }}
+{{ endif }}
+
+
+
+
