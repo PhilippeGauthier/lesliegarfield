@@ -177,60 +177,6 @@
 							<li>Price</li>
 
 
-
-							{{ if build_date|not_empty }}
-							<li>Built</li>
-							{{ endif }}
-
-							{{ if stories|not_empty }}
-							<li>Stories</li>
-							{{ endif }}
-
-							<li>Square Feet</li>
-
-							{{ if units|not_empty }}
-							<li>Units</li>
-							{{ endif }}
-
-							{{ if rooms|not_empty }}
-							<li>Rooms</li>
-							{{ endif }}
-
-							<li>Bedrooms</li>
-
-							<li>Bathrooms</li>
-
-							{{ if powder|not_empty }}
-							<li>Powder Rooms</li>
-							{{ endif }}
-
-							{{ if pet_policy|not_empty }}
-							<li>Pet Policy</li>
-							{{ endif }}
-
-							{{ if furnished|not_empty }}
-							<li>Furnished/Unfurnished</li>
-							{{ endif }}
-
-							{{ if taxes|not_empty }}
-							<li>Annual Taxes</li>
-							{{ endif }}
-
-							{{ if income|not_empty }}
-							<li>Income</li>
-							{{ endif }}
-
-							{{ if expenses|not_empty }}
-							<li>Expenses</li>
-							{{ endif }}
-
-							{{ if common_charges|not_empty }}
-							<li>Common Charges</li>
-							{{ endif }}
-
-							{{ if maintenance|not_empty }}
-							<li>Maintenance</li>
-							{{ endif }}
 						</ul>
 						<ul>
 							<li>{{ if currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ else }}${{ endif }}{{ price|format_number }}{{ if ownership == "rental" }}/month{{ endif }}</li>
