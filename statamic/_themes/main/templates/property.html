@@ -87,7 +87,7 @@
 				</div>
 			</div>
 			<div class="property-subheader">
-				{{ if openhouse || streeteasy_status == "in-contract" || streeteasy_status == "sold"  || streeteasy_status == "temp-off-market"}}
+				{{ if openhouse =="true" || streeteasy_status == "in-contract" || streeteasy_status == "sold"  || streeteasy_status == "temp-off-market"}}
 				<div class="location split">
 					{{ else }}
 					<div class="location">
@@ -98,9 +98,9 @@
 						<span>{{ location_granular }}</span>
 						{{ endif }}
 					</div>
-					{{ if openhouse or streeteasy_status !== "active"}}
+					{{ if openhouse =="true" or streeteasy_status !== "active"}}
 					<div class="open-house">
-						{{ if openhouse }}
+						{{ if openhouse == "true" }}
 						{{ openhouse_grid }}
 						{{ if date|not_empty }}
 						<span class="red"><i class="fa fa-home"></i> {{date format="D, m/j" }}, {{startTime}} - {{ endTime }}</span>
