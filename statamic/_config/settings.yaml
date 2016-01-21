@@ -137,7 +137,7 @@ _environments:
     - '*.io'
 
 # Set to 'true' if you want to log system messages
-_log_enabled: false
+_log_enabled: true
 
 # What's the least-serious level of message you wish to record to the log?
 # Your available options:

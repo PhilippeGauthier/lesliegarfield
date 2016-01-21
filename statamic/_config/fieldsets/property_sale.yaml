@@ -214,7 +214,7 @@ fields:
       folder: properties/*
       type: key_features
   summary_intro:
-    type: textarea
+    type: redactor
     display: Enter the first paragraph of property summary (STREETEASY)
     height: 200
     required: true
