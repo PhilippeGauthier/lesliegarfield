@@ -98,16 +98,21 @@ h1, h2, h3, h4, h5, h6 {
 ///////////////////
 
 #login {
-  background: url('../img/big-blur.jpg') no-repeat center center fixed;
-   -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-color: white;
+  svg {
+    max-width: 280px;
+  }
+  .btn {
+    background-color: #009B77;
+  }
   .logo {
     color: rgba(0,0,0,.3);
-    font-family: "StatamicIcons";
-    font-size: 80px;
-    margin-bottom:25px;
+    background-image: url('../img/logo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 280px;
+    font-size: 0;
+    margin-top: 100px;
     padding-top: 100px;
     text-align: center;
   }
@@ -300,10 +305,6 @@ h1, h2, h3, h4, h5, h6 {
   overflow:hidden;
   .status-block {
     float: left;
-    text-overflow: ellipsis;
-    max-width: 50%;
-    white-space: nowrap;
-    overflow: hidden;
   }
   ul {
     @include reset-list;
@@ -1389,12 +1390,9 @@ code textarea {
   }
   .page-primary {
     float:left;
-    text-overflow: ellipsis;
-    max-width: 50%;
-    white-space: nowrap;
-    overflow: hidden;
   }
   .page-extras {
+    float:right;
     text-align:right;
     a {
       line-height: 50px;
