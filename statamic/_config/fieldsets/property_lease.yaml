@@ -88,7 +88,11 @@ fields:
     type: checkbox
   openhouse:
     display: Open House?
-    type: checkbox
+    type: select
+    options:
+      false: No Openhouse
+      true: Openhouse
+    default: false
   openhouse_grid:
     type: grid
     display: Open House

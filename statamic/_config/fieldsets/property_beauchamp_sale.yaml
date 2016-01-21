@@ -59,6 +59,13 @@ fields:
       sold: Sold
       off-market: Off Market
       temp-off-market: Temporarily Off Market
+  openhouse:
+    display: Open House?
+    type: select
+    options:
+      false: No Openhouse
+      true: Openhouse
+    default: false
   openhouse_grid:
     type: grid
     display: Open House(s)

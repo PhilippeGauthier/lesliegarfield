@@ -24,10 +24,9 @@
 				<span class="prop-location">{{ property_location }}</span>
 			</div>
 			<div class="bottom-info">
-				{{ if openhouse }}
+				{{ if openhouse !="false" }}
 					<div class="red">Open House</div>
-				{{ endif }}
-				{{ if streeteasy_status != "active" }}
+				{{ elseif streeteasy_status != "active" }}
 				<div>
 				{{ if streeteasy_status=="in-contract" }}
 					In Contract
