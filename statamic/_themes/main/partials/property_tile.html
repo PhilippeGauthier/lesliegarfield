@@ -26,7 +26,8 @@
 			<div class="bottom-info">
 				{{ if openhouse|not_empty }}
 					<div class="red">Open House</div>
-				{{ elseif streeteasy_status != "active" }}
+				{{ endif }}
+				{{ if streeteasy_status != "active" }}
 				<div>
 				{{ if streeteasy_status=="in-contract" }}
 					In Contract
