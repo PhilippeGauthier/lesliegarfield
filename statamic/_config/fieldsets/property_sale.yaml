@@ -132,6 +132,7 @@ fields:
       townhouse: Townhouse
       house: House
       condo: Condo
+      condop: Condop
       coop: Co-op
       rental: Rental
       other: Other
