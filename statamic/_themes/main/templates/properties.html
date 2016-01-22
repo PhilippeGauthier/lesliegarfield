@@ -2,7 +2,7 @@
 {{ var:my_date_since }}{{ date_calc start_date="{current_date}" method="subDays" value="30" format="F d, Y" }}{{ /var:my_date_since }}
 
 <script type="text/javascript">
-{{ if get:view != "map" }}
+
   var data = {
     {{ entries:listing folder="properties/new-york/sale" conditions="streeteasy_status:!sold" show_future="true" }}
     {{ if first }}
@@ -88,7 +88,6 @@
       {{ /entries:listing}}
     }
   }
-  {{ endif }}
 </script>
 {{ if get:view != "map" }}
 <div id="properties"></div>
