@@ -132,11 +132,12 @@ fields:
     display: Ownership Type (STREETEASY)
     required: True
     options:
-      rental: Rental
       townhouse: Townhouse
-      condo: Condo
-      coop: Co-op
       house: House
+      condo: Condo
+      condop: Condop
+      coop: Co-op
+      rental: Rental
       other: Other
   plot:
     type: text
