@@ -23,29 +23,29 @@ var reload_page = livereload.changed;
 
 var path = {
   HTML: 'src/default.html',
-  HTML_COPY: 'wwwroot/_themes/main/layouts',
+  HTML_COPY: 'statamic/_themes/main/layouts',
   MINIFIED_OUT: 'main.min.js',
   OUT: 'main.js',
-  DEST: 'wwwroot/_themes/main',
-  DEST_BUILD: 'wwwroot/_themes/main/js',
-  DEST_SRC: 'wwwroot/_themes/main/js',
+  DEST: 'statamic/_themes/main',
+  DEST_BUILD: 'statamic/_themes/main/js',
+  DEST_SRC: 'statamic/_themes/main/js',
   ENTRY_POINT: './src/js/App.js',
   SCSS: 'src/scss/**/*.scss',
   SCSS_ENTRY: 'src/scss/main.scss',
-  SCSS_BUILD: 'wwwroot/_themes/main/css',
+  SCSS_BUILD: 'statamic/_themes/main/css',
   CSS_MINIFIED_OUT: 'main.min.css',
-  ASCENT_IN: 'wwwroot/admin/themes/ascent/scss/',
-  ASCENT_DIST: 'wwwroot/admin/themes/ascent/dist',
-  ASCENT_OUT: 'wwwroot/admin/themes/ascent/css',
-  MKDN_SRC_NEW_YORK: 'wwwroot/_content/1-properties/new-york',
-  MKDN_SRC_INTER: 'wwwroot/_content/1-properties/international',
+  ASCENT_IN: 'statamic/admin/themes/ascent/scss/',
+  ASCENT_DIST: 'statamic/admin/themes/ascent/dist',
+  ASCENT_OUT: 'statamic/admin/themes/ascent/css',
+  MKDN_SRC_NEW_YORK: 'statamic/_content/1-properties/new-york',
+  MKDN_SRC_INTER: 'statamic/_content/1-properties/international',
   MKDN_EXCLUDE: '{/sold,/sold/*.md,/leased,/leased/*.md,/**/page.md}',
   PROP_SALE: '/sale',
   PROP_RENT: '/lease',
-  JSON: 'wwwroot/JSON/'
+  JSON: 'statamic/JSON/'
 };
 
-var mark = ['wwwroot/_content/1-properties/lease/*.md','wwwroot/_content/1-properties/sale/*.md'];
+var mark = ['statamic/_content/1-properties/lease/*.md','statamic/_content/1-properties/sale/*.md'];
 
 // gulp.task('markdown', function(){
 //   gulp.src([path.MKDN_SRC_NEW_YORK + '/**/*.md','!'+ path.MKDN_SRC + path.MKDN_EXCLUDE])

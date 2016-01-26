@@ -42,7 +42,7 @@ var Listing = React.createClass({
     if (listing.streeteasy_status == 'off-market') {
       listing.streeteasy_status = "";
     }
-    if (listing.openhouse == 1) {
+    if (listing.openhouse == "true" ) {
       listing.bottom_info_red = 'Open House';
       listing.bottom_info = "";
     }
