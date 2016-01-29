@@ -85,6 +85,14 @@
 					display: inline-block;
 				}
 			}
+			&.oh-divider {
+				color: $red;
+				display: none;
+				padding: 0 10px;
+				@include breakpoint($medium) {
+					display: inline-block;
+				}
+			}
 		}
 
 	}
