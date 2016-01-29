@@ -11,8 +11,6 @@
 			display: none;
 			@include breakpoint($medium){
 				display: inline-block;
-				position: absolute;
-				right: 0;
 				margin: 0;
 			}
 		}

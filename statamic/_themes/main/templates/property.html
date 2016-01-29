@@ -64,12 +64,12 @@
 		<main>
 			<div class="property-info">
 
-				<div class="location">
-					<span>{{ property_location }}</span>
-					{{ if location_granular|not_empty }}
-					<span class="divider"></span>
-					<span>{{ location_granular }}</span>
-					{{ endif }}
+				<div class="property-top-bar">
+<div class="location-granular"><span>{{ property_location }}</span>
+	{{ if location_granular|not_empty }}
+	<span class="divider"></span>
+	<span>{{ location_granular }}</span>
+	{{ endif }}</div>
 					<div class="social desktop right-align gray">
 						<a href="mailto:?subject={{ title }} - Property Found on lesliegarfield.com&body={{ _site_url }}{{ url }}">
 							<i class="fa fa-envelope fa-lg"></i>

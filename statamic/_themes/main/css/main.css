@@ -5838,11 +5838,23 @@ footer .footer-divider {
     -ms-flex-pack: justify;
     justify-content: space-between; } }
 
-.property-info .location {
+.property-info .property-top-bar {
   position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding-bottom: 5px; }
 
-.property-info .location span {
+.property-info .property-top-bar span {
   font-family: "Copernicus-Medium";
   font-size: 15px;
   color: #404041; }
@@ -8660,8 +8672,6 @@ section.faq {
 @media (min-width: 992px) {
   .social.desktop {
     display: inline-block;
-    position: absolute;
-    right: 0;
     margin: 0; } }
 
 .social.mobile {

@@ -63,8 +63,10 @@
 		}
 
 	}
-	.location {
+	.property-top-bar {
 		position: relative;
+		@include flex-hor;
+		justify-content: space-between;
 		padding-bottom: 5px;
 		span {
 			font-family: $hFontM;
