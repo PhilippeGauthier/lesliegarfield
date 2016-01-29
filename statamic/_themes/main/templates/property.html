@@ -64,10 +64,13 @@
 		<main>
 			<div class="property-info">
 
-				<div class="property-header">
-					<h2>{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}</h2>
-
-					<div class="social right-align gray">
+				<div class="location">
+					<span>{{ property_location }}</span>
+					{{ if location_granular|not_empty }}
+					<span class="divider"></span>
+					<span>{{ location_granular }}</span>
+					{{ endif }}
+					<div class="social desktop right-align gray">
 						<a href="mailto:?subject={{ title }} - Property Found on lesliegarfield.com&body={{ _site_url }}{{ url }}">
 							<i class="fa fa-envelope fa-lg"></i>
 						</a>
@@ -83,38 +86,35 @@
 						data-image="{{ preview_image}}"
 						href="{{ _site_url }}{{ url }}">
 						<i class="fa fa-facebook fa-lg"></i>
-					</a>
-				</div>
-			</div>
-			<div class="property-subheader">
-				{{ if openhouse =="true" || streeteasy_status == "in-contract" || streeteasy_status == "sold"  || streeteasy_status == "temp-off-market"}}
-				<div class="location split">
-					{{ else }}
-					<div class="location">
-						{{ endif }}
-						<span>{{ property_location }}</span>
-						{{ if location_granular|not_empty }}
-						<span class="divider"></span>
-						<span>{{ location_granular }}</span>
-						{{ endif }}
+						</a>
 					</div>
-					{{ if openhouse =="true" or streeteasy_status !== "active"}}
-					<div class="open-house">
-						{{ if openhouse == "true" }}
-						{{ openhouse_grid }}
-						{{ if date|not_empty }}
-						<span class="red"><i class="fa fa-home"></i> {{date format="D, m/j" }}, {{startTime}} - {{ endTime }}</span>
-						{{ else }}
-						<span class="red"><i class="fa fa-home"></i> Enquire for Details</span>
-						{{ endif }}
-						{{ /openhouse_grid }}
-						{{ elseif streeteasy_status != "active" }}
-						<span>{{ if streeteasy_status == "in-contract"}}In Contract{{ elseif streeteasy_status == "sold" }}Sold{{ endif }}</span>
-						{{ endif }}
-					</div>	
-					{{ else }}			
-					{{ endif }}
 				</div>
+				<div class="property-header">
+					<h2>{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}</h2>
+
+
+				</div>
+	
+				{{ if openhouse == "true" or streeteasy_status !== "active" }}
+				<div class="open-house">
+					{{ if openhouse == "true" }}
+					{{ openhouse_grid }}
+					{{ if date|not_empty }}
+					{{ if first }}
+						<span class="red">Open House{{ if total_results > 1 }}s{{ endif }}:</span> <span class="red">{{date format="D, m/j" }}, {{startTime}} - {{ endTime }}</span>
+					{{ else }}
+						<span class="red"> {{date format="D, m/j" }}, {{startTime}} - {{ endTime }}</span>
+					{{ endif }}
+					{{ else }}
+					<span class="red">Open House: Enquire for Details</span>
+					{{ endif }}
+					{{ /openhouse_grid }}
+					{{ elseif streeteasy_status != "active" }}
+					<span>{{ if streeteasy_status == "in-contract"}}In Contract{{ elseif streeteasy_status == "sold" }}Sold{{ endif }}</span>
+					{{ endif }}
+				</div>	
+				{{ endif }}
+				
 
 				<div class="property-carousel">
 					{{ photo_carousel }}
@@ -142,6 +142,7 @@
 							{{ /relate:agents }}
 						</div>
 					</div>
+
 					<div class="dotted"></div>
 					{{ if brochure or floor_plans }}
 
@@ -161,7 +162,25 @@
 					</div>
 					{{ endif }}
 					<div class="dotted"></div>
-
+					<div class="social mobile block center-align gray">
+						<a href="mailto:?subject={{ title }} - Property Found on lesliegarfield.com&body={{ _site_url }}{{ url }}">
+							<i class="fa fa-envelope fa-lg"></i>
+						</a>
+						<a href="https://twitter.com/intent/tweet?url={{ _site_url }}{{ url }}">
+							<i class="fa fa-twitter fa-lg"></i>
+						</a>
+						<a href="javascript:pinIt();">
+							<i class="fa fa-pinterest fa-lg"></i>
+						</a>
+						<a class="fb" 
+						data-title="{{ title }}" 
+						data-desc="Property listed at Leslie Garfield" 
+						data-image="{{ preview_image}}"
+						href="{{ _site_url }}{{ url }}">
+						<i class="fa fa-facebook fa-lg"></i>
+					</a>
+				</div>
+					<div class="dotted"></div>
 					<div class="agent property-schedule">
 						<a data-toggle="modal" data-target="#viewing-modal" href="#" class="btn btn-garfield">Schedule a viewing</a>
 					</div>

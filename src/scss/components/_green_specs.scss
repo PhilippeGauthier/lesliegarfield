@@ -1,5 +1,5 @@
 	.green-specs {
-		padding: 30px;
+		padding: 15px;
 		background-color: $bg-seafoam;
 		@include span(full no-gutter);
 		@include clearfix;
@@ -39,6 +39,7 @@
 			}
 		}
 		@include breakpoint($small) {
+			padding: 30px;
 			.specs {
 				@include span (6 of 12);
 

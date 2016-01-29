@@ -45,6 +45,7 @@
 	margin-bottom: 30px;
 	background-color: #fff;
 	@include clearfix;
+
 	.content {
 		padding-left: 30px;
 		padding-right: 30px;
@@ -62,51 +63,30 @@
 		}
 
 	}
-	.property-subheader {
-		@include clearfix;
-		padding-bottom: 15px;
+	.location {
+		position: relative;
+		padding-bottom: 5px;
 		span {
 			font-family: $hFontM;
 			font-size: 15px;
-			color: $light-font-color;
+			color: $base-font-color;
 		}
-		.location {
-			@include span (full after no-gutter);
-			&.split {
-				@include span (full after no-gutter);
-			}
-		}
-		.open-house {
-			@include span (full);
-			
-			height: 25px;
-			position: relative;
-
-			span {
-				text-align: right;
-				bottom: 0;
-				font-family: $hFontM;
-				font-size: 15px;	
-				padding-top: 4px;
-				color: $modal-text;
-				&.red {
-					color: $red;
+	}
+	.open-house {
+		padding-bottom: 15px;
+		span {
+			bottom: 0;
+			font-size: 14px;	
+			color: $modal-text;
+			&.red {
+				color: $red;
+				display: block;
+				@include breakpoint($medium) {
+					display: inline-block;
 				}
 			}
+		}
 
-		}
-		@include breakpoint($medium) {
-			.location.split {
-				@include span (5 of 9);
-			}
-			.open-house {
-				@include span (last 4 of 9);
-				text-align: right;
-				display: flex;
-				align-items: flex-end;
-				justify-content: flex-end;
-			}
-		}
 	}
 }
 
@@ -156,7 +136,7 @@
 .property-agents {
 	&.aside {
 		@include breakpoint($medium) {
-			margin-top: 145px;
+			margin-top: 165px;
 		}	
 	}
 	color: $header-font-color;

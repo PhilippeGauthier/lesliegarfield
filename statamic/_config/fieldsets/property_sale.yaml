@@ -93,7 +93,7 @@ fields:
   openhouse_grid:
     type: grid
     display: Open House
-    max_rows: 1
+    max_rows: 2
     fields:
       date:
         type: date
