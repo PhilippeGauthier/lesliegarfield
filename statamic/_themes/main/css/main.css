@@ -7402,6 +7402,9 @@ h1 {
 .expander-prev:hover i, .expander-next:hover i {
   color: #009B77; }
 
+.website {
+  display: none; }
+
 .input-clear {
   margin-bottom: 15px; }
 

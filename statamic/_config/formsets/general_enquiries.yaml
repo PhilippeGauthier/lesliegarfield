@@ -22,6 +22,7 @@ allowed:
 # from the POST will squash this submission and send a list of
 # missing fields to your {{ raven:errors }} tagpair
 
+honeypot: website
 
 submission_save_extension: yaml
 
