@@ -64,11 +64,9 @@ $('.carousel_tile_3').slick({
 
 $('.property-carousel').slick({
   infinite: true,
-  speed: 300,
   slidesToShow: 1,
   lazyLoad: 'progressive',
   arrows: true,
-  autoplay: true,
   responsive: [
     {
       breakpoint: 768,
