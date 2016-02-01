@@ -67,7 +67,21 @@ $('.property-carousel').slick({
   speed: 300,
   slidesToShow: 1,
   lazyLoad: 'progressive',
-  arrows: true
+  arrows: true,
+  autoplay: true,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        speed: 500,
+        adaptiveHeight: true,
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false
+      }
+    }
+  ]
 });
 
 $('.quote-slider').slick({

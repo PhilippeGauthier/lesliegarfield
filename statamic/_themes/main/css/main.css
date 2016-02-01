@@ -5779,6 +5779,11 @@ footer .footer-divider {
 .property-page aside {
   display: none; }
 
+.property-page .details-small:before, .property-page .details-small:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 @media (min-width: 768px) {
   .property-page .container {
     padding-left: 15px;
@@ -5798,6 +5803,20 @@ footer .footer-divider {
 
 .property-page .sticky-wrapper aside.stuck .property-agents {
   margin-top: 30px; }
+
+.desktop {
+  display: none; }
+
+@media (min-width: 992px) {
+  .desktop {
+    display: block; } }
+
+.mobile {
+  display: block; }
+
+@media (min-width: 992px) {
+  .mobile {
+    display: none; } }
 
 .property-info {
   padding: 15px;
@@ -5823,20 +5842,16 @@ footer .footer-divider {
   height: 100%;
   margin: 0 10px 0 5px; }
 
+.property-info .property-header h2 {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 10px; }
+
 @media (min-width: 992px) {
-  .property-info .property-header {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-flex-flow: row nowrap;
-    -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between; } }
+  .property-info .property-header h2 {
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 0; } }
 
 .property-info .property-top-bar {
   position: relative;
@@ -5856,16 +5871,24 @@ footer .footer-divider {
 
 .property-info .property-top-bar span {
   font-family: "Copernicus-Medium";
-  font-size: 15px;
+  font-size: 13px;
   color: #404041; }
+
+@media (min-width: 992px) {
+  .property-info .property-top-bar span {
+    font-size: 15px; } }
 
 .property-info .open-house {
   padding-bottom: 15px; }
 
 .property-info .open-house span {
   bottom: 0;
-  font-size: 14px;
+  font-size: 13px;
   color: #CCCCCC; }
+
+@media (min-width: 992px) {
+  .property-info .open-house span {
+    font-size: 14px; } }
 
 .property-info .open-house span.red {
   color: #FF0000;
@@ -5903,15 +5926,8 @@ footer .footer-divider {
     margin-bottom: 30px; } }
 
 .property-carousel {
-  box-sizing: border-box;
   width: 100%;
-  float: left;
   background-color: #F7F7F7; }
-
-.property-carousel:before, .property-carousel:after {
-  content: "";
-  display: table;
-  clear: both; }
 
 .property-carousel img {
   max-height: 246px;
@@ -5925,8 +5941,10 @@ footer .footer-divider {
 .agent-container {
   margin-right: 30px; }
 
-.agent-internal {
-  display: block; }
+.agent-internal:before, .agent-internal:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 @media (min-width: 992px) {
   .agent-internal {
@@ -5938,6 +5956,11 @@ footer .footer-divider {
 @media (min-width: 992px) {
   .property-agents.aside {
     margin-top: 165px; } }
+
+.property-agents:before, .property-agents:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 .property-agents a {
   display: block; }
@@ -6042,6 +6065,11 @@ footer .footer-divider {
 
 .property-agents img:hover {
   border: 2px solid #009B77; }
+
+.property-agents .agent-details:before, .property-agents .agent-details:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 .property-agents .agent-details li {
   padding-left: 5px; }
@@ -6156,15 +6184,19 @@ footer .footer-divider {
     margin-bottom: 30px; } }
 
 .summary {
-  box-sizing: border-box;
   width: 100%;
-  float: left;
-  padding-left: 1.25%;
-  padding-right: 1.25%;
   margin-top: 30px;
   font-family: "Copernicus-Medium";
   font-size: 16px;
   line-height: 26px; }
+
+.summary:before, .summary:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.summary.mobile {
+  margin-top: 15px; }
 
 .summary .small {
   font-family: "Copernicus-Medium";
@@ -6478,9 +6510,7 @@ footer .footer-divider {
 .green-specs {
   padding: 15px;
   background-color: #E9F7F3;
-  box-sizing: border-box;
-  width: 100%;
-  float: left; }
+  width: 100%; }
 
 .green-specs:before, .green-specs:after {
   content: "";

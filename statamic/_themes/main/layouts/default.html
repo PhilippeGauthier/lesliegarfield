@@ -18,9 +18,7 @@
   <meta property="og:postal-code" content="10022" />
   <meta property="og:country-name" content="USA" />
   <title>{{ title }} - {{ _site_name }}</title>
-  <!-- build:css -->
-  <link rel="stylesheet" href="{{ theme:css }}" />
-  <!-- endbuild -->
+  <link rel="stylesheet" href="{{ theme:css src="main.min.css" }}" />
   <link rel="shortcut icon" type="image/ico" href="{{ theme:img src="" }}">
 
 <link rel="apple-touch-icon" sizes="57x57" href="{{ theme:img src="/apple-touch-icon-57x57.png" }}">
@@ -54,8 +52,6 @@
     </div>
     {{ theme:partial src="footer" }}
 
-  <!-- build:js -->
-  <script src="{{ theme:js }}"></script>
-  <!-- endbuild -->
+  <script src="{{ theme:js src="main.min.js" }}"></script>
 </body>
 </html>

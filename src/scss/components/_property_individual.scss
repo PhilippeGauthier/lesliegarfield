@@ -7,7 +7,9 @@
 	aside {
 		display: none;
 	}
-
+	.details-small {
+		@include clearfix;
+	}
 	@include breakpoint($small) {
 
 		.container {
@@ -37,6 +39,19 @@
 	}
 }
 
+	.desktop {
+		display: none;
+		@include breakpoint($medium) {
+			display: block;
+		}
+	}
+	.mobile {
+		display: block;
+		@include breakpoint($medium) {
+			display: none;
+		}
+	}
+
 .property-info {
 	padding: 15px;
 	@include breakpoint($small) {
@@ -57,9 +72,17 @@
 		margin: 0 10px 0 5px;
 	}
 	.property-header {
+		h2 {
+			font-size: 32px;
+			line-height: 40px;
+			margin-bottom: 10px;
+		}
 		@include breakpoint($medium) {
-			@include flex-hor;
-			justify-content: space-between;
+			h2 {
+				font-size: 50px;
+				line-height: 60px;
+				margin-bottom: 0;
+			}
 		}
 
 	}
@@ -70,15 +93,22 @@
 		padding-bottom: 5px;
 		span {
 			font-family: $hFontM;
-			font-size: 15px;
+			font-size: 13px;
 			color: $base-font-color;
+			@include breakpoint($medium) {
+				font-size: 15px;
+			}
 		}
 	}
 	.open-house {
 		padding-bottom: 15px;
+		
 		span {
 			bottom: 0;
-			font-size: 14px;	
+			font-size: 13px;	
+			@include breakpoint($medium) {
+				font-size: 14px;	
+			}
 			color: $modal-text;
 			&.red {
 				color: $red;
@@ -115,9 +145,7 @@
 }
 
 .property-carousel {
-	@include span (full no-gutter);
-	@include clearfix;
-
+	width: 100%;
 	img {
 		max-height: 246px;
 		text-align: center;
@@ -137,7 +165,7 @@
 }
 
 .agent-internal {
-	display: block;
+	@include clearfix;
 	@include breakpoint($medium) {
 		display: none;
 	}
@@ -149,6 +177,7 @@
 			margin-top: 165px;
 		}	
 	}
+	@include clearfix;
 	color: $header-font-color;
 	a {
 		display: block;
@@ -218,6 +247,7 @@
 		}
 	}
 	.agent-details {
+		@include clearfix;
 		li {
 			padding-left: 5px;
 		}
@@ -314,9 +344,13 @@
 }
 
 .summary {
-	@include span(100%);
+	width: 100%;
 	margin-top: 30px;
 	@include hbase($hFontM);
+	@include clearfix;
+	&.mobile {
+		margin-top: 15px;
+	}
 	.small {
 		@include hmin($hFontM);
 		color: darken($modal-text,10%);

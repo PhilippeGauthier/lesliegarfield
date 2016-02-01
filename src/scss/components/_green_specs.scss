@@ -1,7 +1,7 @@
 	.green-specs {
 		padding: 15px;
 		background-color: $bg-seafoam;
-		@include span(full no-gutter);
+		width: 100%;
 		@include clearfix;
 
 		h4 {
