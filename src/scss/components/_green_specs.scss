@@ -3,7 +3,18 @@
 		background-color: $bg-seafoam;
 		width: 100%;
 		@include clearfix;
-
+		&.mobile {
+			display: block;
+			@include breakpoint($medium) {
+				display: none;
+			}
+		}
+		&.desktop {
+			display: none;
+			@include breakpoint($medium) {
+				display: block;
+			}
+		}
 		h4 {
 			margin-top: 0;
 		}

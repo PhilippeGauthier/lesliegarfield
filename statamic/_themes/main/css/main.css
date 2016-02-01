@@ -6517,6 +6517,20 @@ footer .footer-divider {
   display: table;
   clear: both; }
 
+.green-specs.mobile {
+  display: block; }
+
+@media (min-width: 992px) {
+  .green-specs.mobile {
+    display: none; } }
+
+.green-specs.desktop {
+  display: none; }
+
+@media (min-width: 992px) {
+  .green-specs.desktop {
+    display: block; } }
+
 .green-specs h4 {
   margin-top: 0; }
 

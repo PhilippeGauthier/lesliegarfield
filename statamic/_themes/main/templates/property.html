@@ -103,7 +103,7 @@
 					{{ openhouse_grid }}
 					{{ if date|not_empty }}
 					{{ if first }}
-						<span class="red">Open <i class="fa fa-home"></i> -</span> <span class="red">{{date format="l, F jS" }}: {{startTime}} - {{ endTime }}
+						<span class="red">Open <i class="fa fa-home"></i>: </span> <span class="red">{{date format="l, F jS" }}: {{startTime}} - {{ endTime }}
 					{{ else }}
 						</span><span class="oh-divider">|</span><span class="red"> {{date format="l, F jS" }}: {{startTime}} - {{ endTime }}</span>
 					{{ endif }}
@@ -125,7 +125,7 @@
 					</div>
 					{{ /photo_carousel}}
 				</div>
-				<div class="green-specs">
+				<div class="green-specs desktop">
 						<div class="specs">
 							<div class="title">
 								{{ theme:partial src="svg/glasses" }}
@@ -175,7 +175,7 @@
 					{{ openhouse_grid }}
 					{{ if date|not_empty }}
 					{{ if first }}
-						<span class="red">Open <i class="fa fa-home"></i> -</span> <span class="red">{{date format="l, F jS" }}: {{startTime}} - {{ endTime }}</span>
+						<span class="red">Open <i class="fa fa-home"></i>: </span> <span class="red">{{date format="l, F jS" }}: {{startTime}} - {{ endTime }}</span>
 					{{ else }}
 						</span><span class="oh-divider">|</span><span class="red"> {{date format="l, F jS" }}: {{startTime}} - {{ endTime }}</span>
 					{{ endif }}
@@ -193,7 +193,7 @@
 						<a data-toggle="modal" data-target="#viewing-modal" href="#" class="btn btn-garfield">Schedule a viewing</a>
 					</div>
 					<div class="dotted"></div>
-					<div class="green-specs">
+					<div class="green-specs mobile">
 						<div class="specs">
 							<div class="title">
 								{{ theme:partial src="svg/glasses" }}
