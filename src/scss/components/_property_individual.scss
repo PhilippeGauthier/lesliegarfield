@@ -39,18 +39,18 @@
 	}
 }
 
-	.desktop {
-		display: none;
-		@include breakpoint($medium) {
-			display: block;
-		}
-	}
-	.mobile {
+.desktop {
+	display: none;
+	@include breakpoint($medium) {
 		display: block;
-		@include breakpoint($medium) {
-			display: none;
-		}
 	}
+}
+.mobile {
+	display: block;
+	@include breakpoint($medium) {
+		display: none;
+	}
+}
 
 .property-info {
 	padding: 15px;
@@ -184,10 +184,23 @@
 .property-agents {
 	&.aside {
 		margin-top: 145px;
-
+		&.openhouse {
+			margin-top: 185px;
+		}
 	}
-	&.openhouse {
-		margin-top: 185px;
+	&.mobile {
+		display: flex;
+		flex-flow: row wrap;
+		.agent-block {
+			min-width: 50%;
+		}
+
+		.agent-details {
+			margin-left: 10px;
+			@include breakpoint($small) {
+				margin-left: 0;
+			}	
+		}
 	}
 	@include clearfix;
 	color: $header-font-color;
@@ -208,23 +221,19 @@
 		&:last-of-type {
 		 border-bottom: none;
 		}
+		@include flex-hor;
 		@include clearfix;
-		@include breakpoint($small) {		
-			@include span(1 of 2 no-gutter);
-		}
-		
 		@include breakpoint($medium) {
-
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: flex-start;
 			padding-top: 15px;
 			padding-bottom: 15px;
 			border-bottom: 1px dotted $light-font-color;
-			@include flex-vert;
-			align-items: flex-start;
-			@include span(2 of 2 no-gutter);
 		}
 		@include breakpoint($large) {
-			border-bottom: none;
 			@include flex-hor;
+			border-bottom: none;
 			span {
 				margin-bottom: 10px;
 			}
@@ -232,24 +241,34 @@
 				margin-bottom: 5px;
 			}
 		}
-
 	}
 	.agent-image {
 		@include clearfix;
 		text-align: center;
-		@include span(1 of 3 no-gutter clear);
+		max-width: 33%;
 		@include breakpoint($medium) {
 			text-align: left;
 			img {
 				max-width: 100%;
 			}
 		}
-		@include breakpoint($large) {
-			@include span (1 of 3 no-gutter);
-		}
 		
 		padding-right: 10px;
 	}
+	.agent-details {
+		max-width: 66%;
+		li {
+			padding-left: 5px;
+		}
+		@include breakpoint($large) {
+			li {
+				padding-left: 0;
+
+			}
+			margin-left: 0;
+		}
+	}
+
 	img {
 		border-radius: 50%;
 		border: 2px solid $bg-gray;
@@ -258,20 +277,7 @@
 			border: 2px solid $text-green;
 		}
 	}
-	.agent-details {
-		@include clearfix;
-		li {
-			padding-left: 5px;
-		}
-		@include breakpoint($large) {
-			li {
-				padding-left: 0;
-			}
-			margin-left: 0;
-			@include span (last 2 of 3 no-gutter);
-		}
-		
-	}
+
 	li:hover {
 		color: $text-green;
 		a {
@@ -295,6 +301,7 @@
 		width: 20px;
 
 	}
+
 }
 
 .property-downloads {
@@ -386,3 +393,5 @@
 		}
 	}
 }
+
+
