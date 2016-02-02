@@ -226,6 +226,10 @@ postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('
 return false;
 });
 
+if ($(".red-span").length) {
+  $(".property-agents").addClass('openhouse')
+}
+
 // if ($('#mc-embedded-subscribe-form').length) {
 //   $('.subscribe').click(function() {
 //     $("#subscribe").toggle(this.checked);

@@ -77,11 +77,18 @@
 			line-height: 40px;
 			margin-bottom: 10px;
 		}
+		@include breakpoint($small) {
+			h2 {
+				font-size: 40px;
+				line-height: 50px;
+
+			}
+		}
 		@include breakpoint($medium) {
 			h2 {
 				font-size: 50px;
 				line-height: 60px;
-				margin-bottom: 0;
+
 			}
 		}
 
@@ -94,6 +101,7 @@
 		span {
 			font-family: $hFontM;
 			font-size: 12px;
+			line-height: 23px;
 			color: $base-font-color;
 			@include breakpoint($medium) {
 				font-size: 15px;
@@ -105,14 +113,16 @@
 		
 		span {
 			bottom: 0;
-			font-size: 13px;	
+			font-size: 13px;
+			line-height: 20px;	
 			@include breakpoint($medium) {
-				font-size: 14px;	
+				font-size: 14px;
+				line-height: 16px;
 			}
 			color: $modal-text;
 			&.red {
 				color: $red;
-				display: block;
+				display: inline-block;
 				@include breakpoint($medium) {
 					display: inline-block;
 				}
@@ -173,9 +183,11 @@
 
 .property-agents {
 	&.aside {
-		@include breakpoint($medium) {
-			margin-top: 165px;
-		}	
+		margin-top: 145px;
+
+	}
+	&.openhouse {
+		margin-top: 185px;
 	}
 	@include clearfix;
 	color: $header-font-color;

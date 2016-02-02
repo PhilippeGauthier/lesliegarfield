@@ -103,12 +103,12 @@
 					{{ openhouse_grid }}
 					{{ if date|not_empty }}
 					{{ if first }}
-						<span class="red">Open <i class="fa fa-home"></i>: </span> <span class="red">{{date format="l, F jS" }}: {{startTime}} - {{ endTime }}
+						<span class="red red-span">Open <i class="fa fa-home"></i>: </span> <span class="red red-span">{{date format="l, F jS" }}: {{startTime}} - {{ endTime }}
 					{{ else }}
-						</span><span class="oh-divider">|</span><span class="red"> {{date format="l, F jS" }}: {{startTime}} - {{ endTime }}</span>
+						</span><span class="oh-divider">|</span><span class="red red-span"> {{date format="l, F jS" }}: {{startTime}} - {{ endTime }}</span>
 					{{ endif }}
 					{{ else }}
-					<span class="red">Open <i class="fa fa-home"></i>: Enquire for Details</span>
+					<span class="red red-span">Open <i class="fa fa-home"></i>: Enquire for Details</span>
 					{{ endif }}
 					{{ /openhouse_grid }}
 					{{ elseif streeteasy_status != "active" }}
@@ -175,12 +175,12 @@
 					{{ openhouse_grid }}
 					{{ if date|not_empty }}
 					{{ if first }}
-						<span class="red">Open <i class="fa fa-home"></i>: </span> <span class="red">{{date format="l, F jS" }}: {{startTime}} - {{ endTime }}</span>
+						<span class="red red-span">Open <i class="fa fa-home"></i>: </span> <span class="red red-span">{{date format="l, F jS" }}: {{startTime}} - {{ endTime }}</span>
 					{{ else }}
-						</span><span class="oh-divider">|</span><span class="red"> {{date format="l, F jS" }}: {{startTime}} - {{ endTime }}</span>
+						</span><span class="oh-divider">|</span><span class="red red-span"> {{date format="l, F jS" }}: {{startTime}} - {{ endTime }}</span>
 					{{ endif }}
 					{{ else }}
-					<span class="red">Open <i class="fa fa-home"></i>: Enquire for Details</span>
+					<span class="red red-span">Open <i class="fa fa-home"></i>: Enquire for Details</span>
 					{{ endif }}
 					{{ /openhouse_grid }}
 					{{ elseif streeteasy_status != "active" }}

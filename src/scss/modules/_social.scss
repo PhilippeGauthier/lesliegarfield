@@ -52,17 +52,17 @@
 			text-align: center;
 		}
 		&.gray {
-			@include social(32px, $light-font-color);
+			@include social(39px, $light-font-color);
 		}
 		&.light {
-			@include social(32px, $modal-text);
+			@include social(39px, $modal-text);
 		}
 		&.green {
-			@include social(32px, $text-green);
+			@include social(39px, $text-green);
 		}
 		&.footer {
 			text-align: right;
-			@include social(32px, $footer-gray);
+			@include social(39px, $footer-gray);
 			margin-top: 0;
 			margin-bottom: 0;
 			border: none;

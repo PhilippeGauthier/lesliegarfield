@@ -5847,11 +5847,15 @@ footer .footer-divider {
   line-height: 40px;
   margin-bottom: 10px; }
 
+@media (min-width: 768px) {
+  .property-info .property-header h2 {
+    font-size: 40px;
+    line-height: 50px; } }
+
 @media (min-width: 992px) {
   .property-info .property-header h2 {
     font-size: 50px;
-    line-height: 60px;
-    margin-bottom: 0; } }
+    line-height: 60px; } }
 
 .property-info .property-top-bar {
   position: relative;
@@ -5871,7 +5875,8 @@ footer .footer-divider {
 
 .property-info .property-top-bar span {
   font-family: "Copernicus-Medium";
-  font-size: 13px;
+  font-size: 12px;
+  line-height: 23px;
   color: #404041; }
 
 @media (min-width: 992px) {
@@ -5884,15 +5889,17 @@ footer .footer-divider {
 .property-info .open-house span {
   bottom: 0;
   font-size: 13px;
+  line-height: 20px;
   color: #CCCCCC; }
 
 @media (min-width: 992px) {
   .property-info .open-house span {
-    font-size: 14px; } }
+    font-size: 14px;
+    line-height: 16px; } }
 
 .property-info .open-house span.red {
   color: #FF0000;
-  display: block; }
+  display: inline-block; }
 
 @media (min-width: 992px) {
   .property-info .open-house span.red {
@@ -5953,9 +5960,11 @@ footer .footer-divider {
 .property-agents {
   color: #25282A; }
 
-@media (min-width: 992px) {
-  .property-agents.aside {
-    margin-top: 165px; } }
+.property-agents.aside {
+  margin-top: 145px; }
+
+.property-agents.openhouse {
+  margin-top: 185px; }
 
 .property-agents:before, .property-agents:after {
   content: "";
@@ -8764,8 +8773,8 @@ section.faq {
 
 .social.gray a {
   color: #999999;
-  height: 32px;
-  width: 32px;
+  height: 39px;
+  width: 39px;
   border: 1px solid #999999; }
 
 .social.gray a:hover {
@@ -8773,15 +8782,15 @@ section.faq {
   background-color: #999999; }
 
 .social.gray i {
-  line-height: 32px; }
+  line-height: 39px; }
 
 .social.light {
   color: #CCCCCC; }
 
 .social.light a {
   color: #CCCCCC;
-  height: 32px;
-  width: 32px;
+  height: 39px;
+  width: 39px;
   border: 1px solid #CCCCCC; }
 
 .social.light a:hover {
@@ -8789,15 +8798,15 @@ section.faq {
   background-color: #CCCCCC; }
 
 .social.light i {
-  line-height: 32px; }
+  line-height: 39px; }
 
 .social.green {
   color: #009B77; }
 
 .social.green a {
   color: #009B77;
-  height: 32px;
-  width: 32px;
+  height: 39px;
+  width: 39px;
   border: 1px solid #009B77; }
 
 .social.green a:hover {
@@ -8805,7 +8814,7 @@ section.faq {
   background-color: #009B77; }
 
 .social.green i {
-  line-height: 32px; }
+  line-height: 39px; }
 
 .social.footer {
   text-align: right;
@@ -8816,8 +8825,8 @@ section.faq {
 
 .social.footer a {
   color: #999999;
-  height: 32px;
-  width: 32px;
+  height: 39px;
+  width: 39px;
   border: 1px solid #999999; }
 
 .social.footer a:hover {
@@ -8825,7 +8834,7 @@ section.faq {
   background-color: #999999; }
 
 .social.footer i {
-  line-height: 32px; }
+  line-height: 39px; }
 
 .social.footer a {
   background: none;
