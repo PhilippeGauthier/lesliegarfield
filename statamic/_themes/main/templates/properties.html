@@ -120,7 +120,7 @@
 
 function initialize() {
   var sale_properties = [
-  {{ entries:listing folder="properties/new-york/sale|properties/new-york/rental" conditions="streeteasy_status:!sold"}}
+  {{ entries:listing folder="properties/new-york/sale|properties/new-york/rental" conditions="streeteasy_status:!sold,location " }}
   {{ if last }}
   ['{{ title }}', {{ location }}{{ latitude}},{{ longitude }}{{/location}},'{{url}}','{{ preview_image }}','../_themes/main/img/map_marker_green.svg',
   '{{ if currency == "dollars" }}${{ elseif currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ elseif currency == "none" }}{{ else }}${{ endif }}{{ if streeteasy_type == "rental"}}{{ price|format_number }}/month{{ else }}{{ price|format_number }}{{ endif }}','{{ property_type }}','{{ sqft|format_number }} ft','{{ property_location }}']
@@ -129,17 +129,6 @@ function initialize() {
   {{ endif }}
   {{ /entries:listing }}
   ];
-
-  // var rental_properties = [
-  // {{ entries:listing folder="properties/new-york/rental"}}
-  // {{ if last }}
-  // ['{{ title }}', {{ location }}{{ latitude}},{{ longitude }}{{/location}},'{{url}}','{{ preview_image }}','../_themes/main/img/map_marker_green.svg',
-  // '{{ if currency == "dollars" }}${{ elseif currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ elseif currency == "none" }}{{ else }}${{ endif }}{{ if streeteasy_type == "rental"}}{{ price|format_number }}/month{{ else }}{{ price|format_number }}{{ endif }}','{{ property_type }}','{{ sqft|format_number }} ft','{{ property_location }}']
-  // {{ else }}
-  // ['{{ title }}', {{ location }}{{ latitude}},{{ longitude }}{{/location}},'{{url}}','{{ preview_image }}','../_themes/main/img/map_marker_green.svg','{{ if currency == "dollars" }}${{ elseif currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ elseif currency == "none" }}{{ else }}${{ endif }}{{ if streeteasy_type == "rental"}}{{ price|format_number }}/month{{ else }}{{ price|format_number }}{{ endif }}','{{ property_type }}','{{ sqft|format_number }} ft','{{ property_location }}'],
-  // {{ endif }}
-  // {{ /entries:listing }}
-  // ];
 
   window.map = new google.maps.Map(document.getElementById('map'), {
     mapTypeId: google.maps.MapTypeId.ROADMAP,
