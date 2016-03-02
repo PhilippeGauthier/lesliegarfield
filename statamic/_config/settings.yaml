@@ -125,6 +125,7 @@ _environments:
   dev:
     - 'http://localhost*'
     - '*.dev'
+    - '*.statamic'
     - '*.localip'
   staging:
     - 'staging.*.com'

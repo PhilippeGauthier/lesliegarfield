@@ -43,5 +43,12 @@ fields:
     type: text
     display: Map Zoom Level
     default: 15
+  border_coordinates:
+    type: grid
+    display: Neighborhood Coordinates
+    fields:
+      longitude_latitude:
+        type: text
+        display: Longitude / Latitude
   content:
     hide: true
