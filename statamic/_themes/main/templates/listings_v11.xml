@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<listings>
+  <listing>
+    <version>11</version>
+
+    <source></source>
+    <status></status><!-- Active, BackOnMarket, OpenHouse, BrokersOpenHouse, PriceChange, InContract, ApplicationPending, Sold -->
+
+    <address></address>
+    <location></location>
+    <country></country>
+    <city></city>
+    <state></state>
+    <zip></zip>
+
+    <listinglink></listinglink>
+    <maplink></maplink>
+    <morephotoslink></morephotoslink>
+    <buildinglink></buildinglink>
+
+    <listingid></listingid>
+    <headline></headline>
+    <rooms></rooms>
+    <beds></beds>
+    <baths></baths>
+    <squarefootage></squarefootage>
+    <listingtype></listingtype><!-- Sale, Rental -->
+    <propertytype></propertytype><!-- House, Condo, Condop, Co-op, Townhouse, Lot, Commercial, Land, Rental -->
+    <price></price>
+    <maintenance-cc></maintenance-cc>
+    <tax></tax>
+    <percentdown></percentdown>
+    <latitude></latitude>
+    <longitude></longitude>
+    <description></description>
+    <priority></priority><!-- 0-10; lowest priority is 0, highest is 10 -->
+
+    <flags></flags><!-- pipe-separated list: flag1|flag2|flag3 -->
+
+    <openhouses>
+      <openhouse></openhouse>
+      <!-- additional open house dates -->
+    </openhouses>
+
+    <floorplans>
+      <floorplan></floorplan>
+      <!-- additional floor plans -->
+    </floorplans>
+
+    <features>
+      <feature></feature>
+      <!-- additional features -->
+    </features>
+
+    <!-- images in order of importance -->
+    <images>
+      <image></image>
+      <!-- additional images -->
+    </images>
+
+    <agents>
+      <agent>
+        <photourl></photourl>
+        <title></title>
+        <firstname></firstname>
+        <lastname></lastname>
+        <licensedas></licensedas>
+        <officename></officename>
+        <address></address>
+        <phone></phone>
+        <cell></cell>
+        <fax></fax>
+        <email></email>
+        <listingurl></listingurl>
+      </agent>
+      <!-- additional agents -->
+    </agents>
+
+  </listing>
+
+  <!-- additional listings -->
+</listings>

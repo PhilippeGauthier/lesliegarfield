@@ -1,0 +1,257 @@
+<listings>
+{{ entries:listing folder="properties/new-york/sale" conditions="streeteasy_status:active" }}
+<listing>
+	<version>11</version>
+	<source>Leslie J. Garfield</source>
+	<status>{{ streeteasy_status }}</status>
+
+	
+	<address>
+	{{ street_address }}
+	{{ if apartment|not_empty }}, {{ apartment }}{{ endif }}
+	</address>
+	{{ if property_location|not_empty }}
+	<location>{{ property_location }}</location>
+	{{ endif }}
+	<country>USA</country>
+	{{ if city|not_empty }}
+	<city>{{ city }}</city>
+	{{ endif }}
+	{{ if state|not_empty }}
+	<state>{{ state }}</state>
+	{{ endif }}
+	{{ if zip_code|not_empty }}
+	<zip>{{ zip_code }}</zip>
+	{{ endif }}
+
+	<listinglink>{{ _site_url }}{{ permalink }}}}</listinglink>
+
+	<listingid>{{ id }}</listingid>
+	{{ if rooms|not_empty }}
+		<rooms>{{ rooms }}</rooms>
+	{{ endif }}
+	{{ if bedrooms|not_empty }}
+		<beds>{{ bedrooms }}</beds>
+	{{ endif }}
+	{{ if bathrooms|not_empty }}
+		<baths>{{ bathrooms }}</baths>
+	{{ endif }}
+	{{ if sqft|not_empty }}
+		<squarefootage>{{ sqft|format_number }}</squarefootage>
+	{{ endif }}
+
+	<listingtype>Sale</listingtype>
+
+	{{ if ownership|not_empty }}
+		<propertytype>
+		{{ if ownership == "townhouse" }}Townhouse{{ endif }}
+		{{ if ownership == "house" }}House{{ endif }}
+		{{ if ownership == "condo" }}Condo{{ endif }}
+		{{ if ownership == "condop" }}Condop{{ endif }}
+		{{ if ownership == "coop" }}Co-op{{ endif }}
+		{{ if ownership == "rental" }}Rental{{ endif }}
+		</propertytype>
+	{{ endif }}
+	{{ if price|not_empty }}
+		<price>${{ price|format_number }}</price>
+	{{ endif }}
+	{{ if maintenance|not_empty }}
+		<maintenance-cc>{{ maintenance }}</maintenance-cc>
+	{{ endif }}
+	{{ if taxes|not_empty }}
+		<tax>${{ taxes|/:12|round|format_number }}</tax>
+	{{ endif }}
+	{{ location }}
+		<latitude>{{ latitude }}</latitude>
+		<longitude>{{ longitude }}</longitude>
+	{{ /location }}
+	{{ if summary_intro|not_empty }}
+	<description>
+	<![CDATA[
+		{{ summary_intro|striptags }}
+	]]>
+	</description>
+	{{ endif }}
+
+	{{ if openhouse  != "false" }}
+	<openhouses>
+		{{ openhouse_grid }}
+		<openhouse>
+			{{ date format="l, F jS" }} {{ startTime }} - {{ endTime }}
+		</openhouse>
+		{{ /openhouse_grid}}
+	</openhouses>
+	{{ endif }}
+
+	{{ if floor_plans|not_empty }}
+	<floorplans>
+		<floorplan>{{ _site_url }}{{ floor_plans }}</floorplan>
+	</floorplans>
+	{{ endif }}
+
+	{{ if amenities }}
+	<features>
+	{{ amenities }}
+	<feature>{{ value }}</feature>
+	{{/amenities }}
+	{{ if key_features|not_empty }}
+	{{ key_features }}
+	<feature>
+		{{ value }}
+	</feature>
+	{{ /key_features }}
+	{{ endif }}
+	</features>
+	{{ endif }}
+
+	<images>
+		{{ if photo_carousel|not_empty }}
+		{{ photo_carousel }}
+		<image>{{ _site_url }}{{ value }}</image>
+		{{ /photo_carousel }}
+		{{ endif }}
+	</images>
+
+	<agents>
+		{{ relate:agents }}
+		<agent>
+			<photourl>{{ _site_url }}{{ image }}</photourl>
+			<firstname>{{ title }}</firstname>
+			<officename>Leslie J. Garfield</officename>
+			<phone>{{ phone }}</phone>
+			<email>{{ email }}</email>
+			<linstingurl>{{ _site_root }}{{ url }}</linstingurl>
+		</agent>
+		{{ /relate:agents }}
+	</agents>
+</listing>
+{{ /entries:listing }}
+
+{{ entries:listing folder="properties/new-york/rental" conditions="streeteasy_status:active" }}
+<listing>
+	<version>11</version>
+	<source>Leslie J. Garfield</source>
+	<status>{{ streeteasy_status }}</status>
+
+	
+	<address>
+	{{ street_address }}
+	{{ if apartment|not_empty }}, {{ apartment }}{{ endif }}
+	</address>
+	{{ if property_location|not_empty }}
+	<location>{{ property_location }}</location>
+	{{ endif }}
+	<country>USA</country>
+	{{ if city|not_empty }}
+	<city>{{ city }}</city>
+	{{ endif }}
+	{{ if state|not_empty }}
+	<state>{{ state }}</state>
+	{{ endif }}
+	{{ if zip_code|not_empty }}
+	<zip>{{ zip_code }}</zip>
+	{{ endif }}
+
+	<listinglink>{{ _site_url }}{{ permalink }}}}</listinglink>
+
+	<listingid>{{ id }}</listingid>
+	{{ if rooms|not_empty }}
+		<rooms>{{ rooms }}</rooms>
+	{{ endif }}
+	{{ if bedrooms|not_empty }}
+		<beds>{{ bedrooms }}</beds>
+	{{ endif }}
+	{{ if bathrooms|not_empty }}
+		<baths>{{ bathrooms }}</baths>
+	{{ endif }}
+	{{ if sqft|not_empty }}
+		<squarefootage>{{ sqft|format_number }}</squarefootage>
+	{{ endif }}
+
+	<listingtype>Rental</listingtype>
+
+	{{ if ownership|not_empty }}
+		<propertytype>
+		{{ if ownership == "townhouse" }}Townhouse{{ endif }}
+		{{ if ownership == "house" }}House{{ endif }}
+		{{ if ownership == "condo" }}Condo{{ endif }}
+		{{ if ownership == "condop" }}Condop{{ endif }}
+		{{ if ownership == "coop" }}Co-op{{ endif }}
+		{{ if ownership == "rental" }}Rental{{ endif }}
+		</propertytype>
+	{{ endif }}
+	{{ if price|not_empty }}
+		<price>${{ price|format_number }}</price>
+	{{ endif }}
+	{{ if maintenance|not_empty }}
+		<maintenance-cc>{{ maintenance }}</maintenance-cc>
+	{{ endif }}
+	{{ if taxes|not_empty }}
+		<tax>${{ taxes|/:12|round|format_number }}</tax>
+	{{ endif }}
+	{{ location }}
+		<latitude>{{ latitude }}</latitude>
+		<longitude>{{ longitude }}</longitude>
+	{{ /location }}
+	{{ if summary_intro|not_empty }}
+	<description>
+	<![CDATA[
+		{{ summary_intro|striptags }}
+	]]>
+	</description>
+	{{ endif }}
+
+	{{ if openhouse  != "false" }}
+	<openhouses>
+		{{ openhouse_grid }}
+		<openhouse>
+			{{ date format="l, F jS" }} {{ startTime }} - {{ endTime }}
+		</openhouse>
+		{{ /openhouse_grid}}
+	</openhouses>
+	{{ endif }}
+
+	{{ if floor_plans|not_empty }}
+	<floorplans>
+		<floorplan>{{ _site_url }}{{ floor_plans }}</floorplan>
+	</floorplans>
+	{{ endif }}
+
+	{{ if amenities }}
+	<features>
+	{{ amenities }}
+	<feature>{{ value }}</feature>
+	{{/amenities }}
+	{{ if key_features|not_empty }}
+	{{ key_features }}
+	<feature>
+		{{ value }}
+	</feature>
+	{{ /key_features }}
+	{{ endif }}
+	</features>
+	{{ endif }}
+
+	<images>
+		{{ if photo_carousel|not_empty }}
+		{{ photo_carousel }}
+		<image>{{ _site_url }}{{ value }}</image>
+		{{ /photo_carousel }}
+		{{ endif }}
+	</images>
+
+	<agents>
+		{{ relate:agents }}
+		<agent>
+			<photourl>{{ _site_url }}{{ image }}</photourl>
+			<firstname>{{ title }}</firstname>
+			<officename>Leslie J. Garfield</officename>
+			<phone>{{ phone }}</phone>
+			<email>{{ email }}</email>
+			<linstingurl>{{ _site_root }}{{ url }}</linstingurl>
+		</agent>
+		{{ /relate:agents }}
+	</agents>
+</listing>
+{{ /entries:listing }}
+</listings>
