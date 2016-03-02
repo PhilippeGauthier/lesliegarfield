@@ -39,7 +39,7 @@
 			{{ else }}
 			{{ endif }}
 
-			{{ entries:listing folder="properties/new-york/sale|properties/new-york/rental|properties/international/sale|properties/international/rental" conditions="agents:{url}, streeteasy_status:!sold" show_future="true" }}
+			{{ entries:listing folder="properties/new-york/sale|properties/new-york/rental|properties/international/sale|properties/international/rental" conditions="agents:{url}, streeteasy_status:!sold" show_future="true" sort_by="price" sort_dir="desc" }}
 			{{ if no_results }}
 			{{ else }}
 			{{ if first }}
