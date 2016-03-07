@@ -37,7 +37,7 @@
 		<baths>{{ bathrooms }}</baths>
 	{{ endif }}
 	{{ if sqft|not_empty }}
-		<squarefootage>{{ sqft|format_number }}</squarefootage>
+		<squarefootage>{{ sqft }}</squarefootage>
 	{{ endif }}
 
 	<listingtype>Sale</listingtype>
@@ -53,13 +53,13 @@
 		</propertytype>
 	{{ endif }}
 	{{ if price|not_empty }}
-		<price>${{ price|format_number }}</price>
+		<price>{{ price }}</price>
 	{{ endif }}
 	{{ if maintenance|not_empty }}
 		<maintenance-cc>{{ maintenance }}</maintenance-cc>
 	{{ endif }}
 	{{ if taxes|not_empty }}
-		<tax>${{ taxes|/:12|round|format_number }}</tax>
+		<tax>{{ taxes|/:12|round }}</tax>
 	{{ endif }}
 	{{ location }}
 		<latitude>{{ latitude }}</latitude>
@@ -165,7 +165,7 @@
 		<baths>{{ bathrooms }}</baths>
 	{{ endif }}
 	{{ if sqft|not_empty }}
-		<squarefootage>{{ sqft|format_number }}</squarefootage>
+		<squarefootage>{{ sqft }}</squarefootage>
 	{{ endif }}
 
 	<listingtype>Rental</listingtype>
@@ -181,13 +181,13 @@
 		</propertytype>
 	{{ endif }}
 	{{ if price|not_empty }}
-		<price>${{ price|format_number }}</price>
+		<price>{{ price }}</price>
 	{{ endif }}
 	{{ if maintenance|not_empty }}
 		<maintenance-cc>{{ maintenance }}</maintenance-cc>
 	{{ endif }}
 	{{ if taxes|not_empty }}
-		<tax>${{ taxes|/:12|round|format_number }}</tax>
+		<tax>{{ taxes|/:12|round }}</tax>
 	{{ endif }}
 	{{ location }}
 		<latitude>{{ latitude }}</latitude>
