@@ -1,15 +1,19 @@
+
+
 <listings>
 {{ entries:listing folder="properties/new-york/sale" conditions="streeteasy_status:active" }}
 <listing>
-	<version>11</version>
+	<version>12</version>
 	<source>Leslie J. Garfield</source>
-	<status>{{ streeteasy_status }}</status>
+	<status>{{ if openhouse  != "false" }}OpenHouse{{ else }}Active{{ endif }}</status>
 
 	
 	<address>
 	{{ street_address }}
-	{{ if apartment|not_empty }}, {{ apartment }}{{ endif }}
 	</address>
+	{{ if apartment|not_empty }}
+	<unit>{{ apartment }}</unit>
+	{{ endif }}
 	{{ if property_location|not_empty }}
 	<location>{{ property_location }}</location>
 	{{ endif }}
@@ -116,11 +120,11 @@
 		{{ relate:agents }}
 		<agent>
 			<photourl>{{ _site_url }}{{ image }}</photourl>
-			<firstname>{{ title }}</firstname>
+			<fullname>{{ title }}</fullname>
 			<officename>Leslie J. Garfield</officename>
 			<phone>{{ phone }}</phone>
 			<email>{{ email }}</email>
-			<linstingurl>{{ permalink }}</linstingurl>
+			<listingurl>{{ permalink }}</listingurl>
 		</agent>
 		{{ /relate:agents }}
 	</agents>
@@ -129,15 +133,15 @@
 
 {{ entries:listing folder="properties/new-york/rental" conditions="streeteasy_status:active" }}
 <listing>
-	<version>11</version>
+	<version>12</version>
 	<source>Leslie J. Garfield</source>
-	<status>{{ streeteasy_status }}</status>
-
-	
+	<status>{{ if openhouse  != "false" }}OpenHouse{{ else }}Active{{ endif }}</status>
 	<address>
 	{{ street_address }}
-	{{ if apartment|not_empty }}, {{ apartment }}{{ endif }}
 	</address>
+	{{ if apartment|not_empty }}
+	<unit>{{ apartment }}</unit>
+	{{ endif }}
 	{{ if property_location|not_empty }}
 	<location>{{ property_location }}</location>
 	{{ endif }}
@@ -244,11 +248,11 @@
 		{{ relate:agents }}
 		<agent>
 			<photourl>{{ _site_url }}{{ image }}</photourl>
-			<firstname>{{ title }}</firstname>
+			<fullname>{{ title }}</fullname>
 			<officename>Leslie J. Garfield</officename>
 			<phone>{{ phone }}</phone>
 			<email>{{ email }}</email>
-			<linstingurl>{{ permalink }}</linstingurl>
+			<listingurl>{{ permalink }}</listingurl>
 		</agent>
 		{{ /relate:agents }}
 	</agents>
