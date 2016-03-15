@@ -23,7 +23,7 @@
 								<div class="divider"></div>
 								{{ theme:partial src="blog_social" use_context="true" }}
 								<div class="truncated">
-									{{ content|truncate:100 }}
+									{{ content|truncate:100|strip_tags }}
 									<a class="read-more" href="{{ url }}">Read More</a>
 								</div>
 							</div>
