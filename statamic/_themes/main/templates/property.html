@@ -150,6 +150,23 @@
 							</div>
 							
 							<ul>
+								{{ if keyfeature_order }}
+
+								{{ key_features }}
+								<li>{{ value }}</li>
+								{{ /key_features }}
+
+								{{ if amenities }}
+								{{ amenities }}
+								{{ if value =="washerDryer" }}
+								<li>Washer / Dryer</li>
+								{{ else }}
+								<li>{{ value|ucfirst }}</li>
+								{{ endif }}
+								{{ /amenities }}
+								{{ endif }}
+
+								{{ else }}
 
 								{{ if amenities }}
 								{{ amenities }}
@@ -164,6 +181,8 @@
 								{{ key_features }}
 								<li>{{ value }}</li>
 								{{ /key_features }}
+
+								{{ endif }}
 
 							</ul>
 						</div>
@@ -237,10 +256,10 @@
 						</div>
 					</div>
 				<div class="summary mobile">
-					{{ summary_intro }}
+					{{ summary_intro|striptags:o }}
 					{{ if summary_full|not_empty }}
 					<div style="display: none">
-						{{ summary_full }}
+						{{ summary_full|striptags:o }}
 					</div>
 					<a class="read-more-expander expander-prev block" href=""><i  class="fa fa-plus-circle green"></i><span>Read More</span></a>
 					{{ endif }}
@@ -308,10 +327,10 @@
 
 				
 				<div class="summary desktop">
-					{{ summary_intro }}
+					{{ summary_intro|striptags:o }}
 					{{ if summary_full|not_empty }}
 					<div style="display: none">
-						{{ summary_full }}
+						{{ summary_full|striptags:o }}
 					</div>
 					<a class="read-more-expander expander-prev block" href=""><i  class="fa fa-plus-circle green"></i><span>Read More</span></a>
 					{{ endif }}

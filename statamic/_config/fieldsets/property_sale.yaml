@@ -209,12 +209,15 @@ fields:
       pool: Pool
       storage: Storage
       washerDryer: Washer / Dryer
+  keyfeature_order:
+    type: checkbox
+    display: Order Key Features (other) Ahead of Key Features
   key_features:
     display: Key Features (Other)
     instructions: Maximum of Six Items
     type: suggest
     create: true
-    max_items: 6
+    max_items: 10
     taxonomy:
       folder: properties/*
       type: key_features

@@ -12,7 +12,7 @@
 		<a id="description" class="secondary-nav-link"></a>
 		<div class="container large-body">
 			<div class="section-title">DESCRIPTION</div>
-			<p class="intro-section">{{ description }}</p>
+			<p class="intro-section">{{ description|striptags:o }}</p>
 		</div>
 	</section>
 	<section class="neighborhood bg-gray">
@@ -29,7 +29,7 @@
 			<div class="section-title">BY THE NUMBERS</div>
 			<div class="grid numbers">
 				<div class="grid-6 full">
-					<h1>{{ left }}%</h1>
+					<h1>{{ left|striptags:o }}%</h1>
 					<span class="price-descriptor">RISE IN PROPERTY PRICES IN THE LAST FIVE YEARS</span>
 					{{ theme:partial src="svg/graph" }}
 					<div class="divider"></div>

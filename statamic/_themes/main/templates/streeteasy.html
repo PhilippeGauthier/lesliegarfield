@@ -65,7 +65,7 @@
 		{{ if summary_intro|not_empty }}
 		<description>
 		<![CDATA[
-			{{ summary_intro }}
+			{{ summary_intro|striptags:o }}
 			{{ if summary_full }}
 			{{ summary_full }}
 			{{ endif }}
@@ -78,18 +78,39 @@
 		{{ if build_date|not_empty }}
 			<built>{{ build_date }}</built>
 		{{ endif }}
-		{{ if amenities }}
+		
 		<amenities>
-		{{ amenities }}
-		<{{ value }} />
-		{{/amenities }}
+		{{ if keyfeature_order }}
+
 		{{ if key_features|not_empty }}
 		<other>
 		{{ key_features|list }}
 		</other>
 		{{ endif }}
-		</amenities>
+
+		{{ if amenities }}
+		{{ amenities }}
+		<{{ value }} />
+		{{/amenities }}
 		{{ endif }}
+
+		{{ else }}
+
+		{{ if amenities }}
+		{{ amenities }}
+		<{{ value }} />
+		{{/amenities }}
+		{{ endif }}
+
+		{{ if key_features|not_empty }}
+		<other>
+		{{ key_features|list }}
+		</other>
+		{{ endif }}		
+
+		{{ endif }}
+		</amenities>
+		
 	</details>
 	{{ if openhouse  != "false" }}
 	<openHouses>
@@ -201,7 +222,7 @@
 		{{ if summary_intro|not_empty }}
 		<description>
 		<![CDATA[
-			{{ summary_intro }}
+			{{ summary_intro|striptags:o }}
 			{{ if summary_full }}
 			{{ summary_full }}
 			{{ endif }}
@@ -214,18 +235,41 @@
 		{{ if build_date|not_empty }}
 			<built>{{ build_date }}</built>
 		{{ endif }}
-		{{ if amenities }}
+
+		
 		<amenities>
-		{{ amenities }}
-		<{{ value }} />
-		{{/amenities }}
+		{{ if keyfeature_order }}
+
 		{{ if key_features|not_empty }}
 		<other>
 		{{ key_features|list }}
 		</other>
 		{{ endif }}
-		</amenities>
+
+		{{ if amenities }}
+		{{ amenities }}
+		<{{ value }} />
+		{{/amenities }}
 		{{ endif }}
+
+		{{ else }}
+
+		{{ if amenities }}
+		{{ amenities }}
+		<{{ value }} />
+		{{/amenities }}
+		{{ endif }}
+
+		{{ if key_features|not_empty }}
+		<other>
+		{{ key_features|list }}
+		</other>
+		{{ endif }}		
+
+		{{ endif }}
+		</amenities>
+		
+
 	</details>
 	{{ if openhouse }}
 	<openHouses>
