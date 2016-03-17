@@ -159,7 +159,7 @@ $fontHuge: 70px;
 @mixin hlarge {
     font-family: $hFontMI;
     font-size: $fontLarge;
-    line-height: 1.2*$fontLarge;
+    line-height: 1.35*$fontLarge;
 }
 
 @mixin hlmedium ($font) {

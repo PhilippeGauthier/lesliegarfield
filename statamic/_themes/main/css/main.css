@@ -7136,7 +7136,7 @@ footer .footer-divider {
 .blog .preview .blog-title, .blog .blog.blog-entry .blog-title {
   font-family: "Copernicus-MediumItalic";
   font-size: 28px;
-  line-height: 33.6px;
+  line-height: 37.8px;
   text-decoration: none; }
 
 .blog .read-more {
@@ -8063,7 +8063,7 @@ input.radio, select.radio {
 .neighborhood-tile .neighborhood-title {
   font-family: "Copernicus-MediumItalic";
   font-size: 28px;
-  line-height: 33.6px;
+  line-height: 37.8px;
   margin-bottom: 60px;
   margin-top: 10px; }
 
@@ -8672,7 +8672,7 @@ section.faq {
   margin-bottom: .5em;
   font-family: "Copernicus-MediumItalic";
   font-size: 28px;
-  line-height: 33.6px; }
+  line-height: 37.8px; }
 
 @media (min-width: 768px) {
   .featured h3 {
