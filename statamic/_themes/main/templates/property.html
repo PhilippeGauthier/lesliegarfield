@@ -150,24 +150,7 @@
 							</div>
 							
 							<ul>
-								{{ if keyfeature_order }}
-
-								{{ key_features }}
-								<li>{{ value }}</li>
-								{{ /key_features }}
-
-								{{ if amenities }}
-								{{ amenities }}
-								{{ if value =="washerDryer" }}
-								<li>Washer / Dryer</li>
-								{{ else }}
-								<li>{{ value|ucfirst }}</li>
-								{{ endif }}
-								{{ /amenities }}
-								{{ endif }}
-
-								{{ else }}
-
+							
 								{{ if amenities }}
 								{{ amenities }}
 								{{ if value =="washerDryer" }}
@@ -181,8 +164,6 @@
 								{{ key_features }}
 								<li>{{ value }}</li>
 								{{ /key_features }}
-
-								{{ endif }}
 
 							</ul>
 						</div>
