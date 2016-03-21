@@ -110,7 +110,12 @@
 	}
 	.open-house {
 		padding-bottom: 15px;
-		
+		.o-h-span {
+			display: none;
+			&.display {
+				display: inline-block;
+			}
+		}
 		span {
 			bottom: 0;
 			font-size: 13px;
@@ -123,16 +128,15 @@
 			&.red {
 				color: $red;
 				display: inline-block;
-				@include breakpoint($medium) {
-					display: inline-block;
-				}
 			}
 			&.oh-divider {
 				color: $red;
 				display: none;
 				padding: 0 10px;
 				@include breakpoint($medium) {
-					display: inline-block;
+					&.display {
+						display: inline-block;
+					}
 				}
 			}
 		}

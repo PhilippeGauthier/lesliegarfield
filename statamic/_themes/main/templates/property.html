@@ -1,3 +1,5 @@
+{{ var:open_house_date }}{{ date_calc start_date="{current_date}" }}{{ /var:open_house_date }}
+
 <section class="leading property-page bg-gray">
 	<div class="container">
 
@@ -95,25 +97,30 @@
 				<div class="property-header">
 					<h2>{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}</h2>
 
-
 				</div>
 	
 				{{ if openhouse == "true" or streeteasy_status !== "active" }}
 				<div class="open-house desktop">
+
 					{{ if openhouse == "true" }}
-					{{ openhouse_grid }}
-					{{ if date|not_empty }}
-					{{ if first }}
-						<span class="red red-span">Open <i class="fa fa-home"></i>: </span> <span class="red red-span">{{date format="l, F jS" }}: {{startTime}} - {{ endTime }}
-					{{ else }}
-						</span><span class="oh-divider">|</span><span class="red red-span"> {{date format="l, F jS" }}: {{startTime}} - {{ endTime }}</span>
-					{{ endif }}
-					{{ else }}
-					<span class="red red-span">Open <i class="fa fa-home"></i>: Enquire for Details</span>
-					{{ endif }}
-					{{ /openhouse_grid }}
+						{{ openhouse_grid }}
+							 
+							{{ if first && date|in_future }}
+							
+								<span class="red red-span" id="first-o-h">Open <i class="fa fa-home"></i>: </span> <span class="red red-span">{{date format="l, F jS" }}: {{ startTime }} - {{ endTime }}</span>
+
+							{{ elseif last && date|in_future }}
+								<span class="oh-divider">|</span>
+								<div class="o-h-span display" id="second">
+									<span class="red red-span">Open <i class="fa fa-home"></i>: </span>
+								</div>
+								<span class="red red-span"> {{date format="l, F jS" }}: {{ startTime }} - {{ endTime }}</span>
+
+							{{ endif }}
+							
+						{{ /openhouse_grid }}
 					{{ elseif streeteasy_status != "active" }}
-					<span>{{ if streeteasy_status == "in-contract"}}In Contract{{ elseif streeteasy_status == "sold" }}Sold{{ endif }}</span>
+						<span>{{ if streeteasy_status == "in-contract"}}In Contract{{ elseif streeteasy_status == "sold" }}Sold{{ endif }}</span>
 					{{ endif }}
 				</div>	
 				{{ endif }}
@@ -151,7 +158,6 @@
 							
 							<ul>
 							
-								{{ if amenities }}
 								{{ amenities }}
 								{{ if value =="washerDryer" }}
 								<li>Washer / Dryer</li>
@@ -159,7 +165,7 @@
 								<li>{{ value|ucfirst }}</li>
 								{{ endif }}
 								{{ /amenities }}
-								{{ endif }}
+								
 								
 								{{ key_features }}
 								<li>{{ value }}</li>
@@ -173,17 +179,22 @@
 				<div class="open-house mobile">
 				
 					{{ if openhouse == "true" }}
-					{{ openhouse_grid }}
-					{{ if date|not_empty }}
-					{{ if first }}
-						<span class="red red-span">Open <i class="fa fa-home"></i>: </span> <span class="red red-span">{{date format="l, F jS" }}: {{startTime}} - {{ endTime }}</span>
-					{{ else }}
-						</span><span class="oh-divider">|</span><span class="red red-span"> {{date format="l, F jS" }}: {{startTime}} - {{ endTime }}</span>
-					{{ endif }}
-					{{ else }}
-					<span class="red red-span">Open <i class="fa fa-home"></i>: Enquire for Details</span>
-					{{ endif }}
-					{{ /openhouse_grid }}
+						{{ openhouse_grid }}
+							 
+							{{ if first && date|in_future }}
+							
+								<span class="red red-span" id="first-o-h">Open <i class="fa fa-home"></i>: </span> <span class="red red-span">{{date format="l, F jS" }}: {{ startTime }} - {{ endTime }}</span>
+
+							{{ elseif last && date|in_future }}
+								<span class="oh-divider">|</span>
+								<div class="o-h-span display" id="second-o-h">
+									<span class="red red-span">Open <i class="fa fa-home"></i>: </span>
+								</div>
+								<span class="red red-span"> {{date format="l, F jS" }}: {{ startTime }} - {{ endTime }}</span>
+
+							{{ endif }}
+							
+						{{ /openhouse_grid }}
 					{{ elseif streeteasy_status != "active" }}
 					<span>{{ if streeteasy_status == "in-contract"}}In Contract{{ elseif streeteasy_status == "sold" }}Sold{{ endif }}</span>
 					{{ endif }}
@@ -219,7 +230,6 @@
 							
 							<ul>
 
-								{{ if amenities }}
 								{{ amenities }}
 								{{ if value =="washerDryer" }}
 								<li>Washer / Dryer</li>
@@ -227,7 +237,6 @@
 								<li>{{ value|ucfirst }}</li>
 								{{ endif }}
 								{{ /amenities }}
-								{{ endif }}
 								
 								{{ key_features }}
 								<li>{{ value }}</li>

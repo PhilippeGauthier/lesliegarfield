@@ -115,6 +115,7 @@
 	{{ if openhouse  != "false" }}
 	<openHouses>
 		{{ openhouse_grid }}
+		{{ if date|in_future }}
 		<openHouse>
 			<startsAt>{{ date }} {{ startTime }}</startsAt>
 			<endsAt>{{ date }} {{ endTime }}</endsAt>
@@ -122,6 +123,7 @@
 			<apptOnly />
 			{{ endif }}
 		</openHouse>
+		{{ endif }}
 		{{ /openhouse_grid}}
 	</openHouses>
 	{{ endif }}

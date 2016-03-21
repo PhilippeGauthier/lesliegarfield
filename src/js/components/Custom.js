@@ -1,13 +1,16 @@
 $ = require("jquery");
 jQuery = require('jquery');
 
-var properties = $('#properties');
-var backgroundGray = $('.bg-gray');
-var pageWrap = $('.page-wrap');
+var firstOpenHouse = $('#first-o-h');
+var secondOpenHouse = $('#second-o-h')
+var openHouseDivider = $('.oh-divider');
+var openHouseSpan = $('.o-h-span')
 
-// if (properties.length > 0 || backgroundGray.length > 0) {
-// 		pageWrap.addClass('bg-gray');
-// }
+if (firstOpenHouse.length > 0 ) {
+		openHouseDivider.addClass('display');
+    secondOpenHouse.removeClass('display');
+}
+
 
 $(".report-expander").click(function() {
   

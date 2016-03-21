@@ -5886,6 +5886,12 @@ footer .footer-divider {
 .property-info .open-house {
   padding-bottom: 15px; }
 
+.property-info .open-house .o-h-span {
+  display: none; }
+
+.property-info .open-house .o-h-span.display {
+  display: inline-block; }
+
 .property-info .open-house span {
   bottom: 0;
   font-size: 13px;
@@ -5901,17 +5907,13 @@ footer .footer-divider {
   color: #FF0000;
   display: inline-block; }
 
-@media (min-width: 992px) {
-  .property-info .open-house span.red {
-    display: inline-block; } }
-
 .property-info .open-house span.oh-divider {
   color: #FF0000;
   display: none;
   padding: 0 10px; }
 
 @media (min-width: 992px) {
-  .property-info .open-house span.oh-divider {
+  .property-info .open-house span.oh-divider.display {
     display: inline-block; } }
 
 .dotted {
