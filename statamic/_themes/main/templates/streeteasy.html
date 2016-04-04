@@ -33,7 +33,7 @@
 			<mlsId>{{ mlsId }}</mlsId>
 		{{ endif }}
 		{{ if price|not_empty }}
-			<price>{{ price }}</price>
+			<price>{{ price|no_commas }}</price>
 		{{ endif }}
 		{{ if maintenance|not_empty }}
 			<maintenance>{{ maintenance }}</maintenance>
@@ -57,7 +57,7 @@
 			<totalrooms>{{ rooms }}</totalrooms>
 		{{ endif }}
 		{{ if sqft|not_empty }}
-			<squareFeet>{{ sqft|format_number }}</squareFeet>
+			<squareFeet>{{ sqft|no_commas }}</squareFeet>
 		{{ endif }}
 		{{ if listedOn|not_empty }}
 			<listedOn>{{ listedOn }}</listedOn>
@@ -192,7 +192,7 @@
 			<mlsId>{{ mlsId }}</mlsId>
 		{{ endif }}
 		{{ if price|not_empty }}
-			<price>{{ price }}</price>
+			<price>{{ price|no_commas }}</price>
 		{{ endif }}
 		{{ if maintenance|not_empty }}
 			<maintenance>{{ maintenance }}</maintenance>
@@ -204,7 +204,7 @@
 			<exclusive>{{ exclusive }}</exclusive>
 		{{ endif }}
 		{{ if taxes|not_empty }}
-			<taxes>{{ taxes }}</taxes>
+			<taxes>{{ taxes|no_commas }}</taxes>
 		{{ endif }}
 		{{ if bedrooms|not_empty }}
 			<bedrooms>{{ bedrooms }}</bedrooms>
@@ -216,7 +216,7 @@
 			<totalrooms>{{ rooms }}</totalrooms>
 		{{ endif }}
 		{{ if sqft|not_empty }}
-			<squareFeet>{{ sqft|format_number }}</squareFeet>
+			<squareFeet>{{ sqft|no_commas }}</squareFeet>
 		{{ endif }}
 		{{ if listedOn|not_empty }}
 			<listedOn>{{ listedOn }}</listedOn>

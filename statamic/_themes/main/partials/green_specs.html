@@ -72,7 +72,7 @@
 	{{ endif }}
 </ul>
 <ul>
-	<li>{{ if currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ else }}${{ endif }}{{ price|format_number }}{{ if ownership == "rental" }}/month{{ endif }}</li>
+	<li>{{ if currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ else }}${{ endif }}{{ price|no_commas|whitespace|format_number }}{{ if ownership == "rental" }}/month{{ endif }}</li>
 
 	{{ if terms|not_empty }}
 	<li>{{ terms }}</li>
@@ -98,7 +98,7 @@
 	<li>{{ stories }}</li>
 	{{ endif }}
 
-	<li>{{ sqft|format_number }} ft<sup>2</sup></li>
+	<li>{{ sqft|no_commas|whitespace|format_number }} ft<sup>2</sup></li>
 
 	{{ if units|not_empty }}
 	<li>{{ units|format_number }}</li>
@@ -125,23 +125,23 @@
 	{{ endif }}
 
 	{{ if taxes|not_empty }}
-	<li>${{ taxes|format_number }}</li>
+	<li>${{ taxes|no_commas|whitespace|format_number }}</li>
 	{{ endif }}
 
 	{{ if income|not_empty }}
-	<li>${{ income|format_number }}</li>
+	<li>${{ income|no_commas|whitespace|format_number }}</li>
 	{{ endif }}
 
 	{{ if expenses|not_empty }}
-	<li>${{ expenses|format_number }}</li>
+	<li>${{ expenses|no_commas|whitespace|format_number }}</li>
 	{{ endif }}
 
 	{{ if common_charges|not_empty }}
-	<li>${{ common_charges|format_number }}</li>
+	<li>${{ common_charges|no_commas|whitespaceformat_number }}</li>
 	{{ endif }}
 	
 	{{ if maintenance|not_empty }}
-	<li>${{ maintenance|format_number }}</li>
+	<li>${{ maintenance|no_commas|whitespace|format_number }}</li>
 	{{ endif }}
 
 </ul>
