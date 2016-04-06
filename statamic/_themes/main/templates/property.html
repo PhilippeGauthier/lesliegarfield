@@ -105,11 +105,11 @@
 					{{ if openhouse == "true" }}
 						{{ openhouse_grid }}
 							 
-							{{ if first && date|in_future }}
+							{{ if first && date|is_today || date|in_future }}
 							
 								<span class="red red-span" id="first-o-h">Open <i class="fa fa-home"></i>: </span> <span class="red red-span">{{date format="l, F jS" }}: {{ startTime }} - {{ endTime }}</span>
 
-							{{ elseif last && date|in_future }}
+							{{ elseif last && date|is_today || date|in_future }}
 								<span class="oh-divider">|</span>
 								<div class="o-h-span display" id="second">
 									<span class="red red-span">Open <i class="fa fa-home"></i>: </span>
@@ -181,11 +181,11 @@
 					{{ if openhouse == "true" }}
 						{{ openhouse_grid }}
 							 
-							{{ if first && date|in_future }}
+							{{ if first && date|is_today || date|in_future }}
 							
 								<span class="red red-span" id="first-o-h">Open <i class="fa fa-home"></i>: </span> <span class="red red-span">{{date format="l, F jS" }}: {{ startTime }} - {{ endTime }}</span>
 
-							{{ elseif last && date|in_future }}
+							{{ elseif last && date|is_today || date|in_future }}
 								<span class="oh-divider">|</span>
 								<div class="o-h-span display" id="second-o-h">
 									<span class="red red-span">Open <i class="fa fa-home"></i>: </span>
