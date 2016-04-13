@@ -9,17 +9,17 @@ ehthumbs.db
 Thumbs.db
 *.sass-cache*
 
-# wwwwroot files #
+# wwwroot files #
 ######################
-wwwwroot/_cache/*
-wwwwroot/!_cache/index.html
-wwwwroot/_logs/*
-wwwwroot/!_logs/index.html
-wwwwroot/assets/
-wwwwroot/_content/
-wwwwroot/_config/users/*
-wwwwroot/_forms/*
-.htaccess
+wwwroot/_cache/
+wwwroot/!_cache/index.html
+wwwroot/_logs/
+wwwroot/!_logs/index.html
+wwwroot/assets/
+wwwroot/_content/
+wwwroot/_config/users/
+wwwroot/_forms/
+
 
 
 .bundle
@@ -48,5 +48,5 @@ npm-debug.log
 
 node_modules/*
 package.json
-wwwwroot/JSON/*.json
+wwwroot/JSON/*.json
 backup/
