@@ -16,7 +16,6 @@ wwwwroot/!_cache/index.html
 wwwwroot/_logs/*
 wwwwroot/!_logs/index.html
 wwwwroot/assets
-wwwwroot/assets/*
 wwwwroot/_content/
 wwwwroot/_config/users/*
 wwwwroot/_forms/*
