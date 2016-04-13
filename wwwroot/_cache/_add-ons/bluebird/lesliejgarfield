@@ -1,0 +1,520 @@
+---
+tweets:
+  - 
+    created_at: Wed Mar 16 21:22:07 +0000 2016
+    id: 710214587002572800
+    id_str: "710214587002572800"
+    text: |
+      NEW TO MARKET: 24 Schermerhorn St. 25'-Wide Single Family Townhouse in Brooklyn Heights! First… <a href="https://t.co/Ukfzpfk5A2">instagram.com/p/BDB2ENTlnbv/</a>
+    truncated: false
+    source: '<a href="http://instagram.com" rel="nofollow">Instagram</a>'
+    in_reply_to_status_id: null
+    in_reply_to_status_id_str: null
+    in_reply_to_user_id: null
+    in_reply_to_user_id_str: null
+    in_reply_to_screen_name: null
+    user:
+      id: 128573878
+      id_str: "128573878"
+      name: 'Leslie Garfield & Co'
+      screen_name: LeslieJGarfield
+      location: New York City
+      description: 'Leslie Garfield & Co is a New York City- based, full-service, luxury Townhouse real estate brokerage firm.'
+      url: https://t.co/wKXscPuQTD
+      entities:
+        url:
+          urls:
+            - 
+              url: https://t.co/wKXscPuQTD
+              expanded_url: http://lesliegarfield.com/
+              display_url: lesliegarfield.com
+              indices:
+                - 0
+                - 23
+        description:
+          urls: [ ]
+      protected: false
+      followers_count: 152
+      friends_count: 49
+      listed_count: 14
+      created_at: Thu Apr 01 14:36:51 +0000 2010
+      favourites_count: 22
+      utc_offset: -10800
+      time_zone: Atlantic Time (Canada)
+      geo_enabled: false
+      verified: false
+      statuses_count: 324
+      lang: en
+      contributors_enabled: false
+      is_translator: false
+      is_translation_enabled: false
+      profile_background_color: "054716"
+      profile_background_image_url: http://pbs.twimg.com/profile_background_images/443064218841935872/pDTYfihT.jpeg
+      profile_background_image_url_https: https://pbs.twimg.com/profile_background_images/443064218841935872/pDTYfihT.jpeg
+      profile_background_tile: false
+      profile_image_url: http://pbs.twimg.com/profile_images/662680056901316608/vL6x8W7m_normal.png
+      profile_image_url_https: https://pbs.twimg.com/profile_images/662680056901316608/vL6x8W7m_normal.png
+      profile_banner_url: https://pbs.twimg.com/profile_banners/128573878/1449005885
+      profile_link_color: "009880"
+      profile_sidebar_border_color: FFFFFF
+      profile_sidebar_fill_color: DDEEF6
+      profile_text_color: "333333"
+      profile_use_background_image: false
+      has_extended_profile: false
+      default_profile: false
+      default_profile_image: false
+      following: false
+      follow_request_sent: false
+      notifications: false
+    geo: null
+    coordinates: null
+    place: null
+    contributors: null
+    is_quote_status: false
+    retweet_count: 0
+    favorite_count: 0
+    entities:
+      hashtags: [ ]
+      symbols: [ ]
+      user_mentions: [ ]
+      urls:
+        - 
+          url: https://t.co/Ukfzpfk5A2
+          expanded_url: https://www.instagram.com/p/BDB2ENTlnbv/
+          display_url: instagram.com/p/BDB2ENTlnbv/
+          indices:
+            - 96
+            - 119
+    favorited: false
+    retweeted: false
+    possibly_sensitive: false
+    lang: en
+    tweet_url: https://twitter.com/LeslieJGarfield/status/710214587002572800
+  - 
+    created_at: Wed Mar 16 16:18:31 +0000 2016
+    id: 710138185666400257
+    id_str: "710138185666400257"
+    text: 'Classic UWS Park Block Single Family Home <a href="https://t.co/k96DooJV4x">bklp.co/ZbuOtW</a>'
+    truncated: false
+    source: '<a href="http://brokerloop.com" rel="nofollow">Brokerloop</a>'
+    in_reply_to_status_id: null
+    in_reply_to_status_id_str: null
+    in_reply_to_user_id: null
+    in_reply_to_user_id_str: null
+    in_reply_to_screen_name: null
+    user:
+      id: 128573878
+      id_str: "128573878"
+      name: 'Leslie Garfield & Co'
+      screen_name: LeslieJGarfield
+      location: New York City
+      description: 'Leslie Garfield & Co is a New York City- based, full-service, luxury Townhouse real estate brokerage firm.'
+      url: https://t.co/wKXscPuQTD
+      entities:
+        url:
+          urls:
+            - 
+              url: https://t.co/wKXscPuQTD
+              expanded_url: http://lesliegarfield.com/
+              display_url: lesliegarfield.com
+              indices:
+                - 0
+                - 23
+        description:
+          urls: [ ]
+      protected: false
+      followers_count: 152
+      friends_count: 49
+      listed_count: 14
+      created_at: Thu Apr 01 14:36:51 +0000 2010
+      favourites_count: 22
+      utc_offset: -10800
+      time_zone: Atlantic Time (Canada)
+      geo_enabled: false
+      verified: false
+      statuses_count: 324
+      lang: en
+      contributors_enabled: false
+      is_translator: false
+      is_translation_enabled: false
+      profile_background_color: "054716"
+      profile_background_image_url: http://pbs.twimg.com/profile_background_images/443064218841935872/pDTYfihT.jpeg
+      profile_background_image_url_https: https://pbs.twimg.com/profile_background_images/443064218841935872/pDTYfihT.jpeg
+      profile_background_tile: false
+      profile_image_url: http://pbs.twimg.com/profile_images/662680056901316608/vL6x8W7m_normal.png
+      profile_image_url_https: https://pbs.twimg.com/profile_images/662680056901316608/vL6x8W7m_normal.png
+      profile_banner_url: https://pbs.twimg.com/profile_banners/128573878/1449005885
+      profile_link_color: "009880"
+      profile_sidebar_border_color: FFFFFF
+      profile_sidebar_fill_color: DDEEF6
+      profile_text_color: "333333"
+      profile_use_background_image: false
+      has_extended_profile: false
+      default_profile: false
+      default_profile_image: false
+      following: false
+      follow_request_sent: false
+      notifications: false
+    geo: null
+    coordinates: null
+    place: null
+    contributors: null
+    is_quote_status: false
+    retweet_count: 0
+    favorite_count: 0
+    entities:
+      hashtags: [ ]
+      symbols: [ ]
+      user_mentions: [ ]
+      urls:
+        - 
+          url: https://t.co/k96DooJV4x
+          expanded_url: http://bklp.co/ZbuOtW
+          display_url: bklp.co/ZbuOtW
+          indices:
+            - 42
+            - 65
+    favorited: false
+    retweeted: false
+    possibly_sensitive: false
+    lang: en
+    tweet_url: https://twitter.com/LeslieJGarfield/status/710138185666400257
+  - 
+    created_at: Wed Mar 16 14:27:01 +0000 2016
+    id: 710110122958327808
+    id_str: "710110122958327808"
+    text: |
+      Go to our <a href="https://twitter.com/#!/search/%23openhouses">#openhouses</a> in the <a href="https://twitter.com/#!/search/%23westvillage">#westvillage</a> today and tomorrow! Schedule below:
+      
+      77 Charles and… <a href="https://t.co/CGoQ3gz2R2">instagram.com/p/BDBGj2PlnXq/</a>
+    truncated: false
+    source: '<a href="http://instagram.com" rel="nofollow">Instagram</a>'
+    in_reply_to_status_id: null
+    in_reply_to_status_id_str: null
+    in_reply_to_user_id: null
+    in_reply_to_user_id_str: null
+    in_reply_to_screen_name: null
+    user:
+      id: 128573878
+      id_str: "128573878"
+      name: 'Leslie Garfield & Co'
+      screen_name: LeslieJGarfield
+      location: New York City
+      description: 'Leslie Garfield & Co is a New York City- based, full-service, luxury Townhouse real estate brokerage firm.'
+      url: https://t.co/wKXscPuQTD
+      entities:
+        url:
+          urls:
+            - 
+              url: https://t.co/wKXscPuQTD
+              expanded_url: http://lesliegarfield.com/
+              display_url: lesliegarfield.com
+              indices:
+                - 0
+                - 23
+        description:
+          urls: [ ]
+      protected: false
+      followers_count: 152
+      friends_count: 49
+      listed_count: 14
+      created_at: Thu Apr 01 14:36:51 +0000 2010
+      favourites_count: 22
+      utc_offset: -10800
+      time_zone: Atlantic Time (Canada)
+      geo_enabled: false
+      verified: false
+      statuses_count: 324
+      lang: en
+      contributors_enabled: false
+      is_translator: false
+      is_translation_enabled: false
+      profile_background_color: "054716"
+      profile_background_image_url: http://pbs.twimg.com/profile_background_images/443064218841935872/pDTYfihT.jpeg
+      profile_background_image_url_https: https://pbs.twimg.com/profile_background_images/443064218841935872/pDTYfihT.jpeg
+      profile_background_tile: false
+      profile_image_url: http://pbs.twimg.com/profile_images/662680056901316608/vL6x8W7m_normal.png
+      profile_image_url_https: https://pbs.twimg.com/profile_images/662680056901316608/vL6x8W7m_normal.png
+      profile_banner_url: https://pbs.twimg.com/profile_banners/128573878/1449005885
+      profile_link_color: "009880"
+      profile_sidebar_border_color: FFFFFF
+      profile_sidebar_fill_color: DDEEF6
+      profile_text_color: "333333"
+      profile_use_background_image: false
+      has_extended_profile: false
+      default_profile: false
+      default_profile_image: false
+      following: false
+      follow_request_sent: false
+      notifications: false
+    geo: null
+    coordinates: null
+    place: null
+    contributors: null
+    is_quote_status: false
+    retweet_count: 0
+    favorite_count: 0
+    entities:
+      hashtags:
+        - 
+          text: openhouses
+          indices:
+            - 10
+            - 21
+        - 
+          text: westvillage
+          indices:
+            - 29
+            - 41
+      symbols: [ ]
+      user_mentions: [ ]
+      urls:
+        - 
+          url: https://t.co/CGoQ3gz2R2
+          expanded_url: https://www.instagram.com/p/BDBGj2PlnXq/
+          display_url: instagram.com/p/BDBGj2PlnXq/
+          indices:
+            - 95
+            - 118
+    favorited: false
+    retweeted: false
+    possibly_sensitive: false
+    lang: en
+    tweet_url: https://twitter.com/LeslieJGarfield/status/710110122958327808
+  - 
+    created_at: Tue Mar 15 16:04:24 +0000 2016
+    id: 709772245107871744
+    id_str: "709772245107871744"
+    text: 'Single Family Conversion Steps from Central Park, Under $7M! <a href="https://t.co/V3myUecvrl">bklp.co/tnFrzB</a>'
+    truncated: false
+    source: '<a href="http://brokerloop.com" rel="nofollow">Brokerloop</a>'
+    in_reply_to_status_id: null
+    in_reply_to_status_id_str: null
+    in_reply_to_user_id: null
+    in_reply_to_user_id_str: null
+    in_reply_to_screen_name: null
+    user:
+      id: 128573878
+      id_str: "128573878"
+      name: 'Leslie Garfield & Co'
+      screen_name: LeslieJGarfield
+      location: New York City
+      description: 'Leslie Garfield & Co is a New York City- based, full-service, luxury Townhouse real estate brokerage firm.'
+      url: https://t.co/wKXscPuQTD
+      entities:
+        url:
+          urls:
+            - 
+              url: https://t.co/wKXscPuQTD
+              expanded_url: http://lesliegarfield.com/
+              display_url: lesliegarfield.com
+              indices:
+                - 0
+                - 23
+        description:
+          urls: [ ]
+      protected: false
+      followers_count: 152
+      friends_count: 49
+      listed_count: 14
+      created_at: Thu Apr 01 14:36:51 +0000 2010
+      favourites_count: 22
+      utc_offset: -10800
+      time_zone: Atlantic Time (Canada)
+      geo_enabled: false
+      verified: false
+      statuses_count: 324
+      lang: en
+      contributors_enabled: false
+      is_translator: false
+      is_translation_enabled: false
+      profile_background_color: "054716"
+      profile_background_image_url: http://pbs.twimg.com/profile_background_images/443064218841935872/pDTYfihT.jpeg
+      profile_background_image_url_https: https://pbs.twimg.com/profile_background_images/443064218841935872/pDTYfihT.jpeg
+      profile_background_tile: false
+      profile_image_url: http://pbs.twimg.com/profile_images/662680056901316608/vL6x8W7m_normal.png
+      profile_image_url_https: https://pbs.twimg.com/profile_images/662680056901316608/vL6x8W7m_normal.png
+      profile_banner_url: https://pbs.twimg.com/profile_banners/128573878/1449005885
+      profile_link_color: "009880"
+      profile_sidebar_border_color: FFFFFF
+      profile_sidebar_fill_color: DDEEF6
+      profile_text_color: "333333"
+      profile_use_background_image: false
+      has_extended_profile: false
+      default_profile: false
+      default_profile_image: false
+      following: false
+      follow_request_sent: false
+      notifications: false
+    geo: null
+    coordinates: null
+    place: null
+    contributors: null
+    is_quote_status: false
+    retweet_count: 0
+    favorite_count: 0
+    entities:
+      hashtags: [ ]
+      symbols: [ ]
+      user_mentions: [ ]
+      urls:
+        - 
+          url: https://t.co/V3myUecvrl
+          expanded_url: http://bklp.co/tnFrzB
+          display_url: bklp.co/tnFrzB
+          indices:
+            - 61
+            - 84
+    favorited: false
+    retweeted: false
+    possibly_sensitive: false
+    lang: en
+    tweet_url: https://twitter.com/LeslieJGarfield/status/709772245107871744
+  - 
+    created_at: Tue Mar 15 14:51:32 +0000 2016
+    id: 709753904720908288
+    id_str: "709753904720908288"
+    text: 'Two <a href="https://twitter.com/#!/search/%23westvillage">#westvillage</a> open houses tomorrow from 3:00-4:00!! 77 Charles (left) and 245 Waverly (right,… <a href="https://t.co/FSrIR6R7tn">instagram.com/p/BC-kkj7lnT-/</a>'
+    truncated: false
+    source: '<a href="http://instagram.com" rel="nofollow">Instagram</a>'
+    in_reply_to_status_id: null
+    in_reply_to_status_id_str: null
+    in_reply_to_user_id: null
+    in_reply_to_user_id_str: null
+    in_reply_to_screen_name: null
+    user:
+      id: 128573878
+      id_str: "128573878"
+      name: 'Leslie Garfield & Co'
+      screen_name: LeslieJGarfield
+      location: New York City
+      description: 'Leslie Garfield & Co is a New York City- based, full-service, luxury Townhouse real estate brokerage firm.'
+      url: https://t.co/wKXscPuQTD
+      entities:
+        url:
+          urls:
+            - 
+              url: https://t.co/wKXscPuQTD
+              expanded_url: http://lesliegarfield.com/
+              display_url: lesliegarfield.com
+              indices:
+                - 0
+                - 23
+        description:
+          urls: [ ]
+      protected: false
+      followers_count: 152
+      friends_count: 49
+      listed_count: 14
+      created_at: Thu Apr 01 14:36:51 +0000 2010
+      favourites_count: 22
+      utc_offset: -10800
+      time_zone: Atlantic Time (Canada)
+      geo_enabled: false
+      verified: false
+      statuses_count: 324
+      lang: en
+      contributors_enabled: false
+      is_translator: false
+      is_translation_enabled: false
+      profile_background_color: "054716"
+      profile_background_image_url: http://pbs.twimg.com/profile_background_images/443064218841935872/pDTYfihT.jpeg
+      profile_background_image_url_https: https://pbs.twimg.com/profile_background_images/443064218841935872/pDTYfihT.jpeg
+      profile_background_tile: false
+      profile_image_url: http://pbs.twimg.com/profile_images/662680056901316608/vL6x8W7m_normal.png
+      profile_image_url_https: https://pbs.twimg.com/profile_images/662680056901316608/vL6x8W7m_normal.png
+      profile_banner_url: https://pbs.twimg.com/profile_banners/128573878/1449005885
+      profile_link_color: "009880"
+      profile_sidebar_border_color: FFFFFF
+      profile_sidebar_fill_color: DDEEF6
+      profile_text_color: "333333"
+      profile_use_background_image: false
+      has_extended_profile: false
+      default_profile: false
+      default_profile_image: false
+      following: false
+      follow_request_sent: false
+      notifications: false
+    geo: null
+    coordinates: null
+    place: null
+    contributors: null
+    is_quote_status: false
+    retweet_count: 1
+    favorite_count: 1
+    entities:
+      hashtags:
+        - 
+          text: westvillage
+          indices:
+            - 4
+            - 16
+      symbols: [ ]
+      user_mentions: [ ]
+      urls:
+        - 
+          url: https://t.co/FSrIR6R7tn
+          expanded_url: https://www.instagram.com/p/BC-kkj7lnT-/
+          display_url: instagram.com/p/BC-kkj7lnT-/
+          indices:
+            - 98
+            - 121
+    favorited: false
+    retweeted: false
+    possibly_sensitive: false
+    lang: en
+    tweet_url: https://twitter.com/LeslieJGarfield/status/709753904720908288
+user:
+  - 
+    id: 128573878
+    id_str: "128573878"
+    name: 'Leslie Garfield & Co'
+    screen_name: LeslieJGarfield
+    location: New York City
+    description: 'Leslie Garfield & Co is a New York City- based, full-service, luxury Townhouse real estate brokerage firm.'
+    url: https://t.co/wKXscPuQTD
+    entities:
+      url:
+        urls:
+          - 
+            url: https://t.co/wKXscPuQTD
+            expanded_url: http://lesliegarfield.com/
+            display_url: lesliegarfield.com
+            indices:
+              - 0
+              - 23
+      description:
+        urls: [ ]
+    protected: false
+    followers_count: 152
+    friends_count: 49
+    listed_count: 14
+    created_at: Thu Apr 01 14:36:51 +0000 2010
+    favourites_count: 22
+    utc_offset: -10800
+    time_zone: Atlantic Time (Canada)
+    geo_enabled: false
+    verified: false
+    statuses_count: 324
+    lang: en
+    contributors_enabled: false
+    is_translator: false
+    is_translation_enabled: false
+    profile_background_color: "054716"
+    profile_background_image_url: http://pbs.twimg.com/profile_background_images/443064218841935872/pDTYfihT.jpeg
+    profile_background_image_url_https: https://pbs.twimg.com/profile_background_images/443064218841935872/pDTYfihT.jpeg
+    profile_background_tile: false
+    profile_image_url: http://pbs.twimg.com/profile_images/662680056901316608/vL6x8W7m_normal.png
+    profile_image_url_https: https://pbs.twimg.com/profile_images/662680056901316608/vL6x8W7m_normal.png
+    profile_banner_url: https://pbs.twimg.com/profile_banners/128573878/1449005885
+    profile_link_color: "009880"
+    profile_sidebar_border_color: FFFFFF
+    profile_sidebar_fill_color: DDEEF6
+    profile_text_color: "333333"
+    profile_use_background_image: false
+    has_extended_profile: false
+    default_profile: false
+    default_profile_image: false
+    following: false
+    follow_request_sent: false
+    notifications: false

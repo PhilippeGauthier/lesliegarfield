@@ -9,16 +9,16 @@ ehthumbs.db
 Thumbs.db
 *.sass-cache*
 
-# Statamic files #
+# wwwwroot files #
 ######################
-statamic/_cache/*
-statamic/!_cache/index.html
-statamic/_logs/*
-statamic/!_logs/index.html
-statamic/assets/*
-statamic/_content/*
-statamic/_config/users/*
-statamic/_forms/*
+wwwwroot/_cache/*
+wwwwroot/!_cache/index.html
+wwwwroot/_logs/*
+wwwwroot/!_logs/index.html
+wwwwroot/assets/*
+wwwwroot/_content/*
+wwwwroot/_config/users/*
+wwwwroot/_forms/*
 .htaccess
 
 
@@ -48,5 +48,5 @@ npm-debug.log
 
 node_modules/*
 package.json
-statamic/JSON/*.json
+wwwwroot/JSON/*.json
 backup/

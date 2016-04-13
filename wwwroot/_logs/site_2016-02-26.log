@@ -1,0 +1,11 @@
+ERROR|Fri, 26 Feb 2016 13:16:00 -0500|visitor|content|/brokerloop|127.0.0.1||404 - Page not found. Visitor came directly to this page and may have typed the URL incorrectly.
+ERROR|Fri, 26 Feb 2016 13:16:18 -0500|visitor|content|/brokerloop|127.0.0.1||404 - Page not found. Visitor came directly to this page and may have typed the URL incorrectly.
+ERROR|Fri, 26 Feb 2016 13:16:23 -0500|template|parser|/streeteasy|127.0.0.1||Cannot display tag `{{ floor_plans }}` because it is a list, not a single value. To display list values, use a tag-pair.
+INFO|Fri, 26 Feb 2016 13:16:23 -0500|site|favicon|/favicon.ico|127.0.0.1||The site favicon could not be found.
+ERROR|Fri, 26 Feb 2016 13:17:09 -0500|template|parser|/brokerloop|127.0.0.1||Cannot display tag `{{ floor_plans }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Fri, 26 Feb 2016 13:17:19 -0500|template|parser|/brokerloop|127.0.0.1||Cannot display tag `{{ floor_plans }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Fri, 26 Feb 2016 13:34:38 -0500|template|parser|/brokerloop|127.0.0.1||Cannot display tag `{{ floor_plans }}` because it is a list, not a single value. To display list values, use a tag-pair.
+INFO|Fri, 26 Feb 2016 13:34:39 -0500|site|favicon|/favicon.ico|127.0.0.1||The site favicon could not be found.
+ERROR|Fri, 26 Feb 2016 13:34:47 -0500|template|parser|/brokerloop|127.0.0.1||Cannot display tag `{{ floor_plans }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Fri, 26 Feb 2016 13:36:13 -0500|template|parser|/brokerloop|127.0.0.1||Cannot display tag `{{ floor_plans }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Fri, 26 Feb 2016 13:40:01 -0500|template|parser|/brokerloop|127.0.0.1||Cannot display tag `{{ floor_plans }}` because it is a list, not a single value. To display list values, use a tag-pair.

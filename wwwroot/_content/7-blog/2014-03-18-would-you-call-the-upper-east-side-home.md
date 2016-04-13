@@ -1,0 +1,12 @@
+---
+title: Would you call The Upper East Side home?
+main_image: /assets/img/blog/Untitled-20151006163913.jpg
+author:
+  - /agents/garfield/jed-garfield
+authors:
+  - Jed Garfield
+categories:
+  - Upper East Side
+  - Townhouses
+---
+<p>The Upper East Side which spans 59th Street up to 96th Street between Central Park and the East River. Once known as the “Silk Stocking District,” The Upper East Side encompasses a variety of mini micro neighborhoods amongst this nearly two mile stretch.  The true benefit to living on “The East Side” is the fact that there is so much going on, in almost every area of this region of Manhattan, not to mention the best schools, the best restaurants and the best shopping experience.  To name some of the specific benefits to living here, you have of course Central Park on one side and on the Far East Side you have the magnificent Carl Schurz Park which sits along side the East River and is where you will find Gracie Mansion, Asphalt Green and easy access to the FDR drive if you are planning a trip outside of the City.</p><p>The East Side has some of the most famous museums in the world as well which include the Metropolitan Museum of Art, the National Academy of Design, the Guggenheim and the Cooper-Hewitt National Design Museum, to name a few.  The best schools can also be found spread out throughout the East Side including The Dalton School,  Brearly,  Chapin,  Spence, Lycee Francais, Ramaz, Trevor Day, and The Nightingale-Bamford School to name some of the outstanding private schools. You will also find some outstanding public schools including P.S. 6 and Hunter.<br></p><p>The Upper East Side is served by one subway line, the IRT Lexington Avenue Line (4,5,6 trains) in addition to local bus routes. A new Second Avenue subway line is currently being built and will help alleviate the heavy congestion on the subways and buses in the years to come.<br></p><p>Many exciting restaurants can also be found on the Upper East Side including JG Melon, a quintessential neighborhood burger joint on Third Avenue,  Candle 79, a vegetarian restaurant on 79th Street that is both flavorful and upscale, Sushi of Gari, some of Manhattan’s best sushi and worth the trek, Sarabeth’s, a longtime neighborhood favorite on Madison Avenues, Serafina, an authentic Northern Italian favorite among young mothers toting kids.<br></p><p>Would you call the Upper East Side home? Check out what we have on the market.<span></span><br></p>

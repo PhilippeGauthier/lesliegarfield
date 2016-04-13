@@ -1,0 +1,14 @@
+---
+first_name: Philippe
+last_name: Gauthier
+roles:
+  - admin
+email: philippe@philippe.io
+password: ""
+_uid: wQm8wJ55c2950f1e8fa7xlw427r
+password_hash: $2a$08$XGWqrjUFn7wSCfZVAbKDZew6mWAnGbvND6XC8gifrP8rGDVKrS/k2
+avatar: /assets/img/6.jpeg
+---
+Have no fears, your password, while plain text to start, will be encrypted upon first login. If ever you need to manually reset a password you can wipe out the password fields and start anew.
+
+Your username is the name of the YAML file. That would make this user "admin".

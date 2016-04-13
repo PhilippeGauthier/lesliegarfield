@@ -1,0 +1,26 @@
+INFO|Thu, 21 Jan 2016 15:18:31 -0500|site|favicon|/favicon.ico|127.0.0.1||The site favicon could not be found.
+ERROR|Thu, 21 Jan 2016 17:53:28 -0500|template|parser|/streeteasy|127.0.0.1||Cannot display tag `{{ floor_plans }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Thu, 21 Jan 2016 17:53:28 -0500|template|parser|/streeteasy|127.0.0.1||Cannot display tag `{{ floor_plans }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Thu, 21 Jan 2016 17:53:28 -0500|template|parser|/streeteasy|127.0.0.1||Cannot display tag `{{ floor_plans }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Thu, 21 Jan 2016 17:53:28 -0500|template|parser|/streeteasy|127.0.0.1||Cannot display tag `{{ brochure }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Thu, 21 Jan 2016 17:53:28 -0500|template|parser|/streeteasy|127.0.0.1||Cannot display tag `{{ floor_plans }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Thu, 21 Jan 2016 17:54:05 -0500|template|parser|/streeteasy|127.0.0.1||Cannot display tag `{{ floor_plans }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Thu, 21 Jan 2016 17:54:05 -0500|template|parser|/streeteasy|127.0.0.1||Cannot display tag `{{ floor_plans }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Thu, 21 Jan 2016 17:54:05 -0500|template|parser|/streeteasy|127.0.0.1||Cannot display tag `{{ floor_plans }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Thu, 21 Jan 2016 17:54:05 -0500|template|parser|/streeteasy|127.0.0.1||Cannot display tag `{{ brochure }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Thu, 21 Jan 2016 17:54:05 -0500|template|parser|/streeteasy|127.0.0.1||Cannot display tag `{{ floor_plans }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Thu, 21 Jan 2016 17:56:01 -0500|template|parser|/streeteasy|127.0.0.1||Cannot display tag `{{ floor_plans }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Thu, 21 Jan 2016 17:56:01 -0500|template|parser|/streeteasy|127.0.0.1||Cannot display tag `{{ floor_plans }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Thu, 21 Jan 2016 17:56:02 -0500|template|parser|/streeteasy|127.0.0.1||Cannot display tag `{{ floor_plans }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Thu, 21 Jan 2016 17:56:02 -0500|template|parser|/streeteasy|127.0.0.1||Cannot display tag `{{ brochure }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Thu, 21 Jan 2016 17:56:02 -0500|template|parser|/streeteasy|127.0.0.1||Cannot display tag `{{ floor_plans }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Thu, 21 Jan 2016 17:57:46 -0500|page|content|/assets/img/properties/sale/resized/DSC_0196-20160120112628.jpg|127.0.0.1||404 - Page not found. There is a bad link on <a href="/">/</a>.
+ERROR|Thu, 21 Jan 2016 18:04:08 -0500|page|content|/assets/img/properties/sale/resized/DSC_0196-20160120112628.jpg|127.0.0.1||404 - Page not found. There is a bad link on <a href="/">/</a>.
+ERROR|Thu, 21 Jan 2016 18:04:57 -0500|page|content|/assets/img/properties/sale/resized/DSC_0196-20160120112628.jpg|127.0.0.1||404 - Page not found. There is a bad link on <a href="/">/</a>.
+ERROR|Thu, 21 Jan 2016 18:11:10 -0500|page|content|/assets/img/properties/sale/resized/DSC_0196-20160120112628.jpg|127.0.0.1||404 - Page not found. There is a bad link on <a href="/">/</a>.
+ERROR|Thu, 21 Jan 2016 20:40:41 -0500|page|content|/assets/img/properties/sale/resized/DSC_0196-20160120112628.jpg|127.0.0.1||404 - Page not found. There is a bad link on <a href="/">/</a>.
+ERROR|Thu, 21 Jan 2016 20:45:08 -0500|page|content|/assets/img/properties/sale/resized/DSC_0196-20160120112628.jpg|127.0.0.1||404 - Page not found. There is a bad link on <a href="/">/</a>.
+ERROR|Thu, 21 Jan 2016 21:01:10 -0500|page|content|/assets/img/properties/sale/resized/DSC_0196-20160120112628.jpg|127.0.0.1||404 - Page not found. There is a bad link on <a href="/properties/new-york">/properties/new-york</a>.
+ERROR|Thu, 21 Jan 2016 21:01:24 -0500|page|content|/assets/img/properties/sale/resized/DSC_0196-20160120112628.jpg|127.0.0.1||404 - Page not found. There is a bad link on <a href="/properties/new-york">/properties/new-york</a>.
+ERROR|Thu, 21 Jan 2016 21:02:25 -0500|page|content|/assets/img/properties/sale/resized/DSC_0196-20160120112628.jpg|127.0.0.1||404 - Page not found. There is a bad link on <a href="/properties/new-york">/properties/new-york</a>.
+ERROR|Thu, 21 Jan 2016 21:03:36 -0500|page|content|/assets/img/properties/sale/resized/DSC_0196-20160120112628.jpg|127.0.0.1||404 - Page not found. There is a bad link on <a href="/properties/new-york">/properties/new-york</a>.
