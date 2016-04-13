@@ -11,11 +11,9 @@ Thumbs.db
 
 # wwwroot files #
 ######################
-wwwroot/_cache/
-wwwroot/_cache/**/*
+wwwroot/_cache
 wwwroot/!_cache/index.html
-wwwroot/_logs/
-wwwroot/_logs/**/*
+wwwroot/_logs
 wwwroot/!_logs/index.html
 wwwroot/assets/
 wwwroot/_content/
