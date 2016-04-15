@@ -48,7 +48,7 @@ submission_save_extension: yaml
 
 # Configure notification email
 email:
-  to: info@lesliegarfield.com
+  to: pgauthier@gmail.com
   from: info@lesliegarfield.com
   subject: General Enquiry
   automagic: true
