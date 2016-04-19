@@ -27,6 +27,11 @@ var Listing = React.createClass({
       backgroundImage: 'url(' + listing.preview_image + ')'
     };
     function createMarkup() { return {__html: 'ft<sup>2</sup>'}; };
+    if (listing.openhouse !== "" && listing.streeteasy_status == 'active') {
+      listing.bottom_info_red = 'Open House';
+      listing.bottom_info = "";
+    }
+
     if (listing.streeteasy_status == 'active') {
       listing.streeteasy_status = "";
     }
@@ -41,10 +46,6 @@ var Listing = React.createClass({
     }
     if (listing.streeteasy_status == 'off-market') {
       listing.streeteasy_status = "";
-    }
-    if (listing.openhouse !== "" ) {
-      listing.bottom_info_red = 'Open House';
-      listing.bottom_info = "";
     }
     if (listing.currency == "dollars") {
       listing.currency = "$";

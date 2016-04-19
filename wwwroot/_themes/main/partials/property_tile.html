@@ -21,20 +21,21 @@
 				<span>
 				{{ endif }}
 				<div class="spacer"></div>
-				<span class="prop-location">{{ property_location }}</span>
+				<span class="prop-location">{{ property_location }}{{ grid_check|foo }}</span>
 			</div>
 			<div class="bottom-info">
-				{{ if openhouse !="false" }}
-					<div class="red">Open House</div>
-				{{ elseif streeteasy_status != "active" }}
-				<div>
-				{{ if streeteasy_status=="in-contract" }}
-					In Contract
-				{{ elseif streeteasy_status=="sold" }}
-				Sold
+
+				{{ if streeteasy_status !== "active" }}
+				<div>{{ if streeteasy_status == "in-contract"}}In Contract{{ elseif streeteasy_status == "sold" }}Sold{{ elseif streeteasy_status =="off-market" }}Off Market{{ elseif streeteasy_status =="temp-off-market" }}Temporarirly Off Market{{ endif }}</div>
+				
+				{{ else }}
+
+				{{ openhouse_grid }}
+												
+				{{ /openhouse_grid }}
+
 				{{ endif }}
-				</div>
-				{{ endif }}
+
 			</div>
 		</div>
 	</a >

@@ -11,7 +11,7 @@
 </head>
 <body id="login">
     <div id="login-wrapper">
-      <div class="logo"></div>
+      <div class="logo">&#xf003;</div>
       <div id="login-form">
         <form>
             <h1><?php echo Localization::fetch('offline')?></h1>
