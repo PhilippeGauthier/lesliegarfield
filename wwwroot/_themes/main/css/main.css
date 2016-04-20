@@ -4127,6 +4127,16 @@ a .no-click * {
 .dark_gray a:hover * {
   color: white; }
 
+.recaptcha-container {
+  text-align: center; }
+
+.g-recaptcha {
+  display: inline-block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px; }
+
 .preview-image {
   background-size: cover; }
 
