@@ -46,7 +46,7 @@
 		@include clearfix;
 	}
 	.blog-header {
-		color: darken($light-font-color,10%);
+		color: $base-font-color;
 		@include btiny($hFontM);
 		padding-bottom: .75em;
 		border-bottom: 1px solid $modal-text;
