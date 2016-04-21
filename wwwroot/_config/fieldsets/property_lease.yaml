@@ -8,6 +8,8 @@ fields:
   title:
     type: text
     display: Property Name
+  slug:
+    hide: true
   datestamp:
     type: date
     hide: true

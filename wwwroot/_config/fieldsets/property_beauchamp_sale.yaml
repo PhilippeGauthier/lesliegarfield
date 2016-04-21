@@ -8,6 +8,8 @@ fields:
   title:
     type: text
     display: Property Name
+  slug:
+    hide: true
   streeteasy_type:
     type: text
     hide: true

@@ -5,6 +5,8 @@ fields:
     type: uuid
   url:
     type: page_url
+  slug:
+    hide: true
   title:
     type: text
     display: Property Name
