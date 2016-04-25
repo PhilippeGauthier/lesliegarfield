@@ -32,6 +32,6 @@ fields:
 		display: Blog Content
 	  image_dir: assets/img/blog
 	  resize:
-	    max_width: 706
+	    width: 706
 	    quality: 80
 	    upsize: false
