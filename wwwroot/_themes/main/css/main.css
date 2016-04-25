@@ -6993,9 +6993,14 @@ footer .footer-divider {
 .blog .blog-left .truncated {
   display: none; }
 
+.blog .blog-left .truncated img {
+  display: none; }
+
 @media (min-width: 480px) {
   .blog .blog-left .truncated {
     display: block; }
+  .blog .blog-left .truncated img {
+    display: none; }
   .blog .blog-left .entry {
     padding-bottom: 30px; } }
 
@@ -8700,9 +8705,14 @@ section.faq {
 .featured .truncated {
   display: none; }
 
+.featured .truncated img {
+  display: none; }
+
 @media (min-width: 768px) {
   .featured .truncated {
-    display: block; } }
+    display: block; }
+  .featured .truncated img {
+    display: none; } }
 
 @media (min-width: 768px) {
   .featured .featured-image {

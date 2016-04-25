@@ -17,10 +17,16 @@
 	.blog-left {
 		@include span (full);
 		.truncated {
+			img {
+				display: none;
+			}
 			display: none;
 		}
 		@include breakpoint($tiny) {
 			.truncated {
+				img {
+					display: none;
+				}
 				display: block;
 			}
 			.entry {

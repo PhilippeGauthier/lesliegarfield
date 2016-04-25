@@ -24,8 +24,14 @@
 	}
 	.truncated {
 		display: none;
+		img {
+			display: none;
+		}
 		@include breakpoint($small) {
 			display: block;
+			img {
+				display: none;
+			}
 		}
 	}
 	@include breakpoint($small) {
