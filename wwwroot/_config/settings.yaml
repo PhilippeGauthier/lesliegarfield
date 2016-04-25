@@ -81,7 +81,7 @@ _enable_smartypants: true
 _theme_cache_bust: false
 
 # Specify where to save transformed images
-_transform_destination: assets/img/resized
+# _transform_destination: assets/img/resized
 
 # allow the use of PHP in Statamic templates
 _allow_php: false

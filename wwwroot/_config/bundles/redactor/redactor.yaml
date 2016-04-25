@@ -16,9 +16,9 @@ buttons:
   - orderedlist
   - outdent
   - indent
-  - image
   - file
   - video
+  - image
   - table
   - link
   - horizontalrule
@@ -26,8 +26,6 @@ buttons:
   - backcolor
   - alignment
   - html
-
-pastePlainText: true
 
 # Turn on/off cleanup on paste
 cleanOnPaste: true

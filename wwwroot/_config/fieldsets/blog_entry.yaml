@@ -30,7 +30,9 @@ fields:
 	content:
 		type: redactor
 		display: Blog Content
-		img_dir: assets/img/blog
+		image_dir: assets/img/
+		file_dir: assets
 		resize:
+			_transform_destination: assets/img/resized
 			width: 706
 			quality: 80
