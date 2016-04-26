@@ -25,12 +25,15 @@ fields:
 		type: grid
 		display: Press Items
 		fields:
-			image:
-				type: file
-				destination: assets/img/agents
-				allowed: [png, gif, jpg, jpeg]
-				display: Press Image
-				width: 25%
+			publication:
+				type: suggest
+				display: Publication
+				create: false
+				max_items: 1
+				content:
+					folder: agents/press
+					label: title
+					value: url
 			file:
 				type: file
 				destination: assets/img/agents

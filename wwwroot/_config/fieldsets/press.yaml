@@ -1,0 +1,13 @@
+fields:
+  slug:
+    hide: true
+  content:
+    hide: true
+  datestamp:
+    type: date
+    hide: true
+  image:
+    type: file
+    allowed: [png, jpg, gif]
+    destination: assets/img/agents/press
+

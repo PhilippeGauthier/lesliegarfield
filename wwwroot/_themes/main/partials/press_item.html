@@ -2,9 +2,11 @@
 {{ if file|empty && link|empty }}
  <div class="carousel-tile press-item">
 	<div>
+		{{ relate:publication }}
 		{{ if image|not_empty }}
 		<img src="{{ path src="{{ image }}" }}">
 		{{ endif }}
+		{{ /relate:publication }}
 		{{ if text|not_empty }}
 		<p>{{ text }}</p>
 		{{ endif }}
@@ -13,9 +15,11 @@
 {{ else }}
  <a target="_blank" href="{{ link or file }}" class="carousel-tile press-item">
 	<div>
+		{{ relate:publication }}
 		{{ if image|not_empty }}
 		<img src="{{ path src="{{ image }}" }}">
 		{{ endif }}
+		{{ /relate:publication }}
 		{{ if text|not_empty }}
 		<p>{{ text }}</p>
 		{{ endif }}
