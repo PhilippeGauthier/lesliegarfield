@@ -4,7 +4,7 @@
 		<ul>
 		{{ entries:listing folder="agents/garfield" conditions="author"}}
 		<li><a class="author-list" href="{{ _site_root }}blog/authors/{{ title|lower }}">
-		<img class="author-image" src="{{ path src="{{ image }}"}}">
+		<img class="author-image" src="{{ transform width="60" src="{{ image }}"}}">
 		{{ title }}
 		</a></li>  
 		{{ /entries:listing }}
