@@ -16,7 +16,10 @@
 					</ul>
 					<h2>{{ title }}</h2>
 					{{ theme:partial src="blog_social" use_context="true" }}
+					{{ if main_image_display }}
+					{{ else }}
 					<img class="main-image" src="{{ path src="{{ main_image }}"}}">
+					{{ endif }}
 					{{ content }}
 				</div>
 				<div class="blog-right">

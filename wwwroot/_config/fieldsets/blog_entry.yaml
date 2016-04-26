@@ -4,6 +4,9 @@ fields:
 		type: file
 		display: Preview Image
 		destination: assets/img/blog
+	main_image_display:
+		type: checkbox
+		display: Hide Preview Image in Blog Post?
 	author:
 		type: suggest
 		display: Author
