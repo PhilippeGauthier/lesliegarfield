@@ -120,17 +120,16 @@
 	}
 	.preview-image {
 		display: block;
+		height: 100%;
+		width: 100%;
+		transition: all 300ms ease-in-out;
+		position: absolute;
+		background-color: $light-gray;
+		background-size: cover;
+		text-align: center;
 		width: 100vw;
 		height: 100vh;
 		object-fit: cover;
-		// height: 100%;
-		// width: 100%;
-		transition: all 300ms ease-in-out;
-		// position: absolute;
-		background-color: $light-gray;
-		// background-size: cover;
-		text-align: center;
-
 	}
 	&.property {
 		padding: 10px;
