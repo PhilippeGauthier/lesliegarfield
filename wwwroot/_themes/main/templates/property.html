@@ -9,29 +9,29 @@
 					<div class="dotted first"></div>
 					{{ if realtor === "garfield" }}
 					{{ relate:agents }}
-					<div class="agent-block">
+					<div itemscope class="agent-block">
 						<a class="agent-image" href="{{ url }}">
-							<img src="{{ transform src="{{ image }}" width="300" }}" class="img-circle" />
+							<img itemprop="image" src="{{ transform src="{{ image }}" width="300" }}" class="img-circle" alt="{{ title }}"/>
 						</a>
 						<div class="agent-details">
 							<a href="{{ url }}"><span>{{ title }}</span></a>
 							<ul>
-								{{ if phone }}<li>{{ theme:partial src="svg/phone" }} {{ phone }}</li>{{ endif }}
-								{{ if email }}<li>{{ theme:partial src="svg/mail" }} {{ email|link }}</li>{{ endif }}
+								{{ if phone }}<li itemprop="phone">{{ theme:partial src="svg/phone" }} {{ phone }}</li>{{ endif }}
+								{{ if email }}<li itemprop="email">{{ theme:partial src="svg/mail" }} {{ email|link }}</li>{{ endif }}
 							</ul>
 						</div>
 					</div>
 					{{ /relate:agents }}
 					{{ else }}
-					<div class="agent-block">
+					<div itemscope class="agent-block">
 						<a class="agent-image" href="http://beauchampestates.com" target="_blank" >
-							<img src="../../../_themes/main/img/beauchamp.jpg" class="img-circle" />
+							<img itemprop="image" src="../../../_themes/main/img/beauchamp.jpg" class="img-circle" />
 						</a>
 						<div class="agent-details">
 							<a href="http://beauchampestates.com" target="_blank"><span>Beauchamp Estates</span></a>
 							<ul>
-								<li>{{ theme:partial src="svg/phone" }} +44 (0) 20 7499 7722</li>
-								<li>{{ theme:partial src="svg/mail" }}<a href="mailto:info@beauchamp.co.uk">info@beauchamp.co.uk</a></li>
+								<li itemprop="phone">{{ theme:partial src="svg/phone" }} +44 (0) 20 7499 7722</li>
+								<li itemprop="email">{{ theme:partial src="svg/mail" }}<a href="mailto:info@beauchamp.co.uk">info@beauchamp.co.uk</a></li>
 							</ul>
 						</div>
 					</div>
@@ -65,7 +65,7 @@
 
 		<main>
 		
-			<div class="property-info">
+			<di	v class="property-info">
 
 				<div class="property-top-bar">
 					<div class="location-granular"><span>
@@ -132,7 +132,7 @@
 				<div class="property-carousel">
 					{{ photo_carousel }}
 					<div>
-						<img data-lazy="{{ transform path width="900" height="600" quality="70" src="{{ value }}"}}">
+						<img data-lazy="{{ transform path width="900" height="600" quality="70" src="{{ value }}"}}" alt="{{ title }} - {{ property_location }} - New York City Townhouse Real Estate">
 					</div>
 					{{ /photo_carousel}}
 				</div>
@@ -160,19 +160,36 @@
 							</div>
 							
 							<ul>
-							{{ if amenities }}
-								{{ amenities }}
-								{{ if value =="washerDryer" }}
-								<li>Washer / Dryer</li>
-								{{ else }}
-								<li>{{ value|ucfirst }}</li>
+							{{ if keyfeature_order }}
+								{{ if key_features }}
+									{{ key_features }}
+									<li>{{ value }}</li>
+									{{ /key_features }}
 								{{ endif }}
-								{{ /amenities }}
-							{{ endif }}	
-							{{ if key_features }}
-								{{ key_features }}
-								<li>{{ value }}</li>
-								{{ /key_features }}
+								{{ if amenities }}
+									{{ amenities }}
+									{{ if value =="washerDryer" }}
+									<li>Washer / Dryer</li>
+									{{ else }}
+									<li>{{ value|ucfirst }}</li>
+									{{ endif }}
+									{{ /amenities }}
+								{{ endif }}	
+							{{ else }}
+								{{ if key_features }}
+									{{ key_features }}
+									<li>{{ value }}</li>
+									{{ /key_features }}
+								{{ endif }}
+								{{ if amenities }}
+									{{ amenities }}
+									{{ if value =="washerDryer" }}
+									<li>Washer / Dryer</li>
+									{{ else }}
+									<li>{{ value|ucfirst }}</li>
+									{{ endif }}
+									{{ /amenities }}
+								{{ endif }}
 							{{ endif }}
 							</ul>
 						</div>
@@ -266,7 +283,7 @@
 							{{ relate:agents }}
 							<div class="agent-block">
 								<a class="agent-image" href="{{ url }}">
-									<img src="{{ transform src="{{ image }}" width="300" }}" class="img-circle" />
+									<img src="{{ transform src="{{ image }}" width="300" }}" class="img-circle" alt="{{ title }}"/>
 								</a>
 								<div class="agent-details">
 									<a href="{{ url }}"><span>{{ title }}</span></a>

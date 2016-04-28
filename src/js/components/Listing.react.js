@@ -24,7 +24,7 @@ var Listing = React.createClass({
   render: function() {
     var listing = this.props.listing;
     var divStyle = {
-      backgroundImage: 'url(' + listing.preview_image + ')'
+      backgroundImage: 'url(' + '"' + listing.preview_image + '"' + ')'
     };
     function createMarkup() { return {__html: 'ft<sup>2</sup>'}; };
     if (listing.openhouse !== "" && listing.streeteasy_status == 'active') {

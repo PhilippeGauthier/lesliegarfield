@@ -22,7 +22,7 @@ var livereload = require('gulp-livereload');
 var reload_page = livereload.changed;
 
 var path = {
-  HTML: 'src/default.html',
+  HTML: 'src/*.html',
   HTML_COPY: 'wwwroot/_themes/main/layouts',
   MINIFIED_OUT: 'main.min.js',
   OUT: 'main.js',

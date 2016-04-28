@@ -1,7 +1,7 @@
 
 {{ if file|empty && link|empty }}
- <div class="carousel-tile press-item">
-	<div>
+ <div itemscope class="carousel-tile press-item">
+	<div itemprop="review">
 		{{ relate:publication }}
 		{{ if image|not_empty }}
 		<img src="{{ path src="{{ image }}" }}">
@@ -13,8 +13,8 @@
 	</div>
  </div>
 {{ else }}
- <a target="_blank" href="{{ link or file }}" class="carousel-tile press-item">
-	<div>
+ <a itemscope target="_blank" href="{{ link or file }}" class="carousel-tile press-item">
+	<div itemprop="review">
 		{{ relate:publication }}
 		{{ if image|not_empty }}
 		<img src="{{ path src="{{ image }}" }}">

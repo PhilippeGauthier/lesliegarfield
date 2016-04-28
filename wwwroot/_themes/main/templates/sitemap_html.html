@@ -1,0 +1,62 @@
+
+
+<div class="no-hero-header faq-header">
+  <div class="container"><h2>Sitemap</h2></div>
+</div>
+
+<section class="no-hero faq">
+  <div class="container">
+    <main>
+
+      <div class="sitemap">
+        <h2><a href="{{ site_root }}agents">Agents</a></h2>
+        <div class="sub-section">
+          <ul>
+            {{ entries:listing folder="agents/garfield" }}
+            <li><a href="{{ url }}">{{ title }}</a></li>
+            {{ /entries:listing }}
+          </ul>
+        </div>
+      </div>
+
+      <div class="sitemap">
+        <h2><a href="{{ site_root }}neighborhoods/individual">Neighborhoods</a></h2>
+        <div class="sub-section">
+          <ul>
+            {{ entries:listing folder="neighborhoods" }}
+            <li><a href="{{ url }}">{{ title }} Townhouses</a></li>
+            {{ /entries:listing }}
+          </ul>
+        </div>
+      </div>
+
+      <div class="sitemap">
+        <h2>Properties</h2>
+        <div class="sub-section">
+          <h3><a href="{{ site_root }}properties/new-york">New York</a></h3>
+          <ul>
+            {{ entries:listing folder="properties/new-york/sale|properties/new-york/rental" }}
+            <li><a href="{{ url }}">{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}</a></li>
+            {{ /entries:listing }}
+          </ul>
+        </div>
+        <div class="sub-section">
+          <h3>
+            <a href="{{ site_root }}properties/international">International</a>
+          </h3>
+          <ul>
+            {{ entries:listing folder="properties/international/sale|properties/international/rental" }}
+            <li><a href="{{ url }}">{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}</a></li>
+            {{ /entries:listing }}
+          </ul>
+        </div>
+      </div>
+
+    </main>
+
+
+  </div>
+</section>
+
+
+

@@ -1,0 +1,58 @@
+{{ _xml_header }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	{{ nav from="/" }}
+	<url>
+		<loc>{{ global:site_url }}{{ url }}</loc>
+		<lastmod>{{ last_modified format="Y-m-d" }}</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	{{ /nav }}
+	{{ entries:listing folder="agents/garfield" limit="1000" }}
+	<url>
+		<loc>{{ url }}</loc>
+		<lastmod>{{ datestamp format="Y-m-d" }}</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	{{ /entries:listing }}
+	{{ entries:listing folder="neighborhoods" max_depth="1" limit="1000" }}
+	<url>
+		<loc>{{ url }}</loc>
+		<lastmod>{{ datestamp format="Y-m-d" }}</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	{{ /entries:listing }}
+	{{ get_content from="/reports" limit="1000" }}
+	{{ reports }}
+	<url>
+		<loc>{{ report|whitespace }}</loc>
+		<lastmod>{{ datestamp format="Y-m-d" }}</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	{{ /reports }}
+	{{ /get_content }}
+	{{ entries:listing folder="blog" max_depth="1" limit="1000" }}
+	<url>
+		<loc>{{ url }}</loc>
+		<lastmod>{{ datestamp format="Y-m-d" }}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.8</priority>
+	</url>
+	{{ /entries:listing }}
+	{{ entries:listing folder="properties/new-york/sale|properties/new-york/rental|properties/international/sale|properties/international/rental" limit="1000" }}
+	<url>
+		<loc>{{ url }}</loc>
+		<lastmod>{{ datestamp format="Y-m-d" }}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.8</priority>
+	</url>
+	{{ /entries:listing }}
+
+
+
+</urlset>
+
+

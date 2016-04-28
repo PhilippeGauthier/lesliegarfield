@@ -481,7 +481,7 @@
 						});
 
 					$.getJSON(
-						"http://open.mapquestapi.com/geocoding/v1/address?key=Fmjtd%7Cluur29ubn9%2C2s%3Do5-908n16&callback=?",
+						"https://open.mapquestapi.com/geocoding/v1/address?key=Fmjtd%7Cluur29ubn9%2C2s%3Do5-908n16&callback=?",
 						{
 							location: address,
 							maxResults: 1,

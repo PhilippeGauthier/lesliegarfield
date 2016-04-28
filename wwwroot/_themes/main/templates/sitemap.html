@@ -1,0 +1,23 @@
+<!--
+    Sitemap layout
+    - Where entries is a valid collection and {{ global:site_url }} returns your site's root url
+    - To add an additional collect, duplicate the first block enclosed in <url> tags and change the collection name
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	{{ entries:listing folder="properties" limit="1000" }}
+	<url>
+		<loc>{{ url }}</loc>
+		<lastmod>{{ datestamp format="Y-m-d" }}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.8</priority>
+	</url>
+	{{ /collection:property }}
+	{{ nav from="/" }}
+	<url>
+		<loc>{{ global:site_url }}{{ url }}</loc>
+		<lastmod>{{ last_modified format="Y-m-d" }}</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	{{ /nav }}
+</urlset>
