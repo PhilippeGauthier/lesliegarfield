@@ -22,7 +22,7 @@
 				<a href="{{ email}}"><span itemprop="email" class="details">{{ theme:partial src="svg/mail" }} {{ email }}</span></a>
 			</div>
 			{{ else }}
-			<div class="grid-3-constrained-padding">
+			<div itemscope itemtype="http://schema.org/RealEstateAgent" class="grid-3-constrained-padding">
 				<a href="{{ url }}">
 					<img itemprop="photo" class="circle" src="{{ transform width="200" src="{{ image }}" }}" alt="{{ title }} - Leslie J. Garfield &amp; Co"></img>
 					<span itemprop="name" class="name">{{ title }}</span>

@@ -116,6 +116,14 @@
 				display: inline-block;
 			}
 		}
+		.time-slot {
+			display: block;
+		}
+		@include breakpoint($medium) {
+			.time-slot {
+				display: inline-block;
+			}
+		}
 		span {
 			bottom: 0;
 			font-size: 13px;
@@ -133,10 +141,9 @@
 				color: $red;
 				display: none;
 				padding: 0 10px;
+				display: none;
 				@include breakpoint($medium) {
-					&.display {
-						display: inline-block;
-					}
+					display: inline-block;	
 				}
 			}
 		}

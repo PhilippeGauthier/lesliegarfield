@@ -9,6 +9,9 @@ var React = require('react');
 var Slick = require('./components/Slick.js');
 var slickInitialize = require('./components/slickInitialize.slick.js');
 
+// Twitter Widget
+// var Twitter = require('./components/Slick.js');
+
 // Currency Conversion
 var Currency = require('./components/Currency.js');
 

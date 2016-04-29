@@ -1,0 +1,205 @@
+<div class="specs">
+	<div class="title">
+		{{ theme:partial src="svg/glasses" }}
+		<span>SPECIFICATIONS</span>
+	</div>
+
+	<ul>
+		<li>Price</li>
+		
+		{{ if terms|not_empty }}
+		<li>Lease Terms</li>
+		{{ endif }}
+
+		{{ if plot|not_empty }}
+		<li>Plot</li>
+		{{ endif }}
+
+		{{ if building_size|not_empty }}
+		<li>Building</li>
+		{{ endif }}
+
+		{{ if ownership|not_empty }}
+		<li>Ownership</li>
+		{{ endif }}
+
+		{{ if build_date|not_empty }}
+		<li>Built</li>
+		{{ endif }}
+
+		{{ if stories|not_empty }}
+		<li>Stories</li>
+		{{ endif }}
+
+		<li>Square Feet</li>
+
+		{{ if units|not_empty }}
+		<li>Units</li>
+		{{ endif }}
+
+		{{ if rooms|not_empty }}
+		<li>Rooms</li>
+		{{ endif }}
+
+		<li>Bedrooms</li>
+
+		<li>Bathrooms</li>
+
+		{{ if powder|not_empty }}
+		<li>Powder Rooms</li>
+		{{ endif }}
+
+		{{ if pet_policy|not_empty }}
+		<li>Pet Policy</li>
+		{{ endif }}
+
+		{{ if furnished|not_empty }}
+		<li>Furnished/Unfurnished</li>
+		{{ endif }}
+
+		{{ if taxes|not_empty }}
+		<li>Annual Taxes</li>
+		{{ endif }}
+
+		{{ if income|not_empty }}
+		<li>Income</li>
+		{{ endif }}
+
+		{{ if expenses|not_empty }}
+		<li>Expenses</li>
+		{{ endif }}
+
+		{{ if common_charges|not_empty }}
+		<li>Common Charges</li>
+		{{ endif }}
+
+		{{ if maintenance|not_empty }}
+		<li>Maintenance</li>
+		{{ endif }}
+	</ul>
+	<ul>
+		<li>{{ if currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ else }}${{ endif }}{{ price|no_commas|whitespace|format_number }}{{ if ownership == "rental" }}/month{{ endif }}</li>
+
+		{{ if terms|not_empty }}
+		<li>{{ terms }}</li>
+		{{ endif }}
+
+		{{ if plot|not_empty }}
+		<li>{{ plot|format_number }}</li>
+		{{ endif }}
+
+		{{ if building_size|not_empty }}
+		<li>{{ building_size }}</li>
+		{{ endif }}
+
+		{{ if ownership|not_empty }}
+		<li>{{ ownership|ucfirst }}</li>
+		{{ endif }}
+
+		{{ if build_date|not_empty }}
+		<li>{{ build_date }}</li>
+		{{ endif }}
+
+		{{ if stories|not_empty }}
+		<li>{{ stories }}</li>
+		{{ endif }}
+
+		<li>{{ sqft|no_commas|whitespace|format_number }} ft<sup>2</sup></li>
+
+		{{ if units|not_empty }}
+		<li>{{ units|format_number }}</li>
+		{{ endif }}
+
+		{{ if rooms|not_empty }}
+		<li>{{ rooms }}</li>
+		{{ endif }}
+
+		<li>{{ bedrooms }}</li>
+
+		<li>{{ bathrooms }}</li>
+
+		{{ if powder|not_empty }}
+		<li>{{ powder }}</li>
+		{{ endif }}
+
+		{{ if pet_policy|not_empty }}
+		<li>{{ pet_policy|ucfirst  }}</li>
+		{{ endif }}
+
+		{{ if furnished|not_empty }}
+		<li>{{ furnished|ucfirst  }}</li>
+		{{ endif }}
+
+		{{ if taxes|not_empty }}
+		<li>${{ taxes|no_commas|whitespace|format_number }}</li>
+		{{ endif }}
+
+		{{ if income|not_empty }}
+		<li>${{ income|no_commas|whitespace|format_number }}</li>
+		{{ endif }}
+
+		{{ if expenses|not_empty }}
+		<li>${{ expenses|no_commas|whitespace|format_number }}</li>
+		{{ endif }}
+
+		{{ if common_charges|not_empty }}
+		<li>${{ common_charges|no_commas|whitespaceformat_number }}</li>
+		{{ endif }}
+		
+		{{ if maintenance|not_empty }}
+		<li>${{ maintenance|no_commas|whitespace|format_number }}</li>
+		{{ endif }}
+
+	</ul>
+
+</div>
+<div class="location_features">
+	<div class="title">
+		{{ theme:partial src="svg/maps" }}
+		<span>LOCATION</span>
+	</div>
+	<ul>
+		<li>{{ location_granular }}</li>
+	</ul>
+	<div class="title">
+		{{ theme:partial src="svg/stars" }}
+		<span>KEY FEATURES</span>
+	</div>
+	
+	<ul>
+
+		{{ if keyfeature_order }}
+		{{ if key_features }}
+		{{ key_features }}
+		<li>{{ value }}</li>
+		{{ /key_features }}
+		{{ endif }}
+		{{ if amenities }}
+		{{ amenities }}
+		{{ if value =="washerDryer" }}
+		<li>Washer / Dryer</li>
+		{{ else }}
+		<li>{{ value|ucfirst }}</li>
+		{{ endif }}
+		{{ /amenities }}
+		{{ endif }}	
+		{{ else }}
+		{{ if key_features }}
+		{{ key_features }}
+		<li>{{ value }}</li>
+		{{ /key_features }}
+		{{ endif }}
+		{{ if amenities }}
+		{{ amenities }}
+		{{ if value =="washerDryer" }}
+		<li>Washer / Dryer</li>
+		{{ else }}
+		<li>{{ value|ucfirst }}</li>
+		{{ endif }}
+		{{ /amenities }}
+		{{ endif }}
+		{{ endif }}
+
+	</ul>
+</div>
+					

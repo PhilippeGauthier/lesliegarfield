@@ -1,0 +1,7 @@
+{{ summary_intro|striptags:o }}
+{{ if summary_full|not_empty }}
+<div style="display: none">
+	{{ summary_full|striptags:o }}
+</div>
+<a class="read-more-expander expander-prev block" href=""><i  class="fa fa-plus-circle green"></i><span>Read More</span></a>
+{{ endif }}

@@ -1,0 +1,32 @@
+{{ if streeteasy_status !== "active" }}
+<span>{{ if streeteasy_status == "in-contract"}}In Contract{{ elseif streeteasy_status == "sold" }}Sold{{ elseif streeteasy_status =="off-market" }}Off Market{{ elseif streeteasy_status =="temp-off-market" }}Temporarirly Off Market{{ endif }}</span>
+
+{{ else }}
+
+	{{ openhouse_grid }}
+		 
+		{{ if first }} 
+			{{ if date|is_today || date|in_future }}
+			<div class="time-slot">
+				<span class="red red-span" id="first-o-h">Open <i class="fa fa-home"></i>: </span> <span class="red red-span">{{date format="l, F jS" }}: {{ startTime }} - {{ endTime }}</span>
+			</div>
+			{{ else }}
+			{{ endif }}
+		
+		{{ elseif last }}
+			{{ if date|is_today || date|in_future }}
+			<div class="time-slot">
+				<span class="oh-divider">|</span>
+				<div class="o-h-span display" id="second">
+					<span class="red red-span">Open <i class="fa fa-home"></i>: </span>
+				</div>
+				<span class="red red-span"> {{date format="l, F jS" }}: {{ startTime }} - {{ endTime }}</span>
+			</div>
+			{{ else }}
+			{{ endif }}
+		
+		{{ endif }}
+		
+	{{ /openhouse_grid }}
+
+{{ endif }}

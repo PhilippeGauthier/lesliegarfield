@@ -1,0 +1,31 @@
+{{ if keyfeature_order }}
+	{{ if key_features }}
+		{{ key_features }}
+		<li>{{ value }}</li>
+		{{ /key_features }}
+	{{ endif }}
+	{{ if amenities }}
+		{{ amenities }}
+		{{ if value =="washerDryer" }}
+		<li>Washer / Dryer</li>
+		{{ else }}
+		<li>{{ value|ucfirst }}</li>
+		{{ endif }}
+		{{ /amenities }}
+	{{ endif }}	
+{{ else }}
+	{{ if key_features }}
+		{{ key_features }}
+		<li>{{ value }}</li>
+		{{ /key_features }}
+	{{ endif }}
+	{{ if amenities }}
+		{{ amenities }}
+		{{ if value =="washerDryer" }}
+		<li>Washer / Dryer</li>
+		{{ else }}
+		<li>{{ value|ucfirst }}</li>
+		{{ endif }}
+		{{ /amenities }}
+	{{ endif }}
+{{ endif }}

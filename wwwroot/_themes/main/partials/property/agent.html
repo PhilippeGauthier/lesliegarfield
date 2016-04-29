@@ -1,0 +1,29 @@
+{{ if realtor === "garfield" }}
+{{ relate:agents }}
+<div itemscope class="agent-block">
+	<a class="agent-image" href="{{ url }}">
+		<img itemprop="image" src="{{ transform src="{{ image }}" width="300" }}" class="img-circle" alt="{{ title }}"/>
+	</a>
+	<div class="agent-details">
+		<a href="{{ url }}"><span>{{ title }}</span></a>
+		<ul>
+			{{ if phone }}<li itemprop="phone">{{ theme:partial src="svg/phone" }} {{ phone }}</li>{{ endif }}
+			{{ if email }}<li itemprop="email">{{ theme:partial src="svg/mail" }} {{ email|link }}</li>{{ endif }}
+		</ul>
+	</div>
+</div>
+{{ /relate:agents }}
+{{ else }}
+<div itemscope class="agent-block">
+	<a class="agent-image" href="http://beauchampestates.com" target="_blank" >
+		<img itemprop="image" src="../../../_themes/main/img/beauchamp.jpg" class="img-circle" />
+	</a>
+	<div class="agent-details">
+		<a href="http://beauchampestates.com" target="_blank"><span>Beauchamp Estates</span></a>
+		<ul>
+			<li itemprop="phone">{{ theme:partial src="svg/phone" }} +44 (0) 20 7499 7722</li>
+			<li itemprop="email">{{ theme:partial src="svg/mail" }}<a href="mailto:info@beauchamp.co.uk">info@beauchamp.co.uk</a></li>
+		</ul>
+	</div>
+</div>
+{{ endif }}

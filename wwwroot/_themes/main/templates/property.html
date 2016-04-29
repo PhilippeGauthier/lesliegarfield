@@ -7,58 +7,11 @@
 			<div class="agent-container">
 				<div class="agent property-agents aside">
 					<div class="dotted first"></div>
-					{{ if realtor === "garfield" }}
-					{{ relate:agents }}
-					<div itemscope class="agent-block">
-						<a class="agent-image" href="{{ url }}">
-							<img itemprop="image" src="{{ transform src="{{ image }}" width="300" }}" class="img-circle" alt="{{ title }}"/>
-						</a>
-						<div class="agent-details">
-							<a href="{{ url }}"><span>{{ title }}</span></a>
-							<ul>
-								{{ if phone }}<li itemprop="phone">{{ theme:partial src="svg/phone" }} {{ phone }}</li>{{ endif }}
-								{{ if email }}<li itemprop="email">{{ theme:partial src="svg/mail" }} {{ email|link }}</li>{{ endif }}
-							</ul>
-						</div>
-					</div>
-					{{ /relate:agents }}
-					{{ else }}
-					<div itemscope class="agent-block">
-						<a class="agent-image" href="http://beauchampestates.com" target="_blank" >
-							<img itemprop="image" src="../../../_themes/main/img/beauchamp.jpg" class="img-circle" />
-						</a>
-						<div class="agent-details">
-							<a href="http://beauchampestates.com" target="_blank"><span>Beauchamp Estates</span></a>
-							<ul>
-								<li itemprop="phone">{{ theme:partial src="svg/phone" }} +44 (0) 20 7499 7722</li>
-								<li itemprop="email">{{ theme:partial src="svg/mail" }}<a href="mailto:info@beauchamp.co.uk">info@beauchamp.co.uk</a></li>
-							</ul>
-						</div>
-					</div>
-					{{ endif }}
-
+					{{ theme:partial src="property/agent" }}
 				</div>
-				{{ if brochure or floor_plans }}
+				{{ theme:partial src="property/downloads" }}
 				<div class="dotted"></div>
-				<div class="agent property-downloads">
-					{{ if brochure }}
-					<a href="{{ brochure }}" target="_blank">
-						{{ theme:partial src="svg/download" }}
-						<span>Brochure</span>
-					</a>
-					{{ endif }}
-					{{ if floor_plans }}
-					<a href="{{ floor_plans }}" target="_blank">
-						{{ theme:partial src="svg/floorplans" }}
-						<span>Floorplans</span>
-					</a>
-					{{ endif }}
-				</div>
-				{{ endif }}
-				<div class="dotted"></div>
-				<div class="agent property-schedule">
-					<a data-toggle="modal" data-target="#viewing-modal" href="#" class="btn btn-garfield">Schedule a viewing</a>
-				</div>
+				{{ theme:partial src="property/schedule" }}
 				<div class="dotted"></div>
 			</div>
 		</aside>
@@ -76,57 +29,16 @@
 						{{ endif }}
 					</div>
 					<div class="social desktop right-align gray">
-						<a href="mailto:?subject={{ title }} - Property Found on lesliegarfield.com&body={{ _site_url }}{{ url }}">
-							<i class="fa fa-envelope fa-lg"></i>
-						</a>
-						<a href="https://twitter.com/intent/tweet?url={{ _site_url }}{{ url }}">
-							<i class="fa fa-twitter fa-lg"></i>
-						</a>
-						<a href="javascript:pinIt();">
-							<i class="fa fa-pinterest fa-lg"></i>
-						</a>
-						<a class="fb" 
-						data-title="{{ title }}" 
-						data-desc="Property listed at Leslie Garfield" 
-						data-image="{{ preview_image}}"
-						href="{{ _site_url }}{{ url }}">
-						<i class="fa fa-facebook fa-lg"></i>
-						</a>
+						{{ theme:partial src="property/social" }}
 					</div>
 				</div>
+
 				<div class="property-header">
 					<h2>{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}</h2>
-
 				</div>
 
 				<div class="open-house desktop">
-				{{ if streeteasy_status !== "active" }}
-				<span>{{ if streeteasy_status == "in-contract"}}In Contract{{ elseif streeteasy_status == "sold" }}Sold{{ elseif streeteasy_status =="off-market" }}Off Market{{ elseif streeteasy_status =="temp-off-market" }}Temporarirly Off Market{{ endif }}</span>
-				
-				
-				{{ else }}
-
-				{{ openhouse_grid }}
-					 
-					{{ if first && date|is_today || date|in_future }}
-					
-						<span class="red red-span" id="first-o-h">Open <i class="fa fa-home"></i>: </span> <span class="red red-span">{{date format="l, F jS" }}: {{ startTime }} - {{ endTime }}</span>
-					
-
-					{{ elseif last && date|is_today || date|in_future }}
-					
-						<span class="oh-divider">|</span>
-						<div class="o-h-span display" id="second">
-							<span class="red red-span">Open <i class="fa fa-home"></i>: </span>
-						</div>
-						<span class="red red-span"> {{date format="l, F jS" }}: {{ startTime }} - {{ endTime }}</span>
-					
-					{{ endif }}
-					
-				{{ /openhouse_grid }}
-
-					
-				{{ endif }}
+					{{ theme:partial src="property/openhouse" }}
 				</div>
 
 				<div class="property-carousel">
@@ -136,223 +48,53 @@
 					</div>
 					{{ /photo_carousel}}
 				</div>
+
 				<div class="green-specs desktop">
-						<div class="specs">
-							<div class="title">
-								{{ theme:partial src="svg/glasses" }}
-								<span>SPECIFICATIONS</span>
-							</div>
+					{{ theme:partial src="property/specs" }}
+				</div>
 
-							{{ theme:partial src="green_specs" use_context="true" }}
-
-						</div>
-						<div class="location_features">
-							<div class="title">
-								{{ theme:partial src="svg/maps" }}
-								<span>LOCATION</span>
-							</div>
-							<ul>
-								<li>{{ location_granular }}</li>
-							</ul>
-							<div class="title">
-								{{ theme:partial src="svg/stars" }}
-								<span>KEY FEATURES</span>
-							</div>
-							
-							<ul>
-							{{ if keyfeature_order }}
-								{{ if key_features }}
-									{{ key_features }}
-									<li>{{ value }}</li>
-									{{ /key_features }}
-								{{ endif }}
-								{{ if amenities }}
-									{{ amenities }}
-									{{ if value =="washerDryer" }}
-									<li>Washer / Dryer</li>
-									{{ else }}
-									<li>{{ value|ucfirst }}</li>
-									{{ endif }}
-									{{ /amenities }}
-								{{ endif }}	
-							{{ else }}
-								{{ if key_features }}
-									{{ key_features }}
-									<li>{{ value }}</li>
-									{{ /key_features }}
-								{{ endif }}
-								{{ if amenities }}
-									{{ amenities }}
-									{{ if value =="washerDryer" }}
-									<li>Washer / Dryer</li>
-									{{ else }}
-									<li>{{ value|ucfirst }}</li>
-									{{ endif }}
-									{{ /amenities }}
-								{{ endif }}
-							{{ endif }}
-							</ul>
-						</div>
-					</div>
 				<div class="details-small">
-				{{ if openhouse == "true" or streeteasy_status !== "active" }}
-				<div class="open-house mobile">
 				
-					{{ if openhouse == "true" }}
-						{{ openhouse_grid }}
-							 
-							{{ if first && date|is_today || date|in_future }}
-							
-								<span class="red red-span" id="first-o-h">Open <i class="fa fa-home"></i>: </span> <span class="red red-span">{{date format="l, F jS" }}: {{ startTime }} - {{ endTime }}</span>
-
-							{{ elseif last && date|is_today || date|in_future }}
-								<span class="oh-divider">|</span>
-								<div class="o-h-span display" id="second-o-h">
-									<span class="red red-span">Open <i class="fa fa-home"></i>: </span>
-								</div>
-								<span class="red red-span"> {{date format="l, F jS" }}: {{ startTime }} - {{ endTime }}</span>
-
-							{{ endif }}
-							
-						{{ /openhouse_grid }}
-					{{ elseif streeteasy_status != "active" }}
-					<span>{{ if streeteasy_status == "in-contract"}}In Contract{{ elseif streeteasy_status == "sold" }}Sold{{ endif }}</span>
-					{{ endif }}
-				</div>	
-				{{ endif }}
+					<div class="open-house mobile">
+					{{ theme:partial src="property/openhouse" }}
+					</div>	
+	
 					<div class="dotted"></div>
-					<div class="agent property-schedule">
-						<a data-toggle="modal" data-target="#viewing-modal" href="#" class="btn btn-garfield">Schedule a viewing</a>
-					</div>
+					{{ theme:partial src="property/schedule" }}
 					<div class="dotted"></div>
 					<div class="green-specs mobile">
-						<div class="specs">
-							<div class="title">
-								{{ theme:partial src="svg/glasses" }}
-								<span>SPECIFICATIONS</span>
-							</div>
-
-							{{ theme:partial src="green_specs" use_context="true" }}
-
-						</div>
-						<div class="location_features">
-							<div class="title">
-								{{ theme:partial src="svg/maps" }}
-								<span>LOCATION</span>
-							</div>
-							<ul>
-								<li>{{ location_granular }}</li>
-							</ul>
-							<div class="title">
-								{{ theme:partial src="svg/stars" }}
-								<span>KEY FEATURES</span>
-							</div>
-							
-							<ul>
-
-							{{ if amenities }}
-								{{ amenities }}
-								{{ if value =="washerDryer" }}
-								<li>Washer / Dryer</li>
-								{{ else }}
-								<li>{{ value|ucfirst }}</li>
-								{{ endif }}
-								{{ /amenities }}
-							{{ endif }}	
-							{{ if key_features }}
-								{{ key_features }}
-								<li>{{ value }}</li>
-								{{ /key_features }}
-							{{ endif }}
-
-							</ul>
-						</div>
+						{{ theme:partial src="property/specs" }}
 					</div>
-				<div class="summary mobile">
-					{{ summary_intro|striptags:o }}
-					{{ if summary_full|not_empty }}
-					<div style="display: none">
-						{{ summary_full|striptags:o }}
+						
+					<div class="summary mobile">
+						{{ theme:partial src="property/summary"}}
 					</div>
-					<a class="read-more-expander expander-prev block" href=""><i  class="fa fa-plus-circle green"></i><span>Read More</span></a>
-					{{ endif }}
-				</div>
-				<div class="dotted" style="margin-top: 15px;"></div>
+
+					<div class="dotted" style="margin-top: 15px;"></div>
+
 					<div class="agent-internal">
 						<div class="property-agents agent mobile">
-							{{ relate:agents }}
-							<div class="agent-block">
-								<a class="agent-image" href="{{ url }}">
-									<img src="{{ transform src="{{ image }}" width="300" }}" class="img-circle" alt="{{ title }}"/>
-								</a>
-								<div class="agent-details">
-									<a href="{{ url }}"><span>{{ title }}</span></a>
-									<ul>
-										{{ if phone }}<li>{{ theme:partial src="svg/phone" }} {{ phone }}</li>{{ endif }}
-										{{ if email }}<li>{{ theme:partial src="svg/mail" }} {{ email|link }}</li>{{ endif }}
-									</ul>
-								</div>
-							</div>
-							{{ /relate:agents }}
+							{{ theme:partial src="property/agent" }}
 						</div>
-					</div>
-
-					<div class="dotted"></div>
-					{{ if brochure or floor_plans }}
+					</div>		
 
 					<div class="agent property-downloads">
-						{{ if brochure }}
-						<a href="{{ brochure }}" target="_blank">
-							{{ theme:partial src="svg/download" }}
-							<span>Brochure</span>
-						</a>
-						{{ endif }}
-						{{ if floor_plans }}
-						<a href="{{ floor_plans }}" target="_blank">
-							{{ theme:partial src="svg/floorplans" }}
-							<span>Floorplans</span>
-						</a>
-						{{ endif }}
+					{{ theme:partial src="property/downloads" }}
 					</div>
-					{{ endif }}
+
 					<div class="dotted"></div>
 					<div class="social mobile block center-align gray">
-						<a href="mailto:?subject={{ title }} - Property Found on lesliegarfield.com&body={{ _site_url }}{{ url }}">
-							<i class="fa fa-envelope fa-lg"></i>
-						</a>
-						<a href="https://twitter.com/intent/tweet?url={{ _site_url }}{{ url }}">
-							<i class="fa fa-twitter fa-lg"></i>
-						</a>
-						<a href="javascript:pinIt();">
-							<i class="fa fa-pinterest fa-lg"></i>
-						</a>
-						<a class="fb" 
-						data-title="{{ title }}" 
-						data-desc="Property listed at Leslie Garfield" 
-						data-image="{{ preview_image}}"
-						href="{{ _site_url }}{{ url }}">
-						<i class="fa fa-facebook fa-lg"></i>
-					</a>
-				</div>
-
-				</div>
-
-
-				
-				<div class="summary desktop">
-					{{ summary_intro|striptags:o }}
-					{{ if summary_full|not_empty }}
-					<div style="display: none">
-						{{ summary_full|striptags:o }}
+						{{ theme:partial src="property/social" }}
 					</div>
-					<a class="read-more-expander expander-prev block" href=""><i  class="fa fa-plus-circle green"></i><span>Read More</span></a>
-					{{ endif }}
+
+				</div>
+
+				<div class="summary desktop">
+					{{ theme:partial src="property/summary" }}
 				</div>
 				
 			</div>
 		</main>
-
-
 
 	</div>
 </section>
@@ -394,8 +136,5 @@
 {{ endif }}
 {{ /entries:listing }}
 
-
-
-
-		{{ theme:partial src="modal_listing" use_context="true" }}
+{{ theme:partial src="modal_listing" use_context="true" }}
 
