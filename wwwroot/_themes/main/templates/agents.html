@@ -13,22 +13,22 @@
 
 			{{ entries:listing folder="agents/garfield" }}
 			{{ if first }}
-			<div class="grid-3-constrained-padding">
+			<div itemscope itemtype="http://schema.org/RealEstateAgent" class="grid-3-constrained-padding">
 				<div>
-					<img class="circle" src="{{ path src="{{ image }}" }}" alt="{{ title }} - Leslie J. Garfield &amp; Co"></img>
-					<span class="name">{{ title }}</span>
+					<img itemprop="photo" class="circle" src="{{ transform width="200" src="{{ image }}" }}" alt="{{ title }} - Leslie J. Garfield &amp; Co"></img>
+					<span itemprop="name" class="name">{{ title }}</span>
 				</div>
-				<span class="details">{{ theme:partial src="svg/phone" }} {{ phone }}</span>
-				<a href="{{ email}}"><span class="details">{{ theme:partial src="svg/mail" }} {{ email }}</span></a>
+				<span itemprop="phone" class="details">{{ theme:partial src="svg/phone" }} {{ phone }}</span>
+				<a href="{{ email}}"><span itemprop="email" class="details">{{ theme:partial src="svg/mail" }} {{ email }}</span></a>
 			</div>
 			{{ else }}
 			<div class="grid-3-constrained-padding">
 				<a href="{{ url }}">
-					<img class="circle" src="{{ transform width="200" src="{{ image }}" }}" alt="{{ title }} - Leslie J. Garfield &amp; Co"></img>
-					<span class="name">{{ title }}</span>
+					<img itemprop="photo" class="circle" src="{{ transform width="200" src="{{ image }}" }}" alt="{{ title }} - Leslie J. Garfield &amp; Co"></img>
+					<span itemprop="name" class="name">{{ title }}</span>
 				</a>
-				<span class="details">{{ theme:partial src="svg/phone" }} {{ phone }}</span>
-				<a href="mailto:{{ email }}"><span class="details">{{ theme:partial src="svg/mail" }} {{ email }}</span></a>
+				<span itemprop="phone" class="details">{{ theme:partial src="svg/phone" }} {{ phone }}</span>
+				<a href="{{ email}}"><span itemprop="email" class="details">{{ theme:partial src="svg/mail" }} {{ email }}</span></a>
 			</div>
 			{{ endif }}
 			{{ /entries:listing }}
