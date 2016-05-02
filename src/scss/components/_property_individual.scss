@@ -171,6 +171,7 @@
 		max-height: 246px;
 		text-align: center;
 		margin: auto;
+		color: transparent;
 	}
 	@include breakpoint($small) {
 		img {
