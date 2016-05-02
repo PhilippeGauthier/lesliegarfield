@@ -5959,7 +5959,8 @@ footer .footer-divider {
 .property-carousel img {
   max-height: 246px;
   text-align: center;
-  margin: auto; }
+  margin: auto;
+  color: transparent; }
 
 @media (min-width: 768px) {
   .property-carousel img {
