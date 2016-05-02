@@ -44,7 +44,7 @@
 				<div class="property-carousel">
 					{{ photo_carousel }}
 					<div>
-						<img data-lazy="{{ transform path width="900" height="600" quality="70" src="{{ value }}"}}" alt="{{ title }} - {{ property_location }} - New York City Townhouse Real Estate">
+						<img src="{{ transform path width="900" height="600" quality="70" src="{{ value }}"}}" alt="{{ title }} - {{ property_location }} - New York City Townhouse Real Estate">
 					</div>
 					{{ /photo_carousel}}
 				</div>
@@ -54,7 +54,7 @@
 				</div>
 
 				<div class="details-small">
-				
+
 					<div class="open-house mobile">
 					{{ theme:partial src="property/openhouse" }}
 					</div>	
