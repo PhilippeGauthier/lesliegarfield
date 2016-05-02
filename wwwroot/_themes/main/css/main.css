@@ -5957,14 +5957,15 @@ footer .footer-divider {
   background-color: #F7F7F7; }
 
 .property-carousel img {
-  max-height: 246px;
+  height: 246px;
   text-align: center;
   margin: auto;
-  color: transparent; }
+  color: transparent;
+  border-width: 0; }
 
 @media (min-width: 768px) {
   .property-carousel img {
-    max-height: 600px; } }
+    height: 600px; } }
 
 .agent-container {
   margin-right: 30px; }

@@ -162,7 +162,7 @@ gulp.task('watchProduction', function() {
   gulp.watch(path.MKDN_SRC + '/**/*.md', ['markdown']);
 });
 
-gulp.task('production', ['replaceHTML', 'minify-css', 'build']);
+gulp.task('production', ['replaceHTML', 'sass', 'minify-css', 'build']);
 
 gulp.task('default', ['copy','watch']);
 
