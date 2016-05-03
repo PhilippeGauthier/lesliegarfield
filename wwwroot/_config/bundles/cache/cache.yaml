@@ -29,6 +29,12 @@ garbage_threshold: 30 days
 #     key: calendar-listing
 #
 publish_invalidation:
+  -
+    folder: properties/new-york/*
+    key: properties-new-york
+  -
+    folder: properties/international/*
+    key: properties-international
     
 # a list of keys that should be invalidated each day, handy for content that
 # will not change more than once per day, like a calendar, an example

@@ -18,7 +18,7 @@
   {{ elseif segment_2 =="new-york" || segment_2 == "international" }}
   <meta name="description" content="{{ summary_intro|truncate:160|striptags }}">
   {{ elseif segment_1 =="neighborhoods" && segment_2 }}
-  <meta name="description" content="{{ description|truncate:160|striptags }}">
+  <meta name="description" content="Leslie J. Garfield is New York’s leading expert on {{ title }} townhouses and small buildings. Check out our listings and schedule a viewing today!">
   {{ else }}
   <meta name="description" content="Premium NYC townhouse and small building experts who enable clients to make smarter real estate decisions by providing accurate, timely information and insights.">
   {{ endif }}
@@ -71,7 +71,13 @@
 
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" data-spy="scroll" data-target="#scroll-spy-nav">
-
+{{ if segment_1 == "ljg@lesliegarfield.com" }}
+{{ redirect url="{{ homepage }}" }}
+{{ elseif segment_1 == "agent" }}
+{{ redirect url="{{ homepage }}agents" }}
+{{ elseif segment_2 == "viewproperty" }}
+{{ redirect url="{{ homepage }}properties/new-york" }}
+{{ endif }}
     <div class="page-wrap">
       {{ theme:partial src="nav" }}
       {{ layout_content }}

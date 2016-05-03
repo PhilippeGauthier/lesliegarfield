@@ -93,6 +93,13 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
+  if ($('.summary').length) {
+    console.log('foo');
+    $('.summary p:first-of-type').attr('itemprop','description');
+  }
+});
+
+$(document).ready(function() {
   // Get an array of all element heights
   if ($('.press-item').length) {
 	  var elementHeights = $('.press-item').map(function() {
