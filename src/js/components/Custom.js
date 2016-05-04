@@ -237,6 +237,16 @@ postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('
 return false;
 });
 
+// Pinterest
+window.pinIt = function()
+{
+  var e = document.createElement('script');
+  e.setAttribute('type','text/javascript');
+  e.setAttribute('charset','UTF-8');
+  e.setAttribute('src','https://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);
+  document.body.appendChild(e);
+}
+
 if ($(".red-span").length) {
   $(".property-agents").addClass('openhouse')
 }
