@@ -42,10 +42,10 @@ var Listing = React.createClass({
       listing.streeteasy_status = "In Contract";
     }
     if (listing.streeteasy_status == 'temp-off-market') {
-      listing.streeteasy_status = "";
+      listing.streeteasy_status = "Temporarily Off Market";
     }
     if (listing.streeteasy_status == 'off-market') {
-      listing.streeteasy_status = "";
+      listing.streeteasy_status = "Off Market";
     }
     if (listing.currency == "dollars") {
       listing.currency = "$";
