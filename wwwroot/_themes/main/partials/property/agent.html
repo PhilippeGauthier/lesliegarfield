@@ -2,7 +2,7 @@
 {{ relate:agents }}
 <div itemscope itemtype="https://schema.org/RealEstateAgent" class="agent-block">
 	<a class="agent-image" href="{{ url }}">
-		<img itemprop="image" src="{{ transform src="{{ image }}" width="300" }}" class="img-circle" alt="{{ title }}"/>
+		<img nopin= "nopin" itemprop="image" src="{{ transform src="{{ image }}" width="300" }}" class="img-circle" alt="{{ title }}"/>
 	</a>
 	<div class="agent-details">
 		<a href="{{ url }}"><span itemprop="name">{{ title }}</span></a>
@@ -16,7 +16,7 @@
 {{ else }}
 <div itemscope itemtype="https://schema.org/RealEstateAgent" class="agent-block">
 	<a class="agent-image" href="http://beauchampestates.com" target="_blank" >
-		<img itemprop="image" src="../../../_themes/main/img/beauchamp.jpg" class="img-circle" />
+		<img nopin= "nopin" itemprop="image" src="../../../_themes/main/img/beauchamp.jpg" class="img-circle" />
 	</a>
 	<div class="agent-details">
 		<a href="http://beauchampestates.com" target="_blank"><span itemprop="name">Beauchamp Estates</span></a>
