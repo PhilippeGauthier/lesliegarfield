@@ -94,7 +94,6 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   if ($('.summary').length) {
-    console.log('foo');
     $('.summary p:first-of-type').attr('itemprop','description');
   }
 });
@@ -214,6 +213,7 @@ $(document).ready(function()
 });
 
 // fb share init
+
 window.fbAsyncInit = function(){
 FB.init({
     appId: '1637077719911107', status: true, cookie: true, xfbml: true }); 
@@ -224,12 +224,13 @@ FB.init({
     js.async = true;js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
     ref.parentNode.insertBefore(js, ref);}(document, /*debug*/ false));
 function postToFeed(title, desc, url, image){
-var obj = {method: 'feed',link: url, picture: 'http://104.131.23.73'+image,name: title,description: desc};
+var obj = {method: 'feed',link: url, picture: 'https://lesliegarfield.com'+image,name: title,description: desc};
 function callback(response){}
 FB.ui(obj, callback);
 }
 
 $('.fb').click(function(){
+  console.log('foo');
 elem = $(this);
 postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('image'));
 
