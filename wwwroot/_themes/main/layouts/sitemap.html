@@ -1,6 +1,6 @@
 {{ _xml_header }}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	{{ nav from="/" }}
+	{{ nav from="/" exclude="sitemap" }}
 	<url>
 		<loc>{{ global:site_url }}{{ url }}</loc>
 		<lastmod>{{ last_modified format="Y-m-d" }}</lastmod>

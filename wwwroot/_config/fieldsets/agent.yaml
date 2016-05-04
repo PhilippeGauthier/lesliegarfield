@@ -30,7 +30,10 @@ fields:
 				display: Publication
 				create: false
 				max_items: 1
+				allow_blank: true
+				default: ""
 				content:
+					default: ""
 					folder: agents/press
 					label: title
 					value: url
