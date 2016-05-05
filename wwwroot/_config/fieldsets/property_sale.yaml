@@ -243,11 +243,13 @@ fields:
     type: file
     display: Property Brochure
     destination: assets/downloads
+    allowed: [png, gif, jpg, jpeg, pdf]
     max_files: 1
   floor_plans:
     type: file
     display: Property Floorplans
     destination: assets/downloads
+    allowed: [png, gif, jpg, jpeg, pdf]
     max_files: 1
   content:
     type: redactor
