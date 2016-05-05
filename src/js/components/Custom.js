@@ -252,7 +252,9 @@ if ($(".red-span").length) {
 }
 
 
-
+// target="_blank" vulnerability
+// var newWnd = window.open();
+// newWnd.opener = null;
 
 
 

@@ -13,7 +13,7 @@
 	</div>
  </div>
 {{ else }}
- <a itemscope target="_blank" href="{{ link or file }}" class="carousel-tile press-item">
+ <a itemscope target="_blank" rel="noopener noreferrer" href="{{ link or file }}" class="carousel-tile press-item">
 	<div itemprop="review">
 		{{ relate:publication }}
 		{{ if image|not_empty }}
