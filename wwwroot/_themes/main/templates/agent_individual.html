@@ -80,7 +80,7 @@
 			{{ theme:partial src="recent_transactions_sale" use_context="true" }}
 			{{ /entries:listing }}
 
-			{{ entries:listing folder="properties/new-york/rental|properties/new-york/rented|properties/international/rental|properties/international/rented" conditions="agents:{url}, streeteasy_status:leased" sort_by="price" sort_dir="desc" }}
+			{{ entries:listing folder="properties/new-york/rental|properties/new-york/rented|properties/international/rental|properties/international/rented" conditions="agents:{url}, streeteasy_status:leased|sold" sort_by="price" sort_dir="desc" }}
 			{{ theme:partial src="recent_transactions_rental" use_context="true" }}
 			{{ /entries:listing }}
 
