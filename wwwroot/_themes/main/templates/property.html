@@ -33,9 +33,9 @@
 					</div>
 				</div>
 
-				<div style="display: none" itemprop="name">
-				<span>{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}</span>
-				<span>{{ summary_intro|striptags|truncate:words limit="30" }}</span>
+				<div style="display: none" >
+				<span itemprop="name">{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}</span>
+				<span itemprop="description">{{ truncate:words limit="30" }}{{ summary_intro|striptags }}{{ /truncate:words }}</span>
 				</div>
 
 				<div class="property-header" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
