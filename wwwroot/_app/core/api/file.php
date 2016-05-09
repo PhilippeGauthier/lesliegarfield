@@ -220,6 +220,7 @@ class File
         $info      = pathinfo($file['name']);
         $extension = $info['extension'];
         $filename  = $renamed_file ?: $info['filename'];
+        $filename  = Slug::make($filename);
 
         // build filename
         $new_filename = Path::assemble(BASE_PATH, $destination, $filename . '.' . $extension);

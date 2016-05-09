@@ -101,7 +101,39 @@
 </section>
 
 
+{{ if similar_properties|not_empty }}
+{{ relate:similar_properties }}
+{{ if first }}
+<section class="circle-icon similar-properties-gray" id="featured-properties">
+	<div class="circle-leader">
+		<div class="circle similar-properties-gray">
+			{{ theme:partial src="svg/home_building" }}
+		</div>
+		<h4>SIMILAR PROPERTIES</h4>
+	</div>
+	<div class="container">
+		<div class="property_tile">
+			<div class="tile-container">
 
+				{{ if total_results == 1}}
+				<div class="carousel_tile carousel_tile_1">
+				{{ elseif total_results == 2 }}
+				<div class="carousel_tile carousel_tile_2">
+				{{ else }}
+				<div class="carousel_tile carousel_tile_3">
+				{{ endif }}
+							
+{{ endif }}
+{{ theme:partial src="property_tile" use_context="true" }}
+{{ if last }}        
+</div>
+</div>
+</div>
+</div>
+</section> 
+{{ endif }}
+{{ /relate:similar_properties }}
+{{ else }}
 {{ entries:listing folder="properties/new-york/{streeteasy_type}|properties/international/{streeteasy_type}" conditions="url:!{url}, property_location:{ property_location }, streeteasy_status:!sold"  }}
 {{ if no_results }}
 {{ else }}
@@ -136,6 +168,7 @@
 {{ endif }}
 {{ endif }}
 {{ /entries:listing }}
+{{ endif }}
 
 {{ theme:partial src="modal_listing" use_context="true" }}
 
