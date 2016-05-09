@@ -46,6 +46,13 @@
 					{{ endif }}
 				</div>
 
+				<div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates" style="display: none">
+					{{ location }}
+					<span itemprop="latitude">{{ latitude }}</span>
+					<span itemprop="longitude">{{ longitude }}</span>
+					{{ /location }}
+				</div>
+
 				<div class="open-house desktop">
 					{{ theme:partial src="property/openhouse" }}
 				</div>
