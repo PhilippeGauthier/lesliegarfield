@@ -33,8 +33,10 @@
 					</div>
 				</div>
 
+				<div style="display: none" itemprop="name">{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}</div>
+
 				<div class="property-header" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-					<h2 itemprop="name streetAddress">
+					<h2 itemprop="streetAddress">
 					{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}</h2>
 					{{ if state }}
 					<span itemprop="addressRegion" style="display: none">New York</span>
