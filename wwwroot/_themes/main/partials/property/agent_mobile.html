@@ -5,7 +5,7 @@
 		<img nopin= "nopin" src="{{ transform src="{{ image }}" width="300" }}" class="img-circle" alt="{{ title }}"/>
 	</a>
 	<div class="agent-details">
-		<a href="{{ url }}"><span itemprop="name">{{ title }}</span></a>
+		<a href="{{ url }}"><span>{{ title }}</span></a>
 		<ul>
 			{{ if phone }}<li>{{ theme:partial src="svg/phone" }}<span class="phone" > {{ phone }}</span></li>{{ endif }}
 			{{ if email }}<li>{{ theme:partial src="svg/mail" }} <a href="mailto:{{ email }}"> {{ email }}</a></li>{{ endif }}
