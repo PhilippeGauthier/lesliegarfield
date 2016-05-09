@@ -5,8 +5,8 @@
 			<img alt="{{ title }}" itemprop="image" class="circle" src="{{ image }}" class="img-circle" />
 			<div itemprop="name" class="agent-name" >{{ title }}</div>
 			<ul>
-			{{ if phone }}<li itemprop="phone">{{ theme:partial src="svg/phone" }} {{ phone }}</li>{{ endif }}
-			<li itemprop="email">{{ theme:partial src="svg/mail" }} {{ email|link }}</li>
+			{{ if phone }}<li>{{ theme:partial src="svg/phone" }}<span class="phone" itemprop="telephone"> {{ phone }}</span></li>{{ endif }}
+			{{ if email }}<li>{{ theme:partial src="svg/mail" }} <a itemprop="email" href="mailto:{{ email }}"> {{ email }}</a></li>{{ endif }}
 			</ul>
 			<div class="dotted"></div>
 		</aside>

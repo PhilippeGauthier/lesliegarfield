@@ -6122,10 +6122,13 @@ footer .footer-divider {
 .property-agents li:hover svg * {
   fill: #009B77; }
 
-.property-agents li, .property-agents a {
+.property-agents li, .property-agents a, .property-agents span {
   vertical-align: top;
   font-family: "Copernicus-Medium";
   font-size: 11px; }
+
+.property-agents .phone {
+  margin-bottom: 0 !important; }
 
 .property-agents li {
   display: -webkit-flex;
@@ -6295,18 +6298,18 @@ footer .footer-divider {
   margin-top: 20px;
   margin-bottom: 20px; }
 
-.agent-individual aside li, .agent-individual aside li a {
+.agent-individual aside li, .agent-individual aside li a, .agent-individual aside li .phone {
   font-family: "Copernicus-Medium";
   font-size: 11px;
   margin-bottom: 10px; }
 
-.agent-individual aside li:hover, .agent-individual aside li a:hover {
+.agent-individual aside li:hover, .agent-individual aside li a:hover, .agent-individual aside li .phone:hover {
   color: #009B77; }
 
-.agent-individual aside li:hover svg *, .agent-individual aside li a:hover svg * {
+.agent-individual aside li:hover svg *, .agent-individual aside li a:hover svg *, .agent-individual aside li .phone:hover svg * {
   fill: #009B77; }
 
-.agent-individual aside li:hover *, .agent-individual aside li a:hover * {
+.agent-individual aside li:hover *, .agent-individual aside li a:hover *, .agent-individual aside li .phone:hover * {
   color: #009B77; }
 
 .agent-individual aside .dotted {

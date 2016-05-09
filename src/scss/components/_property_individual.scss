@@ -300,10 +300,13 @@
 			fill: $text-green;
 		}
 	}
-	li, a {
+	li, a, span {
 		vertical-align: top;
 		font-family: $hFontM;
 		font-size: 11px;
+	}
+	.phone {
+		margin-bottom: 0 !important;
 	}
 	li {
 		@include flex-hor;

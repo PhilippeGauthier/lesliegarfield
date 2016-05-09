@@ -21,20 +21,28 @@
 			<div itemscope itemtype="https://schema.org/Place" class="property-info">
 
 				<div class="property-top-bar">
-					<div itemprop="areaServed" class="location-granular">
+					<div class="location-granular">
 						<span>{{ property_location }}</span>
 						{{ if location_granular|not_empty }}
 						<span class="divider"></span>
 						<span>{{ location_granular }}</span>
 						{{ endif }}
+						{{ if state }}
+						<span itemprop="addressRegion" style="display: none">New York</span>
+						{{ endif }}
+						{{ if country }}
+ 						<span itemprop="addressCountry" style="display: none">{{ country }}</span>
+ 						{{ else }}
+ 						<span itemprop="addressCountry" style="display: none">USA</span>
+ 						{{ endif }}
 					</div>
 					<div class="social desktop right-align gray">
 						{{ theme:partial src="property/social" }}
 					</div>
 				</div>
 
-				<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="property-header">
-					<h2 itemprop="streetAddress">
+				<div itemscope itemtype="http://schema.org/PostalAddress" class="property-header">
+					<h2 itemprop="name">
 					{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}</h2>
 				</div>
 
@@ -45,7 +53,7 @@
 				<div class="property-carousel">
 					{{ photo_carousel }}
 					<div>
-						<img itemprop="streetAddress" src="{{ transform path width="900" height="600" quality="70" src="{{ value }}"}}" alt="{{ title }} - {{ property_location }} - New York City Townhouse Real Estate">
+						<img itemprop="photo" src="{{ transform path width="900" height="600" quality="70" src="{{ value }}"}}" alt="{{ title }} - {{ property_location }} - New York City Townhouse Real Estate">
 					</div>
 					{{ /photo_carousel}}
 				</div>

@@ -18,7 +18,7 @@
 					<img itemprop="photo" class="circle" src="{{ transform width="200" src="{{ image }}" }}" alt="{{ title }} - Leslie J. Garfield &amp; Co"></img>
 					<span itemprop="name" class="name">{{ title }}</span>
 				</div>
-				<span itemprop="phone" class="details">{{ theme:partial src="svg/phone" }} {{ phone }}</span>
+				<span itemprop="telephone" class="details">{{ theme:partial src="svg/phone" }} {{ phone }}</span>
 				<a href="{{ email}}"><span itemprop="email" class="details">{{ theme:partial src="svg/mail" }} {{ email }}</span></a>
 			</div>
 			{{ else }}
@@ -27,7 +27,7 @@
 					<img itemprop="photo" class="circle" src="{{ transform width="200" src="{{ image }}" }}" alt="{{ title }} - Leslie J. Garfield &amp; Co"></img>
 					<span itemprop="name" class="name">{{ title }}</span>
 				</a>
-				<span itemprop="phone" class="details">{{ theme:partial src="svg/phone" }} {{ phone }}</span>
+				<span itemprop="telephone" class="details">{{ theme:partial src="svg/phone" }} {{ phone }}</span>
 				<a href="{{ email}}"><span itemprop="email" class="details">{{ theme:partial src="svg/mail" }} {{ email }}</span></a>
 			</div>
 			{{ endif }}

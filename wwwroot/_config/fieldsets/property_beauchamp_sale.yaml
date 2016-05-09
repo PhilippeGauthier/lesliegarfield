@@ -20,9 +20,11 @@ fields:
   city:
     type: text
     display: City
+    required: true
   country:
     type: text
     display: Country
+    required: true
   currency:
     type: select
     display: Choose currency
