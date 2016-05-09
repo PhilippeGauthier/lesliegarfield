@@ -33,7 +33,10 @@
 					</div>
 				</div>
 
-				<div style="display: none" itemprop="name">{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}</div>
+				<div style="display: none" itemprop="name">
+				<span>{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}</span>
+				<span>{{ summary_intro|striptags|truncate:words limit="30" }}</span>
+				</div>
 
 				<div class="property-header" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 					<h2 itemprop="streetAddress">
@@ -107,7 +110,7 @@
 
 				</div>
 
-				<div class="summary desktop">
+				<div class="summary desktop" >
 					{{ theme:partial src="property/summary" }}
 				</div>
 				
