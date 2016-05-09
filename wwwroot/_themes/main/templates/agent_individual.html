@@ -2,7 +2,7 @@
 	<div class="container" itemscope itemtype="https://schema.org/RealEstateAgent">
 
 		<aside class="sticky">					
-			<img alt="{{ title }}" itemprop="image" class="circle" src="{{ image }}" class="img-circle" />
+			<img alt="{{ title }}" itemprop="photo" class="circle" src="{{ image }}" class="img-circle" />
 			<div itemprop="name" class="agent-name" >{{ title }}</div>
 			<ul>
 			{{ if phone }}<li>{{ theme:partial src="svg/phone" }}<span class="phone" itemprop="telephone"> {{ phone }}</span></li>{{ endif }}
@@ -13,8 +13,8 @@
 
 		<main>
 			<div class="agent-info">
-				<h2 itemprop="name" class="agent-title">{{ title }}</h2>
-				<div itemprop="">{{ info }}</div>
+				<h2 class="agent-title">{{ title }}</h2>
+				<div>{{ info }}</div>
 			</div>
 			
 			{{ if press|not_empty }}
