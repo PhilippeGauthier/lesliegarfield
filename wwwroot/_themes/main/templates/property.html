@@ -18,7 +18,7 @@
 
 		<main>
 		
-			<div itemscope itemtype="https://schema.org/Place" class="property-info">
+			<div class="property-info" itemscope itemtype="http://schema.org/Place">
 
 				<div class="property-top-bar">
 					<div class="location-granular">
@@ -27,23 +27,23 @@
 						<span class="divider"></span>
 						<span>{{ location_granular }}</span>
 						{{ endif }}
-						{{ if state }}
-						<span itemprop="addressRegion" style="display: none">New York</span>
-						{{ endif }}
-						{{ if country }}
- 						<span itemprop="addressCountry" style="display: none">{{ country }}</span>
- 						{{ else }}
- 						<span itemprop="addressCountry" style="display: none">USA</span>
- 						{{ endif }}
 					</div>
 					<div class="social desktop right-align gray">
 						{{ theme:partial src="property/social" }}
 					</div>
 				</div>
 
-				<div itemscope itemtype="http://schema.org/PostalAddress" class="property-header">
-					<h2 itemprop="name">
+				<div class="property-header" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					<h2 itemprop="name streetAddress">
 					{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}</h2>
+					{{ if state }}
+					<span itemprop="addressRegion" style="display: none">New York</span>
+					{{ endif }}
+					{{ if country }}
+					<span itemprop="addressCountry" style="display: none">{{ country }}</span>
+					{{ else }}
+					<span itemprop="addressCountry" style="display: none">USA</span>
+					{{ endif }}
 				</div>
 
 				<div class="open-house desktop">
