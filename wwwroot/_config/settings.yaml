@@ -241,6 +241,8 @@ _custom_transliteration:
 # The default permissions Statamic will use for files it creates
 _mode: 0777
 
+_unmask: 0022
+
 
 ###########################################################################################
 #
