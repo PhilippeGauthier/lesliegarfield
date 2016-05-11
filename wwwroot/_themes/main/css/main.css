@@ -8675,7 +8675,12 @@ section.faq {
 .featured {
   text-align: left;
   margin-bottom: 60px;
-  border-bottom: none; }
+  border-bottom: none;
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 200px; }
 
 .featured .blog-header {
   color: #009B77;
@@ -8687,7 +8692,9 @@ section.faq {
   float: left;
   padding-left: 1.25%;
   padding-right: 1.25%;
-  height: 200px; }
+  background-size: 100% auto;
+  min-height: 100%;
+  display: block; }
 
 .featured .post-details {
   box-sizing: border-box;
@@ -8728,17 +8735,16 @@ section.faq {
     display: block; } }
 
 @media (min-width: 768px) {
-  .featured .featured-image {
-    height: 300px; } }
+  .featured {
+    min-height: 300px; } }
 
 @media (min-width: 992px) {
   .featured {
-    height: 400px; }
+    min-height: 400px; }
   .featured .featured-image {
     box-sizing: border-box;
     width: 50%;
-    float: left;
-    height: 400px; }
+    float: left; }
   .featured .post-details {
     box-sizing: border-box;
     width: 50%;

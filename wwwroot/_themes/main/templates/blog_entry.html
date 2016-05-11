@@ -20,6 +20,11 @@
 					{{ else }}
 					<img class="main-image" src="{{ path src="{{ main_image }}"}}">
 					{{ endif }}
+					{{ if leading_images }}
+					{{ leading_images }}
+					<img src="{{ value }}">
+					{{ /leading_images }}
+					{{ endif }}
 					{{ content }}
 				</div>
 				<div class="blog-right">

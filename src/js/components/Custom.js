@@ -92,11 +92,6 @@ $(document).ready(function() {
   }
 });
 
-// $(document).ready(function() {
-//   if ($('.summary').length) {
-//     $('.summary p:first-of-type').attr('itemprop','description');
-//   }
-// });
 
 $(document).ready(function() {
   // Get an array of all element heights

@@ -3,13 +3,18 @@
 	text-align: left;
 	margin-bottom: $bPadding;
 	border-bottom: none;
+	position: relative;
+	display: flex;
+	min-height: 200px;
 	.blog-header {
 		color: $text-green;
 		border-bottom: none;
 	}
 	.featured-image {
 		@include span (full);
-		height: 200px;
+		background-size: 100% auto;
+		min-height: 100%;
+		display: block;
 	}
 	.post-details {
 		@include span(full);
@@ -35,15 +40,12 @@
 		}
 	}
 	@include breakpoint($small) {
-		.featured-image {
-			height: 300px;
-		}
+		min-height: 300px;
 	}
 	@include breakpoint($medium) {
-		height: 400px;
+		min-height: 400px;
 		.featured-image {
 			@include span (first 6 of 12 no-gutter);
-			height: 400px;
 		}
 		.post-details {
 			@include span(last 6 of 12 no-gutter);

@@ -30,9 +30,14 @@ fields:
 		taxonomy:
 			type: categories
 			folder: blog
+	leading_images:
+		type: file
+		display: If your post leads with images, upload those here. The rest of the images can be in the body of the post.
+		destination: assets/img
+		force_array: true
 	content:
 		type: redactor
-		display: Blog Content
+		display: Blog Content / Must start with text rather than image
 		image_dir: assets/img/
 		file_dir: assets
 		resize:
