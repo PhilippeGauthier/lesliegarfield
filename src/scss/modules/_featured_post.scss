@@ -32,9 +32,6 @@
 		img {
 			display: none;
 		}
-		img:parent {
-			display: none;
-		}
 		@include breakpoint($small) {
 			display: block;
 		}
