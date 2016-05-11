@@ -8720,11 +8720,12 @@ section.faq {
 .featured .truncated img {
   display: none; }
 
+.featured .truncated img:parent {
+  display: none; }
+
 @media (min-width: 768px) {
   .featured .truncated {
-    display: block; }
-  .featured .truncated img {
-    display: none; } }
+    display: block; } }
 
 @media (min-width: 768px) {
   .featured .featured-image {
