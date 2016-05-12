@@ -85,6 +85,10 @@ fields:
   streeteasy:
     display: ACTIVATE STREETEASY?
     type: checkbox
+  openhouse_appt:
+    display: Open House by Appointment Only
+    type: checkbox
+    default: false
   openhouse_grid:
     type: grid
     display: Open House
@@ -99,10 +103,6 @@ fields:
       endTime:
         type: time
         display: Ending Time
-      apptOnly:
-        type: checkbox
-        width: 28%
-        display: Appt Only?
   agents:
     display: Agents (STREETEASY) - First listed agent will receive Viewing Requests
     type: suggest

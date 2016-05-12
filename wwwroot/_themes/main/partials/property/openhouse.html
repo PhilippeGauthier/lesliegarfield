@@ -1,6 +1,10 @@
 {{ if streeteasy_status !== "active" }}
 <span>{{ if streeteasy_status == "in-contract"}}In Contract{{ elseif streeteasy_status == "sold" }}Sold{{ elseif streeteasy_status =="off-market" }}Off Market{{ elseif streeteasy_status =="temp-off-market" }}Temporarirly Off Market{{ endif }}</span>
 
+{{ elseif openhouse_appt }}
+<div class="time-slot">
+	<span class="red red-span" id="first-o-h">Open <i class="fa fa-home"></i>: </span> <span class="red red-span">By Appointment Only</span>
+</div>
 {{ else }}
 
 	{{ openhouse_grid }}
