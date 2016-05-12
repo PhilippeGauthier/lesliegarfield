@@ -2,12 +2,12 @@
 	<div class="authors">
 		<div class="blog-header">AUTHORS</div>
 		<ul>
-		{{ taxonomy:listing folder="blog" type="author" }}
+		{{ entries:listing folder="agents/garfield" conditions="author"}}
 		<li><a class="author-list" href="{{ _site_root }}blog/authors/{{ title|lower }}">
 		<img class="author-image" src="{{ transform width="60" src="{{ image }}"}}">
 		{{ title }}
 		</a></li>  
-		{{ /taxonomy:listing }}
+		{{ /entries:listing }}
 		</ul>
 		</ul>
 		<div class="blog-header">OTHER NEWS</div>
