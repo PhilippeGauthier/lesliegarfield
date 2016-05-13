@@ -63,16 +63,10 @@ fields:
       sold: Sold
       off-market: Off Market
       temp-off-market: Temporarily Off Market
-  openhouse:
-    display: Open House?
-    type: select
-    options:
-      false: No Openhouse
-      true: Openhouse
-    default: false
   openhouse_grid:
     type: grid
-    display: Open House(s)
+    display: Open House
+    max_rows: 2
     fields:
       date:
         type: date
@@ -196,25 +190,26 @@ fields:
     destination: assets/img/properties/sale
     allowed: [png, gif, jpg, jpeg]
     resize:
-      width: 300
-      height: 300
+      width: 360
+      height: 360
       quality: 100
   photo_carousel:
     type: file
     force_array: true
     display: Photo Carousel
-    instructions: Click Upload a File or Drag and Drop on the Upload box. You can upload multiple files at once.
     allowed: [png, gif, jpg, jpeg]
     destination: assets/img/properties/sale
   brochure:
     type: file
     display: Property Brochure
-    destination: assets/downloads
+    destination: assets/img/properties/sale
+    allowed: [png, gif, jpg, jpeg, pdf]
     max_files: 1
   floor_plans:
     type: file
     display: Property Floorplans
-    destination: assets/downloads
+    destination: assets/img/properties/sale
+    allowed: [png, gif, jpg, jpeg, pdf]
     max_files: 1
   content:
     type: redactor

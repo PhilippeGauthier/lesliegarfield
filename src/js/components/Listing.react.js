@@ -53,7 +53,7 @@ var Listing = React.createClass({
     if (listing.currency == "sterling") {
       listing.currency = "£";
     }
-    if (listing.currency == "dollars") {
+    if (listing.currency == "euros") {
       listing.currency = "€";
     }
     if (listing.currency == "none") {

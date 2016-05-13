@@ -6122,7 +6122,7 @@ footer .footer-divider {
 .property-agents li:hover svg * {
   fill: #009B77; }
 
-.property-agents li, .property-agents a, .property-agents span {
+.property-agents li, .property-agents a, .property-agents .phone {
   vertical-align: top;
   font-family: "Copernicus-Medium";
   font-size: 11px; }

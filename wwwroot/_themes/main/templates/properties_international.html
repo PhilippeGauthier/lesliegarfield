@@ -1,86 +1,91 @@
+
+{{ var:my_date_since }}{{ date_calc start_date="{current_date}" method="subDays" value="30" format="F d, Y" }}{{ /var:my_date_since }}
+
 <script type="text/javascript">
+
   var data = {
     {{ entries:listing folder="properties/international/sale" conditions="streeteasy_status:!sold" show_future="true" }}
     {{ if first }}
     "sale": {
-    {{ endif }}
-    {{ if !no_results }}
-      "{{ slug }}":
-        {
-          "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
-          "datestamp": "{{ datestamp }}",
-          "preview_image":"{{ preview_image }}",
-          "url":"{{ url }}",
-          "streeteasy_status": "{{ streeteasy_status }}",
-          "openhouse": "{{ openhouse }}",
-          "price": "{{ price }}",
-          "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
-          "property_type": "{{ property_type }}",
-          "sqft": "{{ sqft }}",
-          "property_location": "{{ property_location }}"
-        },
       {{ endif }}
-    {{ /entries:listing}}
-    {{ entries:listing folder="properties/international/sale" conditions="streeteasy_status:sold" show_future="true" since="{var:my_date_since}" }}
-    {{ if !no_results }}
       "{{ slug }}":
-        {
-          "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
-          "datestamp": "{{ datestamp }}",
-          "preview_image":"{{ preview_image }}",
-          "url":"{{ url }}",
-          "streeteasy_status": "{{ streeteasy_status }}",
-          "openhouse": "{{ openhouse }}",
-          "price": "{{ price }}",
-          "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
-          "property_type": "{{ property_type }}",
-          "sqft": "{{ sqft }}",
-          "results": "{{ total_results }}",
-          "property_location": "{{ property_location }}"
-        },
-     {{ endif   }}
-    {{ /entries:listing}}
+      {
+        "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
+        "datestamp": "{{ datestamp }}",
+        "preview_image":"{{ preview_image }}",
+        "url":"{{ url }}",
+        "streeteasy_status": "{{ streeteasy_status }}",
+        "openhouse": "{{ openhouse_grid }}{{ if date|in_future || date|is_today }}foo{{ else }}{{ endif }}{{ /openhouse_grid }}",
+        "price": "{{ price|no_commas|whitespace }}",
+        "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
+        "property_type": "{{ property_type }}",
+        "sqft": "{{ sqft|no_commas }}",
+        "property_location": "{{ property_location }}",
+        "ownership": "{{ if ownership == "rental" }} /month{{ endif }}"
+      },
+      {{ /entries:listing}}
+      {{ entries:listing folder="properties/international/sale" conditions="streeteasy_status:sold" show_future="true" since="{var:my_date_since}" }}
+      {{ if !no_results }}
+      "{{ slug }}":
+      {
+        "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
+        "datestamp": "{{ datestamp }}",
+        "preview_image":"{{ preview_image }}",
+        "url":"{{ url }}",
+        "streeteasy_status": "{{ streeteasy_status }}",
+        "openhouse": "{{ openhouse }}",
+        "price": "{{ price|no_commas|whitespace }}",
+        "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
+        "property_type": "{{ property_type }}",
+        "sqft": "{{ sqft|no_commas|whitespace }}",
+        "results": "{{ total_results }}",
+        "property_location": "{{ property_location }}",
+        "ownership": "{{ if ownership == "rental" }} /month{{ endif }}"
+      },
+      {{ endif  }}
+      {{ /entries:listing}}
     },
     {{ entries:listing folder="properties/international/rental" conditions="streeteasy_status:!sold" show_future="true" }}
     {{ if first }}
     "lease": {
-    {{ endif }}
-    {{ if !no_results }}
-      "{{ slug }}":
-        {
-          "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
-          "datestamp": "{{ datestamp }}",
-          "preview_image":"{{ preview_image }}",
-          "url":"{{ url }}",
-          "streeteasy_status": "{{ streeteasy_status }}",
-          "openhouse": "{{ openhouse }}",
-          "price": "{{ price }}",
-          "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
-          "property_type": "{{ property_type }}",
-          "sqft": "{{ sqft }}",
-          "property_location": "{{ property_location }}"
-        },
       {{ endif }}
-    {{ /entries:listing}}
-    {{ entries:listing folder="properties/international/rental" since="{ var:my_date_since }" conditions="streeteasy_status:leased" show_future="true" }}
+      "{{ slug }}":
+      {
+        "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
+        "datestamp": "{{ datestamp }}",
+        "preview_image":"{{ preview_image }}",
+        "url":"{{ url }}",
+        "streeteasy_status": "{{ streeteasy_status }}",
+        "openhouse": "{{ openhouse_grid }}{{ if date|in_future || date|is_today }}foo{{ else }}{{ endif }}{{ /openhouse_grid }}",
+        "price": "{{ price|no_commas|whitespace }}",
+        "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
+        "property_type": "{{ property_type }}",
+        "sqft": "{{ sqft|no_commas|whitespace }}",
+        "results": "{{ total_results }}",
+        "property_location": "{{ property_location }}",
+        "ownership": "{{ if ownership == "rental" }} /month{{ endif }}"
+      },
+      {{ /entries:listing}}
+      {{ entries:listing folder="properties/international/rental" since="{ var:my_date_since }" conditions="streeteasy_status:leased" show_future="true" }}
       {{ if !no_results }}
       "{{ slug }}":
-        {
-          "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
-          "datestamp": "{{ datestamp }}",
-          "preview_image":"{{ preview_image }}",
-          "url":"{{ url }}",
-          "streeteasy_status": "{{ streeteasy_status }}",
-          "openhouse": "{{ openhouse }}",
-          "price": "{{ price }}",
-          "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
-          "property_type": "{{ property_type }}",
-          "sqft": "{{ sqft }}",
-          "results": "{{ total_results }}",
-          "property_location": "{{ property_location }}"
-        },
+      {
+        "title":"{{ title }}{{if apartment }}, {{ apartment }}{{ endif }}",
+        "datestamp": "{{ datestamp }}",
+        "preview_image":"{{ preview_image }}",
+        "url":"{{ url }}",
+        "streeteasy_status": "{{ streeteasy_status }}",
+        "openhouse": "{{ openhouse_grid }}{{ if date|in_future || date|is_today }}foo{{ else }}{{ endif }}{{ /openhouse_grid }}",
+        "price": "{{ price|no_commas|whitespace }}",
+        "currency": "{{ if currency|not_empty }}{{ currency }}{{ else }}${{endif }}",
+        "property_type": "{{ property_type }}",
+        "sqft": "{{ sqft|no_commas|whitespace }}",
+        "results": "{{ total_results }}",
+        "property_location": "{{ property_location }}",
+        "ownership": "{{ if ownership == "rental" }} /month{{ endif }}"
+      },
       {{ endif }}
-    {{ /entries:listing}}
+      {{ /entries:listing}}
     }
   }
 </script>
@@ -89,10 +94,10 @@
 {{ else }}
 <div class="property_nav dark_gray leading properties_grid">
   <div class="container">
-<!--     <div class="rent-or-buy">
+<!--    <div class="rent-or-buy">
       <ul>
-        <li><a  id="buy" class="active">Buy</a></li>
-        <li><a  id="rent"> Rent</a></li>
+        <li><a id="buy" class="active">Buy</a></li>
+        <li><a id="rent"> Rent</a></li>
       </ul>
     </div> -->
     <div class='view-type'>
@@ -115,7 +120,7 @@
 
 function initialize() {
   var sale_properties = [
-  {{ entries:listing folder="properties/international/sale|properties/international/rental"}}
+  {{ entries:listing folder="properties/international/sale|properties/international/rental" conditions="streeteasy_status:!sold,location " }}
   {{ if last }}
   ['{{ title }}', {{ location }}{{ latitude}},{{ longitude }}{{/location}},'{{url}}','{{ preview_image }}','../_themes/main/img/map_marker_green.svg',
   '{{ if currency == "dollars" }}${{ elseif currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ elseif currency == "none" }}{{ else }}${{ endif }}{{ if streeteasy_type == "rental"}}{{ price|format_number }}/month{{ else }}{{ price|format_number }}{{ endif }}','{{ property_type }}','{{ sqft|format_number }} ft','{{ property_location }}']
@@ -124,17 +129,6 @@ function initialize() {
   {{ endif }}
   {{ /entries:listing }}
   ];
-
-  // var rental_properties = [
-  // {{ entries:listing folder="properties/international/rental"}}
-  // {{ if last }}
-  // ['{{ title }}', {{ location }}{{ latitude}},{{ longitude }}{{/location}},'{{url}}','{{ preview_image }}','../_themes/main/img/map_marker_green.svg',
-  // '{{ if currency == "dollars" }}${{ elseif currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ elseif currency == "none" }}{{ else }}${{ endif }}{{ if streeteasy_type == "rental"}}{{ price|format_number }}/month{{ else }}{{ price|format_number }}{{ endif }}','{{ property_type }}','{{ sqft|format_number }} ft','{{ property_location }}']
-  // {{ else }}
-  // ['{{ title }}', {{ location }}{{ latitude}},{{ longitude }}{{/location}},'{{url}}','{{ preview_image }}','../_themes/main/img/map_marker_green.svg','{{ if currency == "dollars" }}${{ elseif currency == "sterling" }}£{{ elseif currency == "euros" }}€{{ elseif currency == "none" }}{{ else }}${{ endif }}{{ if streeteasy_type == "rental"}}{{ price|format_number }}/month{{ else }}{{ price|format_number }}{{ endif }}','{{ property_type }}','{{ sqft|format_number }} ft','{{ property_location }}'],
-  // {{ endif }}
-  // {{ /entries:listing }}
-  // ];
 
   window.map = new google.maps.Map(document.getElementById('map'), {
     mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -211,108 +205,10 @@ function initialize() {
     });
   }
 
-  // for (i = 0; i < rental_properties.length; i++) {
-
-  //   var title = rental_properties[i][0];
-  //   var lat = rental_properties[i][1];
-  //   var long = rental_properties[i][2];
-  //   var url = rental_properties[i][3];
-  //   var image = rental_properties[i][4];
-  //   var icon = rental_properties[i][5];
-  //   var price = rental_properties[i][6];
-  //   var type = rental_properties[i][7];
-  //   var size = rental_properties[i][8];
-  //   var location = rental_properties[i][9];
-
-  //   infoWindows.push(infowindow);
-  //   rentalMarkers.push(marker);
-
-  //   marker = new google.maps.Marker({
-  //     position: new google.maps.LatLng(rental_properties[i][1], rental_properties[i][2]),
-  //     map: map,
-  //     icon: rental_properties[i][5],
-  //     visible: true
-  //   });
-
-  //   bounds.extend(marker.position);
-
-  //   google.maps.event.addListener(marker, 'click', (function (marker, i) {
-  //     return function () {
-  //       infowindow.setContent(
-  //       '<a href=' + '"' + rental_properties[i][3] + '"' + 'class=' + '"' + 'property_box map' + '"' + '>' +
-  //         '<div class="image-wrap">' +
-  //           '<div class="preview-image" style=' + '"background-image: url(' + rental_properties[i][4] + '">' + 
-  //           '</div>' +
-  //         '</div>' +
-          
-  //         '<div class=' + '"' + 'property_tile_info' + '"' + '>' +
-  //           '<div class=' + '"' + 'top-info' + '"' + '>' +
-  //             '<span class=' + '"' + 'prop-title' + '"' + '>' + rental_properties[i][0] + '</span>' +
-  //             '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
-  //             '<span class=' + '"' + 'prop-price' + '"' + '>' + rental_properties[i][6] + '</span>' +
-  //             '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
-  //             '<span class=' + '"' + 'prop-details' + '"' + '>' + rental_properties[i][7] + '</span>' +
-  //             '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
-  //             '<span class=' + '"' + 'prop-details' + '"' + '>' + rental_properties[i][8] + '<sup>2</sup>' + '</span>' +
-  //             '<div class=' + '"' + 'spacer' + '"' + '>' +'</div>' +
-  //             '<span class=' + '"' + 'prop-location' + '"' + '>' + rental_properties[i][9] + '</span>' +
-  //           '</div>' +
-  //           '<div class=' + '"' + 'bottom-info' + '"' + '>' +
-  //           '</div>' +
-  //         '</div>' +
-  //       '</a>');
-  //       infowindow.open(map, marker);
-  //     }
-  //   })(marker, i));
-
-  //   google.maps.event.addListener(map, "click", function(event) {
-  //       for (var i = 0; i < infoWindows.length; i++ ) {
-  //            infoWindows[i].close();
-  //       }
-  //   });
-  // }
-
-  // buy.click(function() {
-  //   if ($(this).hasClass('active')) {
-
-  //   }
-  //   else {
-  //     $(this).addClass('active');
-  //     rent.removeClass('active');
-  //   }
-  //   for (var i = 0; i < rentalMarkers.length; i++ ) {
-  //     rentalMarkers[i].setVisible(false);
-  //   }
-  //   for (var i = 0; i < saleMarkers.length; i++ ) {
-  //     saleMarkers[i].setVisible(true);
-  //   }
-  //   for (var i = 0; i < infoWindows.length; i++ ) {
-  //     infoWindows[i].close();
-  //   }
-
-  // });
-  // rent.click(function() {
-  //   if ($(this).hasClass('active')) {
-
-  //   }
-  //   else {
-  //     $(this).addClass('active');
-  //     buy.removeClass('active');
-  //   }
-  //   for (var i = 0; i < saleMarkers.length; i++ ) {
-  //     saleMarkers[i].setVisible(false);
-  //   }
-  //   for (var i = 0; i < rentalMarkers.length; i++ ) {
-  //     rentalMarkers[i].setVisible(true);
-  //   }
-  //   for (var i = 0; i < infoWindows.length; i++ ) {
-  //     infoWindows[i].close();
-  //   }
-  // });
-
   map.fitBounds(bounds);
 
   var listener = google.maps.event.addListener(map, "idle", function () {
+    // map.setZoom(13);
     google.maps.event.removeListener(listener);
   });
 
@@ -333,3 +229,4 @@ window.onload = loadScript();
 
 </section>
 {{ endif }}
+
