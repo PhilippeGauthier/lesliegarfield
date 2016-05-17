@@ -19,7 +19,7 @@
 					<span itemprop="name" class="name">{{ title }}</span>
 				</div>
 				<span itemprop="telephone" class="details">{{ theme:partial src="svg/phone" }} {{ phone }}</span>
-				<a href="{{ email}}"><span itemprop="email" class="details">{{ theme:partial src="svg/mail" }} {{ email }}</span></a>
+				<a href="mailto:{{ email}}"><span itemprop="email" class="details">{{ theme:partial src="svg/mail" }} {{ email }}</span></a>
 			</div>
 			{{ else }}
 			<div itemscope itemtype="http://schema.org/RealEstateAgent" class="grid-3-constrained-padding">
@@ -28,7 +28,7 @@
 					<span itemprop="name" class="name">{{ title }}</span>
 				</a>
 				<span itemprop="telephone" class="details">{{ theme:partial src="svg/phone" }} {{ phone }}</span>
-				<a href="{{ email}}"><span itemprop="email" class="details">{{ theme:partial src="svg/mail" }} {{ email }}</span></a>
+				<a href="mailto:{{ email}}"><span itemprop="email" class="details">{{ theme:partial src="svg/mail" }} {{ email }}</span></a>
 			</div>
 			{{ endif }}
 			{{ /entries:listing }}
