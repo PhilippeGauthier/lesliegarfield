@@ -39,7 +39,7 @@
 	{{ get_content from="/reports" limit="1000" }}
 	{{ reports }}
 	<url>
-		<loc>{{ report|whitespace }}</loc>
+		<loc>{{ _site_url }}{{ report|whitespace }}</loc>
 		<lastmod>{{ datestamp format="Y-m-d" }}</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.3</priority>
