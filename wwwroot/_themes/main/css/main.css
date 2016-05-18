@@ -7987,6 +7987,7 @@ input.radio, select.radio {
   width: 100%;
   transition: all 300ms ease-in-out;
   background-color: #ECEBEC;
+  background-size: cover;
   text-align: center; }
 
 .property_box.property {
