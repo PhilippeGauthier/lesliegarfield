@@ -56,8 +56,6 @@
 	</section>
 
 
-{{ cache key="properties-new-york" }}
-
 {{ entries:listing folder="properties/new-york/sale" sort_by="random" show_future="true" conditions="streeteasy_status:!sold" }}
 {{ if no_results }}
 {{ else }}
@@ -94,8 +92,6 @@
 {{ endif }}
 {{ /entries:listing }}
 
-{{ /cache }}
-
 	<section>
 		<div class="circle-leader">
 			<div class="circle white">
@@ -131,7 +127,7 @@
 		</div>
 	</section>
 
-{{ cache key="properties-international" }}
+
 
 {{ entries:listing folder="properties/international/sale" sort_by="random" show_future="true" conditions="streeteasy_status:!sold"}}
 {{ if no_results }}
@@ -169,6 +165,5 @@
 {{ endif }}
 {{ /entries:listing }}
 
-{{ /cache }}
 
 {{ theme:partial src="modal_valuation" }}
