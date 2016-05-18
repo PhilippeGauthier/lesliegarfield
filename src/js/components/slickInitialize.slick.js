@@ -24,7 +24,7 @@ $('.carousel_tile_2').slick({
   speed: 300,
   slidesToShow: 2,
   slidesToScroll: 1,
-  autoplay: true,
+  autoplay: false,
   lazyLoad: 'ondemand',
   responsive: [
     {
