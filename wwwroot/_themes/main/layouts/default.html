@@ -30,7 +30,9 @@
   <meta property="og:postal-code" content="10022" />
   <meta property="og:country-name" content="USA" />
 
-  <link rel="stylesheet" href="{{ theme:css src="main.min.css" }}" />
+  <!-- build:css -->
+  <link rel="stylesheet" href="{{ theme:css }}" />
+  <!-- endbuild -->
   <link rel="shortcut icon" type="image/ico" href="{{ theme:img src="" }}">
 
   <link rel="apple-touch-icon" sizes="57x57" href="{{ theme:img src="/apple-touch-icon-57x57.png" }}">
@@ -94,6 +96,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     {{ theme:partial src="footer" }}
 
-  <script src="{{ theme:js src="main.min.js" }}"></script>
+  <!-- build:js -->
+  <script src="{{ theme:js }}"></script>
+  <!-- endbuild -->
 </body>
 </html>
