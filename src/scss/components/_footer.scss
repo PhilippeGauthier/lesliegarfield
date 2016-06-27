@@ -43,9 +43,7 @@ footer {
 		@include breakpoint($medium) {
 			@include span(4 of 12 no-gutter clear);
 		}
-		@include breakpoint($large) {
-			@include span(3 of 12 no-gutter clear);
-		}
+
 	}
 	.affiliate {
 		margin-top: 20px;

@@ -5482,12 +5482,6 @@ footer .footer-group:before, footer .footer-group:after {
     width: 33.33333%;
     float: left; } }
 
-@media (min-width: 1280px) {
-  footer .footer-group {
-    box-sizing: border-box;
-    width: 25%;
-    float: left; } }
-
 footer .affiliate {
   margin-top: 20px; }
 
