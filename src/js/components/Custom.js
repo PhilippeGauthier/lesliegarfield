@@ -246,8 +246,8 @@ if ($(".red-span").length) {
   $(".property-agents").addClass('openhouse')
 }
 
-$('#email-popup').click(function() {
-  $(this).toggleClass('expanded');
+$('.popup-header').click(function() {
+  $('#email-popup').toggleClass('expanded');
   // $('.popup-body').slideToggle('slow');
 });
 
