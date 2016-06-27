@@ -8946,3 +8946,103 @@ section.faq {
 .sitemap li a {
   text-decoration: underline;
   font-size: 12px; }
+
+#email-popup {
+  position: fixed;
+  width: 280px;
+  z-index: 100;
+  bottom: 0;
+  right: 40px;
+  background-color: #009880;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px; }
+
+#email-popup i {
+  position: absolute;
+  right: 16px;
+  top: 8px;
+  color: white;
+  padding-top: 0; }
+
+#email-popup .popup-header {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px; }
+
+#email-popup .popup-header span {
+  margin-left: 12px;
+  padding-top: 14px;
+  font-size: 14px;
+  color: white; }
+
+#email-popup .popup-header:hover, #email-popup .popup-header:focus {
+  cursor: pointer;
+  background-color: #008e77; }
+
+#email-popup .fa-envelope {
+  display: block; }
+
+#email-popup .fa-minus {
+  display: none; }
+
+#email-popup.expanded {
+  height: 350px; }
+
+#email-popup.expanded .fa-envelope {
+  display: none; }
+
+#email-popup.expanded .fa-minus {
+  display: block;
+  margin-top: 10px; }
+
+#email-popup.expanded .popup-body {
+  display: block; }
+
+#email-popup .popup-body {
+  display: none;
+  height: 100%;
+  padding: 12px;
+  padding-bottom: 42px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  overflow: scroll; }
+
+#email-popup .popup-body input {
+  padding: 8px;
+  border-radius: 4px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border: 1px solid #CCCCCC; }
+
+#email-popup .popup-body .btn-contact {
+  margin: 0;
+  background-color: #009880;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+#email-popup .popup-body .radio-fields {
+  overflow: scroll;
+  height: 190px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding: 6px;
+  padding-right: 12px;
+  border-radius: 4px;
+  border: 1px solid #CCCCCC; }
+
+#email-popup .popup-body .radio-fields ul li {
+  display: block;
+  padding: 4px; }
+
+#email-popup .popup-body .radio-fields ul li input {
+  width: auto; }
+
+#email-popup .popup-body .radio-fields ul li input[type='checkbox'] {
+  float: right; }
+
+#email-popup .popup-body .radio-fields ul li label {
+  color: #b3b3b3;
+  font-weight: 500; }

@@ -246,6 +246,10 @@ if ($(".red-span").length) {
   $(".property-agents").addClass('openhouse')
 }
 
+$('#email-popup').click(function() {
+  $(this).toggleClass('expanded');
+  // $('.popup-body').slideToggle('slow');
+});
 
 // target="_blank" vulnerability
 // var newWnd = window.open();
