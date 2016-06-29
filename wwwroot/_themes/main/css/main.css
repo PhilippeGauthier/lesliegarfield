@@ -8988,7 +8988,7 @@ section.faq {
 
 #email-popup.expanded .fa-minus {
   display: block;
-  margin-top: 10px; }
+  margin-top: 8px; }
 
 #email-popup.expanded .popup-body {
   display: block; }
@@ -9000,7 +9000,9 @@ section.faq {
   padding-bottom: 42px;
   margin-bottom: 10px;
   background-color: #fff;
-  overflow: scroll; }
+  overflow: scroll;
+  border-left: 1px solid #CCCCCC;
+  border-right: 1px solid #CCCCCC; }
 
 #email-popup .popup-body input {
   padding: 8px;

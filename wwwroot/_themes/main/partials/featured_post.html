@@ -19,7 +19,7 @@
 			<a class="fb" 
 			data-title="{{ title }}" 
 			data-desc="Property listed at Leslie Garfield" 
-			data-image="{{ preview_image}}"
+			data-image="{{ if main_image }}{{ main_image}}{{ elseif preview_image }}{{ preview_image }}{{ endif }}"
 			href="{{ _site_url }}{{ url }}">
 				<i class="fa fa-facebook fa-lg"></i>
 			</a>
