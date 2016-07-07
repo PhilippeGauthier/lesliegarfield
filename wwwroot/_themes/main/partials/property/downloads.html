@@ -1,13 +1,23 @@
-{{ if brochure or floor_plans }}
+{{ if brochure_image || brochure_pdf || brochure || floor_plans_image || floor_plans_pdf || floor_plans }}
 <div class="dotted"></div>
 <div class="agent property-downloads">
-	{{ if brochure }}
+	{{ if brochure_pdf }}
+	<a href="{{ brochure_pdf }}" target="_blank" rel="noopener noreferrer">
+		{{ theme:partial src="svg/download" }}
+		<span>Brochure</span>
+	</a>
+	{{ elseif brochure }}
 	<a href="{{ brochure }}" target="_blank" rel="noopener noreferrer">
 		{{ theme:partial src="svg/download" }}
 		<span>Brochure</span>
 	</a>
 	{{ endif }}
-	{{ if floor_plans }}
+	{{ if floor_plans_pdf }}
+	<a href="{{ floor_plans_pdf }}" target="_blank" rel="noopener noreferrer">
+		{{ theme:partial src="svg/floorplans" }}
+		<span>Floorplans</span>
+	</a>
+	{{ elseif floor_plans }}
 	<a href="{{ floor_plans }}" target="_blank" rel="noopener noreferrer">
 		{{ theme:partial src="svg/floorplans" }}
 		<span>Floorplans</span>

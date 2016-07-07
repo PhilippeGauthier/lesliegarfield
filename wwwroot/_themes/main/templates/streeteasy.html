@@ -133,10 +133,14 @@
 		<photo url="{{ _site_url }}{{ value }}" />
 		{{ /photo_carousel }}
 		{{ endif }}
-		{{ if floor_plans|not_empty }}
+		{{ if floor_plans_pdf|not_empty }}
+		<floorplan url="{{ _site_url }}{{ floor_plans_pdf }}" />
+		{{ elseif floor_plans|not_empty }}
 		<floorplan url="{{ _site_url }}{{ floor_plans }}" />
 		{{ endif }}
-		{{ if brochure|not_empty }}
+		{{ if brochure_pdf|not_empty }}
+		<otherMedia url="{{ _site_url }}{{ brochure_pdf }}" description="Property Brochure"/>
+		{{ elseif brochure|not_empty }}
 		<otherMedia url="{{ _site_url }}{{ brochure }}" description="Property Brochure"/>
 		{{ endif }}
 	</media>
@@ -292,10 +296,14 @@
 		<photo url="{{ _site_url }}{{ value }}" />
 		{{ /photo_carousel }}
 		{{ endif }}
-		{{ if floor_plans|not_empty }}
+		{{ if floor_plans_pdf|not_empty }}
+		<floorplan url="{{ _site_url }}{{ floor_plans_pdf }}" />
+		{{ elseif floor_plans|not_empty }}
 		<floorplan url="{{ _site_url }}{{ floor_plans }}" />
 		{{ endif }}
-		{{ if brochure|not_empty }}
+		{{ if brochure_pdf|not_empty }}
+		<otherMedia url="{{ _site_url }}{{ brochure_pdf }}" description="Property Brochure"/>
+		{{ elseif brochure|not_empty }}
 		<otherMedia url="{{ _site_url }}{{ brochure }}" description="Property Brochure"/>
 		{{ endif }}
 	</media>

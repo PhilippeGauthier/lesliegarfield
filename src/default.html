@@ -29,6 +29,9 @@
   <meta property="og:region" content="NY" />
   <meta property="og:postal-code" content="10022" />
   <meta property="og:country-name" content="USA" />
+  {{ if main_image or preview_image }}
+  <meta property="og:image" content="{{ main_image || preview_image }}" />
+  {{ endif }}
 
   <!-- build:css -->
   <link rel="stylesheet" href="{{ theme:css }}" />

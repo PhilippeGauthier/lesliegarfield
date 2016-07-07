@@ -1,10 +1,9 @@
-// .btn-garfield {
+btn- .btn-garfield {
+	padding: 8px 45px;
+	font-size: 18px;
+	margin-top: 24px;
 
-// 	padding: 8px 45px;
-// 	font-size: 18px;
-// 	margin-top: 24px;
-
-// }
+}
 
 .btn-contact {
 	@include breakpoint($medium) {

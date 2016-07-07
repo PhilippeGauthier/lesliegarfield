@@ -87,7 +87,11 @@
 	</openhouses>
 	{{ endif }}
 
-	{{ if floor_plans|not_empty }}
+	{{ if floor_plans_pdf|not_empty }}
+	<floorplans>
+		<floorplan>{{ _site_url }}{{ floor_plans_pdf }}</floorplan>
+	</floorplans>
+	{{ elseif floor_plans|not_empty }}
 	<floorplans>
 		<floorplan>{{ _site_url }}{{ floor_plans }}</floorplan>
 	</floorplans>
