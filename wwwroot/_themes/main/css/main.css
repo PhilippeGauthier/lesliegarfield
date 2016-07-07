@@ -5482,6 +5482,12 @@ footer .footer-group:before, footer .footer-group:after {
     width: 33.33333%;
     float: left; } }
 
+@media (min-width: 1280px) {
+  footer .footer-group {
+    box-sizing: border-box;
+    width: 25%;
+    float: left; } }
+
 footer .affiliate {
   margin-top: 20px; }
 
@@ -7438,6 +7444,11 @@ h1 {
     background-color: #009d84; }
   .hero.landing h5 {
     max-width: 500px; } }
+
+btn- .btn-garfield {
+  padding: 8px 45px;
+  font-size: 18px;
+  margin-top: 24px; }
 
 @media (min-width: 992px) {
   .btn-contact {
