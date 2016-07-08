@@ -201,15 +201,27 @@ fields:
     destination: assets/img/properties/sale
   brochure:
     type: file
-    display: Property Brochure
+    display: Property Brochure Images (png, gif, jpg)
     destination: assets/img/properties/sale
-    allowed: [png, gif, jpg, jpeg, pdf]
+    allowed: [png, gif, jpg, jpeg]
+    max_files: 1
+  brochure_pdf:
+    type: file
+    display: Property Brochure PDF
+    destination: assets/downloads/pdf
+    allowed: [pdf]
     max_files: 1
   floor_plans:
     type: file
-    display: Property Floorplans
+    display: Property Floorplans Images (png, gif, jpg)
     destination: assets/img/properties/sale
-    allowed: [png, gif, jpg, jpeg, pdf]
+    allowed: [png, gif, jpg, jpeg]
+    max_files: 1
+  floor_plans_pdf:
+    type: file
+    display: Property Floorplans  PDF
+    destination: assets/downloads/pdf
+    allowed: [pdf]
     max_files: 1
   content:
     type: redactor
