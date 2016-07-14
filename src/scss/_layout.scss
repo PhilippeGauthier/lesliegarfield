@@ -205,7 +205,11 @@ section {
 	margin-top: 62px;
 	@include breakpoint($medium) {
 		margin-top: 78px;
+			&.email {
+				margin-top: 100px;
+			}
 	}
+
 	&.property-page {
 		margin-top: 15px;
 		@include breakpoint($small) {
@@ -213,6 +217,7 @@ section {
 		}
 		@include breakpoint($medium) {
 			margin-top: 78px;
+
 		}
 	}
 }

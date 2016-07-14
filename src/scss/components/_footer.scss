@@ -1,3 +1,22 @@
+#email-footer {
+	background-color: $email-footer-gray;
+	text-align: center;
+	.hero-container {
+		margin: 0 auto;
+		max-width: 600px;
+	}
+	h3 {
+		font-family: $hFontMI;
+	}
+	p {
+		margin-bottom: 40px;
+	}
+	a {
+		@include btn-garfield(10px, 50px, 18px);
+		text-transform: none;
+	}
+}
+
 footer {
 	.container {
 		padding-top: 40px;

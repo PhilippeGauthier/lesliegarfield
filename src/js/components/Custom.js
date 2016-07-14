@@ -207,6 +207,10 @@ $(document).ready(function()
 
 });
 
+$('.close-button').click(function() {
+  $('#email-popup').css('display','none');
+});
+
 // fb share init
 
 window.fbAsyncInit = function(){
