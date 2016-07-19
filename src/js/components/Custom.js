@@ -208,9 +208,6 @@ $(document).ready(function()
 
 });
 
-$('.close-button').click(function() {
-  $('#email-popup').removeClass('show');
-});
 
 
 // fb share init
@@ -252,10 +249,7 @@ if ($(".red-span").length) {
   $(".property-agents").addClass('openhouse')
 }
 
-$('.popup-header').click(function() {
-  $('#email-popup').toggleClass('expanded');
-  // $('.popup-body').slideToggle('slow');
-});
+
 
 // target="_blank" vulnerability
 // var newWnd = window.open();

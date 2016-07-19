@@ -14,10 +14,14 @@ if ($('.secondary-nav').length) {
 
 $('#email-trigger').waypoint(function() {
     $('#email-popup').addClass('show');
-}, {
-    offset: '-1'
+		this.destroy();
+		  }, {
+		  triggerOnce: true
 });
 
+$('.close-button').click(function() {
+  $('#email-popup').removeClass('show');
+});
 // if ($('.faq-list').length) {
 // 	var secondaryNav = $('.faq-list');
 // 	var header = new Waypoint.Sticky({
