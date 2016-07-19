@@ -9106,11 +9106,16 @@ section.faq {
   width: 280px;
   height: 220px;
   z-index: 100;
-  bottom: 18px;
+  bottom: -230px;
   right: 18px;
   background-color: #009880;
   border: 1px solid rgba(255, 255, 255, 0.7);
-  box-shadow: 0 0 0 8px #009880; }
+  box-shadow: 0 0 0 8px #009880;
+  transition: all .5s; }
+
+#email-popup.show {
+  transition: all .5s;
+  bottom: 18px; }
 
 #email-popup .popup-body {
   height: 100%;

@@ -93,6 +93,7 @@ $(document).ready(function() {
 });
 
 
+
 $(document).ready(function() {
   // Get an array of all element heights
   if ($('.press-item').length) {
@@ -208,8 +209,9 @@ $(document).ready(function()
 });
 
 $('.close-button').click(function() {
-  $('#email-popup').css('display','none');
+  $('#email-popup').removeClass('show');
 });
+
 
 // fb share init
 

@@ -12,6 +12,12 @@ if ($('.secondary-nav').length) {
 	});
 }
 
+$('#email-trigger').waypoint(function() {
+    $('#email-popup').addClass('show');
+}, {
+    offset: '-1'
+});
+
 // if ($('.faq-list').length) {
 // 	var secondaryNav = $('.faq-list');
 // 	var header = new Waypoint.Sticky({

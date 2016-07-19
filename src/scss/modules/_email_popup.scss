@@ -3,12 +3,16 @@
 	width: 280px;
 	height: 220px;
 	z-index: 100;
-	bottom: 18px;
+	bottom: -230px;
 	right: 18px;
 	background-color: $green;
     border: 1px solid rgba(white,.7);
     box-shadow: 0 0 0 8px $green;
-    
+    transition: all .5s;
+    &.show {
+    	transition: all .5s;
+    	bottom: 18px;
+    }
 
 	.popup-body {
 
