@@ -12,6 +12,14 @@ if (firstOpenHouse.length > 0 ) {
 }
 
 
+$("#checkAll").change(function () {
+    $("input:checkbox").prop('checked', $(this).prop("checked"));
+});
+
+// $(".select-all").click(function () {
+//     $(".form-third .select-options").prop('checked', $(this).prop('checked'));
+// });
+
 $(".report-expander").click(function() {
   
   if ($(this).children().first().hasClass('fa-plus-circle')) {
