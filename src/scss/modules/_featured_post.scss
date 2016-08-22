@@ -5,19 +5,21 @@
 	border-bottom: none;
 	position: relative;
 	display: flex;
+	flex-flow: column nowrap;
 	min-height: 200px;
 	.blog-header {
 		color: $text-green;
 		border-bottom: none;
 	}
 	.featured-image {
-		@include span (full);
-		background-size: 100% auto;
-		min-height: 100%;
+		@include span (full no-gutter);
+		background-size: cover;
+		background-repeat: no-repeat;
+		min-height: 200px;
 		display: block;
 	}
 	.post-details {
-		@include span(full);
+		@include span(full no-gutter);
 		padding: 15px;
 	}
 	h3 {
@@ -37,12 +39,14 @@
 		}
 	}
 	@include breakpoint($small) {
+		flex-flow: row nowrap;
 		min-height: 300px;
 	}
 	@include breakpoint($medium) {
 		min-height: 400px;
 		.featured-image {
 			@include span (first 6 of 12 no-gutter);
+			min-height: 100%;
 		}
 		.post-details {
 			@include span(last 6 of 12 no-gutter);

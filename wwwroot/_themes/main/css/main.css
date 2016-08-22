@@ -6355,7 +6355,7 @@ footer .footer-divider {
     margin-top: 183px; } }
 
 .agent-individual main {
-  padding: 30px;
+  padding: 15px;
   background-color: #fff; }
 
 @media (min-width: 1280px) {
@@ -6461,7 +6461,7 @@ footer .footer-divider {
   margin: 10px auto; }
 
 .agent-individual main .agent-properties {
-  padding: 30px;
+  padding: 15px;
   margin-bottom: 30px;
   box-sizing: border-box;
   width: 100%;
@@ -6469,6 +6469,7 @@ footer .footer-divider {
 
 @media (min-width: 768px) {
   .agent-individual main .agent-properties {
+    padding: 30px;
     margin-bottom: 60px; } }
 
 .agent-individual main .agent-properties:before, .agent-individual main .agent-properties:after {
@@ -8813,6 +8814,9 @@ section.faq {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
   min-height: 200px; }
 
 .featured .blog-header {
@@ -8823,18 +8827,15 @@ section.faq {
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.25%;
-  padding-right: 1.25%;
-  background-size: 100% auto;
-  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 200px;
   display: block; }
 
 .featured .post-details {
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.25%;
-  padding-right: 1.25%;
   padding: 15px; }
 
 .featured h3 {
@@ -8866,6 +8867,9 @@ section.faq {
 
 @media (min-width: 768px) {
   .featured {
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
     min-height: 300px; } }
 
 @media (min-width: 992px) {
@@ -8874,7 +8878,8 @@ section.faq {
   .featured .featured-image {
     box-sizing: border-box;
     width: 50%;
-    float: left; }
+    float: left;
+    min-height: 100%; }
   .featured .post-details {
     box-sizing: border-box;
     width: 50%;
@@ -9081,7 +9086,7 @@ section.faq {
 
 #email-popup {
   position: fixed;
-  width: 280px;
+  width: 90%;
   height: 220px;
   z-index: 100;
   bottom: -230px;
@@ -9090,6 +9095,10 @@ section.faq {
   border: 1px solid rgba(255, 255, 255, 0.7);
   box-shadow: 0 0 0 8px #009880;
   transition: all .5s; }
+
+@media (min-width: 768px) {
+  #email-popup {
+    width: 280px; } }
 
 #email-popup.show {
   transition: all .5s;

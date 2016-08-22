@@ -72,7 +72,7 @@
     return t;
   }(document, "script", "twitter-wjs"));</script>
 
-
+  
 
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" data-spy="scroll" data-target="#scroll-spy-nav">
@@ -106,6 +106,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {{ endif }}
   <!-- build:js -->
   <script src="{{ theme:js }}"></script>
+   <script src="{{ theme:js src='cookie.js' }}"></script>
+   <script>
+    function setCookie() {
+      Cookies.set('name', 'garfield');
+    };
+    $('.close-button').click(function() {
+      setCookie();
+      console.log(Cookies.get('name'));
+    });
+  if(Cookies.get('name') === "garfield") {
+    $('#email-popup').css('display', 'none');
+  }
+</script>
   <!-- endbuild -->
 </body>
 </html>

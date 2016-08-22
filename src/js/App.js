@@ -3,7 +3,8 @@ jQuery = require('jquery');
 var React = require('react');
 
 
-
+// var Cookie = require('./components/Cookie.js');
+// var cookieInitialize = require('./components/cookieInitialize.cookie.js');
 
 // Slick Carousel
 var Slick = require('./components/Slick.js');
@@ -95,6 +96,7 @@ if (elem.length) {
 
 
 
+// var cookieInitialize = require('./components/cookieInitialize.js');
 
 
 

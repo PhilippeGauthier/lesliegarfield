@@ -1,6 +1,6 @@
 #email-popup {
 	position: fixed;
-	width: 280px;
+	width: 90%;
 	height: 220px;
 	z-index: 100;
 	bottom: -230px;
@@ -9,6 +9,9 @@
     border: 1px solid rgba(white,.7);
     box-shadow: 0 0 0 8px $green;
     transition: all .5s;
+    @include breakpoint($small) {
+    	width: 280px;
+    }
     &.show {
     	transition: all .5s;
     	bottom: 18px;
