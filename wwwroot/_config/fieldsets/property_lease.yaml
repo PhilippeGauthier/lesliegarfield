@@ -169,7 +169,7 @@ fields:
     display: Powder Rooms
     type: text
   maintenance:
-    display: Maintenance Fees
+    display: Maintenance Fees (monthly)
     type: text
     instructions:
       above: Enter a number with no currency symbol - no commas - no decimals (example 14000000)
