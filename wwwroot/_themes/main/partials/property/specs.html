@@ -74,7 +74,7 @@
 		{{ endif }}
 
 		{{ if maintenance|not_empty }}
-		<li>Maintenance (monthly)</li>
+		<li>Maintenance</li>
 		{{ endif }}
 	</ul>
 	<ul>
@@ -143,11 +143,11 @@
 		{{ endif }}
 
 		{{ if common_charges|not_empty }}
-		<li>${{ common_charges|no_commas|whitespaceformat_number }}</li>
+		<li>${{ common_charges|no_commas|whitespace|format_number }}</li>
 		{{ endif }}
 		
 		{{ if maintenance|not_empty }}
-		<li>${{ maintenance|no_commas|whitespace|format_number }}</li>
+		<li>${{ maintenance|no_commas|whitespace|format_number }}/mo</li>
 		{{ endif }}
 
 	</ul>
