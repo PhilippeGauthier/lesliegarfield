@@ -85,6 +85,7 @@ fields:
       sold: Sold
       off-market: Off Market
       temp-off-market: Temporarily Off Market
+      rented: Rented
   streeteasy:
     display: ACTIVATE STREETEASY?
     type: checkbox
