@@ -76,11 +76,11 @@
 			{{ endif }}
 			{{ /entries:listing }}
 			
-			{{ entries:listing folder="properties/new-york/sale|properties/new-york/sold|properties/international/sale|properties/international/sold" conditions="agents:{url}, streeteasy_status:sold" sort_by="price" sort_dir="desc" }}
+			{{ entries:listing show_hidden="true" folder="properties/new-york/sale|properties/new-york/sold|properties/international/sale|properties/international/sold" conditions="agents:{url}, streeteasy_status:sold" sort_by="price" sort_dir="desc" }}
 			{{ theme:partial src="recent_transactions_sale" use_context="true" }}
 			{{ /entries:listing }}
 
-			{{ entries:listing folder="properties/new-york/rental|properties/new-york/rented|properties/international/rental|properties/international/rented" conditions="agents:{url}, streeteasy_status:leased|sold" sort_by="price" sort_dir="desc" }}
+			{{ entries:listing show_hidden="true" folder="properties/new-york/rental|properties/international/rental|properties/international/rented" conditions="agents:{url}, streeteasy_status:rented" sort_by="price" sort_dir="desc" }}
 			{{ theme:partial src="recent_transactions_rental" use_context="true" }}
 			{{ /entries:listing }}
 
