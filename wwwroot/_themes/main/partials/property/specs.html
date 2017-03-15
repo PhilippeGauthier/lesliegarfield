@@ -30,8 +30,10 @@
 		{{ if stories|not_empty }}
 		<li>Stories</li>
 		{{ endif }}
-
+		
+		{{ if sqft }}
 		<li>Square Feet</li>
+		{{ endif }}
 
 		{{ if units|not_empty }}
 		<li>Units</li>
@@ -103,8 +105,10 @@
 		{{ if stories|not_empty }}
 		<li>{{ stories }}</li>
 		{{ endif }}
-
+		
+		{{ if sqft }}
 		<li>{{ sqft|no_commas|whitespace|format_number }} ft<sup>2</sup></li>
+		{{ endif }}
 
 		{{ if units|not_empty }}
 		<li>{{ units|format_number }}</li>
