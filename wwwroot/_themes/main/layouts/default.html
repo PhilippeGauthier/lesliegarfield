@@ -103,5 +103,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {{ theme:partial src="email_popup" }}
     {{ endif }}
   <script src="{{ theme:js src="main.min.js" }}"></script>
+   <script src="{{ theme:js src='cookie.js' }}"></script>
+   <script>
+    function setCookie() {
+      Cookies.set('name', 'garfield');
+    };
+    $('.close-button').click(function() {
+      setCookie();
+      console.log('clicked');
+    });
+  if(Cookies.get('name') === "garfield") {
+    $('#email-popup').css('display', 'none');
+  }
+</script>
 </body>
 </html>

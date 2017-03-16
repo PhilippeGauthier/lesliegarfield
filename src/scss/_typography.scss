@@ -109,7 +109,7 @@ p {
     }
 }
 
-&.large {
+.large {
     p {
         @include hlmedium($hFontM);
         text-align: center;

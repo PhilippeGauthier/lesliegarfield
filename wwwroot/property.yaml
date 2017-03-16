@@ -1,0 +1,211 @@
+title: Property
+fields:
+  title:
+    type: text
+    display: Title
+    localizable: true
+  address_line_1:
+    type: text
+    display: Address Line One
+    localizable: true
+  address_line_2:
+    type: text
+    display: Address Line Two
+    localizable: true
+  city:
+    type: text
+    display: City
+  state:
+    type: text
+    display: State
+  country:
+    type: text
+    display: Country
+    default: United States
+  price:
+    type: text
+    display: Price
+    validate: numeric
+  no_price:
+    type: text
+    display: If there is no numeric price enter placeholder here
+  referral_status:
+    type: toggle
+    display: Is the Property Sold?
+  referral:
+    type: text
+    display: Link to Use in Buy Button
+  button_text:
+    type: text
+    display: Custom button text
+  address:
+    display: Display on map?
+    type: toggle
+  half_and_half:
+    type: toggle
+    display: Fifty Percent Width Featured Image Post
+  modular:
+    display: Location Descriptor in Place of Physical Address
+    type: text
+  location_grid:
+    type: grid
+    display: Latitude / Longitude
+    min_rows: 1
+    max_rows: 1
+    fields:
+      latitude:
+        display: Latitude
+        type: text
+        validate: numeric
+      longitude:
+        display: Longitude
+        type: text
+        validate: numeric
+      zoom:
+        display: Zoom Level
+        default: 9
+        type: select
+        options:
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          - 9          
+          - 10
+          - 11
+          - 12
+          - 13
+          - 14
+          - 15
+          - 16
+          - 17
+          - 18
+          - 19
+          - 20
+  summary_text:
+    type: textarea
+    display: Summary Text
+  quote_grid:
+    type: grid
+    display: Quote for Homepage
+    max_rows: 1
+    add_row: Add Quote
+    fields:
+      quote:
+        type: textarea
+        display: The Quote
+      author:
+        type: textarea
+        display: Author
+  use_quote:
+    type: toggle
+    display: Use Quote Text on Homepage Instead of Image / Details
+  color:
+    type: select
+    display: Color for Property Post Background on Homepage
+    options:
+      white: White
+      blue: Blue
+      gray: Gray
+      darkGray: Dark Gray
+  featured_image_grid:
+    type: grid
+    display: Featured Image
+    max_rows: 1
+    add_row: Add Images
+    fields:
+      featured_image:
+        type: assets
+        display: Large Featured Image
+        container: main
+        folder: img
+        max_files: 1
+      featured_image_small:
+        type: assets
+        display: Small Featured Image
+        container: main
+        folder: img
+        max_files: 1
+      line_drawing:
+        type: toggle
+        display: Line Drawing?
+      featured_image_line:
+        type: assets
+        display: Featured Image on Property Page if Line Drawing
+        container: main
+        folder: img
+        max_files: 1
+  image:
+    type: assets
+    display: Image Gallery
+    container: main
+    folder: img
+  tags:
+    type: taxonomy
+    taxonomy: tags
+    instructions: Property Attributes
+  info:
+    type: redactor
+    display: Propert Info
+  content:
+    type: markdown
+    hide: true
+    display: Content
+    localizable: true
+  section:
+    type: section
+    display: Modular Content
+    instructions: If Any of These Sections Are Used We Do Not Use The Content or Image Galleries Above
+  replicator:
+    type: replicator
+    instructions: Create Custom Content Layout
+    sets:
+      content_set:
+        display: Content Block
+        instructions: A basic block of text or Images
+        fields:
+          content:
+            type: redactor
+            display: Content
+      image_caption_set:
+        display: Large Single Image w/ Optional Caption
+        fields:
+          single_image:
+            type: assets
+            display: Image
+            container: main
+            folder: img
+          single_caption:
+            type: text
+            display: Caption
+      floorplan_set:
+        display: Floorplan
+        instructions: Should be jpg with a background of '#E5E4DB'
+        fields:
+          floorplan:
+            type: assets
+            display: Floorplan
+            container: main
+            folder: img
+            max_files: 1
+      image_set:
+        display: Full Width Carousel
+        instructions: Image Gallery
+        fields:
+          images:
+            type: grid
+            display: Images
+            mode: stacked
+            fields:
+              full_width_image:
+                type: assets
+                display: Image Gallery
+                container: main
+                folder: img
+                max_files: 1
+              full_width_caption:
+                type: text
+                display: Image Caption

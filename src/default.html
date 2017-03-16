@@ -106,6 +106,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {{ endif }}
   <!-- build:js -->
   <script src="{{ theme:js }}"></script>
+  <!-- endbuild -->
    <script src="{{ theme:js src='cookie.js' }}"></script>
    <script>
     function setCookie() {
@@ -113,11 +114,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     };
     $('.close-button').click(function() {
       setCookie();
+      console.log('clicked');
     });
   if(Cookies.get('name') === "garfield") {
     $('#email-popup').css('display', 'none');
   }
 </script>
-  <!-- endbuild -->
 </body>
 </html>
