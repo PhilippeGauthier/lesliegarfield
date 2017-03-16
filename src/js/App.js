@@ -1,7 +1,7 @@
 $ = require("jquery");
 jQuery = require('jquery');
 var React = require('react');
-var ReactDOM = require('react-dom');
+// var ReactDOM = require('react-dom');
 
 
 // var Cookie = require('./components/Cookie.js');
@@ -84,7 +84,7 @@ if (elem.length) {
 	    }
 	  });
 
-	  ReactDOM.render(<Shell />, document.getElementById('properties'));
+	  React.render(<Shell />, document.getElementById('properties'));
 	};
 
 	// start up the app by loading in JSON file of properties
