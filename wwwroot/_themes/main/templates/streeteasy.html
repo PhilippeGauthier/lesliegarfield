@@ -84,13 +84,13 @@
 
 		{{ if key_features|not_empty }}
 		<other>
-		{{ key_features|list }}
+		{{ key_features|list|entities }}
 		</other>
 		{{ endif }}
 
 		{{ if amenities }}
 		{{ amenities }}
-		<{{ value }} />
+		<{{ value|entities}} />
 		{{/amenities }}
 		{{ endif }}
 
@@ -98,13 +98,13 @@
 
 		{{ if amenities }}
 		{{ amenities }}
-		<{{ value }} />
+		<{{ value|entities}} />
 		{{/amenities }}
 		{{ endif }}
 
 		{{ if key_features|not_empty }}
 		<other>
-		{{ key_features|list }}
+		{{ key_features|list|entities }}
 		</other>
 		{{ endif }}		
 
@@ -248,13 +248,13 @@
 
 		{{ if key_features|not_empty }}
 		<other>
-		{{ key_features|list }}
+		{{ key_features|list|entities }}
 		</other>
 		{{ endif }}
 
 		{{ if amenities }}
 		{{ amenities }}
-		<{{ value }} />
+		<{{ value|entities}} />
 		{{/amenities }}
 		{{ endif }}
 
@@ -262,13 +262,13 @@
 
 		{{ if amenities }}
 		{{ amenities }}
-		<{{ value }} />
+		<{{ value|entities}} />
 		{{/amenities }}
 		{{ endif }}
 
 		{{ if key_features|not_empty }}
 		<other>
-		{{ key_features|list }}
+		{{ key_features|list|entities }}
 		</other>
 		{{ endif }}		
 
