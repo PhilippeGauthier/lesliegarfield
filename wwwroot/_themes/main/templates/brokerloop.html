@@ -103,7 +103,7 @@
 	<feature>{{ value }}</feature>
 	{{/amenities }}
 	{{ if key_features|not_empty }}
-	{{ key_features }}
+	{{ key_features|entities }}
 	<feature>
 		{{ value }}
 	</feature>
@@ -231,7 +231,7 @@
 	<feature>{{ value }}</feature>
 	{{/amenities }}
 	{{ if key_features|not_empty }}
-	{{ key_features }}
+	{{ key_features|entities }}
 	<feature>
 		{{ value }}
 	</feature>
