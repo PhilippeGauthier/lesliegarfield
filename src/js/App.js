@@ -3,10 +3,6 @@ jQuery = require('jquery');
 var React = require('react');
 // var ReactDOM = require('react-dom');
 
-
-// var Cookie = require('./components/Cookie.js');
-// var cookieInitialize = require('./components/cookieInitialize.cookie.js');
-
 // Slick Carousel
 var Slick = require('./components/Slick.js');
 var slickInitialize = require('./components/slickInitialize.slick.js');

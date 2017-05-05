@@ -33,7 +33,9 @@
   <meta property="og:image" content="{{ main_image || preview_image }}" />
   {{ endif }}
 
-  <link rel="stylesheet" href="{{ theme:css src="main.min.css" }}" />
+  <!-- build:css -->
+  <link rel="stylesheet" href="{{ theme:css }}" />
+  <!-- endbuild -->
   <link rel="shortcut icon" type="image/ico" href="{{ theme:img src="" }}">
 
   <link rel="apple-touch-icon" sizes="57x57" href="{{ theme:img src="/apple-touch-icon-57x57.png" }}">
@@ -102,7 +104,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {{ if !segment_1 }}
     {{ theme:partial src="email_popup" }}
     {{ endif }}
-  <script src="{{ theme:js src="main.min.js" }}"></script>
+  <!-- build:js -->
+  <script src="{{ theme:js }}"></script>
+  <!-- endbuild -->
    <script src="{{ theme:js src='cookie.js' }}"></script>
    <script>
     function setCookie() {
